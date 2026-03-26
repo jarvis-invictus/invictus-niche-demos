@@ -14,337 +14,337 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  body { font-family: 'Inter', sans-serif; background: #FAFAF8; color: #2C2C2C; }
-  h1,h2,h3,h4 { font-family: 'Cormorant Garamond', serif; }
-  .earth { color: #5C4A2A; }
-  .sage { color: #5A7A5A; }
-  .bg-cream { background-color: #FAFAF5; }
-  .bg-sage { background-color: #EBF2EB; }
-  .btn-earth { background-color: #5C4A2A; color: white; padding: 14px 32px; border-radius: 6px; font-weight: 600; cursor: pointer; transition: all 0.2s; display: inline-block; text-decoration: none; letter-spacing: 0.03em; }
-  .btn-earth:hover { background-color: #4A3A1E; }
-  .btn-outline { border: 1.5px solid #5C4A2A; color: #5C4A2A; padding: 12px 28px; border-radius: 6px; font-weight: 600; cursor: pointer; transition: all 0.2s; display: inline-block; text-decoration: none; }
-  .btn-outline:hover { background-color: #5C4A2A; color: white; }
-  .card { background: white; border-radius: 8px; padding: 28px; box-shadow: 0 1px 8px rgba(0,0,0,0.06); border: 1px solid #EEE8DE; transition: all 0.2s; }
-  .card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(92,74,42,0.1); }
-  nav { position: sticky; top: 0; z-index: 100; background: #FAFAF8; border-bottom: 1px solid #EEE8DE; }
-  .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 700; color: #5C4A2A; }
-  .section-title { font-size: 2.2rem; font-weight: 700; color: #2C2C2C; margin-bottom: 0.5rem; }
-  .section-sub { color: #777; font-size: 1.05rem; margin-bottom: 3rem; }
-  footer { background: #2C2C2C; color: #999; }
-  .tag { background: #F4EFE5; color: #5C4A2A; border-radius: 4px; padding: 4px 12px; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; display: inline-block; }
-  .divider { width: 60px; height: 2px; background: #5C4A2A; margin: 0 auto 20px; }
+ body { font-family: 'Inter', sans-serif; background: #FAFAF8; color: #2C2C2C; }
+ h1,h2,h3,h4 { font-family: 'Cormorant Garamond', serif; }
+ .earth { color: #5C4A2A; }
+ .sage { color: #5A7A5A; }
+ .bg-cream { background-color: #FAFAF5; }
+ .bg-sage { background-color: #EBF2EB; }
+ .btn-earth { background-color: #5C4A2A; color: white; padding: 14px 32px; border-radius: 6px; font-weight: 600; cursor: pointer; transition: all 0.2s; display: inline-block; text-decoration: none; letter-spacing: 0.03em; }
+ .btn-earth:hover { background-color: #4A3A1E; }
+ .btn-outline { border: 1.5px solid #5C4A2A; color: #5C4A2A; padding: 12px 28px; border-radius: 6px; font-weight: 600; cursor: pointer; transition: all 0.2s; display: inline-block; text-decoration: none; }
+ .btn-outline:hover { background-color: #5C4A2A; color: white; }
+ .card { background: white; border-radius: 8px; padding: 28px; box-shadow: 0 1px 8px rgba(0,0,0,0.06); border: 1px solid #EEE8DE; transition: all 0.2s; }
+ .card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(92,74,42,0.1); }
+ nav { position: sticky; top: 0; z-index: 100; background: #FAFAF8; border-bottom: 1px solid #EEE8DE; }
+ .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 700; color: #5C4A2A; }
+ .section-title { font-size: 2.2rem; font-weight: 700; color: #2C2C2C; margin-bottom: 0.5rem; }
+ .section-sub { color: #777; font-size: 1.05rem; margin-bottom: 3rem; }
+ footer { background: #2C2C2C; color: #999; }
+ .tag { background: #F4EFE5; color: #5C4A2A; border-radius: 4px; padding: 4px 12px; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; display: inline-block; }
+ .divider { width: 60px; height: 2px; background: #5C4A2A; margin: 0 auto 20px; }
 </style>
 </head>
 <body>
 
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "MedicalClinic",
-  "name": "Integra Health Centre",
-  "description": "Functional and integrative medicine centre in Aundh, Pune offering root-cause treatment and personalized health protocols",
-  "url": "https://integrahealthcentre.in/",
-  "image": "https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=1200&q=80",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "ITI Road, Near Aundh Hospital",
-    "addressLocality": "Aundh",
-    "addressRegion": "Maharashtra",
-    "postalCode": "411007",
-    "addressCountry": "IN"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "18.5580",
-    "longitude": "73.8073"
-  },
-  "telephone": "+91-98765-00004",
-  "openingHoursSpecification": [
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "09:00", "closes": "20:00" }
-  ],
-  "priceRange": "₹₹",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "185",
-    "bestRating": "5"
-  },
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Clinic Services",
-    "itemListElement": [
-      { "@type": "Offer", "itemOffered": { "@type": "MedicalProcedure", "name": "Functional Medicine Consultation", "description": "60-minute deep-assessment consultation with root-cause analysis" } },
-      { "@type": "Offer", "itemOffered": { "@type": "MedicalProcedure", "name": "Gut Health & IBS Treatment", "description": "Microbiome restoration, SIBO, food sensitivity testing, leaky gut protocols" } },
-      { "@type": "Offer", "itemOffered": { "@type": "MedicalProcedure", "name": "Hormonal Health Management", "description": "PCOD, thyroid disorders, adrenal fatigue, perimenopause treatment" } },
-      { "@type": "Offer", "itemOffered": { "@type": "MedicalProcedure", "name": "Chronic Fatigue & Energy Optimization", "description": "Mitochondrial assessment, micronutrient profiling, cortisol rhythm analysis" } },
-      { "@type": "Offer", "itemOffered": { "@type": "MedicalProcedure", "name": "Preventive Health Audit", "description": "Annual functional health audit with early markers and longevity protocols" } }
-    ]
-  }
+ "@context": "https://schema.org",
+ "@type": "MedicalClinic",
+ "name": "Integra Health Centre",
+ "description": "Functional and integrative medicine centre in Aundh, Pune offering root-cause treatment and personalized health protocols",
+ "url": "https://integrahealthcentre.in/",
+ "image": "https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=1200&q=80",
+ "address": {
+ "@type": "PostalAddress",
+ "streetAddress": "ITI Road, Near Aundh Hospital",
+ "addressLocality": "Aundh",
+ "addressRegion": "Maharashtra",
+ "postalCode": "411007",
+ "addressCountry": "IN"
+ },
+ "geo": {
+ "@type": "GeoCoordinates",
+ "latitude": "18.5580",
+ "longitude": "73.8073"
+ },
+ "telephone": "+91-98765-00004",
+ "openingHoursSpecification": [
+ { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "09:00", "closes": "20:00" }
+ ],
+ "priceRange": "",
+ "aggregateRating": {
+ "@type": "AggregateRating",
+ "ratingValue": "4.9",
+ "reviewCount": "185",
+ "bestRating": "5"
+ },
+ "hasOfferCatalog": {
+ "@type": "OfferCatalog",
+ "name": "Clinic Services",
+ "itemListElement": [
+ { "@type": "Offer", "itemOffered": { "@type": "MedicalProcedure", "name": "Functional Medicine Consultation", "description": "60-minute deep-assessment consultation with root-cause analysis" } },
+ { "@type": "Offer", "itemOffered": { "@type": "MedicalProcedure", "name": "Gut Health & IBS Treatment", "description": "Microbiome restoration, SIBO, food sensitivity testing, leaky gut protocols" } },
+ { "@type": "Offer", "itemOffered": { "@type": "MedicalProcedure", "name": "Hormonal Health Management", "description": "PCOD, thyroid disorders, adrenal fatigue, perimenopause treatment" } },
+ { "@type": "Offer", "itemOffered": { "@type": "MedicalProcedure", "name": "Chronic Fatigue & Energy Optimization", "description": "Mitochondrial assessment, micronutrient profiling, cortisol rhythm analysis" } },
+ { "@type": "Offer", "itemOffered": { "@type": "MedicalProcedure", "name": "Preventive Health Audit", "description": "Annual functional health audit with early markers and longevity protocols" } }
+ ]
+ }
 }
 </script>
 
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is functional medicine and how is it different from regular treatment?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Functional medicine focuses on finding and treating the root cause of health issues rather than just managing symptoms. At Integra Health Centre, consultations are 45–60 minutes long, involving comprehensive lab work, detailed history, and personalised protocols combining nutrition, lifestyle changes, and targeted supplementation."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What are the consultation timings and fees at Integra Health Centre?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We are open Monday to Saturday, 9:00 AM to 8:00 PM, by appointment only. The first consultation fee is ₹1,200 for a 60-minute deep assessment. Call +91 98765 00004 to book your slot."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do I need an appointment or can I walk in?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Integra Health Centre operates by appointment only to ensure each patient gets dedicated 45–60 minute consultations. Please call +91 98765 00004 to schedule your visit."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What conditions does the clinic specialise in treating?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We specialize in gut health (IBS, SIBO, leaky gut), hormonal imbalance (PCOD, thyroid, adrenal fatigue), chronic fatigue, brain fog, unexplained weight gain, metabolic syndrome, and preventive health optimization."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does the clinic accept health insurance for functional medicine consultations?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We provide detailed medical bills, lab reports, and consultation records that can be submitted for insurance reimbursement. Coverage depends on your specific insurance policy. Please check with your provider regarding functional medicine consultations."
-      }
-    }
-  ]
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "What is functional medicine and how is it different from regular treatment?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Functional medicine focuses on finding and treating the root cause of health issues rather than just managing symptoms. At Integra Health Centre, consultations are 45–60 minutes long, involving comprehensive lab work, detailed history, and personalised protocols combining nutrition, lifestyle changes, and targeted supplementation."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What are the consultation timings and fees at Integra Health Centre?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "We are open Monday to Saturday, 9:00 AM to 8:00 PM, by appointment only. The first consultation fee is 1,200 for a 60-minute deep assessment. Call +91 98765 00004 to book your slot."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Do I need an appointment or can I walk in?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Integra Health Centre operates by appointment only to ensure each patient gets dedicated 45–60 minute consultations. Please call +91 98765 00004 to schedule your visit."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What conditions does the clinic specialise in treating?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "We specialize in gut health (IBS, SIBO, leaky gut), hormonal imbalance (PCOD, thyroid, adrenal fatigue), chronic fatigue, brain fog, unexplained weight gain, metabolic syndrome, and preventive health optimization."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Does the clinic accept health insurance for functional medicine consultations?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "We provide detailed medical bills, lab reports, and consultation records that can be submitted for insurance reimbursement. Coverage depends on your specific insurance policy. Please check with your provider regarding functional medicine consultations."
+ }
+ }
+ ]
 }
 </script>
 
 <nav>
-  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-    <div>
-      <div class="font-bold text-lg earth leading-tight" style="font-family:'Cormorant Garamond',serif; font-size:1.3rem;">Integra Health Centre</div>
-      <div class="text-xs text-gray-400 tracking-wide uppercase">Functional & Integrative Medicine · Aundh, Pune</div>
-    </div>
-    <div class="hidden md:flex gap-8 text-sm font-medium text-gray-500">
-      <a href="#approach" class="hover:text-gray-900 transition-colors">Approach</a>
-      <a href="#services" class="hover:text-gray-900 transition-colors">Services</a>
-      <a href="#about" class="hover:text-gray-900 transition-colors">About</a>
-      <a href="#contact" class="hover:text-gray-900 transition-colors">Contact</a>
-    </div>
-    <a href="#book" class="btn-earth text-sm hidden md:block">Book Consultation</a>
-  </div>
+ <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+ <div>
+ <div class="font-bold text-lg earth leading-tight" style="font-family:'Cormorant Garamond',serif; font-size:1.3rem;">Integra Health Centre</div>
+ <div class="text-xs text-gray-400 tracking-wide uppercase">Functional & Integrative Medicine · Aundh, Pune</div>
+ </div>
+ <div class="hidden md:flex gap-8 text-sm font-medium text-gray-500">
+ <a href="#approach" class="hover:text-gray-900 transition-colors">Approach</a>
+ <a href="#services" class="hover:text-gray-900 transition-colors">Services</a>
+ <a href="#about" class="hover:text-gray-900 transition-colors">About</a>
+ <a href="#contact" class="hover:text-gray-900 transition-colors">Contact</a>
+ </div>
+ <a href="#book" class="btn-earth text-sm hidden md:block">Book Consultation</a>
+ </div>
 </nav>
 
 <!-- HERO -->
 <section class="py-24 px-4" style="background: linear-gradient(to bottom, #F7F3EC, #FAFAF8);">
-  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16">
-    <div class="flex-1">
-      <span class="tag mb-6">Functional Medicine Clinic</span>
-      <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-5 mt-4" style="color:#2C2C2C;">
-        Treat the Cause,<br>Not Just the Symptom
-      </h1>
-      <p class="text-gray-600 mb-8 text-lg max-w-xl leading-relaxed">
-        Chronic fatigue. Unexplained weight gain. Gut problems that won't go away. Hormonal imbalance. Modern medicine often masks these — we find and fix what's actually causing them.
-      </p>
-      <div class="flex flex-wrap gap-4 mb-10">
-        <a href="#book" class="btn-earth">Book a Consultation →</a>
-        <a href="#approach" class="btn-outline">Our Approach</a>
-      </div>
-      <div class="flex flex-wrap gap-5 text-sm text-gray-500">
-        <span>◆ Root-Cause Medicine</span>
-        <span>◆ Evidence-Based</span>
-        <span>◆ Personalised Protocols</span>
-        <span>◆ No Rushed Visits</span>
-      </div>
-    </div>
-    <div class="flex-1 flex justify-center">
-      <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=500&q=80" 
-           alt="Calm medical consultation room" class="rounded-lg shadow-lg w-full max-w-md object-cover" style="max-height:420px;">
-    </div>
-  </div>
+ <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16">
+ <div class="flex-1">
+ <span class="tag mb-6">Functional Medicine Clinic</span>
+ <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-5 mt-4" style="color:#2C2C2C;">
+ Treat the Cause,<br>Not Just the Symptom
+ </h1>
+ <p class="text-gray-600 mb-8 text-lg max-w-xl leading-relaxed">
+ Chronic fatigue. Unexplained weight gain. Gut problems that won't go away. Hormonal imbalance. Modern medicine often masks these — we find and fix what's actually causing them.
+ </p>
+ <div class="flex flex-wrap gap-4 mb-10">
+ <a href="#book" class="btn-earth">Book a Consultation </a>
+ <a href="#approach" class="btn-outline">Our Approach</a>
+ </div>
+ <div class="flex flex-wrap gap-5 text-sm text-gray-500">
+ <span>◆ Root-Cause Medicine</span>
+ <span>◆ Evidence-Based</span>
+ <span>◆ Personalised Protocols</span>
+ <span>◆ No Rushed Visits</span>
+ </div>
+ </div>
+ <div class="flex-1 flex justify-center">
+ <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=500&q=80" 
+ alt="Calm medical consultation room" class="rounded-lg shadow-lg w-full max-w-md object-cover" style="max-height:420px;">
+ </div>
+ </div>
 </section>
 
 <!-- APPROACH -->
 <section id="approach" class="py-20 px-4 bg-white">
-  <div class="max-w-5xl mx-auto text-center">
-    <h2 class="section-title">How We Work</h2>
-    <div class="divider"></div>
-    <p class="section-sub max-w-2xl mx-auto">Most consultations are 45–60 minutes. We actually investigate — not just prescribe.</p>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-      <div class="card text-center">
-        <div class="text-4xl mb-4">🔍</div>
-        <h3 class="font-semibold text-lg mb-3 earth">Deep Assessment</h3>
-        <p class="text-gray-500 text-sm">80+ question intake form. Full history review. Comprehensive lab work covering gut markers, hormones, micronutrients, inflammation markers.</p>
-      </div>
-      <div class="card text-center">
-        <div class="text-4xl mb-4">🧩</div>
-        <h3 class="font-semibold text-lg mb-3 earth">Root-Cause Analysis</h3>
-        <p class="text-gray-500 text-sm">We connect your symptoms to systems — gut, hormones, inflammation, sleep, stress. A problem in one system usually shows up elsewhere.</p>
-      </div>
-      <div class="card text-center">
-        <div class="text-4xl mb-4">🌱</div>
-        <h3 class="font-semibold text-lg mb-3 earth">Personalised Protocol</h3>
-        <p class="text-gray-500 text-sm">Nutrition plan, lifestyle changes, targeted supplementation, and medication only when truly needed. We rebuild health, not just manage disease.</p>
-      </div>
-    </div>
-  </div>
+ <div class="max-w-5xl mx-auto text-center">
+ <h2 class="section-title">How We Work</h2>
+ <div class="divider"></div>
+ <p class="section-sub max-w-2xl mx-auto">Most consultations are 45–60 minutes. We actually investigate — not just prescribe.</p>
+ <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+ <div class="card text-center">
+ <div class="text-4xl mb-4"></div>
+ <h3 class="font-semibold text-lg mb-3 earth">Deep Assessment</h3>
+ <p class="text-gray-500 text-sm">80+ question intake form. Full history review. Comprehensive lab work covering gut markers, hormones, micronutrients, inflammation markers.</p>
+ </div>
+ <div class="card text-center">
+ <div class="text-4xl mb-4"></div>
+ <h3 class="font-semibold text-lg mb-3 earth">Root-Cause Analysis</h3>
+ <p class="text-gray-500 text-sm">We connect your symptoms to systems — gut, hormones, inflammation, sleep, stress. A problem in one system usually shows up elsewhere.</p>
+ </div>
+ <div class="card text-center">
+ <div class="text-4xl mb-4"></div>
+ <h3 class="font-semibold text-lg mb-3 earth">Personalised Protocol</h3>
+ <p class="text-gray-500 text-sm">Nutrition plan, lifestyle changes, targeted supplementation, and medication only when truly needed. We rebuild health, not just manage disease.</p>
+ </div>
+ </div>
+ </div>
 </section>
 
 <!-- SERVICES -->
 <section id="services" class="py-20 px-4 bg-sage">
-  <div class="max-w-6xl mx-auto">
-    <div class="text-center mb-14">
-      <h2 class="section-title">What We Treat</h2>
-      <div class="divider"></div>
-      <p class="section-sub">Conditions that conventional medicine often struggles to resolve</p>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="card">
-        <div class="text-2xl mb-2">🌿</div>
-        <h3 class="font-semibold mb-2 earth">Gut Health & IBS</h3>
-        <p class="text-gray-500 text-sm">Leaky gut, IBS, bloating, food sensitivities, SIBO, H. pylori. Microbiome restoration through diet and targeted protocols.</p>
-      </div>
-      <div class="card">
-        <div class="text-2xl mb-2">⚖️</div>
-        <h3 class="font-semibold mb-2 earth">Hormonal Health</h3>
-        <p class="text-gray-500 text-sm">PCOD, thyroid disorders, adrenal fatigue, perimenopause, testosterone imbalance. Functional lab workup for the full picture.</p>
-      </div>
-      <div class="card">
-        <div class="text-2xl mb-2">🔋</div>
-        <h3 class="font-semibold mb-2 earth">Fatigue & Energy</h3>
-        <p class="text-gray-500 text-sm">Chronic fatigue, poor sleep, low motivation despite normal blood reports. We look deeper — mitochondria, micronutrients, cortisol rhythms.</p>
-      </div>
-      <div class="card">
-        <div class="text-2xl mb-2">🧠</div>
-        <h3 class="font-semibold mb-2 earth">Brain & Mood</h3>
-        <p class="text-gray-500 text-sm">Brain fog, anxiety, low mood, poor concentration. The gut-brain connection is real — we treat both together.</p>
-      </div>
-      <div class="card">
-        <div class="text-2xl mb-2">🏃</div>
-        <h3 class="font-semibold mb-2 earth">Weight & Metabolism</h3>
-        <p class="text-gray-500 text-sm">Unexplained weight gain, insulin resistance, metabolic syndrome. Not just "eat less" — actual investigation of what's driving it.</p>
-      </div>
-      <div class="card">
-        <div class="text-2xl mb-2">🛡️</div>
-        <h3 class="font-semibold mb-2 earth">Preventive Health</h3>
-        <p class="text-gray-500 text-sm">Annual functional health audits for people who want to optimise — not just survive. Early markers, lifestyle protocols, longevity focus.</p>
-      </div>
-    </div>
-  </div>
+ <div class="max-w-6xl mx-auto">
+ <div class="text-center mb-14">
+ <h2 class="section-title">What We Treat</h2>
+ <div class="divider"></div>
+ <p class="section-sub">Conditions that conventional medicine often struggles to resolve</p>
+ </div>
+ <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+ <div class="card">
+ <div class="text-2xl mb-2"></div>
+ <h3 class="font-semibold mb-2 earth">Gut Health & IBS</h3>
+ <p class="text-gray-500 text-sm">Leaky gut, IBS, bloating, food sensitivities, SIBO, H. pylori. Microbiome restoration through diet and targeted protocols.</p>
+ </div>
+ <div class="card">
+ <div class="text-2xl mb-2">⚖</div>
+ <h3 class="font-semibold mb-2 earth">Hormonal Health</h3>
+ <p class="text-gray-500 text-sm">PCOD, thyroid disorders, adrenal fatigue, perimenopause, testosterone imbalance. Functional lab workup for the full picture.</p>
+ </div>
+ <div class="card">
+ <div class="text-2xl mb-2"></div>
+ <h3 class="font-semibold mb-2 earth">Fatigue & Energy</h3>
+ <p class="text-gray-500 text-sm">Chronic fatigue, poor sleep, low motivation despite normal blood reports. We look deeper — mitochondria, micronutrients, cortisol rhythms.</p>
+ </div>
+ <div class="card">
+ <div class="text-2xl mb-2"></div>
+ <h3 class="font-semibold mb-2 earth">Brain & Mood</h3>
+ <p class="text-gray-500 text-sm">Brain fog, anxiety, low mood, poor concentration. The gut-brain connection is real — we treat both together.</p>
+ </div>
+ <div class="card">
+ <div class="text-2xl mb-2"></div>
+ <h3 class="font-semibold mb-2 earth">Weight & Metabolism</h3>
+ <p class="text-gray-500 text-sm">Unexplained weight gain, insulin resistance, metabolic syndrome. Not just "eat less" — actual investigation of what's driving it.</p>
+ </div>
+ <div class="card">
+ <div class="text-2xl mb-2"></div>
+ <h3 class="font-semibold mb-2 earth">Preventive Health</h3>
+ <p class="text-gray-500 text-sm">Annual functional health audits for people who want to optimise — not just survive. Early markers, lifestyle protocols, longevity focus.</p>
+ </div>
+ </div>
+ </div>
 </section>
 
 <!-- ABOUT -->
 <section id="about" class="py-20 px-4 bg-white">
-  <div class="max-w-5xl mx-auto flex flex-col md:flex-row gap-12 items-center">
-    <div class="flex-1">
-      <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=450&q=80" 
-           alt="Functional medicine doctor" class="rounded-lg shadow-lg w-full object-cover" style="max-height:400px; max-width:360px;">
-    </div>
-    <div class="flex-1">
-      <span class="tag mb-4">About the Practice</span>
-      <h2 class="section-title mt-4">Medicine That Takes Time</h2>
-      <p class="text-gray-600 mb-4 leading-relaxed">Functional medicine requires long appointments because understanding a person's health takes time. We don't book 10 patients in an hour.</p>
-      <p class="text-gray-600 mb-6 leading-relaxed">This practice was built on the belief that most chronic conditions are reversible with the right investigation and the right lifestyle changes — not more medication.</p>
-      <ul class="space-y-3 text-sm text-gray-600">
-        <li>🎓 MBBS, MD (General Medicine) — Pune University</li>
-        <li>🌍 Fellowship, Functional Medicine (IFMCP) — USA</li>
-        <li>📚 Trained in Nutritional Psychiatry, Ayurvedic principles</li>
-        <li>📅 10 years in private practice, Aundh Pune</li>
-      </ul>
-    </div>
-  </div>
+ <div class="max-w-5xl mx-auto flex flex-col md:flex-row gap-12 items-center">
+ <div class="flex-1">
+ <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=450&q=80" 
+ alt="Functional medicine doctor" class="rounded-lg shadow-lg w-full object-cover" style="max-height:400px; max-width:360px;">
+ </div>
+ <div class="flex-1">
+ <span class="tag mb-4">About the Practice</span>
+ <h2 class="section-title mt-4">Medicine That Takes Time</h2>
+ <p class="text-gray-600 mb-4 leading-relaxed">Functional medicine requires long appointments because understanding a person's health takes time. We don't book 10 patients in an hour.</p>
+ <p class="text-gray-600 mb-6 leading-relaxed">This practice was built on the belief that most chronic conditions are reversible with the right investigation and the right lifestyle changes — not more medication.</p>
+ <ul class="space-y-3 text-sm text-gray-600">
+ <li> MBBS, MD (General Medicine) — Pune University</li>
+ <li> Fellowship, Functional Medicine (IFMCP) — USA</li>
+ <li> Trained in Nutritional Psychiatry, Ayurvedic principles</li>
+ <li>10 years in private practice, Aundh Pune</li>
+ </ul>
+ </div>
+ </div>
 </section>
 
 <!-- BOOK -->
 <section id="book" class="py-20 px-4" style="background: #5C4A2A;">
-  <div class="max-w-3xl mx-auto text-center text-white">
-    <h2 class="text-3xl md:text-4xl font-bold mb-4" style="font-family:'Cormorant Garamond',serif; font-size:2.5rem;">Start Your Health Journey</h2>
-    <p class="text-amber-100 mb-10 text-lg">First consultation: 60 minutes. We dig deep so we can actually help.</p>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
-      <div class="bg-white bg-opacity-10 rounded-lg p-4">
-        <div class="font-semibold mb-1">📍 Location</div>
-        <div class="text-amber-100 text-sm">ITI Road, Near Aundh Hospital, Aundh, Pune – 411007</div>
-      </div>
-      <div class="bg-white bg-opacity-10 rounded-lg p-4">
-        <div class="font-semibold mb-1">⏰ Hours</div>
-        <div class="text-amber-100 text-sm">Mon–Sat: 9AM–8PM<br>(By appointment only)</div>
-      </div>
-      <div class="bg-white bg-opacity-10 rounded-lg p-4">
-        <div class="font-semibold mb-1">📞 Contact</div>
-        <div class="text-amber-100 text-sm">+91 98765 00004<br>Consultation: ₹1,200</div>
-      </div>
-    </div>
-    <a href="tel:+919876500004" class="bg-white font-bold px-10 py-4 rounded text-lg inline-block transition-all hover:bg-amber-50" style="color:#5C4A2A;">📞 Book Appointment</a>
-  </div>
+ <div class="max-w-3xl mx-auto text-center text-white">
+ <h2 class="text-3xl md:text-4xl font-bold mb-4" style="font-family:'Cormorant Garamond',serif; font-size:2.5rem;">Start Your Health Journey</h2>
+ <p class="text-amber-100 mb-10 text-lg">First consultation: 60 minutes. We dig deep so we can actually help.</p>
+ <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+ <div class="bg-white bg-opacity-10 rounded-lg p-4">
+ <div class="font-semibold mb-1">Location</div>
+ <div class="text-amber-100 text-sm">ITI Road, Near Aundh Hospital, Aundh, Pune – 411007</div>
+ </div>
+ <div class="bg-white bg-opacity-10 rounded-lg p-4">
+ <div class="font-semibold mb-1">⏰ Hours</div>
+ <div class="text-amber-100 text-sm">Mon–Sat: 9AM–8PM<br>(By appointment only)</div>
+ </div>
+ <div class="bg-white bg-opacity-10 rounded-lg p-4">
+ <div class="font-semibold mb-1">Contact</div>
+ <div class="text-amber-100 text-sm">+91 98765 00004<br>Consultation: 1,200</div>
+ </div>
+ </div>
+ <a href="tel:+919876500004" class="bg-white font-bold px-10 py-4 rounded text-lg inline-block transition-all hover:bg-amber-50" style="color:#5C4A2A;">Book Appointment</a>
+ </div>
 </section>
 
 <!-- FAQ SECTION -->
 <section id="faq" class="py-20 px-4 bg-sage">
-  <div class="max-w-3xl mx-auto">
-    <div class="text-center mb-10">
-      <h2 class="section-title">Frequently Asked Questions</h2>
-      <div class="divider"></div>
-      <p class="section-sub">Common questions about functional & integrative medicine</p>
-    </div>
-    <div class="space-y-3">
-      <details class="card" style="cursor:pointer;">
-        <summary class="font-semibold text-base earth" style="list-style:none; display:flex; justify-content:space-between; align-items:center;">
-          What is functional medicine and how is it different from regular treatment?
-          <span style="font-size:1.3rem;">＋</span>
-        </summary>
-        <p class="text-gray-500 text-sm mt-3 leading-relaxed">Functional medicine focuses on finding and treating the root cause of health issues rather than just managing symptoms. At Integra Health Centre, consultations are 45–60 minutes long, involving comprehensive lab work, detailed history, and personalised protocols combining nutrition, lifestyle changes, and targeted supplementation.</p>
-      </details>
-      <details class="card" style="cursor:pointer;">
-        <summary class="font-semibold text-base earth" style="list-style:none; display:flex; justify-content:space-between; align-items:center;">
-          What are the consultation timings and fees at Integra Health Centre?
-          <span style="font-size:1.3rem;">＋</span>
-        </summary>
-        <p class="text-gray-500 text-sm mt-3 leading-relaxed">We are open Monday to Saturday, 9:00 AM to 8:00 PM, by appointment only. The first consultation fee is ₹1,200 for a 60-minute deep assessment. Call +91 98765 00004 to book your slot.</p>
-      </details>
-      <details class="card" style="cursor:pointer;">
-        <summary class="font-semibold text-base earth" style="list-style:none; display:flex; justify-content:space-between; align-items:center;">
-          Do I need an appointment or can I walk in?
-          <span style="font-size:1.3rem;">＋</span>
-        </summary>
-        <p class="text-gray-500 text-sm mt-3 leading-relaxed">Integra Health Centre operates by appointment only to ensure each patient gets dedicated 45–60 minute consultations. Please call +91 98765 00004 to schedule your visit.</p>
-      </details>
-      <details class="card" style="cursor:pointer;">
-        <summary class="font-semibold text-base earth" style="list-style:none; display:flex; justify-content:space-between; align-items:center;">
-          What conditions does the clinic specialise in treating?
-          <span style="font-size:1.3rem;">＋</span>
-        </summary>
-        <p class="text-gray-500 text-sm mt-3 leading-relaxed">We specialize in gut health (IBS, SIBO, leaky gut), hormonal imbalance (PCOD, thyroid, adrenal fatigue), chronic fatigue, brain fog, unexplained weight gain, metabolic syndrome, and preventive health optimization.</p>
-      </details>
-      <details class="card" style="cursor:pointer;">
-        <summary class="font-semibold text-base earth" style="list-style:none; display:flex; justify-content:space-between; align-items:center;">
-          Does the clinic accept health insurance for functional medicine consultations?
-          <span style="font-size:1.3rem;">＋</span>
-        </summary>
-        <p class="text-gray-500 text-sm mt-3 leading-relaxed">We provide detailed medical bills, lab reports, and consultation records that can be submitted for insurance reimbursement. Coverage depends on your specific insurance policy. Please check with your provider regarding functional medicine consultations.</p>
-      </details>
-    </div>
-  </div>
+ <div class="max-w-3xl mx-auto">
+ <div class="text-center mb-10">
+ <h2 class="section-title">Frequently Asked Questions</h2>
+ <div class="divider"></div>
+ <p class="section-sub">Common questions about functional & integrative medicine</p>
+ </div>
+ <div class="space-y-3">
+ <details class="card" style="cursor:pointer;">
+ <summary class="font-semibold text-base earth" style="list-style:none; display:flex; justify-content:space-between; align-items:center;">
+ What is functional medicine and how is it different from regular treatment?
+ 
+ </summary>
+ <p class="text-gray-500 text-sm mt-3 leading-relaxed">Functional medicine focuses on finding and treating the root cause of health issues rather than just managing symptoms. At Integra Health Centre, consultations are 45–60 minutes long, involving comprehensive lab work, detailed history, and personalised protocols combining nutrition, lifestyle changes, and targeted supplementation.</p>
+ </details>
+ <details class="card" style="cursor:pointer;">
+ <summary class="font-semibold text-base earth" style="list-style:none; display:flex; justify-content:space-between; align-items:center;">
+ What are the consultation timings and fees at Integra Health Centre?
+ 
+ </summary>
+ <p class="text-gray-500 text-sm mt-3 leading-relaxed">We are open Monday to Saturday, 9:00 AM to 8:00 PM, by appointment only. The first consultation fee is 1,200 for a 60-minute deep assessment. Call +91 98765 00004 to book your slot.</p>
+ </details>
+ <details class="card" style="cursor:pointer;">
+ <summary class="font-semibold text-base earth" style="list-style:none; display:flex; justify-content:space-between; align-items:center;">
+ Do I need an appointment or can I walk in?
+ 
+ </summary>
+ <p class="text-gray-500 text-sm mt-3 leading-relaxed">Integra Health Centre operates by appointment only to ensure each patient gets dedicated 45–60 minute consultations. Please call +91 98765 00004 to schedule your visit.</p>
+ </details>
+ <details class="card" style="cursor:pointer;">
+ <summary class="font-semibold text-base earth" style="list-style:none; display:flex; justify-content:space-between; align-items:center;">
+ What conditions does the clinic specialise in treating?
+ 
+ </summary>
+ <p class="text-gray-500 text-sm mt-3 leading-relaxed">We specialize in gut health (IBS, SIBO, leaky gut), hormonal imbalance (PCOD, thyroid, adrenal fatigue), chronic fatigue, brain fog, unexplained weight gain, metabolic syndrome, and preventive health optimization.</p>
+ </details>
+ <details class="card" style="cursor:pointer;">
+ <summary class="font-semibold text-base earth" style="list-style:none; display:flex; justify-content:space-between; align-items:center;">
+ Does the clinic accept health insurance for functional medicine consultations?
+ 
+ </summary>
+ <p class="text-gray-500 text-sm mt-3 leading-relaxed">We provide detailed medical bills, lab reports, and consultation records that can be submitted for insurance reimbursement. Coverage depends on your specific insurance policy. Please check with your provider regarding functional medicine consultations.</p>
+ </details>
+ </div>
+ </div>
 </section>
 
 <footer class="py-10 px-4 text-center text-sm" style="background:#2C2C2C; color:#999;">
-  <div class="max-w-5xl mx-auto">
-    <p class="mb-2 font-semibold text-white" style="font-family:'Cormorant Garamond',serif; font-size:1.1rem;">Integra Health Centre — Aundh, Pune</p>
-    <p class="mb-4">Functional Medicine | Integrative Health | Preventive Care | Gut & Hormones</p>
-    <p class="text-xs">© 2024 Integra Health Centre. By appointment only. MBBS, MD, IFMCP certified physician. This is not emergency care — for emergencies call 108.</p>
-  </div>
+ <div class="max-w-5xl mx-auto">
+ <p class="mb-2 font-semibold text-white" style="font-family:'Cormorant Garamond',serif; font-size:1.1rem;">Integra Health Centre — Aundh, Pune</p>
+ <p class="mb-4">Functional Medicine | Integrative Health | Preventive Care | Gut & Hormones</p>
+ <p class="text-xs">© 2024 Integra Health Centre. By appointment only. MBBS, MD, IFMCP certified physician. This is not emergency care — for emergencies call 108.</p>
+ </div>
 </footer>
 
 </body>

@@ -9,73 +9,73 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  body { font-family: 'Inter', sans-serif; }
-  h1,h2,h3,h4 { font-family: 'Poppins', sans-serif; }
-  .teal { color: #0D7C7C; }
-  .bg-teal { background-color: #0D7C7C; }
-  .gold { color: #F4A832; }
-  .bg-light-teal { background-color: #E8F5F5; }
-  .btn-teal { background-color: #0D7C7C; color: white; padding: 12px 28px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
-  .btn-teal:hover { background-color: #0a6b6b; transform: translateY(-1px); }
-  .btn-outline { border: 2px solid #0D7C7C; color: #0D7C7C; padding: 10px 26px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
-  .btn-outline:hover { background-color: #0D7C7C; color: white; }
-  .card { background: white; border-radius: 12px; padding: 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); transition: all 0.2s; }
-  .card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(13,124,124,0.15); }
-  .hero-bg { background: linear-gradient(135deg, #f0fafa 0%, #e8f5f5 50%, #d4eef0 100%); }
-  nav { position: sticky; top: 0; z-index: 100; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
-  .stat-num { font-family: 'Poppins', sans-serif; font-size: 2.5rem; font-weight: 800; color: #0D7C7C; }
-  .section-title { font-size: 2rem; font-weight: 700; color: #1A1A1A; margin-bottom: 0.5rem; }
-  .section-sub { color: #666; font-size: 1.1rem; margin-bottom: 3rem; }
-  footer { background: #1A1A1A; color: #ccc; }
+ body { font-family: 'Inter', sans-serif; }
+ h1,h2,h3,h4 { font-family: 'Poppins', sans-serif; }
+ .teal { color: #0D7C7C; }
+ .bg-teal { background-color: #0D7C7C; }
+ .gold { color: #F4A832; }
+ .bg-light-teal { background-color: #E8F5F5; }
+ .btn-teal { background-color: #0D7C7C; color: white; padding: 12px 28px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+ .btn-teal:hover { background-color: #0a6b6b; transform: translateY(-1px); }
+ .btn-outline { border: 2px solid #0D7C7C; color: #0D7C7C; padding: 10px 26px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+ .btn-outline:hover { background-color: #0D7C7C; color: white; }
+ .card { background: white; border-radius: 12px; padding: 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); transition: all 0.2s; }
+ .card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(13,124,124,0.15); }
+ .hero-bg { background: linear-gradient(135deg, #f0fafa 0%, #e8f5f5 50%, #d4eef0 100%); }
+ nav { position: sticky; top: 0; z-index: 100; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+ .stat-num { font-family: 'Poppins', sans-serif; font-size: 2.5rem; font-weight: 800; color: #0D7C7C; }
+ .section-title { font-size: 2rem; font-weight: 700; color: #1A1A1A; margin-bottom: 0.5rem; }
+ .section-sub { color: #666; font-size: 1.1rem; margin-bottom: 3rem; }
+ footer { background: #1A1A1A; color: #ccc; }
 </style>
 <link rel="canonical" href="https://invictus-ai.in/demos/autoservice.html">
 <meta property="og:image" content="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1200&q=80">
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What car services do you offer at your Kothrud workshop?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We provide comprehensive car services including regular maintenance, engine diagnostics, brake repair, AC servicing, suspension work, and body painting. Our Kothrud workshop handles all major brands. Customers from Warje, Bavdhan, and Karve Nagar find us convenient for quick, reliable repairs."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How much does a basic car service cost in Pune?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A basic service with oil change, filter replacement, and multi-point inspection starts at ₹2,500 for hatchbacks and ₹3,500 for sedans and SUVs. We use genuine or equivalent quality parts and provide transparent billing with no surprise charges at the end."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you offer doorstep car pickup for servicing?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, we offer free pickup and drop within a 5 km radius of our Kothrud center. For areas like Hinjewadi, Baner, and Aundh, a nominal pickup charge applies. Just book your service online or call us, and our driver will collect your car at your convenience."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How long does a typical car service take at your Pune workshop?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A basic service takes about three to four hours. Major services or repairs may require a full day. We provide real-time updates via WhatsApp and have a comfortable waiting area with WiFi if you prefer to wait at our Kothrud service center."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can you service all car brands or only specific ones?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We service all major car brands including Maruti, Hyundai, Tata, Honda, Toyota, Volkswagen, Skoda, and luxury brands like BMW and Mercedes. Our technicians are trained and certified, with specialized diagnostic tools for each manufacturer's systems."
-      }
-    }
-  ]
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "What car services do you offer at your Kothrud workshop?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "We provide comprehensive car services including regular maintenance, engine diagnostics, brake repair, AC servicing, suspension work, and body painting. Our Kothrud workshop handles all major brands. Customers from Warje, Bavdhan, and Karve Nagar find us convenient for quick, reliable repairs."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "How much does a basic car service cost in Pune?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "A basic service with oil change, filter replacement, and multi-point inspection starts at 2,500 for hatchbacks and 3,500 for sedans and SUVs. We use genuine or equivalent quality parts and provide transparent billing with no surprise charges at the end."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Do you offer doorstep car pickup for servicing?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Yes, we offer free pickup and drop within a 5 km radius of our Kothrud center. For areas like Hinjewadi, Baner, and Aundh, a nominal pickup charge applies. Just book your service online or call us, and our driver will collect your car at your convenience."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "How long does a typical car service take at your Pune workshop?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "A basic service takes about three to four hours. Major services or repairs may require a full day. We provide real-time updates via WhatsApp and have a comfortable waiting area with WiFi if you prefer to wait at our Kothrud service center."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Can you service all car brands or only specific ones?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "We service all major car brands including Maruti, Hyundai, Tata, Honda, Toyota, Volkswagen, Skoda, and luxury brands like BMW and Mercedes. Our technicians are trained and certified, with specialized diagnostic tools for each manufacturer's systems."
+ }
+ }
+ ]
 }
 </script>
 </head>
@@ -83,266 +83,266 @@
 
 <!-- NAVIGATION -->
 <nav>
-  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-    <div class="flex items-center gap-2">
-      <span class="text-2xl">🦷</span>
-      <div>
-        <div class="font-bold text-lg teal leading-tight">Bright Smile Dental</div>
-        <div class="text-xs text-gray-500">Kothrud, Pune</div>
-      </div>
-    </div>
-    <div class="hidden md:flex gap-8 text-sm font-medium text-gray-600">
-      <a href="#services" class="hover:text-teal transition-colors">Services</a>
-      <a href="#about" class="hover:text-teal transition-colors">About</a>
-      <a href="#testimonials" class="hover:text-teal transition-colors">Patients</a>
-      <a href="#contact" class="hover:text-teal transition-colors">Contact</a>
-    </div>
-    <a href="#book" class="btn-teal text-sm hidden md:block">Book Appointment →</a>
-  </div>
+ <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+ <div class="flex items-center gap-2">
+ 
+ <div>
+ <div class="font-bold text-lg teal leading-tight">Bright Smile Dental</div>
+ <div class="text-xs text-gray-500">Kothrud, Pune</div>
+ </div>
+ </div>
+ <div class="hidden md:flex gap-8 text-sm font-medium text-gray-600">
+ <a href="#services" class="hover:text-teal transition-colors">Services</a>
+ <a href="#about" class="hover:text-teal transition-colors">About</a>
+ <a href="#testimonials" class="hover:text-teal transition-colors">Patients</a>
+ <a href="#contact" class="hover:text-teal transition-colors">Contact</a>
+ </div>
+ <a href="#book" class="btn-teal text-sm hidden md:block">Book Appointment </a>
+ </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero-bg py-20 px-4">
-  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
-    <div class="flex-1" id="hero-text">
-      <div class="inline-block bg-teal text-white text-xs font-semibold px-3 py-1 rounded-full mb-6 gold-text" style="background:#F4A832; color:#1a1a1a;">
-        ✓ Trusted by 2,000+ families in Kothrud
-      </div>
-      <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
-        Your Smile Deserves<br><span class="teal">the Best Care</span>
-      </h1>
-      <p class="text-lg text-gray-600 mb-8 max-w-lg">
-        Advanced dental treatments in Kothrud, Pune. Painless procedures, modern technology, and a team that genuinely cares about your smile.
-      </p>
-      <div class="flex flex-wrap gap-4 mb-10">
-        <a href="#book" class="btn-teal">Book Appointment →</a>
-        <a href="tel:02012345678" class="btn-outline">📞 020-1234-5678</a>
-      </div>
-      <div class="flex flex-wrap gap-6 text-sm text-gray-600">
-        <span>✅ 15+ Years Experience</span>
-        <span>✅ 2,000+ Patients</span>
-        <span>✅ Painless Treatments</span>
-        <span>✅ Mon–Sat: 10AM–8PM</span>
-      </div>
-    </div>
-    <div class="flex-1 flex justify-center">
-      <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=500&q=80" 
-           alt="Modern dental clinic" class="rounded-2xl shadow-2xl w-full max-w-md object-cover" style="max-height:420px;">
-    </div>
-  </div>
+ <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+ <div class="flex-1" id="hero-text">
+ <div class="inline-block bg-teal text-white text-xs font-semibold px-3 py-1 rounded-full mb-6 gold-text" style="background:#F4A832; color:#1a1a1a;">
+ Trusted by 2,000+ families in Kothrud
+ </div>
+ <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
+ Your Smile Deserves<br><span class="teal">the Best Care</span>
+ </h1>
+ <p class="text-lg text-gray-600 mb-8 max-w-lg">
+ Advanced dental treatments in Kothrud, Pune. Painless procedures, modern technology, and a team that genuinely cares about your smile.
+ </p>
+ <div class="flex flex-wrap gap-4 mb-10">
+ <a href="#book" class="btn-teal">Book Appointment </a>
+ <a href="tel:02012345678" class="btn-outline">020-1234-5678</a>
+ </div>
+ <div class="flex flex-wrap gap-6 text-sm text-gray-600">
+ <span>15+ Years Experience</span>
+ <span>2,000+ Patients</span>
+ <span>Painless Treatments</span>
+ <span>Mon–Sat: 10AM–8PM</span>
+ </div>
+ </div>
+ <div class="flex-1 flex justify-center">
+ <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=500&q=80" 
+ alt="Modern dental clinic" class="rounded-2xl shadow-2xl w-full max-w-md object-cover" style="max-height:420px;">
+ </div>
+ </div>
 </section>
 
 <!-- SERVICES -->
 <section id="services" class="py-20 px-4">
-  <div class="max-w-6xl mx-auto text-center">
-    <div class="section-title" id="services-title">Everything For Your Dental Health</div>
-    <div class="section-sub">From routine cleanings to complete smile makeovers — all under one roof.</div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="card service-card">
-        <div class="text-4xl mb-4">🦷</div>
-        <h3 class="font-bold text-lg mb-2">Teeth Cleaning</h3>
-        <p class="text-gray-600 text-sm">Professional scaling & polishing. 45-min appointment. Recommended every 6 months.</p>
-      </div>
-      <div class="card service-card">
-        <div class="text-4xl mb-4">😁</div>
-        <h3 class="font-bold text-lg mb-2">Teeth Whitening</h3>
-        <p class="text-gray-600 text-sm">In-chair whitening, 2–4 shades brighter in one session. Safe and long-lasting.</p>
-      </div>
-      <div class="card service-card">
-        <div class="text-4xl mb-4">🔧</div>
-        <h3 class="font-bold text-lg mb-2">Dental Implants</h3>
-        <p class="text-gray-600 text-sm">Permanent tooth replacement that looks and feels completely natural. Lifetime solution.</p>
-      </div>
-      <div class="card service-card">
-        <div class="text-4xl mb-4">👶</div>
-        <h3 class="font-bold text-lg mb-2">Kids Dentistry</h3>
-        <p class="text-gray-600 text-sm">Gentle, fear-free care for children aged 3–16. We make dental visits fun!</p>
-      </div>
-      <div class="card service-card">
-        <div class="text-4xl mb-4">🦴</div>
-        <h3 class="font-bold text-lg mb-2">Root Canal</h3>
-        <p class="text-gray-600 text-sm">Pain-free RCT using rotary endodontics. Most cases resolved in a single visit.</p>
-      </div>
-      <div class="card service-card">
-        <div class="text-4xl mb-4">✨</div>
-        <h3 class="font-bold text-lg mb-2">Smile Makeover</h3>
-        <p class="text-gray-600 text-sm">Veneers, bonding & clear aligners. Transform your confidence in just a few weeks.</p>
-      </div>
-    </div>
-  </div>
+ <div class="max-w-6xl mx-auto text-center">
+ <div class="section-title" id="services-title">Everything For Your Dental Health</div>
+ <div class="section-sub">From routine cleanings to complete smile makeovers — all under one roof.</div>
+ <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+ <div class="card service-card">
+ <div class="text-4xl mb-4"></div>
+ <h3 class="font-bold text-lg mb-2">Teeth Cleaning</h3>
+ <p class="text-gray-600 text-sm">Professional scaling & polishing. 45-min appointment. Recommended every 6 months.</p>
+ </div>
+ <div class="card service-card">
+ <div class="text-4xl mb-4"></div>
+ <h3 class="font-bold text-lg mb-2">Teeth Whitening</h3>
+ <p class="text-gray-600 text-sm">In-chair whitening, 2–4 shades brighter in one session. Safe and long-lasting.</p>
+ </div>
+ <div class="card service-card">
+ <div class="text-4xl mb-4"></div>
+ <h3 class="font-bold text-lg mb-2">Dental Implants</h3>
+ <p class="text-gray-600 text-sm">Permanent tooth replacement that looks and feels completely natural. Lifetime solution.</p>
+ </div>
+ <div class="card service-card">
+ <div class="text-4xl mb-4"></div>
+ <h3 class="font-bold text-lg mb-2">Kids Dentistry</h3>
+ <p class="text-gray-600 text-sm">Gentle, fear-free care for children aged 3–16. We make dental visits fun!</p>
+ </div>
+ <div class="card service-card">
+ <div class="text-4xl mb-4"></div>
+ <h3 class="font-bold text-lg mb-2">Root Canal</h3>
+ <p class="text-gray-600 text-sm">Pain-free RCT using rotary endodontics. Most cases resolved in a single visit.</p>
+ </div>
+ <div class="card service-card">
+ <div class="text-4xl mb-4">✨</div>
+ <h3 class="font-bold text-lg mb-2">Smile Makeover</h3>
+ <p class="text-gray-600 text-sm">Veneers, bonding & clear aligners. Transform your confidence in just a few weeks.</p>
+ </div>
+ </div>
+ </div>
 </section>
 
 <!-- STATS -->
 <section class="bg-light-teal py-20 px-4">
-  <div class="max-w-6xl mx-auto text-center">
-    <div class="section-title">Why Pune Trusts Bright Smile</div>
-    <div class="section-sub">Numbers that speak for themselves.</div>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
-      <div>
-        <div class="stat-num" id="stat1">0</div>
-        <div class="text-gray-600 font-medium">Happy Patients</div>
-      </div>
-      <div>
-        <div class="stat-num" id="stat2">0</div>
-        <div class="text-gray-600 font-medium">Years Experience</div>
-      </div>
-      <div>
-        <div class="stat-num" id="stat3">0</div>
-        <div class="text-gray-600 font-medium">Google Rating</div>
-      </div>
-      <div>
-        <div class="stat-num" id="stat4">0</div>
-        <div class="text-gray-600 font-medium">Hr Appointment</div>
-      </div>
-    </div>
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="bg-white rounded-xl p-6 shadow-sm">
-        <div class="text-teal text-2xl mb-3">✅</div>
-        <h4 class="font-bold mb-1">No Waiting Lines</h4>
-        <p class="text-gray-600 text-sm">Book online and arrive exactly on time. Your appointment is yours alone.</p>
-      </div>
-      <div class="bg-white rounded-xl p-6 shadow-sm">
-        <div class="text-teal text-2xl mb-3">✅</div>
-        <h4 class="font-bold mb-1">Transparent Pricing</h4>
-        <p class="text-gray-600 text-sm">No hidden charges. We discuss costs upfront so there are zero surprises.</p>
-      </div>
-      <div class="bg-white rounded-xl p-6 shadow-sm">
-        <div class="text-teal text-2xl mb-3">✅</div>
-        <h4 class="font-bold mb-1">Latest Technology</h4>
-        <p class="text-gray-600 text-sm">Digital X-rays, painless anaesthesia, and modern equipment for your comfort.</p>
-      </div>
-    </div>
-  </div>
+ <div class="max-w-6xl mx-auto text-center">
+ <div class="section-title">Why Pune Trusts Bright Smile</div>
+ <div class="section-sub">Numbers that speak for themselves.</div>
+ <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+ <div>
+ <div class="stat-num" id="stat1">0</div>
+ <div class="text-gray-600 font-medium">Happy Patients</div>
+ </div>
+ <div>
+ <div class="stat-num" id="stat2">0</div>
+ <div class="text-gray-600 font-medium">Years Experience</div>
+ </div>
+ <div>
+ <div class="stat-num" id="stat3">0</div>
+ <div class="text-gray-600 font-medium">Google Rating</div>
+ </div>
+ <div>
+ <div class="stat-num" id="stat4">0</div>
+ <div class="text-gray-600 font-medium">Hr Appointment</div>
+ </div>
+ </div>
+ <div class="grid md:grid-cols-3 gap-6">
+ <div class="bg-white rounded-xl p-6 shadow-sm">
+ <div class="text-teal text-2xl mb-3"></div>
+ <h4 class="font-bold mb-1">No Waiting Lines</h4>
+ <p class="text-gray-600 text-sm">Book online and arrive exactly on time. Your appointment is yours alone.</p>
+ </div>
+ <div class="bg-white rounded-xl p-6 shadow-sm">
+ <div class="text-teal text-2xl mb-3"></div>
+ <h4 class="font-bold mb-1">Transparent Pricing</h4>
+ <p class="text-gray-600 text-sm">No hidden charges. We discuss costs upfront so there are zero surprises.</p>
+ </div>
+ <div class="bg-white rounded-xl p-6 shadow-sm">
+ <div class="text-teal text-2xl mb-3"></div>
+ <h4 class="font-bold mb-1">Latest Technology</h4>
+ <p class="text-gray-600 text-sm">Digital X-rays, painless anaesthesia, and modern equipment for your comfort.</p>
+ </div>
+ </div>
+ </div>
 </section>
 
 <!-- ABOUT DOCTOR -->
 <section id="about" class="py-20 px-4">
-  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
-    <div class="flex-shrink-0">
-      <img src="https://randomuser.me/api/portraits/women/44.jpg" 
-           alt="Dr. Priya Joshi" class="rounded-full w-48 h-48 object-cover border-4 border-teal shadow-xl">
-    </div>
-    <div id="about-text">
-      <div class="text-sm font-semibold teal uppercase tracking-wide mb-2">Meet Your Dentist</div>
-      <h2 class="text-3xl font-bold mb-4">Dr. Priya Joshi</h2>
-      <p class="text-gray-600 mb-4 text-lg">
-        Dr. Priya Joshi is a BDS, MDS graduate with 15 years of experience in restorative and cosmetic dentistry. She founded Bright Smile Dental in 2011 with one mission: make quality dental care accessible to every family in Kothrud.
-      </p>
-      <blockquote class="border-l-4 border-teal pl-4 italic text-gray-500 mb-6">
-        "I believe every patient deserves a smile they're proud of — and treatments that don't hurt their pocket or their confidence."
-      </blockquote>
-      <div class="flex flex-wrap gap-4 text-sm">
-        <span class="bg-light-teal px-3 py-2 rounded-full">🎓 BDS, MDS — Pune University</span>
-        <span class="bg-light-teal px-3 py-2 rounded-full">🏆 15 Years Experience</span>
-        <span class="bg-light-teal px-3 py-2 rounded-full">📍 Kothrud, Pune</span>
-      </div>
-    </div>
-  </div>
+ <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+ <div class="flex-shrink-0">
+ <img src="https://randomuser.me/api/portraits/women/44.jpg" 
+ alt="Dr. Priya Joshi" class="rounded-full w-48 h-48 object-cover border-4 border-teal shadow-xl">
+ </div>
+ <div id="about-text">
+ <div class="text-sm font-semibold teal uppercase tracking-wide mb-2">Meet Your Dentist</div>
+ <h2 class="text-3xl font-bold mb-4">Dr. Priya Joshi</h2>
+ <p class="text-gray-600 mb-4 text-lg">
+ Dr. Priya Joshi is a BDS, MDS graduate with 15 years of experience in restorative and cosmetic dentistry. She founded Bright Smile Dental in 2011 with one mission: make quality dental care accessible to every family in Kothrud.
+ </p>
+ <blockquote class="border-l-4 border-teal pl-4 italic text-gray-500 mb-6">
+ "I believe every patient deserves a smile they're proud of — and treatments that don't hurt their pocket or their confidence."
+ </blockquote>
+ <div class="flex flex-wrap gap-4 text-sm">
+ <span class="bg-light-teal px-3 py-2 rounded-full"> BDS, MDS — Pune University</span>
+ <span class="bg-light-teal px-3 py-2 rounded-full"> 15 Years Experience</span>
+ <span class="bg-light-teal px-3 py-2 rounded-full">Kothrud, Pune</span>
+ </div>
+ </div>
+ </div>
 </section>
 
 <!-- TESTIMONIALS -->
 <section id="testimonials" class="bg-gray-50 py-20 px-4">
-  <div class="max-w-6xl mx-auto text-center">
-    <div class="section-title">What Our Patients Say</div>
-    <div class="text-yellow-400 text-2xl mb-2">⭐⭐⭐⭐⭐</div>
-    <div class="text-gray-500 mb-10">4.9 / 5 — Based on 200+ Google Reviews</div>
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="card testimonial-card">
-        <div class="text-yellow-400 mb-3">⭐⭐⭐⭐⭐</div>
-        <p class="text-gray-700 italic mb-4">"I was terrified of dentists. Dr. Joshi made my root canal completely painless. Booked my family's checkups the same week."</p>
-        <div class="font-semibold teal">— Rahul M., Kothrud</div>
-      </div>
-      <div class="card testimonial-card">
-        <div class="text-yellow-400 mb-3">⭐⭐⭐⭐⭐</div>
-        <p class="text-gray-700 italic mb-4">"Best teeth whitening in Pune. Done in one hour, results are incredible. Highly recommend for anyone with a wedding coming up!"</p>
-        <div class="font-semibold teal">— Sneha K., Baner</div>
-      </div>
-      <div class="card testimonial-card">
-        <div class="text-yellow-400 mb-3">⭐⭐⭐⭐⭐</div>
-        <p class="text-gray-700 italic mb-4">"Brought my 6-year-old who was scared of the dentist. The staff was so patient and kind. My son actually asked to come back!"</p>
-        <div class="font-semibold teal">— Anjali P., Karve Nagar</div>
-      </div>
-    </div>
-  </div>
+ <div class="max-w-6xl mx-auto text-center">
+ <div class="section-title">What Our Patients Say</div>
+ <div class="text-yellow-400 text-2xl mb-2">5 out of 5</div>
+ <div class="text-gray-500 mb-10">4.9 / 5 — Based on 200+ Google Reviews</div>
+ <div class="grid md:grid-cols-3 gap-6">
+ <div class="card testimonial-card">
+ <div class="text-yellow-400 mb-3">5 out of 5</div>
+ <p class="text-gray-700 italic mb-4">"I was terrified of dentists. Dr. Joshi made my root canal completely painless. Booked my family's checkups the same week."</p>
+ <div class="font-semibold teal">— Rahul M., Kothrud</div>
+ </div>
+ <div class="card testimonial-card">
+ <div class="text-yellow-400 mb-3">5 out of 5</div>
+ <p class="text-gray-700 italic mb-4">"Best teeth whitening in Pune. Done in one hour, results are incredible. Highly recommend for anyone with a wedding coming up!"</p>
+ <div class="font-semibold teal">— Sneha K., Baner</div>
+ </div>
+ <div class="card testimonial-card">
+ <div class="text-yellow-400 mb-3">5 out of 5</div>
+ <p class="text-gray-700 italic mb-4">"Brought my 6-year-old who was scared of the dentist. The staff was so patient and kind. My son actually asked to come back!"</p>
+ <div class="font-semibold teal">— Anjali P., Karve Nagar</div>
+ </div>
+ </div>
+ </div>
 </section>
 
 <!-- BOOK APPOINTMENT -->
 <section id="book" class="bg-teal py-20 px-4">
-  <div class="max-w-4xl mx-auto text-center text-white">
-    <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready for a Healthier Smile?</h2>
-    <p class="text-teal-100 text-lg mb-10" style="color:#c8eeee;">Book your appointment today. We'll confirm within 2 hours. New patients welcome.</p>
-    <div class="bg-white rounded-2xl p-8 text-left max-w-xl mx-auto shadow-2xl">
-      <h3 class="font-bold text-gray-900 text-xl mb-6">Book Appointment</h3>
-      <div class="grid md:grid-cols-2 gap-4 mb-4">
-        <input type="text" placeholder="Your Name" class="border border-gray-200 rounded-lg px-4 py-3 w-full text-gray-900 focus:outline-none focus:border-teal">
-        <input type="tel" placeholder="Phone Number" class="border border-gray-200 rounded-lg px-4 py-3 w-full text-gray-900 focus:outline-none focus:border-teal">
-      </div>
-      <select class="border border-gray-200 rounded-lg px-4 py-3 w-full text-gray-700 mb-4 focus:outline-none focus:border-teal">
-        <option>Select Service</option>
-        <option>Routine Checkup</option>
-        <option>Teeth Cleaning</option>
-        <option>Teeth Whitening</option>
-        <option>Dental Implants</option>
-        <option>Root Canal</option>
-        <option>Smile Makeover</option>
-        <option>Kids Dentistry</option>
-      </select>
-      <input type="date" class="border border-gray-200 rounded-lg px-4 py-3 w-full text-gray-700 mb-6 focus:outline-none focus:border-teal">
-      <button class="btn-teal w-full text-center text-base py-3" onclick="alert('Thank you! We will confirm your appointment within 2 hours.')">
-        Book My Appointment →
-      </button>
-      <div class="text-center mt-4">
-        <a href="https://wa.me/919876543210" class="text-gray-600 hover:text-teal text-sm">
-          💬 Or WhatsApp us: +91-98765-43210
-        </a>
-      </div>
-    </div>
-  </div>
+ <div class="max-w-4xl mx-auto text-center text-white">
+ <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready for a Healthier Smile?</h2>
+ <p class="text-teal-100 text-lg mb-10" style="color:#c8eeee;">Book your appointment today. We'll confirm within 2 hours. New patients welcome.</p>
+ <div class="bg-white rounded-2xl p-8 text-left max-w-xl mx-auto shadow-2xl">
+ <h3 class="font-bold text-gray-900 text-xl mb-6">Book Appointment</h3>
+ <div class="grid md:grid-cols-2 gap-4 mb-4">
+ <input type="text" placeholder="Your Name" class="border border-gray-200 rounded-lg px-4 py-3 w-full text-gray-900 focus:outline-none focus:border-teal">
+ <input type="tel" placeholder="Phone Number" class="border border-gray-200 rounded-lg px-4 py-3 w-full text-gray-900 focus:outline-none focus:border-teal">
+ </div>
+ <select class="border border-gray-200 rounded-lg px-4 py-3 w-full text-gray-700 mb-4 focus:outline-none focus:border-teal">
+ <option>Select Service</option>
+ <option>Routine Checkup</option>
+ <option>Teeth Cleaning</option>
+ <option>Teeth Whitening</option>
+ <option>Dental Implants</option>
+ <option>Root Canal</option>
+ <option>Smile Makeover</option>
+ <option>Kids Dentistry</option>
+ </select>
+ <input type="date" class="border border-gray-200 rounded-lg px-4 py-3 w-full text-gray-700 mb-6 focus:outline-none focus:border-teal">
+ <button class="btn-teal w-full text-center text-base py-3" onclick="alert('Thank you! We will confirm your appointment within 2 hours.')">
+ Book My Appointment 
+ </button>
+ <div class="text-center mt-4">
+ <a href="https://wa.me/919876543210" class="text-gray-600 hover:text-teal text-sm">
+ Or WhatsApp us: +91-98765-43210
+ </a>
+ </div>
+ </div>
+ </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="py-20 px-4">
-  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
-    <div>
-      <h2 class="text-3xl font-bold mb-8">Find Us</h2>
-      <div class="space-y-4 text-gray-600">
-        <div class="flex items-start gap-3">
-          <span class="text-xl">📍</span>
-          <div>
-            <div class="font-semibold text-gray-900">Address</div>
-            <div>Shop 12, Sai Arcade, Paud Road<br>Kothrud, Pune - 411038</div>
-          </div>
-        </div>
-        <div class="flex items-start gap-3">
-          <span class="text-xl">📞</span>
-          <div>
-            <div class="font-semibold text-gray-900">Phone</div>
-            <div>020-1234-5678 | +91-98765-43210</div>
-          </div>
-        </div>
-        <div class="flex items-start gap-3">
-          <span class="text-xl">📧</span>
-          <div>
-            <div class="font-semibold text-gray-900">Email</div>
-            <div>brightsmile.kothrud@gmail.com</div>
-          </div>
-        </div>
-        <div class="flex items-start gap-3">
-          <span class="text-xl">⏰</span>
-          <div>
-            <div class="font-semibold text-gray-900">Hours</div>
-            <div>Mon–Sat: 10:00 AM – 8:00 PM<br>Sunday: 10:00 AM – 1:00 PM</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div>
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.8!2d73.8139!3d18.5019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zS290aHJ1ZCwgUHVuZQ!5e0!3m2!1sen!2sin!4v1"
-        width="100%" height="300" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy">
-      </iframe>
-    </div>
-  </div>
+ <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
+ <div>
+ <h2 class="text-3xl font-bold mb-8">Find Us</h2>
+ <div class="space-y-4 text-gray-600">
+ <div class="flex items-start gap-3">
+ 
+ <div>
+ <div class="font-semibold text-gray-900">Address</div>
+ <div>Shop 12, Sai Arcade, Paud Road<br>Kothrud, Pune - 411038</div>
+ </div>
+ </div>
+ <div class="flex items-start gap-3">
+ 
+ <div>
+ <div class="font-semibold text-gray-900">Phone</div>
+ <div>020-1234-5678 | +91-98765-43210</div>
+ </div>
+ </div>
+ <div class="flex items-start gap-3">
+ 
+ <div>
+ <div class="font-semibold text-gray-900">Email</div>
+ <div>brightsmile.kothrud@gmail.com</div>
+ </div>
+ </div>
+ <div class="flex items-start gap-3">
+ <span class="text-xl">⏰</span>
+ <div>
+ <div class="font-semibold text-gray-900">Hours</div>
+ <div>Mon–Sat: 10:00 AM – 8:00 PM<br>Sunday: 10:00 AM – 1:00 PM</div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div>
+ <iframe 
+ src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.8!2d73.8139!3d18.5019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zS290aHJ1ZCwgUHVuZQ!5e0!3m2!1sen!2sin!4v1"
+ width="100%" height="300" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy">
+ </iframe>
+ </div>
+ </div>
 </section>
 
 <!-- FOOTER -->
@@ -358,104 +358,104 @@
 .faq-item .faq-answer { padding: 0 0 18px; font-size: 0.92rem; line-height: 1.7; color: #555; }
 </style>
 <section class="faq-section" id="faq">
-  <h2>Frequently Asked Questions</h2>
-  <div class="faq-container">
-    <details class="faq-item">
-      <summary>What car services do you offer at your Kothrud workshop?</summary>
-      <div class="faq-answer">We provide comprehensive car services including regular maintenance, engine diagnostics, brake repair, AC servicing, suspension work, and body painting. Our Kothrud workshop handles all major brands. Customers from Warje, Bavdhan, and Karve Nagar find us convenient for quick, reliable repairs.</div>
-    </details>
-    <details class="faq-item">
-      <summary>How much does a basic car service cost in Pune?</summary>
-      <div class="faq-answer">A basic service with oil change, filter replacement, and multi-point inspection starts at ₹2,500 for hatchbacks and ₹3,500 for sedans and SUVs. We use genuine or equivalent quality parts and provide transparent billing with no surprise charges at the end.</div>
-    </details>
-    <details class="faq-item">
-      <summary>Do you offer doorstep car pickup for servicing?</summary>
-      <div class="faq-answer">Yes, we offer free pickup and drop within a 5 km radius of our Kothrud center. For areas like Hinjewadi, Baner, and Aundh, a nominal pickup charge applies. Just book your service online or call us, and our driver will collect your car at your convenience.</div>
-    </details>
-    <details class="faq-item">
-      <summary>How long does a typical car service take at your Pune workshop?</summary>
-      <div class="faq-answer">A basic service takes about three to four hours. Major services or repairs may require a full day. We provide real-time updates via WhatsApp and have a comfortable waiting area with WiFi if you prefer to wait at our Kothrud service center.</div>
-    </details>
-    <details class="faq-item">
-      <summary>Can you service all car brands or only specific ones?</summary>
-      <div class="faq-answer">We service all major car brands including Maruti, Hyundai, Tata, Honda, Toyota, Volkswagen, Skoda, and luxury brands like BMW and Mercedes. Our technicians are trained and certified, with specialized diagnostic tools for each manufacturer's systems.</div>
-    </details>
-  </div>
+ <h2>Frequently Asked Questions</h2>
+ <div class="faq-container">
+ <details class="faq-item">
+ <summary>What car services do you offer at your Kothrud workshop?</summary>
+ <div class="faq-answer">We provide comprehensive car services including regular maintenance, engine diagnostics, brake repair, AC servicing, suspension work, and body painting. Our Kothrud workshop handles all major brands. Customers from Warje, Bavdhan, and Karve Nagar find us convenient for quick, reliable repairs.</div>
+ </details>
+ <details class="faq-item">
+ <summary>How much does a basic car service cost in Pune?</summary>
+ <div class="faq-answer">A basic service with oil change, filter replacement, and multi-point inspection starts at 2,500 for hatchbacks and 3,500 for sedans and SUVs. We use genuine or equivalent quality parts and provide transparent billing with no surprise charges at the end.</div>
+ </details>
+ <details class="faq-item">
+ <summary>Do you offer doorstep car pickup for servicing?</summary>
+ <div class="faq-answer">Yes, we offer free pickup and drop within a 5 km radius of our Kothrud center. For areas like Hinjewadi, Baner, and Aundh, a nominal pickup charge applies. Just book your service online or call us, and our driver will collect your car at your convenience.</div>
+ </details>
+ <details class="faq-item">
+ <summary>How long does a typical car service take at your Pune workshop?</summary>
+ <div class="faq-answer">A basic service takes about three to four hours. Major services or repairs may require a full day. We provide real-time updates via WhatsApp and have a comfortable waiting area with WiFi if you prefer to wait at our Kothrud service center.</div>
+ </details>
+ <details class="faq-item">
+ <summary>Can you service all car brands or only specific ones?</summary>
+ <div class="faq-answer">We service all major car brands including Maruti, Hyundai, Tata, Honda, Toyota, Volkswagen, Skoda, and luxury brands like BMW and Mercedes. Our technicians are trained and certified, with specialized diagnostic tools for each manufacturer's systems.</div>
+ </details>
+ </div>
 </section>
 
 <footer class="py-12 px-4">
-  <div class="max-w-6xl mx-auto">
-    <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-      <div>
-        <div class="flex items-center gap-2 mb-2">
-          <span class="text-2xl">🦷</span>
-          <span class="text-white font-bold">Bright Smile Dental Clinic</span>
-        </div>
-        <div class="text-gray-500 text-sm italic">"Your smile is our mission."</div>
-      </div>
-      <div class="flex gap-6 text-sm text-gray-400">
-        <a href="#services" class="hover:text-white">Services</a>
-        <a href="#about" class="hover:text-white">About</a>
-        <a href="#testimonials" class="hover:text-white">Patients</a>
-        <a href="#book" class="hover:text-white">Book</a>
-        <a href="#contact" class="hover:text-white">Contact</a>
-      </div>
-    </div>
-    <hr class="border-gray-700 my-6">
-    <div class="flex flex-col md:flex-row justify-between text-sm text-gray-500">
-      <div>© 2026 Bright Smile Dental Clinic. All rights reserved.</div>
-      <div>Designed by <span style="color:#F4A832;">DentWeb</span> · Powered by Invictus AI</div>
-    </div>
-  </div>
+ <div class="max-w-6xl mx-auto">
+ <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+ <div>
+ <div class="flex items-center gap-2 mb-2">
+ 
+ <span class="text-white font-bold">Bright Smile Dental Clinic</span>
+ </div>
+ <div class="text-gray-500 text-sm italic">"Your smile is our mission."</div>
+ </div>
+ <div class="flex gap-6 text-sm text-gray-400">
+ <a href="#services" class="hover:text-white">Services</a>
+ <a href="#about" class="hover:text-white">About</a>
+ <a href="#testimonials" class="hover:text-white">Patients</a>
+ <a href="#book" class="hover:text-white">Book</a>
+ <a href="#contact" class="hover:text-white">Contact</a>
+ </div>
+ </div>
+ <hr class="border-gray-700 my-6">
+ <div class="flex flex-col md:flex-row justify-between text-sm text-gray-500">
+ <div>© 2026 Bright Smile Dental Clinic. All rights reserved.</div>
+ <div>Designed by <span style="color:#F4A832;">DentWeb</span> · Powered by Invictus AI</div>
+ </div>
+ </div>
 </footer>
 
 <script>
-  gsap.registerPlugin(ScrollTrigger);
+ gsap.registerPlugin(ScrollTrigger);
 
-  // Hero animations
-  gsap.timeline()
-    .from("#hero-text > *", { opacity: 0, y: 30, stagger: 0.15, duration: 0.7, ease: "power2.out" });
+ // Hero animations
+ gsap.timeline()
+ .from("#hero-text> *", { opacity: 0, y: 30, stagger: 0.15, duration: 0.7, ease: "power2.out" });
 
-  // Service cards
-  gsap.from(".service-card", {
-    scrollTrigger: { trigger: "#services", start: "top 80%" },
-    opacity: 0, y: 40, stagger: 0.1, duration: 0.6, ease: "power2.out"
-  });
+ // Service cards
+ gsap.from(".service-card", {
+ scrollTrigger: { trigger: "#services", start: "top 80%" },
+ opacity: 0, y: 40, stagger: 0.1, duration: 0.6, ease: "power2.out"
+ });
 
-  // Stats counter
-  function animateCounter(id, target, suffix) {
-    ScrollTrigger.create({
-      trigger: "#stat1",
-      start: "top 80%",
-      once: true,
-      onEnter: () => {
-        gsap.to({val: 0}, {
-          val: target,
-          duration: 2,
-          ease: "power2.out",
-          onUpdate: function() {
-            document.getElementById(id).textContent = Math.round(this.targets()[0].val) + suffix;
-          }
-        });
-      }
-    });
-  }
-  animateCounter("stat1", 2000, "+");
-  animateCounter("stat2", 15, "+");
-  animateCounter("stat3", 4.9, "★");
-  animateCounter("stat4", 48, "h");
+ // Stats counter
+ function animateCounter(id, target, suffix) {
+ ScrollTrigger.create({
+ trigger: "#stat1",
+ start: "top 80%",
+ once: true,
+ onEnter: () => {
+ gsap.to({val: 0}, {
+ val: target,
+ duration: 2,
+ ease: "power2.out",
+ onUpdate: function() {
+ document.getElementById(id).textContent = Math.round(this.targets()[0].val) + suffix;
+ }
+ });
+ }
+ });
+ }
+ animateCounter("stat1", 2000, "+");
+ animateCounter("stat2", 15, "+");
+ animateCounter("stat3", 4.9, "1 out of 5");
+ animateCounter("stat4", 48, "h");
 
-  // About
-  gsap.from("#about-text > *", {
-    scrollTrigger: { trigger: "#about", start: "top 75%" },
-    opacity: 0, x: 40, stagger: 0.15, duration: 0.6
-  });
+ // About
+ gsap.from("#about-text> *", {
+ scrollTrigger: { trigger: "#about", start: "top 75%" },
+ opacity: 0, x: 40, stagger: 0.15, duration: 0.6
+ });
 
-  // Testimonials
-  gsap.from(".testimonial-card", {
-    scrollTrigger: { trigger: "#testimonials", start: "top 80%" },
-    opacity: 0, y: 30, stagger: 0.15, duration: 0.6
-  });
+ // Testimonials
+ gsap.from(".testimonial-card", {
+ scrollTrigger: { trigger: "#testimonials", start: "top 80%" },
+ opacity: 0, y: 30, stagger: 0.15, duration: 0.6
+ });
 </script>
 </body>
 </html>
