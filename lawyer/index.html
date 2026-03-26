@@ -3,794 +3,459 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sharma & Associates — Senior Advocates | Pune</title>
-<meta name="description" content="Sharma & Associates — Trusted senior advocates in Pune. Criminal, civil, corporate, family, and property law. 20+ years of courtroom excellence. WhatsApp consultation available.">
+<title>Bright Smile Dental Clinic — Kothrud, Pune</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  :root {
-    --deep-navy: #0a1628;
-    --navy: #0d1f3c;
-    --navy-light: #152a4e;
-    --gold: #c8a84b;
-    --gold-light: #e0c870;
-    --gold-dark: #a0843c;
-    --white: #ffffff;
-    --off-white: #f5f0e8;
-    --text-muted: #9aa3b0;
-    --text-body: #d0d8e4;
-    --border: rgba(200, 168, 75, 0.2);
-    --success: #2ecc71;
-  }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    font-family: 'Georgia', 'Times New Roman', serif;
-    background: var(--deep-navy);
-    color: var(--text-body);
-    line-height: 1.7;
-    overflow-x: hidden;
-  }
-
-  /* ───── UTILITIES ───── */
-  .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-  .sans { font-family: 'Arial', sans-serif; }
-  .gold { color: var(--gold); }
-  .tag {
-    display: inline-block;
-    background: rgba(200,168,75,0.12);
-    color: var(--gold);
-    border: 1px solid var(--border);
-    padding: 4px 14px;
-    border-radius: 20px;
-    font-size: 0.78rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    font-family: Arial, sans-serif;
-    font-weight: 600;
-  }
-  .btn-primary {
-    display: inline-block;
-    background: var(--gold);
-    color: var(--deep-navy);
-    padding: 14px 32px;
-    border-radius: 4px;
-    font-weight: 700;
-    text-decoration: none;
-    font-family: Arial, sans-serif;
-    font-size: 0.95rem;
-    letter-spacing: 0.04em;
-    transition: background 0.2s, transform 0.2s;
-  }
-  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
-  .btn-outline {
-    display: inline-block;
-    border: 2px solid var(--gold);
-    color: var(--gold);
-    padding: 12px 28px;
-    border-radius: 4px;
-    font-weight: 600;
-    text-decoration: none;
-    font-family: Arial, sans-serif;
-    font-size: 0.9rem;
-    transition: all 0.2s;
-  }
-  .btn-outline:hover { background: var(--gold); color: var(--deep-navy); }
-  .section { padding: 80px 0; }
-  .section-header { text-align: center; margin-bottom: 56px; }
-  .section-header h2 { font-size: 2rem; color: var(--white); margin: 12px 0 16px; line-height: 1.2; }
-  .section-header p { color: var(--text-muted); max-width: 560px; margin: 0 auto; font-family: Arial, sans-serif; }
-
-  /* ───── NAV ───── */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    background: rgba(10,22,40,0.95);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid var(--border);
-    padding: 0 24px;
-    height: 64px;
-    display: flex; align-items: center; justify-content: space-between;
-  }
-  .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-  .logo-emblem {
-    width: 38px; height: 38px;
-    background: var(--gold);
-    border-radius: 4px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.1rem;
-    color: var(--deep-navy);
-    font-weight: 700;
-    font-family: Georgia, serif;
-  }
-  .logo-text { font-size: 1.05rem; color: var(--white); font-weight: 700; letter-spacing: 0.02em; }
-  .logo-sub { font-size: 0.68rem; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; font-family: Arial, sans-serif; display: block; margin-top: -2px; }
-  .nav-links { display: flex; gap: 28px; align-items: center; }
-  .nav-links a { color: var(--text-body); text-decoration: none; font-family: Arial, sans-serif; font-size: 0.88rem; transition: color 0.2s; }
-  .nav-links a:hover { color: var(--gold); }
-  .nav-cta { font-family: Arial, sans-serif; font-size: 0.85rem; }
-  @media(max-width: 640px){ .nav-links { display: none; } }
-
-  /* ───── HERO ───── */
-  .hero {
-    min-height: 100vh;
-    display: flex; align-items: center;
-    padding-top: 64px;
-    background: linear-gradient(135deg, var(--deep-navy) 0%, var(--navy-light) 100%);
-    position: relative;
-    overflow: hidden;
-  }
-  .hero::before {
-    content: '';
-    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c8a84b' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    opacity: 0.5;
-  }
-  .hero-scales {
-    position: absolute; right: -60px; top: 50%; transform: translateY(-50%);
-    width: 480px; height: 480px; opacity: 0.05;
-    font-size: 480px; line-height: 1;
-    pointer-events: none;
-  }
-  .hero-content { position: relative; z-index: 2; max-width: 640px; }
-  .hero-tag { margin-bottom: 20px; }
-  .hero h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); color: var(--white); line-height: 1.15; margin-bottom: 12px; }
-  .hero h1 span { color: var(--gold); display: block; }
-  .hero .hero-tagline { font-size: 1.05rem; font-family: Arial, sans-serif; color: var(--text-muted); margin-bottom: 8px; letter-spacing: 0.04em; }
-  .hero-desc { font-size: 1rem; font-family: Arial, sans-serif; color: var(--text-body); margin: 20px 0 36px; max-width: 520px; }
-  .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 48px; }
-  .trust-bar { display: flex; gap: 28px; flex-wrap: wrap; }
-  .trust-item { display: flex; align-items: center; gap: 8px; font-family: Arial, sans-serif; font-size: 0.82rem; color: var(--text-muted); }
-  .trust-item .dot { width: 8px; height: 8px; background: var(--gold); border-radius: 50%; flex-shrink: 0; }
-
-  /* ───── CREDENTIALS BAR ───── */
-  .cred-bar { background: var(--navy); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 28px 0; }
-  .cred-items { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 24px; }
-  .cred-item { text-align: center; }
-  .cred-num { font-size: 2rem; font-weight: 700; color: var(--gold); line-height: 1; }
-  .cred-label { font-family: Arial, sans-serif; font-size: 0.78rem; color: var(--text-muted); letter-spacing: 0.06em; text-transform: uppercase; margin-top: 4px; }
-
-  /* ───── PRACTICE AREAS ───── */
-  .practices-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-  .practice-card {
-    background: var(--navy);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 28px;
-    transition: border-color 0.2s, transform 0.2s;
-    cursor: default;
-  }
-  .practice-card:hover { border-color: var(--gold); transform: translateY(-4px); }
-  .practice-icon { font-size: 1.8rem; margin-bottom: 14px; }
-  .practice-card h3 { font-size: 1.05rem; color: var(--white); margin-bottom: 10px; }
-  .practice-card p { font-family: Arial, sans-serif; font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; }
-  .practice-cases { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 6px; }
-  .practice-cases span {
-    background: rgba(200,168,75,0.08);
-    color: var(--gold);
-    border: 1px solid rgba(200,168,75,0.15);
-    padding: 2px 10px;
-    border-radius: 3px;
-    font-size: 0.72rem;
-    font-family: Arial, sans-serif;
-    letter-spacing: 0.04em;
-  }
-
-  /* ───── TEAM ───── */
-  .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
-  .team-card {
-    background: var(--navy);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    overflow: hidden;
-    transition: border-color 0.2s;
-  }
-  .team-card:hover { border-color: var(--gold); }
-  .team-avatar {
-    height: 180px;
-    background: linear-gradient(135deg, var(--navy-light), var(--deep-navy));
-    display: flex; align-items: center; justify-content: center;
-    font-size: 3.5rem;
-    position: relative;
-  }
-  .team-badge {
-    position: absolute; bottom: 12px; right: 12px;
-    background: var(--gold);
-    color: var(--deep-navy);
-    font-family: Arial, sans-serif;
-    font-size: 0.7rem;
-    font-weight: 700;
-    padding: 3px 8px;
-    border-radius: 3px;
-    letter-spacing: 0.04em;
-  }
-  .team-info { padding: 20px; }
-  .team-info h3 { font-size: 1.05rem; color: var(--white); }
-  .team-info .designation { font-family: Arial, sans-serif; font-size: 0.78rem; color: var(--gold); margin: 4px 0 10px; letter-spacing: 0.04em; }
-  .team-info p { font-family: Arial, sans-serif; font-size: 0.83rem; color: var(--text-muted); }
-  .team-courts { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
-  .court-tag {
-    background: rgba(200,168,75,0.08);
-    border: 1px solid var(--border);
-    color: var(--text-muted);
-    font-size: 0.7rem;
-    font-family: Arial, sans-serif;
-    padding: 2px 8px;
-    border-radius: 3px;
-  }
-
-  /* ───── WHY US ───── */
-  .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
-  .why-item { display: flex; gap: 16px; }
-  .why-icon {
-    width: 44px; height: 44px; min-width: 44px;
-    background: rgba(200,168,75,0.1);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.3rem;
-  }
-  .why-text h4 { color: var(--white); font-size: 0.95rem; margin-bottom: 6px; }
-  .why-text p { font-family: Arial, sans-serif; font-size: 0.83rem; color: var(--text-muted); }
-
-  /* ───── TESTIMONIALS ───── */
-  .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-  .testimonial-card {
-    background: var(--navy);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 24px;
-    position: relative;
-  }
-  .testimonial-card::before {
-    content: '"'; position: absolute; top: 12px; left: 20px;
-    font-size: 3rem; color: var(--gold); opacity: 0.3; line-height: 1;
-  }
-  .testimonial-text { font-size: 0.9rem; color: var(--text-body); font-style: italic; margin-bottom: 16px; padding-top: 16px; }
-  .testimonial-author { display: flex; align-items: center; gap: 12px; }
-  .author-avatar { width: 38px; height: 38px; background: rgba(200,168,75,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1rem; }
-  .author-name { font-family: Arial, sans-serif; font-size: 0.85rem; font-weight: 600; color: var(--white); }
-  .author-detail { font-family: Arial, sans-serif; font-size: 0.75rem; color: var(--text-muted); }
-  .stars { color: var(--gold); font-size: 0.8rem; letter-spacing: 2px; margin-bottom: 4px; }
-
-  /* ───── CONTACT ───── */
-  .contact-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
-  @media(max-width: 720px){ .contact-wrap { grid-template-columns: 1fr; } }
-  .contact-info h2 { font-size: 1.8rem; color: var(--white); margin: 12px 0 20px; }
-  .contact-info p { font-family: Arial, sans-serif; font-size: 0.9rem; color: var(--text-muted); margin-bottom: 28px; }
-  .contact-details { display: flex; flex-direction: column; gap: 16px; }
-  .contact-item { display: flex; gap: 14px; align-items: flex-start; }
-  .contact-item-icon {
-    width: 40px; height: 40px; min-width: 40px;
-    background: rgba(200,168,75,0.1);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.1rem;
-  }
-  .contact-item-text { font-family: Arial, sans-serif; }
-  .contact-item-text strong { color: var(--white); font-size: 0.85rem; display: block; }
-  .contact-item-text span { font-size: 0.82rem; color: var(--text-muted); }
-  .consult-form {
-    background: var(--navy);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 28px;
-  }
-  .consult-form h3 { font-size: 1.1rem; color: var(--white); margin-bottom: 20px; }
-  .form-row { margin-bottom: 16px; }
-  .form-row label { font-family: Arial, sans-serif; font-size: 0.8rem; color: var(--text-muted); display: block; margin-bottom: 6px; letter-spacing: 0.04em; text-transform: uppercase; }
-  .form-row input, .form-row select, .form-row textarea {
-    width: 100%;
-    background: var(--deep-navy);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    padding: 10px 14px;
-    font-family: Arial, sans-serif;
-    font-size: 0.88rem;
-    color: var(--white);
-    transition: border-color 0.2s;
-    outline: none;
-  }
-  .form-row textarea { min-height: 90px; resize: vertical; }
-  .form-row input:focus, .form-row select:focus, .form-row textarea:focus { border-color: var(--gold); }
-  .form-row select option { background: var(--navy); }
-  .form-submit { width: 100%; background: var(--gold); color: var(--deep-navy); border: none; padding: 13px; border-radius: 4px; font-weight: 700; font-family: Arial, sans-serif; font-size: 0.95rem; cursor: pointer; transition: background 0.2s; }
-  .form-submit:hover { background: var(--gold-light); }
-  .form-note { text-align: center; font-family: Arial, sans-serif; font-size: 0.75rem; color: var(--text-muted); margin-top: 10px; }
-
-  /* ───── FOOTER ───── */
-  footer {
-    background: var(--navy);
-    border-top: 1px solid var(--border);
-    padding: 40px 0 24px;
-  }
-  .footer-top { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 32px; margin-bottom: 32px; }
-  .footer-brand .logo-text { font-size: 1.1rem; color: var(--white); font-family: Georgia, serif; font-weight: 700; }
-  .footer-brand .logo-sub { font-family: Arial, sans-serif; font-size: 0.72rem; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-top: 2px; }
-  .footer-brand p { font-family: Arial, sans-serif; font-size: 0.82rem; color: var(--text-muted); margin-top: 10px; max-width: 240px; }
-  .footer-links h4 { font-family: Arial, sans-serif; font-size: 0.78rem; color: var(--gold); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 12px; }
-  .footer-links ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-  .footer-links ul a { font-family: Arial, sans-serif; font-size: 0.82rem; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
-  .footer-links ul a:hover { color: var(--gold); }
-  .footer-bottom { border-top: 1px solid var(--border); padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
-  .footer-bottom p { font-family: Arial, sans-serif; font-size: 0.75rem; color: var(--text-muted); }
-
-  /* ───── FLOATING WHATSAPP ───── */
-  .wa-float {
-    position: fixed; bottom: 28px; right: 28px; z-index: 999;
-    width: 56px; height: 56px;
-    background: #25d366;
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.6rem;
-    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
-    text-decoration: none;
-    transition: transform 0.2s, box-shadow 0.2s;
-    animation: pulse-wa 2.5s infinite;
-  }
-  .wa-float:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,0.55); }
-  @keyframes pulse-wa {
-    0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.4); }
-    50% { box-shadow: 0 4px 32px rgba(37,211,102,0.7); }
-  }
-
-  /* ───── DIVIDER ───── */
-  .gold-line { height: 1px; background: linear-gradient(to right, transparent, var(--gold), transparent); margin: 0; opacity: 0.3; }
-
-  /* ───── DISCLAIMER ───── */
-  .disclaimer {
-    background: rgba(200,168,75,0.05);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 16px 20px;
-    font-family: Arial, sans-serif;
-    font-size: 0.78rem;
-    color: var(--text-muted);
-    margin-top: 24px;
-    line-height: 1.5;
-  }
+  body { font-family: 'Inter', sans-serif; }
+  h1,h2,h3,h4 { font-family: 'Poppins', sans-serif; }
+  .teal { color: #0D7C7C; }
+  .bg-teal { background-color: #0D7C7C; }
+  .gold { color: #F4A832; }
+  .bg-light-teal { background-color: #E8F5F5; }
+  .btn-teal { background-color: #0D7C7C; color: white; padding: 12px 28px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+  .btn-teal:hover { background-color: #0a6b6b; transform: translateY(-1px); }
+  .btn-outline { border: 2px solid #0D7C7C; color: #0D7C7C; padding: 10px 26px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+  .btn-outline:hover { background-color: #0D7C7C; color: white; }
+  .card { background: white; border-radius: 12px; padding: 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); transition: all 0.2s; }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(13,124,124,0.15); }
+  .hero-bg { background: linear-gradient(135deg, #f0fafa 0%, #e8f5f5 50%, #d4eef0 100%); }
+  nav { position: sticky; top: 0; z-index: 100; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .stat-num { font-family: 'Poppins', sans-serif; font-size: 2.5rem; font-weight: 800; color: #0D7C7C; }
+  .section-title { font-size: 2rem; font-weight: 700; color: #1A1A1A; margin-bottom: 0.5rem; }
+  .section-sub { color: #666; font-size: 1.1rem; margin-bottom: 3rem; }
+  footer { background: #1A1A1A; color: #ccc; }
 </style>
+<link rel="canonical" href="https://invictus-ai.in/demos/lawyer.html">
+<meta property="og:image" content="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1200&q=80">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What areas of law does your firm practice in Pune?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We handle property disputes, family law, criminal defense, corporate law, consumer cases, and civil litigation. Our experienced advocates practice at Pune District Court, Shivajinagar Court, and the Bombay High Court bench. Clients from across Pune trust us for diligent legal representation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a legal consultation cost at your Pune office?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Initial consultations start at ₹1,000 for a 30-minute session where we assess your case and advise on the best course of action. Many clients from Kothrud, Deccan, and Shivajinagar visit us for straightforward legal advice before deciding on full representation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you handle property-related legal matters in Pune?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, property law is one of our strongest practice areas. We handle title verification, sale deed drafting, property disputes, society formation, RERA complaints, and landlord-tenant issues. With Pune's booming real estate market, we assist buyers, sellers, and developers with reliable legal counsel."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can your firm represent me in the Bombay High Court?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. Our senior advocates are enrolled with the Bombay High Court and regularly appear at the Aurangabad and Pune circuit benches. For appeals, writ petitions, and high court matters, we provide thorough preparation and strong courtroom representation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the typical timeline for a civil case in Pune courts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Civil cases in Pune District Court typically take one to three years depending on complexity and court scheduling. We focus on efficient case management, timely filings, and exploring settlement options to resolve matters as quickly as possible while protecting your interests."
+      }
+    }
+  ]
+}
+</script>
 </head>
-<body>
+<body class="bg-white text-gray-900">
 
-<!-- NAV -->
+<!-- NAVIGATION -->
 <nav>
-  <a href="#" class="nav-logo">
-    <div class="logo-emblem">S&amp;A</div>
-    <div>
-      <div class="logo-text">Sharma &amp; Associates</div>
-      <span class="logo-sub">Senior Advocates · Pune</span>
+  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-2">
+      <span class="text-2xl">🦷</span>
+      <div>
+        <div class="font-bold text-lg teal leading-tight">Bright Smile Dental</div>
+        <div class="text-xs text-gray-500">Kothrud, Pune</div>
+      </div>
     </div>
-  </a>
-  <div class="nav-links">
-    <a href="#practice">Practice Areas</a>
-    <a href="#team">Our Advocates</a>
-    <a href="#why">Why Us</a>
-    <a href="#contact">Contact</a>
-    <a href="https://wa.me/919876543210?text=Hello%2C+I+need+legal+consultation" class="btn-primary nav-cta">Free Consultation</a>
+    <div class="hidden md:flex gap-8 text-sm font-medium text-gray-600">
+      <a href="#services" class="hover:text-teal transition-colors">Services</a>
+      <a href="#about" class="hover:text-teal transition-colors">About</a>
+      <a href="#testimonials" class="hover:text-teal transition-colors">Patients</a>
+      <a href="#contact" class="hover:text-teal transition-colors">Contact</a>
+    </div>
+    <a href="#book" class="btn-teal text-sm hidden md:block">Book Appointment →</a>
   </div>
 </nav>
 
 <!-- HERO -->
-<section class="hero">
-  <div class="container">
-    <div class="hero-content">
-      <div class="hero-tag"><span class="tag">Established 2004 · Pune Bar</span></div>
-      <h1>Trusted Advocates.<br><span>Decisive Counsel.</span></h1>
-      <p class="hero-tagline">Bombay High Court · District Court Pune · NCLT · Consumer Forums</p>
-      <p class="hero-desc">When the stakes are high, experience matters. Sharma &amp; Associates brings 20+ years of courtroom excellence across criminal, civil, corporate, and family law — protecting what matters most to you.</p>
-      <div class="hero-actions">
-        <a href="https://wa.me/919876543210?text=Hello%2C+I+need+a+legal+consultation" class="btn-primary">📞 Free Consultation</a>
-        <a href="#practice" class="btn-outline">Our Practice Areas</a>
+<section class="hero-bg py-20 px-4">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+    <div class="flex-1" id="hero-text">
+      <div class="inline-block bg-teal text-white text-xs font-semibold px-3 py-1 rounded-full mb-6 gold-text" style="background:#F4A832; color:#1a1a1a;">
+        ✓ Trusted by 2,000+ families in Kothrud
       </div>
-      <div class="trust-bar">
-        <div class="trust-item"><span class="dot"></span><span>2,400+ Cases Handled</span></div>
-        <div class="trust-item"><span class="dot"></span><span>20+ Years Experience</span></div>
-        <div class="trust-item"><span class="dot"></span><span>Confidential & Prompt</span></div>
+      <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
+        Your Smile Deserves<br><span class="teal">the Best Care</span>
+      </h1>
+      <p class="text-lg text-gray-600 mb-8 max-w-lg">
+        Advanced dental treatments in Kothrud, Pune. Painless procedures, modern technology, and a team that genuinely cares about your smile.
+      </p>
+      <div class="flex flex-wrap gap-4 mb-10">
+        <a href="#book" class="btn-teal">Book Appointment →</a>
+        <a href="tel:02012345678" class="btn-outline">📞 020-1234-5678</a>
+      </div>
+      <div class="flex flex-wrap gap-6 text-sm text-gray-600">
+        <span>✅ 15+ Years Experience</span>
+        <span>✅ 2,000+ Patients</span>
+        <span>✅ Painless Treatments</span>
+        <span>✅ Mon–Sat: 10AM–8PM</span>
       </div>
     </div>
-  </div>
-  <div class="hero-scales" aria-hidden="true">⚖</div>
-</section>
-
-<!-- CREDENTIALS BAR -->
-<div class="cred-bar">
-  <div class="container">
-    <div class="cred-items">
-      <div class="cred-item"><div class="cred-num">2,400+</div><div class="cred-label">Cases Handled</div></div>
-      <div class="cred-item"><div class="cred-num">20+</div><div class="cred-label">Years at Bar</div></div>
-      <div class="cred-item"><div class="cred-num">6</div><div class="cred-label">Practice Areas</div></div>
-      <div class="cred-item"><div class="cred-num">97%</div><div class="cred-label">Client Satisfaction</div></div>
-      <div class="cred-item"><div class="cred-num">48h</div><div class="cred-label">Response Time</div></div>
-    </div>
-  </div>
-</div>
-
-<div class="gold-line"></div>
-
-<!-- PRACTICE AREAS -->
-<section class="section" id="practice">
-  <div class="container">
-    <div class="section-header">
-      <span class="tag">What We Handle</span>
-      <h2>Practice Areas</h2>
-      <p>From criminal defence to corporate disputes — comprehensive legal coverage across all major courts in Pune and Maharashtra.</p>
-    </div>
-    <div class="practices-grid">
-
-      <div class="practice-card">
-        <div class="practice-icon">⚖️</div>
-        <h3>Criminal Law</h3>
-        <p>Bail applications, trial defence, appeals. We fight aggressively for your rights from FIR to High Court — available 24/7 for urgent matters.</p>
-        <div class="practice-cases">
-          <span>Bail & Anticipatory Bail</span>
-          <span>POCSO</span>
-          <span>Cheque Bounce (138 NI)</span>
-          <span>Cybercrime</span>
-        </div>
-      </div>
-
-      <div class="practice-card">
-        <div class="practice-icon">🏠</div>
-        <h3>Property & Real Estate</h3>
-        <p>Title disputes, possession suits, RERA complaints, builder fraud, and inheritance matters. Property rights protected with precision.</p>
-        <div class="practice-cases">
-          <span>Title Disputes</span>
-          <span>RERA Complaints</span>
-          <span>Partition Suits</span>
-          <span>Builder Fraud</span>
-        </div>
-      </div>
-
-      <div class="practice-card">
-        <div class="practice-icon">👨‍👩‍👧</div>
-        <h3>Family & Matrimonial</h3>
-        <p>Divorce, custody, maintenance, and domestic violence matters handled with sensitivity and discretion. Your family's future matters.</p>
-        <div class="practice-cases">
-          <span>Divorce</span>
-          <span>Child Custody</span>
-          <span>Domestic Violence</span>
-          <span>Maintenance</span>
-        </div>
-      </div>
-
-      <div class="practice-card">
-        <div class="practice-icon">🏢</div>
-        <h3>Corporate & Commercial</h3>
-        <p>Contract disputes, NCLT insolvency, shareholder conflicts, and business litigation. Protecting your business interests at every stage.</p>
-        <div class="practice-cases">
-          <span>Contract Disputes</span>
-          <span>NCLT / IBC</span>
-          <span>Shareholder Disputes</span>
-          <span>Recovery Suits</span>
-        </div>
-      </div>
-
-      <div class="practice-card">
-        <div class="practice-icon">👷</div>
-        <h3>Labour & Employment</h3>
-        <p>Wrongful termination, PF disputes, labour court representation. Both employer and employee matters handled across Pune region.</p>
-        <div class="practice-cases">
-          <span>Wrongful Termination</span>
-          <span>Labour Court</span>
-          <span>Industrial Disputes</span>
-          <span>PF / Gratuity</span>
-        </div>
-      </div>
-
-      <div class="practice-card">
-        <div class="practice-icon">🛡️</div>
-        <h3>Consumer & Civil</h3>
-        <p>Consumer forum complaints, civil suits for recovery and injunctions. Making sure ordinary citizens get justice they deserve.</p>
-        <div class="practice-cases">
-          <span>Consumer Forum</span>
-          <span>Injunctions</span>
-          <span>Civil Recovery</span>
-          <span>Deficiency in Service</span>
-        </div>
-      </div>
-
+    <div class="flex-1 flex justify-center">
+      <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=500&q=80" 
+           alt="Modern dental clinic" class="rounded-2xl shadow-2xl w-full max-w-md object-cover" style="max-height:420px;">
     </div>
   </div>
 </section>
 
-<div class="gold-line"></div>
-
-<!-- TEAM -->
-<section class="section" id="team">
-  <div class="container">
-    <div class="section-header">
-      <span class="tag">Meet the Team</span>
-      <h2>Our Advocates</h2>
-      <p>Experienced, senior, and deeply committed to your case. Every client gets personal attention — not just a junior's call.</p>
-    </div>
-    <div class="team-grid">
-
-      <div class="team-card">
-        <div class="team-avatar">👨‍⚖️<span class="team-badge">SENIOR ADVOCATE</span></div>
-        <div class="team-info">
-          <h3>Adv. Rajesh Sharma</h3>
-          <div class="designation">Founder &amp; Senior Advocate</div>
-          <p>20 years at Pune District Court and Bombay High Court. Specialises in criminal defence and property disputes. Known for aggressive bail arguments and meticulous trial preparation.</p>
-          <div class="team-courts">
-            <span class="court-tag">Bombay HC</span>
-            <span class="court-tag">Pune District</span>
-            <span class="court-tag">Sessions Court</span>
-          </div>
-        </div>
+<!-- SERVICES -->
+<section id="services" class="py-20 px-4">
+  <div class="max-w-6xl mx-auto text-center">
+    <div class="section-title" id="services-title">Everything For Your Dental Health</div>
+    <div class="section-sub">From routine cleanings to complete smile makeovers — all under one roof.</div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="card service-card">
+        <div class="text-4xl mb-4">🦷</div>
+        <h3 class="font-bold text-lg mb-2">Teeth Cleaning</h3>
+        <p class="text-gray-600 text-sm">Professional scaling & polishing. 45-min appointment. Recommended every 6 months.</p>
       </div>
-
-      <div class="team-card">
-        <div class="team-avatar">👩‍⚖️<span class="team-badge">ADVOCATE</span></div>
-        <div class="team-info">
-          <h3>Adv. Priya Mehta</h3>
-          <div class="designation">Family Law Specialist</div>
-          <p>12 years handling matrimonial, custody, and domestic violence cases. Former legal aid panel advocate. Brings compassion and tenacity to every family matter.</p>
-          <div class="team-courts">
-            <span class="court-tag">Family Court</span>
-            <span class="court-tag">Pune District</span>
-            <span class="court-tag">DV Act</span>
-          </div>
-        </div>
+      <div class="card service-card">
+        <div class="text-4xl mb-4">😁</div>
+        <h3 class="font-bold text-lg mb-2">Teeth Whitening</h3>
+        <p class="text-gray-600 text-sm">In-chair whitening, 2–4 shades brighter in one session. Safe and long-lasting.</p>
       </div>
-
-      <div class="team-card">
-        <div class="team-avatar">👨‍⚖️<span class="team-badge">ADVOCATE</span></div>
-        <div class="team-info">
-          <h3>Adv. Sunil Joshi</h3>
-          <div class="designation">Corporate &amp; NCLT Counsel</div>
-          <p>8 years in corporate litigation with expertise in IBC insolvency, NCLT proceedings, and commercial contract disputes. Formerly with a Big 4 legal advisory firm in Mumbai.</p>
-          <div class="team-courts">
-            <span class="court-tag">NCLT Mumbai</span>
-            <span class="court-tag">Commercial Court</span>
-            <span class="court-tag">Arbitration</span>
-          </div>
-        </div>
+      <div class="card service-card">
+        <div class="text-4xl mb-4">🔧</div>
+        <h3 class="font-bold text-lg mb-2">Dental Implants</h3>
+        <p class="text-gray-600 text-sm">Permanent tooth replacement that looks and feels completely natural. Lifetime solution.</p>
       </div>
-
-    </div>
-  </div>
-</section>
-
-<div class="gold-line"></div>
-
-<!-- WHY US -->
-<section class="section" id="why" style="background: var(--navy);">
-  <div class="container">
-    <div class="section-header">
-      <span class="tag">Our Commitment</span>
-      <h2>Why Clients Choose Us</h2>
-      <p>Experience the difference of advocates who treat your case as their own.</p>
-    </div>
-    <div class="why-grid">
-      <div class="why-item">
-        <div class="why-icon">⚡</div>
-        <div class="why-text">
-          <h4>Urgent Matters in 24h</h4>
-          <p>Bail applications filed same-day. Emergency consultations available on weekends. We don't make you wait when it matters most.</p>
-        </div>
+      <div class="card service-card">
+        <div class="text-4xl mb-4">👶</div>
+        <h3 class="font-bold text-lg mb-2">Kids Dentistry</h3>
+        <p class="text-gray-600 text-sm">Gentle, fear-free care for children aged 3–16. We make dental visits fun!</p>
       </div>
-      <div class="why-item">
-        <div class="why-icon">🔒</div>
-        <div class="why-text">
-          <h4>Complete Confidentiality</h4>
-          <p>Attorney-client privilege is sacred here. Your case details are never shared or discussed outside our chambers. Full discretion, always.</p>
-        </div>
+      <div class="card service-card">
+        <div class="text-4xl mb-4">🦴</div>
+        <h3 class="font-bold text-lg mb-2">Root Canal</h3>
+        <p class="text-gray-600 text-sm">Pain-free RCT using rotary endodontics. Most cases resolved in a single visit.</p>
       </div>
-      <div class="why-item">
-        <div class="why-icon">💬</div>
-        <div class="why-text">
-          <h4>Regular Case Updates</h4>
-          <p>No more chasing your lawyer. We proactively update you before and after each hearing — via WhatsApp or call, your preference.</p>
-        </div>
-      </div>
-      <div class="why-item">
-        <div class="why-icon">💰</div>
-        <div class="why-text">
-          <h4>Transparent Fee Structure</h4>
-          <p>No hidden charges. Fee is discussed upfront based on matter complexity. Flexible payment arrangements available for genuine cases.</p>
-        </div>
-      </div>
-      <div class="why-item">
-        <div class="why-icon">🏛️</div>
-        <div class="why-text">
-          <h4>Multi-Court Experience</h4>
-          <p>From Pune District Court to Bombay High Court, NCLT, and Consumer Forums — one firm, complete coverage across all courts in Maharashtra.</p>
-        </div>
-      </div>
-      <div class="why-item">
-        <div class="why-icon">🤝</div>
-        <div class="why-text">
-          <h4>You Speak to the Advocate</h4>
-          <p>Not a junior. Not a paralegal. The senior advocate handling your case is directly reachable. Relationship-based legal service, not a factory.</p>
-        </div>
+      <div class="card service-card">
+        <div class="text-4xl mb-4">✨</div>
+        <h3 class="font-bold text-lg mb-2">Smile Makeover</h3>
+        <p class="text-gray-600 text-sm">Veneers, bonding & clear aligners. Transform your confidence in just a few weeks.</p>
       </div>
     </div>
   </div>
 </section>
 
-<div class="gold-line"></div>
+<!-- STATS -->
+<section class="bg-light-teal py-20 px-4">
+  <div class="max-w-6xl mx-auto text-center">
+    <div class="section-title">Why Pune Trusts Bright Smile</div>
+    <div class="section-sub">Numbers that speak for themselves.</div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+      <div>
+        <div class="stat-num" id="stat1">0</div>
+        <div class="text-gray-600 font-medium">Happy Patients</div>
+      </div>
+      <div>
+        <div class="stat-num" id="stat2">0</div>
+        <div class="text-gray-600 font-medium">Years Experience</div>
+      </div>
+      <div>
+        <div class="stat-num" id="stat3">0</div>
+        <div class="text-gray-600 font-medium">Google Rating</div>
+      </div>
+      <div>
+        <div class="stat-num" id="stat4">0</div>
+        <div class="text-gray-600 font-medium">Hr Appointment</div>
+      </div>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-white rounded-xl p-6 shadow-sm">
+        <div class="text-teal text-2xl mb-3">✅</div>
+        <h4 class="font-bold mb-1">No Waiting Lines</h4>
+        <p class="text-gray-600 text-sm">Book online and arrive exactly on time. Your appointment is yours alone.</p>
+      </div>
+      <div class="bg-white rounded-xl p-6 shadow-sm">
+        <div class="text-teal text-2xl mb-3">✅</div>
+        <h4 class="font-bold mb-1">Transparent Pricing</h4>
+        <p class="text-gray-600 text-sm">No hidden charges. We discuss costs upfront so there are zero surprises.</p>
+      </div>
+      <div class="bg-white rounded-xl p-6 shadow-sm">
+        <div class="text-teal text-2xl mb-3">✅</div>
+        <h4 class="font-bold mb-1">Latest Technology</h4>
+        <p class="text-gray-600 text-sm">Digital X-rays, painless anaesthesia, and modern equipment for your comfort.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT DOCTOR -->
+<section id="about" class="py-20 px-4">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+    <div class="flex-shrink-0">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg" 
+           alt="Dr. Priya Joshi" class="rounded-full w-48 h-48 object-cover border-4 border-teal shadow-xl">
+    </div>
+    <div id="about-text">
+      <div class="text-sm font-semibold teal uppercase tracking-wide mb-2">Meet Your Dentist</div>
+      <h2 class="text-3xl font-bold mb-4">Dr. Priya Joshi</h2>
+      <p class="text-gray-600 mb-4 text-lg">
+        Dr. Priya Joshi is a BDS, MDS graduate with 15 years of experience in restorative and cosmetic dentistry. She founded Bright Smile Dental in 2011 with one mission: make quality dental care accessible to every family in Kothrud.
+      </p>
+      <blockquote class="border-l-4 border-teal pl-4 italic text-gray-500 mb-6">
+        "I believe every patient deserves a smile they're proud of — and treatments that don't hurt their pocket or their confidence."
+      </blockquote>
+      <div class="flex flex-wrap gap-4 text-sm">
+        <span class="bg-light-teal px-3 py-2 rounded-full">🎓 BDS, MDS — Pune University</span>
+        <span class="bg-light-teal px-3 py-2 rounded-full">🏆 15 Years Experience</span>
+        <span class="bg-light-teal px-3 py-2 rounded-full">📍 Kothrud, Pune</span>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- TESTIMONIALS -->
-<section class="section">
-  <div class="container">
-    <div class="section-header">
-      <span class="tag">Client Stories</span>
-      <h2>What Our Clients Say</h2>
-      <p>We let results speak. Over 2,400 matters handled — here's what clients remember most.</p>
-    </div>
-    <div class="testimonials-grid">
-
-      <div class="testimonial-card">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-text">Adv. Sharma got my father's bail in less than 24 hours when two other advocates had given up. He handled it like it was his own family member's case. Eternally grateful.</p>
-        <div class="testimonial-author">
-          <div class="author-avatar">👨</div>
-          <div>
-            <div class="author-name">Rahul M.</div>
-            <div class="author-detail">Criminal Bail Matter · Pune</div>
-          </div>
-        </div>
+<section id="testimonials" class="bg-gray-50 py-20 px-4">
+  <div class="max-w-6xl mx-auto text-center">
+    <div class="section-title">What Our Patients Say</div>
+    <div class="text-yellow-400 text-2xl mb-2">⭐⭐⭐⭐⭐</div>
+    <div class="text-gray-500 mb-10">4.9 / 5 — Based on 200+ Google Reviews</div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="card testimonial-card">
+        <div class="text-yellow-400 mb-3">⭐⭐⭐⭐⭐</div>
+        <p class="text-gray-700 italic mb-4">"I was terrified of dentists. Dr. Joshi made my root canal completely painless. Booked my family's checkups the same week."</p>
+        <div class="font-semibold teal">— Rahul M., Kothrud</div>
       </div>
-
-      <div class="testimonial-card">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-text">Went through a difficult divorce. Adv. Priya handled custody for my children so professionally — calm, empathetic, and completely on top of every hearing. My kids are with me now.</p>
-        <div class="testimonial-author">
-          <div class="author-avatar">👩</div>
-          <div>
-            <div class="author-name">Sneha K.</div>
-            <div class="author-detail">Custody Dispute · Family Court Pune</div>
-          </div>
-        </div>
+      <div class="card testimonial-card">
+        <div class="text-yellow-400 mb-3">⭐⭐⭐⭐⭐</div>
+        <p class="text-gray-700 italic mb-4">"Best teeth whitening in Pune. Done in one hour, results are incredible. Highly recommend for anyone with a wedding coming up!"</p>
+        <div class="font-semibold teal">— Sneha K., Baner</div>
       </div>
-
-      <div class="testimonial-card">
-        <div class="stars">★★★★★</div>
-        <p class="testimonial-text">Builder had taken ₹18 lakh from us and wasn't handing over the flat for 3 years. RERA case filed, proceedings completed, and we got our flat + compensation. Never thought it was possible.</p>
-        <div class="testimonial-author">
-          <div class="author-avatar">👨</div>
-          <div>
-            <div class="author-name">Vijay &amp; Meena D.</div>
-            <div class="author-detail">RERA Complaint · Builder Dispute</div>
-          </div>
-        </div>
+      <div class="card testimonial-card">
+        <div class="text-yellow-400 mb-3">⭐⭐⭐⭐⭐</div>
+        <p class="text-gray-700 italic mb-4">"Brought my 6-year-old who was scared of the dentist. The staff was so patient and kind. My son actually asked to come back!"</p>
+        <div class="font-semibold teal">— Anjali P., Karve Nagar</div>
       </div>
-
-    </div>
-    <div class="disclaimer">
-      <strong>Disclaimer:</strong> Past results are not a guarantee of future outcomes. Every legal matter is unique. Testimonials represent individual client experiences. This website is for informational purposes only and does not constitute legal advice. Please consult directly for advice specific to your situation.
     </div>
   </div>
 </section>
 
-<div class="gold-line"></div>
+<!-- BOOK APPOINTMENT -->
+<section id="book" class="bg-teal py-20 px-4">
+  <div class="max-w-4xl mx-auto text-center text-white">
+    <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready for a Healthier Smile?</h2>
+    <p class="text-teal-100 text-lg mb-10" style="color:#c8eeee;">Book your appointment today. We'll confirm within 2 hours. New patients welcome.</p>
+    <div class="bg-white rounded-2xl p-8 text-left max-w-xl mx-auto shadow-2xl">
+      <h3 class="font-bold text-gray-900 text-xl mb-6">Book Appointment</h3>
+      <div class="grid md:grid-cols-2 gap-4 mb-4">
+        <input type="text" placeholder="Your Name" class="border border-gray-200 rounded-lg px-4 py-3 w-full text-gray-900 focus:outline-none focus:border-teal">
+        <input type="tel" placeholder="Phone Number" class="border border-gray-200 rounded-lg px-4 py-3 w-full text-gray-900 focus:outline-none focus:border-teal">
+      </div>
+      <select class="border border-gray-200 rounded-lg px-4 py-3 w-full text-gray-700 mb-4 focus:outline-none focus:border-teal">
+        <option>Select Service</option>
+        <option>Routine Checkup</option>
+        <option>Teeth Cleaning</option>
+        <option>Teeth Whitening</option>
+        <option>Dental Implants</option>
+        <option>Root Canal</option>
+        <option>Smile Makeover</option>
+        <option>Kids Dentistry</option>
+      </select>
+      <input type="date" class="border border-gray-200 rounded-lg px-4 py-3 w-full text-gray-700 mb-6 focus:outline-none focus:border-teal">
+      <button class="btn-teal w-full text-center text-base py-3" onclick="alert('Thank you! We will confirm your appointment within 2 hours.')">
+        Book My Appointment →
+      </button>
+      <div class="text-center mt-4">
+        <a href="https://wa.me/919876543210" class="text-gray-600 hover:text-teal text-sm">
+          💬 Or WhatsApp us: +91-98765-43210
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- CONTACT -->
-<section class="section" id="contact" style="background: var(--navy);">
-  <div class="container">
-    <div class="contact-wrap">
-      <div class="contact-info">
-        <span class="tag">Get In Touch</span>
-        <h2>Book a Free Consultation</h2>
-        <p>Tell us about your matter. We'll call back within 4 business hours. Confidentiality guaranteed from first contact.</p>
-        <div class="contact-details">
-          <div class="contact-item">
-            <div class="contact-item-icon">📍</div>
-            <div class="contact-item-text">
-              <strong>Chamber Address</strong>
-              <span>Chamber No. 412, Pune District Court Complex<br>Shivajinagar, Pune – 411005</span>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-item-icon">📞</div>
-            <div class="contact-item-text">
-              <strong>Phone / WhatsApp</strong>
-              <span>+91 98765 43210 (Urgent: available till 10 PM)</span>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-item-icon">✉️</div>
-            <div class="contact-item-text">
-              <strong>Email</strong>
-              <span>consult@sharmaassociates.in</span>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-item-icon">🕐</div>
-            <div class="contact-item-text">
-              <strong>Chamber Hours</strong>
-              <span>Mon–Sat: 10:00 AM – 7:00 PM<br>Urgent criminal matters: Available 24/7</span>
-            </div>
+<section id="contact" class="py-20 px-4">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
+    <div>
+      <h2 class="text-3xl font-bold mb-8">Find Us</h2>
+      <div class="space-y-4 text-gray-600">
+        <div class="flex items-start gap-3">
+          <span class="text-xl">📍</span>
+          <div>
+            <div class="font-semibold text-gray-900">Address</div>
+            <div>Shop 12, Sai Arcade, Paud Road<br>Kothrud, Pune - 411038</div>
           </div>
         </div>
-        <div style="margin-top: 28px;">
-          <a href="https://wa.me/919876543210?text=Hello%2C+I+need+a+legal+consultation" class="btn-primary">💬 WhatsApp Now</a>
+        <div class="flex items-start gap-3">
+          <span class="text-xl">📞</span>
+          <div>
+            <div class="font-semibold text-gray-900">Phone</div>
+            <div>020-1234-5678 | +91-98765-43210</div>
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="text-xl">📧</span>
+          <div>
+            <div class="font-semibold text-gray-900">Email</div>
+            <div>brightsmile.kothrud@gmail.com</div>
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="text-xl">⏰</span>
+          <div>
+            <div class="font-semibold text-gray-900">Hours</div>
+            <div>Mon–Sat: 10:00 AM – 8:00 PM<br>Sunday: 10:00 AM – 1:00 PM</div>
+          </div>
         </div>
       </div>
-
-      <div class="consult-form">
-        <h3>Request a Consultation</h3>
-        <div class="form-row">
-          <label>Your Name</label>
-          <input type="text" placeholder="Full name">
-        </div>
-        <div class="form-row">
-          <label>Phone Number</label>
-          <input type="tel" placeholder="+91 98765 43210">
-        </div>
-        <div class="form-row">
-          <label>Type of Matter</label>
-          <select>
-            <option value="">Select practice area...</option>
-            <option>Criminal Law (Bail, Trial)</option>
-            <option>Property / Real Estate</option>
-            <option>Family / Matrimonial</option>
-            <option>Corporate / Commercial</option>
-            <option>Labour / Employment</option>
-            <option>Consumer / Civil</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <div class="form-row">
-          <label>Brief Description</label>
-          <textarea placeholder="Briefly describe your matter (strictly confidential)..."></textarea>
-        </div>
-        <button class="form-submit" onclick="alert('Thank you! We will contact you within 4 business hours. Your matter is strictly confidential.')">Request Free Consultation →</button>
-        <p class="form-note">🔒 All information is strictly confidential under attorney-client privilege</p>
-      </div>
+    </div>
+    <div>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.8!2d73.8139!3d18.5019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zS290aHJ1ZCwgUHVuZQ!5e0!3m2!1sen!2sin!4v1"
+        width="100%" height="300" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy">
+      </iframe>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer>
-  <div class="container">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <div class="logo-text">Sharma &amp; Associates</div>
-        <span class="logo-sub">Senior Advocates · Pune</span>
-        <p>Trusted legal counsel in Pune since 2004. Bombay High Court, District Court, NCLT, and Consumer Forums.</p>
+
+<style>
+.faq-section { padding: 60px 5%; max-width: 800px; margin: 0 auto; }
+.faq-section h2 { font-size: 2rem; font-weight: 800; margin-bottom: 32px; text-align: center; color: #1A1A1A; }
+.faq-item { border-bottom: 1px solid #e0e0e0; }
+.faq-item summary { padding: 18px 0; font-size: 1rem; font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; color: #1A1A1A; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: '+'; font-size: 1.4rem; font-weight: 300; transition: transform 0.2s; }
+.faq-item[open] summary::after { content: '−'; }
+.faq-item .faq-answer { padding: 0 0 18px; font-size: 0.92rem; line-height: 1.7; color: #555; }
+</style>
+<section class="faq-section" id="faq">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-container">
+    <details class="faq-item">
+      <summary>What areas of law does your firm practice in Pune?</summary>
+      <div class="faq-answer">We handle property disputes, family law, criminal defense, corporate law, consumer cases, and civil litigation. Our experienced advocates practice at Pune District Court, Shivajinagar Court, and the Bombay High Court bench. Clients from across Pune trust us for diligent legal representation.</div>
+    </details>
+    <details class="faq-item">
+      <summary>How much does a legal consultation cost at your Pune office?</summary>
+      <div class="faq-answer">Initial consultations start at ₹1,000 for a 30-minute session where we assess your case and advise on the best course of action. Many clients from Kothrud, Deccan, and Shivajinagar visit us for straightforward legal advice before deciding on full representation.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Do you handle property-related legal matters in Pune?</summary>
+      <div class="faq-answer">Yes, property law is one of our strongest practice areas. We handle title verification, sale deed drafting, property disputes, society formation, RERA complaints, and landlord-tenant issues. With Pune's booming real estate market, we assist buyers, sellers, and developers with reliable legal counsel.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Can your firm represent me in the Bombay High Court?</summary>
+      <div class="faq-answer">Absolutely. Our senior advocates are enrolled with the Bombay High Court and regularly appear at the Aurangabad and Pune circuit benches. For appeals, writ petitions, and high court matters, we provide thorough preparation and strong courtroom representation.</div>
+    </details>
+    <details class="faq-item">
+      <summary>What is the typical timeline for a civil case in Pune courts?</summary>
+      <div class="faq-answer">Civil cases in Pune District Court typically take one to three years depending on complexity and court scheduling. We focus on efficient case management, timely filings, and exploring settlement options to resolve matters as quickly as possible while protecting your interests.</div>
+    </details>
+  </div>
+</section>
+
+<footer class="py-12 px-4">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+      <div>
+        <div class="flex items-center gap-2 mb-2">
+          <span class="text-2xl">🦷</span>
+          <span class="text-white font-bold">Bright Smile Dental Clinic</span>
+        </div>
+        <div class="text-gray-500 text-sm italic">"Your smile is our mission."</div>
       </div>
-      <div class="footer-links">
-        <h4>Practice Areas</h4>
-        <ul>
-          <li><a href="#practice">Criminal Law</a></li>
-          <li><a href="#practice">Property &amp; RERA</a></li>
-          <li><a href="#practice">Family &amp; Matrimonial</a></li>
-          <li><a href="#practice">Corporate &amp; NCLT</a></li>
-        </ul>
-      </div>
-      <div class="footer-links">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="#team">Our Advocates</a></li>
-          <li><a href="#why">Why Choose Us</a></li>
-          <li><a href="#contact">Contact Us</a></li>
-          <li><a href="https://wa.me/919876543210">WhatsApp Consult</a></li>
-        </ul>
-      </div>
-      <div class="footer-links">
-        <h4>Courts We Appear In</h4>
-        <ul>
-          <li><a href="#">Bombay High Court</a></li>
-          <li><a href="#">Pune District Court</a></li>
-          <li><a href="#">NCLT Mumbai</a></li>
-          <li><a href="#">Family Court Pune</a></li>
-          <li><a href="#">Consumer Forum</a></li>
-        </ul>
+      <div class="flex gap-6 text-sm text-gray-400">
+        <a href="#services" class="hover:text-white">Services</a>
+        <a href="#about" class="hover:text-white">About</a>
+        <a href="#testimonials" class="hover:text-white">Patients</a>
+        <a href="#book" class="hover:text-white">Book</a>
+        <a href="#contact" class="hover:text-white">Contact</a>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>© 2024 Sharma &amp; Associates. All rights reserved. | Bar Council Reg. No. MH/PUN/2004/XXXX</p>
-      <p>This is a demonstration site built by Invictus AI</p>
+    <hr class="border-gray-700 my-6">
+    <div class="flex flex-col md:flex-row justify-between text-sm text-gray-500">
+      <div>© 2026 Bright Smile Dental Clinic. All rights reserved.</div>
+      <div>Designed by <span style="color:#F4A832;">DentWeb</span> · Powered by Invictus AI</div>
     </div>
   </div>
 </footer>
 
-<!-- FLOATING WHATSAPP -->
-<a href="https://wa.me/919876543210?text=Hello%2C+I+need+a+legal+consultation" class="wa-float" aria-label="WhatsApp Consultation">💬</a>
+<script>
+  gsap.registerPlugin(ScrollTrigger);
 
+  // Hero animations
+  gsap.timeline()
+    .from("#hero-text > *", { opacity: 0, y: 30, stagger: 0.15, duration: 0.7, ease: "power2.out" });
+
+  // Service cards
+  gsap.from(".service-card", {
+    scrollTrigger: { trigger: "#services", start: "top 80%" },
+    opacity: 0, y: 40, stagger: 0.1, duration: 0.6, ease: "power2.out"
+  });
+
+  // Stats counter
+  function animateCounter(id, target, suffix) {
+    ScrollTrigger.create({
+      trigger: "#stat1",
+      start: "top 80%",
+      once: true,
+      onEnter: () => {
+        gsap.to({val: 0}, {
+          val: target,
+          duration: 2,
+          ease: "power2.out",
+          onUpdate: function() {
+            document.getElementById(id).textContent = Math.round(this.targets()[0].val) + suffix;
+          }
+        });
+      }
+    });
+  }
+  animateCounter("stat1", 2000, "+");
+  animateCounter("stat2", 15, "+");
+  animateCounter("stat3", 4.9, "★");
+  animateCounter("stat4", 48, "h");
+
+  // About
+  gsap.from("#about-text > *", {
+    scrollTrigger: { trigger: "#about", start: "top 75%" },
+    opacity: 0, x: 40, stagger: 0.15, duration: 0.6
+  });
+
+  // Testimonials
+  gsap.from(".testimonial-card", {
+    scrollTrigger: { trigger: "#testimonials", start: "top 80%" },
+    opacity: 0, y: 30, stagger: 0.15, duration: 0.6
+  });
+</script>
 </body>
 </html>
