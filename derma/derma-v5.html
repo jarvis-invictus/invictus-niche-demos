@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ClearSkin Advanced Dermatology | Koregaon Park, Pune</title>
+<meta name="description" content="ClearSkin Advanced Dermatology — Clinical precision meets modern aesthetics. LASER, acne surgery, anti-aging, and medical dermatology in Koregaon Park, Pune.">
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --card: #111118;
+    --border: #1e1e2e;
+    --primary: #00d4ff;
+    --primary2: #0066ff;
+    --accent: #7c3aed;
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+    --white: #ffffff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; line-height: 1.6; }
+  a { color: inherit; text-decoration: none; }
+
+  /* NAV */
+  nav { position: fixed; top: 0; width: 100%; background: rgba(10,10,15,0.92); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); z-index: 100; }
+  .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+  .logo { font-size: 1.2rem; font-weight: 700; }
+  .logo span { background: linear-gradient(135deg, var(--primary), var(--primary2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .nav-links { display: flex; gap: 28px; font-size: 0.9rem; color: var(--muted); }
+  .nav-links a:hover { color: var(--white); }
+  .nav-cta { background: linear-gradient(135deg, var(--primary), var(--primary2)); color: #000; padding: 9px 20px; border-radius: 6px; font-weight: 600; font-size: 0.85rem; }
+  .nav-cta:hover { opacity: 0.9; }
+
+  /* HERO */
+  .hero { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; padding-top: 68px; }
+  .hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(0,212,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,212,255,0.04) 1px, transparent 1px); background-size: 60px 60px; }
+  .hero-glow { position: absolute; top: 20%; left: 50%; transform: translateX(-50%); width: 600px; height: 600px; background: radial-gradient(circle, rgba(0,102,255,0.12) 0%, transparent 70%); border-radius: 50%; }
+  .hero-inner { max-width: 1200px; margin: 0 auto; padding: 80px 24px; position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+  .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(0,212,255,0.08); border: 1px solid rgba(0,212,255,0.2); border-radius: 20px; padding: 6px 14px; font-size: 0.8rem; color: var(--primary); margin-bottom: 20px; }
+  .hero h1 { font-size: 3.2rem; font-weight: 800; line-height: 1.1; margin-bottom: 20px; }
+  .hero h1 span { background: linear-gradient(135deg, var(--primary), var(--primary2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .hero p { font-size: 1.1rem; color: var(--muted); margin-bottom: 36px; max-width: 480px; }
+  .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+  .btn-primary { background: linear-gradient(135deg, var(--primary), var(--primary2)); color: #000; padding: 14px 28px; border-radius: 8px; font-weight: 700; font-size: 0.95rem; cursor: pointer; border: none; }
+  .btn-outline { background: transparent; border: 1px solid var(--border); color: var(--text); padding: 14px 28px; border-radius: 8px; font-weight: 600; font-size: 0.95rem; cursor: pointer; }
+  .btn-outline:hover { border-color: var(--primary); color: var(--primary); }
+  .hero-stats { display: flex; gap: 32px; margin-top: 48px; }
+  .stat { text-align: center; }
+  .stat-num { font-size: 2rem; font-weight: 800; background: linear-gradient(135deg, var(--primary), var(--primary2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .stat-lbl { font-size: 0.78rem; color: var(--muted); margin-top: 4px; }
+  .hero-visual { position: relative; }
+  .hero-card-stack { position: relative; }
+  .hero-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 20px; }
+  .hero-card.main { padding: 28px; }
+  .laser-visual { width: 100%; height: 220px; background: linear-gradient(135deg, rgba(0,212,255,0.1), rgba(0,102,255,0.1)); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; font-size: 4rem; }
+  .card-title { font-weight: 700; font-size: 1.1rem; margin-bottom: 6px; }
+  .card-sub { color: var(--muted); font-size: 0.85rem; }
+  .pulse-dot { width: 10px; height: 10px; background: #22c55e; border-radius: 50%; display: inline-block; animation: pulse 2s infinite; margin-right: 8px; }
+  @keyframes pulse { 0%,100%{transform:scale(1);opacity:1} 50%{transform:scale(1.4);opacity:0.7} }
+  .floating-badge { position: absolute; bottom: -20px; right: -16px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 16px; font-size: 0.82rem; }
+  .floating-badge span { color: var(--primary); font-weight: 700; font-size: 1.2rem; display: block; }
+
+  /* TREATMENTS */
+  section { padding: 80px 24px; }
+  .container { max-width: 1200px; margin: 0 auto; }
+  .section-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--primary); margin-bottom: 12px; }
+  .section-title { font-size: 2.4rem; font-weight: 800; margin-bottom: 16px; }
+  .section-sub { color: var(--muted); font-size: 1.05rem; max-width: 540px; }
+  .treatments-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+  .treatment-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 28px; transition: border-color 0.2s, transform 0.2s; }
+  .treatment-card:hover { border-color: rgba(0,212,255,0.3); transform: translateY(-4px); }
+  .t-icon { font-size: 2.2rem; margin-bottom: 16px; }
+  .t-title { font-weight: 700; font-size: 1.1rem; margin-bottom: 8px; }
+  .t-desc { color: var(--muted); font-size: 0.88rem; line-height: 1.7; }
+  .t-tag { display: inline-block; background: rgba(0,212,255,0.08); border: 1px solid rgba(0,212,255,0.15); color: var(--primary); font-size: 0.73rem; padding: 3px 10px; border-radius: 20px; margin-top: 14px; }
+
+  /* TECHNOLOGY */
+  .tech-section { background: var(--card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .tech-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+  .tech-list { margin-top: 28px; display: flex; flex-direction: column; gap: 16px; }
+  .tech-item { display: flex; align-items: flex-start; gap: 16px; padding: 20px; background: var(--bg); border: 1px solid var(--border); border-radius: 12px; }
+  .tech-icon { font-size: 1.6rem; flex-shrink: 0; }
+  .tech-name { font-weight: 700; font-size: 0.95rem; margin-bottom: 4px; }
+  .tech-desc { color: var(--muted); font-size: 0.84rem; }
+  .tech-visual { background: linear-gradient(135deg, rgba(0,212,255,0.05), rgba(124,58,237,0.05)); border: 1px solid var(--border); border-radius: 20px; padding: 40px; text-align: center; }
+  .tech-big-num { font-size: 5rem; font-weight: 900; background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1; }
+  .tech-caption { color: var(--muted); margin-top: 12px; font-size: 0.9rem; }
+
+  /* DOCTORS */
+  .doctors-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 48px; }
+  .doctor-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+  .doctor-img { height: 200px; display: flex; align-items: center; justify-content: center; font-size: 4rem; background: linear-gradient(135deg, rgba(0,102,255,0.1), rgba(124,58,237,0.1)); }
+  .doctor-info { padding: 20px; }
+  .doctor-name { font-weight: 700; font-size: 1rem; margin-bottom: 4px; }
+  .doctor-title { color: var(--primary); font-size: 0.82rem; margin-bottom: 8px; }
+  .doctor-qual { color: var(--muted); font-size: 0.8rem; }
+
+  /* PRICING */
+  .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+  .price-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 32px; }
+  .price-card.featured { border-color: var(--primary); background: linear-gradient(135deg, rgba(0,212,255,0.05), rgba(0,102,255,0.05)); }
+  .price-plan { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 8px; }
+  .price-card.featured .price-plan { color: var(--primary); }
+  .price-num { font-size: 2.2rem; font-weight: 800; margin-bottom: 8px; }
+  .price-period { color: var(--muted); font-size: 0.85rem; margin-bottom: 24px; }
+  .price-features { list-style: none; display: flex; flex-direction: column; gap: 12px; font-size: 0.88rem; color: var(--muted); }
+  .price-features li::before { content: "✓ "; color: var(--primary); font-weight: 700; }
+  .price-btn { width: 100%; margin-top: 28px; padding: 12px; border-radius: 8px; font-weight: 700; font-size: 0.9rem; cursor: pointer; border: 1px solid var(--border); background: transparent; color: var(--text); }
+  .price-card.featured .price-btn { background: linear-gradient(135deg, var(--primary), var(--primary2)); border: none; color: #000; }
+
+  /* TESTIMONIALS */
+  .testimonials-section { background: var(--card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+  .testimonial-card { background: var(--bg); border: 1px solid var(--border); border-radius: 14px; padding: 24px; }
+  .t-stars { font-size: 1rem; margin-bottom: 12px; }
+  .t-text { color: var(--muted); font-size: 0.88rem; line-height: 1.7; font-style: italic; margin-bottom: 16px; }
+  .t-author { font-weight: 700; font-size: 0.88rem; }
+  .t-location { color: var(--muted); font-size: 0.78rem; }
+
+  /* BOOKING */
+  .booking-section { text-align: center; }
+  .booking-card { background: linear-gradient(135deg, rgba(0,212,255,0.08), rgba(0,102,255,0.08)); border: 1px solid rgba(0,212,255,0.2); border-radius: 24px; padding: 60px 40px; max-width: 700px; margin: 0 auto; }
+  .booking-card h2 { font-size: 2.4rem; font-weight: 800; margin-bottom: 16px; }
+  .booking-card p { color: var(--muted); margin-bottom: 32px; }
+  .contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 32px; }
+  .contact-item { background: rgba(255,255,255,0.04); border: 1px solid var(--border); border-radius: 10px; padding: 16px 12px; }
+  .contact-icon { font-size: 1.4rem; margin-bottom: 8px; }
+  .contact-label { font-size: 0.75rem; color: var(--muted); }
+  .contact-val { font-size: 0.85rem; font-weight: 600; }
+
+  /* FOOTER */
+  footer { border-top: 1px solid var(--border); padding: 40px 24px; }
+  .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+  .footer-copy { color: var(--muted); font-size: 0.82rem; }
+  .footer-links { display: flex; gap: 24px; font-size: 0.82rem; color: var(--muted); }
+  .footer-links a:hover { color: var(--white); }
+
+  @media (max-width: 900px) {
+    .hero-inner, .tech-grid { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 2.2rem; }
+    .treatments-grid, .doctors-grid, .pricing-grid, .testimonials-grid, .contact-grid { grid-template-columns: 1fr 1fr; }
+    .nav-links { display: none; }
+    .hero-visual { display: none; }
+    .hero-stats { gap: 20px; }
+  }
+  @media (max-width: 600px) {
+    .treatments-grid, .pricing-grid, .testimonials-grid, .contact-grid { grid-template-columns: 1fr; }
+    .section-title { font-size: 1.8rem; }
+    .hero h1 { font-size: 1.9rem; }
+  }
+</style>
+<link rel="canonical" href="https://invictus-ai.in/demos/derma-v5.html">
+<meta property="og:image" content="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=1200&q=80">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What advanced laser technologies does ClearSkin use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We use cutting-edge equipment including fractional CO2 lasers, Q-switched Nd:YAG for pigmentation, and diode lasers for hair removal. Our Koregaon Park clinic also features digital dermoscopy for precise diagnosis. All devices are US FDA-approved and calibrated for Indian skin types."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I get acne surgery at ClearSkin Advanced Dermatology?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we perform acne surgery for stubborn comedones and cystic lesions that do not respond to medication alone. The procedure is minimally invasive and done under local anaesthesia. Patients from Mundhwa, Viman Nagar, and Camp visit us regularly for this specialized treatment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does ClearSkin Advanced offer anti-aging and cosmetic procedures?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. Our cosmetic dermatology services include Botox, dermal fillers, thread lifts, PRP for hair and skin, and laser skin tightening. We focus on natural-looking results with minimal downtime, perfect for busy professionals across Pune who want effective treatments."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I book an appointment at the Koregaon Park clinic?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can book online through our website, call our reception, or message us on WhatsApp. We offer morning, afternoon, and evening slots to suit your schedule. The clinic is conveniently located in Koregaon Park with easy parking and access from MG Road."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the recovery time after laser treatments at ClearSkin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Recovery varies by procedure. Surface-level peels require one to two days of mild redness, while fractional lasers may need five to seven days of downtime. Our team provides detailed aftercare instructions and follow-up support to ensure smooth healing and optimal results."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="logo">Clear<span>Skin</span> Advanced Dermatology</div>
+    <div class="nav-links">
+      <a href="#">Treatments</a>
+      <a href="#">Technology</a>
+      <a href="#">Doctors</a>
+      <a href="#">Results</a>
+      <a href="#">Pricing</a>
+    </div>
+    <a href="#booking" class="nav-cta">Book Consultation</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge">⚡ Pune's Most Advanced Skin Clinic</div>
+      <h1>Clinical Precision.<br><span>Visible Results.</span></h1>
+      <p>Where advanced technology meets clinical expertise. FDA-approved lasers, research-backed protocols, and specialist dermatologist care — all under one roof in Koregaon Park.</p>
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">Book Free Consultation</button>
+        <button class="btn-outline">View Before & After</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-num">18K+</div>
+          <div class="stat-lbl">Patients Treated</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">15+</div>
+          <div class="stat-lbl">Laser Devices</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">8yr</div>
+          <div class="stat-lbl">Clinical Excellence</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card-stack">
+        <div class="hero-card main">
+          <div class="laser-visual">🔬</div>
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+            <span class="pulse-dot"></span>
+            <span style="font-size:0.8rem;color:var(--muted)">Clinic Live Now</span>
+          </div>
+          <div class="card-title">Advanced Laser Suite</div>
+          <div class="card-sub">7 FDA-approved systems | Fitzpatrick 1–6 safe</div>
+        </div>
+        <div class="floating-badge">
+          <span>98%</span>
+          Patient Satisfaction
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TREATMENTS -->
+<section>
+  <div class="container">
+    <div class="section-label">What We Treat</div>
+    <h2 class="section-title">Comprehensive Skin Solutions</h2>
+    <p class="section-sub">From complex medical dermatology to advanced aesthetic procedures — evidence-based protocols for every concern.</p>
+    <div class="treatments-grid">
+      <div class="treatment-card">
+        <div class="t-icon">⚡</div>
+        <div class="t-title">Laser Skin Resurfacing</div>
+        <div class="t-desc">Fractional CO2, Erbium YAG, and Pico lasers for scars, wrinkles, open pores, and uneven tone. Zero downtime options available.</div>
+        <div class="t-tag">FDA Approved</div>
+      </div>
+      <div class="treatment-card">
+        <div class="t-icon">✨</div>
+        <div class="t-title">Acne & Acne Scars</div>
+        <div class="t-desc">Medical acne management + scar surgery (subcision, TCA CROSS, MnRF). Before/after tracked at every visit.</div>
+        <div class="t-tag">Scar Protocol</div>
+      </div>
+      <div class="treatment-card">
+        <div class="t-icon">🌟</div>
+        <div class="t-title">Anti-Aging & Rejuvenation</div>
+        <div class="t-desc">Thread lifts, fillers, Botox, Profhilo, and HIFU — natural-looking results without surgery. Dr.-designed treatment plans.</div>
+        <div class="t-tag">Non-Surgical</div>
+      </div>
+      <div class="treatment-card">
+        <div class="t-icon">🎯</div>
+        <div class="t-title">Pigmentation & Melasma</div>
+        <div class="t-desc">Laser toning, chemical peels, and prescription lightening protocols. Melanin-specific targeting for all skin tones.</div>
+        <div class="t-tag">All Skin Tones</div>
+      </div>
+      <div class="treatment-card">
+        <div class="t-icon">🪄</div>
+        <div class="t-title">Laser Hair Removal</div>
+        <div class="t-desc">Diode 808nm + Nd:YAG combination for all skin types. Full body, face, underarms — permanent reduction in 6–8 sessions.</div>
+        <div class="t-tag">Permanent Reduction</div>
+      </div>
+      <div class="treatment-card">
+        <div class="t-icon">💧</div>
+        <div class="t-title">Hair Loss Treatment</div>
+        <div class="t-desc">PRP therapy, GFC, Low-Level Laser Therapy (LLLT), and topical/oral prescriptions for androgenetic alopecia and alopecia areata.</div>
+        <div class="t-tag">PRP + GFC</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNOLOGY -->
+<section class="tech-section">
+  <div class="container">
+    <div class="tech-grid">
+      <div>
+        <div class="section-label">Our Technology</div>
+        <h2 class="section-title">15+ Devices.<br>One Clinic.</h2>
+        <p class="section-sub">We don't compromise on equipment. Every device in ClearSkin is FDA-cleared and internationally certified.</p>
+        <div class="tech-list">
+          <div class="tech-item">
+            <div class="tech-icon">💡</div>
+            <div>
+              <div class="tech-name">Fractional CO2 Laser</div>
+              <div class="tech-desc">Gold standard for deep resurfacing, scar revision, and skin tightening. Temperature-controlled for precision.</div>
+            </div>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">🔵</div>
+            <div>
+              <div class="tech-name">Picosecond Laser (PicoSure)</div>
+              <div class="tech-desc">Fastest-pulse technology for pigmentation, tattoo removal, and photo-rejuvenation with minimal heat damage.</div>
+            </div>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">🌊</div>
+            <div>
+              <div class="tech-name">HIFU (Ultherapy-class)</div>
+              <div class="tech-desc">High-Intensity Focused Ultrasound for face lifting and skin tightening — results that last 12–18 months.</div>
+            </div>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">⚙️</div>
+            <div>
+              <div class="tech-name">Microneedling RF (Morpheus8-class)</div>
+              <div class="tech-desc">Radiofrequency microneedling for deep collagen remodeling — combines mechanical and thermal stimulation.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="tech-visual">
+          <div class="tech-big-num">15+</div>
+          <div class="tech-caption">FDA-approved devices on site</div>
+          <div style="margin-top:32px;display:flex;flex-direction:column;gap:12px">
+            <div style="background:rgba(0,212,255,0.06);border:1px solid rgba(0,212,255,0.12);border-radius:10px;padding:14px">
+              <div style="font-weight:700;font-size:0.95rem">CO2 Fractional</div>
+              <div style="color:var(--muted);font-size:0.8rem">Resurfacing & scar revision</div>
+            </div>
+            <div style="background:rgba(124,58,237,0.06);border:1px solid rgba(124,58,237,0.12);border-radius:10px;padding:14px">
+              <div style="font-weight:700;font-size:0.95rem">Picosecond Laser</div>
+              <div style="color:var(--muted);font-size:0.8rem">Pigment & tattoo removal</div>
+            </div>
+            <div style="background:rgba(0,102,255,0.06);border:1px solid rgba(0,102,255,0.12);border-radius:10px;padding:14px">
+              <div style="font-weight:700;font-size:0.95rem">Diode 808nm Hair Laser</div>
+              <div class="tech-desc" style="color:var(--muted);font-size:0.8rem">Permanent hair reduction</div>
+            </div>
+            <div style="background:rgba(0,212,255,0.06);border:1px solid rgba(0,212,255,0.12);border-radius:10px;padding:14px">
+              <div style="font-weight:700;font-size:0.95rem">HIFU + RF Microneedling</div>
+              <div style="color:var(--muted);font-size:0.8rem">Non-surgical lift & tightening</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOCTORS -->
+<section>
+  <div class="container">
+    <div class="section-label">Our Team</div>
+    <h2 class="section-title">Dermatologists You Can Trust</h2>
+    <p class="section-sub">Every consultation at ClearSkin is with a qualified dermatologist — not a technician or nurse.</p>
+    <div class="doctors-grid">
+      <div class="doctor-card">
+        <div class="doctor-img">👩‍⚕️</div>
+        <div class="doctor-info">
+          <div class="doctor-name">Dr. Priya Mehta</div>
+          <div class="doctor-title">Founder & Chief Dermatologist</div>
+          <div class="doctor-qual">MD Dermatology, DNB | Fellowship in Laser & Aesthetics (USA) | 14 years experience</div>
+        </div>
+      </div>
+      <div class="doctor-card">
+        <div class="doctor-img">👨‍⚕️</div>
+        <div class="doctor-info">
+          <div class="doctor-name">Dr. Aditya Kulkarni</div>
+          <div class="doctor-title">Senior Dermatologist & Hair Specialist</div>
+          <div class="doctor-qual">MD Dermatology, DDVL | Hair Transplant Fellowship | 9 years experience</div>
+        </div>
+      </div>
+      <div class="doctor-card">
+        <div class="doctor-img">👩‍⚕️</div>
+        <div class="doctor-info">
+          <div class="doctor-name">Dr. Sneha Joshi</div>
+          <div class="doctor-title">Aesthetic Dermatologist</div>
+          <div class="doctor-qual">MD Dermatology | Certified Botox & Filler Specialist | 6 years experience</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section style="background:var(--card);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+  <div class="container">
+    <div class="section-label">Transparent Pricing</div>
+    <h2 class="section-title">Clear Costs, No Surprises</h2>
+    <p class="section-sub">Pricing discussed openly. No hidden fees. Treatment plans given in writing before you commit.</p>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-plan">Consultation</div>
+        <div class="price-num">₹500</div>
+        <div class="price-period">Initial visit (adjustable towards treatment)</div>
+        <ul class="price-features">
+          <li>Full skin analysis</li>
+          <li>Personalized treatment plan</li>
+          <li>Written protocol</li>
+          <li>No pressure upselling</li>
+        </ul>
+        <button class="price-btn">Book Now</button>
+      </div>
+      <div class="price-card featured">
+        <div class="price-plan">Laser Packages</div>
+        <div class="price-num">₹6,000+</div>
+        <div class="price-period">per session (varies by treatment)</div>
+        <ul class="price-features">
+          <li>CO2 Fractional from ₹8,000</li>
+          <li>Pico Laser from ₹6,000</li>
+          <li>Hair Removal (full face) ₹3,500</li>
+          <li>Multi-session packages save 20%</li>
+          <li>EMI options available</li>
+        </ul>
+        <button class="price-btn">Get Package Quote</button>
+      </div>
+      <div class="price-card">
+        <div class="price-plan">Aesthetic Procedures</div>
+        <div class="price-num">₹4,000+</div>
+        <div class="price-period">per treatment (varies by area)</div>
+        <ul class="price-features">
+          <li>Botox from ₹4,000/area</li>
+          <li>Fillers from ₹15,000/syringe</li>
+          <li>PRP/GFC from ₹4,500</li>
+          <li>Chemical Peels from ₹2,500</li>
+        </ul>
+        <button class="price-btn">View Full Menu</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+  <div class="container">
+    <div class="section-label">Patient Stories</div>
+    <h2 class="section-title">Real Results, Real People</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="t-stars">⭐⭐⭐⭐⭐</div>
+        <p class="t-text">"Struggled with cystic acne for 7 years. Dr. Priya gave me a proper medical protocol — 4 months in and my skin is 90% clear. Wish I found this clinic sooner."</p>
+        <div class="t-author">Rahul D.</div>
+        <div class="t-location">Viman Nagar, Pune</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="t-stars">⭐⭐⭐⭐⭐</div>
+        <p class="t-text">"Did 6 sessions of laser hair removal. Permanent 95% reduction. The technicians are so skilled — virtually painless. The tech here is leaps ahead of other clinics I tried."</p>
+        <div class="t-author">Priti M.</div>
+        <div class="t-location">Kalyani Nagar, Pune</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="t-stars">⭐⭐⭐⭐⭐</div>
+        <p class="t-text">"I was skeptical about injectables but Dr. Sneha was incredibly transparent about what fillers can and can't do. The result is natural and I feel confident again. Highly trust this team."</p>
+        <div class="t-author">Anjali K.</div>
+        <div class="t-location">Koregaon Park, Pune</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="booking-section" id="booking">
+  <div class="container">
+    <div class="booking-card">
+      <div class="section-label" style="color:var(--primary)">Book Now</div>
+      <h2>Your Best Skin Starts Here</h2>
+      <p>Consult with a dermatologist today. First consultation ₹500 — fully adjustable towards your treatment.</p>
+      <button class="btn-primary" style="font-size:1rem;padding:16px 36px">Schedule Free Call</button>
+      <div class="contact-grid">
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div class="contact-label">Phone / WhatsApp</div>
+          <div class="contact-val">+91 98765 43210</div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div class="contact-label">Clinic Location</div>
+          <div class="contact-val">Lane 5, Koregaon Park, Pune 411001</div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🕐</div>
+          <div class="contact-label">Clinic Hours</div>
+          <div class="contact-val">Mon–Sat: 10AM–7PM</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<style>
+.faq-section { padding: 60px 5%; }
+.faq-section h2 { font-size: 2rem; font-weight: 800; margin-bottom: 32px; text-align: center; }
+.faq-item { border-bottom: 1px solid rgba(255,255,255,0.1); }
+.faq-item summary { padding: 18px 0; font-size: 1rem; font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: '+'; font-size: 1.4rem; font-weight: 300; transition: transform 0.2s; }
+.faq-item[open] summary::after { content: '−'; }
+.faq-item .faq-answer { padding: 0 0 18px; font-size: 0.92rem; line-height: 1.7; opacity: 0.8; }
+</style>
+<section class="faq-section" id="faq">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-container">
+    <details class="faq-item">
+      <summary>What advanced laser technologies does ClearSkin use?</summary>
+      <div class="faq-answer">We use cutting-edge equipment including fractional CO2 lasers, Q-switched Nd:YAG for pigmentation, and diode lasers for hair removal. Our Koregaon Park clinic also features digital dermoscopy for precise diagnosis. All devices are US FDA-approved and calibrated for Indian skin types.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Can I get acne surgery at ClearSkin Advanced Dermatology?</summary>
+      <div class="faq-answer">Yes, we perform acne surgery for stubborn comedones and cystic lesions that do not respond to medication alone. The procedure is minimally invasive and done under local anaesthesia. Patients from Mundhwa, Viman Nagar, and Camp visit us regularly for this specialized treatment.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Does ClearSkin Advanced offer anti-aging and cosmetic procedures?</summary>
+      <div class="faq-answer">Absolutely. Our cosmetic dermatology services include Botox, dermal fillers, thread lifts, PRP for hair and skin, and laser skin tightening. We focus on natural-looking results with minimal downtime, perfect for busy professionals across Pune who want effective treatments.</div>
+    </details>
+    <details class="faq-item">
+      <summary>How do I book an appointment at the Koregaon Park clinic?</summary>
+      <div class="faq-answer">You can book online through our website, call our reception, or message us on WhatsApp. We offer morning, afternoon, and evening slots to suit your schedule. The clinic is conveniently located in Koregaon Park with easy parking and access from MG Road.</div>
+    </details>
+    <details class="faq-item">
+      <summary>What is the recovery time after laser treatments at ClearSkin?</summary>
+      <div class="faq-answer">Recovery varies by procedure. Surface-level peels require one to two days of mild redness, while fractional lasers may need five to seven days of downtime. Our team provides detailed aftercare instructions and follow-up support to ensure smooth healing and optimal results.</div>
+    </details>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-copy">© 2024 ClearSkin Advanced Dermatology, Koregaon Park, Pune. All rights reserved.</div>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Book Appointment</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
