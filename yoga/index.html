@@ -207,7 +207,15 @@
  .price-card.featured { transform: none; }
  nav .nav-links { display: none; }
  }
- </style>
+ 
+  @media(max-width:768px){
+    .nav-links { display:none!important; }
+    #mob-links-yoga { display:none; }
+    #mob-links-yoga.show { display:flex!important; flex-direction:column; position:absolute; top:70px; left:0; right:0; background:white; padding:1rem; box-shadow:0 4px 12px rgba(0,0,0,0.15); z-index:999; }
+    #mob-links-yoga.show a { margin:0!important; padding:10px 0; border-bottom:1px solid #eee; color:#333!important; display:block; text-decoration:none; font-size:1rem; }
+    #mob-btn-yoga { display:block!important; }
+  }
+</style>
 <link rel="canonical" href="https://invictus-niche-demos.vercel.app/yoga/">
 <meta property="og:image" content="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1200&q=80">
 <script type="application/ld+json">
@@ -272,6 +280,12 @@
  <li><a href="#instructors">Instructors</a></li>
  <li><a href="#contact" class="nav-cta">Free Trial Class</a></li>
  </ul>
+<button id="mob-btn-yoga" style="display:none;padding:8px;cursor:pointer;background:none;border:none;" onclick="document.getElementById('mob-links-yoga').classList.toggle('show')" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+<div id="mob-links-yoga"><a href="#classes">Classes</a>
+<a href="#schedule">Schedule</a>
+<a href="#pricing">Pricing</a>
+<a href="#instructors">Instructors</a>
+<a href="#contact">Free Trial Class</a></div>
 </nav>
 
 <!-- HERO -->
@@ -642,6 +656,14 @@
 .faq-item summary::after { content: '+'; font-size: 1.4rem; font-weight: 300; transition: transform 0.2s; }
 .faq-item[open] summary::after { content: '−'; }
 .faq-item .faq-answer { padding: 0 0 18px; font-size: 0.92rem; line-height: 1.7; opacity: 0.8; }
+
+  @media(max-width:768px){
+    .nav-links { display:none!important; }
+    #mob-links-yoga { display:none; }
+    #mob-links-yoga.show { display:flex!important; flex-direction:column; position:absolute; top:70px; left:0; right:0; background:white; padding:1rem; box-shadow:0 4px 12px rgba(0,0,0,0.15); z-index:999; }
+    #mob-links-yoga.show a { margin:0!important; padding:10px 0; border-bottom:1px solid #eee; color:#333!important; display:block; text-decoration:none; font-size:1rem; }
+    #mob-btn-yoga { display:block!important; }
+  }
 </style>
 <section class="faq-section" id="faq">
  <h2>Frequently Asked Questions</h2>

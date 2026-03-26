@@ -281,7 +281,15 @@
  .footer-grid { grid-template-columns: 1fr; }
  nav .nav-links { display: none; }
  }
- </style>
+ 
+  @media(max-width:768px){
+    .nav-links { display:none!important; }
+    #mob-links-coaching { display:none; }
+    #mob-links-coaching.show { display:flex!important; flex-direction:column; position:absolute; top:70px; left:0; right:0; background:white; padding:1rem; box-shadow:0 4px 12px rgba(0,0,0,0.15); z-index:999; }
+    #mob-links-coaching.show a { margin:0!important; padding:10px 0; border-bottom:1px solid #eee; color:#333!important; display:block; text-decoration:none; font-size:1rem; }
+    #mob-btn-coaching { display:block!important; }
+  }
+</style>
 <link rel="canonical" href="https://invictus-niche-demos.vercel.app/coaching/">
 <meta property="og:image" content="https://images.unsplash.com/photo-1523050854058-8df90110c476?w=1200&q=80">
 <script type="application/ld+json">
@@ -356,7 +364,13 @@
  <a href="#about">About</a>
  <a href="https://wa.me/919823011010?text=Hi%2C%20I%20want%20to%20know%20about%20admissions%20at%20Pinnacle%20Academy" class="nav-cta"> Enquire Now</a>
  </div>
- </nav>
+ <button id="mob-btn-coaching" style="display:none;padding:8px;cursor:pointer;background:none;border:none;" onclick="document.getElementById('mob-links-coaching').classList.toggle('show')" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+<div id="mob-links-coaching"><a href="#courses">Courses</a>
+<a href="#results">Results</a>
+<a href="#faculty">Faculty</a>
+<a href="#about">About</a>
+<a href="https://wa.me/919823011010?text=Hi%2C%20I%20want%20to%20know%20about%20admissions%20at%20Pinnacle%20Academy">Enquire Now</a></div>
+</nav>
 
  <!-- RESULTS TICKER -->
  <div class="ticker">
@@ -671,6 +685,14 @@
 .faq-item summary::after { content: '+'; font-size: 1.4rem; font-weight: 300; transition: transform 0.2s; }
 .faq-item[open] summary::after { content: '−'; }
 .faq-item .faq-answer { padding: 0 0 18px; font-size: 0.92rem; line-height: 1.7; color: #555; }
+
+  @media(max-width:768px){
+    .nav-links { display:none!important; }
+    #mob-links-coaching { display:none; }
+    #mob-links-coaching.show { display:flex!important; flex-direction:column; position:absolute; top:70px; left:0; right:0; background:white; padding:1rem; box-shadow:0 4px 12px rgba(0,0,0,0.15); z-index:999; }
+    #mob-links-coaching.show a { margin:0!important; padding:10px 0; border-bottom:1px solid #eee; color:#333!important; display:block; text-decoration:none; font-size:1rem; }
+    #mob-btn-coaching { display:block!important; }
+  }
 </style>
 <section class="faq-section" id="faq">
  <h2>Frequently Asked Questions</h2>

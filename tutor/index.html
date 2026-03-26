@@ -393,6 +393,14 @@
  .form-row { grid-template-columns: 1fr; }
  .nav-links { display: none; }
  }
+
+  @media(max-width:768px){
+    .nav-links { display:none!important; }
+    #mob-links-tutor { display:none; }
+    #mob-links-tutor.show { display:flex!important; flex-direction:column; position:absolute; top:70px; left:0; right:0; background:white; padding:1rem; box-shadow:0 4px 12px rgba(0,0,0,0.15); z-index:999; }
+    #mob-links-tutor.show a { margin:0!important; padding:10px 0; border-bottom:1px solid #eee; color:#333!important; display:block; text-decoration:none; font-size:1rem; }
+    #mob-btn-tutor { display:block!important; }
+  }
 </style>
 <link rel="canonical" href="https://invictus-niche-demos.vercel.app/tutor/">
 <meta property="og:image" content="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&q=80">
@@ -462,6 +470,13 @@
  <a href="#contact">Enroll Now</a>
  </div>
  <a href="https://wa.me/919999000111" class="nav-cta">Free Demo Class </a>
+<button id="mob-btn-tutor" style="display:none;padding:8px;cursor:pointer;background:none;border:none;" onclick="document.getElementById('mob-links-tutor').classList.toggle('show')" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+<div id="mob-links-tutor"><a href="#subjects">Subjects</a>
+<a href="#plans">Plans</a>
+<a href="#results">Results</a>
+<a href="#tutors">Tutors</a>
+<a href="#contact">Enroll Now</a>
+<a href="https://wa.me/919999000111">Free Demo Class</a></div>
 </nav>
 
 <!-- HERO -->
@@ -895,6 +910,14 @@
 .faq-item summary::after { content: '+'; font-size: 1.4rem; font-weight: 300; transition: transform 0.2s; }
 .faq-item[open] summary::after { content: '−'; }
 .faq-item .faq-answer { padding: 0 0 18px; font-size: 0.92rem; line-height: 1.7; color: #555; }
+
+  @media(max-width:768px){
+    .nav-links { display:none!important; }
+    #mob-links-tutor { display:none; }
+    #mob-links-tutor.show { display:flex!important; flex-direction:column; position:absolute; top:70px; left:0; right:0; background:white; padding:1rem; box-shadow:0 4px 12px rgba(0,0,0,0.15); z-index:999; }
+    #mob-links-tutor.show a { margin:0!important; padding:10px 0; border-bottom:1px solid #eee; color:#333!important; display:block; text-decoration:none; font-size:1rem; }
+    #mob-btn-tutor { display:block!important; }
+  }
 </style>
 <section class="faq-section" id="faq">
  <h2>Frequently Asked Questions</h2>

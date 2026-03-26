@@ -20,7 +20,7 @@
  "addressRegion": "Maharashtra",
  "addressCountry": "IN"
  },
- "url": "https://invictus-ai.in"
+ "url": "https://invictus-niche-demos.vercel.app/clinic/"
 }
 </script>
  <style>
@@ -373,7 +373,15 @@
  .booking-wrapper, .timing-grid, .form-row { grid-template-columns: 1fr; }
  .nav-links { display: none; }
  }
- </style>
+ 
+  @media(max-width:768px){
+    .nav-links { display:none!important; }
+    #mob-links-clinic { display:none; }
+    #mob-links-clinic.show { display:flex!important; flex-direction:column; position:absolute; top:70px; left:0; right:0; background:white; padding:1rem; box-shadow:0 4px 12px rgba(0,0,0,0.15); z-index:999; }
+    #mob-links-clinic.show a { margin:0!important; padding:10px 0; border-bottom:1px solid #eee; color:#333!important; display:block; text-decoration:none; font-size:1rem; }
+    #mob-btn-clinic { display:block!important; }
+  }
+</style>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏥</text></svg>">
   <link rel="canonical" href="https://invictus-niche-demos.vercel.app/clinic/">
 </head>
@@ -390,6 +398,13 @@
  <li><a href="#book">Book Appointment</a></li>
  </ul>
  <a href="#book" class="nav-cta">Book Now</a>
+<button id="mob-btn-clinic" style="display:none;padding:8px;cursor:pointer;background:none;border:none;" onclick="document.getElementById('mob-links-clinic').classList.toggle('show')" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+<div id="mob-links-clinic"><a href="#doctors">Doctors</a>
+<a href="#specialties">Specialties</a>
+<a href="#services">Services</a>
+<a href="#timing">Timings</a>
+<a href="#book">Book Appointment</a>
+<a href="#book">Book Now</a></div>
 </nav>
 
 <!-- HERO -->
