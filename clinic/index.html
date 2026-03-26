@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HealthFirst Multispecialty Clinic — Kothrud, Pune</title>
+  <style>
+    :root {
+      --teal: #0d9488;
+      --teal-light: #14b8a6;
+      --teal-dark: #0f766e;
+      --navy: #0f172a;
+      --white: #ffffff;
+      --gray: #f8fafc;
+      --text: #1e293b;
+      --muted: #64748b;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; color: var(--text); background: var(--white); }
+
+    /* NAV */
+    nav {
+      background: var(--navy);
+      padding: 0 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 70px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-logo { color: var(--white); font-size: 1.3rem; font-weight: 700; }
+    .nav-logo span { color: var(--teal-light); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { color: #cbd5e1; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--teal-light); }
+    .nav-cta {
+      background: var(--teal);
+      color: var(--white);
+      padding: 0.55rem 1.4rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .nav-cta:hover { background: var(--teal-dark); }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #1e3a5f 100%);
+      color: var(--white);
+      padding: 80px 5% 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+    .hero-left { max-width: 600px; }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(13,148,136,0.2);
+      color: var(--teal-light);
+      border: 1px solid var(--teal);
+      padding: 0.3rem 1rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 1.2rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .hero h1 { font-size: 2.8rem; font-weight: 800; line-height: 1.2; margin-bottom: 1rem; }
+    .hero h1 span { color: var(--teal-light); }
+    .hero p { font-size: 1.1rem; color: #94a3b8; line-height: 1.7; margin-bottom: 2rem; max-width: 520px; }
+    .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--teal);
+      color: var(--white);
+      padding: 0.8rem 2rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .btn-primary:hover { background: var(--teal-dark); }
+    .btn-outline {
+      border: 2px solid var(--teal-light);
+      color: var(--teal-light);
+      padding: 0.8rem 2rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .btn-outline:hover { background: var(--teal-light); color: var(--navy); }
+    .hero-stats {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+    .hero-stat { text-align: center; }
+    .hero-stat .num { font-size: 1.8rem; font-weight: 800; color: var(--teal-light); }
+    .hero-stat .label { font-size: 0.78rem; color: #94a3b8; margin-top: 0.2rem; }
+
+    /* TRUST BAR */
+    .trust-bar {
+      background: var(--teal);
+      padding: 1rem 5%;
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--white);
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+    .trust-item .icon { font-size: 1.2rem; }
+
+    /* SECTION SHARED */
+    section { padding: 70px 5%; }
+    .section-label { color: var(--teal); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; }
+    .section-title { font-size: 2rem; font-weight: 800; color: var(--navy); margin-bottom: 0.5rem; }
+    .section-sub { color: var(--muted); font-size: 1rem; line-height: 1.6; max-width: 580px; margin-bottom: 2.5rem; }
+
+    /* DOCTORS */
+    .doctors { background: var(--gray); }
+    .doctors-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+    .doctor-card {
+      background: var(--white);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      transition: transform 0.2s;
+    }
+    .doctor-card:hover { transform: translateY(-4px); }
+    .doctor-img {
+      width: 100%;
+      height: 160px;
+      background: linear-gradient(135deg, #e0f2fe, #cffafe);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+    }
+    .doctor-info { padding: 1.2rem; }
+    .doctor-info h4 { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 0.2rem; }
+    .doctor-info .spec { font-size: 0.82rem; color: var(--teal); font-weight: 600; margin-bottom: 0.4rem; }
+    .doctor-info .qual { font-size: 0.78rem; color: var(--muted); margin-bottom: 0.7rem; }
+    .doctor-avail { font-size: 0.78rem; color: #22c55e; font-weight: 600; display: flex; align-items: center; gap: 0.3rem; }
+
+    /* SPECIALTIES */
+    .specialties-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.2rem;
+    }
+    .spec-card {
+      border: 2px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 1.5rem 1.2rem;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .spec-card:hover { border-color: var(--teal); background: #f0fdfa; }
+    .spec-icon { font-size: 2rem; margin-bottom: 0.7rem; }
+    .spec-card h4 { font-size: 0.95rem; font-weight: 700; color: var(--navy); margin-bottom: 0.3rem; }
+    .spec-card p { font-size: 0.78rem; color: var(--muted); line-height: 1.5; }
+
+    /* TIMING */
+    .timing-section { background: var(--gray); }
+    .timing-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      max-width: 700px;
+    }
+    .timing-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 1.5rem;
+      border-left: 4px solid var(--teal);
+    }
+    .timing-card h4 { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 0.8rem; }
+    .timing-row { display: flex; justify-content: space-between; padding: 0.4rem 0; border-bottom: 1px solid #f1f5f9; font-size: 0.85rem; }
+    .timing-row:last-child { border-bottom: none; }
+    .timing-row .day { color: var(--muted); }
+    .timing-row .time { color: var(--navy); font-weight: 600; }
+    .timing-row .closed { color: #ef4444; font-weight: 600; }
+
+    /* SERVICES */
+    .services-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    .service-item {
+      background: var(--white);
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 1rem 1.2rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+    }
+    .service-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 0.1rem; }
+    .service-item h4 { font-size: 0.92rem; font-weight: 700; color: var(--navy); margin-bottom: 0.2rem; }
+    .service-item p { font-size: 0.78rem; color: var(--muted); line-height: 1.5; }
+
+    /* TESTIMONIALS */
+    .testimonials { background: var(--navy); color: var(--white); }
+    .testimonials .section-title { color: var(--white); }
+    .testimonials .section-sub { color: #94a3b8; }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .review-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+    .stars { color: #fbbf24; font-size: 1rem; margin-bottom: 0.8rem; }
+    .review-text { font-size: 0.9rem; line-height: 1.7; color: #cbd5e1; margin-bottom: 1rem; }
+    .reviewer { display: flex; align-items: center; gap: 0.8rem; }
+    .reviewer-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--teal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+    .reviewer-name { font-size: 0.88rem; font-weight: 700; }
+    .reviewer-note { font-size: 0.75rem; color: #94a3b8; }
+
+    /* BOOKING FORM */
+    .booking { background: var(--gray); }
+    .booking-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    .booking-info h3 { font-size: 1.5rem; font-weight: 800; color: var(--navy); margin-bottom: 1rem; }
+    .booking-info p { color: var(--muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.5rem; }
+    .contact-item { display: flex; align-items: center; gap: 0.7rem; margin-bottom: 0.8rem; font-size: 0.9rem; color: var(--text); }
+    .contact-icon { font-size: 1.2rem; color: var(--teal); flex-shrink: 0; }
+    .booking-form {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+    .booking-form h4 { font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: 1.5rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-group { margin-bottom: 1rem; }
+    .form-group label { display: block; font-size: 0.82rem; font-weight: 600; color: var(--muted); margin-bottom: 0.4rem; text-transform: uppercase; letter-spacing: 0.04em; }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.65rem 0.9rem;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      color: var(--text);
+      background: var(--white);
+      transition: border-color 0.2s;
+      font-family: inherit;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--teal); outline: none; }
+    .form-group textarea { height: 80px; resize: none; }
+    .form-submit {
+      width: 100%;
+      background: var(--teal);
+      color: var(--white);
+      border: none;
+      padding: 0.9rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-top: 0.5rem;
+    }
+    .form-submit:hover { background: var(--teal-dark); }
+
+    /* FOOTER */
+    footer {
+      background: var(--navy);
+      color: #94a3b8;
+      padding: 2rem 5%;
+      text-align: center;
+      font-size: 0.85rem;
+    }
+    .footer-brand { color: var(--white); font-weight: 700; margin-bottom: 0.3rem; font-size: 1rem; }
+    .powered-by { margin-top: 0.5rem; font-size: 0.75rem; color: #475569; }
+    .powered-by span { color: var(--teal-light); font-weight: 600; }
+
+    /* WHATSAPP FLOAT */
+    .wa-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #25d366;
+      color: var(--white);
+      padding: 0.9rem 1.4rem;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 4px 16px rgba(37,211,102,0.4);
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: transform 0.2s;
+    }
+    .wa-float:hover { transform: scale(1.05); }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 1.8rem; }
+      .booking-wrapper, .timing-grid, .form-row { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Health<span>First</span> Clinic</div>
+  <ul class="nav-links">
+    <li><a href="#doctors">Doctors</a></li>
+    <li><a href="#specialties">Specialties</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#timing">Timings</a></li>
+    <li><a href="#book">Book Appointment</a></li>
+  </ul>
+  <a href="#book" class="nav-cta">📅 Book Now</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-badge">🏥 NABH Accredited · Kothrud, Pune</div>
+    <h1>Expert Care, <span>One Roof</span> — Pune's Trusted Family Clinic</h1>
+    <p>HealthFirst Multispecialty Clinic brings 10+ specialists under one roof. General medicine, cardiology, dermatology, ortho, pediatrics, and more — walk-in and online appointments available.</p>
+    <div class="hero-btns">
+      <a href="#book" class="btn-primary">📅 Book Appointment</a>
+      <a href="tel:+912066112233" class="btn-outline">📞 Call Clinic</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="num">12,000+</div><div class="label">Patients Served</div></div>
+      <div class="hero-stat"><div class="num">10+</div><div class="label">Specialists</div></div>
+      <div class="hero-stat"><div class="num">8 yrs</div><div class="label">Established</div></div>
+      <div class="hero-stat"><div class="num">4.8★</div><div class="label">Google Rating</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item"><span class="icon">✅</span> NABH Accredited</div>
+  <div class="trust-item"><span class="icon">🕐</span> Mon–Sat 8AM–9PM</div>
+  <div class="trust-item"><span class="icon">🚑</span> Emergency Consultation</div>
+  <div class="trust-item"><span class="icon">💊</span> In-House Pharmacy</div>
+  <div class="trust-item"><span class="icon">🔬</span> Diagnostic Lab On-Site</div>
+  <div class="trust-item"><span class="icon">🅿️</span> Free Parking</div>
+</div>
+
+<!-- DOCTORS -->
+<section class="doctors" id="doctors">
+  <div class="section-label">Meet Our Team</div>
+  <div class="section-title">10+ Experienced Specialists</div>
+  <div class="section-sub">Board-certified doctors with 10–25 years of clinical experience. Real doctors, real results.</div>
+  <div class="doctors-grid">
+    <div class="doctor-card">
+      <div class="doctor-img">👨‍⚕️</div>
+      <div class="doctor-info">
+        <h4>Dr. Rajesh Kulkarni</h4>
+        <div class="spec">General Medicine</div>
+        <div class="qual">MD (Gen Med) · 18 yrs</div>
+        <div class="doctor-avail">🟢 Available Today</div>
+      </div>
+    </div>
+    <div class="doctor-card">
+      <div class="doctor-img">👩‍⚕️</div>
+      <div class="doctor-info">
+        <h4>Dr. Priya Deshmukh</h4>
+        <div class="spec">Pediatrics</div>
+        <div class="qual">MD (Pediatrics) · 14 yrs</div>
+        <div class="doctor-avail">🟢 Available Today</div>
+      </div>
+    </div>
+    <div class="doctor-card">
+      <div class="doctor-img">👨‍⚕️</div>
+      <div class="doctor-info">
+        <h4>Dr. Vivek Sharma</h4>
+        <div class="spec">Cardiology</div>
+        <div class="qual">DM (Cardiology) · 20 yrs</div>
+        <div class="doctor-avail">🟡 Available Wed & Sat</div>
+      </div>
+    </div>
+    <div class="doctor-card">
+      <div class="doctor-img">👩‍⚕️</div>
+      <div class="doctor-info">
+        <h4>Dr. Anjali Patil</h4>
+        <div class="spec">Dermatology</div>
+        <div class="qual">MD (Dermatology) · 11 yrs</div>
+        <div class="doctor-avail">🟢 Available Today</div>
+      </div>
+    </div>
+    <div class="doctor-card">
+      <div class="doctor-img">👨‍⚕️</div>
+      <div class="doctor-info">
+        <h4>Dr. Suresh Joshi</h4>
+        <div class="spec">Orthopaedics</div>
+        <div class="qual">MS (Ortho) · 16 yrs</div>
+        <div class="doctor-avail">🟢 Available Today</div>
+      </div>
+    </div>
+    <div class="doctor-card">
+      <div class="doctor-img">👩‍⚕️</div>
+      <div class="doctor-info">
+        <h4>Dr. Meena Rao</h4>
+        <div class="spec">Gynaecology</div>
+        <div class="qual">MS (OBG) · 13 yrs</div>
+        <div class="doctor-avail">🟡 Available Mon, Thu, Sat</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPECIALTIES -->
+<section id="specialties">
+  <div class="section-label">Our Expertise</div>
+  <div class="section-title">10 Specialties Under One Roof</div>
+  <div class="section-sub">No more running between hospitals. We handle everything from routine check-ups to specialist consultations in one visit.</div>
+  <div class="specialties-grid">
+    <div class="spec-card">
+      <div class="spec-icon">🩺</div>
+      <h4>General Medicine</h4>
+      <p>Fever, infections, chronic disease management, annual health check-ups</p>
+    </div>
+    <div class="spec-card">
+      <div class="spec-icon">❤️</div>
+      <h4>Cardiology</h4>
+      <p>ECG, echo, BP management, heart disease consultation</p>
+    </div>
+    <div class="spec-card">
+      <div class="spec-icon">👶</div>
+      <h4>Pediatrics</h4>
+      <p>Newborn care, vaccination, child growth & development tracking</p>
+    </div>
+    <div class="spec-card">
+      <div class="spec-icon">🦴</div>
+      <h4>Orthopaedics</h4>
+      <p>Joint pain, sports injuries, fractures, physiotherapy referrals</p>
+    </div>
+    <div class="spec-card">
+      <div class="spec-icon">🌸</div>
+      <h4>Gynaecology</h4>
+      <p>Prenatal care, PCOS, routine Pap smear, women's health</p>
+    </div>
+    <div class="spec-card">
+      <div class="spec-icon">✨</div>
+      <h4>Dermatology</h4>
+      <p>Acne, eczema, hair loss, skin allergy, anti-pigmentation treatments</p>
+    </div>
+    <div class="spec-card">
+      <div class="spec-icon">👁️</div>
+      <h4>Ophthalmology</h4>
+      <p>Vision correction, cataract screening, eye infection treatment</p>
+    </div>
+    <div class="spec-card">
+      <div class="spec-icon">🧠</div>
+      <h4>Neurology</h4>
+      <p>Headaches, migraines, nerve pain, epilepsy management</p>
+    </div>
+    <div class="spec-card">
+      <div class="spec-icon">🫁</div>
+      <h4>Pulmonology</h4>
+      <p>Asthma, COPD, breathing difficulties, sleep apnea</p>
+    </div>
+    <div class="spec-card">
+      <div class="spec-icon">🔬</div>
+      <h4>Endocrinology</h4>
+      <p>Diabetes, thyroid disorders, hormonal imbalances</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" style="background: var(--gray);">
+  <div class="section-label">Facilities</div>
+  <div class="section-title">Complete Diagnostic & Care Facilities</div>
+  <div class="section-sub">State-of-the-art equipment, fully licensed lab, and 24-hour report access.</div>
+  <div class="services-list">
+    <div class="service-item">
+      <div class="service-icon">🔬</div>
+      <div><h4>On-Site Diagnostic Lab</h4><p>CBC, liver function, lipid profile, HbA1c, thyroid panel. Reports in 4–6 hours.</p></div>
+    </div>
+    <div class="service-item">
+      <div class="service-icon">📷</div>
+      <div><h4>Digital X-Ray & Ultrasound</h4><p>Instant digital X-ray, 2D/4D ultrasound, colour doppler.</p></div>
+    </div>
+    <div class="service-item">
+      <div class="service-icon">💉</div>
+      <div><h4>Vaccination Centre</h4><p>Full childhood immunisation schedule + adult vaccines (flu, pneumo, Hep-B).</p></div>
+    </div>
+    <div class="service-item">
+      <div class="service-icon">💊</div>
+      <div><h4>In-House Pharmacy</h4><p>All prescribed medicines available on-site. Discounted rates for clinic patients.</p></div>
+    </div>
+    <div class="service-item">
+      <div class="service-icon">🏥</div>
+      <div><h4>Minor Procedure Room</h4><p>Dressings, sutures, IV infusions, nebulisation, minor OT under local anaesthesia.</p></div>
+    </div>
+    <div class="service-item">
+      <div class="service-icon">📋</div>
+      <div><h4>Health Packages</h4><p>Annual check-up packages for individuals, couples, and corporates from ₹1,499.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMING -->
+<section class="timing-section" id="timing">
+  <div class="section-label">Working Hours</div>
+  <div class="section-title">Open 6 Days a Week</div>
+  <div class="section-sub">Morning and evening slots available. Walk-ins welcome; appointments recommended for specialist consultations.</div>
+  <div class="timing-grid">
+    <div class="timing-card">
+      <h4>🌅 Morning OPD</h4>
+      <div class="timing-row"><span class="day">Monday – Friday</span><span class="time">8:00 AM – 1:00 PM</span></div>
+      <div class="timing-row"><span class="day">Saturday</span><span class="time">8:00 AM – 1:00 PM</span></div>
+      <div class="timing-row"><span class="day">Sunday</span><span class="closed">Emergency Only</span></div>
+    </div>
+    <div class="timing-card">
+      <h4>🌆 Evening OPD</h4>
+      <div class="timing-row"><span class="day">Monday – Friday</span><span class="time">5:00 PM – 9:00 PM</span></div>
+      <div class="timing-row"><span class="day">Saturday</span><span class="time">5:00 PM – 8:00 PM</span></div>
+      <div class="timing-row"><span class="day">Sunday</span><span class="closed">Emergency Only</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="section-label">Patient Stories</div>
+  <div class="section-title">What Our Patients Say</div>
+  <div class="section-sub">Genuine reviews from real patients in Kothrud and surrounding areas.</div>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"Dr. Kulkarni identified my diabetes in a routine check-up I almost skipped. The lab is right here, the pharmacy is right here — one visit sorted everything. Saved me so much running around."</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">VK</div>
+        <div><div class="reviewer-name">Vinod Kadam</div><div class="reviewer-note">Kothrud resident · 3 years patient</div></div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"My daughter fell and had a possible fracture. No need to rush to a big hospital — Dr. Joshi was here, X-ray was done in 15 minutes. Quick, calm, professional. That's what you need in a panic."</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">SR</div>
+        <div><div class="reviewer-name">Sunita Raut</div><div class="reviewer-note">Erandwane · Mother of 2</div></div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"As a working professional with no time, getting everything at HealthFirst — GP consult, bloodwork, prescription — in under 90 minutes is invaluable. Best clinic in Kothrud, hands down."</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">AP</div>
+        <div><div class="reviewer-name">Akash Pawar</div><div class="reviewer-note">Pune IT professional</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING FORM -->
+<section class="booking" id="book">
+  <div class="booking-wrapper">
+    <div class="booking-info">
+      <h3>Book Your Appointment</h3>
+      <p>Walk-ins are welcome for general medicine. For specialist consultations, book in advance to avoid waiting. Same-day slots often available.</p>
+      <div class="contact-item"><span class="contact-icon">📍</span><span>Plot 14, Paud Road, Kothrud, Pune — 411038</span></div>
+      <div class="contact-item"><span class="contact-icon">📞</span><span>020-6611-2233 | +91 98220 44556</span></div>
+      <div class="contact-item"><span class="contact-icon">💬</span><span>WhatsApp: +91 98220 44556</span></div>
+      <div class="contact-item"><span class="contact-icon">✉️</span><span>appointments@healthfirstpune.in</span></div>
+      <div class="contact-item"><span class="contact-icon">🕐</span><span>Mon–Sat 8AM–9PM | Emergency: 24/7 on WhatsApp</span></div>
+    </div>
+    <div class="booking-form">
+      <h4>📅 Request an Appointment</h4>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Patient Name</label>
+          <input type="text" placeholder="Full name" />
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" placeholder="+91 XXXXXXXXXX" />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Patient Age</label>
+          <input type="number" placeholder="Age in years" />
+        </div>
+        <div class="form-group">
+          <label>Preferred Date</label>
+          <input type="date" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Specialty Required</label>
+        <select>
+          <option value="">Select specialty...</option>
+          <option>General Medicine (Dr. Kulkarni)</option>
+          <option>Cardiology (Dr. Sharma)</option>
+          <option>Pediatrics (Dr. Deshmukh)</option>
+          <option>Orthopaedics (Dr. Joshi)</option>
+          <option>Dermatology (Dr. Patil)</option>
+          <option>Gynaecology (Dr. Rao)</option>
+          <option>Ophthalmology</option>
+          <option>Neurology</option>
+          <option>Pulmonology</option>
+          <option>Endocrinology</option>
+          <option>Diagnostic Lab / Check-Up Package</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Brief Symptoms / Reason for Visit</label>
+        <textarea placeholder="E.g. fever since 3 days, knee pain, routine check-up..."></textarea>
+      </div>
+      <button class="form-submit">📅 Confirm Appointment Request</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">HealthFirst Multispecialty Clinic</div>
+  <div>Plot 14, Paud Road, Kothrud, Pune 411038 · 020-6611-2233</div>
+  <div>© 2026 HealthFirst Clinic. All rights reserved. NABH Accredited.</div>
+  <div class="powered-by">Powered by <span>Invictus AI</span> — Professional Digital Presence</div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/919822044556?text=Hi%2C%20I%20want%20to%20book%20an%20appointment%20at%20HealthFirst%20Clinic" class="wa-float" target="_blank">
+  💬 Book via WhatsApp
+</a>
+
+</body>
+</html>
