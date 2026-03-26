@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Celebrate Events — Premium Event Management Pune</title>
+<meta name="description" content="Celebrate Events — Premium Event Management in Pune. Weddings, corporate events, birthdays, product launches. Full-service planning & execution.">
+<meta name="keywords" content="event management pune, wedding planner pune, corporate events pune, event organiser pune">
+<meta property="og:title" content="Celebrate Events — Premium Event Management Pune">
+<meta property="og:description" content="Celebrate Events — Premium Event Management in Pune. Weddings, corporate events, birthdays, product launches. Full-service planning & execution.">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EventVenue",
+  "name": "Celebrate Events",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Pune",
+    "addressRegion": "Maharashtra",
+    "addressCountry": "IN"
+  },
+  "url": "https://invictus-ai.in"
+}
+</script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --gold: #C9A84C;
+      --deep: #0B0B1A;
+      --dark: #12122A;
+      --card: #1A1A35;
+      --text: #E8E8F0;
+      --muted: #8888AA;
+    }
+    body { background: var(--deep); color: var(--text); font-family: 'Segoe UI', sans-serif; line-height: 1.6; }
+
+    /* NAV */
+    nav { background: rgba(11,11,26,0.97); border-bottom: 1px solid rgba(201,168,76,0.2); padding: 18px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+    .logo { font-size: 1.5rem; font-weight: 800; color: var(--gold); letter-spacing: 1px; }
+    .logo span { color: var(--text); font-weight: 400; font-size: 0.85rem; display: block; letter-spacing: 2px; }
+    .nav-links a { color: var(--muted); text-decoration: none; margin-left: 28px; font-size: 0.9rem; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta { background: var(--gold); color: #000; padding: 10px 22px; border-radius: 6px; font-weight: 700; font-size: 0.9rem; text-decoration: none; margin-left: 28px; transition: opacity 0.2s; }
+    .nav-cta:hover { opacity: 0.85; }
+
+    /* HERO */
+    .hero { background: linear-gradient(135deg, #0B0B1A 0%, #1A0A2E 50%, #0B0B1A 100%); padding: 100px 5% 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .hero-badge { background: rgba(201,168,76,0.12); border: 1px solid rgba(201,168,76,0.3); color: var(--gold); padding: 6px 16px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; letter-spacing: 1px; display: inline-block; margin-bottom: 24px; }
+    .hero h1 { font-size: 3rem; font-weight: 900; line-height: 1.15; margin-bottom: 20px; }
+    .hero h1 em { color: var(--gold); font-style: normal; }
+    .hero p { color: var(--muted); font-size: 1.1rem; margin-bottom: 36px; line-height: 1.8; }
+    .hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 36px; }
+    .stat-box { background: var(--card); border: 1px solid rgba(201,168,76,0.15); border-radius: 10px; padding: 16px; text-align: center; }
+    .stat-box .num { font-size: 1.8rem; font-weight: 900; color: var(--gold); }
+    .stat-box .lbl { font-size: 0.75rem; color: var(--muted); margin-top: 4px; }
+    .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+    .btn-primary { background: var(--gold); color: #000; padding: 14px 28px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 1rem; }
+    .btn-secondary { border: 1px solid var(--gold); color: var(--gold); padding: 14px 28px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 1rem; }
+    .hero-visual { background: var(--card); border: 1px solid rgba(201,168,76,0.2); border-radius: 16px; padding: 40px; text-align: center; }
+    .hero-visual .event-icon { font-size: 5rem; margin-bottom: 20px; }
+    .hero-visual h3 { color: var(--gold); font-size: 1.3rem; margin-bottom: 12px; }
+    .hero-visual p { color: var(--muted); font-size: 0.9rem; line-height: 1.7; }
+    .ticker { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 20px; }
+    .tick { background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.2); color: var(--gold); padding: 4px 12px; border-radius: 12px; font-size: 0.8rem; }
+
+    /* SERVICES */
+    .section { padding: 80px 5%; }
+    .section-header { text-align: center; margin-bottom: 50px; }
+    .section-header h2 { font-size: 2.2rem; font-weight: 800; margin-bottom: 12px; }
+    .section-header h2 em { color: var(--gold); font-style: normal; }
+    .section-header p { color: var(--muted); max-width: 560px; margin: 0 auto; }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .service-card { background: var(--card); border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 30px; transition: border-color 0.2s, transform 0.2s; }
+    .service-card:hover { border-color: var(--gold); transform: translateY(-4px); }
+    .service-card .icon { font-size: 2.5rem; margin-bottom: 16px; }
+    .service-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; color: var(--gold); }
+    .service-card p { color: var(--muted); font-size: 0.9rem; line-height: 1.7; }
+
+    /* PORTFOLIO */
+    .portfolio { background: var(--dark); }
+    .portfolio-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .port-card { background: var(--card); border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.06); }
+    .port-img { height: 140px; display: flex; align-items: center; justify-content: center; font-size: 3.5rem; }
+    .port-img.wedding { background: linear-gradient(135deg, #2D1B69, #1A0A2E); }
+    .port-img.corp { background: linear-gradient(135deg, #0D2137, #1A3A5C); }
+    .port-img.birthday { background: linear-gradient(135deg, #2B1A0A, #4A2C0A); }
+    .port-img.concert { background: linear-gradient(135deg, #1A0A2E, #3D1060); }
+    .port-info { padding: 14px; }
+    .port-info h4 { font-size: 0.9rem; font-weight: 700; margin-bottom: 4px; }
+    .port-info p { font-size: 0.75rem; color: var(--muted); }
+    .port-badge { display: inline-block; margin-top: 6px; background: rgba(201,168,76,0.12); color: var(--gold); padding: 2px 8px; border-radius: 10px; font-size: 0.7rem; }
+
+    /* PACKAGES */
+    .packages { background: var(--deep); }
+    .pkg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .pkg-card { background: var(--card); border: 1px solid rgba(255,255,255,0.07); border-radius: 16px; padding: 32px; position: relative; }
+    .pkg-card.featured { border-color: var(--gold); }
+    .pkg-card.featured::before { content: 'MOST POPULAR'; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--gold); color: #000; padding: 4px 16px; border-radius: 12px; font-size: 0.7rem; font-weight: 800; letter-spacing: 1px; }
+    .pkg-name { font-size: 1.1rem; font-weight: 800; color: var(--gold); margin-bottom: 8px; }
+    .pkg-price { font-size: 2rem; font-weight: 900; color: var(--text); margin-bottom: 4px; }
+    .pkg-price span { font-size: 1rem; font-weight: 400; color: var(--muted); }
+    .pkg-note { color: var(--muted); font-size: 0.8rem; margin-bottom: 24px; }
+    .pkg-features { list-style: none; margin-bottom: 28px; }
+    .pkg-features li { padding: 6px 0; font-size: 0.9rem; color: var(--muted); display: flex; align-items: flex-start; gap: 8px; }
+    .pkg-features li::before { content: '✓'; color: var(--gold); font-weight: 700; flex-shrink: 0; }
+    .pkg-btn { display: block; text-align: center; background: transparent; border: 1px solid var(--gold); color: var(--gold); padding: 12px; border-radius: 8px; font-weight: 700; text-decoration: none; transition: all 0.2s; }
+    .pkg-card.featured .pkg-btn { background: var(--gold); color: #000; border-color: var(--gold); }
+    .pkg-btn:hover { background: var(--gold); color: #000; }
+
+    /* TEAM */
+    .team { background: var(--dark); }
+    .team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+    .team-card { background: var(--card); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px; padding: 28px; text-align: center; }
+    .team-avatar { width: 70px; height: 70px; border-radius: 50%; background: linear-gradient(135deg, var(--gold), #8B6B2E); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin: 0 auto 16px; }
+    .team-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
+    .team-card .role { color: var(--gold); font-size: 0.8rem; margin-bottom: 10px; }
+    .team-card p { color: var(--muted); font-size: 0.8rem; line-height: 1.6; }
+
+    /* TESTIMONIALS */
+    .testimonials { background: var(--deep); }
+    .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .testi-card { background: var(--card); border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 28px; }
+    .stars { color: var(--gold); font-size: 1.1rem; margin-bottom: 14px; }
+    .testi-card blockquote { color: var(--muted); font-size: 0.9rem; line-height: 1.8; font-style: italic; margin-bottom: 18px; }
+    .testi-author { display: flex; align-items: center; gap: 12px; }
+    .testi-avatar { width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, #1A0A2E, #3D1060); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; }
+    .testi-author .name { font-weight: 700; font-size: 0.9rem; }
+    .testi-author .event { color: var(--muted); font-size: 0.8rem; }
+
+    /* CONTACT */
+    .contact { background: var(--dark); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 60px; align-items: start; }
+    .contact-info h2 { font-size: 1.8rem; font-weight: 800; margin-bottom: 16px; }
+    .contact-info h2 em { color: var(--gold); font-style: normal; }
+    .contact-info p { color: var(--muted); margin-bottom: 28px; line-height: 1.8; }
+    .contact-detail { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+    .contact-detail .icon-wrap { width: 44px; height: 44px; background: rgba(201,168,76,0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; }
+    .contact-detail .info .label { font-size: 0.75rem; color: var(--muted); }
+    .contact-detail .info .val { font-size: 0.95rem; font-weight: 600; }
+    .enquiry-form { background: var(--card); border: 1px solid rgba(201,168,76,0.15); border-radius: 16px; padding: 36px; }
+    .enquiry-form h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 24px; color: var(--gold); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-size: 0.85rem; color: var(--muted); margin-bottom: 6px; }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; background: var(--deep); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px;
+      padding: 12px 14px; color: var(--text); font-size: 0.9rem; outline: none; transition: border-color 0.2s;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--gold); }
+    .form-group select option { background: var(--deep); }
+    .form-group textarea { resize: vertical; min-height: 90px; }
+    .form-submit { width: 100%; background: var(--gold); color: #000; border: none; padding: 14px; border-radius: 8px; font-size: 1rem; font-weight: 700; cursor: pointer; transition: opacity 0.2s; margin-top: 8px; }
+    .form-submit:hover { opacity: 0.85; }
+
+    /* FOOTER */
+    footer { background: #07070F; padding: 36px 5%; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.05); flex-wrap: wrap; gap: 16px; }
+    footer .left p { color: var(--muted); font-size: 0.85rem; }
+    footer .right { color: var(--muted); font-size: 0.8rem; }
+    footer .right a { color: var(--gold); text-decoration: none; }
+
+    /* WHATSAPP FLOAT */
+    .wa-float { position: fixed; bottom: 28px; right: 28px; background: #25D366; color: #fff; width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; text-decoration: none; box-shadow: 0 4px 20px rgba(37,211,102,0.4); z-index: 999; transition: transform 0.2s; }
+    .wa-float:hover { transform: scale(1.1); }
+
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; gap: 36px; }
+      .hero h1 { font-size: 2rem; }
+      .services-grid, .packages-grid, .team-grid, .testi-grid { grid-template-columns: 1fr; }
+      .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+      .contact-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      nav .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">✨ Celebrate Events<span>PREMIUM EVENT MANAGEMENT</span></div>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#packages">Packages</a>
+    <a href="#team">Team</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a href="#contact" class="nav-cta">Plan Your Event</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">🏆 #1 Event Management in Pune</div>
+    <h1>Every Moment<br>Should Be <em>Unforgettable</em></h1>
+    <p>From intimate birthday soirées to grand corporate galas — we design, manage, and execute events that leave your guests speechless. Based in Pune. Trusted by 600+ clients.</p>
+    <div class="hero-stats">
+      <div class="stat-box"><div class="num">600+</div><div class="lbl">Events Executed</div></div>
+      <div class="stat-box"><div class="num">10+</div><div class="lbl">Years Experience</div></div>
+      <div class="stat-box"><div class="num">98%</div><div class="lbl">Client Satisfaction</div></div>
+    </div>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-primary">Start Planning →</a>
+      <a href="#portfolio" class="btn-secondary">View Portfolio</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="event-icon">🎊</div>
+    <h3>Your Vision. Our Execution.</h3>
+    <p>Tell us your dream event. We handle every detail — venue, decor, catering, entertainment, logistics — so you can enjoy every moment.</p>
+    <div class="ticker">
+      <span class="tick">Weddings</span>
+      <span class="tick">Corporate</span>
+      <span class="tick">Birthdays</span>
+      <span class="tick">Concerts</span>
+      <span class="tick">Product Launches</span>
+      <span class="tick">Conferences</span>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <div class="section-header">
+    <h2>What We <em>Manage</em></h2>
+    <p>Full-spectrum event services — from concept to cleanup. One team, zero stress.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="icon">💍</div>
+      <h3>Wedding Management</h3>
+      <p>Complete wedding management: engagement, mehendi, sangeet, ceremony & reception. Decorator empanelment, catering coordination, hotel blocks, photography, live music.</p>
+    </div>
+    <div class="service-card">
+      <div class="icon">🏢</div>
+      <h3>Corporate Events</h3>
+      <p>Annual days, product launches, team outings, dealer meets, press conferences & exhibitions. AV setup, stage design, branding, live streaming, delegate management.</p>
+    </div>
+    <div class="service-card">
+      <div class="icon">🎂</div>
+      <h3>Birthday Parties</h3>
+      <p>Milestone celebrations for all ages — 1st birthday to 50th anniversary. Balloon decor, themes, bakers, entertainers, photo booths, personalised invites & takeaways.</p>
+    </div>
+    <div class="service-card">
+      <div class="icon">🎤</div>
+      <h3>Concerts & Shows</h3>
+      <p>Artist coordination, stage production, sound & lighting, ticketing, crowd management, sponsor integrations, security planning for large-format events.</p>
+    </div>
+    <div class="service-card">
+      <div class="icon">🎓</div>
+      <h3>College & School Events</h3>
+      <p>Convocations, cultural festivals, sports days, farewell parties & orientation programmes. Budget-aware packages with experienced student-audience management.</p>
+    </div>
+    <div class="service-card">
+      <div class="icon">🎪</div>
+      <h3>Exhibition & Expos</h3>
+      <p>Stall design & fabrication, brand installations, visitor flow management, exhibitor coordination, AV rentals, and complete logistics for trade shows & expos.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="section portfolio" id="portfolio">
+  <div class="section-header">
+    <h2>Recent <em>Events</em></h2>
+    <p>A glimpse of what we've created. Each event is unique — and unforgettable.</p>
+  </div>
+  <div class="portfolio-grid">
+    <div class="port-card">
+      <div class="port-img wedding">💍</div>
+      <div class="port-info">
+        <h4>Sharma–Mehta Wedding</h4>
+        <p>The Grand Ballroom, Koregaon Park</p>
+        <span class="port-badge">750 Guests</span>
+      </div>
+    </div>
+    <div class="port-card">
+      <div class="port-img corp">🏢</div>
+      <div class="port-info">
+        <h4>TechMeet Pune 2025</h4>
+        <p>Pune International Convention Centre</p>
+        <span class="port-badge">1,200 Delegates</span>
+      </div>
+    </div>
+    <div class="port-card">
+      <div class="port-img birthday">🎂</div>
+      <div class="port-info">
+        <h4>Asha's 50th Birthday Gala</h4>
+        <p>Rooftop Venue, Aundh</p>
+        <span class="port-badge">Golden Theme</span>
+      </div>
+    </div>
+    <div class="port-card">
+      <div class="port-img concert">🎵</div>
+      <div class="port-info">
+        <h4>SufiNight Live — Summer 2025</h4>
+        <p>Balgandharva Rang Mandir</p>
+        <span class="port-badge">2,000 Attendees</span>
+      </div>
+    </div>
+    <div class="port-card">
+      <div class="port-img corp">🚀</div>
+      <div class="port-info">
+        <h4>StartupFest Pune</h4>
+        <p>Hinjewadi IT Park</p>
+        <span class="port-badge">80 Exhibitors</span>
+      </div>
+    </div>
+    <div class="port-card">
+      <div class="port-img wedding">🌸</div>
+      <div class="port-info">
+        <h4>Patel–Joshi Sangeet Night</h4>
+        <p>Boat Club Road, Shivajinagar</p>
+        <span class="port-badge">400 Guests</span>
+      </div>
+    </div>
+    <div class="port-card">
+      <div class="port-img birthday">🎈</div>
+      <div class="port-info">
+        <h4>Little Arjun's 1st Birthday</h4>
+        <p>Kharadi Community Hall</p>
+        <span class="port-badge">Jungle Theme</span>
+      </div>
+    </div>
+    <div class="port-card">
+      <div class="port-img concert">🎤</div>
+      <div class="port-info">
+        <h4>Annual Day — DPS Pune</h4>
+        <p>School Amphitheatre</p>
+        <span class="port-badge">600 Students</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section class="section packages" id="packages">
+  <div class="section-header">
+    <h2>Event <em>Packages</em></h2>
+    <p>Transparent pricing. No hidden costs. Customisable for your headcount & vision.</p>
+  </div>
+  <div class="pkg-grid">
+    <div class="pkg-card">
+      <div class="pkg-name">Silver Celebration</div>
+      <div class="pkg-price">₹75,000 <span>onwards</span></div>
+      <div class="pkg-note">Perfect for intimate events up to 100 guests</div>
+      <ul class="pkg-features">
+        <li>Concept & theme design</li>
+        <li>Venue scouting (2 options)</li>
+        <li>Basic decor setup</li>
+        <li>Catering coordination</li>
+        <li>1 event coordinator on-site</li>
+        <li>Invitation design (digital)</li>
+        <li>Day-of timeline management</li>
+      </ul>
+      <a href="#contact" class="pkg-btn">Get Quote</a>
+    </div>
+    <div class="pkg-card featured">
+      <div class="pkg-name">Gold Premiere</div>
+      <div class="pkg-price">₹1,80,000 <span>onwards</span></div>
+      <div class="pkg-note">Ideal for weddings & events up to 350 guests</div>
+      <ul class="pkg-features">
+        <li>Full concept-to-closedown management</li>
+        <li>Premium decor & floral arrangements</li>
+        <li>Curated vendor network (10+ vendors)</li>
+        <li>Photography & videography package</li>
+        <li>3 coordinators on event day</li>
+        <li>Live entertainment sourcing</li>
+        <li>Printed stationery suite</li>
+        <li>Guest management app</li>
+        <li>Post-event photo album</li>
+      </ul>
+      <a href="#contact" class="pkg-btn">Get Quote</a>
+    </div>
+    <div class="pkg-card">
+      <div class="pkg-name">Royal Extravaganza</div>
+      <div class="pkg-price">₹4,50,000 <span>onwards</span></div>
+      <div class="pkg-note">Grand events from 500 to 2,000+ guests</div>
+      <ul class="pkg-features">
+        <li>Exclusive venue negotiation</li>
+        <li>Luxury decor & international themes</li>
+        <li>Multi-day event management</li>
+        <li>Celebrity/artist coordination</li>
+        <li>Full AV production team</li>
+        <li>Dedicated event manager (yours)</li>
+        <li>Live streaming & broadcast</li>
+        <li>Security & crowd management</li>
+        <li>Branded merchandise production</li>
+        <li>24/7 pre-event support</li>
+      </ul>
+      <a href="#contact" class="pkg-btn">Get Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="section team" id="team">
+  <div class="section-header">
+    <h2>Meet the <em>Team</em></h2>
+    <p>Passionate professionals who live for the moment the lights come on.</p>
+  </div>
+  <div class="team-grid">
+    <div class="team-card">
+      <div class="team-avatar">👩‍💼</div>
+      <h3>Priya Malhotra</h3>
+      <div class="role">Founder & Creative Director</div>
+      <p>10+ years in luxury event curation. Former hospitality at Marriott & ITC. Designed 200+ weddings.</p>
+    </div>
+    <div class="team-card">
+      <div class="team-avatar">👨‍🎨</div>
+      <h3>Rohan Bose</h3>
+      <div class="role">Head of Decor & Design</div>
+      <p>Award-winning set designer. Trained at NID Ahmedabad. Specialises in thematic transformations.</p>
+    </div>
+    <div class="team-card">
+      <div class="team-avatar">👩‍💻</div>
+      <h3>Sneha Patil</h3>
+      <div class="role">Corporate Events Lead</div>
+      <p>Managed 50+ corporate events for Fortune 500 clients. Expert in delegate management & AV logistics.</p>
+    </div>
+    <div class="team-card">
+      <div class="team-avatar">👨‍🍳</div>
+      <h3>Amit Kulkarni</h3>
+      <div class="role">Hospitality & Catering Coordinator</div>
+      <p>15-year hotel background. Works with 30+ empanelled caterers. Manages dietary requirements & bar programs.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section testimonials">
+  <div class="section-header">
+    <h2>What Clients <em>Say</em></h2>
+    <p>Don't take our word for it. Hear from 600+ happy families and organisations.</p>
+  </div>
+  <div class="testi-grid">
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <blockquote>"Priya and her team made our daughter's wedding look like a dream from a Bollywood movie. Every single detail was perfect — from the marigold mandap to the midnight dessert station. Our guests are still talking about it!"</blockquote>
+      <div class="testi-author">
+        <div class="testi-avatar">🙏</div>
+        <div><div class="name">Suresh & Meena Sharma</div><div class="event">Daughter's Wedding — Dec 2025</div></div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <blockquote>"We've hired Celebrate Events for our Annual Day three years running. Their corporate event execution is flawless — on-time, on-budget, and always receives 5-star feedback from our 300 employees."</blockquote>
+      <div class="testi-author">
+        <div class="testi-avatar">🏢</div>
+        <div><div class="name">Kavya Menon</div><div class="event">HR Head, TechNova Systems</div></div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <blockquote>"My son's first birthday was a jungle-theme wonder — the decor, cake, balloon arch, little games for kids — everything was beyond what I imagined. Worth every rupee. Will book them for every milestone."</blockquote>
+      <div class="testi-author">
+        <div class="testi-avatar">🎈</div>
+        <div><div class="name">Ananya Joshi</div><div class="event">1st Birthday Bash — Sept 2025</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact" id="contact">
+  <div class="contact-grid">
+    <div class="contact-info">
+      <h2>Plan Your <em>Perfect Event</em></h2>
+      <p>Tell us about your event and we'll get back within 2 hours with a custom concept & ballpark quote. No commitment needed.</p>
+      <div class="contact-detail">
+        <div class="icon-wrap">📞</div>
+        <div class="info"><div class="label">Phone / WhatsApp</div><div class="val">+91 98765 12345</div></div>
+      </div>
+      <div class="contact-detail">
+        <div class="icon-wrap">📧</div>
+        <div class="info"><div class="label">Email</div><div class="val">hello@celebrateevents.in</div></div>
+      </div>
+      <div class="contact-detail">
+        <div class="icon-wrap">📍</div>
+        <div class="info"><div class="label">Studio</div><div class="val">Office 304, Viman Nagar, Pune 411014</div></div>
+      </div>
+      <div class="contact-detail">
+        <div class="icon-wrap">🕐</div>
+        <div class="info"><div class="label">Hours</div><div class="val">Mon–Sat 10am–7pm; Sunday by appointment</div></div>
+      </div>
+    </div>
+    <div class="enquiry-form">
+      <h3>Event Enquiry Form</h3>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Your Name *</label>
+          <input type="text" placeholder="Rahul Sharma">
+        </div>
+        <div class="form-group">
+          <label>Mobile / WhatsApp *</label>
+          <input type="tel" placeholder="+91 98765 XXXXX">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Event Type *</label>
+          <select>
+            <option>Select Event Type</option>
+            <option>Wedding</option>
+            <option>Engagement / Pre-Wedding</option>
+            <option>Birthday Party</option>
+            <option>Corporate Event / Annual Day</option>
+            <option>Product Launch</option>
+            <option>Concert / Live Show</option>
+            <option>College / School Event</option>
+            <option>Exhibition / Expo</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Expected Guest Count *</label>
+          <select>
+            <option>Select Range</option>
+            <option>Up to 50</option>
+            <option>51–150</option>
+            <option>151–350</option>
+            <option>351–700</option>
+            <option>700–1,500</option>
+            <option>1,500+</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Preferred Date</label>
+          <input type="date">
+        </div>
+        <div class="form-group">
+          <label>Budget Range</label>
+          <select>
+            <option>Select Budget</option>
+            <option>₹50K – ₹1L</option>
+            <option>₹1L – ₹2.5L</option>
+            <option>₹2.5L – ₹5L</option>
+            <option>₹5L – ₹10L</option>
+            <option>₹10L+</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Tell us about your event vision</label>
+        <textarea placeholder="Theme ideas, special requirements, venue preference, anything you'd like us to know..."></textarea>
+      </div>
+      <button class="form-submit">✨ Send Enquiry — We'll Reply in 2 Hours</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="left">
+    <strong style="color: var(--gold);">✨ Celebrate Events</strong>
+    <p>Premium Event Management · Pune, Maharashtra · Since 2015</p>
+    <p>© 2026 Celebrate Events. All rights reserved.</p>
+  </div>
+  <div class="right">
+    Powered by <a href="https://invictus-ai.in">Invictus AI</a>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/919876512345?text=Hi%20Celebrate%20Events%2C%20I'd%20like%20to%20enquire%20about%20event%20planning" class="wa-float" target="_blank" title="Chat on WhatsApp">💬</a>
+
+</body>
+</html>

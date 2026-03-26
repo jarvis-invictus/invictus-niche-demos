@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LensArt Studio | Professional Photography - Pune</title>
+<meta name="description" content="LensArt Studio — Professional Photography in Pune. Weddings, portraits, events, products. Experienced photographers, stunning images.">
+<meta name="keywords" content="photographer pune, wedding photographer pune, portrait photography pune, event photography pune">
+<meta property="og:title" content="LensArt Studio | Professional Photography - Pune">
+<meta property="og:description" content="LensArt Studio — Professional Photography in Pune. Weddings, portraits, events, products. Experienced photographers, stunning images.">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "LensArt Studio",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Pune",
+    "addressRegion": "Maharashtra",
+    "addressCountry": "IN"
+  },
+  "url": "https://invictus-ai.in"
+}
+</script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --black: #0a0a0a;
+      --dark: #111111;
+      --card: #1a1a1a;
+      --border: #2a2a2a;
+      --gold: #c9a84c;
+      --gold-light: #e4c97a;
+      --white: #f5f5f5;
+      --muted: #888;
+    }
+    body { font-family: 'Georgia', serif; background: var(--black); color: var(--white); }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; width: 100%; background: rgba(10,10,10,0.95);
+      backdrop-filter: blur(8px); z-index: 100; border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%;
+    }
+    .nav-logo { display: flex; align-items: center; gap: 12px; padding: 18px 0; }
+    .logo-icon {
+      width: 42px; height: 42px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), #8b5e00);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+    }
+    .logo-text { font-size: 1.3rem; font-weight: 700; letter-spacing: 1px; color: var(--white); }
+    .logo-sub { font-size: 0.65rem; color: var(--gold); letter-spacing: 3px; text-transform: uppercase; font-family: sans-serif; }
+    .nav-links { display: flex; gap: 30px; list-style: none; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.85rem; font-family: sans-serif; letter-spacing: 1px; transition: color 0.3s; }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta {
+      background: var(--gold); color: var(--black);
+      padding: 10px 22px; border-radius: 4px;
+      font-size: 0.8rem; font-family: sans-serif; font-weight: 700;
+      letter-spacing: 1px; text-decoration: none; transition: background 0.3s;
+    }
+    .nav-cta:hover { background: var(--gold-light); }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh; position: relative; overflow: hidden;
+      display: flex; align-items: center;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1200 50%, #0a0a0a 100%);
+    }
+    .hero-grid {
+      position: absolute; inset: 0;
+      background-image: linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 60px 60px; opacity: 0.3;
+    }
+    .hero-content {
+      position: relative; z-index: 2; max-width: 1200px;
+      margin: 0 auto; padding: 0 5%; padding-top: 80px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(201,168,76,0.12); border: 1px solid rgba(201,168,76,0.3);
+      color: var(--gold); padding: 6px 14px; border-radius: 20px;
+      font-size: 0.75rem; font-family: sans-serif; letter-spacing: 2px; margin-bottom: 24px;
+    }
+    .hero h1 { font-size: 3.2rem; line-height: 1.15; margin-bottom: 20px; }
+    .hero h1 span { color: var(--gold); }
+    .hero p { color: var(--muted); font-size: 1.1rem; line-height: 1.7; margin-bottom: 32px; font-family: sans-serif; }
+    .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--gold); color: var(--black);
+      padding: 14px 30px; border-radius: 4px; font-size: 0.9rem;
+      font-family: sans-serif; font-weight: 700; letter-spacing: 1px;
+      text-decoration: none; transition: all 0.3s;
+    }
+    .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+    .btn-secondary {
+      border: 1px solid var(--border); color: var(--white);
+      padding: 14px 30px; border-radius: 4px; font-size: 0.9rem;
+      font-family: sans-serif; letter-spacing: 1px; text-decoration: none; transition: all 0.3s;
+    }
+    .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* HERO STATS */
+    .hero-stats {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px;
+    }
+    .stat-card {
+      background: rgba(255,255,255,0.04); border: 1px solid var(--border);
+      border-radius: 8px; padding: 20px; text-align: center;
+    }
+    .stat-num { font-size: 2rem; font-weight: 700; color: var(--gold); }
+    .stat-label { font-size: 0.72rem; color: var(--muted); font-family: sans-serif; letter-spacing: 1px; margin-top: 4px; }
+
+    /* HERO VISUAL — mosaic */
+    .hero-mosaic {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
+    }
+    .mosaic-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 6px; overflow: hidden; position: relative;
+      aspect-ratio: 3/4;
+    }
+    .mosaic-card.tall { grid-row: span 2; }
+    .mosaic-fill {
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2.5rem;
+    }
+    .mosaic-overlay {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,0.9));
+      padding: 12px; font-family: sans-serif; font-size: 0.7rem;
+      color: var(--gold); letter-spacing: 1px;
+    }
+    /* gradient fills for mosaic */
+    .m1 .mosaic-fill { background: linear-gradient(135deg, #1a1200, #3d2e00); }
+    .m2 .mosaic-fill { background: linear-gradient(135deg, #001a2e, #003d5c); }
+    .m3 .mosaic-fill { background: linear-gradient(135deg, #1a0022, #3d0055); }
+    .m4 .mosaic-fill { background: linear-gradient(135deg, #001a0a, #003d18); }
+
+    /* SECTIONS */
+    section { padding: 80px 5%; max-width: 1200px; margin: 0 auto; }
+    .section-eyebrow {
+      font-family: sans-serif; font-size: 0.72rem; letter-spacing: 3px;
+      color: var(--gold); text-transform: uppercase; margin-bottom: 12px;
+    }
+    .section-title { font-size: 2.2rem; margin-bottom: 16px; line-height: 1.25; }
+    .section-sub { color: var(--muted); font-family: sans-serif; font-size: 1rem; max-width: 560px; line-height: 1.7; }
+
+    /* SERVICES */
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 48px; }
+    .service-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 10px; padding: 28px; transition: all 0.3s;
+    }
+    .service-card:hover { border-color: var(--gold); transform: translateY(-4px); }
+    .service-icon { font-size: 2.2rem; margin-bottom: 16px; }
+    .service-title { font-size: 1.1rem; margin-bottom: 10px; }
+    .service-desc { color: var(--muted); font-size: 0.88rem; font-family: sans-serif; line-height: 1.65; }
+    .service-price { margin-top: 16px; color: var(--gold); font-family: sans-serif; font-size: 0.85rem; font-weight: 700; }
+
+    /* PACKAGES */
+    .packages-section { background: var(--dark); padding: 80px 5%; }
+    .packages-inner { max-width: 1200px; margin: 0 auto; }
+    .packages-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+    .pkg-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 12px; padding: 32px; position: relative;
+    }
+    .pkg-card.featured { border-color: var(--gold); }
+    .pkg-badge {
+      position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+      background: var(--gold); color: var(--black);
+      padding: 4px 16px; border-radius: 12px;
+      font-size: 0.72rem; font-family: sans-serif; font-weight: 700; letter-spacing: 1px;
+    }
+    .pkg-name { font-size: 1.1rem; margin-bottom: 8px; letter-spacing: 1px; text-transform: uppercase; font-family: sans-serif; }
+    .pkg-price { font-size: 2.2rem; font-weight: 700; color: var(--gold); margin-bottom: 6px; }
+    .pkg-price span { font-size: 0.9rem; color: var(--muted); font-weight: 400; font-family: sans-serif; }
+    .pkg-tagline { color: var(--muted); font-size: 0.82rem; font-family: sans-serif; margin-bottom: 20px; }
+    .pkg-features { list-style: none; }
+    .pkg-features li {
+      font-family: sans-serif; font-size: 0.85rem; color: var(--muted);
+      padding: 8px 0; border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; gap: 8px;
+    }
+    .pkg-features li::before { content: '✓'; color: var(--gold); font-weight: 700; }
+    .pkg-btn {
+      display: block; margin-top: 24px; text-align: center;
+      padding: 12px; border-radius: 4px; font-family: sans-serif;
+      font-size: 0.85rem; font-weight: 700; letter-spacing: 1px; text-decoration: none; transition: all 0.3s;
+    }
+    .pkg-btn-outline { border: 1px solid var(--border); color: var(--white); }
+    .pkg-btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+    .pkg-btn-fill { background: var(--gold); color: var(--black); }
+    .pkg-btn-fill:hover { background: var(--gold-light); }
+
+    /* GALLERY */
+    .gallery-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 200px); gap: 8px; margin-top: 48px;
+    }
+    .gallery-item {
+      border-radius: 6px; border: 1px solid var(--border);
+      overflow: hidden; position: relative; cursor: pointer;
+    }
+    .gallery-item.wide { grid-column: span 2; }
+    .gallery-fill {
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 3rem; transition: transform 0.3s;
+    }
+    .gallery-item:hover .gallery-fill { transform: scale(1.05); }
+    .gallery-tag {
+      position: absolute; bottom: 10px; left: 10px;
+      background: rgba(0,0,0,0.8); padding: 4px 10px; border-radius: 12px;
+      font-size: 0.7rem; font-family: sans-serif; color: var(--gold); letter-spacing: 1px;
+    }
+    .g1 .gallery-fill { background: linear-gradient(135deg, #1a1000, #4a3000); }
+    .g2 .gallery-fill { background: linear-gradient(135deg, #001022, #003060); }
+    .g3 .gallery-fill { background: linear-gradient(135deg, #1a000a, #500020); }
+    .g4 .gallery-fill { background: linear-gradient(135deg, #001a0a, #004020); }
+    .g5 .gallery-fill { background: linear-gradient(135deg, #1a1200, #503800); }
+    .g6 .gallery-fill { background: linear-gradient(135deg, #0a001a, #300050); }
+
+    /* TEAM */
+    .team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 48px; }
+    .team-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 10px; padding: 28px; text-align: center; transition: all 0.3s;
+    }
+    .team-card:hover { border-color: var(--gold); }
+    .team-avatar {
+      width: 72px; height: 72px; border-radius: 50%; margin: 0 auto 16px;
+      display: flex; align-items: center; justify-content: center; font-size: 1.8rem;
+      border: 2px solid var(--gold);
+    }
+    .team-name { font-size: 1rem; margin-bottom: 4px; }
+    .team-role { color: var(--gold); font-size: 0.78rem; font-family: sans-serif; letter-spacing: 1px; margin-bottom: 10px; }
+    .team-bio { color: var(--muted); font-size: 0.8rem; font-family: sans-serif; line-height: 1.6; }
+
+    /* TESTIMONIALS */
+    .testimonials-section { background: var(--dark); padding: 80px 5%; }
+    .testimonials-inner { max-width: 1200px; margin: 0 auto; }
+    .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+    .testi-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 10px; padding: 28px;
+    }
+    .testi-stars { color: var(--gold); font-size: 1.1rem; margin-bottom: 16px; }
+    .testi-text { color: var(--muted); font-size: 0.88rem; font-family: sans-serif; line-height: 1.7; margin-bottom: 20px; font-style: italic; }
+    .testi-author { display: flex; align-items: center; gap: 12px; }
+    .testi-avatar {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), #4a3000);
+      display: flex; align-items: center; justify-content: center; font-size: 1.2rem;
+    }
+    .testi-name { font-size: 0.9rem; }
+    .testi-detail { font-size: 0.75rem; color: var(--muted); font-family: sans-serif; }
+
+    /* BOOKING CTA */
+    .booking-section {
+      background: linear-gradient(135deg, #1a1200, #0a0a0a);
+      border: 1px solid var(--gold); border-radius: 16px;
+      padding: 60px 5%; text-align: center; margin: 60px 5%;
+    }
+    .booking-title { font-size: 2.2rem; margin-bottom: 16px; }
+    .booking-title span { color: var(--gold); }
+    .booking-sub { color: var(--muted); font-family: sans-serif; font-size: 1rem; max-width: 520px; margin: 0 auto 32px; line-height: 1.7; }
+    .booking-btns { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+    .wa-btn {
+      background: #25D366; color: var(--white);
+      padding: 14px 28px; border-radius: 4px; font-size: 0.9rem;
+      font-family: sans-serif; font-weight: 700; text-decoration: none; transition: all 0.3s;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .wa-btn:hover { background: #1db954; transform: translateY(-2px); }
+    .call-btn {
+      background: transparent; color: var(--white); border: 1px solid var(--border);
+      padding: 14px 28px; border-radius: 4px; font-size: 0.9rem;
+      font-family: sans-serif; text-decoration: none; transition: all 0.3s;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .call-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* EQUIP SECTION */
+    .equip-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 40px; }
+    .equip-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 8px; padding: 20px; text-align: center;
+    }
+    .equip-icon { font-size: 2rem; margin-bottom: 10px; }
+    .equip-name { font-size: 0.85rem; font-family: sans-serif; margin-bottom: 4px; }
+    .equip-detail { font-size: 0.75rem; color: var(--muted); font-family: sans-serif; }
+
+    /* FOOTER */
+    footer {
+      background: var(--dark); border-top: 1px solid var(--border);
+      padding: 48px 5%; margin-top: 80px;
+    }
+    .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; }
+    .footer-brand p { color: var(--muted); font-family: sans-serif; font-size: 0.85rem; line-height: 1.7; margin-top: 14px; }
+    .footer-col h4 { font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px; font-family: sans-serif; color: var(--gold); }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul li a { color: var(--muted); text-decoration: none; font-size: 0.85rem; font-family: sans-serif; transition: color 0.3s; }
+    .footer-col ul li a:hover { color: var(--gold); }
+    .footer-bottom {
+      max-width: 1200px; margin: 32px auto 0;
+      border-top: 1px solid var(--border); padding-top: 24px;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: gap;
+    }
+    .footer-bottom p { color: var(--muted); font-size: 0.78rem; font-family: sans-serif; }
+    .invictus-badge {
+      background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.3);
+      color: var(--gold); padding: 4px 12px; border-radius: 12px;
+      font-size: 0.7rem; font-family: sans-serif; letter-spacing: 1px;
+    }
+
+    /* WHATSAPP FLOAT */
+    .wa-float {
+      position: fixed; bottom: 28px; right: 28px;
+      background: #25D366; color: white; width: 56px; height: 56px;
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem; text-decoration: none; box-shadow: 0 4px 16px rgba(37,211,102,0.4);
+      z-index: 999; transition: transform 0.3s;
+    }
+    .wa-float:hover { transform: scale(1.1); }
+
+    @media (max-width: 900px) {
+      .hero-content { grid-template-columns: 1fr; }
+      .hero-mosaic { display: none; }
+      .services-grid, .packages-grid, .team-grid { grid-template-columns: 1fr 1fr; }
+      .testi-grid, .equip-grid { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+      .gallery-item.wide { grid-column: span 1; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <div class="logo-icon">📷</div>
+    <div>
+      <div class="logo-text">LensArt</div>
+      <div class="logo-sub">Studio · Pune</div>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#packages">Packages</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#team">Team</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="https://wa.me/919999000000" class="nav-cta">Book Now</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div>
+      <div class="hero-eyebrow">📍 Baner · Pune</div>
+      <h1>Every Frame<br>Tells Your <span>Story</span></h1>
+      <p>Professional photography for weddings, corporate events, portraits, and product shoots. Award-winning photographers with 8+ years capturing Pune's finest moments.</p>
+      <div class="hero-btns">
+        <a href="https://wa.me/919999000000" class="btn-primary">📷 Book a Session</a>
+        <a href="#gallery" class="btn-secondary">View Gallery →</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-card">
+          <div class="stat-num">1,200+</div>
+          <div class="stat-label">Shoots Done</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">8 Yrs</div>
+          <div class="stat-label">Experience</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">4.9★</div>
+          <div class="stat-label">Google Rating</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-mosaic">
+      <div class="mosaic-card tall m1">
+        <div class="mosaic-fill">💍</div>
+        <div class="mosaic-overlay">WEDDING</div>
+      </div>
+      <div class="mosaic-card m2">
+        <div class="mosaic-fill">👔</div>
+        <div class="mosaic-overlay">CORPORATE</div>
+      </div>
+      <div class="mosaic-card m3">
+        <div class="mosaic-fill">🎭</div>
+        <div class="mosaic-overlay">PORTRAIT</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-eyebrow">What We Shoot</div>
+  <h2 class="section-title">Our Photography Services</h2>
+  <p class="section-sub">From intimate portraits to grand weddings — we cover every frame with precision, creativity, and heart.</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">💍</div>
+      <div class="service-title">Wedding Photography</div>
+      <div class="service-desc">Full-day coverage — pre-wedding shoot, ceremony, reception. Candid & traditional blended. Drone shots, same-day highlights reel available.</div>
+      <div class="service-price">Starting ₹35,000</div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">👶</div>
+      <div class="service-title">Maternity & Newborn</div>
+      <div class="service-desc">Milestone moments captured with care. Safe studio lighting, props included. Baby's first day shoot, bump session, family portraits.</div>
+      <div class="service-price">Starting ₹6,000</div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">👔</div>
+      <div class="service-title">Corporate & Headshots</div>
+      <div class="service-desc">LinkedIn profiles, team pages, annual reports. On-location or in-studio. Fast 48-hour delivery. Retouching included.</div>
+      <div class="service-price">Starting ₹3,500</div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🍽️</div>
+      <div class="service-title">Product & Food Photography</div>
+      <div class="service-desc">E-commerce, catalogues, Instagram content. Flat lays, lifestyle shots, 360° product. Zomato, Swiggy, Amazon ready.</div>
+      <div class="service-price">Starting ₹4,000 / session</div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🎂</div>
+      <div class="service-title">Events & Birthdays</div>
+      <div class="service-desc">Candid + posed coverage of birthdays, engagement parties, corporate events, award nights. 3–6 hour packages.</div>
+      <div class="service-price">Starting ₹8,000</div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🎭</div>
+      <div class="service-title">Portfolio & Fashion</div>
+      <div class="service-desc">Modeling portfolios, acting comp cards, fashion editorials. Creative direction, wardrobe guidance, makeup artist partnerships.</div>
+      <div class="service-price">Starting ₹5,500</div>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<div class="packages-section" id="packages">
+  <div class="packages-inner">
+    <div class="section-eyebrow">Pricing</div>
+    <h2 class="section-title">Wedding Packages</h2>
+    <p class="section-sub">Transparent pricing. No hidden costs. Every package includes editing and online gallery delivery.</p>
+    <div class="packages-grid">
+      <div class="pkg-card">
+        <div class="pkg-name">Silver</div>
+        <div class="pkg-price">₹35,000 <span>one event</span></div>
+        <div class="pkg-tagline">Perfect for intimate ceremonies</div>
+        <ul class="pkg-features">
+          <li>1 Photographer</li>
+          <li>8-hour coverage</li>
+          <li>300 edited photos</li>
+          <li>Online private gallery</li>
+          <li>USB delivery</li>
+          <li>2-week turnaround</li>
+        </ul>
+        <a href="https://wa.me/919999000000" class="pkg-btn pkg-btn-outline">Book Silver</a>
+      </div>
+      <div class="pkg-card featured">
+        <div class="pkg-badge">MOST POPULAR</div>
+        <div class="pkg-name">Gold</div>
+        <div class="pkg-price">₹65,000 <span>full coverage</span></div>
+        <div class="pkg-tagline">The complete wedding story</div>
+        <ul class="pkg-features">
+          <li>2 Photographers</li>
+          <li>12-hour coverage</li>
+          <li>600 edited photos</li>
+          <li>Pre-wedding session (2hrs)</li>
+          <li>Same-day highlight reel</li>
+          <li>Premium album (50 pages)</li>
+          <li>Online gallery + USB</li>
+        </ul>
+        <a href="https://wa.me/919999000000" class="pkg-btn pkg-btn-fill">Book Gold</a>
+      </div>
+      <div class="pkg-card">
+        <div class="pkg-name">Royal</div>
+        <div class="pkg-price">₹1,20,000 <span>3-day affair</span></div>
+        <div class="pkg-tagline">For destination & multi-day weddings</div>
+        <ul class="pkg-features">
+          <li>3 Photographers + Drone</li>
+          <li>3-day full coverage</li>
+          <li>1,500+ edited photos</li>
+          <li>Engagement + pre-wedding</li>
+          <li>Cinematic highlight film</li>
+          <li>Luxury album (80 pages)</li>
+          <li>Photo booth setup</li>
+          <li>Priority 1-week delivery</li>
+        </ul>
+        <a href="https://wa.me/919999000000" class="pkg-btn pkg-btn-outline">Book Royal</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="section-eyebrow">Portfolio</div>
+  <h2 class="section-title">Selected Work</h2>
+  <p class="section-sub">A glimpse into the frames we've captured across weddings, portraits, and brands.</p>
+  <div class="gallery-grid">
+    <div class="gallery-item wide g1">
+      <div class="gallery-fill">💍</div>
+      <div class="gallery-tag">WEDDING</div>
+    </div>
+    <div class="gallery-item g2">
+      <div class="gallery-fill">👔</div>
+      <div class="gallery-tag">CORPORATE</div>
+    </div>
+    <div class="gallery-item g3">
+      <div class="gallery-fill">🌸</div>
+      <div class="gallery-tag">MATERNITY</div>
+    </div>
+    <div class="gallery-item g4">
+      <div class="gallery-fill">🍽️</div>
+      <div class="gallery-tag">FOOD</div>
+    </div>
+    <div class="gallery-item g5">
+      <div class="gallery-fill">🎂</div>
+      <div class="gallery-tag">EVENTS</div>
+    </div>
+    <div class="gallery-item wide g6">
+      <div class="gallery-fill">🎭</div>
+      <div class="gallery-tag">PORTRAIT</div>
+    </div>
+  </div>
+</section>
+
+<!-- EQUIPMENT -->
+<section>
+  <div class="section-eyebrow">Gear We Use</div>
+  <h2 class="section-title">Professional Equipment</h2>
+  <p class="section-sub">We invest in the best glass and sensors so your memories are timeless — not blurry.</p>
+  <div class="equip-grid">
+    <div class="equip-card">
+      <div class="equip-icon">📷</div>
+      <div class="equip-name">Sony A7 IV</div>
+      <div class="equip-detail">Full-Frame Mirrorless · Primary Cam</div>
+    </div>
+    <div class="equip-card">
+      <div class="equip-icon">🔭</div>
+      <div class="equip-name">Sony 85mm f/1.4 GM</div>
+      <div class="equip-detail">Portrait & Bokeh Master</div>
+    </div>
+    <div class="equip-card">
+      <div class="equip-icon">💡</div>
+      <div class="equip-name">Godox AD600 Pro</div>
+      <div class="equip-detail">Professional Studio Strobe · 600W</div>
+    </div>
+    <div class="equip-card">
+      <div class="equip-icon">🚁</div>
+      <div class="equip-name">DJI Mavic 3 Pro</div>
+      <div class="equip-detail">4K Cinematic Drone · Hasselblad Lens</div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team">
+  <div class="section-eyebrow">The Artists</div>
+  <h2 class="section-title">Meet Your Photographers</h2>
+  <p class="section-sub">Our team brings diverse specializations — from candid wedding moments to technical product setups.</p>
+  <div class="team-grid">
+    <div class="team-card">
+      <div class="team-avatar">👨‍🎨</div>
+      <div class="team-name">Rohan Mehta</div>
+      <div class="team-role">Founder & Lead Photographer</div>
+      <div class="team-bio">8 years. 400+ weddings. Featured in WeddingWire and Brides of India. Specializes in candid storytelling.</div>
+    </div>
+    <div class="team-card">
+      <div class="team-avatar">👩‍🎨</div>
+      <div class="team-name">Priya Soni</div>
+      <div class="team-role">Portrait & Lifestyle Specialist</div>
+      <div class="team-bio">Former fashion photographer. Expert at capturing natural expressions. Maternity and newborn certified.</div>
+    </div>
+    <div class="team-card">
+      <div class="team-avatar">👨‍💼</div>
+      <div class="team-name">Arjun Kapoor</div>
+      <div class="team-role">Commercial & Product Photography</div>
+      <div class="team-bio">Corporate and brand specialist. Works with 30+ Pune businesses on Amazon listings and brand content.</div>
+    </div>
+    <div class="team-card">
+      <div class="team-avatar">👩‍✈️</div>
+      <div class="team-name">Neha Joshi</div>
+      <div class="team-role">Second Shooter & Drone Pilot</div>
+      <div class="team-bio">DGCA-licensed drone pilot. Provides aerial magic for weddings and events. Expert in event candid coverage.</div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<div class="testimonials-section">
+  <div class="testimonials-inner">
+    <div class="section-eyebrow">What Clients Say</div>
+    <h2 class="section-title">Love for Our Work</h2>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-text">"Rohan and his team were invisible on our wedding day — we barely noticed them. But the photos? Every. Single. Moment. captured perfectly. Our families couldn't stop crying (happy tears). Worth every rupee."</div>
+        <div class="testi-author">
+          <div class="testi-avatar">👰</div>
+          <div>
+            <div class="testi-name">Shruti & Vikram Deshpande</div>
+            <div class="testi-detail">Wedding — December 2024 · Pune</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-text">"Got our LinkedIn headshots done. Arjun transformed me — I looked professional, confident, and genuinely myself. Got 3 recruiter calls the week I updated my profile. Highly recommend."</div>
+        <div class="testi-author">
+          <div class="testi-avatar">👨‍💼</div>
+          <div>
+            <div class="testi-name">Rahul Iyer</div>
+            <div class="testi-detail">Corporate Headshots · IT Professional</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-text">"Booked LensArt for our café's product shoot. Priya turned our regular dishes into magazine-worthy food art. Our Zomato orders jumped 40% after updating photos. This was the best marketing spend we made."</div>
+        <div class="testi-author">
+          <div class="testi-avatar">🍵</div>
+          <div>
+            <div class="testi-name">Ankita Sharma</div>
+            <div class="testi-detail">Food Photography · Brew & Co, Koregaon Park</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BOOKING CTA -->
+<div id="contact">
+  <div class="booking-section">
+    <h2 class="booking-title">Ready to Create<br><span>Timeless Memories?</span></h2>
+    <p class="booking-sub">Tell us your event. We'll check availability, share the portfolio for your niche, and send a customized quote within 2 hours.</p>
+    <div class="booking-btns">
+      <a href="https://wa.me/919999000000?text=Hi%20LensArt%2C%20I%27d%20like%20to%20enquire%20about%20a%20photography%20session" class="wa-btn">
+        💬 WhatsApp Us
+      </a>
+      <a href="tel:+919999000000" class="call-btn">
+        📞 Call Now
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="nav-logo" style="justify-content:flex-start;">
+        <div class="logo-icon">📷</div>
+        <div>
+          <div class="logo-text">LensArt Studio</div>
+          <div class="logo-sub">Pune</div>
+        </div>
+      </div>
+      <p>Professional photography studio in Baner, Pune. Weddings, corporate, portrait, product — every story deserves to be told beautifully.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#">Wedding Photography</a></li>
+        <li><a href="#">Corporate Headshots</a></li>
+        <li><a href="#">Product & Food</a></li>
+        <li><a href="#">Maternity & Newborn</a></li>
+        <li><a href="#">Events & Birthdays</a></li>
+        <li><a href="#">Portfolio Shoots</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Studio</h4>
+      <ul>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Our Team</a></li>
+        <li><a href="#">Equipment</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="#">📍 Baner, Pune 411045</a></li>
+        <li><a href="#">📞 +91 99990 00000</a></li>
+        <li><a href="#">📧 hello@lensart.in</a></li>
+        <li><a href="#">📸 @lensartpune</a></li>
+        <li><a href="#">Mon–Sat 10am–7pm</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 LensArt Studio. All rights reserved.</p>
+    <span class="invictus-badge">⚡ Powered by Invictus AI</span>
+  </div>
+</footer>
+
+<a href="https://wa.me/919999000000" class="wa-float">💬</a>
+
+</body>
+</html>

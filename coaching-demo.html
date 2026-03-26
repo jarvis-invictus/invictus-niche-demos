@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pinnacle Academy — JEE | NEET | MHT-CET | Pune</title>
+  <meta name="description" content="Pune's most trusted coaching institute for JEE, NEET, MHT-CET & Board exams. 1,200+ selections. Expert faculty. Proven results since 2011.">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --orange: #FF6B35;
+      --dark-orange: #E8551F;
+      --navy: #1A2744;
+      --dark-navy: #0F1829;
+      --text: #1A2744;
+      --muted: #64748B;
+      --light: #F8FAFF;
+      --white: #FFFFFF;
+      --gold: #FFB800;
+    }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; color: var(--text); background: var(--white); }
+
+    /* NAV */
+    nav {
+      background: var(--navy);
+      padding: 0 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 68px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+    }
+    .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .nav-logo-icon {
+      width: 40px; height: 40px; background: var(--orange);
+      border-radius: 8px; display: flex; align-items: center; justify-content: center;
+      font-size: 20px; font-weight: 900; color: white;
+    }
+    .nav-logo-text { color: white; font-size: 18px; font-weight: 700; }
+    .nav-logo-sub { color: rgba(255,255,255,0.6); font-size: 11px; font-weight: 400; display: block; }
+    .nav-links { display: flex; gap: 28px; align-items: center; }
+    .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta {
+      background: var(--orange); color: white; padding: 9px 20px;
+      border-radius: 6px; font-size: 13px; font-weight: 700; text-decoration: none;
+      transition: background 0.2s;
+    }
+    .nav-cta:hover { background: var(--dark-orange); }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, var(--dark-navy) 0%, var(--navy) 60%, #1e3a6e 100%);
+      padding: 80px 5% 70px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(255,107,53,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-content { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,107,53,0.2); border: 1px solid rgba(255,107,53,0.4);
+      color: #FF9166; padding: 6px 14px; border-radius: 20px;
+      font-size: 12px; font-weight: 600; margin-bottom: 20px;
+    }
+    .hero h1 { color: white; font-size: 44px; font-weight: 800; line-height: 1.15; margin-bottom: 20px; }
+    .hero h1 span { color: var(--gold); }
+    .hero-sub { color: rgba(255,255,255,0.75); font-size: 17px; line-height: 1.7; margin-bottom: 32px; }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--orange); color: white; padding: 14px 28px;
+      border-radius: 8px; font-size: 16px; font-weight: 700; text-decoration: none;
+      transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px;
+    }
+    .btn-primary:hover { background: var(--dark-orange); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(255,107,53,0.4); }
+    .btn-outline {
+      border: 2px solid rgba(255,255,255,0.4); color: white; padding: 12px 26px;
+      border-radius: 8px; font-size: 15px; font-weight: 600; text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn-outline:hover { border-color: white; background: rgba(255,255,255,0.1); }
+
+    /* HERO STATS BOX */
+    .hero-stats-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 16px;
+      padding: 32px;
+      backdrop-filter: blur(10px);
+    }
+    .hero-stats-title { color: rgba(255,255,255,0.6); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 24px; }
+    .hero-stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 24px; }
+    .hero-stat { text-align: center; }
+    .hero-stat-num { color: var(--gold); font-size: 36px; font-weight: 900; display: block; }
+    .hero-stat-label { color: rgba(255,255,255,0.6); font-size: 11px; margin-top: 4px; }
+    .hero-batch-tag {
+      background: rgba(255,107,53,0.15); border: 1px solid rgba(255,107,53,0.3);
+      color: #FF9166; padding: 10px 16px; border-radius: 8px; text-align: center;
+      font-size: 13px; font-weight: 600;
+    }
+
+    /* RESULTS TICKER */
+    .ticker {
+      background: var(--orange);
+      padding: 12px 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .ticker-inner { display: inline-block; animation: ticker 30s linear infinite; }
+    .ticker-item { display: inline-block; padding: 0 40px; font-size: 13px; font-weight: 700; color: white; }
+    .ticker-item::before { content: '🎯 '; }
+    @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* RESULTS SECTION */
+    .section { padding: 80px 5%; }
+    .section-center { text-align: center; max-width: 700px; margin: 0 auto 50px; }
+    .section-tag {
+      display: inline-block; background: rgba(255,107,53,0.1); color: var(--orange);
+      padding: 5px 14px; border-radius: 20px; font-size: 12px; font-weight: 700;
+      letter-spacing: 1px; text-transform: uppercase; margin-bottom: 14px;
+    }
+    .section-title { font-size: 34px; font-weight: 800; color: var(--navy); margin-bottom: 16px; }
+    .section-sub { color: var(--muted); font-size: 16px; line-height: 1.7; }
+
+    /* RESULT CARDS */
+    .results-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1100px; margin: 0 auto; }
+    .result-card {
+      background: white; border: 1px solid #E2E8F0; border-radius: 12px;
+      padding: 28px; text-align: center; transition: all 0.3s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .result-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.1); border-color: var(--orange); }
+    .result-exam { background: var(--orange); color: white; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 800; display: inline-block; margin-bottom: 14px; }
+    .result-num { font-size: 48px; font-weight: 900; color: var(--navy); }
+    .result-label { font-size: 13px; color: var(--muted); margin-top: 4px; }
+    .result-year { font-size: 11px; color: rgba(100,116,139,0.7); margin-top: 8px; }
+    .result-topper {
+      margin-top: 16px; padding-top: 16px; border-top: 1px solid #F1F5F9;
+      font-size: 13px; color: var(--text); font-weight: 600;
+    }
+    .result-topper span { color: var(--orange); }
+
+    /* COURSES */
+    .courses-bg { background: var(--light); }
+    .courses-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 1100px; margin: 0 auto; }
+    .course-card {
+      background: white; border: 1px solid #E2E8F0; border-radius: 12px;
+      padding: 28px; display: flex; gap: 20px; align-items: flex-start;
+      transition: all 0.3s;
+    }
+    .course-card:hover { border-color: var(--orange); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+    .course-icon {
+      width: 52px; height: 52px; border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px; flex-shrink: 0;
+    }
+    .course-info h3 { font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+    .course-info p { color: var(--muted); font-size: 14px; line-height: 1.6; margin-bottom: 12px; }
+    .course-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+    .course-tag {
+      background: #F1F5F9; color: var(--muted); padding: 3px 10px;
+      border-radius: 20px; font-size: 11px; font-weight: 600;
+    }
+    .course-fee { margin-top: 12px; font-size: 15px; font-weight: 700; color: var(--navy); }
+    .course-fee span { font-size: 12px; color: var(--muted); font-weight: 400; }
+
+    /* FACULTY */
+    .faculty-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; max-width: 1100px; margin: 0 auto; }
+    .faculty-card {
+      background: white; border: 1px solid #E2E8F0; border-radius: 12px;
+      padding: 24px; text-align: center; transition: all 0.3s;
+    }
+    .faculty-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.1); }
+    .faculty-avatar {
+      width: 72px; height: 72px; background: linear-gradient(135deg, var(--orange), var(--dark-orange));
+      border-radius: 50%; margin: 0 auto 14px; display: flex; align-items: center;
+      justify-content: center; font-size: 24px; color: white; font-weight: 700;
+    }
+    .faculty-card h3 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+    .faculty-card p { font-size: 12px; color: var(--muted); margin-bottom: 10px; }
+    .faculty-exp { background: #FFF7ED; color: var(--orange); padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 700; }
+
+    /* WHY US */
+    .why-bg { background: var(--navy); }
+    .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1100px; margin: 0 auto; }
+    .why-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px; padding: 28px;
+      transition: all 0.3s;
+    }
+    .why-card:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,107,53,0.4); }
+    .why-icon { font-size: 28px; margin-bottom: 16px; }
+    .why-card h3 { color: white; font-size: 17px; font-weight: 700; margin-bottom: 10px; }
+    .why-card p { color: rgba(255,255,255,0.65); font-size: 14px; line-height: 1.7; }
+
+    /* TESTIMONIALS */
+    .testi-bg { background: var(--light); }
+    .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1100px; margin: 0 auto; }
+    .testi-card {
+      background: white; border: 1px solid #E2E8F0; border-radius: 12px;
+      padding: 28px; transition: all 0.3s;
+    }
+    .testi-card:hover { border-color: var(--orange); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+    .testi-stars { color: var(--gold); font-size: 16px; margin-bottom: 14px; }
+    .testi-text { color: var(--text); font-size: 14px; line-height: 1.7; margin-bottom: 16px; font-style: italic; }
+    .testi-author { display: flex; align-items: center; gap: 12px; }
+    .testi-avatar {
+      width: 40px; height: 40px; background: linear-gradient(135deg, var(--orange), var(--gold));
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-weight: 700; color: white; font-size: 14px; flex-shrink: 0;
+    }
+    .testi-name { font-weight: 700; color: var(--navy); font-size: 14px; }
+    .testi-meta { color: var(--muted); font-size: 12px; }
+
+    /* ENROLL SECTION */
+    .enroll-section {
+      background: linear-gradient(135deg, var(--orange) 0%, var(--dark-orange) 100%);
+      padding: 70px 5%;
+      text-align: center;
+    }
+    .enroll-section h2 { color: white; font-size: 36px; font-weight: 800; margin-bottom: 14px; }
+    .enroll-section p { color: rgba(255,255,255,0.85); font-size: 18px; margin-bottom: 36px; }
+    .enroll-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .enroll-btn {
+      background: white; color: var(--orange); padding: 14px 32px;
+      border-radius: 8px; font-size: 16px; font-weight: 800; text-decoration: none;
+      transition: all 0.2s;
+    }
+    .enroll-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+    .enroll-btn-outline {
+      border: 2px solid white; color: white; padding: 12px 30px;
+      border-radius: 8px; font-size: 16px; font-weight: 700; text-decoration: none;
+      transition: all 0.2s;
+    }
+    .enroll-btn-outline:hover { background: rgba(255,255,255,0.15); }
+
+    /* FOOTER */
+    footer {
+      background: var(--dark-navy);
+      color: rgba(255,255,255,0.6);
+      padding: 48px 5% 28px;
+    }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; max-width: 1100px; margin: 0 auto 36px; }
+    .footer-brand-name { color: white; font-size: 20px; font-weight: 800; margin-bottom: 10px; }
+    .footer-brand-desc { font-size: 13px; line-height: 1.7; margin-bottom: 16px; }
+    .footer-contact-item { font-size: 13px; margin-bottom: 6px; }
+    .footer-contact-item a { color: rgba(255,255,255,0.6); text-decoration: none; }
+    .footer-col-title { color: white; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: 8px; }
+    .footer-links a { color: rgba(255,255,255,0.55); text-decoration: none; font-size: 13px; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; font-size: 12px; max-width: 1100px; margin: 0 auto; }
+    .wa-float {
+      position: fixed; bottom: 24px; right: 24px;
+      background: #25D366; color: white; width: 56px; height: 56px;
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 26px; box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+      text-decoration: none; z-index: 99; transition: all 0.2s;
+    }
+    .wa-float:hover { transform: scale(1.1); }
+
+    @media (max-width: 768px) {
+      .hero-content { grid-template-columns: 1fr; gap: 36px; }
+      .hero h1 { font-size: 30px; }
+      .hero-stats-card { display: none; }
+      .results-grid, .courses-grid, .faculty-grid, .why-grid, .testi-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      nav .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-icon">P</div>
+      <div>
+        <span class="nav-logo-text">Pinnacle Academy</span>
+        <span class="nav-logo-sub">JEE · NEET · MHT-CET · Boards</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="#courses">Courses</a>
+      <a href="#results">Results</a>
+      <a href="#faculty">Faculty</a>
+      <a href="#about">About</a>
+      <a href="https://wa.me/919876543210?text=Hi%2C%20I%20want%20to%20know%20about%20admissions%20at%20Pinnacle%20Academy" class="nav-cta">📋 Enquire Now</a>
+    </div>
+  </nav>
+
+  <!-- RESULTS TICKER -->
+  <div class="ticker">
+    <div class="ticker-inner">
+      <span class="ticker-item">Arjun Mehta — JEE Advanced AIR 142 (2024)</span>
+      <span class="ticker-item">Priya Sharma — NEET 697/720 (2024)</span>
+      <span class="ticker-item">Rohan Joshi — MHT-CET 99.8 %ile (2024)</span>
+      <span class="ticker-item">Sneha Kulkarni — JEE Main AIR 389 (2024)</span>
+      <span class="ticker-item">Vivek Desai — NEET 682/720 (2024)</span>
+      <span class="ticker-item">Tanvi Patil — 12th Boards 95.4% (2024)</span>
+      <span class="ticker-item">Arjun Mehta — JEE Advanced AIR 142 (2024)</span>
+      <span class="ticker-item">Priya Sharma — NEET 697/720 (2024)</span>
+      <span class="ticker-item">Rohan Joshi — MHT-CET 99.8 %ile (2024)</span>
+      <span class="ticker-item">Sneha Kulkarni — JEE Main AIR 389 (2024)</span>
+      <span class="ticker-item">Vivek Desai — NEET 682/720 (2024)</span>
+      <span class="ticker-item">Tanvi Patil — 12th Boards 95.4% (2024)</span>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <div>
+        <div class="hero-badge">⭐ Pune's #1 Ranked Coaching Institute Since 2011</div>
+        <h1>Your <span>Dream Rank</span><br>Starts Here</h1>
+        <p class="hero-sub">
+          1,200+ JEE/NEET selections in 13 years. Small batches, expert faculty, and a proven system designed to get you to your dream college.
+        </p>
+        <div class="hero-actions">
+          <a href="https://wa.me/919876543210?text=Hi%2C%20I%20want%20to%20enroll%20at%20Pinnacle%20Academy" class="btn-primary">📋 Book Free Counselling →</a>
+          <a href="#results" class="btn-outline">View Results</a>
+        </div>
+      </div>
+      <div class="hero-stats-card">
+        <div class="hero-stats-title">Our 2024 Results at a Glance</div>
+        <div class="hero-stats-grid">
+          <div class="hero-stat">
+            <span class="hero-stat-num">412</span>
+            <div class="hero-stat-label">JEE Selections</div>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-num">386</span>
+            <div class="hero-stat-label">NEET Selections</div>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-num">94.8%</span>
+            <div class="hero-stat-label">Board Pass %</div>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-num">13+</span>
+            <div class="hero-stat-label">Years of Results</div>
+          </div>
+        </div>
+        <div class="hero-batch-tag">🔥 2025–26 Batches Filling Fast — Limited Seats</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section class="section" id="results">
+    <div class="section-center">
+      <span class="section-tag">Results 2024</span>
+      <h2 class="section-title">Numbers That Speak for Themselves</h2>
+      <p class="section-sub">Our students consistently outperform state and national averages. This is what 13 years of focused coaching looks like.</p>
+    </div>
+    <div class="results-grid">
+      <div class="result-card">
+        <span class="result-exam">JEE MAIN</span>
+        <div class="result-num">412</div>
+        <div class="result-label">Students Qualified (2024)</div>
+        <div class="result-year">Top 3 ranks in Pune — 2024</div>
+        <div class="result-topper">🏆 Topper: <span>Sneha Kulkarni — AIR 389</span></div>
+      </div>
+      <div class="result-card">
+        <span class="result-exam" style="background: #0891B2;">JEE ADVANCED</span>
+        <div class="result-num">89</div>
+        <div class="result-label">IIT Selections (2024)</div>
+        <div class="result-year">Best in last 5 years</div>
+        <div class="result-topper">🏆 Topper: <span>Arjun Mehta — AIR 142</span></div>
+      </div>
+      <div class="result-card">
+        <span class="result-exam" style="background: #059669;">NEET</span>
+        <div class="result-num">386</div>
+        <div class="result-label">Students Qualified (2024)</div>
+        <div class="result-year">72 with 650+ marks</div>
+        <div class="result-topper">🏆 Topper: <span>Priya Sharma — 697/720</span></div>
+      </div>
+      <div class="result-card">
+        <span class="result-exam" style="background: #7C3AED;">MHT-CET</span>
+        <div class="result-num">523</div>
+        <div class="result-label">Above 95 %ile (2024)</div>
+        <div class="result-year">148 above 99 %ile</div>
+        <div class="result-topper">🏆 Topper: <span>Rohan Joshi — 99.8 %ile</span></div>
+      </div>
+      <div class="result-card">
+        <span class="result-exam" style="background: #D97706;">12TH BOARDS</span>
+        <div class="result-num">94.8%</div>
+        <div class="result-label">Average Score (2024)</div>
+        <div class="result-year">62 students above 95%</div>
+        <div class="result-topper">🏆 Topper: <span>Tanvi Patil — 95.4%</span></div>
+      </div>
+      <div class="result-card">
+        <span class="result-tag" style="background: #DB2777; color: white; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 800; display: inline-block; margin-bottom: 14px;">OVERALL</span>
+        <div class="result-num">1,200+</div>
+        <div class="result-label">Total Selections Since 2011</div>
+        <div class="result-year">Across IITs, NITs, AIIMS, BHU</div>
+        <div class="result-topper">📍 <span>Pune's Most Trusted Since 2011</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURSES -->
+  <section class="section courses-bg" id="courses">
+    <div class="section-center">
+      <span class="section-tag">Our Courses</span>
+      <h2 class="section-title">Programmes for Every Goal</h2>
+      <p class="section-sub">From Class 8 foundation to final-year crash courses — we have a structured programme for every stage.</p>
+    </div>
+    <div class="courses-grid">
+      <div class="course-card">
+        <div class="course-icon" style="background: #FFF3E0;">🔭</div>
+        <div class="course-info">
+          <h3>JEE Main + Advanced</h3>
+          <p>2-year integrated programme for Class 11–12 students targeting IIT/NIT admissions. Weekly tests, doubt sessions, and DPPs modelled on JEE pattern.</p>
+          <div class="course-tags">
+            <span class="course-tag">Class 11–12</span>
+            <span class="course-tag">Physics · Chemistry · Maths</span>
+            <span class="course-tag">2 Years</span>
+          </div>
+          <div class="course-fee">₹1,20,000/year <span>(EMI available)</span></div>
+        </div>
+      </div>
+      <div class="course-card">
+        <div class="course-icon" style="background: #E8F5E9;">🧬</div>
+        <div class="course-info">
+          <h3>NEET UG Preparation</h3>
+          <p>Comprehensive Biology, Chemistry & Physics programme with NCERT mastery sessions, NEET mock tests, and chapter-wise analysis.</p>
+          <div class="course-tags">
+            <span class="course-tag">Class 11–12</span>
+            <span class="course-tag">Biology · Chemistry · Physics</span>
+            <span class="course-tag">2 Years</span>
+          </div>
+          <div class="course-fee">₹1,10,000/year <span>(EMI available)</span></div>
+        </div>
+      </div>
+      <div class="course-card">
+        <div class="course-icon" style="background: #EDE7F6;">📐</div>
+        <div class="course-info">
+          <h3>MHT-CET Crash Course</h3>
+          <p>Intensive 6-month programme covering complete syllabus with daily MCQ practice. Designed for Class 12 students appearing in May.</p>
+          <div class="course-tags">
+            <span class="course-tag">Class 12</span>
+            <span class="course-tag">PCM / PCB</span>
+            <span class="course-tag">6 Months</span>
+          </div>
+          <div class="course-fee">₹45,000 <span>(one-time)</span></div>
+        </div>
+      </div>
+      <div class="course-card">
+        <div class="course-icon" style="background: #E3F2FD;">📚</div>
+        <div class="course-info">
+          <h3>Foundation (Class 8–10)</h3>
+          <p>Early preparation programme covering NTSE, Olympiads, and conceptual foundations for Std 10 Science & Maths. Builds competitive instinct early.</p>
+          <div class="course-tags">
+            <span class="course-tag">Class 8, 9, 10</span>
+            <span class="course-tag">Science · Maths</span>
+            <span class="course-tag">Annual</span>
+          </div>
+          <div class="course-fee">₹60,000/year <span>(EMI available)</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FACULTY -->
+  <section class="section" id="faculty">
+    <div class="section-center">
+      <span class="section-tag">Our Faculty</span>
+      <h2 class="section-title">Taught by Experts Who've Been Where You're Going</h2>
+      <p class="section-sub">Our teachers are IIT/AIIMS alumni with a combined 80+ years of coaching experience.</p>
+    </div>
+    <div class="faculty-grid">
+      <div class="faculty-card">
+        <div class="faculty-avatar">RK</div>
+        <h3>Dr. Rajiv Kumar</h3>
+        <p>Physics | IIT Bombay Alumni</p>
+        <span class="faculty-exp">18 Years Experience</span>
+      </div>
+      <div class="faculty-card">
+        <div class="faculty-avatar" style="background: linear-gradient(135deg, #059669, #0D9488);">AS</div>
+        <h3>Dr. Anita Sharma</h3>
+        <p>Chemistry | AIIMS Delhi Alumni</p>
+        <span class="faculty-exp">14 Years Experience</span>
+      </div>
+      <div class="faculty-card">
+        <div class="faculty-avatar" style="background: linear-gradient(135deg, #7C3AED, #5B21B6);">VM</div>
+        <h3>Prof. Vikram Mehta</h3>
+        <p>Mathematics | IIT Kharagpur Alumni</p>
+        <span class="faculty-exp">20 Years Experience</span>
+      </div>
+      <div class="faculty-card">
+        <div class="faculty-avatar" style="background: linear-gradient(135deg, #D97706, #B45309);">SN</div>
+        <h3>Dr. Sunita Naik</h3>
+        <p>Biology | AFMC Pune Alumni</p>
+        <span class="faculty-exp">12 Years Experience</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="section why-bg">
+    <div class="section-center">
+      <span class="section-tag" style="color: var(--gold); background: rgba(255,184,0,0.15);">Why Pinnacle</span>
+      <h2 class="section-title" style="color: white;">Everything Engineered for Your Rank</h2>
+      <p class="section-sub" style="color: rgba(255,255,255,0.7);">We don't just teach — we build exam-ready students with systems, habit, and data.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">👥</div>
+        <h3>Small Batches (Max 25)</h3>
+        <p>Unlike big coaching chains, every student gets individual attention. Teachers know your name, weaknesses, and progress.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">📊</div>
+        <h3>Weekly Progress Reports</h3>
+        <p>Parents receive detailed performance reports every week. Chapter-wise scores, rank in batch, and improvement areas highlighted.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🧪</div>
+        <h3>300+ Mock Tests Per Year</h3>
+        <p>Test series mirroring actual exam pattern. Detailed analysis after each test to target weak areas with surgical precision.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">📱</div>
+        <h3>24×7 Doubt Resolution</h3>
+        <p>WhatsApp doubt group for each batch. No doubt waits till the next class. Concept confusion killed the moment it arises.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🎯</div>
+        <h3>Personalised Study Plans</h3>
+        <p>Each student gets a custom study calendar based on their diagnostic test results. Strengths leveraged, gaps eliminated.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🏛️</div>
+        <h3>Modern Infrastructure</h3>
+        <p>AC classrooms, 5,000+ book library, computer labs for online mock tests, and dedicated revision rooms on campus.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section testi-bg">
+    <div class="section-center">
+      <span class="section-tag">Student Stories</span>
+      <h2 class="section-title">Results Built on Real Dedication</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Pinnacle's Physics faculty is unlike anything else in Pune. In my first mock test I was at 40% — by JEE I hit AIR 389. The individual attention made the difference."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">SK</div>
+          <div>
+            <div class="testi-name">Sneha Kulkarni</div>
+            <div class="testi-meta">JEE Main AIR 389 · IIT Bombay, 2024</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"I joined NEET batch in Class 11. The Biology teacher's method of building concepts from NCERT first changed how I study. NEET felt like a test I was designed for."</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background: linear-gradient(135deg, #059669, #0D9488);">PS</div>
+          <div>
+            <div class="testi-name">Priya Sharma</div>
+            <div class="testi-meta">NEET 697/720 · AIIMS Delhi, 2024</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"My parents were worried when I joined in Class 12 for MHT-CET. But the crash course structure was so efficient — 6 months felt like 2 years of preparation."</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background: linear-gradient(135deg, #7C3AED, #5B21B6);">RJ</div>
+          <div>
+            <div class="testi-name">Rohan Joshi</div>
+            <div class="testi-meta">MHT-CET 99.8 %ile · COEP Pune, 2024</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENROLL CTA -->
+  <section class="enroll-section">
+    <h2>Admissions for 2025–26 Now Open</h2>
+    <p>Seats are limited. Book a free counselling session before batches fill up.</p>
+    <div class="enroll-actions">
+      <a href="https://wa.me/919876543210?text=Hi%2C%20I%20want%20to%20book%20a%20free%20counselling%20session%20at%20Pinnacle%20Academy" class="enroll-btn">📋 Book Free Counselling</a>
+      <a href="tel:+919876543210" class="enroll-btn-outline">📞 Call: +91 98765 43210</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">Pinnacle Academy</div>
+        <p class="footer-brand-desc">Pune's most trusted coaching institute for JEE, NEET, MHT-CET & Board exams since 2011. 1,200+ selections. Real results.</p>
+        <div class="footer-contact-item">📍 Karve Nagar, Pune — 411052</div>
+        <div class="footer-contact-item">📞 <a href="tel:+919876543210">+91 98765 43210</a></div>
+        <div class="footer-contact-item">✉️ <a href="mailto:admissions@pinnacleacademy.in">admissions@pinnacleacademy.in</a></div>
+      </div>
+      <div>
+        <div class="footer-col-title">Courses</div>
+        <ul class="footer-links">
+          <li><a href="#">JEE Main + Advanced</a></li>
+          <li><a href="#">NEET UG</a></li>
+          <li><a href="#">MHT-CET</a></li>
+          <li><a href="#">Foundation (8–10)</a></li>
+          <li><a href="#">Crash Courses</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="#">Results 2024</a></li>
+          <li><a href="#">Our Faculty</a></li>
+          <li><a href="#">Fee Structure</a></li>
+          <li><a href="#">Scholarship Test</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2024 Pinnacle Academy. All rights reserved. | This is a demo website by <strong>Invictus AI</strong> — <a href="https://invictus-ai.in" style="color: var(--gold);">invictus-ai.in</a>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/919876543210?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20admissions%20at%20Pinnacle%20Academy" class="wa-float" title="Chat on WhatsApp">💬</a>
+
+</body>
+</html>

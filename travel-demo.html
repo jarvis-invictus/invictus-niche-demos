@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WanderIndia Travels – Pune's Premier Travel Agency</title>
+<meta name="description" content="Travel agency in Pune. Customised tour packages — domestic & international. Honeymoon, group tours, corporate travel. Book your dream trip.">
+<meta name="keywords" content="travel agency pune, tour packages pune, holiday packages pune, honeymoon packages, travel agent pune">
+<meta property="og:title" content="WanderIndia Travels – Pune's Premier Travel Agency">
+<meta property="og:description" content="Travel agency in Pune. Customised tour packages — domestic & international. Honeymoon, group tours, corporate travel. Book your dream trip.">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TravelAgency",
+  "name": "WanderIndia Travels",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Pune",
+    "addressRegion": "Maharashtra",
+    "addressCountry": "IN"
+  },
+  "url": "https://invictus-ai.in"
+}
+</script>
+<style>
+  :root {
+    --sky: #0077b6;
+    --ocean: #023e8a;
+    --sand: #f4a261;
+    --gold: #e9c46a;
+    --dark: #03071e;
+    --dark2: #0a1628;
+    --text: #e0eaff;
+    --muted: #8ba3c7;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', sans-serif; background: var(--dark); color: var(--text); }
+  a { color: var(--sand); text-decoration: none; }
+
+  /* NAV */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(3,7,30,0.95); backdrop-filter: blur(10px);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 40px; border-bottom: 1px solid rgba(0,119,182,0.3);
+  }
+  .logo { font-size: 1.4rem; font-weight: 800; color: var(--gold); }
+  .logo span { color: var(--sky); }
+  .nav-links { display: flex; gap: 28px; font-size: 0.9rem; color: var(--muted); }
+  .nav-links a { color: var(--muted); transition: color .2s; }
+  .nav-links a:hover { color: var(--sand); }
+  .nav-cta {
+    background: var(--sky); color: #fff; padding: 10px 22px;
+    border-radius: 6px; font-size: 0.9rem; font-weight: 600;
+    transition: background .2s;
+  }
+  .nav-cta:hover { background: var(--ocean); color: #fff; }
+
+  /* HERO */
+  .hero {
+    position: relative; min-height: 90vh;
+    display: flex; align-items: center;
+    background: linear-gradient(135deg, var(--dark) 0%, var(--ocean) 60%, var(--sky) 100%);
+    overflow: hidden; padding: 80px 40px;
+  }
+  .hero::before {
+    content: '✈';
+    position: absolute; right: -40px; top: 50%; transform: translateY(-50%);
+    font-size: 420px; opacity: 0.04; pointer-events: none;
+  }
+  .hero-content { max-width: 620px; z-index: 1; }
+  .hero-badge {
+    display: inline-block; background: rgba(233,196,106,0.15); border: 1px solid var(--gold);
+    color: var(--gold); padding: 6px 16px; border-radius: 20px; font-size: 0.8rem;
+    font-weight: 600; letter-spacing: 1px; margin-bottom: 24px;
+  }
+  .hero h1 {
+    font-size: clamp(2rem, 4vw, 3.4rem); line-height: 1.15; font-weight: 900;
+    margin-bottom: 20px;
+  }
+  .hero h1 span { color: var(--gold); }
+  .hero p { font-size: 1.15rem; color: var(--muted); line-height: 1.7; margin-bottom: 36px; }
+  .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--sand); color: var(--dark); padding: 14px 30px;
+    border-radius: 8px; font-weight: 700; font-size: 1rem; transition: transform .2s, background .2s;
+  }
+  .btn-primary:hover { background: var(--gold); color: var(--dark); transform: translateY(-2px); }
+  .btn-secondary {
+    border: 1px solid rgba(255,255,255,0.3); color: #fff; padding: 14px 30px;
+    border-radius: 8px; font-weight: 600; font-size: 1rem; transition: background .2s;
+  }
+  .btn-secondary:hover { background: rgba(255,255,255,0.08); }
+
+  /* STATS */
+  .stats {
+    background: var(--dark2); padding: 36px 40px;
+    display: flex; gap: 0; flex-wrap: wrap;
+    border-bottom: 1px solid rgba(0,119,182,0.2);
+  }
+  .stat-item { flex: 1; min-width: 140px; text-align: center; padding: 16px; }
+  .stat-item + .stat-item { border-left: 1px solid rgba(255,255,255,0.08); }
+  .stat-num { font-size: 2rem; font-weight: 900; color: var(--gold); display: block; }
+  .stat-label { font-size: 0.8rem; color: var(--muted); margin-top: 4px; }
+
+  /* SECTION BASE */
+  section { padding: 72px 40px; }
+  .section-tag { color: var(--sand); font-size: 0.8rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
+  .section-title { font-size: clamp(1.6rem, 3vw, 2.3rem); font-weight: 800; margin-bottom: 14px; }
+  .section-sub { color: var(--muted); max-width: 560px; line-height: 1.7; margin-bottom: 48px; }
+
+  /* POPULAR PACKAGES */
+  .packages { background: var(--dark); }
+  .pkg-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
+  .pkg-card {
+    background: var(--dark2); border-radius: 14px; overflow: hidden;
+    border: 1px solid rgba(0,119,182,0.2); transition: transform .2s, border-color .2s;
+  }
+  .pkg-card:hover { transform: translateY(-4px); border-color: var(--sky); }
+  .pkg-img {
+    height: 180px; display: flex; align-items: center; justify-content: center;
+    font-size: 4rem; position: relative;
+  }
+  .pkg-badge {
+    position: absolute; top: 12px; left: 12px;
+    background: var(--sand); color: var(--dark); font-size: 0.72rem;
+    font-weight: 700; padding: 4px 10px; border-radius: 12px;
+  }
+  .pkg-body { padding: 20px; }
+  .pkg-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 6px; }
+  .pkg-meta { color: var(--muted); font-size: 0.85rem; margin-bottom: 12px; }
+  .pkg-includes { font-size: 0.82rem; color: var(--muted); margin-bottom: 16px; line-height: 1.6; }
+  .pkg-footer { display: flex; align-items: center; justify-content: space-between; }
+  .pkg-price { font-size: 1.3rem; font-weight: 800; color: var(--gold); }
+  .pkg-price small { font-size: 0.75rem; color: var(--muted); font-weight: 400; }
+  .pkg-book {
+    background: var(--sky); color: #fff; padding: 9px 18px;
+    border-radius: 6px; font-size: 0.85rem; font-weight: 600;
+    cursor: pointer; border: none; transition: background .2s;
+  }
+  .pkg-book:hover { background: var(--ocean); }
+
+  /* DESTINATIONS */
+  .destinations { background: var(--dark2); }
+  .dest-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px; }
+  .dest-card {
+    background: rgba(0,119,182,0.12); border: 1px solid rgba(0,119,182,0.25);
+    border-radius: 12px; padding: 20px 16px; text-align: center;
+    transition: background .2s, transform .2s; cursor: pointer;
+  }
+  .dest-card:hover { background: rgba(0,119,182,0.25); transform: translateY(-3px); }
+  .dest-icon { font-size: 2.4rem; margin-bottom: 10px; display: block; }
+  .dest-name { font-weight: 700; font-size: 0.95rem; margin-bottom: 4px; }
+  .dest-count { font-size: 0.78rem; color: var(--muted); }
+
+  /* SERVICES */
+  .services { background: var(--dark); }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 24px; }
+  .svc-card {
+    background: var(--dark2); border: 1px solid rgba(0,119,182,0.2);
+    border-radius: 12px; padding: 28px 22px;
+    transition: border-color .2s;
+  }
+  .svc-card:hover { border-color: var(--sand); }
+  .svc-icon { font-size: 2.2rem; margin-bottom: 14px; }
+  .svc-title { font-weight: 700; margin-bottom: 8px; }
+  .svc-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
+
+  /* TEAM */
+  .team { background: var(--dark2); }
+  .team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 24px; }
+  .team-card {
+    background: var(--dark); border: 1px solid rgba(0,119,182,0.2);
+    border-radius: 12px; padding: 28px 20px; text-align: center;
+  }
+  .team-avatar {
+    width: 70px; height: 70px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--sky), var(--ocean));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.8rem; margin: 0 auto 14px;
+  }
+  .team-name { font-weight: 700; margin-bottom: 4px; }
+  .team-role { font-size: 0.82rem; color: var(--sand); margin-bottom: 8px; }
+  .team-exp { font-size: 0.8rem; color: var(--muted); }
+
+  /* REVIEWS */
+  .reviews { background: var(--dark); }
+  .review-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; }
+  .review-card {
+    background: var(--dark2); border: 1px solid rgba(0,119,182,0.15);
+    border-radius: 12px; padding: 24px;
+  }
+  .review-stars { color: var(--gold); margin-bottom: 12px; font-size: 1rem; }
+  .review-text { font-size: 0.9rem; color: var(--text); line-height: 1.7; margin-bottom: 16px; font-style: italic; }
+  .reviewer { display: flex; align-items: center; gap: 12px; }
+  .reviewer-icon {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--sky), var(--ocean));
+    display: flex; align-items: center; justify-content: center; font-size: 1.1rem;
+  }
+  .reviewer-name { font-weight: 700; font-size: 0.9rem; }
+  .reviewer-trip { font-size: 0.78rem; color: var(--muted); }
+
+  /* BOOKING FORM */
+  .booking { background: linear-gradient(135deg, var(--ocean), var(--dark)); }
+  .booking-inner {
+    max-width: 680px; margin: 0 auto;
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(0,119,182,0.3);
+    border-radius: 16px; padding: 44px 40px;
+  }
+  .booking h2 { font-size: 1.8rem; margin-bottom: 8px; }
+  .booking p { color: var(--muted); margin-bottom: 32px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+  .form-group { display: flex; flex-direction: column; gap: 6px; }
+  .form-group label { font-size: 0.82rem; color: var(--muted); font-weight: 600; }
+  .form-group input, .form-group select, .form-group textarea {
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(0,119,182,0.3);
+    border-radius: 8px; padding: 12px 14px; color: var(--text);
+    font-size: 0.9rem; outline: none; font-family: inherit; transition: border-color .2s;
+  }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    border-color: var(--sky);
+  }
+  .form-group select option { background: var(--dark2); }
+  .form-submit {
+    width: 100%; padding: 15px; background: var(--sand); color: var(--dark);
+    border: none; border-radius: 8px; font-size: 1rem; font-weight: 700;
+    cursor: pointer; transition: background .2s, transform .2s; margin-top: 8px;
+  }
+  .form-submit:hover { background: var(--gold); transform: translateY(-2px); }
+
+  /* FOOTER */
+  footer {
+    background: var(--dark2); padding: 36px 40px;
+    border-top: 1px solid rgba(0,119,182,0.2);
+    display: flex; flex-wrap: wrap; align-items: center;
+    justify-content: space-between; gap: 16px;
+  }
+  .footer-logo { font-size: 1.1rem; font-weight: 800; color: var(--gold); }
+  .footer-logo span { color: var(--sky); }
+  .footer-links { display: flex; gap: 20px; font-size: 0.85rem; color: var(--muted); }
+  .footer-links a:hover { color: var(--sand); }
+  .footer-note { font-size: 0.75rem; color: rgba(139,163,199,0.5); }
+  .powered {
+    font-size: 0.72rem; color: rgba(139,163,199,0.4); text-align: center;
+    padding: 12px; background: var(--dark); border-top: 1px solid rgba(255,255,255,0.04);
+  }
+
+  /* WHATSAPP FLOAT */
+  .wa-float {
+    position: fixed; bottom: 28px; right: 28px; z-index: 999;
+    width: 56px; height: 56px; background: #25d366; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.8rem; box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+    transition: transform .2s; cursor: pointer;
+  }
+  .wa-float:hover { transform: scale(1.12); }
+
+  @media (max-width: 680px) {
+    nav { padding: 14px 20px; }
+    .nav-links { display: none; }
+    section { padding: 52px 20px; }
+    .stats { padding: 24px 20px; }
+    .hero { padding: 60px 20px; min-height: 75vh; }
+    .form-row { grid-template-columns: 1fr; }
+    .booking-inner { padding: 28px 20px; }
+    footer { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">Wander<span>India</span> Travels</div>
+  <div class="nav-links">
+    <a href="#packages">Packages</a>
+    <a href="#destinations">Destinations</a>
+    <a href="#services">Services</a>
+    <a href="#team">Team</a>
+    <a href="#reviews">Reviews</a>
+  </div>
+  <a href="#booking" class="nav-cta">Plan Your Trip</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">✈ IATA Accredited · Est. 2009 · Pune</div>
+    <h1>Your Dream Trip,<br><span>Perfectly Planned.</span></h1>
+    <p>From Goa weekends to European adventures — WanderIndia Travels crafts personalised itineraries for every budget. 15 years. 4,800+ happy travellers. Zero stress.</p>
+    <div class="hero-btns">
+      <a href="#packages" class="btn-primary">Explore Packages</a>
+      <a href="#booking" class="btn-secondary">Free Consultation</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat-item"><span class="stat-num">4,800+</span><div class="stat-label">Happy Travellers</div></div>
+  <div class="stat-item"><span class="stat-num">15 Yrs</span><div class="stat-label">In Business</div></div>
+  <div class="stat-item"><span class="stat-num">120+</span><div class="stat-label">Destinations</div></div>
+  <div class="stat-item"><span class="stat-num">4.8★</span><div class="stat-label">Google Rating</div></div>
+  <div class="stat-item"><span class="stat-num">IATA</span><div class="stat-label">Accredited Agency</div></div>
+</div>
+
+<!-- PACKAGES -->
+<section class="packages" id="packages">
+  <div class="section-tag">Popular Packages</div>
+  <div class="section-title">Handpicked for Every Traveller</div>
+  <div class="section-sub">From mountain escapes to beach retreats — all-inclusive packages with guaranteed departures.</div>
+  <div class="pkg-grid">
+    <div class="pkg-card">
+      <div class="pkg-img" style="background: linear-gradient(135deg,#0077b6,#023e8a);">🏝️<span class="pkg-badge">Bestseller</span></div>
+      <div class="pkg-body">
+        <div class="pkg-title">Andaman Bliss — 5N/6D</div>
+        <div class="pkg-meta">🗓 Fixed departures every Friday · Group + Private</div>
+        <div class="pkg-includes">✓ Return flights from Pune · ✓ 4★ resort on Havelock · ✓ Scuba snorkelling · ✓ Neil Island day trip · ✓ All transfers</div>
+        <div class="pkg-footer">
+          <div class="pkg-price">₹28,500 <small>/person</small></div>
+          <button class="pkg-book">Book Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="pkg-card">
+      <div class="pkg-img" style="background: linear-gradient(135deg,#1b4332,#2d6a4f);">🏔️<span class="pkg-badge">Adventure</span></div>
+      <div class="pkg-body">
+        <div class="pkg-title">Manali–Spiti — 8N/9D</div>
+        <div class="pkg-meta">🗓 June–September batches · Small groups (max 12)</div>
+        <div class="pkg-includes">✓ Road trip from Pune · ✓ Tented camps + hotels · ✓ Chandratal Lake trek · ✓ Key Monastery · ✓ Expert guide</div>
+        <div class="pkg-footer">
+          <div class="pkg-price">₹22,999 <small>/person</small></div>
+          <button class="pkg-book">Book Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="pkg-card">
+      <div class="pkg-img" style="background: linear-gradient(135deg,#7b2d8b,#a855c8);">🌍<span class="pkg-badge">International</span></div>
+      <div class="pkg-body">
+        <div class="pkg-title">Thailand — 5N/6D</div>
+        <div class="pkg-meta">🗓 Bangkok + Pattaya · Flights from Pune</div>
+        <div class="pkg-includes">✓ Return flights + visa · ✓ 4★ hotels · ✓ Safari World · ✓ Pattaya city tour · ✓ Alcazar Show · ✓ Daily breakfast</div>
+        <div class="pkg-footer">
+          <div class="pkg-price">₹42,000 <small>/person</small></div>
+          <button class="pkg-book">Book Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="pkg-card">
+      <div class="pkg-img" style="background: linear-gradient(135deg,#e9692a,#f4a261);">🕌<span class="pkg-badge">Cultural</span></div>
+      <div class="pkg-body">
+        <div class="pkg-title">Rajasthan Royal — 6N/7D</div>
+        <div class="pkg-meta">🗓 October–March · Heritage Hotels available</div>
+        <div class="pkg-includes">✓ Jaipur + Udaipur + Jodhpur + Jaisalmer · ✓ AC transport · ✓ Camel safari · ✓ Palace dinner · ✓ Expert guide</div>
+        <div class="pkg-footer">
+          <div class="pkg-price">₹19,500 <small>/person</small></div>
+          <button class="pkg-book">Book Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="pkg-card">
+      <div class="pkg-img" style="background: linear-gradient(135deg,#1565c0,#42a5f5);">🏛️<span class="pkg-badge">Europe</span></div>
+      <div class="pkg-body">
+        <div class="pkg-title">Europe Explorer — 10N/11D</div>
+        <div class="pkg-meta">🗓 Paris · Switzerland · Amsterdam · Prague</div>
+        <div class="pkg-includes">✓ International flights + Schengen visa · ✓ 4★ hotels central locations · ✓ Euro Rail pass · ✓ Guided city tours · ✓ Daily breakfast</div>
+        <div class="pkg-footer">
+          <div class="pkg-price">₹1,35,000 <small>/person</small></div>
+          <button class="pkg-book">Book Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="pkg-card">
+      <div class="pkg-img" style="background: linear-gradient(135deg,#00695c,#26a69a);">🧘<span class="pkg-badge">Wellness</span></div>
+      <div class="pkg-body">
+        <div class="pkg-title">Kerala Retreat — 4N/5D</div>
+        <div class="pkg-meta">🗓 Alleppey houseboat + Munnar + Kovalam</div>
+        <div class="pkg-includes">✓ Houseboat overnight stay · ✓ Ayurvedic spa session · ✓ Periyar wildlife tour · ✓ Spice plantation · ✓ All meals</div>
+        <div class="pkg-footer">
+          <div class="pkg-price">₹16,800 <small>/person</small></div>
+          <button class="pkg-book">Book Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DESTINATIONS -->
+<section class="destinations" id="destinations">
+  <div class="section-tag">We Cover</div>
+  <div class="section-title">120+ Destinations</div>
+  <div class="section-sub">Domestic gems, international adventures, and everything in between.</div>
+  <div class="dest-grid">
+    <div class="dest-card"><span class="dest-icon">🏝️</span><div class="dest-name">Goa</div><div class="dest-count">12 packages</div></div>
+    <div class="dest-card"><span class="dest-icon">🏔️</span><div class="dest-name">Manali</div><div class="dest-count">8 packages</div></div>
+    <div class="dest-card"><span class="dest-icon">🌿</span><div class="dest-name">Kerala</div><div class="dest-count">10 packages</div></div>
+    <div class="dest-card"><span class="dest-icon">🕌</span><div class="dest-name">Rajasthan</div><div class="dest-count">9 packages</div></div>
+    <div class="dest-card"><span class="dest-icon">🏞️</span><div class="dest-name">Ladakh</div><div class="dest-count">6 packages</div></div>
+    <div class="dest-card"><span class="dest-icon">🌸</span><div class="dest-name">Sikkim</div><div class="dest-count">5 packages</div></div>
+    <div class="dest-card"><span class="dest-icon">🌊</span><div class="dest-name">Andaman</div><div class="dest-count">7 packages</div></div>
+    <div class="dest-card"><span class="dest-icon">🏛️</span><div class="dest-name">Europe</div><div class="dest-count">15 tours</div></div>
+    <div class="dest-card"><span class="dest-icon">🌏</span><div class="dest-name">Thailand</div><div class="dest-count">8 packages</div></div>
+    <div class="dest-card"><span class="dest-icon">🗺️</span><div class="dest-name">Dubai</div><div class="dest-count">6 packages</div></div>
+    <div class="dest-card"><span class="dest-icon">🌺</span><div class="dest-name">Bali</div><div class="dest-count">5 packages</div></div>
+    <div class="dest-card"><span class="dest-icon">🗽</span><div class="dest-name">USA</div><div class="dest-count">4 tours</div></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-tag">What We Offer</div>
+  <div class="section-title">End-to-End Travel Services</div>
+  <div class="section-sub">From visa to vehicle — we handle every detail so you travel worry-free.</div>
+  <div class="services-grid">
+    <div class="svc-card"><div class="svc-icon">✈️</div><div class="svc-title">Flight Bookings</div><div class="svc-desc">Domestic & international. Best fares, instant confirmation, 24/7 changes & cancellations managed.</div></div>
+    <div class="svc-card"><div class="svc-icon">🏨</div><div class="svc-title">Hotel Reservations</div><div class="svc-desc">2★ to 5★, boutique resorts to heritage properties. Special rates for WanderIndia clients.</div></div>
+    <div class="svc-card"><div class="svc-icon">🛂</div><div class="svc-title">Visa Assistance</div><div class="svc-desc">Schengen, UAE, USA, Thailand, Singapore, Australia — full documentation support & submission.</div></div>
+    <div class="svc-card"><div class="svc-icon">🏢</div><div class="svc-title">Corporate Travel</div><div class="svc-desc">Managed travel programs for SMEs and MNCs. Dedicated account manager, GST invoices, consolidated billing.</div></div>
+    <div class="svc-card"><div class="svc-icon">💍</div><div class="svc-title">Honeymoon Packages</div><div class="svc-desc">Surprise decorations, candlelit dinners, couple spa sessions — every detail customised for newlyweds.</div></div>
+    <div class="svc-card"><div class="svc-icon">👴</div><div class="svc-title">Senior Citizen Tours</div><div class="svc-desc">Slow-paced, comfort-first tours. Medical kit, ramps, no-rush itineraries, doctor tie-ups at destinations.</div></div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team" id="team">
+  <div class="section-tag">Our Experts</div>
+  <div class="section-title">Travel Specialists Who've Been There</div>
+  <div class="section-sub">Every planner has personally travelled their specialty region. No guesswork.</div>
+  <div class="team-grid">
+    <div class="team-card">
+      <div class="team-avatar">👨‍✈️</div>
+      <div class="team-name">Rajesh Kulkarni</div>
+      <div class="team-role">Founder & Managing Director</div>
+      <div class="team-exp">15 yrs · 60+ countries visited · IATA certified</div>
+    </div>
+    <div class="team-card">
+      <div class="team-avatar">👩‍💼</div>
+      <div class="team-name">Priya Sharma</div>
+      <div class="team-role">Europe & International Lead</div>
+      <div class="team-exp">9 yrs · Schengen visa specialist · 35 countries</div>
+    </div>
+    <div class="team-card">
+      <div class="team-avatar">👨‍💼</div>
+      <div class="team-name">Siddharth Pawar</div>
+      <div class="team-role">Domestic Adventures Head</div>
+      <div class="team-exp">7 yrs · Himalayan trek expert · 200+ groups</div>
+    </div>
+    <div class="team-card">
+      <div class="team-avatar">👩‍💻</div>
+      <div class="team-name">Anita Joshi</div>
+      <div class="team-role">Corporate Travel Manager</div>
+      <div class="team-exp">6 yrs · 50+ corporate clients · GST specialist</div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="section-tag">Traveller Reviews</div>
+  <div class="section-title">4.8★ on Google · 400+ Reviews</div>
+  <div class="section-sub">Real stories from real travellers — unedited.</div>
+  <div class="review-grid">
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-text">"WanderIndia planned our Andaman honeymoon flawlessly. Rose petals in the room, surprise cake, private snorkelling slot — I teared up. Every rupee well spent."</div>
+      <div class="reviewer">
+        <div class="reviewer-icon">💑</div>
+        <div><div class="reviewer-name">Neha & Karan Mehta</div><div class="reviewer-trip">Andaman Honeymoon · Feb 2025</div></div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-text">"As a senior traveller, I was nervous about the Spiti road trip. Rajesh personally arranged a doctor consultation point at Kaza and the slow itinerary was perfect. Will travel with them again."</div>
+      <div class="reviewer">
+        <div class="reviewer-icon">👴</div>
+        <div><div class="reviewer-name">Suresh Desai</div><div class="reviewer-trip">Spiti Valley · Sep 2024</div></div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-text">"Europe tour for 12 of us — Schengen visa, 4 countries, 11 days, zero issues. Our guide Priya was phenomenal. The Paris dinner was the highlight. Highly recommend WanderIndia."</div>
+      <div class="reviewer">
+        <div class="reviewer-icon">👨‍👩‍👧</div>
+        <div><div class="reviewer-name">The Joshi Family (12 pax)</div><div class="reviewer-trip">Europe Explorer · Dec 2024</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING FORM -->
+<section class="booking" id="booking">
+  <div class="booking-inner">
+    <h2>Plan Your Next Trip</h2>
+    <p>Tell us where you want to go — we'll build the perfect itinerary within 24 hours. Free consultation, zero obligation.</p>
+    <div class="form-row">
+      <div class="form-group"><label>Full Name</label><input type="text" placeholder="Your name"></div>
+      <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="+91 98765 XXXXX"></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Destination Type</label>
+        <select>
+          <option value="">Select destination type</option>
+          <option>Domestic — Hill Station</option>
+          <option>Domestic — Beach</option>
+          <option>Domestic — Heritage/Culture</option>
+          <option>Domestic — Adventure</option>
+          <option>International — SE Asia</option>
+          <option>International — Europe</option>
+          <option>International — Middle East</option>
+          <option>International — USA/Canada</option>
+          <option>Not sure — Help me decide!</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Number of Travellers</label>
+        <select>
+          <option>Solo (1)</option>
+          <option>Couple (2)</option>
+          <option>Family (3–5)</option>
+          <option>Group (6–12)</option>
+          <option>Corporate (12+)</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Preferred Travel Month</label>
+        <select>
+          <option value="">Select month</option>
+          <option>January</option><option>February</option><option>March</option>
+          <option>April</option><option>May</option><option>June</option>
+          <option>July</option><option>August</option><option>September</option>
+          <option>October</option><option>November</option><option>December</option>
+          <option>Flexible</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Budget per Person (Approx.)</label>
+        <select>
+          <option value="">Select budget range</option>
+          <option>Under ₹15,000</option>
+          <option>₹15,000 – ₹30,000</option>
+          <option>₹30,000 – ₹60,000</option>
+          <option>₹60,000 – ₹1,20,000</option>
+          <option>Above ₹1,20,000 (Premium)</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group" style="margin-bottom:16px">
+      <label>Anything Special? (Honeymoon, Anniversary, Adventure, Senior-friendly…)</label>
+      <textarea rows="3" placeholder="Tell us what matters most for this trip..."></textarea>
+    </div>
+    <button class="form-submit">📩 Send Enquiry — Get Itinerary in 24h</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-logo">Wander<span>India</span> Travels</div>
+    <div style="font-size:0.8rem;color:var(--muted);margin-top:6px;">IATA Accredited · Shivaji Nagar, Pune · Est. 2009</div>
+  </div>
+  <div class="footer-links">
+    <a href="#packages">Packages</a>
+    <a href="#services">Services</a>
+    <a href="#team">Team</a>
+    <a href="#booking">Contact</a>
+  </div>
+  <div class="footer-note">© 2025 WanderIndia Travels. All rights reserved.</div>
+</footer>
+<div class="powered">Powered by Invictus AI · AI-Powered Websites for Local Businesses</div>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/919876500000" class="wa-float" title="Chat on WhatsApp">💬</a>
+
+</body>
+</html>
