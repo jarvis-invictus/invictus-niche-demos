@@ -3,628 +3,459 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DreamDays Wedding Planners — Pune | Invictus AI Demo</title>
+<title>Bright Smile Dental Clinic — Kothrud, Pune</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  * { margin:0; padding:0; box-sizing:border-box; }
-  :root {
-    --rose: #c8707a;
-    --gold: #c9a84c;
-    --cream: #fdf8f2;
-    --dark: #1a1018;
-    --text: #3a2a36;
-    --card: #fff;
-    --border: #ede4d8;
-  }
-  body { font-family:'Segoe UI',sans-serif; background:var(--cream); color:var(--text); }
-  
-  /* NAV */
-  nav {
-    position:fixed; top:0; width:100%; background:rgba(26,16,24,0.95);
-    padding:0 5%; display:flex; justify-content:space-between; align-items:center;
-    height:70px; z-index:1000; backdrop-filter:blur(10px);
-  }
-  .logo { font-size:1.4rem; color:#fff; font-weight:700; letter-spacing:1px; }
-  .logo span { color:var(--gold); }
-  .nav-links a { color:#ddd; text-decoration:none; margin-left:24px; font-size:0.9rem; transition:color .2s; }
-  .nav-links a:hover { color:var(--gold); }
-  .nav-cta {
-    background:var(--rose); color:#fff; padding:8px 20px; border-radius:20px;
-    text-decoration:none; font-weight:600; font-size:0.85rem; margin-left:24px;
-    transition:background .2s;
-  }
-  .nav-cta:hover { background:#b05a64; }
-
-  /* HERO */
-  .hero {
-    min-height:100vh; position:relative; display:flex; align-items:center;
-    background: linear-gradient(135deg, #1a1018 0%, #2d1a2e 50%, #1a1018 100%);
-    overflow:hidden; padding:0 5%;
-  }
-  .hero-bg {
-    position:absolute; inset:0; opacity:0.18;
-    background: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='10' cy='10' r='1.5' fill='%23c9a84c'/%3E%3Ccircle cx='30' cy='20' r='1' fill='%23c8707a'/%3E%3Ccircle cx='50' cy='10' r='1.5' fill='%23c9a84c'/%3E%3Ccircle cx='20' cy='40' r='1' fill='%23c8707a'/%3E%3Ccircle cx='40' cy='50' r='1.5' fill='%23c9a84c'/%3E%3Ccircle cx='10' cy='55' r='1' fill='%23c8707a'/%3E%3C/svg%3E") repeat;
-  }
-  .hero-content { position:relative; max-width:700px; }
-  .hero-badge {
-    display:inline-block; background:rgba(201,168,76,0.2); border:1px solid var(--gold);
-    color:var(--gold); padding:6px 18px; border-radius:20px; font-size:0.8rem;
-    letter-spacing:2px; text-transform:uppercase; margin-bottom:24px;
-  }
-  .hero h1 { font-size:3.5rem; color:#fff; line-height:1.15; margin-bottom:20px; font-weight:800; }
-  .hero h1 span { color:var(--rose); }
-  .hero p { font-size:1.15rem; color:#bbb; line-height:1.7; margin-bottom:36px; max-width:520px; }
-  .hero-btns { display:flex; gap:16px; flex-wrap:wrap; }
-  .btn-primary {
-    background:var(--rose); color:#fff; padding:14px 32px; border-radius:30px;
-    text-decoration:none; font-weight:700; font-size:1rem; transition:all .2s;
-    box-shadow:0 4px 20px rgba(200,112,122,0.4);
-  }
-  .btn-primary:hover { transform:translateY(-2px); box-shadow:0 8px 28px rgba(200,112,122,0.5); }
-  .btn-secondary {
-    background:transparent; color:#fff; padding:14px 32px; border-radius:30px;
-    text-decoration:none; font-weight:600; font-size:1rem;
-    border:2px solid rgba(255,255,255,0.3); transition:all .2s;
-  }
-  .btn-secondary:hover { border-color:var(--gold); color:var(--gold); }
-  .hero-stats { display:flex; gap:40px; margin-top:50px; flex-wrap:wrap; }
-  .stat { text-align:center; }
-  .stat-num { font-size:2rem; font-weight:800; color:var(--gold); }
-  .stat-label { font-size:0.75rem; color:#999; text-transform:uppercase; letter-spacing:1px; }
-
-  /* PROOF TICKER */
-  .proof-bar { background:var(--gold); padding:14px 0; overflow:hidden; }
-  .ticker { display:flex; gap:60px; animation:ticker 25s linear infinite; white-space:nowrap; }
-  .ticker span { font-size:0.85rem; font-weight:600; color:var(--dark); padding:0 20px; }
-  @keyframes ticker { from{transform:translateX(0)} to{transform:translateX(-50%)} }
-
-  /* SECTIONS */
-  section { padding:90px 5%; }
-  .section-tag {
-    display:inline-block; color:var(--rose); font-size:0.8rem; font-weight:700;
-    text-transform:uppercase; letter-spacing:2px; margin-bottom:12px;
-  }
-  h2 { font-size:2.4rem; color:var(--dark); line-height:1.2; margin-bottom:20px; }
-  h2 span { color:var(--rose); }
-  .subtitle { font-size:1.05rem; color:#666; line-height:1.7; max-width:560px; margin-bottom:48px; }
-  .centered { text-align:center; }
-  .centered .subtitle { margin:0 auto 48px; }
-
-  /* PACKAGES */
-  .packages-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:28px; }
-  .package-card {
-    background:var(--card); border-radius:16px; overflow:hidden;
-    border:1px solid var(--border); transition:transform .2s, box-shadow .2s;
-  }
-  .package-card:hover { transform:translateY(-6px); box-shadow:0 16px 40px rgba(0,0,0,0.1); }
-  .package-card.featured { border-color:var(--rose); box-shadow:0 8px 30px rgba(200,112,122,0.15); }
-  .pkg-header { padding:28px 28px 24px; background:var(--dark); position:relative; }
-  .package-card.featured .pkg-header { background:linear-gradient(135deg,var(--rose),#b05a64); }
-  .pkg-badge {
-    position:absolute; top:16px; right:16px; background:var(--gold);
-    color:var(--dark); padding:4px 12px; border-radius:12px; font-size:0.7rem; font-weight:700;
-  }
-  .pkg-name { font-size:1.3rem; font-weight:800; color:#fff; margin-bottom:6px; }
-  .pkg-tagline { font-size:0.85rem; color:rgba(255,255,255,0.7); margin-bottom:16px; }
-  .pkg-price { font-size:2rem; font-weight:900; color:var(--gold); }
-  .pkg-price span { font-size:0.9rem; font-weight:400; color:rgba(255,255,255,0.6); }
-  .pkg-body { padding:24px 28px; }
-  .pkg-features { list-style:none; margin-bottom:28px; }
-  .pkg-features li { padding:8px 0; border-bottom:1px solid var(--border); font-size:0.9rem; color:#555; display:flex; align-items:center; gap:10px; }
-  .pkg-features li:last-child { border-bottom:none; }
-  .pkg-features li::before { content:"✓"; color:var(--rose); font-weight:700; }
-  .pkg-btn {
-    display:block; text-align:center; padding:12px; background:var(--rose);
-    color:#fff; border-radius:8px; text-decoration:none; font-weight:700;
-    transition:background .2s;
-  }
-  .pkg-btn:hover { background:#b05a64; }
-
-  /* SERVICES */
-  .services-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:24px; }
-  .service-card {
-    background:var(--card); border-radius:14px; padding:32px 24px;
-    border:1px solid var(--border); transition:all .2s; text-align:center;
-  }
-  .service-card:hover { border-color:var(--rose); transform:translateY(-4px); box-shadow:0 12px 30px rgba(0,0,0,0.08); }
-  .service-icon { font-size:2.5rem; margin-bottom:16px; }
-  .service-title { font-size:1.1rem; font-weight:700; color:var(--dark); margin-bottom:10px; }
-  .service-desc { font-size:0.85rem; color:#777; line-height:1.6; }
-
-  /* GALLERY */
-  .gallery-strip { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:16px; }
-  .gallery-item {
-    aspect-ratio:4/3; border-radius:12px; overflow:hidden;
-    background:linear-gradient(135deg, #2d1a2e, #4a2a40);
-    display:flex; align-items:center; justify-content:center;
-    font-size:2.5rem; cursor:pointer; transition:transform .2s;
-  }
-  .gallery-item:hover { transform:scale(1.04); }
-  .gallery-item:nth-child(1) { background:linear-gradient(135deg,#c8707a,#b05a64); }
-  .gallery-item:nth-child(2) { background:linear-gradient(135deg,#2d1a2e,#6b3060); }
-  .gallery-item:nth-child(3) { background:linear-gradient(135deg,#c9a84c,#a8872e); }
-  .gallery-item:nth-child(4) { background:linear-gradient(135deg,#4a2a40,#2d1a2e); }
-  .gallery-item:nth-child(5) { background:linear-gradient(135deg,#c8707a,#9b3a66); }
-  .gallery-item:nth-child(6) { background:linear-gradient(135deg,#c9a84c,#c8707a); }
-
-  /* TEAM */
-  .team-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:28px; }
-  .team-card {
-    background:var(--card); border-radius:16px; padding:32px 20px; text-align:center;
-    border:1px solid var(--border); transition:all .2s;
-  }
-  .team-card:hover { border-color:var(--rose); transform:translateY(-4px); }
-  .team-avatar {
-    width:80px; height:80px; border-radius:50%; margin:0 auto 16px;
-    display:flex; align-items:center; justify-content:center; font-size:2rem;
-    background:linear-gradient(135deg,var(--rose),var(--gold));
-  }
-  .team-name { font-size:1.1rem; font-weight:700; color:var(--dark); margin-bottom:4px; }
-  .team-role { font-size:0.8rem; color:var(--rose); font-weight:600; margin-bottom:10px; text-transform:uppercase; letter-spacing:1px; }
-  .team-bio { font-size:0.85rem; color:#666; line-height:1.6; }
-
-  /* TESTIMONIALS */
-  .testimonials-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:24px; }
-  .testimonial-card {
-    background:var(--card); border-radius:14px; padding:28px;
-    border:1px solid var(--border); position:relative;
-  }
-  .testimonial-card::before {
-    content:'"'; font-size:4rem; color:var(--rose); opacity:0.2;
-    position:absolute; top:10px; left:20px; font-family:Georgia; line-height:1;
-  }
-  .testimonial-text { font-size:0.95rem; color:#555; line-height:1.7; margin-bottom:20px; padding-top:10px; font-style:italic; }
-  .testimonial-author { font-weight:700; color:var(--dark); font-size:0.9rem; }
-  .testimonial-wedding { font-size:0.8rem; color:var(--rose); }
-  .stars { color:var(--gold); font-size:0.9rem; margin-bottom:8px; }
-
-  /* PROCESS */
-  .process-steps { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:28px; counter-reset:step; }
-  .step {
-    text-align:center; padding:28px 20px; background:var(--card);
-    border-radius:14px; border:1px solid var(--border); position:relative;
-  }
-  .step-num {
-    width:48px; height:48px; border-radius:50%; background:var(--rose);
-    color:#fff; font-size:1.3rem; font-weight:800; margin:0 auto 16px;
-    display:flex; align-items:center; justify-content:center;
-  }
-  .step-title { font-weight:700; color:var(--dark); margin-bottom:8px; }
-  .step-desc { font-size:0.85rem; color:#777; line-height:1.6; }
-
-  /* CONTACT */
-  .contact-section { background:linear-gradient(135deg, #1a1018, #2d1a2e); }
-  .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:start; }
-  @media(max-width:768px) { .contact-grid { grid-template-columns:1fr; } }
-  .contact-info h2, .contact-info p { color:#fff; }
-  .contact-info p { color:rgba(255,255,255,0.7); margin-bottom:32px; }
-  .contact-detail { display:flex; align-items:center; gap:14px; margin-bottom:20px; }
-  .contact-icon { width:44px; height:44px; background:rgba(200,112,122,0.2); border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:1.2rem; flex-shrink:0; }
-  .contact-text { color:#ccc; font-size:0.95rem; }
-  .contact-text strong { color:#fff; display:block; font-size:0.85rem; margin-bottom:2px; }
-  .contact-form { background:rgba(255,255,255,0.05); border-radius:16px; padding:36px; border:1px solid rgba(255,255,255,0.1); }
-  .form-group { margin-bottom:18px; }
-  .form-row { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
-  label { display:block; font-size:0.85rem; color:rgba(255,255,255,0.7); margin-bottom:6px; }
-  input, select, textarea {
-    width:100%; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15);
-    border-radius:8px; padding:12px 16px; color:#fff; font-size:0.9rem; transition:border .2s;
-  }
-  input:focus, select:focus, textarea:focus { outline:none; border-color:var(--rose); }
-  input::placeholder, textarea::placeholder { color:rgba(255,255,255,0.35); }
-  select option { background:#2d1a2e; }
-  textarea { resize:vertical; min-height:90px; }
-  .form-submit {
-    width:100%; background:var(--rose); color:#fff; border:none; padding:14px;
-    border-radius:8px; font-size:1rem; font-weight:700; cursor:pointer; transition:all .2s;
-    box-shadow:0 4px 20px rgba(200,112,122,0.3);
-  }
-  .form-submit:hover { background:#b05a64; transform:translateY(-1px); }
-
-  /* FOOTER */
-  footer { background:var(--dark); padding:50px 5% 30px; text-align:center; }
-  .footer-logo { font-size:1.4rem; color:#fff; font-weight:700; margin-bottom:16px; }
-  .footer-logo span { color:var(--gold); }
-  .footer-links { margin-bottom:20px; }
-  .footer-links a { color:#aaa; text-decoration:none; margin:0 14px; font-size:0.85rem; }
-  .footer-links a:hover { color:var(--gold); }
-  .footer-copy { color:#666; font-size:0.8rem; }
-  .powered { color:#555; font-size:0.75rem; margin-top:10px; }
-  .powered span { color:var(--rose); }
-
-  /* WHATSAPP FLOAT */
-  .whatsapp-float {
-    position:fixed; bottom:28px; right:28px; width:56px; height:56px;
-    background:#25d366; border-radius:50%; display:flex; align-items:center;
-    justify-content:center; font-size:1.6rem; text-decoration:none;
-    box-shadow:0 4px 20px rgba(37,211,102,0.4); z-index:999; transition:all .2s;
-  }
-  .whatsapp-float:hover { transform:scale(1.1); box-shadow:0 8px 28px rgba(37,211,102,0.5); }
-
-  /* BANNER */
-  .invictus-banner {
-    position:fixed; top:70px; left:0; right:0; background:rgba(26,16,24,0.95);
-    border-bottom:1px solid rgba(200,112,122,0.3); padding:8px 5%;
-    text-align:center; font-size:0.78rem; color:rgba(255,255,255,0.6); z-index:999;
-  }
-  .invictus-banner strong { color:var(--rose); }
-
-  @media(max-width:768px) {
-    .hero h1 { font-size:2.2rem; }
-    .nav-links { display:none; }
-    .form-row { grid-template-columns:1fr; }
-    .hero-stats { gap:24px; }
-  }
+  body { font-family: 'Inter', sans-serif; }
+  h1,h2,h3,h4 { font-family: 'Poppins', sans-serif; }
+  .teal { color: #0D7C7C; }
+  .bg-teal { background-color: #0D7C7C; }
+  .gold { color: #F4A832; }
+  .bg-light-teal { background-color: #E8F5F5; }
+  .btn-teal { background-color: #0D7C7C; color: white; padding: 12px 28px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+  .btn-teal:hover { background-color: #0a6b6b; transform: translateY(-1px); }
+  .btn-outline { border: 2px solid #0D7C7C; color: #0D7C7C; padding: 10px 26px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+  .btn-outline:hover { background-color: #0D7C7C; color: white; }
+  .card { background: white; border-radius: 12px; padding: 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); transition: all 0.2s; }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(13,124,124,0.15); }
+  .hero-bg { background: linear-gradient(135deg, #f0fafa 0%, #e8f5f5 50%, #d4eef0 100%); }
+  nav { position: sticky; top: 0; z-index: 100; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .stat-num { font-family: 'Poppins', sans-serif; font-size: 2.5rem; font-weight: 800; color: #0D7C7C; }
+  .section-title { font-size: 2rem; font-weight: 700; color: #1A1A1A; margin-bottom: 0.5rem; }
+  .section-sub { color: #666; font-size: 1.1rem; margin-bottom: 3rem; }
+  footer { background: #1A1A1A; color: #ccc; }
 </style>
+<link rel="canonical" href="https://invictus-ai.in/demos/wedding.html">
+<meta property="og:image" content="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1200&q=80">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What wedding planning services do you offer in Pune?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We handle everything from venue selection and decor to catering, entertainment, photography, and guest management. Whether it is a traditional Maharashtrian wedding in Pune or a destination celebration in Lonavala, our team manages all details so you can enjoy your special day stress-free."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a wedding planner cost in Pune?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our planning fees start at ₹75,000 for day-of coordination and go up to ₹5 lakh for full-service planning of multi-day weddings. The fee covers our planning and management services — venue, vendors, and decor costs are separate and customized to your budget."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you suggest good wedding venues in and around Pune?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We have partnerships with over 50 venues across Pune including banquet halls in Koregaon Park, farmhouses near Mulshi, resorts in Lonavala, and heritage properties in Panshet. We match venues to your guest count, budget, and wedding style for the perfect setting."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How far in advance should we book wedding planning services?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We recommend booking six to twelve months before your wedding date, especially for the popular November to February season. However, we have successfully planned beautiful weddings with just three months notice. Earlier booking gives more venue choices and better vendor availability."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you handle small intimate weddings and court marriage arrangements?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we love planning intimate weddings for 50 to 100 guests just as much as grand celebrations. We also help with court marriage arrangements, documentation, and small reception planning. Many young Pune couples choose our boutique packages for elegant, meaningful celebrations."
+      }
+    }
+  ]
+}
+</script>
 </head>
-<body>
+<body class="bg-white text-gray-900">
 
-<!-- Demo Banner -->
-<div class="invictus-banner">
-  🎯 Demo site by <strong>Invictus AI</strong> — Want a professional wedding planner website like this? <strong>DM us on WhatsApp</strong>
-</div>
-
-<!-- NAV -->
+<!-- NAVIGATION -->
 <nav>
-  <div class="logo">Dream<span>Days</span></div>
-  <div class="nav-links">
-    <a href="#packages">Packages</a>
-    <a href="#services">Services</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#team">Our Team</a>
-    <a href="#reviews">Reviews</a>
-    <a href="#contact">Contact</a>
+  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-2">
+      <span class="text-2xl">🦷</span>
+      <div>
+        <div class="font-bold text-lg teal leading-tight">Bright Smile Dental</div>
+        <div class="text-xs text-gray-500">Kothrud, Pune</div>
+      </div>
+    </div>
+    <div class="hidden md:flex gap-8 text-sm font-medium text-gray-600">
+      <a href="#services" class="hover:text-teal transition-colors">Services</a>
+      <a href="#about" class="hover:text-teal transition-colors">About</a>
+      <a href="#testimonials" class="hover:text-teal transition-colors">Patients</a>
+      <a href="#contact" class="hover:text-teal transition-colors">Contact</a>
+    </div>
+    <a href="#book" class="btn-teal text-sm hidden md:block">Book Appointment →</a>
   </div>
-  <a href="#contact" class="nav-cta">Plan My Wedding</a>
 </nav>
 
 <!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-bg"></div>
-  <div class="hero-content">
-    <div class="hero-badge">✦ Pune's Most Trusted Wedding Planners</div>
-    <h1>Your Dream Wedding,<br><span>Perfectly Planned</span></h1>
-    <p>From intimate garden ceremonies to grand banquet celebrations — DreamDays handles every detail so you can live every moment. Serving Pune since 2015.</p>
-    <div class="hero-btns">
-      <a href="#contact" class="btn-primary">💍 Start Planning</a>
-      <a href="#gallery" class="btn-secondary">View Our Work</a>
-    </div>
-    <div class="hero-stats">
-      <div class="stat"><div class="stat-num">520+</div><div class="stat-label">Weddings Planned</div></div>
-      <div class="stat"><div class="stat-num">9</div><div class="stat-label">Years Experience</div></div>
-      <div class="stat"><div class="stat-num">98%</div><div class="stat-label">Happy Couples</div></div>
-      <div class="stat"><div class="stat-num">₹8L–₹80L</div><div class="stat-label">Budget Range</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- PROOF TICKER -->
-<div class="proof-bar">
-  <div class="ticker">
-    <span>⭐ 4.9/5 on Google Maps</span>
-    <span>💒 520+ Weddings Planned in Pune</span>
-    <span>🌸 Marathi, Hindu, Muslim & Christian Weddings</span>
-    <span>🏨 Empanelled with 35+ Pune Banquet Halls</span>
-    <span>📸 Exclusive Vendor Network (Photo/Catering/Decor)</span>
-    <span>⭐ 4.9/5 on Google Maps</span>
-    <span>💒 520+ Weddings Planned in Pune</span>
-    <span>🌸 Marathi, Hindu, Muslim & Christian Weddings</span>
-    <span>🏨 Empanelled with 35+ Pune Banquet Halls</span>
-    <span>📸 Exclusive Vendor Network (Photo/Catering/Decor)</span>
-  </div>
-</div>
-
-<!-- PACKAGES -->
-<section id="packages">
-  <div class="centered">
-    <span class="section-tag">Our Packages</span>
-    <h2>Choose Your <span>Perfect Plan</span></h2>
-    <p class="subtitle">All-inclusive packages designed for every budget and vision. Transparent pricing, no hidden costs.</p>
-  </div>
-  <div class="packages-grid">
-    <div class="package-card">
-      <div class="pkg-header">
-        <div class="pkg-name">Silver Bliss</div>
-        <div class="pkg-tagline">Elegant & Intimate</div>
-        <div class="pkg-price">₹1,20,000 <span>onwards</span></div>
+<section class="hero-bg py-20 px-4">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+    <div class="flex-1" id="hero-text">
+      <div class="inline-block bg-teal text-white text-xs font-semibold px-3 py-1 rounded-full mb-6 gold-text" style="background:#F4A832; color:#1a1a1a;">
+        ✓ Trusted by 2,000+ families in Kothrud
       </div>
-      <div class="pkg-body">
-        <ul class="pkg-features">
-          <li>Venue shortlisting (5 options)</li>
-          <li>Decoration (Mandap + Stage)</li>
-          <li>Photography (8 hrs, 1 shooter)</li>
-          <li>Catering coordination (up to 200 guests)</li>
-          <li>Day-of coordination (1 coordinator)</li>
-          <li>Basic invitation design</li>
-          <li>Priest / Kazi coordination</li>
-        </ul>
-        <a href="#contact" class="pkg-btn">Book Silver Bliss</a>
+      <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
+        Your Smile Deserves<br><span class="teal">the Best Care</span>
+      </h1>
+      <p class="text-lg text-gray-600 mb-8 max-w-lg">
+        Advanced dental treatments in Kothrud, Pune. Painless procedures, modern technology, and a team that genuinely cares about your smile.
+      </p>
+      <div class="flex flex-wrap gap-4 mb-10">
+        <a href="#book" class="btn-teal">Book Appointment →</a>
+        <a href="tel:02012345678" class="btn-outline">📞 020-1234-5678</a>
+      </div>
+      <div class="flex flex-wrap gap-6 text-sm text-gray-600">
+        <span>✅ 15+ Years Experience</span>
+        <span>✅ 2,000+ Patients</span>
+        <span>✅ Painless Treatments</span>
+        <span>✅ Mon–Sat: 10AM–8PM</span>
       </div>
     </div>
-    <div class="package-card featured">
-      <div class="pkg-header">
-        <div class="pkg-badge">Most Popular</div>
-        <div class="pkg-name">Golden Dream</div>
-        <div class="pkg-tagline">Full-Service Experience</div>
-        <div class="pkg-price">₹3,50,000 <span>onwards</span></div>
-      </div>
-      <div class="pkg-body">
-        <ul class="pkg-features">
-          <li>Venue booking + catering (up to 500)</li>
-          <li>Mehendi, Haldi & Sangeet decor</li>
-          <li>Photography + Videography (2 days)</li>
-          <li>Bridal & groom makeup</li>
-          <li>Invitation suite (digital + print)</li>
-          <li>DJ + sound system</li>
-          <li>Dedicated 2-coordinator team</li>
-          <li>Guest accommodation assistance</li>
-          <li>Entertainment (choreographer optional)</li>
-        </ul>
-        <a href="#contact" class="pkg-btn">Book Golden Dream</a>
-      </div>
-    </div>
-    <div class="package-card">
-      <div class="pkg-header">
-        <div class="pkg-name">Royal Extravaganza</div>
-        <div class="pkg-tagline">Grand Celebration</div>
-        <div class="pkg-price">₹8,00,000 <span>onwards</span></div>
-      </div>
-      <div class="pkg-body">
-        <ul class="pkg-features">
-          <li>Premium venue (5-star + farmhouse options)</li>
-          <li>Multi-day event (3–5 days)</li>
-          <li>Luxury floral + theme decor</li>
-          <li>4 photographers + drone coverage</li>
-          <li>Celebrity anchor / MC option</li>
-          <li>Destination pre-wedding shoot</li>
-          <li>Live music / band</li>
-          <li>Full team of 5 coordinators</li>
-          <li>Guest transport fleet</li>
-          <li>Custom website + live stream</li>
-        </ul>
-        <a href="#contact" class="pkg-btn">Book Royal</a>
-      </div>
+    <div class="flex-1 flex justify-center">
+      <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=500&q=80" 
+           alt="Modern dental clinic" class="rounded-2xl shadow-2xl w-full max-w-md object-cover" style="max-height:420px;">
     </div>
   </div>
 </section>
 
 <!-- SERVICES -->
-<section id="services" style="background:#f9f3ec;">
-  <div class="centered">
-    <span class="section-tag">What We Do</span>
-    <h2>End-to-End <span>Wedding Services</span></h2>
-    <p class="subtitle">Every detail handled with care, creativity, and precision.</p>
-  </div>
-  <div class="services-grid">
-    <div class="service-card">
-      <div class="service-icon">🏛️</div>
-      <div class="service-title">Venue Selection</div>
-      <div class="service-desc">Access to 35+ empanelled banquet halls, farmhouses, resorts & heritage properties across Pune and beyond.</div>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🌸</div>
-      <div class="service-title">Decor & Flowers</div>
-      <div class="service-desc">Custom mandap, stage, entrance, table centrepieces. Fresh floral + artificial options. Theme-based design.</div>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">📸</div>
-      <div class="service-title">Photography & Film</div>
-      <div class="service-desc">Candid & traditional photo teams, cinematic films, drone shots, same-day edit reels. Memory that lasts forever.</div>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🍽️</div>
-      <div class="service-title">Catering</div>
-      <div class="service-desc">Multi-cuisine menus, live counters, dessert stations. Coordinated with Pune's top caterers for every dietary need.</div>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">💄</div>
-      <div class="service-title">Bridal Beauty</div>
-      <div class="service-desc">Tie-ups with top bridal makeup artists in Pune. Pre-bridal packages, trial sessions, day-of glam squad.</div>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🎵</div>
-      <div class="service-title">Entertainment</div>
-      <div class="service-desc">DJ packages, live bands, dance troupes, celebrity anchors, dhol tasha, folk performers — we manage it all.</div>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">✉️</div>
-      <div class="service-title">Invitations</div>
-      <div class="service-desc">Custom digital e-invites, premium print, WhatsApp broadcast setup, RSVP tracking — modern + traditional options.</div>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🚌</div>
-      <div class="service-title">Guest Management</div>
-      <div class="service-desc">Hotel block bookings, airport/station transfers, shuttle coordination, seating plans, guest kits.</div>
+<section id="services" class="py-20 px-4">
+  <div class="max-w-6xl mx-auto text-center">
+    <div class="section-title" id="services-title">Everything For Your Dental Health</div>
+    <div class="section-sub">From routine cleanings to complete smile makeovers — all under one roof.</div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="card service-card">
+        <div class="text-4xl mb-4">🦷</div>
+        <h3 class="font-bold text-lg mb-2">Teeth Cleaning</h3>
+        <p class="text-gray-600 text-sm">Professional scaling & polishing. 45-min appointment. Recommended every 6 months.</p>
+      </div>
+      <div class="card service-card">
+        <div class="text-4xl mb-4">😁</div>
+        <h3 class="font-bold text-lg mb-2">Teeth Whitening</h3>
+        <p class="text-gray-600 text-sm">In-chair whitening, 2–4 shades brighter in one session. Safe and long-lasting.</p>
+      </div>
+      <div class="card service-card">
+        <div class="text-4xl mb-4">🔧</div>
+        <h3 class="font-bold text-lg mb-2">Dental Implants</h3>
+        <p class="text-gray-600 text-sm">Permanent tooth replacement that looks and feels completely natural. Lifetime solution.</p>
+      </div>
+      <div class="card service-card">
+        <div class="text-4xl mb-4">👶</div>
+        <h3 class="font-bold text-lg mb-2">Kids Dentistry</h3>
+        <p class="text-gray-600 text-sm">Gentle, fear-free care for children aged 3–16. We make dental visits fun!</p>
+      </div>
+      <div class="card service-card">
+        <div class="text-4xl mb-4">🦴</div>
+        <h3 class="font-bold text-lg mb-2">Root Canal</h3>
+        <p class="text-gray-600 text-sm">Pain-free RCT using rotary endodontics. Most cases resolved in a single visit.</p>
+      </div>
+      <div class="card service-card">
+        <div class="text-4xl mb-4">✨</div>
+        <h3 class="font-bold text-lg mb-2">Smile Makeover</h3>
+        <p class="text-gray-600 text-sm">Veneers, bonding & clear aligners. Transform your confidence in just a few weeks.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- GALLERY PREVIEW -->
-<section id="gallery">
-  <div class="centered">
-    <span class="section-tag">Portfolio</span>
-    <h2>Moments We've <span>Made Forever</span></h2>
-    <p class="subtitle">A glimpse of the magic we create for every couple.</p>
-  </div>
-  <div class="gallery-strip">
-    <div class="gallery-item">💒</div>
-    <div class="gallery-item">🌸</div>
-    <div class="gallery-item">✨</div>
-    <div class="gallery-item">💍</div>
-    <div class="gallery-item">🕯️</div>
-    <div class="gallery-item">🎊</div>
+<!-- STATS -->
+<section class="bg-light-teal py-20 px-4">
+  <div class="max-w-6xl mx-auto text-center">
+    <div class="section-title">Why Pune Trusts Bright Smile</div>
+    <div class="section-sub">Numbers that speak for themselves.</div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+      <div>
+        <div class="stat-num" id="stat1">0</div>
+        <div class="text-gray-600 font-medium">Happy Patients</div>
+      </div>
+      <div>
+        <div class="stat-num" id="stat2">0</div>
+        <div class="text-gray-600 font-medium">Years Experience</div>
+      </div>
+      <div>
+        <div class="stat-num" id="stat3">0</div>
+        <div class="text-gray-600 font-medium">Google Rating</div>
+      </div>
+      <div>
+        <div class="stat-num" id="stat4">0</div>
+        <div class="text-gray-600 font-medium">Hr Appointment</div>
+      </div>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-white rounded-xl p-6 shadow-sm">
+        <div class="text-teal text-2xl mb-3">✅</div>
+        <h4 class="font-bold mb-1">No Waiting Lines</h4>
+        <p class="text-gray-600 text-sm">Book online and arrive exactly on time. Your appointment is yours alone.</p>
+      </div>
+      <div class="bg-white rounded-xl p-6 shadow-sm">
+        <div class="text-teal text-2xl mb-3">✅</div>
+        <h4 class="font-bold mb-1">Transparent Pricing</h4>
+        <p class="text-gray-600 text-sm">No hidden charges. We discuss costs upfront so there are zero surprises.</p>
+      </div>
+      <div class="bg-white rounded-xl p-6 shadow-sm">
+        <div class="text-teal text-2xl mb-3">✅</div>
+        <h4 class="font-bold mb-1">Latest Technology</h4>
+        <p class="text-gray-600 text-sm">Digital X-rays, painless anaesthesia, and modern equipment for your comfort.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- PROCESS -->
-<section style="background:#f9f3ec;">
-  <div class="centered">
-    <span class="section-tag">How It Works</span>
-    <h2>Planning Your Wedding <span>in 5 Steps</span></h2>
-    <p class="subtitle">A smooth, stress-free journey from first consultation to your big day.</p>
-  </div>
-  <div class="process-steps">
-    <div class="step"><div class="step-num">1</div><div class="step-title">Free Consultation</div><div class="step-desc">30-min call to understand your vision, date & budget.</div></div>
-    <div class="step"><div class="step-num">2</div><div class="step-title">Venue Shortlisting</div><div class="step-desc">We present 3–5 shortlisted venues that fit your criteria.</div></div>
-    <div class="step"><div class="step-num">3</div><div class="step-title">Vendor Booking</div><div class="step-desc">We negotiate & book all vendors at best prices.</div></div>
-    <div class="step"><div class="step-num">4</div><div class="step-title">Week-Of Prep</div><div class="step-desc">Final walkthroughs, timeline confirmation, team briefing.</div></div>
-    <div class="step"><div class="step-num">5</div><div class="step-title">The Big Day</div><div class="step-desc">Our team runs the show. You enjoy every second.</div></div>
-  </div>
-</section>
-
-<!-- TEAM -->
-<section id="team">
-  <div class="centered">
-    <span class="section-tag">Meet the Team</span>
-    <h2>The People Behind <span>Your Dream Day</span></h2>
-    <p class="subtitle">Experienced planners who treat your wedding like it's their own.</p>
-  </div>
-  <div class="team-grid">
-    <div class="team-card">
-      <div class="team-avatar">👰</div>
-      <div class="team-name">Priya Kulkarni</div>
-      <div class="team-role">Lead Planner & Founder</div>
-      <div class="team-bio">9 years in wedding planning. 520+ weddings executed across Pune, Mumbai & Nashik. Specializes in Marathi & Hindu ceremonies.</div>
+<!-- ABOUT DOCTOR -->
+<section id="about" class="py-20 px-4">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+    <div class="flex-shrink-0">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg" 
+           alt="Dr. Priya Joshi" class="rounded-full w-48 h-48 object-cover border-4 border-teal shadow-xl">
     </div>
-    <div class="team-card">
-      <div class="team-avatar">🎨</div>
-      <div class="team-name">Rohan Mehta</div>
-      <div class="team-role">Decor & Design Head</div>
-      <div class="team-bio">Interior design background. Creates stunning mandap and hall transformations. Runs his own floral studio for fresh-only decor.</div>
-    </div>
-    <div class="team-card">
-      <div class="team-avatar">📋</div>
-      <div class="team-name">Sneha Deshpande</div>
-      <div class="team-role">Senior Event Coordinator</div>
-      <div class="team-bio">Obsessively organized. Manages vendor timelines, guest logistics and day-of operations for up to 1,000-guest events.</div>
-    </div>
-    <div class="team-card">
-      <div class="team-avatar">📸</div>
-      <div class="team-name">Arjun Singh</div>
-      <div class="team-role">Photography Partner</div>
-      <div class="team-bio">Award-winning wedding photographer (Wedding Wire India 2023). Leads our empanelled photography network of 8 teams.</div>
+    <div id="about-text">
+      <div class="text-sm font-semibold teal uppercase tracking-wide mb-2">Meet Your Dentist</div>
+      <h2 class="text-3xl font-bold mb-4">Dr. Priya Joshi</h2>
+      <p class="text-gray-600 mb-4 text-lg">
+        Dr. Priya Joshi is a BDS, MDS graduate with 15 years of experience in restorative and cosmetic dentistry. She founded Bright Smile Dental in 2011 with one mission: make quality dental care accessible to every family in Kothrud.
+      </p>
+      <blockquote class="border-l-4 border-teal pl-4 italic text-gray-500 mb-6">
+        "I believe every patient deserves a smile they're proud of — and treatments that don't hurt their pocket or their confidence."
+      </blockquote>
+      <div class="flex flex-wrap gap-4 text-sm">
+        <span class="bg-light-teal px-3 py-2 rounded-full">🎓 BDS, MDS — Pune University</span>
+        <span class="bg-light-teal px-3 py-2 rounded-full">🏆 15 Years Experience</span>
+        <span class="bg-light-teal px-3 py-2 rounded-full">📍 Kothrud, Pune</span>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- TESTIMONIALS -->
-<section id="reviews" style="background:#f9f3ec;">
-  <div class="centered">
-    <span class="section-tag">Happy Couples</span>
-    <h2>What Our <span>Couples Say</span></h2>
+<section id="testimonials" class="bg-gray-50 py-20 px-4">
+  <div class="max-w-6xl mx-auto text-center">
+    <div class="section-title">What Our Patients Say</div>
+    <div class="text-yellow-400 text-2xl mb-2">⭐⭐⭐⭐⭐</div>
+    <div class="text-gray-500 mb-10">4.9 / 5 — Based on 200+ Google Reviews</div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="card testimonial-card">
+        <div class="text-yellow-400 mb-3">⭐⭐⭐⭐⭐</div>
+        <p class="text-gray-700 italic mb-4">"I was terrified of dentists. Dr. Joshi made my root canal completely painless. Booked my family's checkups the same week."</p>
+        <div class="font-semibold teal">— Rahul M., Kothrud</div>
+      </div>
+      <div class="card testimonial-card">
+        <div class="text-yellow-400 mb-3">⭐⭐⭐⭐⭐</div>
+        <p class="text-gray-700 italic mb-4">"Best teeth whitening in Pune. Done in one hour, results are incredible. Highly recommend for anyone with a wedding coming up!"</p>
+        <div class="font-semibold teal">— Sneha K., Baner</div>
+      </div>
+      <div class="card testimonial-card">
+        <div class="text-yellow-400 mb-3">⭐⭐⭐⭐⭐</div>
+        <p class="text-gray-700 italic mb-4">"Brought my 6-year-old who was scared of the dentist. The staff was so patient and kind. My son actually asked to come back!"</p>
+        <div class="font-semibold teal">— Anjali P., Karve Nagar</div>
+      </div>
+    </div>
   </div>
-  <div class="testimonials-grid">
-    <div class="testimonial-card">
-      <div class="stars">★★★★★</div>
-      <p class="testimonial-text">We had no idea how to plan a 400-guest Marathi wedding in 3 months. Priya and her team made it look easy. Every single detail was perfect — from the mandap to the mehendi night.</p>
-      <div class="testimonial-author">Aarti & Vikram Joshi</div>
-      <div class="testimonial-wedding">Marathi Brahmanic Wedding · Koregaon Park · Feb 2025</div>
-    </div>
-    <div class="testimonial-card">
-      <div class="stars">★★★★★</div>
-      <p class="testimonial-text">Royal Extravaganza package was worth every rupee. Our family lives in 4 cities — DreamDays handled everything including airport pickups and 2 hotel blocks. Absolutely stress-free.</p>
-      <div class="testimonial-author">Fatima & Shahid Khan</div>
-      <div class="testimonial-wedding">Muslim Wedding · Le Méridien Pune · Nov 2024</div>
-    </div>
-    <div class="testimonial-card">
-      <div class="stars">★★★★★</div>
-      <p class="testimonial-text">We had a tight budget of ₹8 lakhs for 250 guests. The Silver Bliss package gave us way more than we expected. Beautiful decor, great photos. We've already referred 2 friends!</p>
-      <div class="testimonial-author">Kavya & Deepak Patil</div>
-      <div class="testimonial-wedding">Hindu Wedding · Baner Farmhouse · Jan 2025</div>
+</section>
+
+<!-- BOOK APPOINTMENT -->
+<section id="book" class="bg-teal py-20 px-4">
+  <div class="max-w-4xl mx-auto text-center text-white">
+    <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready for a Healthier Smile?</h2>
+    <p class="text-teal-100 text-lg mb-10" style="color:#c8eeee;">Book your appointment today. We'll confirm within 2 hours. New patients welcome.</p>
+    <div class="bg-white rounded-2xl p-8 text-left max-w-xl mx-auto shadow-2xl">
+      <h3 class="font-bold text-gray-900 text-xl mb-6">Book Appointment</h3>
+      <div class="grid md:grid-cols-2 gap-4 mb-4">
+        <input type="text" placeholder="Your Name" class="border border-gray-200 rounded-lg px-4 py-3 w-full text-gray-900 focus:outline-none focus:border-teal">
+        <input type="tel" placeholder="Phone Number" class="border border-gray-200 rounded-lg px-4 py-3 w-full text-gray-900 focus:outline-none focus:border-teal">
+      </div>
+      <select class="border border-gray-200 rounded-lg px-4 py-3 w-full text-gray-700 mb-4 focus:outline-none focus:border-teal">
+        <option>Select Service</option>
+        <option>Routine Checkup</option>
+        <option>Teeth Cleaning</option>
+        <option>Teeth Whitening</option>
+        <option>Dental Implants</option>
+        <option>Root Canal</option>
+        <option>Smile Makeover</option>
+        <option>Kids Dentistry</option>
+      </select>
+      <input type="date" class="border border-gray-200 rounded-lg px-4 py-3 w-full text-gray-700 mb-6 focus:outline-none focus:border-teal">
+      <button class="btn-teal w-full text-center text-base py-3" onclick="alert('Thank you! We will confirm your appointment within 2 hours.')">
+        Book My Appointment →
+      </button>
+      <div class="text-center mt-4">
+        <a href="https://wa.me/919876543210" class="text-gray-600 hover:text-teal text-sm">
+          💬 Or WhatsApp us: +91-98765-43210
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="contact-section">
-  <div class="contact-grid">
-    <div class="contact-info">
-      <span class="section-tag" style="color:var(--gold)">Get In Touch</span>
-      <h2>Let's Plan<br><span>Your Wedding</span></h2>
-      <p>Free consultation — no obligations. Tell us your dream and we'll show you how to make it real.</p>
-      <div class="contact-detail">
-        <div class="contact-icon">📞</div>
-        <div class="contact-text"><strong>Phone / WhatsApp</strong>+91 98765 43210</div>
-      </div>
-      <div class="contact-detail">
-        <div class="contact-icon">📧</div>
-        <div class="contact-text"><strong>Email</strong>hello@dreamdayspune.com</div>
-      </div>
-      <div class="contact-detail">
-        <div class="contact-icon">📍</div>
-        <div class="contact-text"><strong>Office</strong>Baner Road, Pune 411045</div>
-      </div>
-      <div class="contact-detail">
-        <div class="contact-icon">🕐</div>
-        <div class="contact-text"><strong>Hours</strong>Mon–Sat: 10 AM – 7 PM</div>
+<section id="contact" class="py-20 px-4">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
+    <div>
+      <h2 class="text-3xl font-bold mb-8">Find Us</h2>
+      <div class="space-y-4 text-gray-600">
+        <div class="flex items-start gap-3">
+          <span class="text-xl">📍</span>
+          <div>
+            <div class="font-semibold text-gray-900">Address</div>
+            <div>Shop 12, Sai Arcade, Paud Road<br>Kothrud, Pune - 411038</div>
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="text-xl">📞</span>
+          <div>
+            <div class="font-semibold text-gray-900">Phone</div>
+            <div>020-1234-5678 | +91-98765-43210</div>
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="text-xl">📧</span>
+          <div>
+            <div class="font-semibold text-gray-900">Email</div>
+            <div>brightsmile.kothrud@gmail.com</div>
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="text-xl">⏰</span>
+          <div>
+            <div class="font-semibold text-gray-900">Hours</div>
+            <div>Mon–Sat: 10:00 AM – 8:00 PM<br>Sunday: 10:00 AM – 1:00 PM</div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="contact-form">
-      <h3 style="color:#fff;font-size:1.3rem;margin-bottom:24px;">Book a Free Consultation</h3>
-      <form>
-        <div class="form-row">
-          <div class="form-group">
-            <label>Bride's Name</label>
-            <input type="text" placeholder="Aarti">
-          </div>
-          <div class="form-group">
-            <label>Groom's Name</label>
-            <input type="text" placeholder="Vikram">
-          </div>
-        </div>
-        <div class="form-group">
-          <label>WhatsApp Number</label>
-          <input type="tel" placeholder="+91 98765 43210">
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label>Wedding Date</label>
-            <input type="date">
-          </div>
-          <div class="form-group">
-            <label>Expected Guests</label>
-            <select>
-              <option>Under 100</option>
-              <option>100–250</option>
-              <option>250–500</option>
-              <option>500+</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-group">
-          <label>Budget Range</label>
-          <select>
-            <option>₹5L – ₹15L</option>
-            <option>₹15L – ₹35L</option>
-            <option>₹35L – ₹80L</option>
-            <option>₹80L+</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>Anything special in mind?</label>
-          <textarea placeholder="Destination shoot, specific theme, venue preferences..."></textarea>
-        </div>
-        <button type="submit" class="form-submit">💍 Request Free Consultation</button>
-      </form>
+    <div>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.8!2d73.8139!3d18.5019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zS290aHJ1ZCwgUHVuZQ!5e0!3m2!1sen!2sin!4v1"
+        width="100%" height="300" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy">
+      </iframe>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer>
-  <div class="footer-logo">Dream<span>Days</span></div>
-  <div class="footer-links">
-    <a href="#packages">Packages</a>
-    <a href="#services">Services</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#team">Team</a>
-    <a href="#contact">Contact</a>
+
+<style>
+.faq-section { padding: 60px 5%; max-width: 800px; margin: 0 auto; }
+.faq-section h2 { font-size: 2rem; font-weight: 800; margin-bottom: 32px; text-align: center; color: #1A1A1A; }
+.faq-item { border-bottom: 1px solid #e0e0e0; }
+.faq-item summary { padding: 18px 0; font-size: 1rem; font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; color: #1A1A1A; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: '+'; font-size: 1.4rem; font-weight: 300; transition: transform 0.2s; }
+.faq-item[open] summary::after { content: '−'; }
+.faq-item .faq-answer { padding: 0 0 18px; font-size: 0.92rem; line-height: 1.7; color: #555; }
+</style>
+<section class="faq-section" id="faq">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-container">
+    <details class="faq-item">
+      <summary>What wedding planning services do you offer in Pune?</summary>
+      <div class="faq-answer">We handle everything from venue selection and decor to catering, entertainment, photography, and guest management. Whether it is a traditional Maharashtrian wedding in Pune or a destination celebration in Lonavala, our team manages all details so you can enjoy your special day stress-free.</div>
+    </details>
+    <details class="faq-item">
+      <summary>How much does a wedding planner cost in Pune?</summary>
+      <div class="faq-answer">Our planning fees start at ₹75,000 for day-of coordination and go up to ₹5 lakh for full-service planning of multi-day weddings. The fee covers our planning and management services — venue, vendors, and decor costs are separate and customized to your budget.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Can you suggest good wedding venues in and around Pune?</summary>
+      <div class="faq-answer">We have partnerships with over 50 venues across Pune including banquet halls in Koregaon Park, farmhouses near Mulshi, resorts in Lonavala, and heritage properties in Panshet. We match venues to your guest count, budget, and wedding style for the perfect setting.</div>
+    </details>
+    <details class="faq-item">
+      <summary>How far in advance should we book wedding planning services?</summary>
+      <div class="faq-answer">We recommend booking six to twelve months before your wedding date, especially for the popular November to February season. However, we have successfully planned beautiful weddings with just three months notice. Earlier booking gives more venue choices and better vendor availability.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Do you handle small intimate weddings and court marriage arrangements?</summary>
+      <div class="faq-answer">Yes, we love planning intimate weddings for 50 to 100 guests just as much as grand celebrations. We also help with court marriage arrangements, documentation, and small reception planning. Many young Pune couples choose our boutique packages for elegant, meaningful celebrations.</div>
+    </details>
   </div>
-  <div class="footer-copy">© 2025 DreamDays Wedding Planners, Pune. All rights reserved.</div>
-  <div class="powered">Professional website by <span>Invictus AI</span> — AI-Powered Digital Presence</div>
+</section>
+
+<footer class="py-12 px-4">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+      <div>
+        <div class="flex items-center gap-2 mb-2">
+          <span class="text-2xl">🦷</span>
+          <span class="text-white font-bold">Bright Smile Dental Clinic</span>
+        </div>
+        <div class="text-gray-500 text-sm italic">"Your smile is our mission."</div>
+      </div>
+      <div class="flex gap-6 text-sm text-gray-400">
+        <a href="#services" class="hover:text-white">Services</a>
+        <a href="#about" class="hover:text-white">About</a>
+        <a href="#testimonials" class="hover:text-white">Patients</a>
+        <a href="#book" class="hover:text-white">Book</a>
+        <a href="#contact" class="hover:text-white">Contact</a>
+      </div>
+    </div>
+    <hr class="border-gray-700 my-6">
+    <div class="flex flex-col md:flex-row justify-between text-sm text-gray-500">
+      <div>© 2026 Bright Smile Dental Clinic. All rights reserved.</div>
+      <div>Designed by <span style="color:#F4A832;">DentWeb</span> · Powered by Invictus AI</div>
+    </div>
+  </div>
 </footer>
 
-<!-- WhatsApp Float -->
-<a href="https://wa.me/919876543210" class="whatsapp-float" title="WhatsApp Us">💬</a>
+<script>
+  gsap.registerPlugin(ScrollTrigger);
 
+  // Hero animations
+  gsap.timeline()
+    .from("#hero-text > *", { opacity: 0, y: 30, stagger: 0.15, duration: 0.7, ease: "power2.out" });
+
+  // Service cards
+  gsap.from(".service-card", {
+    scrollTrigger: { trigger: "#services", start: "top 80%" },
+    opacity: 0, y: 40, stagger: 0.1, duration: 0.6, ease: "power2.out"
+  });
+
+  // Stats counter
+  function animateCounter(id, target, suffix) {
+    ScrollTrigger.create({
+      trigger: "#stat1",
+      start: "top 80%",
+      once: true,
+      onEnter: () => {
+        gsap.to({val: 0}, {
+          val: target,
+          duration: 2,
+          ease: "power2.out",
+          onUpdate: function() {
+            document.getElementById(id).textContent = Math.round(this.targets()[0].val) + suffix;
+          }
+        });
+      }
+    });
+  }
+  animateCounter("stat1", 2000, "+");
+  animateCounter("stat2", 15, "+");
+  animateCounter("stat3", 4.9, "★");
+  animateCounter("stat4", 48, "h");
+
+  // About
+  gsap.from("#about-text > *", {
+    scrollTrigger: { trigger: "#about", start: "top 75%" },
+    opacity: 0, x: 40, stagger: 0.15, duration: 0.6
+  });
+
+  // Testimonials
+  gsap.from(".testimonial-card", {
+    scrollTrigger: { trigger: "#testimonials", start: "top 80%" },
+    opacity: 0, y: 30, stagger: 0.15, duration: 0.6
+  });
+</script>
 </body>
 </html>
