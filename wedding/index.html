@@ -273,6 +273,14 @@
  .form-row { grid-template-columns:1fr; }
  .hero-stats { gap:24px; }
  }
+
+    @media(max-width:768px){
+        .nav-links { display:none!important; }
+        #mob-links-wed { display:none; }
+        #mob-btn-wed { display:block!important; }
+        #mob-links-wed.show a { margin:0!important; padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.15); display:block; text-decoration:none; font-size:1rem; }
+        #mob-links-wed { background:var(--dark,#0a0a0a); padding:8px 5%; }
+    }
 </style>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💍</text></svg>">
   <link rel="canonical" href="https://invictus-niche-demos.vercel.app/wedding/">
@@ -296,7 +304,17 @@
  <a href="#contact">Contact</a>
  </div>
  <a href="#contact" class="nav-cta">Plan My Wedding</a>
+<button id="mob-btn-wed" style="display:none;padding:8px;cursor:pointer;background:none;border:none;color:inherit;" onclick="document.getElementById('mob-links-wed').classList.toggle('show')" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
 </nav>
+<div id="mob-links-wed">
+<a href="#packages">Packages</a>
+<a href="#services">Services</a>
+<a href="#gallery">Gallery</a>
+<a href="#team">Our Team</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+<a href="#contact">Plan My Wedding</a>
+</div>
 
 <!-- HERO -->
 <section class="hero" id="home">

@@ -231,7 +231,15 @@
  .hero-stats { gap: 20px; flex-wrap: wrap; }
  .trust-bar { gap: 20px; }
  }
- </style>
+ 
+    @media(max-width:768px){
+        .nav-links { display:none!important; }
+        #mob-links-auto { display:none; }
+        #mob-btn-auto { display:block!important; }
+        #mob-links-auto.show a { margin:0!important; padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.15); display:block; text-decoration:none; font-size:1rem; }
+        #mob-links-auto { background:var(--dark,#0a0a0a); padding:8px 5%; }
+    }
+</style>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
   <link rel="canonical" href="https://invictus-niche-demos.vercel.app/autoservice/">
 </head>
@@ -248,7 +256,17 @@
  <a href="#book">Book Service</a>
  </div>
  <a href="#book" class="nav-cta">Book Now</a>
+<button id="mob-btn-auto" style="display:none;padding:8px;cursor:pointer;background:none;border:none;color:inherit;" onclick="document.getElementById('mob-links-auto').classList.toggle('show')" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
 </nav>
+<div id="mob-links-auto">
+<a href="#">⚙ SpeedFix Auto</a>
+<a href="#services">Services</a>
+<a href="#packages">Packages</a>
+<a href="#team">Team</a>
+<a href="#reviews">Reviews</a>
+<a href="#book">Book Service</a>
+<a href="#book">Book Now</a>
+</div>
 
 <!-- HERO -->
 <section class="hero">

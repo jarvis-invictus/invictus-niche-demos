@@ -314,7 +314,15 @@
  .form-grid { grid-template-columns: 1fr; }
  .hero-stats { gap: 1.5rem; }
  }
- </style>
+ 
+    @media(max-width:768px){
+        .nav-links { display:none!important; }
+        #mob-links-pet { display:none; }
+        #mob-btn-pet { display:block!important; }
+        #mob-links-pet.show a { margin:0!important; padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.15); display:block; text-decoration:none; font-size:1rem; }
+        #mob-links-pet { background:var(--dark,#0a0a0a); padding:8px 5%; }
+    }
+</style>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>">
   <link rel="canonical" href="https://invictus-niche-demos.vercel.app/pet/">
 </head>
@@ -331,7 +339,16 @@
  <a href="#book">Book Visit</a>
  <a href="https://wa.me/919834011008" class="nav-cta">Emergency?</a>
  </div>
+<button id="mob-btn-pet" style="display:none;padding:8px;cursor:pointer;background:none;border:none;color:inherit;" onclick="document.getElementById('mob-links-pet').classList.toggle('show')" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
 </nav>
+<div id="mob-links-pet">
+<a href="#services">Services</a>
+<a href="#vets">Our Vets</a>
+<a href="#packages">Wellness Plans</a>
+<a href="#timings">Hours</a>
+<a href="#book">Book Visit</a>
+<a href="https://wa.me/919834011008">Emergency?</a>
+</div>
 
 <!-- HERO -->
 <section class="hero">

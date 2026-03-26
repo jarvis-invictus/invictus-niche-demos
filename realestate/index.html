@@ -259,6 +259,14 @@
  section { padding:60px 20px; }
  .hero { padding:100px 20px 60px; }
  }
+
+    @media(max-width:768px){
+        .nav-links { display:none!important; }
+        #mob-links-re { display:none; }
+        #mob-btn-re { display:block!important; }
+        #mob-links-re.show a { margin:0!important; padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.15); display:block; text-decoration:none; font-size:1rem; }
+        #mob-links-re { background:var(--dark,#0a0a0a); padding:8px 5%; }
+    }
 </style>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
   <link rel="canonical" href="https://invictus-niche-demos.vercel.app/realestate/">
@@ -275,7 +283,15 @@
  <li><a href="#contact">Contact</a></li>
  </ul>
  <a href="https://wa.me/919845011004?text=Hi%2C%20I%27m%20looking%20for%20a%20property%20in%20Pune" class="nav-cta" target="_blank"> Find Property</a>
+<button id="mob-btn-re" style="display:none;padding:8px;cursor:pointer;background:none;border:none;color:inherit;" onclick="document.getElementById('mob-links-re').classList.toggle('show')" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
 </nav>
+<div id="mob-links-re">
+<a href="#listings">Listings</a>
+<a href="#services">Services</a>
+<a href="#team">Our Team</a>
+<a href="#contact">Contact</a>
+<a href="https://wa.me/919845011004?text=Hi%2C%20I%27m%20looking%20for%20a%20property%20in%20Pune">Find Property</a>
+</div>
 
 <!-- HERO -->
 <section class="hero">

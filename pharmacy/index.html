@@ -321,7 +321,15 @@
  .form-2col { grid-template-columns: 1fr; }
  .nav-links { display: none; }
  }
- </style>
+ 
+    @media(max-width:768px){
+        .nav-links { display:none!important; }
+        #mob-links-pharm { display:none; }
+        #mob-btn-pharm { display:block!important; }
+        #mob-links-pharm.show a { margin:0!important; padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.15); display:block; text-decoration:none; font-size:1rem; }
+        #mob-links-pharm { background:var(--dark,#0a0a0a); padding:8px 5%; }
+    }
+</style>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💊</text></svg>">
   <link rel="canonical" href="https://invictus-niche-demos.vercel.app/pharmacy/">
 </head>
@@ -341,7 +349,16 @@
  <a href="#contact">Contact</a>
  </div>
  <a href="https://wa.me/919834011010" class="nav-cta">Order Now</a>
+<button id="mob-btn-pharm" style="display:none;padding:8px;cursor:pointer;background:none;border:none;color:inherit;" onclick="document.getElementById('mob-links-pharm').classList.toggle('show')" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
 </nav>
+<div id="mob-links-pharm">
+<a href="#services">Services</a>
+<a href="#delivery">Delivery</a>
+<a href="#packages">Health Packages</a>
+<a href="#team">Team</a>
+<a href="#contact">Contact</a>
+<a href="https://wa.me/919834011010">Order Now</a>
+</div>
 
 <!-- HERO -->
 <section class="hero">
