@@ -1,461 +1,686 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bright Smile Dental Clinic — Kothrud, Pune</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-<style>
- body { font-family: 'Inter', sans-serif; }
- h1,h2,h3,h4 { font-family: 'Poppins', sans-serif; }
- .teal { color: #0D7C7C; }
- .bg-teal { background-color: #0D7C7C; }
- .gold { color: #F4A832; }
- .bg-light-teal { background-color: #E8F5F5; }
- .btn-teal { background-color: #0D7C7C; color: white; padding: 12px 28px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
- .btn-teal:hover { background-color: #0a6b6b; transform: translateY(-1px); }
- .btn-outline { border: 2px solid #0D7C7C; color: #0D7C7C; padding: 10px 26px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
- .btn-outline:hover { background-color: #0D7C7C; color: white; }
- .card { background: white; border-radius: 12px; padding: 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); transition: all 0.2s; }
- .card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(13,124,124,0.15); }
- .hero-bg { background: linear-gradient(135deg, #f0fafa 0%, #e8f5f5 50%, #d4eef0 100%); }
- nav { position: sticky; top: 0; z-index: 100; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
- .stat-num { font-family: 'Poppins', sans-serif; font-size: 2.5rem; font-weight: 800; color: #0D7C7C; }
- .section-title { font-size: 2rem; font-weight: 700; color: #1A1A1A; margin-bottom: 0.5rem; }
- .section-sub { color: #666; font-size: 1.1rem; margin-bottom: 3rem; }
- footer { background: #1A1A1A; color: #ccc; }
-</style>
-<link rel="canonical" href="https://invictus-ai.in/demos/autoservice.html">
-<meta property="og:image" content="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1200&q=80">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>SpeedFix Auto — Car Service & Repair | Shivaji Nagar, Pune</title>
+<meta name="description" content="SpeedFix Auto — Car Service & Repair in Shivaji Nagar, Pune. All makes & models. Oil change, AC, brakes, denting painting. Transparent pricing.">
+<meta name="keywords" content="car service pune, auto repair pune, car garage pune, vehicle service shivaji nagar, car mechanic pune">
+<meta property="og:title" content="SpeedFix Auto — Car Service & Repair | Shivaji Nagar, Pune">
+<meta property="og:description" content="SpeedFix Auto — Car Service & Repair in Shivaji Nagar, Pune. All makes & models. Oil change, AC, brakes, denting painting. Transparent pricing.">
+<meta property="og:type" content="website">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
- "@type": "FAQPage",
- "mainEntity": [
- {
- "@type": "Question",
- "name": "What car services do you offer at your Kothrud workshop?",
- "acceptedAnswer": {
- "@type": "Answer",
- "text": "We provide comprehensive car services including regular maintenance, engine diagnostics, brake repair, AC servicing, suspension work, and body painting. Our Kothrud workshop handles all major brands. Customers from Warje, Bavdhan, and Karve Nagar find us convenient for quick, reliable repairs."
- }
+ "@type": "AutoRepair",
+ "name": "SpeedFix Auto",
+ "address": {
+ "@type": "PostalAddress",
+ "addressLocality": "Pune",
+ "addressRegion": "Maharashtra",
+ "addressCountry": "IN"
  },
- {
- "@type": "Question",
- "name": "How much does a basic car service cost in Pune?",
- "acceptedAnswer": {
- "@type": "Answer",
- "text": "A basic service with oil change, filter replacement, and multi-point inspection starts at 2,500 for hatchbacks and 3,500 for sedans and SUVs. We use genuine or equivalent quality parts and provide transparent billing with no surprise charges at the end."
- }
- },
- {
- "@type": "Question",
- "name": "Do you offer doorstep car pickup for servicing?",
- "acceptedAnswer": {
- "@type": "Answer",
- "text": "Yes, we offer free pickup and drop within a 5 km radius of our Kothrud center. For areas like Hinjewadi, Baner, and Aundh, a nominal pickup charge applies. Just book your service online or call us, and our driver will collect your car at your convenience."
- }
- },
- {
- "@type": "Question",
- "name": "How long does a typical car service take at your Pune workshop?",
- "acceptedAnswer": {
- "@type": "Answer",
- "text": "A basic service takes about three to four hours. Major services or repairs may require a full day. We provide real-time updates via WhatsApp and have a comfortable waiting area with WiFi if you prefer to wait at our Kothrud service center."
- }
- },
- {
- "@type": "Question",
- "name": "Can you service all car brands or only specific ones?",
- "acceptedAnswer": {
- "@type": "Answer",
- "text": "We service all major car brands including Maruti, Hyundai, Tata, Honda, Toyota, Volkswagen, Skoda, and luxury brands like BMW and Mercedes. Our technicians are trained and certified, with specialized diagnostic tools for each manufacturer's systems."
- }
- }
- ]
+ "url": "https://invictus-ai.in"
 }
 </script>
-</head>
-<body class="bg-white text-gray-900">
+ <style>
+ :root {
+ --primary: #e63946;
+ --dark: #0a0a0a;
+ --card-bg: #141414;
+ --surface: #1c1c1c;
+ --text: #f0f0f0;
+ --muted: #aaa;
+ --chrome: #c0c0c0;
+ --accent: #ff6b35;
+ --border: #2a2a2a;
+ }
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+ body { font-family: 'Segoe UI', Arial, sans-serif; background: var(--dark); color: var(--text); }
 
-<!-- NAVIGATION -->
+ /* NAV */
+ nav {
+ position: sticky; top: 0; z-index: 100;
+ background: rgba(10,10,10,0.97); border-bottom: 2px solid var(--primary);
+ display: flex; align-items: center; justify-content: space-between;
+ padding: 0 5%; height: 64px;
+ }
+ .nav-logo { display: flex; align-items: center; gap: 10px; font-size: 1.3rem; font-weight: 800; color: #fff; text-decoration: none; }
+ .nav-logo span { color: var(--primary); }
+ .nav-links { display: flex; gap: 28px; }
+ .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; transition: color .2s; }
+ .nav-links a:hover { color: var(--primary); }
+ .nav-cta { background: var(--primary); color: #fff; padding: 9px 22px; border-radius: 4px; font-weight: 700; text-decoration: none; font-size: 0.9rem; }
+
+ /* HERO */
+ .hero {
+ background: linear-gradient(135deg, #0a0a0a 0%, #1a0505 50%, #0a0a0a 100%);
+ padding: 80px 5% 60px;
+ position: relative; overflow: hidden;
+ }
+ .hero::before {
+ content: '';
+ position: absolute; top: 0; right: 0; width: 50%; height: 100%;
+ background: url("data:image/svg+xml,%3Csvg width='400' height='300' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='300' cy='150' rx='300' ry='150' fill='%23e63946' fill-opacity='0.04'/%3E%3C/svg%3E") no-repeat center;
+ }
+ .hero-content { max-width: 600px; position: relative; }
+ .hero-badge {
+ display: inline-flex; align-items: center; gap: 8px;
+ background: rgba(230,57,70,0.12); border: 1px solid rgba(230,57,70,0.3);
+ color: var(--primary); padding: 6px 16px; border-radius: 20px;
+ font-size: 0.8rem; font-weight: 600; margin-bottom: 20px;
+ }
+ .hero h1 { font-size: 2.8rem; font-weight: 900; line-height: 1.15; margin-bottom: 16px; }
+ .hero h1 span { color: var(--primary); }
+ .hero p { font-size: 1.1rem; color: var(--muted); margin-bottom: 32px; line-height: 1.7; }
+ .hero-stats { display: flex; gap: 40px; margin-bottom: 36px; }
+ .hero-stat .num { font-size: 2rem; font-weight: 900; color: var(--primary); }
+ .hero-stat .label { font-size: 0.78rem; color: var(--muted); }
+ .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+ .btn-primary { background: var(--primary); color: #fff; padding: 14px 30px; border-radius: 4px; font-weight: 700; text-decoration: none; font-size: 1rem; }
+ .btn-secondary { background: transparent; border: 1px solid var(--chrome); color: var(--chrome); padding: 14px 30px; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 1rem; }
+ .hero-guarantee { margin-top: 24px; display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: var(--muted); }
+ .hero-guarantee span { color: #4caf50; font-size: 1rem; }
+
+ /* TRUST BAR */
+ .trust-bar {
+ background: var(--surface); padding: 20px 5%;
+ display: flex; align-items: center; justify-content: center; gap: 48px; flex-wrap: wrap;
+ border-bottom: 1px solid var(--border);
+ }
+ .trust-item { display: flex; align-items: center; gap: 10px; font-size: 0.9rem; color: var(--muted); }
+ .trust-icon { font-size: 1.2rem; }
+
+ /* SECTIONS */
+ section { padding: 72px 5%; }
+ .section-label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: var(--primary); margin-bottom: 8px; font-weight: 700; }
+ .section-title { font-size: 2rem; font-weight: 800; margin-bottom: 12px; }
+ .section-sub { color: var(--muted); max-width: 560px; line-height: 1.7; margin-bottom: 48px; }
+ .text-center { text-align: center; }
+ .text-center .section-sub { margin: 0 auto 48px; }
+
+ /* SERVICES GRID */
+ .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+ .service-card {
+ background: var(--card-bg); border: 1px solid var(--border);
+ border-radius: 8px; padding: 28px 24px;
+ transition: border-color .2s, transform .2s;
+ }
+ .service-card:hover { border-color: var(--primary); transform: translateY(-3px); }
+ .service-icon { font-size: 2rem; margin-bottom: 12px; }
+ .service-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
+ .service-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.6; margin-bottom: 12px; }
+ .service-price { font-size: 0.85rem; color: var(--primary); font-weight: 700; }
+
+ /* PACKAGES */
+ .packages-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+ .package-card {
+ background: var(--card-bg); border: 1px solid var(--border);
+ border-radius: 10px; padding: 32px 28px;
+ position: relative;
+ }
+ .package-card.featured { border-color: var(--primary); }
+ .package-badge {
+ position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+ background: var(--primary); color: #fff; padding: 4px 16px; border-radius: 20px;
+ font-size: 0.75rem; font-weight: 700; white-space: nowrap;
+ }
+ .package-name { font-size: 1.1rem; font-weight: 800; margin-bottom: 6px; }
+ .package-price { font-size: 2rem; font-weight: 900; color: var(--primary); margin-bottom: 4px; }
+ .package-price span { font-size: 0.85rem; font-weight: 400; color: var(--muted); }
+ .package-tagline { font-size: 0.82rem; color: var(--muted); margin-bottom: 20px; }
+ .package-items { list-style: none; margin-bottom: 24px; }
+ .package-items li { font-size: 0.85rem; padding: 6px 0; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 8px; }
+ .package-items li:last-child { border-bottom: none; }
+ .package-items li::before { content: ''; color: #4caf50; font-weight: 700; }
+ .btn-book {
+ display: block; width: 100%; text-align: center;
+ background: var(--primary); color: #fff; padding: 12px; border-radius: 4px;
+ font-weight: 700; text-decoration: none; font-size: 0.9rem;
+ }
+ .btn-book.outline { background: transparent; border: 1px solid var(--chrome); color: var(--chrome); }
+
+ /* TEAM */
+ .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; }
+ .team-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+ .team-img {
+ height: 160px;
+ background: linear-gradient(135deg, #1a0505, #2a0808);
+ display: flex; align-items: center; justify-content: center; font-size: 4rem;
+ }
+ .team-info { padding: 16px; }
+ .team-info h4 { font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
+ .team-info .role { font-size: 0.8rem; color: var(--primary); font-weight: 600; margin-bottom: 6px; }
+ .team-info p { font-size: 0.78rem; color: var(--muted); line-height: 1.5; }
+
+ /* TESTIMONIALS */
+ .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+ .testimonial-card {
+ background: var(--card-bg); border: 1px solid var(--border);
+ border-radius: 8px; padding: 24px;
+ }
+ .stars { color: #ffd700; margin-bottom: 12px; font-size: 1rem; }
+ .testimonial-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.7; margin-bottom: 16px; font-style: italic; }
+ .reviewer { display: flex; align-items: center; gap: 12px; }
+ .reviewer-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--primary); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; }
+ .reviewer-info h5 { font-size: 0.9rem; font-weight: 700; }
+ .reviewer-info p { font-size: 0.75rem; color: var(--muted); margin: 0; }
+
+ /* BRANDS */
+ .brands-row { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
+ .brand-badge {
+ background: var(--card-bg); border: 1px solid var(--border);
+ padding: 10px 20px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; color: var(--chrome);
+ }
+
+ /* BOOKING FORM */
+ .form-bg { background: var(--surface); border-radius: 12px; padding: 48px; max-width: 700px; margin: 0 auto; }
+ .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+ .form-group { display: flex; flex-direction: column; gap: 6px; }
+ .form-group.full { grid-column: 1 / -1; }
+ .form-group label { font-size: 0.82rem; color: var(--muted); font-weight: 600; }
+ .form-group input, .form-group select, .form-group textarea {
+ background: var(--dark); border: 1px solid var(--border); color: var(--text);
+ padding: 10px 14px; border-radius: 4px; font-size: 0.9rem; font-family: inherit;
+ }
+ .form-group textarea { resize: vertical; min-height: 90px; }
+ .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+ outline: none; border-color: var(--primary);
+ }
+ .form-submit { background: var(--primary); color: #fff; border: none; cursor: pointer; padding: 14px 32px; border-radius: 4px; font-weight: 700; font-size: 1rem; width: 100%; margin-top: 8px; }
+
+ /* WHY US */
+ .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+ .why-item { display: flex; flex-direction: column; gap: 10px; padding: 24px; background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; }
+ .why-icon { font-size: 1.8rem; }
+ .why-item h4 { font-size: 0.95rem; font-weight: 700; }
+ .why-item p { font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
+
+ /* CONTACT */
+ .contact-info { display: flex; gap: 40px; flex-wrap: wrap; margin-bottom: 32px; }
+ .contact-item { display: flex; flex-direction: column; gap: 4px; }
+ .contact-item .label { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); }
+ .contact-item .value { font-size: 1rem; font-weight: 600; }
+ .hours-table { width: 100%; max-width: 400px; border-collapse: collapse; font-size: 0.88rem; }
+ .hours-table td { padding: 8px 12px; border-bottom: 1px solid var(--border); }
+ .hours-table td:first-child { color: var(--muted); }
+
+ /* WHATSAPP FLOAT */
+ .wa-float {
+ position: fixed; bottom: 28px; right: 28px; z-index: 999;
+ background: #25d366; color: #fff; width: 56px; height: 56px;
+ border-radius: 50%; display: flex; align-items: center; justify-content: center;
+ font-size: 1.6rem; text-decoration: none; box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+ transition: transform .2s;
+ }
+ .wa-float:hover { transform: scale(1.1); }
+
+ /* FOOTER */
+ footer {
+ background: var(--surface); border-top: 1px solid var(--border);
+ padding: 32px 5%; display: flex; align-items: center; justify-content: space-between; flex-wrap: gap;
+ gap: 16px; font-size: 0.82rem; color: var(--muted);
+ }
+ .powered { display: flex; align-items: center; gap: 6px; }
+ .powered a { color: var(--primary); text-decoration: none; font-weight: 600; }
+
+ @media (max-width: 768px) {
+ .hero h1 { font-size: 2rem; }
+ .nav-links { display: none; }
+ .form-grid { grid-template-columns: 1fr; }
+ .hero-stats { gap: 20px; flex-wrap: wrap; }
+ .trust-bar { gap: 20px; }
+ }
+ </style>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+  <link rel="canonical" href="https://invictus-niche-demos.vercel.app/autoservice/">
+</head>
+<body>
+
+<!-- NAV -->
 <nav>
- <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
- <div class="flex items-center gap-2">
- 
- <div>
- <div class="font-bold text-lg teal leading-tight">Bright Smile Dental</div>
- <div class="text-xs text-gray-500">Kothrud, Pune</div>
+ <a href="#" class="nav-logo">⚙ Speed<span>Fix</span> Auto</a>
+ <div class="nav-links">
+ <a href="#services">Services</a>
+ <a href="#packages">Packages</a>
+ <a href="#team">Team</a>
+ <a href="#reviews">Reviews</a>
+ <a href="#book">Book Service</a>
  </div>
- </div>
- <div class="hidden md:flex gap-8 text-sm font-medium text-gray-600">
- <a href="#services" class="hover:text-teal transition-colors">Services</a>
- <a href="#about" class="hover:text-teal transition-colors">About</a>
- <a href="#testimonials" class="hover:text-teal transition-colors">Patients</a>
- <a href="#contact" class="hover:text-teal transition-colors">Contact</a>
- </div>
- <a href="#book" class="btn-teal text-sm hidden md:block">Book Appointment </a>
- </div>
+ <a href="#book" class="nav-cta">Book Now</a>
 </nav>
 
 <!-- HERO -->
-<section class="hero-bg py-20 px-4">
- <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
- <div class="flex-1" id="hero-text">
- <div class="inline-block bg-teal text-white text-xs font-semibold px-3 py-1 rounded-full mb-6 gold-text" style="background:#F4A832; color:#1a1a1a;">
- Trusted by 2,000+ families in Kothrud
+<section class="hero">
+ <div class="hero-content">
+ <div class="hero-badge"> Pune's Most Trusted Auto Workshop</div>
+ <h1>Your Car Deserves<br><span>Expert Hands</span></h1>
+ <p>Multi-brand car service & repair centre in Shivaji Nagar. Certified technicians, genuine parts, transparent pricing — done right the first time.</p>
+ <div class="hero-stats">
+ <div class="hero-stat"><div class="num">8,200+</div><div class="label">Cars Serviced</div></div>
+ <div class="hero-stat"><div class="num">14 Yrs</div><div class="label">Experience</div></div>
+ <div class="hero-stat"><div class="num">4.81 out of 5</div><div class="label">Google Rating</div></div>
+ <div class="hero-stat"><div class="num">6,000+</div><div class="label">Happy Customers</div></div>
  </div>
- <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
- Your Smile Deserves<br><span class="teal">the Best Care</span>
- </h1>
- <p class="text-lg text-gray-600 mb-8 max-w-lg">
- Advanced dental treatments in Kothrud, Pune. Painless procedures, modern technology, and a team that genuinely cares about your smile.
- </p>
- <div class="flex flex-wrap gap-4 mb-10">
- <a href="#book" class="btn-teal">Book Appointment </a>
- <a href="tel:02012345678" class="btn-outline">020-1234-5678</a>
+ <div class="hero-btns">
+ <a href="#book" class="btn-primary">Book Service Online</a>
+ <a href="tel:+912012345678" class="btn-secondary">Call Workshop</a>
  </div>
- <div class="flex flex-wrap gap-6 text-sm text-gray-600">
- <span>15+ Years Experience</span>
- <span>2,000+ Patients</span>
- <span>Painless Treatments</span>
- <span>Mon–Sat: 10AM–8PM</span>
+ <div class="hero-guarantee">
+ 
+ <span>6-Month Warranty on All Repairs &nbsp;|&nbsp; Free Pick-up & Drop (3 km radius)</span>
  </div>
  </div>
- <div class="flex-1 flex justify-center">
- <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=500&q=80" 
- alt="Modern dental clinic" class="rounded-2xl shadow-2xl w-full max-w-md object-cover" style="max-height:420px;">
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+ <div class="trust-item"> Authorized Multi-Brand Service</div>
+ <div class="trust-item"> Snap-on Certified Tools</div>
+ <div class="trust-item"> Detailed Job Card Given</div>
+ <div class="trust-item"> Free Pick-up & Drop</div>
+ <div class="trust-item"> All Payments Accepted</div>
+ <div class="trust-item"> Live Service Updates on WhatsApp</div>
+</div>
+
+<!-- CAR BRANDS SECTION -->
+<section style="padding: 48px 5%; background: var(--surface);">
+ <div class="text-center">
+ <div class="section-label">Multi-Brand Expertise</div>
+ <div class="section-title">We Service All Major Brands</div>
+ <p class="section-sub">Whether you drive a Maruti, Honda, or Hyundai — our certified technicians know your car inside out.</p>
  </div>
+ <div class="brands-row">
+ <div class="brand-badge"> Maruti Suzuki</div>
+ <div class="brand-badge"> Hyundai</div>
+ <div class="brand-badge"> Honda</div>
+ <div class="brand-badge"> Tata</div>
+ <div class="brand-badge"> Mahindra</div>
+ <div class="brand-badge"> Kia</div>
+ <div class="brand-badge"> MG</div>
+ <div class="brand-badge"> Toyota</div>
+ <div class="brand-badge"> Skoda</div>
+ <div class="brand-badge"> Volkswagen</div>
+ <div class="brand-badge"> Ford</div>
+ <div class="brand-badge"> Renault</div>
  </div>
 </section>
 
 <!-- SERVICES -->
-<section id="services" class="py-20 px-4">
- <div class="max-w-6xl mx-auto text-center">
- <div class="section-title" id="services-title">Everything For Your Dental Health</div>
- <div class="section-sub">From routine cleanings to complete smile makeovers — all under one roof.</div>
- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
- <div class="card service-card">
- <div class="text-4xl mb-4"></div>
- <h3 class="font-bold text-lg mb-2">Teeth Cleaning</h3>
- <p class="text-gray-600 text-sm">Professional scaling & polishing. 45-min appointment. Recommended every 6 months.</p>
+<section id="services">
+ <div class="section-label">What We Do</div>
+ <div class="section-title">Complete Car Care Services</div>
+ <p class="section-sub">From routine oil changes to complex engine overhauls — we handle everything with expertise and transparency.</p>
+ <div class="services-grid">
+ <div class="service-card">
+ <div class="service-icon-css" style="width:56px;height:56px;border-radius:50%;background:var(--accent,#2563eb);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;letter-spacing:.5px;font-family:sans-serif;flex-shrink:0">SVC</div>
+ <h3>Periodic Service</h3>
+ <p>Engine oil change, filter replacement, fluid top-ups, and 30-point inspection as per manufacturer schedule.</p>
+ <div class="service-price">From 1,299</div>
  </div>
- <div class="card service-card">
- <div class="text-4xl mb-4"></div>
- <h3 class="font-bold text-lg mb-2">Teeth Whitening</h3>
- <p class="text-gray-600 text-sm">In-chair whitening, 2–4 shades brighter in one session. Safe and long-lasting.</p>
+ <div class="service-card">
+ <div class="service-icon-css" style="width:56px;height:56px;border-radius:50%;background:var(--accent,#2563eb);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;letter-spacing:.5px;font-family:sans-serif;flex-shrink:0">SVC</div>
+ <h3>Engine Repair</h3>
+ <p>Engine diagnostics, overhaul, gasket replacement, timing belt/chain service for all makes and models.</p>
+ <div class="service-price">Diagnosis 499</div>
  </div>
- <div class="card service-card">
- <div class="text-4xl mb-4"></div>
- <h3 class="font-bold text-lg mb-2">Dental Implants</h3>
- <p class="text-gray-600 text-sm">Permanent tooth replacement that looks and feels completely natural. Lifetime solution.</p>
+ <div class="service-card">
+ <div class="service-icon-css" style="width:56px;height:56px;border-radius:50%;background:var(--accent,#2563eb);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;letter-spacing:.5px;font-family:sans-serif;flex-shrink:0">CST</div>
+ <h3>Denting & Painting</h3>
+ <p>Scratch removal, panel denting, full-body or spot painting with original colour matching and baked finish.</p>
+ <div class="service-price">From 2,500/panel</div>
  </div>
- <div class="card service-card">
- <div class="text-4xl mb-4"></div>
- <h3 class="font-bold text-lg mb-2">Kids Dentistry</h3>
- <p class="text-gray-600 text-sm">Gentle, fear-free care for children aged 3–16. We make dental visits fun!</p>
+ <div class="service-card">
+ <div class="service-icon-css" style="width:56px;height:56px;border-radius:50%;background:var(--accent,#2563eb);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;letter-spacing:.5px;font-family:sans-serif;flex-shrink:0">SVC</div>
+ <h3>AC Service & Repair</h3>
+ <p>Gas refilling, compressor service, condenser cleaning, evaporator repair — cool cabin guaranteed.</p>
+ <div class="service-price">From 899</div>
  </div>
- <div class="card service-card">
- <div class="text-4xl mb-4"></div>
- <h3 class="font-bold text-lg mb-2">Root Canal</h3>
- <p class="text-gray-600 text-sm">Pain-free RCT using rotary endodontics. Most cases resolved in a single visit.</p>
+ <div class="service-card">
+ <div class="service-icon">⚡</div>
+ <h3>Electrical & ECU</h3>
+ <p>Battery replacement, alternator repair, ECU diagnostics, wiring faults, sensor replacement.</p>
+ <div class="service-price">From 699</div>
  </div>
- <div class="card service-card">
- <div class="text-4xl mb-4"></div>
- <h3 class="font-bold text-lg mb-2">Smile Makeover</h3>
- <p class="text-gray-600 text-sm">Veneers, bonding & clear aligners. Transform your confidence in just a few weeks.</p>
+ <div class="service-card">
+ <div class="service-icon-css" style="width:56px;height:56px;border-radius:50%;background:var(--accent,#2563eb);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;letter-spacing:.5px;font-family:sans-serif;flex-shrink:0">SVC</div>
+ <h3>Wheel Alignment & Balancing</h3>
+ <p>Computer-aided 4-wheel alignment, dynamic balancing, tyre rotation using Hofmann equipment.</p>
+ <div class="service-price">799 complete</div>
  </div>
+ <div class="service-card">
+ <div class="service-icon-css" style="width:56px;height:56px;border-radius:50%;background:var(--accent,#2563eb);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;letter-spacing:.5px;font-family:sans-serif;flex-shrink:0">SVC</div>
+ <h3>Brake Service</h3>
+ <p>Brake pad replacement, disc resurfacing, drum brake overhaul, brake fluid flush for all cars.</p>
+ <div class="service-price">From 1,499</div>
  </div>
+ <div class="service-card">
+ <div class="service-icon-css" style="width:56px;height:56px;border-radius:50%;background:var(--accent,#2563eb);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;letter-spacing:.5px;font-family:sans-serif;flex-shrink:0">SVC</div>
+ <h3>Insurance Claim Work</h3>
+ <p>Cashless & reimbursement claim support. We work with all major insurers — direct settlement available.</p>
+ <div class="service-price">Zero paperwork for you</div>
  </div>
-</section>
-
-<!-- STATS -->
-<section class="bg-light-teal py-20 px-4">
- <div class="max-w-6xl mx-auto text-center">
- <div class="section-title">Why Pune Trusts Bright Smile</div>
- <div class="section-sub">Numbers that speak for themselves.</div>
- <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
- <div>
- <div class="stat-num" id="stat1">0</div>
- <div class="text-gray-600 font-medium">Happy Patients</div>
- </div>
- <div>
- <div class="stat-num" id="stat2">0</div>
- <div class="text-gray-600 font-medium">Years Experience</div>
- </div>
- <div>
- <div class="stat-num" id="stat3">0</div>
- <div class="text-gray-600 font-medium">Google Rating</div>
- </div>
- <div>
- <div class="stat-num" id="stat4">0</div>
- <div class="text-gray-600 font-medium">Hr Appointment</div>
- </div>
- </div>
- <div class="grid md:grid-cols-3 gap-6">
- <div class="bg-white rounded-xl p-6 shadow-sm">
- <div class="text-teal text-2xl mb-3"></div>
- <h4 class="font-bold mb-1">No Waiting Lines</h4>
- <p class="text-gray-600 text-sm">Book online and arrive exactly on time. Your appointment is yours alone.</p>
- </div>
- <div class="bg-white rounded-xl p-6 shadow-sm">
- <div class="text-teal text-2xl mb-3"></div>
- <h4 class="font-bold mb-1">Transparent Pricing</h4>
- <p class="text-gray-600 text-sm">No hidden charges. We discuss costs upfront so there are zero surprises.</p>
- </div>
- <div class="bg-white rounded-xl p-6 shadow-sm">
- <div class="text-teal text-2xl mb-3"></div>
- <h4 class="font-bold mb-1">Latest Technology</h4>
- <p class="text-gray-600 text-sm">Digital X-rays, painless anaesthesia, and modern equipment for your comfort.</p>
- </div>
+ <div class="service-card">
+ <div class="service-icon-css" style="width:56px;height:56px;border-radius:50%;background:var(--accent,#2563eb);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;letter-spacing:.5px;font-family:sans-serif;flex-shrink:0">INS</div>
+ <h3>Pre-Sale Inspection</h3>
+ <p>Comprehensive 100-point check before you buy or sell a used car. Detailed report provided.</p>
+ <div class="service-price">999 full report</div>
  </div>
  </div>
 </section>
 
-<!-- ABOUT DOCTOR -->
-<section id="about" class="py-20 px-4">
- <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
- <div class="flex-shrink-0">
- <img src="https://randomuser.me/api/portraits/women/44.jpg" 
- alt="Dr. Priya Joshi" class="rounded-full w-48 h-48 object-cover border-4 border-teal shadow-xl">
+<!-- PACKAGES -->
+<section id="packages" style="background: var(--surface);">
+ <div class="text-center">
+ <div class="section-label">Service Packages</div>
+ <div class="section-title">Pick Your Plan</div>
+ <p class="section-sub">Transparent, all-inclusive packages — no hidden charges, ever. GST included.</p>
  </div>
- <div id="about-text">
- <div class="text-sm font-semibold teal uppercase tracking-wide mb-2">Meet Your Dentist</div>
- <h2 class="text-3xl font-bold mb-4">Dr. Priya Joshi</h2>
- <p class="text-gray-600 mb-4 text-lg">
- Dr. Priya Joshi is a BDS, MDS graduate with 15 years of experience in restorative and cosmetic dentistry. She founded Bright Smile Dental in 2011 with one mission: make quality dental care accessible to every family in Kothrud.
- </p>
- <blockquote class="border-l-4 border-teal pl-4 italic text-gray-500 mb-6">
- "I believe every patient deserves a smile they're proud of — and treatments that don't hurt their pocket or their confidence."
- </blockquote>
- <div class="flex flex-wrap gap-4 text-sm">
- <span class="bg-light-teal px-3 py-2 rounded-full"> BDS, MDS — Pune University</span>
- <span class="bg-light-teal px-3 py-2 rounded-full"> 15 Years Experience</span>
- <span class="bg-light-teal px-3 py-2 rounded-full">Kothrud, Pune</span>
+ <div class="packages-grid">
+ <div class="package-card">
+ <div class="package-name">Silver Service</div>
+ <div class="package-price">1,799 <span>onwards</span></div>
+ <div class="package-tagline">Basic upkeep for daily drivers</div>
+ <ul class="package-items">
+ <li>Engine oil + filter change</li>
+ <li>Air filter check/replace</li>
+ <li>Brake fluid top-up</li>
+ <li>Tyre pressure check</li>
+ <li>Battery terminal cleaning</li>
+ <li>20-point inspection report</li>
+ </ul>
+ <a href="#book" class="btn-book outline">Book Silver</a>
+ </div>
+ <div class="package-card featured">
+ <div class="package-badge">1 out of 5 Most Popular</div>
+ <div class="package-name">Gold Service</div>
+ <div class="package-price">3,499 <span>onwards</span></div>
+ <div class="package-tagline">Complete care every 10,000 km</div>
+ <ul class="package-items">
+ <li>Everything in Silver</li>
+ <li>Spark plug inspection/replace</li>
+ <li>AC filter cleaning</li>
+ <li>Wheel alignment & balancing</li>
+ <li>Under-chassis inspection</li>
+ <li>Brake pad wear check</li>
+ <li>50-point inspection + report</li>
+ <li>Free pick-up & drop</li>
+ </ul>
+ <a href="#book" class="btn-book">Book Gold</a>
+ </div>
+ <div class="package-card">
+ <div class="package-name">Platinum Service</div>
+ <div class="package-price">5,999 <span>onwards</span></div>
+ <div class="package-tagline">Full annual overhaul service</div>
+ <ul class="package-items">
+ <li>Everything in Gold</li>
+ <li>Coolant flush & refill</li>
+ <li>Brake fluid replacement</li>
+ <li>Fuel injector cleaning</li>
+ <li>Suspension inspection</li>
+ <li>Interior & exterior wash</li>
+ <li>AC deep cleaning</li>
+ <li>6-month service warranty</li>
+ <li>Priority free pick-up & drop</li>
+ </ul>
+ <a href="#book" class="btn-book outline">Book Platinum</a>
+ </div>
+ </div>
+</section>
+
+<!-- WHY US -->
+<section>
+ <div class="text-center">
+ <div class="section-label">Why SpeedFix</div>
+ <div class="section-title">What Makes Us Different</div>
+ </div>
+ <div class="why-grid">
+ <div class="why-item">
+ <div class="why-icon"></div>
+ <h4>Live WhatsApp Updates</h4>
+ <p>Real-time photos and updates of your car's service sent directly to your WhatsApp. No surprises, no guesswork.</p>
+ </div>
+ <div class="why-item">
+ <div class="why-icon"></div>
+ <h4>Transparent Pricing</h4>
+ <p>We quote before we touch. Detailed job card with part costs and labour charges — nothing added without your approval.</p>
+ </div>
+ <div class="why-item">
+ <div class="why-icon"></div>
+ <h4>Genuine Parts Only</h4>
+ <p>We use OEM or manufacturer-approved parts exclusively. No cheap local substitutes that fail in 3 months.</p>
+ </div>
+ <div class="why-item">
+ <div class="why-icon"></div>
+ <h4>Certified Technicians</h4>
+ <p>All mechanics are ITI/diploma certified with 5+ years of experience on your specific car brand.</p>
+ </div>
+ <div class="why-item">
+ <div class="why-icon"></div>
+ <h4>6-Month Warranty</h4>
+ <p>All repair work carries a 6-month/10,000 km warranty. If it fails, we fix it free — no questions asked.</p>
+ </div>
+ <div class="why-item">
+ <div class="why-icon"></div>
+ <h4>Free Pick-up & Drop</h4>
+ <p>Can't bring your car in? We come to you. Free collection and delivery within 3 km of our workshop.</p>
+ </div>
+ </div>
+</section>
+
+<!-- TEAM -->
+<section id="team" style="background: var(--surface);">
+ <div class="text-center">
+ <div class="section-label">Our Experts</div>
+ <div class="section-title">Meet the Team</div>
+ <p class="section-sub">Certified professionals who treat your car like their own.</p>
+ </div>
+ <div class="team-grid">
+ <div class="team-card">
+ <div class="team-img"></div>
+ <div class="team-info">
+ <h4>Rajan Sharma</h4>
+ <div class="role">Workshop Head & Engine Expert</div>
+ <p>18 yrs experience. Maruti Suzuki certified master technician. Specialises in complex engine diagnostics.</p>
+ </div>
+ </div>
+ <div class="team-card">
+ <div class="team-img"></div>
+ <div class="team-info">
+ <h4>Nilesh Patil</h4>
+ <div class="role">Denting & Painting Specialist</div>
+ <p>12 yrs in bodywork. Runs our paint booth with computerised colour matching. Award-winning finish quality.</p>
+ </div>
+ </div>
+ <div class="team-card">
+ <div class="team-img">❄</div>
+ <div class="team-info">
+ <h4>Sunil Jadhav</h4>
+ <div class="role">AC & Electrical Technician</div>
+ <p>10 yrs experience. Expert in AC systems and ECU diagnostics across all brands. Honda-certified.</p>
+ </div>
+ </div>
+ <div class="team-card">
+ <div class="team-img">⚙</div>
+ <div class="team-info">
+ <h4>Akash Kulkarni</h4>
+ <div class="role">Alignment & Suspension Expert</div>
+ <p>8 yrs experience. Trained on Hofmann alignment equipment. Specialises in suspension and steering systems.</p>
  </div>
  </div>
  </div>
 </section>
 
 <!-- TESTIMONIALS -->
-<section id="testimonials" class="bg-gray-50 py-20 px-4">
- <div class="max-w-6xl mx-auto text-center">
- <div class="section-title">What Our Patients Say</div>
- <div class="text-yellow-400 text-2xl mb-2">5 out of 5</div>
- <div class="text-gray-500 mb-10">4.9 / 5 — Based on 200+ Google Reviews</div>
- <div class="grid md:grid-cols-3 gap-6">
- <div class="card testimonial-card">
- <div class="text-yellow-400 mb-3">5 out of 5</div>
- <p class="text-gray-700 italic mb-4">"I was terrified of dentists. Dr. Joshi made my root canal completely painless. Booked my family's checkups the same week."</p>
- <div class="font-semibold teal">— Rahul M., Kothrud</div>
+<section id="reviews">
+ <div class="text-center">
+ <div class="section-label">Customer Reviews</div>
+ <div class="section-title">What Our Customers Say</div>
+ <p class="section-sub">Over 6,000 satisfied car owners in Pune trust SpeedFix Auto.</p>
  </div>
- <div class="card testimonial-card">
- <div class="text-yellow-400 mb-3">5 out of 5</div>
- <p class="text-gray-700 italic mb-4">"Best teeth whitening in Pune. Done in one hour, results are incredible. Highly recommend for anyone with a wedding coming up!"</p>
- <div class="font-semibold teal">— Sneha K., Baner</div>
+ <div class="testimonials-grid">
+ <div class="testimonial-card">
+ <div class="stars">★★★★★ 5/5</div>
+ <p>"Took my Swift for AC repair — Sunil diagnosed the issue in 20 minutes, quoted upfront, and finished same day. Got WhatsApp updates with photos throughout. Genuinely the most transparent workshop I've been to in Pune."</p>
+ <div class="reviewer">
+ <div class="reviewer-avatar">AR</div>
+ <div class="reviewer-info">
+ <h5>Amol Rane</h5>
+ <p>Maruti Swift Owner, Kothrud</p>
  </div>
- <div class="card testimonial-card">
- <div class="text-yellow-400 mb-3">5 out of 5</div>
- <p class="text-gray-700 italic mb-4">"Brought my 6-year-old who was scared of the dentist. The staff was so patient and kind. My son actually asked to come back!"</p>
- <div class="font-semibold teal">— Anjali P., Karve Nagar</div>
+ </div>
+ </div>
+ <div class="testimonial-card">
+ <div class="stars">★★★★★ 5/5</div>
+ <p>"Had a bad accident near FC Road. SpeedFix handled the complete insurance claim, coordinated with National Insurance, and returned my Honda City looking brand new. The denting-painting work is flawless — you can't tell where the damage was."</p>
+ <div class="reviewer">
+ <div class="reviewer-avatar">PD</div>
+ <div class="reviewer-info">
+ <h5>Priya Deshpande</h5>
+ <p>Honda City Owner, Shivajinagar</p>
+ </div>
+ </div>
+ </div>
+ <div class="testimonial-card">
+ <div class="stars">★★★★★ 5/5</div>
+ <p>"Been bringing my Hyundai Creta here for 4 years. Rajan knows my car better than I do. Last time I came for a Gold service — they spotted a worn-out CV joint before it became a problem and fixed it at a fair price. This is what trust looks like."</p>
+ <div class="reviewer">
+ <div class="reviewer-avatar">SK</div>
+ <div class="reviewer-info">
+ <h5>Sandeep Kulkarni</h5>
+ <p>Hyundai Creta Owner, Baner</p>
+ </div>
  </div>
  </div>
  </div>
 </section>
 
-<!-- BOOK APPOINTMENT -->
-<section id="book" class="bg-teal py-20 px-4">
- <div class="max-w-4xl mx-auto text-center text-white">
- <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready for a Healthier Smile?</h2>
- <p class="text-teal-100 text-lg mb-10" style="color:#c8eeee;">Book your appointment today. We'll confirm within 2 hours. New patients welcome.</p>
- <div class="bg-white rounded-2xl p-8 text-left max-w-xl mx-auto shadow-2xl">
- <h3 class="font-bold text-gray-900 text-xl mb-6">Book Appointment</h3>
- <div class="grid md:grid-cols-2 gap-4 mb-4">
- <input type="text" placeholder="Your Name" class="border border-gray-200 rounded-lg px-4 py-3 w-full text-gray-900 focus:outline-none focus:border-teal">
- <input type="tel" placeholder="Phone Number" class="border border-gray-200 rounded-lg px-4 py-3 w-full text-gray-900 focus:outline-none focus:border-teal">
+<!-- BOOKING FORM -->
+<section id="book" style="background: var(--surface);">
+ <div class="text-center">
+ <div class="section-label">Book a Service</div>
+ <div class="section-title">Schedule Your Car's Service</div>
+ <p class="section-sub">Fill in the form — we'll confirm your slot via WhatsApp within 30 minutes.</p>
  </div>
- <select class="border border-gray-200 rounded-lg px-4 py-3 w-full text-gray-700 mb-4 focus:outline-none focus:border-teal">
- <option>Select Service</option>
- <option>Routine Checkup</option>
- <option>Teeth Cleaning</option>
- <option>Teeth Whitening</option>
- <option>Dental Implants</option>
- <option>Root Canal</option>
- <option>Smile Makeover</option>
- <option>Kids Dentistry</option>
+ <div class="form-bg">
+ <form onsubmit="return false;">
+ <div class="form-grid">
+ <div class="form-group">
+ <label>Your Name</label>
+ <input type="text" placeholder="Full name">
+ </div>
+ <div class="form-group">
+ <label>Phone / WhatsApp</label>
+ <input type="tel" placeholder="+91 XXXXX XXXXX">
+ </div>
+ <div class="form-group">
+ <label>Car Make</label>
+ <select>
+ <option value="">Select brand</option>
+ <option>Maruti Suzuki</option>
+ <option>Hyundai</option>
+ <option>Honda</option>
+ <option>Tata</option>
+ <option>Mahindra</option>
+ <option>Kia</option>
+ <option>Toyota</option>
+ <option>MG</option>
+ <option>Skoda</option>
+ <option>Volkswagen</option>
+ <option>Other</option>
  </select>
- <input type="date" class="border border-gray-200 rounded-lg px-4 py-3 w-full text-gray-700 mb-6 focus:outline-none focus:border-teal">
- <button class="btn-teal w-full text-center text-base py-3" onclick="alert('Thank you! We will confirm your appointment within 2 hours.')">
- Book My Appointment 
- </button>
- <div class="text-center mt-4">
- <a href="https://wa.me/919876543210" class="text-gray-600 hover:text-teal text-sm">
- Or WhatsApp us: +91-98765-43210
- </a>
+ </div>
+ <div class="form-group">
+ <label>Car Model & Year</label>
+ <input type="text" placeholder="e.g. Swift 2020">
+ </div>
+ <div class="form-group">
+ <label>Service Required</label>
+ <select>
+ <option value="">Select service</option>
+ <option>Silver Service (1,799)</option>
+ <option>Gold Service (3,499)</option>
+ <option>Platinum Service (5,999)</option>
+ <option>Engine Repair / Diagnostics</option>
+ <option>Denting & Painting</option>
+ <option>AC Service / Repair</option>
+ <option>Electrical / ECU</option>
+ <option>Brake Service</option>
+ <option>Insurance Claim Work</option>
+ <option>Wheel Alignment & Balancing</option>
+ <option>Other</option>
+ </select>
+ </div>
+ <div class="form-group">
+ <label>Preferred Date</label>
+ <input type="date">
+ </div>
+ <div class="form-group">
+ <label>Pickup Required?</label>
+ <select>
+ <option>I'll bring the car</option>
+ <option>Yes — free pickup (within 3 km)</option>
+ </select>
+ </div>
+ <div class="form-group">
+ <label>Address (for pickup)</label>
+ <input type="text" placeholder="Your locality in Pune">
+ </div>
+ <div class="form-group full">
+ <label>Describe the issue (optional)</label>
+ <textarea placeholder="Any sounds, warning lights, or specific issues you've noticed..."></textarea>
  </div>
  </div>
+ <button type="submit" class="form-submit">Confirm Service Booking</button>
+ <p style="text-align:center; margin-top: 12px; font-size: 0.8rem; color: var(--muted);">We'll confirm your slot via WhatsApp within 30 minutes</p>
+ </form>
  </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="py-20 px-4">
- <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
- <div>
- <h2 class="text-3xl font-bold mb-8">Find Us</h2>
- <div class="space-y-4 text-gray-600">
- <div class="flex items-start gap-3">
- 
- <div>
- <div class="font-semibold text-gray-900">Address</div>
- <div>Shop 12, Sai Arcade, Paud Road<br>Kothrud, Pune - 411038</div>
+<section>
+ <div class="section-label">Find Us</div>
+ <div class="section-title">Workshop Location & Hours</div>
+ <div class="contact-info">
+ <div class="contact-item">
+ <span class="label">Address</span>
+ <span class="value">17/B, Shivajinagar, Pune — 411005<br>(Near Sambhaji Park, Opposite Bank of India)</span>
+ </div>
+ <div class="contact-item">
+ <span class="label">Phone</span>
+ <span class="value">+91 20 1234 5678</span>
+ </div>
+ <div class="contact-item">
+ <span class="label">WhatsApp</span>
+ <span class="value">+91 98765 43210</span>
+ </div>
+ <div class="contact-item">
+ <span class="label">Email</span>
+ <span class="value">service@speedfixauto.in</span>
  </div>
  </div>
- <div class="flex items-start gap-3">
- 
- <div>
- <div class="font-semibold text-gray-900">Phone</div>
- <div>020-1234-5678 | +91-98765-43210</div>
- </div>
- </div>
- <div class="flex items-start gap-3">
- 
- <div>
- <div class="font-semibold text-gray-900">Email</div>
- <div>brightsmile.kothrud@gmail.com</div>
- </div>
- </div>
- <div class="flex items-start gap-3">
- <span class="text-xl"></span>
- <div>
- <div class="font-semibold text-gray-900">Hours</div>
- <div>Mon–Sat: 10:00 AM – 8:00 PM<br>Sunday: 10:00 AM – 1:00 PM</div>
- </div>
- </div>
- </div>
- </div>
- <div>
- <iframe 
- src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.8!2d73.8139!3d18.5019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zS290aHJ1ZCwgUHVuZQ!5e0!3m2!1sen!2sin!4v1"
- width="100%" height="300" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy">
- </iframe>
- </div>
- </div>
+ <table class="hours-table">
+ <tr><td>Monday – Saturday</td><td><strong>9:00 AM – 8:00 PM</strong></td></tr>
+ <tr><td>Sunday</td><td><strong>9:00 AM – 3:00 PM</strong> (Breakdown only)</td></tr>
+ <tr><td>Emergency Breakdown</td><td><strong>24×7</strong> — WhatsApp only</td></tr>
+ </table>
 </section>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/919823011001?text=Hi%20SpeedFix%2C%20I%20need%20to%20book%20a%20car%20service" class="wa-float" target="_blank">WhatsApp</a>
 
 <!-- FOOTER -->
-
-<style>
-.faq-section { padding: 60px 5%; max-width: 800px; margin: 0 auto; }
-.faq-section h2 { font-size: 2rem; font-weight: 800; margin-bottom: 32px; text-align: center; color: #1A1A1A; }
-.faq-item { border-bottom: 1px solid #e0e0e0; }
-.faq-item summary { padding: 18px 0; font-size: 1rem; font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; color: #1A1A1A; }
-.faq-item summary::-webkit-details-marker { display: none; }
-.faq-item summary::after { content: '+'; font-size: 1.4rem; font-weight: 300; transition: transform 0.2s; }
-.faq-item[open] summary::after { content: '−'; }
-.faq-item .faq-answer { padding: 0 0 18px; font-size: 0.92rem; line-height: 1.7; color: #555; }
-</style>
-<section class="faq-section" id="faq">
- <h2>Frequently Asked Questions</h2>
- <div class="faq-container">
- <details class="faq-item">
- <summary>What car services do you offer at your Kothrud workshop?</summary>
- <div class="faq-answer">We provide comprehensive car services including regular maintenance, engine diagnostics, brake repair, AC servicing, suspension work, and body painting. Our Kothrud workshop handles all major brands. Customers from Warje, Bavdhan, and Karve Nagar find us convenient for quick, reliable repairs.</div>
- </details>
- <details class="faq-item">
- <summary>How much does a basic car service cost in Pune?</summary>
- <div class="faq-answer">A basic service with oil change, filter replacement, and multi-point inspection starts at 2,500 for hatchbacks and 3,500 for sedans and SUVs. We use genuine or equivalent quality parts and provide transparent billing with no surprise charges at the end.</div>
- </details>
- <details class="faq-item">
- <summary>Do you offer doorstep car pickup for servicing?</summary>
- <div class="faq-answer">Yes, we offer free pickup and drop within a 5 km radius of our Kothrud center. For areas like Hinjewadi, Baner, and Aundh, a nominal pickup charge applies. Just book your service online or call us, and our driver will collect your car at your convenience.</div>
- </details>
- <details class="faq-item">
- <summary>How long does a typical car service take at your Pune workshop?</summary>
- <div class="faq-answer">A basic service takes about three to four hours. Major services or repairs may require a full day. We provide real-time updates via WhatsApp and have a comfortable waiting area with WiFi if you prefer to wait at our Kothrud service center.</div>
- </details>
- <details class="faq-item">
- <summary>Can you service all car brands or only specific ones?</summary>
- <div class="faq-answer">We service all major car brands including Maruti, Hyundai, Tata, Honda, Toyota, Volkswagen, Skoda, and luxury brands like BMW and Mercedes. Our technicians are trained and certified, with specialized diagnostic tools for each manufacturer's systems.</div>
- </details>
- </div>
-</section>
-
-<footer class="py-12 px-4">
- <div class="max-w-6xl mx-auto">
- <div class="flex flex-col md:flex-row justify-between items-center gap-6">
- <div>
- <div class="flex items-center gap-2 mb-2">
- 
- <span class="text-white font-bold">Bright Smile Dental Clinic</span>
- </div>
- <div class="text-gray-500 text-sm italic">"Your smile is our mission."</div>
- </div>
- <div class="flex gap-6 text-sm text-gray-400">
- <a href="#services" class="hover:text-white">Services</a>
- <a href="#about" class="hover:text-white">About</a>
- <a href="#testimonials" class="hover:text-white">Patients</a>
- <a href="#book" class="hover:text-white">Book</a>
- <a href="#contact" class="hover:text-white">Contact</a>
- </div>
- </div>
- <hr class="border-gray-700 my-6">
- <div class="flex flex-col md:flex-row justify-between text-sm text-gray-500">
- <div>© 2026 Bright Smile Dental Clinic. All rights reserved.</div>
- <div>Designed by <span style="color:#F4A832;">DentWeb</span> · Powered by Invictus AI</div>
- </div>
- </div>
+<footer>
+ <div>© 2026 SpeedFix Auto Service Pvt. Ltd. | Shivaji Nagar, Pune | GST: 27AABCS1234F1Z5</div>
+ <div class="powered">Powered by <a href="https://invictus-ai.in" target="_blank">Invictus AI ⚡</a></div>
 </footer>
 
-<script>
- gsap.registerPlugin(ScrollTrigger);
 
- // Hero animations
- gsap.timeline()
- .from("#hero-text> *", { opacity: 0, y: 30, stagger: 0.15, duration: 0.7, ease: "power2.out" });
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/919823011001?text=Hello%2C%20I%20found%20your%20website%20and%20would%20like%20to%20enquire." 
+       target="_blank" rel="noopener"
+       style="position:fixed;bottom:24px;right:24px;z-index:9999;background:#25D366;color:#fff;border-radius:50%;width:56px;height:56px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(37,211,102,0.5);text-decoration:none;font-size:28px;"
+       title="Chat on WhatsApp">💬</a>
 
- // Service cards
- gsap.from(".service-card", {
- scrollTrigger: { trigger: "#services", start: "top 80%" },
- opacity: 0, y: 40, stagger: 0.1, duration: 0.6, ease: "power2.out"
- });
-
- // Stats counter
- function animateCounter(id, target, suffix) {
- ScrollTrigger.create({
- trigger: "#stat1",
- start: "top 80%",
- once: true,
- onEnter: () => {
- gsap.to({val: 0}, {
- val: target,
- duration: 2,
- ease: "power2.out",
- onUpdate: function() {
- document.getElementById(id).textContent = Math.round(this.targets()[0].val) + suffix;
- }
- });
- }
- });
- }
- animateCounter("stat1", 2000, "+");
- animateCounter("stat2", 15, "+");
- animateCounter("stat3", 4.9, "1 out of 5");
- animateCounter("stat4", 48, "h");
-
- // About
- gsap.from("#about-text> *", {
- scrollTrigger: { trigger: "#about", start: "top 75%" },
- opacity: 0, x: 40, stagger: 0.15, duration: 0.6
- });
-
- // Testimonials
- gsap.from(".testimonial-card", {
- scrollTrigger: { trigger: "#testimonials", start: "top 80%" },
- opacity: 0, y: 30, stagger: 0.15, duration: 0.6
- });
-</script>
 </body>
 </html>

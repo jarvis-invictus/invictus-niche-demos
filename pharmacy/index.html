@@ -1,461 +1,712 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bright Smile Dental Clinic — Kothrud, Pune</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-<style>
- body { font-family: 'Inter', sans-serif; }
- h1,h2,h3,h4 { font-family: 'Poppins', sans-serif; }
- .teal { color: #0D7C7C; }
- .bg-teal { background-color: #0D7C7C; }
- .gold { color: #F4A832; }
- .bg-light-teal { background-color: #E8F5F5; }
- .btn-teal { background-color: #0D7C7C; color: white; padding: 12px 28px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
- .btn-teal:hover { background-color: #0a6b6b; transform: translateY(-1px); }
- .btn-outline { border: 2px solid #0D7C7C; color: #0D7C7C; padding: 10px 26px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
- .btn-outline:hover { background-color: #0D7C7C; color: white; }
- .card { background: white; border-radius: 12px; padding: 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); transition: all 0.2s; }
- .card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(13,124,124,0.15); }
- .hero-bg { background: linear-gradient(135deg, #f0fafa 0%, #e8f5f5 50%, #d4eef0 100%); }
- nav { position: sticky; top: 0; z-index: 100; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
- .stat-num { font-family: 'Poppins', sans-serif; font-size: 2.5rem; font-weight: 800; color: #0D7C7C; }
- .section-title { font-size: 2rem; font-weight: 700; color: #1A1A1A; margin-bottom: 0.5rem; }
- .section-sub { color: #666; font-size: 1.1rem; margin-bottom: 3rem; }
- footer { background: #1A1A1A; color: #ccc; }
-</style>
-<link rel="canonical" href="https://invictus-ai.in/demos/pharmacy.html">
-<meta property="og:image" content="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1200&q=80">
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>MedPlus Pharmacy | Trusted Medicines & Healthcare, Pune</title>
+<meta name="description" content="MedPlus Pharmacy in Pune. Trusted medicines & healthcare products. Prescription delivery, health supplements, affordable prices.">
+<meta name="keywords" content="pharmacy pune, medical store pune, online pharmacy pune, medicine delivery pune, chemist pune">
+<meta property="og:title" content="MedPlus Pharmacy | Trusted Medicines & Healthcare, Pune">
+<meta property="og:description" content="MedPlus Pharmacy in Pune. Trusted medicines & healthcare products. Prescription delivery, health supplements, affordable prices.">
+<meta property="og:type" content="website">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
- "@type": "FAQPage",
- "mainEntity": [
- {
- "@type": "Question",
- "name": "Do you offer home delivery for medicines in Pune?",
- "acceptedAnswer": {
- "@type": "Answer",
- "text": "Yes, we deliver medicines across Pune including Kothrud, Baner, Wakad, and Hinjewadi. Orders placed before 2 PM are delivered the same day. For recurring prescriptions, we offer auto-refill services so you never run out of essential medications."
- }
+ "@type": "Pharmacy",
+ "name": "MedPlus Pharmacy",
+ "address": {
+ "@type": "PostalAddress",
+ "addressLocality": "Pune",
+ "addressRegion": "Maharashtra",
+ "addressCountry": "IN"
  },
- {
- "@type": "Question",
- "name": "Can I get a discount on medicines at your Kothrud pharmacy?",
- "acceptedAnswer": {
- "@type": "Answer",
- "text": "We offer 10 to 20 percent discount on most prescription medicines and OTC products. Senior citizens get an additional 5 percent off. We also have a loyalty program where regular customers earn points redeemable on future purchases at our Kothrud store."
- }
- },
- {
- "@type": "Question",
- "name": "Do you stock ayurvedic and homeopathic medicines?",
- "acceptedAnswer": {
- "@type": "Answer",
- "text": "Yes, we carry a wide range of ayurvedic, homeopathic, and wellness products alongside allopathic medicines. Brands like Himalaya, Patanjali, Dabur, and SBL are available. Our pharmacists can help you find alternatives if you prefer natural remedies for common ailments."
- }
- },
- {
- "@type": "Question",
- "name": "Are your pharmacists available for consultation?",
- "acceptedAnswer": {
- "@type": "Answer",
- "text": "Our qualified pharmacists are available during all operating hours to answer questions about medications, dosages, interactions, and side effects. They also help with understanding prescriptions and suggesting OTC alternatives when appropriate. We operate from 8 AM to 10 PM every day."
- }
- },
- {
- "@type": "Question",
- "name": "Can I upload my prescription online and pick up later?",
- "acceptedAnswer": {
- "@type": "Answer",
- "text": "Absolutely. You can WhatsApp your prescription to us or upload it on our website. We will keep your order ready for pickup within an hour. This saves time especially for busy professionals from the Kothrud, Deccan, and Paud Road areas."
- }
- }
- ]
+ "url": "https://invictus-ai.in"
 }
 </script>
-</head>
-<body class="bg-white text-gray-900">
+ <style>
+ :root {
+ --green: #16a34a;
+ --green-light: #22c55e;
+ --green-dark: #15803d;
+ --navy: #0f172a;
+ --navy2: #1e293b;
+ --navy3: #334155;
+ --white: #f8fafc;
+ --gray: #94a3b8;
+ --accent: #0ea5e9;
+ }
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+ body { background: var(--navy); color: var(--white); font-family: 'Segoe UI', sans-serif; }
+ a { color: inherit; text-decoration: none; }
 
-<!-- NAVIGATION -->
+ /* NAV */
+ nav {
+ background: rgba(15,23,42,0.97);
+ border-bottom: 1px solid #1e3a5f;
+ padding: 0 5%;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ height: 70px;
+ position: sticky;
+ top: 0;
+ z-index: 100;
+ }
+ .logo { display: flex; align-items: center; gap: 10px; }
+ .logo-icon { width: 38px; height: 38px; background: var(--green); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 20px; }
+ .logo-text { font-size: 1.3rem; font-weight: 700; }
+ .logo-text span { color: var(--green-light); }
+ .nav-links { display: flex; gap: 28px; font-size: 0.9rem; color: var(--gray); }
+ .nav-links a:hover { color: var(--green-light); }
+ .nav-cta { background: var(--green); color: #fff; padding: 10px 20px; border-radius: 8px; font-weight: 600; font-size: 0.9rem; }
+ .nav-cta:hover { background: var(--green-dark); }
+
+ /* HERO */
+ .hero {
+ background: linear-gradient(135deg, #0f2a1a 0%, var(--navy) 60%);
+ padding: 80px 5% 70px;
+ display: flex;
+ align-items: center;
+ gap: 60px;
+ min-height: 520px;
+ }
+ .hero-content { flex: 1; }
+ .hero-badge {
+ display: inline-block;
+ background: rgba(22,163,74,0.15);
+ border: 1px solid var(--green);
+ color: var(--green-light);
+ padding: 6px 16px;
+ border-radius: 20px;
+ font-size: 0.8rem;
+ font-weight: 600;
+ margin-bottom: 20px;
+ letter-spacing: 1px;
+ }
+ .hero h1 { font-size: 2.8rem; line-height: 1.2; margin-bottom: 16px; }
+ .hero h1 span { color: var(--green-light); }
+ .hero p { font-size: 1.1rem; color: var(--gray); max-width: 480px; line-height: 1.7; margin-bottom: 32px; }
+ .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+ .btn-primary { background: var(--green); color: #fff; padding: 14px 28px; border-radius: 10px; font-weight: 700; font-size: 1rem; cursor: pointer; border: none; }
+ .btn-primary:hover { background: var(--green-dark); }
+ .btn-secondary { background: transparent; color: var(--white); padding: 14px 28px; border-radius: 10px; font-weight: 600; font-size: 1rem; border: 2px solid var(--navy3); cursor: pointer; }
+ .btn-secondary:hover { border-color: var(--green-light); color: var(--green-light); }
+ .hero-stats { display: flex; gap: 36px; margin-top: 40px; }
+ .stat { text-align: center; }
+ .stat-num { font-size: 1.8rem; font-weight: 800; color: var(--green-light); }
+ .stat-label { font-size: 0.75rem; color: var(--gray); }
+
+ .hero-img { flex: 1; max-width: 440px; }
+ .pharmacy-card {
+ background: var(--navy2);
+ border: 1px solid var(--navy3);
+ border-radius: 16px;
+ padding: 28px;
+ }
+ .pharmacy-card h3 { font-size: 1.1rem; margin-bottom: 20px; color: var(--green-light); }
+ .service-row { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(51,65,85,0.5); }
+ .service-row:last-child { border-bottom: none; }
+ .service-name { font-size: 0.9rem; }
+ .service-tag { font-size: 0.75rem; padding: 3px 10px; border-radius: 12px; font-weight: 600; }
+ .tag-avail { background: rgba(22,163,74,0.15); color: var(--green-light); }
+ .tag-express { background: rgba(14,165,233,0.15); color: var(--accent); }
+ .tag-free { background: rgba(234,179,8,0.15); color: #eab308; }
+
+ /* TRUST BAR */
+ .trust-bar {
+ background: var(--navy2);
+ border-top: 1px solid var(--navy3);
+ border-bottom: 1px solid var(--navy3);
+ padding: 20px 5%;
+ display: flex;
+ justify-content: space-around;
+ flex-wrap: wrap;
+ gap: 20px;
+ }
+ .trust-item { display: flex; align-items: center; gap: 10px; font-size: 0.9rem; color: var(--gray); }
+ .trust-icon { font-size: 1.3rem; }
+
+ /* SECTIONS */
+ section { padding: 70px 5%; }
+ .section-label { color: var(--green-light); font-size: 0.8rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
+ .section-title { font-size: 2rem; font-weight: 800; margin-bottom: 12px; }
+ .section-sub { color: var(--gray); font-size: 1rem; max-width: 500px; line-height: 1.6; margin-bottom: 40px; }
+
+ /* SERVICES GRID */
+ .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+ .service-card {
+ background: var(--navy2);
+ border: 1px solid var(--navy3);
+ border-radius: 14px;
+ padding: 24px;
+ transition: border-color 0.2s, transform 0.2s;
+ }
+ .service-card:hover { border-color: var(--green); transform: translateY(-3px); }
+ .service-icon { font-size: 2rem; margin-bottom: 14px; }
+ .service-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; }
+ .service-card p { font-size: 0.85rem; color: var(--gray); line-height: 1.6; }
+
+ /* DELIVERY */
+ .delivery-section { background: linear-gradient(135deg, #0f2a1a, var(--navy)); }
+ .delivery-wrap { display: flex; gap: 60px; align-items: center; }
+ .delivery-content { flex: 1; }
+ .delivery-cards { flex: 1; display: flex; flex-direction: column; gap: 16px; }
+ .del-card {
+ background: var(--navy2);
+ border: 1px solid var(--navy3);
+ border-radius: 12px;
+ padding: 20px 24px;
+ display: flex;
+ align-items: center;
+ gap: 18px;
+ }
+ .del-icon { font-size: 2rem; }
+ .del-card h4 { font-size: 1rem; font-weight: 700; }
+ .del-card p { font-size: 0.83rem; color: var(--gray); margin-top: 3px; }
+ .highlight { color: var(--green-light); }
+
+ /* MEDICINES UPLOAD */
+ .upload-section { background: var(--navy2); }
+ .upload-box {
+ border: 2px dashed var(--green);
+ border-radius: 16px;
+ padding: 50px 30px;
+ text-align: center;
+ max-width: 600px;
+ margin: 0 auto;
+ background: rgba(22,163,74,0.04);
+ }
+ .upload-box .icon { font-size: 3rem; margin-bottom: 16px; }
+ .upload-box h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 10px; }
+ .upload-box p { color: var(--gray); font-size: 0.9rem; margin-bottom: 24px; }
+ .upload-steps { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 24px; }
+ .step-item { text-align: center; }
+ .step-num { width: 36px; height: 36px; background: var(--green); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; margin: 0 auto 8px; }
+ .step-item p { font-size: 0.8rem; color: var(--gray); }
+
+ /* HEALTH PACKAGES */
+ .packages-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; }
+ .pkg-card {
+ background: var(--navy2);
+ border: 1px solid var(--navy3);
+ border-radius: 14px;
+ padding: 28px;
+ position: relative;
+ }
+ .pkg-card.popular { border-color: var(--green); }
+ .pkg-badge {
+ position: absolute;
+ top: -12px;
+ left: 50%;
+ transform: translateX(-50%);
+ background: var(--green);
+ color: #fff;
+ padding: 4px 14px;
+ border-radius: 12px;
+ font-size: 0.75rem;
+ font-weight: 700;
+ }
+ .pkg-card h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 6px; }
+ .pkg-card .price { font-size: 2rem; font-weight: 800; color: var(--green-light); }
+ .pkg-card .price span { font-size: 1rem; color: var(--gray); font-weight: 400; }
+ .pkg-features { margin: 20px 0; list-style: none; display: flex; flex-direction: column; gap: 10px; }
+ .pkg-features li { font-size: 0.88rem; color: var(--gray); display: flex; align-items: center; gap: 8px; }
+ .pkg-features li::before { content: ''; color: var(--green-light); font-weight: 700; }
+ .pkg-btn { width: 100%; padding: 12px; border-radius: 10px; font-weight: 700; cursor: pointer; border: none; font-size: 0.95rem; }
+ .pkg-btn.primary { background: var(--green); color: #fff; }
+ .pkg-btn.secondary { background: transparent; color: var(--white); border: 2px solid var(--navy3); }
+
+ /* TEAM */
+ .team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 24px; }
+ .team-card {
+ background: var(--navy2);
+ border: 1px solid var(--navy3);
+ border-radius: 14px;
+ padding: 28px 20px;
+ text-align: center;
+ }
+ .team-avatar { width: 72px; height: 72px; border-radius: 50%; background: var(--green-dark); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin: 0 auto 14px; border: 3px solid var(--green); }
+ .team-card h3 { font-size: 1rem; font-weight: 700; }
+ .team-card .role { font-size: 0.82rem; color: var(--green-light); margin: 4px 0; }
+ .team-card p { font-size: 0.8rem; color: var(--gray); }
+
+ /* REVIEWS */
+ .reviews-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+ .review-card {
+ background: var(--navy2);
+ border: 1px solid var(--navy3);
+ border-radius: 14px;
+ padding: 24px;
+ }
+ .stars { color: #f59e0b; font-size: 1.1rem; margin-bottom: 12px; }
+ .review-card p { font-size: 0.88rem; color: var(--gray); line-height: 1.6; margin-bottom: 16px; font-style: italic; }
+ .reviewer { display: flex; align-items: center; gap: 10px; }
+ .reviewer-avatar { width: 38px; height: 38px; border-radius: 50%; background: var(--green-dark); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; }
+ .reviewer-name { font-size: 0.88rem; font-weight: 600; }
+ .reviewer-since { font-size: 0.75rem; color: var(--gray); }
+
+ /* CONTACT */
+ .contact-section { background: var(--navy2); }
+ .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+ .contact-info h2 { font-size: 1.8rem; font-weight: 800; margin-bottom: 16px; }
+ .contact-info p { color: var(--gray); line-height: 1.7; margin-bottom: 24px; }
+ .contact-items { display: flex; flex-direction: column; gap: 16px; }
+ .contact-item { display: flex; align-items: flex-start; gap: 12px; }
+ .c-icon { font-size: 1.3rem; }
+ .c-label { font-size: 0.8rem; color: var(--gray); }
+ .c-value { font-size: 0.95rem; font-weight: 600; }
+ .contact-form { background: var(--navy); border: 1px solid var(--navy3); border-radius: 16px; padding: 30px; }
+ .form-row { margin-bottom: 16px; }
+ .form-row label { display: block; font-size: 0.82rem; color: var(--gray); margin-bottom: 6px; }
+ .form-row input, .form-row select, .form-row textarea {
+ width: 100%;
+ background: var(--navy2);
+ border: 1px solid var(--navy3);
+ border-radius: 8px;
+ padding: 12px 14px;
+ color: var(--white);
+ font-size: 0.9rem;
+ }
+ .form-row input:focus, .form-row select:focus, .form-row textarea:focus { outline: none; border-color: var(--green); }
+ .form-row textarea { resize: none; height: 80px; }
+ .form-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+ .submit-btn { width: 100%; padding: 14px; background: var(--green); color: #fff; border: none; border-radius: 10px; font-weight: 700; font-size: 1rem; cursor: pointer; margin-top: 8px; }
+ .submit-btn:hover { background: var(--green-dark); }
+
+ /* HOURS */
+ .hours-table { width: 100%; border-collapse: collapse; margin-top: 16px; }
+ .hours-table td { padding: 10px 0; border-bottom: 1px solid var(--navy3); font-size: 0.9rem; color: var(--gray); }
+ .hours-table td:last-child { text-align: right; color: var(--white); }
+ .open-badge { background: rgba(22,163,74,0.15); color: var(--green-light); padding: 2px 10px; border-radius: 12px; font-size: 0.8rem; }
+
+ /* FOOTER */
+ footer {
+ background: var(--navy2);
+ border-top: 1px solid var(--navy3);
+ padding: 40px 5% 20px;
+ }
+ .footer-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 30px; margin-bottom: 30px; }
+ .footer-col h4 { font-size: 0.9rem; font-weight: 700; color: var(--white); margin-bottom: 14px; }
+ .footer-col a { display: block; color: var(--gray); font-size: 0.85rem; margin-bottom: 8px; }
+ .footer-col a:hover { color: var(--green-light); }
+ .footer-bottom { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--navy3); padding-top: 16px; font-size: 0.8rem; color: var(--gray); flex-wrap: wrap; gap: 10px; }
+ .powered { color: var(--green-light); font-weight: 600; }
+
+ /* WHATSAPP FLOAT */
+ .wa-float {
+ position: fixed;
+ bottom: 24px;
+ right: 24px;
+ background: #25d366;
+ color: #fff;
+ width: 58px;
+ height: 58px;
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 1.7rem;
+ box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+ z-index: 200;
+ cursor: pointer;
+ text-decoration: none;
+ }
+ .wa-float:hover { transform: scale(1.08); }
+
+ @media (max-width: 768px) {
+ .hero { flex-direction: column; padding: 50px 5%; }
+ .hero h1 { font-size: 2rem; }
+ .delivery-wrap { flex-direction: column; }
+ .contact-grid { grid-template-columns: 1fr; }
+ .form-2col { grid-template-columns: 1fr; }
+ .nav-links { display: none; }
+ }
+ </style>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💊</text></svg>">
+  <link rel="canonical" href="https://invictus-niche-demos.vercel.app/pharmacy/">
+</head>
+<body>
+
+<!-- NAV -->
 <nav>
- <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
- <div class="flex items-center gap-2">
- 
- <div>
- <div class="font-bold text-lg teal leading-tight">Bright Smile Dental</div>
- <div class="text-xs text-gray-500">Kothrud, Pune</div>
+ <div class="logo">
+ <div class="service-icon-css" style="width:56px;height:56px;border-radius:50%;background:var(--accent,#2563eb);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;letter-spacing:.5px;font-family:sans-serif;flex-shrink:0">PHM</div>
+ <div class="logo-text">Med<span>Plus</span> Pharmacy</div>
  </div>
+ <div class="nav-links">
+ <a href="#services">Services</a>
+ <a href="#delivery">Delivery</a>
+ <a href="#packages">Health Packages</a>
+ <a href="#team">Team</a>
+ <a href="#contact">Contact</a>
  </div>
- <div class="hidden md:flex gap-8 text-sm font-medium text-gray-600">
- <a href="#services" class="hover:text-teal transition-colors">Services</a>
- <a href="#about" class="hover:text-teal transition-colors">About</a>
- <a href="#testimonials" class="hover:text-teal transition-colors">Patients</a>
- <a href="#contact" class="hover:text-teal transition-colors">Contact</a>
- </div>
- <a href="#book" class="btn-teal text-sm hidden md:block">Book Appointment </a>
- </div>
+ <a href="https://wa.me/919834011010" class="nav-cta">Order Now</a>
 </nav>
 
 <!-- HERO -->
-<section class="hero-bg py-20 px-4">
- <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
- <div class="flex-1" id="hero-text">
- <div class="inline-block bg-teal text-white text-xs font-semibold px-3 py-1 rounded-full mb-6 gold-text" style="background:#F4A832; color:#1a1a1a;">
- Trusted by 2,000+ families in Kothrud
+<section class="hero">
+ <div class="hero-content">
+ <div class="hero-badge"> LICENSED & TRUSTED PHARMACY — PUNE</div>
+ <h1>Your Health,<br /><span>Delivered Fast.</span><br />Right to Your Door.</h1>
+ <p>MedPlus Pharmacy — Pune's trusted source for genuine medicines, health supplements, and wellness products. Same-day delivery available. Upload prescription & get medicines in 2 hours.</p>
+ <div class="hero-actions">
+ <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})"> Upload Prescription</button>
+ <button class="btn-secondary" onclick="document.getElementById('delivery').scrollIntoView({behavior:'smooth'})"> Track Delivery</button>
  </div>
- <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
- Your Smile Deserves<br><span class="teal">the Best Care</span>
- </h1>
- <p class="text-lg text-gray-600 mb-8 max-w-lg">
- Advanced dental treatments in Kothrud, Pune. Painless procedures, modern technology, and a team that genuinely cares about your smile.
- </p>
- <div class="flex flex-wrap gap-4 mb-10">
- <a href="#book" class="btn-teal">Book Appointment </a>
- <a href="tel:02012345678" class="btn-outline">020-1234-5678</a>
- </div>
- <div class="flex flex-wrap gap-6 text-sm text-gray-600">
- <span>15+ Years Experience</span>
- <span>2,000+ Patients</span>
- <span>Painless Treatments</span>
- <span>Mon–Sat: 10AM–8PM</span>
+ <div class="hero-stats">
+ <div class="stat"><div class="stat-num">12+</div><div class="stat-label">Years Serving Pune</div></div>
+ <div class="stat"><div class="stat-num">50K+</div><div class="stat-label">Patients Served</div></div>
+ <div class="stat"><div class="stat-num">4.91 out of 5</div><div class="stat-label">Google Rating</div></div>
+ <div class="stat"><div class="stat-num">2 Hr</div><div class="stat-label">Express Delivery</div></div>
  </div>
  </div>
- <div class="flex-1 flex justify-center">
- <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=500&q=80" 
- alt="Modern dental clinic" class="rounded-2xl shadow-2xl w-full max-w-md object-cover" style="max-height:420px;">
+ <div class="hero-img">
+ <div class="pharmacy-card">
+ <h3>⚡ Quick Order Status</h3>
+ <div class="service-row"><span class="service-name"> Prescription Medicines</span><span class="service-tag tag-avail">Available</span></div>
+ <div class="service-row"><span class="service-name"> OTC / Generic Drugs</span><span class="service-tag tag-avail">In Stock</span></div>
+ <div class="service-row"><span class="service-name"> Surgical & Equipment</span><span class="service-tag tag-avail">Available</span></div>
+ <div class="service-row"><span class="service-name"> 2-Hour Express Delivery</span><span class="service-tag tag-express">⚡ Express</span></div>
+ <div class="service-row"><span class="service-name"> Home Sample Collection</span><span class="service-tag tag-express">Book Now</span></div>
+ <div class="service-row"><span class="service-name"> Health Checkup Packages</span><span class="service-tag tag-free"> Discounted</span></div>
  </div>
  </div>
 </section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+ <div class="trust-item"> Drug License No. MH-PH-2024-1892</div>
+ <div class="trust-item"> 100% Genuine Medicines — No Duplicates</div>
+ <div class="trust-item"> Cold Chain Maintained for Insulin & Biologics</div>
+ <div class="trust-item"> Insurance Billing Accepted</div>
+ <div class="trust-item"> Open 365 Days, 8 AM – 10 PM</div>
+</div>
 
 <!-- SERVICES -->
-<section id="services" class="py-20 px-4">
- <div class="max-w-6xl mx-auto text-center">
- <div class="section-title" id="services-title">Everything For Your Dental Health</div>
- <div class="section-sub">From routine cleanings to complete smile makeovers — all under one roof.</div>
- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
- <div class="card service-card">
- <div class="text-4xl mb-4"></div>
- <h3 class="font-bold text-lg mb-2">Teeth Cleaning</h3>
- <p class="text-gray-600 text-sm">Professional scaling & polishing. 45-min appointment. Recommended every 6 months.</p>
+<section id="services">
+ <div class="section-label">What We Offer</div>
+ <div class="section-title">Everything You Need for Your Health</div>
+ <div class="section-sub">From daily medications to specialized medical equipment, we stock over 10,000 products. Licensed pharmacists on duty at all times.</div>
+ <div class="services-grid">
+ <div class="service-card">
+ <div class="service-icon-css" style="width:56px;height:56px;border-radius:50%;background:var(--accent,#2563eb);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;letter-spacing:.5px;font-family:sans-serif;flex-shrink:0">PHM</div>
+ <h3>Prescription Medicines</h3>
+ <p>All major brands and generics. Upload your prescription digitally and get medicines prepared and delivered within 2 hours.</p>
  </div>
- <div class="card service-card">
- <div class="text-4xl mb-4"></div>
- <h3 class="font-bold text-lg mb-2">Teeth Whitening</h3>
- <p class="text-gray-600 text-sm">In-chair whitening, 2–4 shades brighter in one session. Safe and long-lasting.</p>
+ <div class="service-card">
+ <div class="service-icon-css" style="width:56px;height:56px;border-radius:50%;background:var(--accent,#2563eb);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;letter-spacing:.5px;font-family:sans-serif;flex-shrink:0">SVC</div>
+ <h3>OTC & Generic Drugs</h3>
+ <p>Wide range of over-the-counter medications, generics, vitamins, and supplements at up to 30% lower than MRP.</p>
  </div>
- <div class="card service-card">
- <div class="text-4xl mb-4"></div>
- <h3 class="font-bold text-lg mb-2">Dental Implants</h3>
- <p class="text-gray-600 text-sm">Permanent tooth replacement that looks and feels completely natural. Lifetime solution.</p>
+ <div class="service-card">
+ <div class="service-icon-css" style="width:56px;height:56px;border-radius:50%;background:var(--accent,#2563eb);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;letter-spacing:.5px;font-family:sans-serif;flex-shrink:0">MED</div>
+ <h3>Medical Devices & Equipment</h3>
+ <p>BP monitors, glucometers, nebulizers, pulse oximeters, surgical supplies — top brands including Omron and Accu-Chek.</p>
  </div>
- <div class="card service-card">
- <div class="text-4xl mb-4"></div>
- <h3 class="font-bold text-lg mb-2">Kids Dentistry</h3>
- <p class="text-gray-600 text-sm">Gentle, fear-free care for children aged 3–16. We make dental visits fun!</p>
+ <div class="service-card">
+ <div class="service-icon-css" style="width:56px;height:56px;border-radius:50%;background:var(--accent,#2563eb);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;letter-spacing:.5px;font-family:sans-serif;flex-shrink:0">SKN</div>
+ <h3>Ayurvedic & Homeopathic</h3>
+ <p>Full range of Dabur, Himalaya, Zandu, SBL, Dr. Reckeweg, and Patanjali products. Expert in-store guidance available.</p>
  </div>
- <div class="card service-card">
- <div class="text-4xl mb-4"></div>
- <h3 class="font-bold text-lg mb-2">Root Canal</h3>
- <p class="text-gray-600 text-sm">Pain-free RCT using rotary endodontics. Most cases resolved in a single visit.</p>
+ <div class="service-card">
+ <div class="service-icon-css" style="width:56px;height:56px;border-radius:50%;background:var(--accent,#2563eb);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;letter-spacing:.5px;font-family:sans-serif;flex-shrink:0">BBY</div>
+ <h3>Mother & Baby Care</h3>
+ <p>Baby formula, diapers, pediatric drops, prenatal vitamins, breast pumps, and all new mother essentials.</p>
  </div>
- <div class="card service-card">
- <div class="text-4xl mb-4"></div>
- <h3 class="font-bold text-lg mb-2">Smile Makeover</h3>
- <p class="text-gray-600 text-sm">Veneers, bonding & clear aligners. Transform your confidence in just a few weeks.</p>
+ <div class="service-card">
+ <div class="service-icon-css" style="width:56px;height:56px;border-radius:50%;background:var(--accent,#2563eb);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;letter-spacing:.5px;font-family:sans-serif;flex-shrink:0">SVC</div>
+ <h3>Cosmetics & Personal Care</h3>
+ <p>Dermatologically tested skincare, hair care, and personal hygiene products — original brands, genuine products.</p>
+ </div>
+ <div class="service-card">
+ <div class="service-icon-css" style="width:56px;height:56px;border-radius:50%;background:var(--accent,#2563eb);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;letter-spacing:.5px;font-family:sans-serif;flex-shrink:0">INJ</div>
+ <h3>Diabetic Care Section</h3>
+ <p>Dedicated insulin cold storage, diabetic footwear, blood sugar testing supplies, and certified counselling from our pharmacist.</p>
+ </div>
+ <div class="service-card">
+ <div class="service-icon-css" style="width:56px;height:56px;border-radius:50%;background:var(--accent,#2563eb);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;letter-spacing:.5px;font-family:sans-serif;flex-shrink:0">SVC</div>
+ <h3>Sports Nutrition & Wellness</h3>
+ <p>Protein powders, pre-workouts, multivitamins, and recovery supplements from Optimum Nutrition, MuscleTech, and more.</p>
+ </div>
+ </div>
+</section>
+
+<!-- DELIVERY -->
+<section class="delivery-section" id="delivery">
+ <div class="delivery-wrap">
+ <div class="delivery-content">
+ <div class="section-label">Delivery Options</div>
+ <div class="section-title">Medicines at Your Door — <span class="highlight">Fast & Safe</span></div>
+ <div class="section-sub">Never run out of critical medicines. Our delivery service covers all of Pune. Insulin and temperature-sensitive medicines delivered in cold packs.</div>
+ <div class="hero-stats" style="margin-top:0">
+ <div class="stat"><div class="stat-num">2 Hr</div><div class="stat-label">Express (within 5km)</div></div>
+ <div class="stat"><div class="stat-num">4 Hr</div><div class="stat-label">Standard Delivery</div></div>
+ <div class="stat"><div class="stat-num">Free</div><div class="stat-label">On orders 500+</div></div>
+ </div>
+ </div>
+ <div class="delivery-cards">
+ <div class="del-card">
+ <div class="del-icon">⚡</div>
+ <div><h4>Express 2-Hour Delivery</h4><p>Upload prescription WhatsApp confirmation delivered in 2 hrs. Available 8 AM – 8 PM, 50 fee within 5km.</p></div>
+ </div>
+ <div class="del-card">
+ <div class="del-icon"></div>
+ <div><h4>Subscription Refills</h4><p>Monthly auto-refill for chronic patients. Set up once — we remind you 3 days before and deliver on schedule. Never miss a dose.</p></div>
+ </div>
+ <div class="del-card">
+ <div class="del-icon"></div>
+ <div><h4>Cold Chain Delivery</h4><p>Insulin, biologics, and refrigerated medicines delivered in insulated cold packs with temperature logging. Patient safety first.</p></div>
+ </div>
+ <div class="del-card">
+ <div class="del-icon"></div>
+ <div><h4>Hospital & Clinic Supply</h4><p>Bulk supply to nursing homes, clinics, and hospitals. Credit facility available. Dedicated account manager assigned.</p></div>
  </div>
  </div>
  </div>
 </section>
 
-<!-- STATS -->
-<section class="bg-light-teal py-20 px-4">
- <div class="max-w-6xl mx-auto text-center">
- <div class="section-title">Why Pune Trusts Bright Smile</div>
- <div class="section-sub">Numbers that speak for themselves.</div>
- <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
- <div>
- <div class="stat-num" id="stat1">0</div>
- <div class="text-gray-600 font-medium">Happy Patients</div>
+<!-- PRESCRIPTION UPLOAD -->
+<section class="upload-section">
+ <div style="text-align:center; margin-bottom:40px;">
+ <div class="section-label">Upload & Order</div>
+ <div class="section-title">Get Medicines in 3 Easy Steps</div>
+ <div class="section-sub" style="margin: 0 auto;">Take a photo of your prescription and WhatsApp it to us. Simple as that.</div>
  </div>
- <div>
- <div class="stat-num" id="stat2">0</div>
- <div class="text-gray-600 font-medium">Years Experience</div>
- </div>
- <div>
- <div class="stat-num" id="stat3">0</div>
- <div class="text-gray-600 font-medium">Google Rating</div>
- </div>
- <div>
- <div class="stat-num" id="stat4">0</div>
- <div class="text-gray-600 font-medium">Hr Appointment</div>
+ <div class="upload-box">
+ <div class="icon"></div>
+ <h3>WhatsApp Your Prescription</h3>
+ <p>Send a clear photo of your doctor's prescription to our WhatsApp number. Our pharmacist will review, prepare, and confirm your order within 15 minutes.</p>
+ <a href="https://wa.me/919834011010?text=Hi%2C%20I%20want%20to%20order%20medicines.%20Here%20is%20my%20prescription%3A" class="btn-primary" style="display:inline-block; text-decoration:none;"> Send Prescription on WhatsApp</a>
+ <div class="upload-steps">
+ <div class="step-item"><div class="step-num">1</div><p>Take photo<br/>of prescription</p></div>
+ <div class="step-item"><div class="step-num">2</div><p>Send on<br/>WhatsApp</p></div>
+ <div class="step-item"><div class="step-num">3</div><p>We confirm<br/>& deliver</p></div>
  </div>
  </div>
- <div class="grid md:grid-cols-3 gap-6">
- <div class="bg-white rounded-xl p-6 shadow-sm">
- <div class="text-teal text-2xl mb-3"></div>
- <h4 class="font-bold mb-1">No Waiting Lines</h4>
- <p class="text-gray-600 text-sm">Book online and arrive exactly on time. Your appointment is yours alone.</p>
+</section>
+
+<!-- HEALTH PACKAGES -->
+<section id="packages">
+ <div class="section-label">Health Checkup Packages</div>
+ <div class="section-title">Preventive Health — At Home or In-Store</div>
+ <div class="section-sub">Get blood tests and health checkups at discounted rates. NABL-certified partner lab. Home sample collection available.</div>
+ <div class="packages-grid">
+ <div class="pkg-card">
+ <h3>Basic Wellness</h3>
+ <div class="price">599 <span>/ person</span></div>
+ <ul class="pkg-features">
+ <li>Complete Blood Count (CBC)</li>
+ <li>Blood Sugar (Fasting + PP)</li>
+ <li>Liver Function Test (LFT)</li>
+ <li>Kidney Function Test (KFT)</li>
+ <li>Urine Routine</li>
+ <li>Home sample collection</li>
+ </ul>
+ <button class="pkg-btn secondary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book Package</button>
  </div>
- <div class="bg-white rounded-xl p-6 shadow-sm">
- <div class="text-teal text-2xl mb-3"></div>
- <h4 class="font-bold mb-1">Transparent Pricing</h4>
- <p class="text-gray-600 text-sm">No hidden charges. We discuss costs upfront so there are zero surprises.</p>
+ <div class="pkg-card popular">
+ <div class="pkg-badge">1 out of 5 Most Popular</div>
+ <h3>Comprehensive Health</h3>
+ <div class="price">1,499 <span>/ person</span></div>
+ <ul class="pkg-features">
+ <li>Everything in Basic +</li>
+ <li>Lipid Profile (Cholesterol)</li>
+ <li>Thyroid (TSH, T3, T4)</li>
+ <li>HbA1c (Diabetes marker)</li>
+ <li>Vitamin B12 & D3</li>
+ <li>ECG + Doctor consultation</li>
+ <li>Priority report in 24 hrs</li>
+ </ul>
+ <button class="pkg-btn primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book Package</button>
  </div>
- <div class="bg-white rounded-xl p-6 shadow-sm">
- <div class="text-teal text-2xl mb-3"></div>
- <h4 class="font-bold mb-1">Latest Technology</h4>
- <p class="text-gray-600 text-sm">Digital X-rays, painless anaesthesia, and modern equipment for your comfort.</p>
+ <div class="pkg-card">
+ <h3>Senior Care Package</h3>
+ <div class="price">2,499 <span>/ person</span></div>
+ <ul class="pkg-features">
+ <li>Everything in Comprehensive +</li>
+ <li>Bone Density (Calcium, Phosphorus)</li>
+ <li>PSA (for men 50+)</li>
+ <li>CA-125 (for women 50+)</li>
+ <li>Chest X-Ray</li>
+ <li>Fundus Eye Exam</li>
+ <li>Cardiologist review</li>
+ <li>Home sample collection</li>
+ </ul>
+ <button class="pkg-btn secondary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book Package</button>
+ </div>
+ </div>
+</section>
+
+<!-- TEAM -->
+<section id="team" style="background: var(--navy2);">
+ <div class="section-label">Our Pharmacists</div>
+ <div class="section-title">Licensed Professionals You Can Trust</div>
+ <div class="section-sub">Every team member is a licensed pharmacist. No unqualified dispensing — ever.</div>
+ <div class="team-grid">
+ <div class="team-card">
+ <div class="service-icon-css" style="width:56px;height:56px;border-radius:50%;background:var(--accent,#2563eb);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;letter-spacing:.5px;font-family:sans-serif;flex-shrink:0">STF</div>
+ <h3>Rakesh Sharma</h3>
+ <div class="role">Pharm.D — Lead Pharmacist</div>
+ <p>15 years dispensing. Specialist in oncology and diabetic medications. DCI Registration: 08421</p>
+ </div>
+ <div class="team-card">
+ <div class="service-icon-css" style="width:56px;height:56px;border-radius:50%;background:var(--accent,#2563eb);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;letter-spacing:.5px;font-family:sans-serif;flex-shrink:0">STF</div>
+ <h3>Priya Menon</h3>
+ <div class="role">B.Pharm — Clinical Pharmacist</div>
+ <p>Expert in drug interaction checks and patient counselling. Specializes in pediatric and geriatric care.</p>
+ </div>
+ <div class="team-card">
+ <div class="service-icon-css" style="width:56px;height:56px;border-radius:50%;background:var(--accent,#2563eb);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;letter-spacing:.5px;font-family:sans-serif;flex-shrink:0">STF</div>
+ <h3>Suresh Patil</h3>
+ <div class="role">M.Pharm — Hospital Supply Head</div>
+ <p>Manages bulk hospital orders and cold chain logistics. 10+ years in hospital pharmacy operations.</p>
+ </div>
+ <div class="team-card">
+ <div class="service-icon-css" style="width:56px;height:56px;border-radius:50%;background:var(--accent,#2563eb);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;letter-spacing:.5px;font-family:sans-serif;flex-shrink:0">STF</div>
+ <h3>Anita Joshi</h3>
+ <div class="role">B.Pharm — OTC & Wellness Advisor</div>
+ <p>Ayurveda and homeopathy certified. Guides patients to the right OTC alternative when prescription not available.</p>
+ </div>
+ </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+ <div class="section-label">Patient Reviews</div>
+ <div class="section-title">What Pune Patients Say</div>
+ <div class="section-sub">Real feedback from patients who depend on us for their daily medicines.</div>
+ <div class="reviews-grid">
+ <div class="review-card">
+ <div class="stars">★★★★★ 5/5</div>
+ <p>"My father is diabetic and needs insulin daily. MedPlus delivers the insulin in cold packs right to our door — never missed a single day in 2 years. Cannot thank them enough."</p>
+ <div class="reviewer">
+ <div class="reviewer-avatar">RK</div>
+ <div><div class="reviewer-name">Rohan Kulkarni</div><div class="reviewer-since">Patient since 2022</div></div>
+ </div>
+ </div>
+ <div class="review-card">
+ <div class="stars">★★★★★ 5/5</div>
+ <p>"I uploaded a prescription at 9 AM and had my medicines by 11 AM. The pharmacist even called me to clarify one item before dispatching. That level of care is rare."</p>
+ <div class="reviewer">
+ <div class="reviewer-avatar">SD</div>
+ <div><div class="reviewer-name">Sneha Desai</div><div class="reviewer-since">Regular Customer</div></div>
+ </div>
+ </div>
+ <div class="review-card">
+ <div class="stars">★★★★★ 5/5</div>
+ <p>"Best pharmacy in Kothrud. They check drug interactions before handing out medicines — something my old chemist never did. Rakesh Sir is extremely knowledgeable."</p>
+ <div class="reviewer">
+ <div class="reviewer-avatar">AM</div>
+ <div><div class="reviewer-name">Amit More</div><div class="reviewer-since">Patient since 2021</div></div>
  </div>
  </div>
  </div>
 </section>
 
-<!-- ABOUT DOCTOR -->
-<section id="about" class="py-20 px-4">
- <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
- <div class="flex-shrink-0">
- <img src="https://randomuser.me/api/portraits/women/44.jpg" 
- alt="Dr. Priya Joshi" class="rounded-full w-48 h-48 object-cover border-4 border-teal shadow-xl">
- </div>
- <div id="about-text">
- <div class="text-sm font-semibold teal uppercase tracking-wide mb-2">Meet Your Dentist</div>
- <h2 class="text-3xl font-bold mb-4">Dr. Priya Joshi</h2>
- <p class="text-gray-600 mb-4 text-lg">
- Dr. Priya Joshi is a BDS, MDS graduate with 15 years of experience in restorative and cosmetic dentistry. She founded Bright Smile Dental in 2011 with one mission: make quality dental care accessible to every family in Kothrud.
- </p>
- <blockquote class="border-l-4 border-teal pl-4 italic text-gray-500 mb-6">
- "I believe every patient deserves a smile they're proud of — and treatments that don't hurt their pocket or their confidence."
- </blockquote>
- <div class="flex flex-wrap gap-4 text-sm">
- <span class="bg-light-teal px-3 py-2 rounded-full"> BDS, MDS — Pune University</span>
- <span class="bg-light-teal px-3 py-2 rounded-full"> 15 Years Experience</span>
- <span class="bg-light-teal px-3 py-2 rounded-full">Kothrud, Pune</span>
+<!-- CONTACT / ORDER FORM -->
+<section class="contact-section" id="contact">
+ <div class="contact-grid">
+ <div class="contact-info">
+ <div class="section-label">Contact Us</div>
+ <h2>Order, Book, or Walk In</h2>
+ <p>Place an order, book a health checkup, or just ask a question. Our pharmacist responds on WhatsApp within 10 minutes.</p>
+ <div class="contact-items">
+ <div class="contact-item"><div><div class="c-label">Store Address</div><div class="c-value">Shop 14, Paud Road, Kothrud, Pune — 411038</div></div></div>
+ <div class="contact-item"><div><div class="c-label">Phone / WhatsApp</div><div class="c-value">+91 98765 43210</div></div></div>
+ <div class="contact-item"><div><div class="c-label">Email</div><div class="c-value">orders@medpluspune.in</div></div></div>
+ <div class="contact-item"><div><div class="c-label">Store Hours</div>
+ <table class="hours-table">
+ <tr><td>Monday – Saturday</td><td>8:00 AM – 10:00 PM <span class="open-badge">OPEN</span></td></tr>
+ <tr><td>Sunday</td><td>9:00 AM – 9:00 PM <span class="open-badge">OPEN</span></td></tr>
+ <tr><td>Delivery Hours</td><td>8:00 AM – 8:00 PM</td></tr>
+ </table>
+ </div></div>
  </div>
  </div>
+ <div class="contact-form">
+ <h3 style="margin-bottom:20px;"> Order / Enquiry Form</h3>
+ <div class="form-2col">
+ <div class="form-row"><label>Your Name *</label><input type="text" placeholder="Full name" /></div>
+ <div class="form-row"><label>Phone Number *</label><input type="tel" placeholder="+91 XXXXX XXXXX" /></div>
  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section id="testimonials" class="bg-gray-50 py-20 px-4">
- <div class="max-w-6xl mx-auto text-center">
- <div class="section-title">What Our Patients Say</div>
- <div class="text-yellow-400 text-2xl mb-2">5 out of 5</div>
- <div class="text-gray-500 mb-10">4.9 / 5 — Based on 200+ Google Reviews</div>
- <div class="grid md:grid-cols-3 gap-6">
- <div class="card testimonial-card">
- <div class="text-yellow-400 mb-3">5 out of 5</div>
- <p class="text-gray-700 italic mb-4">"I was terrified of dentists. Dr. Joshi made my root canal completely painless. Booked my family's checkups the same week."</p>
- <div class="font-semibold teal">— Rahul M., Kothrud</div>
- </div>
- <div class="card testimonial-card">
- <div class="text-yellow-400 mb-3">5 out of 5</div>
- <p class="text-gray-700 italic mb-4">"Best teeth whitening in Pune. Done in one hour, results are incredible. Highly recommend for anyone with a wedding coming up!"</p>
- <div class="font-semibold teal">— Sneha K., Baner</div>
- </div>
- <div class="card testimonial-card">
- <div class="text-yellow-400 mb-3">5 out of 5</div>
- <p class="text-gray-700 italic mb-4">"Brought my 6-year-old who was scared of the dentist. The staff was so patient and kind. My son actually asked to come back!"</p>
- <div class="font-semibold teal">— Anjali P., Karve Nagar</div>
- </div>
- </div>
- </div>
-</section>
-
-<!-- BOOK APPOINTMENT -->
-<section id="book" class="bg-teal py-20 px-4">
- <div class="max-w-4xl mx-auto text-center text-white">
- <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready for a Healthier Smile?</h2>
- <p class="text-teal-100 text-lg mb-10" style="color:#c8eeee;">Book your appointment today. We'll confirm within 2 hours. New patients welcome.</p>
- <div class="bg-white rounded-2xl p-8 text-left max-w-xl mx-auto shadow-2xl">
- <h3 class="font-bold text-gray-900 text-xl mb-6">Book Appointment</h3>
- <div class="grid md:grid-cols-2 gap-4 mb-4">
- <input type="text" placeholder="Your Name" class="border border-gray-200 rounded-lg px-4 py-3 w-full text-gray-900 focus:outline-none focus:border-teal">
- <input type="tel" placeholder="Phone Number" class="border border-gray-200 rounded-lg px-4 py-3 w-full text-gray-900 focus:outline-none focus:border-teal">
- </div>
- <select class="border border-gray-200 rounded-lg px-4 py-3 w-full text-gray-700 mb-4 focus:outline-none focus:border-teal">
- <option>Select Service</option>
- <option>Routine Checkup</option>
- <option>Teeth Cleaning</option>
- <option>Teeth Whitening</option>
- <option>Dental Implants</option>
- <option>Root Canal</option>
- <option>Smile Makeover</option>
- <option>Kids Dentistry</option>
+ <div class="form-row"><label>Request Type</label>
+ <select>
+ <option>Medicine Order (prescription attached)</option>
+ <option>OTC / No Prescription</option>
+ <option>Health Checkup Package</option>
+ <option>Monthly Subscription Refill</option>
+ <option>Medical Equipment Enquiry</option>
+ <option>Hospital / Bulk Supply</option>
+ <option>General Question</option>
  </select>
- <input type="date" class="border border-gray-200 rounded-lg px-4 py-3 w-full text-gray-700 mb-6 focus:outline-none focus:border-teal">
- <button class="btn-teal w-full text-center text-base py-3" onclick="alert('Thank you! We will confirm your appointment within 2 hours.')">
- Book My Appointment 
- </button>
- <div class="text-center mt-4">
- <a href="https://wa.me/919876543210" class="text-gray-600 hover:text-teal text-sm">
- Or WhatsApp us: +91-98765-43210
- </a>
+ </div>
+ <div class="form-2col">
+ <div class="form-row"><label>Delivery Area / Pincode</label><input type="text" placeholder="Kothrud / 411038" /></div>
+ <div class="form-row"><label>Preferred Time</label>
+ <select>
+ <option>Morning (8-12 PM)</option>
+ <option>Afternoon (12-4 PM)</option>
+ <option>Evening (4-8 PM)</option>
+ <option>Pick up in store</option>
+ </select>
  </div>
  </div>
- </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="py-20 px-4">
- <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
- <div>
- <h2 class="text-3xl font-bold mb-8">Find Us</h2>
- <div class="space-y-4 text-gray-600">
- <div class="flex items-start gap-3">
- 
- <div>
- <div class="font-semibold text-gray-900">Address</div>
- <div>Shop 12, Sai Arcade, Paud Road<br>Kothrud, Pune - 411038</div>
- </div>
- </div>
- <div class="flex items-start gap-3">
- 
- <div>
- <div class="font-semibold text-gray-900">Phone</div>
- <div>020-1234-5678 | +91-98765-43210</div>
- </div>
- </div>
- <div class="flex items-start gap-3">
- 
- <div>
- <div class="font-semibold text-gray-900">Email</div>
- <div>brightsmile.kothrud@gmail.com</div>
- </div>
- </div>
- <div class="flex items-start gap-3">
- <span class="text-xl"></span>
- <div>
- <div class="font-semibold text-gray-900">Hours</div>
- <div>Mon–Sat: 10:00 AM – 8:00 PM<br>Sunday: 10:00 AM – 1:00 PM</div>
- </div>
- </div>
- </div>
- </div>
- <div>
- <iframe 
- src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.8!2d73.8139!3d18.5019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zS290aHJ1ZCwgUHVuZQ!5e0!3m2!1sen!2sin!4v1"
- width="100%" height="300" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy">
- </iframe>
+ <div class="form-row"><label>Message / Medicine List</label><textarea placeholder="List your medicines or describe your requirement..."></textarea></div>
+ <button class="submit-btn"> Submit Order Request</button>
+ <p style="font-size:0.78rem; color:var(--gray); text-align:center; margin-top:12px;">We'll respond on WhatsApp within 10 minutes</p>
  </div>
  </div>
 </section>
 
 <!-- FOOTER -->
-
-<style>
-.faq-section { padding: 60px 5%; max-width: 800px; margin: 0 auto; }
-.faq-section h2 { font-size: 2rem; font-weight: 800; margin-bottom: 32px; text-align: center; color: #1A1A1A; }
-.faq-item { border-bottom: 1px solid #e0e0e0; }
-.faq-item summary { padding: 18px 0; font-size: 1rem; font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; color: #1A1A1A; }
-.faq-item summary::-webkit-details-marker { display: none; }
-.faq-item summary::after { content: '+'; font-size: 1.4rem; font-weight: 300; transition: transform 0.2s; }
-.faq-item[open] summary::after { content: '−'; }
-.faq-item .faq-answer { padding: 0 0 18px; font-size: 0.92rem; line-height: 1.7; color: #555; }
-</style>
-<section class="faq-section" id="faq">
- <h2>Frequently Asked Questions</h2>
- <div class="faq-container">
- <details class="faq-item">
- <summary>Do you offer home delivery for medicines in Pune?</summary>
- <div class="faq-answer">Yes, we deliver medicines across Pune including Kothrud, Baner, Wakad, and Hinjewadi. Orders placed before 2 PM are delivered the same day. For recurring prescriptions, we offer auto-refill services so you never run out of essential medications.</div>
- </details>
- <details class="faq-item">
- <summary>Can I get a discount on medicines at your Kothrud pharmacy?</summary>
- <div class="faq-answer">We offer 10 to 20 percent discount on most prescription medicines and OTC products. Senior citizens get an additional 5 percent off. We also have a loyalty program where regular customers earn points redeemable on future purchases at our Kothrud store.</div>
- </details>
- <details class="faq-item">
- <summary>Do you stock ayurvedic and homeopathic medicines?</summary>
- <div class="faq-answer">Yes, we carry a wide range of ayurvedic, homeopathic, and wellness products alongside allopathic medicines. Brands like Himalaya, Patanjali, Dabur, and SBL are available. Our pharmacists can help you find alternatives if you prefer natural remedies for common ailments.</div>
- </details>
- <details class="faq-item">
- <summary>Are your pharmacists available for consultation?</summary>
- <div class="faq-answer">Our qualified pharmacists are available during all operating hours to answer questions about medications, dosages, interactions, and side effects. They also help with understanding prescriptions and suggesting OTC alternatives when appropriate. We operate from 8 AM to 10 PM every day.</div>
- </details>
- <details class="faq-item">
- <summary>Can I upload my prescription online and pick up later?</summary>
- <div class="faq-answer">Absolutely. You can WhatsApp your prescription to us or upload it on our website. We will keep your order ready for pickup within an hour. This saves time especially for busy professionals from the Kothrud, Deccan, and Paud Road areas.</div>
- </details>
+<footer>
+ <div class="footer-grid">
+ <div class="footer-col">
+ <div class="logo" style="margin-bottom:12px;">
+ <div class="service-icon-css" style="width:56px;height:56px;border-radius:50%;background:var(--accent,#2563eb);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;letter-spacing:.5px;font-family:sans-serif;flex-shrink:0">PHM</div>
+ <div class="logo-text">Med<span>Plus</span> Pharmacy</div>
  </div>
-</section>
-
-<footer class="py-12 px-4">
- <div class="max-w-6xl mx-auto">
- <div class="flex flex-col md:flex-row justify-between items-center gap-6">
- <div>
- <div class="flex items-center gap-2 mb-2">
- 
- <span class="text-white font-bold">Bright Smile Dental Clinic</span>
+ <p style="font-size:0.82rem; color:var(--gray); line-height:1.6;">Licensed pharmacy serving Pune since 2013. Genuine medicines, fast delivery, expert pharmacists.</p>
  </div>
- <div class="text-gray-500 text-sm italic">"Your smile is our mission."</div>
+ <div class="footer-col">
+ <h4>Services</h4>
+ <a href="#">Prescription Medicines</a>
+ <a href="#">OTC & Generics</a>
+ <a href="#">Home Delivery</a>
+ <a href="#">Health Packages</a>
+ <a href="#">Medical Equipment</a>
  </div>
- <div class="flex gap-6 text-sm text-gray-400">
- <a href="#services" class="hover:text-white">Services</a>
- <a href="#about" class="hover:text-white">About</a>
- <a href="#testimonials" class="hover:text-white">Patients</a>
- <a href="#book" class="hover:text-white">Book</a>
- <a href="#contact" class="hover:text-white">Contact</a>
+ <div class="footer-col">
+ <h4>Quick Links</h4>
+ <a href="#">Upload Prescription</a>
+ <a href="#">Monthly Refill Setup</a>
+ <a href="#">Track Your Order</a>
+ <a href="#">Insurance Billing</a>
+ <a href="#">Bulk / Hospital Supply</a>
+ </div>
+ <div class="footer-col">
+ <h4>Contact</h4>
+ <a href="tel:+919834011010"> +91 98765 43210</a>
+ <a href="https://wa.me/919834011010">WhatsApp Us</a>
+ <a href="#">Shop 14, Paud Road, Kothrud</a>
+ <a href="#">orders@medpluspune.in</a>
  </div>
  </div>
- <hr class="border-gray-700 my-6">
- <div class="flex flex-col md:flex-row justify-between text-sm text-gray-500">
- <div>© 2026 Bright Smile Dental Clinic. All rights reserved.</div>
- <div>Designed by <span style="color:#F4A832;">DentWeb</span> · Powered by Invictus AI</div>
- </div>
+ <div class="footer-bottom">
+ <span>© 2026 MedPlus Pharmacy, Pune. Drug License No. MH-PH-2024-1892. All rights reserved.</span>
+ <span class="powered">Powered by <a href="https://invictus-ai.in" style="color:var(--green-light);">Invictus AI</a></span>
  </div>
 </footer>
 
-<script>
- gsap.registerPlugin(ScrollTrigger);
+<!-- WHATSAPP FLOAT -->
+<a class="wa-float" href="https://wa.me/919834011010?text=Hi%2C%20I%20need%20medicines%20from%20MedPlus%20Pharmacy" target="_blank">WhatsApp</a>
 
- // Hero animations
- gsap.timeline()
- .from("#hero-text> *", { opacity: 0, y: 30, stagger: 0.15, duration: 0.7, ease: "power2.out" });
 
- // Service cards
- gsap.from(".service-card", {
- scrollTrigger: { trigger: "#services", start: "top 80%" },
- opacity: 0, y: 40, stagger: 0.1, duration: 0.6, ease: "power2.out"
- });
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/919834011010?text=Hello%2C%20I%20found%20your%20website%20and%20would%20like%20to%20enquire." 
+       target="_blank" rel="noopener"
+       style="position:fixed;bottom:24px;right:24px;z-index:9999;background:#25D366;color:#fff;border-radius:50%;width:56px;height:56px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(37,211,102,0.5);text-decoration:none;font-size:28px;"
+       title="Chat on WhatsApp">💬</a>
 
- // Stats counter
- function animateCounter(id, target, suffix) {
- ScrollTrigger.create({
- trigger: "#stat1",
- start: "top 80%",
- once: true,
- onEnter: () => {
- gsap.to({val: 0}, {
- val: target,
- duration: 2,
- ease: "power2.out",
- onUpdate: function() {
- document.getElementById(id).textContent = Math.round(this.targets()[0].val) + suffix;
- }
- });
- }
- });
- }
- animateCounter("stat1", 2000, "+");
- animateCounter("stat2", 15, "+");
- animateCounter("stat3", 4.9, "1 out of 5");
- animateCounter("stat4", 48, "h");
-
- // About
- gsap.from("#about-text> *", {
- scrollTrigger: { trigger: "#about", start: "top 75%" },
- opacity: 0, x: 40, stagger: 0.15, duration: 0.6
- });
-
- // Testimonials
- gsap.from(".testimonial-card", {
- scrollTrigger: { trigger: "#testimonials", start: "top 80%" },
- opacity: 0, y: 30, stagger: 0.15, duration: 0.6
- });
-</script>
 </body>
 </html>
