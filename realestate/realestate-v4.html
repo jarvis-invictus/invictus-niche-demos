@@ -1,0 +1,1599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HomeLink NRI Services — Invest in Pune from Anywhere</title>
+  <meta name="description" content="HomeLink NRI Services helps Non-Resident Indians buy, sell, and rent Pune properties remotely. FEMA compliance, POA management, legal paperwork — we handle everything." />
+  <meta name="keywords" content="NRI real estate Pune, buy property India from abroad, NRI property management Pune, FEMA compliance real estate, POA management Pune" />
+  <meta property="og:title" content="HomeLink NRI Services — Invest in India from Anywhere" />
+  <meta property="og:description" content="Buy, sell, or rent Pune properties from the USA, UK, UAE, Canada, or Australia. Complete NRI real estate solutions." />
+  <meta property="og:type" content="website" />
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "RealEstateAgent",
+      "name": "HomeLink NRI Services",
+      "description": "Specialized real estate services for Non-Resident Indians — buying, selling, renting, and managing Pune properties remotely.",
+      "url": "https://homelinknri.in",
+      "telephone": "+91-9922-333-444",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Office 302, Clover Centre, Viman Nagar",
+        "addressLocality": "Pune",
+        "addressRegion": "Maharashtra",
+        "postalCode": "411014",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 18.5679,
+        "longitude": 73.9143
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+          "opens": "09:00",
+          "closes": "19:00"
+        }
+      ],
+      "areaServed": ["Pune","Viman Nagar","Kharadi","Kalyani Nagar","Koregaon Park","Hadapsar"],
+      "sameAs": ["https://wa.me/919922333444"]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "HomeLink NRI Services",
+      "image": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200",
+      "telephone": "+91-9922-333-444",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Office 302, Clover Centre, Viman Nagar",
+        "addressLocality": "Pune",
+        "addressRegion": "Maharashtra",
+        "postalCode": "411014",
+        "addressCountry": "IN"
+      },
+      "priceRange": "₹₹₹",
+      "currenciesAccepted": "INR, USD, GBP, AED, CAD, AUD"
+    }
+  ]
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #1A3C6E;
+      --navy-dark: #122b52;
+      --navy-light: #234d8a;
+      --orange: #F47B20;
+      --orange-dark: #d96a12;
+      --orange-light: #f89248;
+      --white: #ffffff;
+      --gray-50: #f8fafc;
+      --gray-100: #f1f5f9;
+      --gray-200: #e2e8f0;
+      --gray-400: #94a3b8;
+      --gray-600: #475569;
+      --gray-800: #1e293b;
+      --text: #1e293b;
+      --radius: 12px;
+      --radius-lg: 20px;
+      --shadow: 0 4px 24px rgba(26,60,110,0.10);
+      --shadow-lg: 0 12px 48px rgba(26,60,110,0.16);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    /* ── NAVBAR ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(26,60,110,0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 0 5%;
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.3s ease;
+    }
+    nav.scrolled {
+      background: rgba(18,43,82,0.98);
+      box-shadow: 0 4px 30px rgba(0,0,0,0.2);
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .nav-logo-icon {
+      width: 38px; height: 38px;
+      background: var(--orange);
+      border-radius: 9px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+      font-weight: 800;
+      color: white;
+      flex-shrink: 0;
+    }
+    .nav-brand-text { display: flex; flex-direction: column; line-height: 1.1; }
+    .nav-brand-name { font-size: 16px; font-weight: 700; color: white; letter-spacing: -0.2px; }
+    .nav-brand-sub { font-size: 10px; font-weight: 500; color: rgba(255,255,255,0.55); letter-spacing: 1.5px; text-transform: uppercase; }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: rgba(255,255,255,0.78);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--orange-light); }
+    .nav-cta {
+      background: var(--orange) !important;
+      color: white !important;
+      padding: 8px 20px !important;
+      border-radius: 8px !important;
+      font-weight: 600 !important;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--orange-dark) !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; transition: all 0.3s; }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.35);
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(26,60,110,0.88) 0%, rgba(26,60,110,0.55) 60%, rgba(244,123,32,0.18) 100%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 120px 5% 80px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      width: 100%;
+    }
+    .hero-text {}
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(244,123,32,0.18);
+      border: 1px solid rgba(244,123,32,0.4);
+      color: var(--orange-light);
+      padding: 6px 14px;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .hero-badge::before { content: '🌏'; font-size: 14px; }
+    .hero-h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(36px, 5vw, 60px);
+      font-weight: 700;
+      color: white;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .hero-h1 span { color: var(--orange-light); }
+    .hero-sub {
+      font-size: 18px;
+      color: rgba(255,255,255,0.78);
+      margin-bottom: 36px;
+      max-width: 480px;
+      font-weight: 400;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 48px; }
+    .btn-primary {
+      background: var(--orange);
+      color: white;
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.25s;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-primary:hover { background: var(--orange-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(244,123,32,0.35); }
+    .btn-secondary {
+      background: rgba(255,255,255,0.12);
+      color: white;
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(255,255,255,0.25);
+      transition: all 0.25s;
+    }
+    .btn-secondary:hover { background: rgba(255,255,255,0.2); transform: translateY(-2px); }
+    .hero-stats {
+      display: flex;
+      gap: 36px;
+    }
+    .hero-stat {}
+    .hero-stat-num { font-size: 28px; font-weight: 800; color: var(--orange-light); line-height: 1; }
+    .hero-stat-label { font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+    .hero-card {
+      background: rgba(255,255,255,0.96);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--shadow-lg);
+    }
+    .hero-card-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .hero-card-sub {
+      font-size: 13px;
+      color: var(--gray-600);
+      margin-bottom: 20px;
+    }
+    .hero-card-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .hero-card-flags {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .hero-flag {
+      font-size: 22px;
+      width: 38px; height: 38px;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--gray-100);
+      border-radius: 50%;
+      transition: transform 0.2s;
+    }
+    .hero-flag:hover { transform: scale(1.15); }
+    .hero-flag-label { font-size: 12px; color: var(--gray-600); font-weight: 500; }
+    .hero-card-cta {
+      width: 100%;
+      justify-content: center;
+      font-size: 14px;
+    }
+    .trust-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 12px;
+      font-size: 12px;
+      color: var(--gray-600);
+    }
+    .trust-stars { color: #f59e0b; font-size: 13px; }
+
+    /* ── TRUST BAR ── */
+    .trust-bar {
+      background: var(--navy-dark);
+      padding: 18px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba(255,255,255,0.75);
+      font-size: 13px;
+      font-weight: 500;
+    }
+    .trust-icon { font-size: 18px; }
+
+    /* ── SECTION WRAPPER ── */
+    section { padding: 90px 5%; }
+    .section-label {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.25;
+      margin-bottom: 14px;
+    }
+    .section-title span { color: var(--orange); }
+    .section-sub {
+      font-size: 17px;
+      color: var(--gray-600);
+      max-width: 560px;
+      line-height: 1.65;
+    }
+    .section-header { margin-bottom: 56px; }
+    .section-header.center { text-align: center; }
+    .section-header.center .section-sub { margin: 0 auto; }
+    .container { max-width: 1160px; margin: 0 auto; }
+
+    /* ── SERVICES ── */
+    #services { background: var(--gray-50); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 28px;
+    }
+    .service-card {
+      background: white;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: all 0.3s;
+      border: 1px solid var(--gray-200);
+    }
+    .service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: var(--orange-light); }
+    .service-img {
+      width: 100%; height: 200px;
+      object-fit: cover;
+    }
+    .service-body { padding: 24px; }
+    .service-icon {
+      width: 50px; height: 50px;
+      background: linear-gradient(135deg, var(--navy), var(--navy-light));
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px;
+      margin-bottom: 16px;
+    }
+    .service-title { font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+    .service-desc { font-size: 14px; color: var(--gray-600); line-height: 1.65; margin-bottom: 16px; }
+    .service-features { list-style: none; }
+    .service-features li {
+      font-size: 13px;
+      color: var(--gray-600);
+      padding: 5px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .service-features li::before { content: '✓'; color: var(--orange); font-weight: 700; flex-shrink: 0; }
+
+    /* ── WHY NRI ── */
+    #why {
+      background: white;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+      max-width: 1160px;
+      margin: 0 auto;
+    }
+    .why-img-wrap { position: relative; }
+    .why-img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      border-radius: var(--radius-lg);
+    }
+    .why-badge-float {
+      position: absolute;
+      bottom: 28px; left: -20px;
+      background: white;
+      border-radius: var(--radius);
+      padding: 16px 20px;
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .why-badge-icon { font-size: 32px; }
+    .why-badge-text { font-size: 13px; }
+    .why-badge-text strong { display: block; font-size: 20px; color: var(--navy); font-weight: 800; }
+    .why-points { display: flex; flex-direction: column; gap: 24px; }
+    .why-point {
+      display: flex;
+      gap: 18px;
+      padding: 20px;
+      border-radius: var(--radius);
+      border: 1px solid var(--gray-200);
+      transition: all 0.25s;
+    }
+    .why-point:hover { border-color: var(--orange); background: #fff8f3; }
+    .why-point-icon {
+      font-size: 28px;
+      flex-shrink: 0;
+      width: 52px; height: 52px;
+      background: var(--gray-100);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .why-point-title { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+    .why-point-desc { font-size: 14px; color: var(--gray-600); line-height: 1.6; }
+
+    /* ── HOW IT WORKS ── */
+    #how { background: var(--navy); padding: 90px 5%; }
+    #how .section-title { color: white; }
+    #how .section-sub { color: rgba(255,255,255,0.65); }
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 36px;
+      margin-top: 56px;
+      position: relative;
+    }
+    .steps-grid::before {
+      content: '';
+      position: absolute;
+      top: 44px; left: calc(16.67% + 16px); right: calc(16.67% + 16px);
+      height: 2px;
+      background: rgba(244,123,32,0.35);
+    }
+    .step-card { position: relative; }
+    .step-num {
+      width: 56px; height: 56px;
+      background: var(--orange);
+      color: white;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px;
+      font-weight: 800;
+      margin: 0 auto 24px;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 0 0 8px rgba(244,123,32,0.18);
+    }
+    .step-icon-wrap {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .step-icon { font-size: 40px; }
+    .step-title { font-size: 20px; font-weight: 700; color: white; text-align: center; margin-bottom: 12px; }
+    .step-desc { font-size: 15px; color: rgba(255,255,255,0.65); text-align: center; line-height: 1.65; }
+    .step-card-inner {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-lg);
+      padding: 36px 28px;
+      height: 100%;
+      transition: all 0.3s;
+    }
+    .step-card-inner:hover { background: rgba(255,255,255,0.12); border-color: rgba(244,123,32,0.4); }
+    .step-features { margin-top: 18px; display: flex; flex-direction: column; gap: 8px; }
+    .step-feature { display: flex; align-items: center; gap: 8px; font-size: 13px; color: rgba(255,255,255,0.6); }
+    .step-feature::before { content: '→'; color: var(--orange-light); font-weight: 700; }
+
+    /* ── COUNTRIES ── */
+    #countries { background: var(--gray-50); }
+    .countries-intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+      margin-bottom: 56px;
+    }
+    .countries-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+    }
+    .country-card {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: 28px 20px;
+      text-align: center;
+      border: 2px solid var(--gray-200);
+      transition: all 0.3s;
+      cursor: default;
+    }
+    .country-card:hover { border-color: var(--orange); transform: translateY(-4px); box-shadow: var(--shadow); }
+    .country-flag { font-size: 42px; margin-bottom: 12px; display: block; }
+    .country-name { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+    .country-nri { font-size: 12px; color: var(--gray-600); }
+    .country-nri strong { display: block; color: var(--orange); font-size: 18px; font-weight: 800; }
+    .countries-img {
+      width: 100%; height: 360px;
+      object-fit: cover;
+      border-radius: var(--radius-lg);
+    }
+
+    /* ── TESTIMONIALS ── */
+    #testimonials { background: white; }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 28px;
+    }
+    .testimonial-card {
+      background: var(--gray-50);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      border: 1px solid var(--gray-200);
+      transition: all 0.3s;
+      position: relative;
+    }
+    .testimonial-card::before {
+      content: '"';
+      position: absolute;
+      top: 16px; right: 24px;
+      font-size: 64px;
+      font-family: Georgia, serif;
+      color: var(--orange);
+      opacity: 0.2;
+      line-height: 1;
+    }
+    .testimonial-card:hover { box-shadow: var(--shadow-lg); border-color: var(--orange-light); transform: translateY(-3px); }
+    .testimonial-stars { color: #f59e0b; font-size: 16px; margin-bottom: 14px; }
+    .testimonial-text { font-size: 15px; color: var(--gray-800); line-height: 1.7; margin-bottom: 20px; font-style: italic; }
+    .testimonial-author { display: flex; align-items: center; gap: 14px; }
+    .testimonial-avatar {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--orange);
+    }
+    .testimonial-name { font-size: 15px; font-weight: 700; color: var(--navy); }
+    .testimonial-meta { font-size: 12px; color: var(--gray-600); }
+    .testimonial-flag { font-size: 14px; }
+    .investment-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--navy), var(--navy-light));
+      color: white;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 50px;
+      margin-top: 4px;
+    }
+
+    /* ── CONTACT ── */
+    #contact { background: var(--navy); padding: 90px 5%; }
+    #contact .section-title { color: white; }
+    #contact .section-sub { color: rgba(255,255,255,0.65); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      margin-top: 56px;
+      align-items: start;
+    }
+    .contact-info { display: flex; flex-direction: column; gap: 28px; }
+    .contact-info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px;
+      background: rgba(255,255,255,0.07);
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,0.1);
+      transition: all 0.25s;
+    }
+    .contact-info-item:hover { background: rgba(255,255,255,0.12); }
+    .contact-info-icon {
+      font-size: 24px;
+      width: 48px; height: 48px;
+      background: rgba(244,123,32,0.18);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .contact-info-label { font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--orange-light); margin-bottom: 4px; }
+    .contact-info-val { font-size: 15px; color: white; font-weight: 500; }
+    .contact-info-val a { color: inherit; text-decoration: none; }
+    .contact-info-val a:hover { color: var(--orange-light); }
+    .contact-info-sub { font-size: 12px; color: rgba(255,255,255,0.5); margin-top: 2px; }
+
+    .contact-form-wrap {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      box-shadow: var(--shadow-lg);
+    }
+    .form-title { font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+    .form-sub { font-size: 14px; color: var(--gray-600); margin-bottom: 28px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+    .form-group label { font-size: 13px; font-weight: 600; color: var(--navy); }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 11px 14px;
+      border: 1.5px solid var(--gray-200);
+      border-radius: 8px;
+      font-size: 14px;
+      font-family: inherit;
+      color: var(--text);
+      transition: border 0.2s;
+      background: white;
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--navy); }
+    .form-group textarea { resize: vertical; min-height: 90px; }
+    .form-submit { width: 100%; justify-content: center; font-size: 15px; padding: 14px; margin-top: 8px; }
+    .form-disclaimer { font-size: 12px; color: var(--gray-400); text-align: center; margin-top: 10px; }
+    .video-cta-section {
+      margin-top: 32px;
+      padding: 20px;
+      background: rgba(244,123,32,0.1);
+      border: 1px solid rgba(244,123,32,0.3);
+      border-radius: var(--radius);
+      text-align: center;
+    }
+    .video-cta-icon { font-size: 32px; margin-bottom: 8px; }
+    .video-cta-title { font-size: 16px; font-weight: 700; color: white; margin-bottom: 4px; }
+    .video-cta-sub { font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 14px; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy-dark);
+      color: rgba(255,255,255,0.65);
+      padding: 56px 5% 28px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      max-width: 1160px;
+      margin: 0 auto 40px;
+    }
+    .footer-brand-name { font-size: 18px; font-weight: 700; color: white; margin-bottom: 4px; }
+    .footer-brand-sub { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 14px; }
+    .footer-desc { font-size: 14px; line-height: 1.65; margin-bottom: 20px; }
+    .footer-socials { display: flex; gap: 10px; }
+    .footer-social {
+      width: 36px; height: 36px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px;
+      text-decoration: none;
+      color: rgba(255,255,255,0.7);
+      transition: all 0.2s;
+    }
+    .footer-social:hover { background: var(--orange); color: white; }
+    .footer-col-title { font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 16px; }
+    .footer-links { display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 14px; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--orange-light); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1160px;
+      margin: 0 auto;
+      font-size: 13px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-bottom a { color: var(--orange-light); text-decoration: none; }
+    .footer-rera { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.06); padding: 6px 12px; border-radius: 6px; font-size: 12px; }
+
+    /* ── WHATSAPP FLOAT ── */
+    .wa-float {
+      position: fixed;
+      bottom: 28px; right: 28px;
+      background: #25d366;
+      color: white;
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 26px;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.45);
+      z-index: 999;
+      transition: all 0.25s;
+    }
+    .wa-float:hover { transform: scale(1.1); box-shadow: 0 8px 30px rgba(37,211,102,0.55); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .hero-content { grid-template-columns: 1fr; gap: 40px; padding-top: 100px; }
+      #why { grid-template-columns: 1fr; gap: 40px; padding: 60px 5%; }
+      .why-badge-float { left: 12px; }
+      .countries-intro { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .steps-grid { grid-template-columns: 1fr; }
+      .steps-grid::before { display: none; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .countries-grid { grid-template-columns: repeat(3, 1fr); }
+      .form-row { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .countries-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr; }
+      .hero-stats { gap: 20px; flex-wrap: wrap; }
+      .trust-bar { gap: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <a href="#" class="nav-brand">
+    <div class="nav-logo-icon">HL</div>
+    <div class="nav-brand-text">
+      <span class="nav-brand-name">HomeLink</span>
+      <span class="nav-brand-sub">NRI Services</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#countries">Countries</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#contact" class="nav-cta">Book Free Call</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu(this)">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-text" data-aos="fade-right" data-aos-duration="900">
+      <div class="hero-badge">Trusted NRI Real Estate Partner</div>
+      <h1 class="hero-h1">
+        Invest in India<br/>
+        from <span>Anywhere</span><br/>
+        in the World
+      </h1>
+      <p class="hero-sub">
+        Own your dream Pune property without a single flight. We handle everything — property search, legal paperwork, FEMA compliance, and more.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">📹 Book a Free Video Call</a>
+        <a href="#how" class="btn-secondary">How It Works →</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num">850+</div>
+          <div class="hero-stat-label">NRI Clients</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">₹1,200Cr+</div>
+          <div class="hero-stat-label">Deals Closed</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">14+</div>
+          <div class="hero-stat-label">Years Experience</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-card" data-aos="fade-left" data-aos-duration="900" data-aos-delay="200">
+      <div class="hero-card-title">🌍 Serving NRIs Worldwide</div>
+      <div class="hero-card-sub">Join hundreds who invested in Pune from abroad</div>
+      <img
+        src="https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=600&q=80"
+        alt="NRI family video calling about Pune property"
+        class="hero-card-img"
+      />
+      <div class="hero-card-flags">
+        <div class="hero-flag" title="USA">🇺🇸</div>
+        <div class="hero-flag" title="United Kingdom">🇬🇧</div>
+        <div class="hero-flag" title="UAE">🇦🇪</div>
+        <div class="hero-flag" title="Canada">🇨🇦</div>
+        <div class="hero-flag" title="Australia">🇦🇺</div>
+        <span class="hero-flag-label">& more</span>
+      </div>
+      <a href="#contact" class="btn-primary hero-card-cta">Get Started — It's Free</a>
+      <div class="trust-row">
+        <span class="trust-stars">★★★★★</span>
+        <span>4.9/5 from 340+ NRI clients</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item"><span class="trust-icon">🏛️</span> RERA Registered</div>
+  <div class="trust-item"><span class="trust-icon">⚖️</span> FEMA Compliant Transactions</div>
+  <div class="trust-item"><span class="trust-icon">🔒</span> Escrow-Protected Payments</div>
+  <div class="trust-item"><span class="trust-icon">📋</span> POA / NRI Legal Experts</div>
+  <div class="trust-item"><span class="trust-icon">🌐</span> Video & WhatsApp Support</div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">What We Do</span>
+      <h2 class="section-title">Complete NRI Real Estate<br/><span>Solutions Under One Roof</span></h2>
+      <p class="section-sub">Whether you're buying for the first time or managing an existing portfolio, we handle every step so you never have to leave home.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+        <img
+          src="https://images.unsplash.com/photo-1560184897-ae75f418493e?auto=format&fit=crop&w=600&q=80"
+          alt="Property search Pune"
+          class="service-img"
+        />
+        <div class="service-body">
+          <div class="service-icon">🔍</div>
+          <div class="service-title">Smart Property Search</div>
+          <p class="service-desc">Get curated property listings based on your budget, location preference, and investment goals — all via video tours, 3D walkthroughs, and live calls.</p>
+          <ul class="service-features">
+            <li>Personalised shortlisting</li>
+            <li>Virtual site visits via video</li>
+            <li>Builder track record reports</li>
+            <li>Price negotiation support</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+        <img
+          src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=600&q=80"
+          alt="Legal paperwork NRI"
+          class="service-img"
+        />
+        <div class="service-body">
+          <div class="service-icon">📜</div>
+          <div class="service-title">Legal Paperwork & FEMA</div>
+          <p class="service-desc">Our legal team ensures every transaction is RBI / FEMA compliant. From title verification to sale deed execution — fully handled.</p>
+          <ul class="service-features">
+            <li>Title search & due diligence</li>
+            <li>FEMA / RBI compliance</li>
+            <li>Tax advisory (TDS / LTCG)</li>
+            <li>Registration on your behalf</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+        <img
+          src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=600&q=80"
+          alt="POA Management"
+          class="service-img"
+        />
+        <div class="service-body">
+          <div class="service-icon">🤝</div>
+          <div class="service-title">POA Management</div>
+          <p class="service-desc">Appoint us as your Power of Attorney representative. We attend registrations, sign on your behalf, and keep you informed at every stage.</p>
+          <ul class="service-features">
+            <li>Notarized POA facilitation</li>
+            <li>Court & sub-registrar visits</li>
+            <li>Regular video status updates</li>
+            <li>Document courier worldwide</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+        <img
+          src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=600&q=80"
+          alt="Rental management Pune"
+          class="service-img"
+        />
+        <div class="service-body">
+          <div class="service-icon">🏠</div>
+          <div class="service-title">Rental Management</div>
+          <p class="service-desc">Own a Pune flat but live overseas? We find tenants, collect rent, handle maintenance, and deposit earnings directly to your NRI account.</p>
+          <ul class="service-features">
+            <li>Tenant screening & onboarding</li>
+            <li>Rent collection & transfer abroad</li>
+            <li>Property maintenance oversight</li>
+            <li>Monthly digital reports</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+        <img
+          src="https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?auto=format&fit=crop&w=600&q=80"
+          alt="NRI investment consultation"
+          class="service-img"
+        />
+        <div class="service-body">
+          <div class="service-icon">📊</div>
+          <div class="service-title">NRI Investment Advisory</div>
+          <p class="service-desc">Make smarter investment decisions with market data, ROI projections, rental yield analysis, and tax-efficient exit strategies.</p>
+          <ul class="service-features">
+            <li>Area-wise price trend analysis</li>
+            <li>Rental yield & ROI calculator</li>
+            <li>Pre-launch investment guidance</li>
+            <li>Portfolio review & optimization</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+        <img
+          src="https://images.unsplash.com/photo-1586348943529-beaae6c28db9?auto=format&fit=crop&w=600&q=80"
+          alt="Home loan NRI"
+          class="service-img"
+        />
+        <div class="service-body">
+          <div class="service-icon">🏦</div>
+          <div class="service-title">NRI Home Loan Assistance</div>
+          <p class="service-desc">Get the best NRI home loan rates. We liaise with top banks and HFCs, manage documentation, and ensure swift disbursal — all remotely.</p>
+          <ul class="service-features">
+            <li>Tie-ups with 12+ banks</li>
+            <li>NRE / NRO account guidance</li>
+            <li>Best rate negotiation</li>
+            <li>Digital document management</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY NRI -->
+<section style="padding: 90px 5%; background: white;">
+  <div id="why">
+    <div class="why-img-wrap" data-aos="fade-right">
+      <img
+        src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80"
+        alt="Pune skyline Viman Nagar"
+        class="why-img"
+      />
+      <div class="why-badge-float">
+        <span class="why-badge-icon">🏆</span>
+        <div class="why-badge-text">
+          <strong>#1</strong>
+          NRI Real Estate Advisor in Pune
+        </div>
+      </div>
+    </div>
+    <div data-aos="fade-left" data-aos-delay="150">
+      <span class="section-label">Why HomeLink NRI</span>
+      <h2 class="section-title">The Most Trusted Name<br/>for <span>NRI Property</span> in Pune</h2>
+      <p class="section-sub" style="margin-bottom: 32px;">
+        We understand the NRI experience — the trust deficit, the legal complexity, the time zone hassle. We built HomeLink to eliminate all of it.
+      </p>
+      <div class="why-points">
+        <div class="why-point">
+          <div class="why-point-icon">🕐</div>
+          <div>
+            <div class="why-point-title">Your Time Zone, Our Availability</div>
+            <p class="why-point-desc">Our NRI desk operates across IST, EST, GMT, GST, and AEST. Book calls in the morning from London or the evening from Dubai.</p>
+          </div>
+        </div>
+        <div class="why-point">
+          <div class="why-point-icon">📍</div>
+          <div>
+            <div class="why-point-title">Viman Nagar — Right Near the Airport</div>
+            <p class="why-point-desc">Our office is 5 minutes from Pune International Airport. When you visit, we're the first stop. When you can't, we come to you — virtually.</p>
+          </div>
+        </div>
+        <div class="why-point">
+          <div class="why-point-icon">🔐</div>
+          <div>
+            <div class="why-point-title">Zero Risk, Full Transparency</div>
+            <p class="why-point-desc">We work with escrow-protected payments, full legal documentation, and weekly status updates. You always know where your money is.</p>
+          </div>
+        </div>
+        <div class="why-point">
+          <div class="why-point-icon">🗣️</div>
+          <div>
+            <div class="why-point-title">Dedicated NRI Relationship Manager</div>
+            <p class="why-point-desc">A single point of contact who speaks your language (English, Hindi, Marathi) and handles everything end-to-end on your behalf.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="container">
+    <div class="section-header center">
+      <span class="section-label" style="color: var(--orange-light);">The Process</span>
+      <h2 class="section-title">3 Simple Steps to<br/><span>Own Your Pune Property</span></h2>
+      <p class="section-sub">From your first call to handing you the keys — we make the entire journey effortless, regardless of where you live.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="step-card-inner">
+          <div class="step-num">1</div>
+          <div class="step-icon-wrap"><span class="step-icon">📹</span></div>
+          <div class="step-title">Consult Remotely</div>
+          <p class="step-desc">Book a free 30-minute video call with our NRI advisor. Share your requirements, budget, and timeline — we listen first.</p>
+          <div class="step-features">
+            <div class="step-feature">Free 30-min video consultation</div>
+            <div class="step-feature">Zoom, Google Meet, or WhatsApp</div>
+            <div class="step-feature">No commitment required</div>
+            <div class="step-feature">Available 7 days a week</div>
+          </div>
+        </div>
+      </div>
+      <div class="step-card" data-aos="fade-up" data-aos-delay="150">
+        <div class="step-card-inner">
+          <div class="step-num">2</div>
+          <div class="step-icon-wrap"><span class="step-icon">⚙️</span></div>
+          <div class="step-title">We Handle Everything</div>
+          <p class="step-desc">Our team manages property visits, legal checks, negotiations, loan processing, registration, and documentation on your behalf.</p>
+          <div class="step-features">
+            <div class="step-feature">Property shortlisting & virtual tours</div>
+            <div class="step-feature">FEMA + legal due diligence</div>
+            <div class="step-feature">Price negotiation</div>
+            <div class="step-feature">Weekly WhatsApp updates</div>
+          </div>
+        </div>
+      </div>
+      <div class="step-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="step-card-inner">
+          <div class="step-num">3</div>
+          <div class="step-icon-wrap"><span class="step-icon">🔑</span></div>
+          <div class="step-title">You Own It</div>
+          <p class="step-desc">Receive your documents and keys — physically couriered or ready on your next India trip. Your investment is secured.</p>
+          <div class="step-features">
+            <div class="step-feature">Registered sale deed in your name</div>
+            <div class="step-feature">Documents couriered worldwide</div>
+            <div class="step-feature">Post-purchase rental setup</div>
+            <div class="step-feature">Ongoing management available</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 48px;" data-aos="fade-up" data-aos-delay="400">
+      <a href="#contact" class="btn-primary" style="font-size: 16px; padding: 16px 36px;">
+        Start Your Journey — Book Free Call
+      </a>
+      <p style="color: rgba(255,255,255,0.5); font-size: 13px; margin-top: 12px;">No hidden fees. No obligations. Just a conversation.</p>
+    </div>
+  </div>
+</section>
+
+<!-- COUNTRIES SERVED -->
+<section id="countries">
+  <div class="container">
+    <div class="countries-intro">
+      <div data-aos="fade-right">
+        <span class="section-label">Global Reach</span>
+        <h2 class="section-title">Serving NRIs Across<br/><span>5 Continents</span></h2>
+        <p class="section-sub" style="margin-bottom: 24px;">
+          No matter where life took you, Pune remains home. We bridge the distance with technology, trust, and a dedicated team that understands the NRI journey.
+        </p>
+        <p style="font-size: 14px; color: var(--gray-600); line-height: 1.7;">
+          Our clients include software engineers in Silicon Valley, doctors in the UK, business owners in Dubai, and families in Toronto and Melbourne — all who chose Pune as their investment destination.
+        </p>
+        <a href="#contact" class="btn-primary" style="margin-top: 24px; display: inline-flex;">
+          Connect With NRI Desk →
+        </a>
+      </div>
+      <div data-aos="fade-left" data-aos-delay="150">
+        <img
+          src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=800&q=80"
+          alt="Video call real estate consultation NRI"
+          class="countries-img"
+        />
+      </div>
+    </div>
+    <div class="countries-grid">
+      <div class="country-card" data-aos="zoom-in" data-aos-delay="0">
+        <span class="country-flag">🇺🇸</span>
+        <div class="country-name">United States</div>
+        <div class="country-nri">
+          <strong>3.2M+</strong>
+          Indian Americans
+        </div>
+      </div>
+      <div class="country-card" data-aos="zoom-in" data-aos-delay="80">
+        <span class="country-flag">🇬🇧</span>
+        <div class="country-name">United Kingdom</div>
+        <div class="country-nri">
+          <strong>1.6M+</strong>
+          Indian-origin residents
+        </div>
+      </div>
+      <div class="country-card" data-aos="zoom-in" data-aos-delay="160">
+        <span class="country-flag">🇦🇪</span>
+        <div class="country-name">UAE</div>
+        <div class="country-nri">
+          <strong>3.5M+</strong>
+          Indians in Gulf
+        </div>
+      </div>
+      <div class="country-card" data-aos="zoom-in" data-aos-delay="240">
+        <span class="country-flag">🇨🇦</span>
+        <div class="country-name">Canada</div>
+        <div class="country-nri">
+          <strong>1.3M+</strong>
+          Indian Canadians
+        </div>
+      </div>
+      <div class="country-card" data-aos="zoom-in" data-aos-delay="320">
+        <span class="country-flag">🇦🇺</span>
+        <div class="country-name">Australia</div>
+        <div class="country-nri">
+          <strong>700K+</strong>
+          Indian Australians
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="container">
+    <div class="section-header center">
+      <span class="section-label">Client Stories</span>
+      <h2 class="section-title">What Our NRI Clients<br/><span>Say About Us</span></h2>
+      <p class="section-sub">Real stories from real people who trusted HomeLink to invest in Pune from thousands of miles away.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">
+          "I was skeptical about buying property remotely from New Jersey. The HomeLink team held my hand through everything — site visits via video, legal verification, loan processing. The whole thing took just 3 months. I never had to fly to Pune once."
+        </p>
+        <div class="testimonial-author">
+          <img
+            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80"
+            alt="Rahul Deshmukh"
+            class="testimonial-avatar"
+          />
+          <div>
+            <div class="testimonial-name">Rahul Deshmukh</div>
+            <div class="testimonial-meta">
+              <span class="testimonial-flag">🇺🇸</span> New Jersey, USA
+            </div>
+            <span class="investment-badge">Invested ₹1.2 Cr in Kharadi</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">
+          "As a busy NHS doctor in London, I had zero time to manage my parents' flat in Pune after they moved abroad. HomeLink now handles all the tenants, maintenance, and rent transfers. My NRE account gets credited every month like clockwork."
+        </p>
+        <div class="testimonial-author">
+          <img
+            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80"
+            alt="Dr. Priya Kulkarni"
+            class="testimonial-avatar"
+          />
+          <div>
+            <div class="testimonial-name">Dr. Priya Kulkarni</div>
+            <div class="testimonial-meta">
+              <span class="testimonial-flag">🇬🇧</span> London, UK
+            </div>
+            <span class="investment-badge">2BHK Rental — ₹28K/month</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">
+          "I was worried about FEMA rules and whether the transaction would be legal. HomeLink's legal team explained everything — repatriation limits, TDS deductions, the whole picture. I finally feel confident owning property in India from Dubai."
+        </p>
+        <div class="testimonial-author">
+          <img
+            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=100&q=80"
+            alt="Sameer Joshi"
+            class="testimonial-avatar"
+          />
+          <div>
+            <div class="testimonial-name">Sameer Joshi</div>
+            <div class="testimonial-meta">
+              <span class="testimonial-flag">🇦🇪</span> Dubai, UAE
+            </div>
+            <span class="investment-badge">Invested ₹85 Lakh in Viman Nagar</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">
+          "My parents are senior citizens in Pune and I live in Toronto. When we decided to sell their old flat and buy a new flat for them, HomeLink managed everything via POA. The transparency was incredible — I got photos and videos of every step."
+        </p>
+        <div class="testimonial-author">
+          <img
+            src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&q=80"
+            alt="Anita Chavan"
+            class="testimonial-avatar"
+          />
+          <div>
+            <div class="testimonial-name">Anita Chavan</div>
+            <div class="testimonial-meta">
+              <span class="testimonial-flag">🇨🇦</span> Toronto, Canada
+            </div>
+            <span class="investment-badge">Sold + Bought — ₹2.1 Cr deal</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">
+          "I've been wanting to invest back home for years but every time I visited, I couldn't find reliable guidance. HomeLink made the process so clear and simple from Melbourne. The ROI on my Kalyani Nagar flat has already crossed 9% in two years."
+        </p>
+        <div class="testimonial-author">
+          <img
+            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80"
+            alt="Vikram Patil"
+            class="testimonial-avatar"
+          />
+          <div>
+            <div class="testimonial-name">Vikram Patil</div>
+            <div class="testimonial-meta">
+              <span class="testimonial-flag">🇦🇺</span> Melbourne, Australia
+            </div>
+            <span class="investment-badge">Invested ₹1.05 Cr in Kalyani Nagar</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">
+          "What sets HomeLink apart is the relationship manager. Kavitha was available on WhatsApp at odd hours to answer my questions from California. The entire purchase felt as personal as if I were buying next door, not 8,000 miles away."
+        </p>
+        <div class="testimonial-author">
+          <img
+            src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80"
+            alt="Meera Raghavan"
+            class="testimonial-avatar"
+          />
+          <div>
+            <div class="testimonial-name">Meera Raghavan</div>
+            <div class="testimonial-meta">
+              <span class="testimonial-flag">🇺🇸</span> California, USA
+            </div>
+            <span class="investment-badge">Invested ₹1.45 Cr in Koregaon Park</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-header center">
+      <span class="section-label" style="color: var(--orange-light);">Get In Touch</span>
+      <h2 class="section-title">Book Your Free<br/><span>NRI Consultation Call</span></h2>
+      <p class="section-sub">Talk to a real expert within 24 hours. No jargon, no sales pressure — just honest advice for your Pune property journey.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info" data-aos="fade-right">
+        <div class="contact-info-item">
+          <div class="contact-info-icon">📍</div>
+          <div>
+            <div class="contact-info-label">Office Address</div>
+            <div class="contact-info-val">Office 302, Clover Centre,<br/>Viman Nagar, Pune 411014</div>
+            <div class="contact-info-sub">5 min from Pune International Airport</div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">📞</div>
+          <div>
+            <div class="contact-info-label">Phone / WhatsApp</div>
+            <div class="contact-info-val">
+              <a href="tel:+919922333444">+91-9922-333-444</a>
+            </div>
+            <div class="contact-info-sub">Also on WhatsApp — tap to message</div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">✉️</div>
+          <div>
+            <div class="contact-info-label">Email</div>
+            <div class="contact-info-val">
+              <a href="mailto:nri@homelinknri.in">nri@homelinknri.in</a>
+            </div>
+            <div class="contact-info-sub">We reply within 4 business hours</div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">🕐</div>
+          <div>
+            <div class="contact-info-label">NRI Desk Hours</div>
+            <div class="contact-info-val">Mon–Sat, 9:00 AM – 7:00 PM IST</div>
+            <div class="contact-info-sub">Off-hours calls by prior appointment</div>
+          </div>
+        </div>
+        <div class="video-cta-section">
+          <div class="video-cta-icon">🎥</div>
+          <div class="video-cta-title">Prefer a Video Call?</div>
+          <div class="video-cta-sub">We do Zoom, Google Meet, Teams, and WhatsApp video. Pick your platform, we'll make it work.</div>
+          <a href="https://wa.me/919922333444?text=Hi%2C%20I%27d%20like%20to%20book%20a%20free%20NRI%20consultation%20call" class="btn-primary" target="_blank" rel="noopener" style="display: inline-flex;">
+            📲 WhatsApp to Book Call
+          </a>
+        </div>
+      </div>
+
+      <div data-aos="fade-left" data-aos-delay="150">
+        <div class="contact-form-wrap">
+          <div class="form-title">Start Your NRI Property Journey</div>
+          <div class="form-sub">Fill in your details and we'll reach out within 24 hours.</div>
+          <form onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">First Name *</label>
+                <input type="text" id="fname" name="fname" placeholder="Rahul" required />
+              </div>
+              <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lname" placeholder="Deshmukh" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="rahul@example.com" required />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Phone / WhatsApp</label>
+                <input type="tel" id="phone" name="phone" placeholder="+1 XXX XXX XXXX" />
+              </div>
+              <div class="form-group">
+                <label for="country">Country *</label>
+                <select id="country" name="country" required>
+                  <option value="" disabled selected>Select country</option>
+                  <option>🇺🇸 USA</option>
+                  <option>🇬🇧 United Kingdom</option>
+                  <option>🇦🇪 UAE</option>
+                  <option>🇨🇦 Canada</option>
+                  <option>🇦🇺 Australia</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="intent">I'm Looking To *</label>
+              <select id="intent" name="intent" required>
+                <option value="" disabled selected>Select your goal</option>
+                <option>Buy a property in Pune</option>
+                <option>Sell a property in Pune</option>
+                <option>Rent out my existing property</option>
+                <option>Manage my existing property</option>
+                <option>Legal / FEMA advisory</option>
+                <option>NRI Home Loan assistance</option>
+                <option>General consultation</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="budget">Approx. Budget / Property Value</label>
+              <select id="budget" name="budget">
+                <option value="" disabled selected>Select range (optional)</option>
+                <option>Under ₹50 Lakh</option>
+                <option>₹50 Lakh – ₹1 Crore</option>
+                <option>₹1 – 2 Crore</option>
+                <option>₹2 – 5 Crore</option>
+                <option>Above ₹5 Crore</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Additional Notes</label>
+              <textarea id="message" name="message" placeholder="Tell us a bit about what you're looking for — timeline, preferred area, any specific requirements..."></textarea>
+            </div>
+            <button type="submit" class="btn-primary form-submit">
+              📅 Request Free Consultation
+            </button>
+            <p class="form-disclaimer">🔒 Your information is 100% private and never shared. By submitting, you agree to our Privacy Policy.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="nav-logo-icon" style="margin-bottom: 12px; background: var(--orange);">HL</div>
+      <div class="footer-brand-name">HomeLink NRI Services</div>
+      <div class="footer-brand-sub">Pune's Most Trusted NRI Realty Partner</div>
+      <p class="footer-desc">Helping Non-Resident Indians buy, sell, rent, and manage Pune properties remotely since 2011. RERA registered. FEMA compliant. 850+ NRI clients served.</p>
+      <div class="footer-socials">
+        <a href="#" class="footer-social" title="Facebook">f</a>
+        <a href="#" class="footer-social" title="Instagram">📸</a>
+        <a href="#" class="footer-social" title="LinkedIn">in</a>
+        <a href="https://wa.me/919922333444" class="footer-social" title="WhatsApp">💬</a>
+        <a href="#" class="footer-social" title="YouTube">▶</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Our Services</div>
+      <div class="footer-links">
+        <a href="#services">NRI Property Search</a>
+        <a href="#services">Legal & FEMA Advisory</a>
+        <a href="#services">POA Management</a>
+        <a href="#services">Rental Management</a>
+        <a href="#services">NRI Home Loans</a>
+        <a href="#services">Investment Advisory</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Pune Areas</div>
+      <div class="footer-links">
+        <a href="#">Viman Nagar</a>
+        <a href="#">Kharadi</a>
+        <a href="#">Kalyani Nagar</a>
+        <a href="#">Koregaon Park</a>
+        <a href="#">Hadapsar</a>
+        <a href="#">Wakad</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Quick Links</div>
+      <div class="footer-links">
+        <a href="#how">How It Works</a>
+        <a href="#countries">Countries Served</a>
+        <a href="#testimonials">Client Reviews</a>
+        <a href="#contact">Book Free Call</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">RERA Details</a>
+      </div>
+      <div style="margin-top: 20px;">
+        <div class="footer-col-title">Office</div>
+        <p style="font-size: 13px; line-height: 1.65;">Office 302, Clover Centre,<br/>Viman Nagar, Pune 411014</p>
+        <p style="font-size: 13px; margin-top: 8px;">
+          <a href="tel:+919922333444" style="color: var(--orange-light); text-decoration: none;">+91-9922-333-444</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 HomeLink NRI Services. All rights reserved.</span>
+    <div class="footer-rera">
+      🏛️ RERA Reg. No: P52100058473 | MahaRERA
+    </div>
+    <span>Made with ❤️ for the NRI community</span>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/919922333444?text=Hi%20HomeLink%2C%20I%27m%20an%20NRI%20interested%20in%20Pune%20property." class="wa-float" target="_blank" rel="noopener" title="Chat on WhatsApp">
+  💬
+</a>
+
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    easing: 'ease-out-cubic',
+    once: true,
+    offset: 60
+  });
+
+  // Navbar scroll effect
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('navbar');
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+  });
+
+  // Mobile menu toggle
+  function toggleMenu(el) {
+    const links = document.querySelector('.nav-links');
+    links.style.display = links.style.display === 'flex' ? 'none' : 'flex';
+    links.style.flexDirection = 'column';
+    links.style.position = 'absolute';
+    links.style.top = '68px';
+    links.style.left = '0';
+    links.style.right = '0';
+    links.style.background = 'rgba(18,43,82,0.98)';
+    links.style.padding = '20px 5%';
+    links.style.gap = '16px';
+    el.classList.toggle('open');
+  }
+
+  // Close mobile menu on link click
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      const links = document.querySelector('.nav-links');
+      if (window.innerWidth <= 768) links.style.display = 'none';
+    });
+  });
+
+  // Form submission handler
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('.form-submit');
+    btn.textContent = '✅ Request Sent! We\'ll contact you soon.';
+    btn.style.background = '#16a34a';
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.textContent = '📅 Request Free Consultation';
+      btn.style.background = '';
+      btn.disabled = false;
+      e.target.reset();
+    }, 5000);
+  }
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href === '#') return;
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+</body>
+</html>
