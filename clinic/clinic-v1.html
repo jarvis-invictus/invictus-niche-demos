@@ -1,322 +1,2086 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wellness First Clinic | General Physician & Family Doctor in Kothrud, Pune</title>
-<meta name="description" content="Trusted family clinic in Kothrud, Pune. Experienced general physician, same-day appointments, health checkups, and chronic disease management. Walk-ins welcome.">
-<meta name="keywords" content="general physician Kothrud Pune, family doctor Kothrud, clinic near me Pune, doctor appointment Pune, health checkup Pune">
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-<style>
- body { font-family: 'Inter', sans-serif; }
- h1,h2,h3,h4 { font-family: 'Poppins', sans-serif; }
- .blue { color: #1A73E8; }
- .bg-blue { background-color: #1A73E8; }
- .bg-light-blue { background-color: #EEF5FF; }
- .btn-blue { background-color: #1A73E8; color: white; padding: 12px 28px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.2s; display: inline-block; text-decoration: none; }
- .btn-blue:hover { background-color: #1557b0; transform: translateY(-1px); }
- .btn-outline { border: 2px solid #1A73E8; color: #1A73E8; padding: 10px 26px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.2s; display: inline-block; text-decoration: none; }
- .btn-outline:hover { background-color: #1A73E8; color: white; }
- .card { background: white; border-radius: 12px; padding: 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); transition: all 0.2s; }
- .card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(26,115,232,0.15); }
- nav { position: sticky; top: 0; z-index: 100; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
- .stat-num { font-family: 'Poppins', sans-serif; font-size: 2.5rem; font-weight: 800; color: #1A73E8; }
- .section-title { font-size: 2rem; font-weight: 700; color: #1A1A1A; margin-bottom: 0.5rem; }
- .section-sub { color: #666; font-size: 1.1rem; margin-bottom: 3rem; }
- footer { background: #1A1A1A; color: #ccc; }
- .badge { background: #E8F3FF; color: #1A73E8; border-radius: 20px; padding: 4px 12px; font-size: 0.75rem; font-weight: 600; display: inline-block; }
-</style>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏥</text></svg>">
-  <link rel="canonical" href="https://invictus-niche-demos.vercel.app/clinic/">
-  <meta property="og:title" content="Wellness First Clinic | General Physician & Family Doctor in Kothrud, Pune">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://invictus-niche-demos.vercel.app/clinic/">
-  <meta property="og:description" content="Professional clinic website demo by Invictus AI - Pune">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aashirwad Family Clinic | Dr. Rajesh Kulkarni — General Physician in Kothrud, Pune</title>
+    <meta name="description" content="Aashirwad Family Clinic in Kothrud, Pune — trusted family healthcare by Dr. Rajesh Kulkarni (MBBS, MD). Treating fever, diabetes, blood pressure, child health &amp; more for 15 years.">
+    <meta name="keywords" content="family doctor Kothrud, general physician Pune, Dr Rajesh Kulkarni, Aashirwad Clinic, diabetes doctor Kothrud, BP treatment Pune, child health Kothrud">
+    <meta name="author" content="Dr. Rajesh Kulkarni — Aashirwad Family Clinic">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://aashirwadfamilyclinic.in/">
+
+    <!-- OpenGraph Meta Tags -->
+    <meta property="og:title" content="Aashirwad Family Clinic | Dr. Rajesh Kulkarni — General Physician, Kothrud Pune">
+    <meta property="og:description" content="Your family's health, our commitment. Trusted general physician in Kothrud, Pune with 15 years of compassionate care. Walk-ins welcome.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aashirwadfamilyclinic.in/">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=1200&h=630&fit=crop&q=80">
+    <meta property="og:image:alt" content="Aashirwad Family Clinic — warm and welcoming healthcare in Kothrud, Pune">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:site_name" content="Aashirwad Family Clinic">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Aashirwad Family Clinic | Dr. Rajesh Kulkarni">
+    <meta name="twitter:description" content="Trusted family healthcare in Kothrud, Pune. 15 years of compassionate care.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=1200&h=630&fit=crop&q=80">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+        "@type": "LocalBusiness",
+        "@id": "https://aashirwadfamilyclinic.in/#clinic",
+        "name": "Aashirwad Family Clinic",
+        "description": "Trusted family healthcare clinic in Kothrud, Pune offering general medicine, diabetes management, blood pressure treatment, and child health services.",
+        "url": "https://aashirwadfamilyclinic.in/",
+        "telephone": "+91-20-2546-8890",
+        "email": "care@aashirwadfamilyclinic.in",
+        "image": "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=1200&h=630&fit=crop&q=80",
+        "priceRange": "₹₹",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Shop No. 7, Sahyadri Heights, Near Dahanukar Colony Signal",
+            "addressLocality": "Kothrud",
+            "addressRegion": "Pune, Maharashtra",
+            "postalCode": "411038",
+            "addressCountry": "IN"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 18.5074,
+            "longitude": 73.8077
+        },
+        "openingHoursSpecification": [
+            {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "09:00",
+            "closes": "13:00"
+            },
+            {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "17:00",
+            "closes": "21:00"
+            },
+            {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Sunday",
+            "opens": "09:00",
+            "closes": "12:00"
+            }
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "347",
+            "bestRating": "5"
+        },
+        "hasMap": "https://maps.google.com/?q=Aashirwad+Family+Clinic+Kothrud+Pune"
+        },
+        {
+        "@type": "Physician",
+        "@id": "https://aashirwadfamilyclinic.in/#doctor",
+        "name": "Dr. Rajesh Kulkarni",
+        "description": "General Physician & Family Medicine specialist with 15 years of experience serving families in Kothrud, Pune.",
+        "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop&q=80",
+        "medicalSpecialty": {
+            "@type": "MedicalSpecialty",
+            "name": "Family Medicine"
+        },
+        "qualification": "MBBS, MD (General Medicine)",
+        "worksFor": {
+            "@id": "https://aashirwadfamilyclinic.in/#clinic"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Shop No. 7, Sahyadri Heights, Near Dahanukar Colony Signal",
+            "addressLocality": "Kothrud",
+            "addressRegion": "Pune, Maharashtra",
+            "postalCode": "411038",
+            "addressCountry": "IN"
+        }
+        }
+    ]
+    }
+    </script>
+
+    <!-- Favicon (inline SVG as data URI) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏥</text></svg>">
+
+    <!-- AOS Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+    /* ===== CSS Reset & Variables ===== */
+    *,*::before,*::after {
+        margin:0;padding:0;box-sizing:border-box;
+    }
+
+    :root {
+        --blue: #2B6CB0;
+        --blue-dark: #1E4F85;
+        --blue-light: #EBF4FF;
+        --blue-muted: #4A90D9;
+        --green: #38A169;
+        --green-light: #F0FFF4;
+        --green-dark: #276749;
+        --white: #FAFAFA;
+        --white-pure: #FFFFFF;
+        --gray-50: #F7FAFC;
+        --gray-100: #EDF2F7;
+        --gray-200: #E2E8F0;
+        --gray-300: #CBD5E0;
+        --gray-500: #718096;
+        --gray-600: #4A5568;
+        --gray-700: #2D3748;
+        --gray-800: #1A202C;
+        --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+        --shadow-md: 0 4px 14px rgba(0,0,0,0.08);
+        --shadow-lg: 0 10px 30px rgba(0,0,0,0.1);
+        --shadow-xl: 0 20px 50px rgba(0,0,0,0.12);
+        --radius-sm: 8px;
+        --radius-md: 12px;
+        --radius-lg: 20px;
+        --radius-xl: 28px;
+        --font-heading: 'Playfair Display', Georgia, serif;
+        --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    html {
+        scroll-behavior: smooth;
+        font-size: 16px;
+    }
+
+    body {
+        font-family: var(--font-body);
+        color: var(--gray-700);
+        background: var(--white);
+        line-height: 1.7;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    a {
+        color: var(--blue);
+        text-decoration: none;
+        transition: color var(--transition);
+    }
+
+    a:hover, a:focus {
+        color: var(--blue-dark);
+    }
+
+    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+        outline: 3px solid var(--blue-muted);
+        outline-offset: 2px;
+    }
+
+    /* ===== Skip Link ===== */
+    .skip-link {
+        position: absolute;
+        top: -100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--blue);
+        color: var(--white-pure);
+        padding: 12px 24px;
+        border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+        z-index: 10000;
+        font-weight: 600;
+        transition: top 0.2s;
+    }
+
+    .skip-link:focus {
+        top: 0;
+        color: var(--white-pure);
+    }
+
+    /* ===== Container ===== */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+    }
+
+    /* ===== Typography ===== */
+    .section-label {
+        display: inline-block;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--green);
+        margin-bottom: 12px;
+    }
+
+    .section-title {
+        font-family: var(--font-heading);
+        font-size: clamp(1.8rem, 4vw, 2.6rem);
+        color: var(--gray-800);
+        line-height: 1.25;
+        margin-bottom: 16px;
+    }
+
+    .section-subtitle {
+        font-size: 1.05rem;
+        color: var(--gray-500);
+        max-width: 600px;
+        line-height: 1.7;
+    }
+
+    /* ===== Navigation ===== */
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(0,0,0,0.06);
+        transition: box-shadow var(--transition);
+    }
+
+    .navbar.scrolled {
+        box-shadow: var(--shadow-md);
+    }
+
+    .navbar-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 72px;
+    }
+
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .navbar-logo {
+        width: 42px;
+        height: 42px;
+        background: linear-gradient(135deg, var(--blue), var(--green));
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+        color: white;
+        font-weight: 700;
+        flex-shrink: 0;
+    }
+
+    .navbar-brand-text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar-brand-name {
+        font-family: var(--font-heading);
+        font-size: 1.15rem;
+        font-weight: 600;
+        color: var(--gray-800);
+        line-height: 1.2;
+    }
+
+    .navbar-brand-tagline {
+        font-size: 0.72rem;
+        color: var(--gray-500);
+        letter-spacing: 0.5px;
+    }
+
+    .navbar-links {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        list-style: none;
+    }
+
+    .navbar-links a {
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: var(--gray-600);
+        transition: color var(--transition);
+        position: relative;
+    }
+
+    .navbar-links a::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--blue);
+        transition: width var(--transition);
+    }
+
+    .navbar-links a:hover::after,
+    .navbar-links a:focus::after {
+        width: 100%;
+    }
+
+    .navbar-links a:hover {
+        color: var(--blue);
+    }
+
+    .navbar-cta {
+        background: var(--blue) !important;
+        color: var(--white-pure) !important;
+        padding: 10px 22px !important;
+        border-radius: var(--radius-sm) !important;
+        font-weight: 600 !important;
+        font-size: 0.88rem !important;
+        transition: all var(--transition) !important;
+    }
+
+    .navbar-cta:hover {
+        background: var(--blue-dark) !important;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(43, 108, 176, 0.3);
+    }
+
+    .navbar-cta::after {
+        display: none !important;
+    }
+
+    .mobile-toggle {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+        color: var(--gray-700);
+    }
+
+    .mobile-toggle svg {
+        width: 26px;
+        height: 26px;
+    }
+
+    /* ===== Hero ===== */
+    .hero {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        background: linear-gradient(135deg, var(--blue-light) 0%, var(--white) 50%, var(--green-light) 100%);
+        padding-top: 72px;
+    }
+
+    .hero-bg-pattern {
+        position: absolute;
+        inset: 0;
+        background-image:
+        radial-gradient(circle at 20% 80%, rgba(43, 108, 176, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(56, 161, 105, 0.05) 0%, transparent 50%);
+        pointer-events: none;
+    }
+
+    .hero-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+        padding: 60px 0;
+    }
+
+    .hero-text {
+        opacity: 0;
+    }
+
+    .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--white-pure);
+        border: 1px solid var(--gray-200);
+        padding: 6px 16px;
+        border-radius: 50px;
+        font-size: 0.82rem;
+        font-weight: 500;
+        color: var(--gray-600);
+        margin-bottom: 24px;
+        box-shadow: var(--shadow-sm);
+    }
+
+    .hero-badge-dot {
+        width: 8px;
+        height: 8px;
+        background: var(--green);
+        border-radius: 50%;
+        animation: pulse-dot 2s infinite;
+    }
+
+    @keyframes pulse-dot {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.6; transform: scale(1.3); }
+    }
+
+    .hero h1 {
+        font-family: var(--font-heading);
+        font-size: clamp(2.2rem, 5vw, 3.4rem);
+        color: var(--gray-800);
+        line-height: 1.15;
+        margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+        color: var(--blue);
+    }
+
+    .hero-description {
+        font-size: 1.1rem;
+        color: var(--gray-500);
+        line-height: 1.8;
+        margin-bottom: 36px;
+        max-width: 500px;
+    }
+
+    .hero-buttons {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--blue);
+        color: var(--white-pure);
+        padding: 16px 32px;
+        border-radius: var(--radius-sm);
+        font-weight: 600;
+        font-size: 1rem;
+        border: none;
+        cursor: pointer;
+        transition: all var(--transition);
+        text-decoration: none;
+    }
+
+    .btn-primary:hover {
+        background: var(--blue-dark);
+        color: var(--white-pure);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(43, 108, 176, 0.3);
+    }
+
+    .btn-secondary {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: transparent;
+        color: var(--gray-700);
+        padding: 16px 32px;
+        border-radius: var(--radius-sm);
+        font-weight: 600;
+        font-size: 1rem;
+        border: 2px solid var(--gray-200);
+        cursor: pointer;
+        transition: all var(--transition);
+        text-decoration: none;
+    }
+
+    .btn-secondary:hover {
+        border-color: var(--blue);
+        color: var(--blue);
+        transform: translateY(-2px);
+    }
+
+    .hero-stats {
+        display: flex;
+        gap: 40px;
+        margin-top: 48px;
+        padding-top: 32px;
+        border-top: 1px solid var(--gray-200);
+    }
+
+    .hero-stat-number {
+        font-family: var(--font-heading);
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--gray-800);
+    }
+
+    .hero-stat-label {
+        font-size: 0.82rem;
+        color: var(--gray-500);
+        margin-top: 2px;
+    }
+
+    .hero-image-wrapper {
+        position: relative;
+    }
+
+    .hero-image-main {
+        width: 100%;
+        max-width: 520px;
+        border-radius: var(--radius-xl);
+        box-shadow: var(--shadow-xl);
+        object-fit: cover;
+        aspect-ratio: 4/5;
+    }
+
+    .hero-image-float {
+        position: absolute;
+        background: var(--white-pure);
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-lg);
+        padding: 16px 20px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .hero-float-1 {
+        bottom: 40px;
+        left: -30px;
+    }
+
+    .hero-float-2 {
+        top: 40px;
+        right: -10px;
+    }
+
+    .hero-float-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        flex-shrink: 0;
+    }
+
+    .hero-float-icon.blue {
+        background: var(--blue-light);
+    }
+
+    .hero-float-icon.green {
+        background: var(--green-light);
+    }
+
+    .hero-float-text strong {
+        display: block;
+        font-size: 0.88rem;
+        color: var(--gray-800);
+    }
+
+    .hero-float-text span {
+        font-size: 0.78rem;
+        color: var(--gray-500);
+    }
+
+    /* ===== Trust Bar ===== */
+    .trust-bar {
+        background: var(--white-pure);
+        padding: 40px 0;
+        border-bottom: 1px solid var(--gray-100);
+    }
+
+    .trust-bar-inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 48px;
+        flex-wrap: wrap;
+    }
+
+    .trust-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--gray-500);
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+
+    .trust-item svg {
+        width: 20px;
+        height: 20px;
+        color: var(--green);
+        flex-shrink: 0;
+    }
+
+    /* ===== Services ===== */
+    .services {
+        padding: 100px 0;
+        background: var(--white);
+    }
+
+    .services-header {
+        text-align: center;
+        margin-bottom: 64px;
+    }
+
+    .services-header .section-subtitle {
+        margin: 0 auto;
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 28px;
+    }
+
+    .service-card {
+        background: var(--white-pure);
+        border: 1px solid var(--gray-100);
+        border-radius: var(--radius-lg);
+        padding: 36px 28px;
+        transition: all var(--transition);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .service-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, var(--blue), var(--green));
+        opacity: 0;
+        transition: opacity var(--transition);
+    }
+
+    .service-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-lg);
+        border-color: transparent;
+    }
+
+    .service-card:hover::before {
+        opacity: 1;
+    }
+
+    .service-icon {
+        width: 56px;
+        height: 56px;
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .service-icon.blue { background: var(--blue-light); }
+    .service-icon.green { background: var(--green-light); }
+    .service-icon.orange { background: #FFF5F0; }
+    .service-icon.purple { background: #F3E8FF; }
+
+    .service-card h3 {
+        font-family: var(--font-heading);
+        font-size: 1.2rem;
+        color: var(--gray-800);
+        margin-bottom: 10px;
+    }
+
+    .service-card p {
+        font-size: 0.92rem;
+        color: var(--gray-500);
+        line-height: 1.7;
+    }
+
+    .service-tag {
+        display: inline-block;
+        margin-top: 16px;
+        font-size: 0.78rem;
+        font-weight: 600;
+        color: var(--blue);
+        background: var(--blue-light);
+        padding: 4px 12px;
+        border-radius: 20px;
+    }
+
+    /* ===== About Doctor ===== */
+    .about {
+        padding: 100px 0;
+        background: linear-gradient(180deg, var(--gray-50) 0%, var(--white) 100%);
+    }
+
+    .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: center;
+    }
+
+    .about-image-container {
+        position: relative;
+    }
+
+    .about-image {
+        width: 100%;
+        max-width: 460px;
+        border-radius: var(--radius-xl);
+        box-shadow: var(--shadow-lg);
+        object-fit: cover;
+        aspect-ratio: 3/4;
+    }
+
+    .about-experience-badge {
+        position: absolute;
+        bottom: 30px;
+        right: -20px;
+        background: var(--blue);
+        color: var(--white-pure);
+        padding: 20px 28px;
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-lg);
+        text-align: center;
+    }
+
+    .about-experience-badge .number {
+        font-family: var(--font-heading);
+        font-size: 2rem;
+        font-weight: 700;
+        display: block;
+        line-height: 1;
+    }
+
+    .about-experience-badge .label {
+        font-size: 0.78rem;
+        opacity: 0.9;
+        margin-top: 4px;
+    }
+
+    .about-text .section-title {
+        margin-bottom: 20px;
+    }
+
+    .about-text p {
+        color: var(--gray-600);
+        margin-bottom: 16px;
+        line-height: 1.8;
+    }
+
+    .about-credentials {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 28px;
+    }
+
+    .credential-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: var(--white-pure);
+        border: 1px solid var(--gray-200);
+        padding: 8px 16px;
+        border-radius: 50px;
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: var(--gray-700);
+    }
+
+    .credential-tag svg {
+        width: 16px;
+        height: 16px;
+        color: var(--green);
+    }
+
+    .about-philosophy {
+        background: var(--blue-light);
+        border-left: 4px solid var(--blue);
+        padding: 20px 24px;
+        border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+        margin-top: 28px;
+    }
+
+    .about-philosophy p {
+        font-style: italic;
+        color: var(--blue-dark);
+        margin-bottom: 4px;
+        font-size: 0.95rem;
+    }
+
+    .about-philosophy cite {
+        font-size: 0.82rem;
+        color: var(--gray-500);
+        font-style: normal;
+    }
+
+    /* ===== Testimonials ===== */
+    .testimonials {
+        padding: 100px 0;
+        background: var(--white);
+    }
+
+    .testimonials-header {
+        text-align: center;
+        margin-bottom: 64px;
+    }
+
+    .testimonials-header .section-subtitle {
+        margin: 0 auto;
+    }
+
+    .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 28px;
+    }
+
+    .testimonial-card {
+        background: var(--white-pure);
+        border: 1px solid var(--gray-100);
+        border-radius: var(--radius-lg);
+        padding: 36px;
+        transition: all var(--transition);
+        position: relative;
+    }
+
+    .testimonial-card:hover {
+        box-shadow: var(--shadow-lg);
+        transform: translateY(-3px);
+    }
+
+    .testimonial-stars {
+        display: flex;
+        gap: 3px;
+        margin-bottom: 16px;
+    }
+
+    .testimonial-stars svg {
+        width: 18px;
+        height: 18px;
+        color: #F6AD55;
+    }
+
+    .testimonial-text {
+        font-size: 0.95rem;
+        color: var(--gray-600);
+        line-height: 1.8;
+        margin-bottom: 24px;
+    }
+
+    .testimonial-author {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+    }
+
+    .testimonial-avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid var(--gray-100);
+    }
+
+    .testimonial-name {
+        font-weight: 600;
+        color: var(--gray-800);
+        font-size: 0.92rem;
+    }
+
+    .testimonial-location {
+        font-size: 0.8rem;
+        color: var(--gray-500);
+    }
+
+    .testimonial-quote-icon {
+        position: absolute;
+        top: 24px;
+        right: 28px;
+        font-size: 3rem;
+        color: var(--blue-light);
+        font-family: Georgia, serif;
+        line-height: 1;
+    }
+
+    /* ===== Timings ===== */
+    .timings {
+        padding: 100px 0;
+        background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%);
+        color: var(--white-pure);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .timings::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image:
+        radial-gradient(circle at 10% 90%, rgba(255,255,255,0.05) 0%, transparent 40%),
+        radial-gradient(circle at 90% 10%, rgba(255,255,255,0.05) 0%, transparent 40%);
+        pointer-events: none;
+    }
+
+    .timings-inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+    }
+
+    .timings .section-label {
+        color: rgba(255,255,255,0.7);
+    }
+
+    .timings .section-title {
+        color: var(--white-pure);
+    }
+
+    .timings-description {
+        color: rgba(255,255,255,0.8);
+        font-size: 1.05rem;
+        line-height: 1.8;
+        margin-bottom: 24px;
+    }
+
+    .timings-note {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255,255,255,0.1);
+        padding: 10px 18px;
+        border-radius: var(--radius-sm);
+        font-size: 0.88rem;
+        color: rgba(255,255,255,0.9);
+    }
+
+    .timings-table {
+        background: rgba(255,255,255,0.1);
+        border-radius: var(--radius-lg);
+        padding: 36px;
+        backdrop-filter: blur(10px);
+    }
+
+    .timing-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .timing-row:last-child {
+        border-bottom: none;
+    }
+
+    .timing-day {
+        font-weight: 600;
+        font-size: 0.95rem;
+    }
+
+    .timing-hours {
+        font-size: 0.9rem;
+        opacity: 0.9;
+    }
+
+    .timing-hours.closed {
+        color: #FC8181;
+    }
+
+    .timing-today {
+        background: rgba(255,255,255,0.1);
+        border-radius: var(--radius-sm);
+        padding: 2px 10px;
+        margin-left: 8px;
+        font-size: 0.72rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    /* ===== Contact ===== */
+    .contact {
+        padding: 100px 0;
+        background: var(--gray-50);
+    }
+
+    .contact-header {
+        text-align: center;
+        margin-bottom: 64px;
+    }
+
+    .contact-header .section-subtitle {
+        margin: 0 auto;
+    }
+
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .contact-info-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-card {
+        background: var(--white-pure);
+        border: 1px solid var(--gray-100);
+        border-radius: var(--radius-md);
+        padding: 28px;
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        transition: all var(--transition);
+    }
+
+    .contact-card:hover {
+        box-shadow: var(--shadow-md);
+        transform: translateY(-2px);
+    }
+
+    .contact-card-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        flex-shrink: 0;
+        background: var(--blue-light);
+    }
+
+    .contact-card h3 {
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: var(--gray-800);
+        margin-bottom: 4px;
+    }
+
+    .contact-card p {
+        font-size: 0.88rem;
+        color: var(--gray-500);
+        line-height: 1.6;
+    }
+
+    .contact-card a {
+        color: var(--blue);
+        font-weight: 500;
+    }
+
+    .contact-map {
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        box-shadow: var(--shadow-md);
+        border: 1px solid var(--gray-100);
+        min-height: 380px;
+    }
+
+    .contact-map iframe {
+        width: 100%;
+        height: 100%;
+        min-height: 380px;
+        border: 0;
+    }
+
+    /* ===== CTA Section ===== */
+    .cta-section {
+        padding: 80px 0;
+        background: var(--white);
+    }
+
+    .cta-box {
+        background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
+        border-radius: var(--radius-xl);
+        padding: 60px;
+        text-align: center;
+        color: var(--white-pure);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .cta-box::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at 30% 50%, rgba(255,255,255,0.1) 0%, transparent 50%);
+        pointer-events: none;
+    }
+
+    .cta-box h2 {
+        font-family: var(--font-heading);
+        font-size: clamp(1.6rem, 3vw, 2.2rem);
+        margin-bottom: 12px;
+        position: relative;
+    }
+
+    .cta-box p {
+        font-size: 1.05rem;
+        opacity: 0.9;
+        margin-bottom: 32px;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+    }
+
+    .cta-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--white-pure);
+        color: var(--green-dark);
+        padding: 16px 36px;
+        border-radius: var(--radius-sm);
+        font-weight: 700;
+        font-size: 1rem;
+        border: none;
+        cursor: pointer;
+        transition: all var(--transition);
+        text-decoration: none;
+        position: relative;
+    }
+
+    .cta-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        color: var(--green-dark);
+    }
+
+    /* ===== Footer ===== */
+    .footer {
+        background: var(--gray-800);
+        color: var(--gray-300);
+        padding: 60px 0 30px;
+    }
+
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 48px;
+        margin-bottom: 48px;
+    }
+
+    .footer-brand-text {
+        font-size: 0.9rem;
+        line-height: 1.7;
+        color: var(--gray-500);
+        margin-top: 16px;
+    }
+
+    .footer h4 {
+        color: var(--white-pure);
+        font-size: 0.92rem;
+        font-weight: 600;
+        margin-bottom: 18px;
+    }
+
+    .footer-links {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-links a {
+        color: var(--gray-500);
+        font-size: 0.88rem;
+        transition: color var(--transition);
+    }
+
+    .footer-links a:hover {
+        color: var(--white-pure);
+    }
+
+    .footer-bottom {
+        border-top: 1px solid rgba(255,255,255,0.08);
+        padding-top: 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .footer-bottom p {
+        font-size: 0.82rem;
+        color: var(--gray-500);
+    }
+
+    .footer-socials {
+        display: flex;
+        gap: 12px;
+    }
+
+    .footer-social-link {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+        background: rgba(255,255,255,0.06);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--gray-500);
+        transition: all var(--transition);
+    }
+
+    .footer-social-link:hover {
+        background: var(--blue);
+        color: var(--white-pure);
+    }
+
+    .footer-social-link svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    /* ===== Mobile Responsive ===== */
+    @media (max-width: 768px) {
+        .navbar-links {
+        display: none;
+        position: fixed;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: var(--white-pure);
+        flex-direction: column;
+        padding: 24px;
+        gap: 20px;
+        box-shadow: var(--shadow-lg);
+        border-top: 1px solid var(--gray-100);
+        }
+
+        .navbar-links.active {
+        display: flex;
+        }
+
+        .mobile-toggle {
+        display: block;
+        }
+
+        .hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 40px 0;
+        }
+
+        .hero-image-wrapper {
+        order: -1;
+        max-width: 350px;
+        margin: 0 auto;
+        }
+
+        .hero-image-float {
+        display: none;
+        }
+
+        .hero-stats {
+        gap: 24px;
+        }
+
+        .hero h1 {
+        font-size: clamp(1.8rem, 6vw, 2.4rem);
+        }
+
+        .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        }
+
+        .about-image-container {
+        max-width: 350px;
+        margin: 0 auto;
+        }
+
+        .about-experience-badge {
+        right: 0;
+        bottom: 20px;
+        }
+
+        .timings-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        }
+
+        .contact-grid {
+        grid-template-columns: 1fr;
+        }
+
+        .testimonials-grid {
+        grid-template-columns: 1fr;
+        }
+
+        .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        }
+
+        .cta-box {
+        padding: 40px 24px;
+        }
+
+        .services-grid {
+        grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .container {
+        padding: 0 16px;
+        }
+
+        .hero-stats {
+        flex-direction: column;
+        gap: 16px;
+        }
+
+        .footer-grid {
+        grid-template-columns: 1fr;
+        }
+
+        .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        }
+    }
+
+    /* ===== Animations ===== */
+    @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+    }
+
+    .float-anim {
+        animation: float 4s ease-in-out infinite;
+    }
+
+    .float-anim-delay {
+        animation: float 4s ease-in-out 1s infinite;
+    }
+
+    /* ===== Scroll to Top ===== */
+    .scroll-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 48px;
+        height: 48px;
+        background: var(--blue);
+        color: var(--white-pure);
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: var(--shadow-lg);
+        opacity: 0;
+        visibility: hidden;
+        transition: all var(--transition);
+        z-index: 999;
+    }
+
+    .scroll-top.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .scroll-top:hover {
+        background: var(--blue-dark);
+        transform: translateY(-3px);
+    }
+
+    .scroll-top svg {
+        width: 20px;
+        height: 20px;
+    }
+    </style>
 </head>
-<body class="bg-white text-gray-900">
+<body>
 
-<!-- Schema Markup -->
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "MedicalClinic",
- "name": "Wellness First Clinic",
- "description": "General physician and family clinic in Kothrud, Pune offering same-day appointments and comprehensive health services",
- "address": {
- "@type": "PostalAddress",
- "streetAddress": "Paud Road, Near Chandani Chowk",
- "addressLocality": "Kothrud",
- "addressRegion": "Pune",
- "addressCountry": "IN"
- },
- "telephone": "+91-98765-00001",
- "openingHours": "Mo-Sa 09:00-21:00",
- "priceRange": ""
-}
-</script>
+    <!-- Skip Navigation -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<!-- NAVIGATION -->
-<nav>
- <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
- <div class="flex items-center gap-2">
- 
- <div>
- <div class="font-bold text-lg blue leading-tight">Wellness First Clinic</div>
- <div class="text-xs text-gray-500">Kothrud, Pune</div>
- </div>
- </div>
- <div class="hidden md:flex gap-8 text-sm font-medium text-gray-600">
- <a href="#services" class="hover:text-blue-600 transition-colors">Services</a>
- <a href="#about" class="hover:text-blue-600 transition-colors">About</a>
- <a href="#testimonials" class="hover:text-blue-600 transition-colors">Patients</a>
- <a href="#contact" class="hover:text-blue-600 transition-colors">Contact</a>
- </div>
- <a href="#book" class="btn-blue text-sm hidden md:block">Book Appointment </a>
- </div>
-</nav>
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container navbar-inner">
+        <a href="#" class="navbar-brand" aria-label="Aashirwad Family Clinic - Home">
+        <div class="navbar-logo" aria-hidden="true">A</div>
+        <div class="navbar-brand-text">
+            <span class="navbar-brand-name">Aashirwad Family Clinic</span>
+            <span class="navbar-brand-tagline">Kothrud, Pune</span>
+        </div>
+        </a>
 
-<!-- HERO -->
-<section class="bg-light-blue py-20 px-4">
- <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
- <div class="flex-1">
- <span class="badge mb-6">Trusted by 3,000+ families in Kothrud</span>
- <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-4 mt-4">
- Your Family Doctor,<br><span class="blue">When You Need One</span>
- </h1>
- <p class="text-lg text-gray-600 mb-8 max-w-lg">
- Same-day appointments. No long waits. A doctor who actually listens and takes time to explain. That's what healthcare should feel like.
- </p>
- <div class="flex flex-wrap gap-4 mb-10">
- <a href="#book" class="btn-blue">Book Appointment </a>
- <a href="tel:+919823011004" class="btn-outline">Call Now</a>
- </div>
- <div class="flex flex-wrap gap-6 text-sm text-gray-600">
- <span>12+ Years Experience</span>
- <span>Same-Day Slots</span>
- <span>Online Consultations</span>
- <span>Mon–Sat 9AM–9PM</span>
- </div>
- </div>
- <div class="flex-1 flex justify-center">
- <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&q=80" 
- alt="Doctor consulting patient in modern clinic" class="rounded-2xl shadow-2xl w-full max-w-md object-cover" style="max-height:420px;">
- </div>
- </div>
-</section>
+        <ul class="navbar-links" id="nav-menu" role="menubar">
+        <li role="none"><a href="#services" role="menuitem">Services</a></li>
+        <li role="none"><a href="#about" role="menuitem">About</a></li>
+        <li role="none"><a href="#testimonials" role="menuitem">Reviews</a></li>
+        <li role="none"><a href="#timings" role="menuitem">Timings</a></li>
+        <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
+        <li role="none"><a href="tel:+912025468890" class="navbar-cta" role="menuitem">📞 Call Now</a></li>
+        </ul>
 
-<!-- STATS -->
-<section class="py-12 bg-white border-b">
- <div class="max-w-5xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
- <div><div class="stat-num">3K+</div><div class="text-gray-500 text-sm">Patients Treated</div></div>
- <div><div class="stat-num">12</div><div class="text-gray-500 text-sm">Years in Kothrud</div></div>
- <div><div class="stat-num">4.81 out of 5</div><div class="text-gray-500 text-sm">Google Rating</div></div>
- <div><div class="stat-num">95%</div><div class="text-gray-500 text-sm">Same-Day Availability</div></div>
- </div>
-</section>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+        </button>
+    </div>
+    </nav>
 
-<!-- SERVICES -->
-<section id="services" class="py-20 px-4 bg-gray-50">
- <div class="max-w-6xl mx-auto">
- <div class="text-center mb-14">
- <h2 class="section-title">What We Treat</h2>
- <p class="section-sub">From routine checkups to managing chronic conditions — we're equipped for it all</p>
- </div>
- <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
- <div class="card">
- <div class="text-3xl mb-3"></div>
- <h3 class="font-bold text-lg mb-2">Fever & Infections</h3>
- <p class="text-gray-600 text-sm">Cold, flu, throat infections, UTI, typhoid, viral and bacterial illnesses. Rapid diagnosis, same-day treatment.</p>
- </div>
- <div class="card">
- <div class="text-3xl mb-3"></div>
- <h3 class="font-bold text-lg mb-2">Diabetes Management</h3>
- <p class="text-gray-600 text-sm">Type 1 & 2 diabetes care, HbA1c monitoring, medication review, diet counseling, and complication prevention.</p>
- </div>
- <div class="card">
- <div class="text-3xl mb-3">❤</div>
- <h3 class="font-bold text-lg mb-2">Blood Pressure & Heart</h3>
- <p class="text-gray-600 text-sm">Hypertension management, cardiac risk screening, ECG, lipid panel review, and lifestyle counseling.</p>
- </div>
- <div class="card">
- <div class="text-3xl mb-3"></div>
- <h3 class="font-bold text-lg mb-2">Pediatric Care</h3>
- <p class="text-gray-600 text-sm">Children's health from newborns to teens. Vaccinations, growth monitoring, school health certificates.</p>
- </div>
- <div class="card">
- <div class="text-3xl mb-3"></div>
- <h3 class="font-bold text-lg mb-2">Health Checkups</h3>
- <p class="text-gray-600 text-sm">Annual health packages, pre-employment medicals, fitness certificates, insurance medical reports.</p>
- </div>
- <div class="card">
- <div class="text-3xl mb-3"></div>
- <h3 class="font-bold text-lg mb-2">Chronic Disease Care</h3>
- <p class="text-gray-600 text-sm">Thyroid, asthma, arthritis, PCOD, anemia — long-term management with regular follow-ups.</p>
- </div>
- </div>
- </div>
-</section>
+    <!-- Main Content -->
+    <main id="main-content">
 
-<!-- ABOUT / DOCTOR -->
-<section id="about" class="py-20 px-4 bg-white">
- <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-12 items-center">
- <div class="flex-1">
- <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=450&q=80" 
- alt="General physician doctor" class="rounded-2xl shadow-xl w-full max-w-sm object-cover mx-auto" style="max-height:400px;">
- </div>
- <div class="flex-1">
- <span class="badge mb-4">About Your Doctor</span>
- <h2 class="section-title mt-4">Medicine Should Feel Human</h2>
- <p class="text-gray-600 mb-4">After over a decade of practicing in Kothrud, I've learned that most patients don't just want a prescription — they want someone who listens. That's how we run this clinic.</p>
- <p class="text-gray-600 mb-6">Every appointment gets full attention. I explain what's happening in plain language. We discuss options. And if something is beyond my scope, I'll refer you to the right specialist — not just any specialist.</p>
- <ul class="space-y-3 text-sm text-gray-700">
- <li> MBBS, MD (Internal Medicine) — Pune University</li>
- <li> Former Consultant, KEM Hospital Pune</li>
- <li> Fellowship, Diabetology — Mumbai</li>
- <li>12+ years in independent practice, Kothrud</li>
- </ul>
- </div>
- </div>
-</section>
+    <!-- Hero Section -->
+    <section class="hero" aria-label="Welcome to Aashirwad Family Clinic">
+        <div class="hero-bg-pattern" aria-hidden="true"></div>
+        <div class="container">
+        <div class="hero-content">
+            <div class="hero-text" id="hero-text">
+            <div class="hero-badge">
+                <span class="hero-badge-dot" aria-hidden="true"></span>
+                Welcoming patients since 2011
+            </div>
 
-<!-- WHY US -->
-<section class="py-20 px-4 bg-light-blue">
- <div class="max-w-6xl mx-auto">
- <div class="text-center mb-14">
- <h2 class="section-title">Why Patients Come Back</h2>
- <p class="section-sub">We're not trying to be the fanciest clinic — just the most reliable one in your neighbourhood</p>
- </div>
- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
- <div class="card text-center">
- <div class="text-4xl mb-3">⚡</div>
- <h3 class="font-semibold mb-2">Same-Day Slots</h3>
- <p class="text-gray-500 text-sm">Most times, you can book and be seen the same day. No waiting weeks.</p>
- </div>
- <div class="card text-center">
- <div class="text-4xl mb-3"></div>
- <h3 class="font-semibold mb-2">Online Consultations</h3>
- <p class="text-gray-500 text-sm">Can't come in? Video consult from home. Prescriptions sent digitally.</p>
- </div>
- <div class="card text-center">
- <div class="text-4xl mb-3"></div>
- <h3 class="font-semibold mb-2">Digital Health Records</h3>
- <p class="text-gray-500 text-sm">All your reports and history stored securely. Share with any doctor instantly.</p>
- </div>
- <div class="card text-center">
- <div class="text-4xl mb-3">WhatsApp</div>
- <h3 class="font-semibold mb-2">Post-Visit Support</h3>
- <p class="text-gray-500 text-sm">Questions after your visit? WhatsApp us. We respond within 4 hours.</p>
- </div>
- </div>
- </div>
-</section>
+            <h1>Your Family's Health, <span>Our Promise</span></h1>
 
-<!-- TESTIMONIALS -->
-<section id="testimonials" class="py-20 px-4 bg-white">
- <div class="max-w-6xl mx-auto">
- <div class="text-center mb-14">
- <h2 class="section-title">What Our Patients Say</h2>
- <p class="section-sub">Real feedback from families in Kothrud</p>
- </div>
- <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
- <div class="card border border-blue-100">
- <div class="text-yellow-400 mb-3">★★★★★ 5/5</div>
- <p class="text-gray-700 text-sm mb-4">"I've been going here for 4 years now. The doctor never rushes you and actually remembers your history without needing to re-read everything each time."</p>
- <div class="font-semibold text-sm">Priya S.</div>
- <div class="text-xs text-gray-400">Kothrud resident</div>
- </div>
- <div class="card border border-blue-100">
- <div class="text-yellow-400 mb-3">★★★★★ 5/5</div>
- <p class="text-gray-700 text-sm mb-4">"My mother has diabetes and high BP. Managing both is complex, but the doctor here handles it patiently. Explains everything so she understands."</p>
- <div class="font-semibold text-sm">Rohit M.</div>
- <div class="text-xs text-gray-400">Patient's son, Shivajinagar</div>
- </div>
- <div class="card border border-blue-100">
- <div class="text-yellow-400 mb-3">★★★★★ 5/5</div>
- <p class="text-gray-700 text-sm mb-4">"Got a same-day slot on a Sunday evening during fever. Diagnosed and treated within 30 minutes. This is what I call accessible healthcare."</p>
- <div class="font-semibold text-sm">Aditya K.</div>
- <div class="text-xs text-gray-400">IT professional, Baner</div>
- </div>
- </div>
- </div>
-</section>
+            <p class="hero-description">
+                Dr. Rajesh Kulkarni and the Aashirwad team have been Kothrud's trusted family doctors for over 15 years. From your child's first fever to grandpa's BP check-up — we're here for every member of your family.
+            </p>
 
-<!-- FEES -->
-<section class="py-16 px-4 bg-gray-50">
- <div class="max-w-4xl mx-auto text-center">
- <h2 class="section-title mb-4">Transparent Pricing</h2>
- <p class="text-gray-600 mb-10">No hidden charges. You'll know the fees upfront, always.</p>
- <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
- <div class="card">
- <div class="text-2xl font-bold blue mb-2">300</div>
- <div class="font-semibold mb-2">General Consultation</div>
- <div class="text-sm text-gray-500">New & follow-up visits, prescription, advice</div>
- </div>
- <div class="card border-2 border-blue-400">
- <div class="badge mb-2">Most Popular</div>
- <div class="text-2xl font-bold blue mb-2">500</div>
- <div class="font-semibold mb-2">Comprehensive Visit</div>
- <div class="text-sm text-gray-500">Full examination + ECG + basic blood test interpretation</div>
- </div>
- <div class="card">
- <div class="text-2xl font-bold blue mb-2">400</div>
- <div class="font-semibold mb-2">Online Consultation</div>
- <div class="text-sm text-gray-500">Video call, prescription, follow-up support</div>
- </div>
- </div>
- </div>
-</section>
+            <div class="hero-buttons">
+                <a href="tel:+912025468890" class="btn-primary" aria-label="Book an appointment by calling us">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                Book Appointment
+                </a>
+                <a href="#services" class="btn-secondary">
+                Our Services
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+                </a>
+            </div>
 
-<!-- BOOK -->
-<section id="book" class="py-20 px-4 bg-blue-600 text-white">
- <div class="max-w-3xl mx-auto text-center">
- <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to See a Doctor?</h2>
- <p class="text-blue-100 mb-10 text-lg">Book online or call directly. We'll confirm your slot within 15 minutes.</p>
- <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
- <div class="bg-white bg-opacity-10 rounded-xl p-4">
- <div class="font-bold text-lg mb-1">Location</div>
- <div class="text-blue-100 text-sm">Paud Road, Near Chandani Chowk, Kothrud, Pune – 411038</div>
- </div>
- <div class="bg-white bg-opacity-10 rounded-xl p-4">
- <div class="font-bold text-lg mb-1">⏰ Hours</div>
- <div class="text-blue-100 text-sm">Mon–Fri: 9AM–9PM<br>Sat–Sun: 9AM–2PM</div>
- </div>
- <div class="bg-white bg-opacity-10 rounded-xl p-4">
- <div class="font-bold text-lg mb-1">Contact</div>
- <div class="text-blue-100 text-sm">+91 98765 00001<br>wellfirst@email.com</div>
- </div>
- </div>
- <a href="tel:+919823011004" class="bg-white text-blue-600 font-bold px-10 py-4 rounded-xl text-lg hover:bg-blue-50 transition-all inline-block">Call to Book Now</a>
- </div>
-</section>
+            <div class="hero-stats">
+                <div>
+                <div class="hero-stat-number">15+</div>
+                <div class="hero-stat-label">Years in Kothrud</div>
+                </div>
+                <div>
+                <div class="hero-stat-number">12,000+</div>
+                <div class="hero-stat-label">Families Treated</div>
+                </div>
+                <div>
+                <div class="hero-stat-number">4.8 ★</div>
+                <div class="hero-stat-label">Google Rating</div>
+                </div>
+            </div>
+            </div>
 
-<!-- CONTACT -->
-<section id="contact" class="py-16 px-4 bg-white">
- <div class="max-w-3xl mx-auto text-center">
- <h2 class="section-title mb-4">Find Us</h2>
- <div class="bg-gray-100 rounded-2xl p-8">
- <p class="text-gray-700 mb-2 font-semibold">Wellness First Clinic</p>
- <p class="text-gray-600 text-sm">Shop No. 7, Paud Road, Near Chandani Chowk, Kothrud, Pune – 411038</p>
- <p class="text-gray-600 text-sm mt-1">Landmarks: Opp. Kothrud Bus Depot, near Karve Road junction</p>
- <div class="mt-4 text-sm text-gray-500">Free parking available. Wheelchair accessible.</div>
- </div>
- </div>
-</section>
+            <div class="hero-image-wrapper" data-aos="fade-left" data-aos-delay="200">
+            <img
+                src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&h=750&fit=crop&q=80"
+                alt="Dr. Rajesh Kulkarni, general physician at Aashirwad Family Clinic, smiling in his clinic"
+                class="hero-image-main"
+                width="600"
+                height="750"
+                loading="eager"
+            >
 
-<footer class="py-10 px-4 bg-gray-900 text-gray-400 text-center text-sm">
- <div class="max-w-5xl mx-auto">
- <p class="mb-2 font-semibold text-white">Wellness First Clinic — Kothrud, Pune</p>
- <p class="mb-4">General Physician | Family Doctor | Chronic Disease Management</p>
- <p class="text-xs">© 2024 Wellness First Clinic. All rights reserved. | MBBS, MD registered practitioner. Consult your doctor before starting any treatment.</p>
- </div>
-</footer>
+            <div class="hero-image-float hero-float-1 float-anim" aria-hidden="true">
+                <div class="hero-float-icon green">🩺</div>
+                <div class="hero-float-text">
+                <strong>Walk-ins Welcome</strong>
+                <span>No appointment needed</span>
+                </div>
+            </div>
 
+            <div class="hero-image-float hero-float-2 float-anim-delay" aria-hidden="true">
+                <div class="hero-float-icon blue">⭐</div>
+                <div class="hero-float-text">
+                <strong>347+ Reviews</strong>
+                <span>on Google Maps</span>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </section>
 
-    <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/919823011004?text=Hello%2C%20I%20found%20your%20website%20and%20would%20like%20to%20enquire." 
-       target="_blank" rel="noopener"
-       style="position:fixed;bottom:24px;right:24px;z-index:9999;background:#25D366;color:#fff;border-radius:50%;width:56px;height:56px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(37,211,102,0.5);text-decoration:none;font-size:28px;"
-       title="Chat on WhatsApp">💬</a>
+    <!-- Trust Bar -->
+    <section class="trust-bar" aria-label="Trust indicators">
+        <div class="container">
+        <div class="trust-bar-inner">
+            <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            Maharashtra Medical Council Registered
+            </div>
+            <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            All Major Insurance Accepted
+            </div>
+            <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            Digital Prescriptions &amp; Reports
+            </div>
+            <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            Clean &amp; Hygienic Facility
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services" aria-label="Our healthcare services">
+        <div class="container">
+        <div class="services-header" data-aos="fade-up">
+            <span class="section-label">What We Treat</span>
+            <h2 class="section-title">Healthcare for Your Whole Family</h2>
+            <p class="section-subtitle">From seasonal flu to chronic conditions — we provide thorough, patient care with a personal touch. No rushing, no judgment.</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="service-icon blue" aria-hidden="true">🤒</div>
+            <h3>Fever, Cold &amp; Infections</h3>
+            <p>Seasonal illnesses, viral fevers, throat infections, flu symptoms — fast and accurate diagnosis with the right treatment, not just antibiotics.</p>
+            <span class="service-tag">Most Common Visit</span>
+            </div>
+
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-icon green" aria-hidden="true">💓</div>
+            <h3>Blood Pressure Management</h3>
+            <p>Regular BP monitoring, medication adjustments, and lifestyle guidance. Many of our Kothrud patients have managed their BP for 10+ years with us.</p>
+            <span class="service-tag">Long-term Care</span>
+            </div>
+
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-icon orange" aria-hidden="true">🩸</div>
+            <h3>Diabetes Care</h3>
+            <p>HbA1c tracking, sugar management, diet planning, and medication optimization. We take a whole-person approach — not just numbers on a report.</p>
+            <span class="service-tag">Comprehensive</span>
+            </div>
+
+            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-icon purple" aria-hidden="true">👶</div>
+            <h3>Child Health &amp; Growth</h3>
+            <p>Vaccinations, growth monitoring, childhood infections, nutrition advice. Parents in Kothrud trust us with their little ones since 2011.</p>
+            <span class="service-tag">Paediatric Friendly</span>
+            </div>
+
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-icon green" aria-hidden="true">🧪</div>
+            <h3>Health Check-ups</h3>
+            <p>Annual physicals, pre-employment medicals, and preventive screening packages. Catch problems early before they become serious.</p>
+            <span class="service-tag">Preventive</span>
+            </div>
+
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-icon blue" aria-hidden="true">🫁</div>
+            <h3>Asthma &amp; Respiratory</h3>
+            <p>Breathing difficulties, asthma management, allergies, and chronic cough. Pune's weather can be tricky — we help you breathe easier.</p>
+            <span class="service-tag">Specialist Care</span>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about" aria-label="About Dr. Rajesh Kulkarni">
+        <div class="container">
+        <div class="about-grid">
+            <div class="about-image-container" data-aos="fade-right">
+            <img
+                src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=500&h=660&fit=crop&q=80"
+                alt="Dr. Rajesh Kulkarni in consultation at Aashirwad Family Clinic"
+                class="about-image"
+                width="500"
+                height="660"
+                loading="lazy"
+            >
+            <div class="about-experience-badge" aria-label="15 years of experience">
+                <span class="number">15+</span>
+                <span class="label">Years Experience</span>
+            </div>
+            </div>
+
+            <div class="about-text" data-aos="fade-left">
+            <span class="section-label">Meet Your Doctor</span>
+            <h2 class="section-title">Dr. Rajesh Kulkarni</h2>
+            <p style="font-weight:500; color: var(--blue); margin-bottom: 8px; font-size: 1rem;">MBBS, MD (General Medicine)</p>
+
+            <p>Born and raised in Pune, Dr. Rajesh Kulkarni started Aashirwad Family Clinic in 2011 with a simple belief: good healthcare doesn't need to be complicated or impersonal.</p>
+
+            <p>After completing his MBBS from B.J. Medical College, Pune and his MD from Sassoon Hospital, he chose to set up practice right here in Kothrud — the neighbourhood he grew up in. For him, treating patients isn't just about prescriptions. It's about understanding their lives, their stresses, and their families.</p>
+
+            <p>"Half the treatment is just listening properly," he often tells medical students who observe at the clinic. His patients — many of whom have been coming since day one — would agree.</p>
+
+            <div class="about-credentials">
+                <span class="credential-tag">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                B.J. Medical College, Pune
+                </span>
+                <span class="credential-tag">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                MMC Registered
+                </span>
+                <span class="credential-tag">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                IMA Member
+                </span>
+                <span class="credential-tag">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                Sassoon Hospital Alumni
+                </span>
+            </div>
+
+            <div class="about-philosophy">
+                <p>"I believe every patient deserves unhurried attention. When someone walks into my clinic, they're not a case number — they're a neighbour, a friend. That's how Kothrud works."</p>
+                <cite>— Dr. Rajesh Kulkarni</cite>
+            </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials" aria-label="Patient testimonials">
+        <div class="container">
+        <div class="testimonials-header" data-aos="fade-up">
+            <span class="section-label">What Our Patients Say</span>
+            <h2 class="section-title">Trusted by Kothrud Families</h2>
+            <p class="section-subtitle">Don't take our word for it. Here's what our patients have shared on Google Reviews.</p>
+        </div>
+
+        <div class="testimonials-grid">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="testimonial-quote-icon" aria-hidden="true">"</div>
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <p class="testimonial-text">"We've been going to Dr. Kulkarni for 8 years now — my parents, my kids, everyone. He remembers every patient by name, even asks about my father's knee surgery from last year. That kind of personal attention is rare these days. Our whole Dahanukar Colony building goes to him!"</p>
+            <div class="testimonial-author">
+                <img
+                src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=96&h=96&fit=crop&q=80"
+                alt="Portrait of Sneha Patwardhan"
+                class="testimonial-avatar"
+                width="48"
+                height="48"
+                loading="lazy"
+                >
+                <div>
+                <div class="testimonial-name">Sneha Patwardhan</div>
+                <div class="testimonial-location">Dahanukar Colony, Kothrud</div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="testimonial-quote-icon" aria-hidden="true">"</div>
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <p class="testimonial-text">"My sugar was at 350 when I first went to Dr. Kulkarni two years ago. He didn't just hand me medicine — he sat with me for 20 minutes explaining what to eat, when to walk, how to check at home. Today my HbA1c is 6.8. Best doctor in Kothrud, no doubt. Very reasonable fees also."</p>
+            <div class="testimonial-author">
+                <img
+                src="https://images.unsplash.com/photo-1566753323558-f4e0952af115?w=96&h=96&fit=crop&q=80"
+                alt="Portrait of Ramesh Joshi"
+                class="testimonial-avatar"
+                width="48"
+                height="48"
+                loading="lazy"
+                >
+                <div>
+                <div class="testimonial-name">Ramesh Joshi</div>
+                <div class="testimonial-location">Paud Road, Kothrud</div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="testimonial-quote-icon" aria-hidden="true">"</div>
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <p class="testimonial-text">"When my 2-year-old had a high fever at 10pm, I called Dr. Kulkarni in panic. He picked up, calmed me down, told me exactly what to do, and asked me to come first thing in the morning. He even followed up the next evening to check if Aarav was better. That's not just a doctor — that's family."</p>
+            <div class="testimonial-author">
+                <img
+                src="https://images.unsplash.com/photo-1598550874175-4d0ef436c909?w=96&h=96&fit=crop&q=80"
+                alt="Portrait of Priya Deshpande"
+                class="testimonial-avatar"
+                width="48"
+                height="48"
+                loading="lazy"
+                >
+                <div>
+                <div class="testimonial-name">Priya Deshpande</div>
+                <div class="testimonial-location">Vanaz Corner, Kothrud</div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Timings Section -->
+    <section class="timings" id="timings" aria-label="Clinic timings">
+        <div class="container">
+        <div class="timings-inner">
+            <div data-aos="fade-right">
+            <span class="section-label">Visit Us</span>
+            <h2 class="section-title">Clinic Timings</h2>
+            <p class="timings-description">
+                We run two sessions daily — morning and evening — so working professionals and students can find a slot that fits. Sunday mornings are reserved for quick consultations and follow-ups.
+            </p>
+            <div class="timings-note">
+                💡 Pro tip: Mornings (9–10 AM) and evenings (7–8 PM) tend to be busiest. Come around 5 PM for shorter waits.
+            </div>
+            </div>
+
+            <div class="timings-table" data-aos="fade-left">
+            <div class="timing-row">
+                <span class="timing-day">Monday — Friday</span>
+                <span class="timing-hours">9:00 AM – 1:00 PM &amp; 5:00 – 9:00 PM</span>
+            </div>
+            <div class="timing-row">
+                <span class="timing-day">Saturday</span>
+                <span class="timing-hours">9:00 AM – 1:00 PM &amp; 5:00 – 9:00 PM</span>
+            </div>
+            <div class="timing-row">
+                <span class="timing-day">Sunday</span>
+                <span class="timing-hours">9:00 AM – 12:00 PM (Morning Only)</span>
+            </div>
+            <div class="timing-row">
+                <span class="timing-day">Public Holidays</span>
+                <span class="timing-hours closed">Closed (Emergency calls answered)</span>
+            </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" aria-label="Book an appointment">
+        <div class="container">
+        <div class="cta-box" data-aos="zoom-in">
+            <h2>Feeling Unwell? Don't Wait.</h2>
+            <p>Walk in or call us — no complicated booking process. We're just a 5-minute walk from Dahanukar Colony signal.</p>
+            <a href="tel:+912025468890" class="cta-btn">
+            📞 Call +91 20 2546 8890
+            </a>
+        </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact" aria-label="Contact information and location">
+        <div class="container">
+        <div class="contact-header" data-aos="fade-up">
+            <span class="section-label">Get In Touch</span>
+            <h2 class="section-title">Find Us in Kothrud</h2>
+            <p class="section-subtitle">We're right next to the Dahanukar Colony signal, opposite Rupee Bank. Look for the blue Aashirwad signboard on the first floor.</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-info-cards" data-aos="fade-right">
+            <div class="contact-card">
+                <div class="contact-card-icon" aria-hidden="true">📍</div>
+                <div>
+                <h3>Clinic Address</h3>
+                <p>Shop No. 7, First Floor, Sahyadri Heights<br>Near Dahanukar Colony Signal<br>Kothrud, Pune — 411038</p>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-card-icon" aria-hidden="true">📞</div>
+                <div>
+                <h3>Phone</h3>
+                <p>Clinic: <a href="tel:+912025468890">+91 20 2546 8890</a><br>
+                WhatsApp: <a href="https://wa.me/919876543210" target="_blank" rel="noopener">+91 98765 43210</a></p>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-card-icon" aria-hidden="true">✉️</div>
+                <div>
+                <h3>Email</h3>
+                <p><a href="mailto:care@aashirwadfamilyclinic.in">care@aashirwadfamilyclinic.in</a><br>
+                <span style="font-size:0.82rem; color:var(--gray-500)">For reports &amp; prescriptions</span></p>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-card-icon" aria-hidden="true">🚗</div>
+                <div>
+                <h3>How to Reach</h3>
+                <p>2 min walk from Dahanukar Colony Bus Stop<br>
+                Parking available at Sahyadri Heights basement<br>
+                Nearest landmark: Rupee Bank, Kothrud</p>
+                </div>
+            </div>
+            </div>
+
+            <div class="contact-map" data-aos="fade-left">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.5!2d73.8077!3d18.5074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDMwJzI2LjYiTiA3M8KwNDgnMjcuNyJF!5e0!3m2!1sen!2sin!4v1679900000000!5m2!1sen!2sin"
+                title="Aashirwad Family Clinic location on Google Maps — Kothrud, Pune"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            </div>
+        </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+    <div class="container">
+        <div class="footer-grid">
+        <div>
+            <div class="navbar-brand" style="margin-bottom: 8px;">
+            <div class="navbar-logo" aria-hidden="true">A</div>
+            <div class="navbar-brand-text">
+                <span class="navbar-brand-name" style="color: var(--white-pure);">Aashirwad Family Clinic</span>
+                <span class="navbar-brand-tagline" style="color: var(--gray-500);">Kothrud, Pune</span>
+            </div>
+            </div>
+            <p class="footer-brand-text">Serving Kothrud families since 2011. Your trusted neighbourhood clinic for general medicine, preventive care, and chronic disease management.</p>
+        </div>
+
+        <div>
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About Doctor</a></li>
+            <li><a href="#testimonials">Patient Reviews</a></li>
+            <li><a href="#timings">Clinic Timings</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Our Services</h4>
+            <ul class="footer-links">
+            <li><a href="#services">General Medicine</a></li>
+            <li><a href="#services">Diabetes Care</a></li>
+            <li><a href="#services">BP Management</a></li>
+            <li><a href="#services">Child Health</a></li>
+            <li><a href="#services">Health Check-ups</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Contact</h4>
+            <ul class="footer-links">
+            <li><a href="tel:+912025468890">+91 20 2546 8890</a></li>
+            <li><a href="https://wa.me/919876543210" target="_blank" rel="noopener">WhatsApp Us</a></li>
+            <li><a href="mailto:care@aashirwadfamilyclinic.in">Email Us</a></li>
+            <li><a href="https://maps.google.com/?q=Kothrud+Pune" target="_blank" rel="noopener">Get Directions</a></li>
+            </ul>
+        </div>
+        </div>
+
+        <div class="footer-bottom">
+        <p>&copy; 2024 Aashirwad Family Clinic, Kothrud, Pune. All rights reserved.</p>
+        <div class="footer-socials">
+            <a href="#" class="footer-social-link" aria-label="Visit our Facebook page">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="Visit our Instagram profile">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="Visit our Google Business profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+            </a>
+        </div>
+        </div>
+    </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scroll-top" aria-label="Scroll to top of page">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+        <polyline points="18 15 12 9 6 15"/>
+    </svg>
+    </button>
+
+    <!-- AOS Library -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- GSAP Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <script>
+    // ===== Initialize AOS =====
+    AOS.init({
+        duration: 700,
+        easing: 'ease-out-cubic',
+        once: true,
+        offset: 80,
+        disable: window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    });
+
+    // ===== GSAP Hero Animation =====
+    document.addEventListener('DOMContentLoaded', function() {
+        const heroText = document.getElementById('hero-text');
+        if (heroText && typeof gsap !== 'undefined') {
+        const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+
+        tl.to(heroText, {
+            opacity: 1,
+            duration: 0.01
+        })
+        .from(heroText.querySelector('.hero-badge'), {
+            y: 20,
+            opacity: 0,
+            duration: 0.6
+        })
+        .from(heroText.querySelector('h1'), {
+            y: 30,
+            opacity: 0,
+            duration: 0.7
+        }, '-=0.3')
+        .from(heroText.querySelector('.hero-description'), {
+            y: 20,
+            opacity: 0,
+            duration: 0.6
+        }, '-=0.4')
+        .from(heroText.querySelector('.hero-buttons'), {
+            y: 20,
+            opacity: 0,
+            duration: 0.6
+        }, '-=0.3')
+        .from(heroText.querySelector('.hero-stats'), {
+            y: 20,
+            opacity: 0,
+            duration: 0.6
+        }, '-=0.2');
+        }
+    });
+
+    // ===== Mobile Navigation Toggle =====
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    if (mobileToggle && navMenu) {
+        mobileToggle.addEventListener('click', function() {
+        const isOpen = navMenu.classList.toggle('active');
+        mobileToggle.setAttribute('aria-expanded', isOpen);
+        });
+
+        // Close menu when clicking a link
+        navMenu.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+            navMenu.classList.remove('active');
+            mobileToggle.setAttribute('aria-expanded', 'false');
+        });
+        });
+    }
+
+    // ===== Navbar Scroll Effect =====
+    const navbar = document.querySelector('.navbar');
+    let lastScroll = 0;
+
+    window.addEventListener('scroll', function() {
+        const currentScroll = window.pageYOffset;
+        if (currentScroll > 50) {
+        navbar.classList.add('scrolled');
+        } else {
+        navbar.classList.remove('scrolled');
+        }
+        lastScroll = currentScroll;
+    }, { passive: true });
+
+    // ===== Scroll to Top =====
+    const scrollTopBtn = document.getElementById('scroll-top');
+
+    if (scrollTopBtn) {
+        window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 600) {
+            scrollTopBtn.classList.add('visible');
+        } else {
+            scrollTopBtn.classList.remove('visible');
+        }
+        }, { passive: true });
+
+        scrollTopBtn.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+    // ===== Highlight Today in Timings =====
+    (function() {
+        var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        var today = days[new Date().getDay()];
+        var rows = document.querySelectorAll('.timing-row');
+        rows.forEach(function(row) {
+        var dayText = row.querySelector('.timing-day').textContent;
+        if (dayText.includes(today) || (today !== 'Sunday' && dayText.includes('Monday') && dayText.includes('Friday') && ['Monday','Tuesday','Wednesday','Thursday','Friday'].includes(today))) {
+            var badge = document.createElement('span');
+            badge.className = 'timing-today';
+            badge.textContent = 'Today';
+            row.querySelector('.timing-day').appendChild(badge);
+        }
+        });
+    })();
+
+    // ===== Smooth Scroll for Anchor Links =====
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+        var target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            e.preventDefault();
+            var headerOffset = 80;
+            var elementPosition = target.getBoundingClientRect().top;
+            var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+            window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+            });
+        }
+        });
+    });
+    </script>
 
 </body>
 </html>
