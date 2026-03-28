@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BloomDecor Studio — Wedding Décor & Styling | Koregaon Park, Pune</title>
+  <meta name="description" content="BloomDecor Studio crafts breathtaking wedding décor & floral styling in Koregaon Park, Pune. Blush, gold & ivory aesthetics for your dream day." />
+  <meta name="keywords" content="wedding decor pune, floral styling pune, wedding flowers koregaon park, bridal decor pune, bloom decor studio" />
+
+  <!-- OG Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="BloomDecor Studio — Wedding Décor & Styling" />
+  <meta property="og:description" content="Romantic, floral, feminine wedding décor & styling in Koregaon Park, Pune. From intimate gatherings to grand celebrations." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1200&q=80" />
+  <meta property="og:url" content="https://bloomdecor.studio" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="BloomDecor Studio — Wedding Décor & Styling" />
+  <meta name="twitter:description" content="Romantic floral wedding décor in Koregaon Park, Pune." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1200&q=80" />
+
+  <!-- JSON-LD LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "BloomDecor Studio",
+    "description": "Wedding décor & floral styling specialists in Koregaon Park, Pune. Specialising in romantic, feminine aesthetics with blush, gold and ivory palettes.",
+    "url": "https://bloomdecor.studio",
+    "telephone": "+91-98765-43210",
+    "email": "hello@bloomdecor.studio",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Lane 5, Koregaon Park",
+      "addressLocality": "Pune",
+      "addressRegion": "Maharashtra",
+      "postalCode": "411001",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 18.5362,
+      "longitude": 73.8958
+    },
+    "openingHours": "Mo-Sa 10:00-19:00",
+    "priceRange": "₹₹–₹₹₹",
+    "image": "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&q=80",
+    "sameAs": ["https://instagram.com/bloomdecor.studio"]
+  }
+  </script>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            blush: { 50: '#fff5f7', 100: '#ffe0e8', 200: '#ffc2d4', 300: '#ff9ab7', 400: '#f97ca3', 500: '#f0547a', 600: '#d63a62', 700: '#b02a4e', 800: '#8a1f3c', 900: '#6b1830' },
+            gold:  { 50: '#fffbeb', 100: '#fef3c7', 200: '#fde68a', 300: '#fcd34d', 400: '#fbbf24', 500: '#d4af37', 600: '#b8962e', 700: '#9a7d25', 800: '#7c641d', 900: '#5e4b15' },
+            ivory: { 50: '#fffff0', 100: '#fefce8', 200: '#fef9c3', DEFAULT: '#fffff0' }
+          },
+          fontFamily: {
+            serif:  ['"Playfair Display"', 'Georgia', 'serif'],
+            sans:   ['"Lato"', 'sans-serif'],
+            script: ['"Dancing Script"', 'cursive']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Dancing+Script:wght@500;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <style>
+    :root {
+      --blush: #f9c4d2;
+      --blush-dark: #e89db5;
+      --gold: #d4af37;
+      --gold-light: #f0d978;
+      --ivory: #faf7f0;
+      --text-dark: #3d2b2b;
+    }
+
+    * { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background-color: var(--ivory);
+      color: var(--text-dark);
+      overflow-x: hidden;
+    }
+
+    /* ── PARALLAX HERO ── */
+    .hero-parallax {
+      position: relative;
+      height: 100vh;
+      min-height: 600px;
+      background-image: url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1800&q=85&auto=format&fit=crop');
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero-parallax::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(249,196,210,0.6) 0%, rgba(212,175,55,0.15) 50%, rgba(255,255,255,0.4) 100%);
+    }
+
+    .hero-content { position: relative; z-index: 2; text-align: center; padding: 2rem; }
+
+    .script-accent { font-family: 'Dancing Script', cursive; color: var(--gold); }
+
+    /* ── GOLD DIVIDER ── */
+    .gold-divider {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      justify-content: center;
+      margin: 1rem 0;
+    }
+    .gold-divider span { height: 1px; width: 60px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+    .gold-divider .diamond { width: 8px; height: 8px; background: var(--gold); transform: rotate(45deg); }
+
+    /* ── MASONRY GRID ── */
+    .masonry {
+      columns: 3;
+      column-gap: 1rem;
+    }
+    @media (max-width: 768px) { .masonry { columns: 2; } }
+    @media (max-width: 480px) { .masonry { columns: 1; } }
+
+    .masonry-item {
+      break-inside: avoid;
+      margin-bottom: 1rem;
+      position: relative;
+      overflow: hidden;
+      border-radius: 0.75rem;
+    }
+    .masonry-item img { width: 100%; display: block; transition: transform 0.5s ease; }
+    .masonry-item:hover img { transform: scale(1.05); }
+    .masonry-item .overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(212,175,55,0.7) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      display: flex;
+      align-items: flex-end;
+      padding: 1rem;
+    }
+    .masonry-item:hover .overlay { opacity: 1; }
+
+    /* ── PACKAGES ── */
+    .pkg-card {
+      border: 1px solid rgba(212,175,55,0.3);
+      border-radius: 1rem;
+      background: white;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .pkg-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(212,175,55,0.2); }
+    .pkg-card .pkg-top { padding: 2rem; }
+    .pkg-featured { border-color: var(--gold); box-shadow: 0 8px 30px rgba(212,175,55,0.25); }
+    .pkg-badge {
+      position: absolute;
+      top: 1rem; right: -2rem;
+      background: var(--gold);
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.3rem 3rem;
+      transform: rotate(35deg);
+    }
+    .pkg-price { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--gold); }
+    .pkg-list li { padding: 0.4rem 0; display: flex; gap: 0.5rem; align-items: flex-start; }
+    .pkg-list li::before { content: ''; color: var(--gold); font-size: 0.7rem; margin-top: 0.25rem; flex-shrink: 0; }
+
+    /* ── INSTAGRAM GALLERY ── */
+    .insta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px;
+    }
+    @media (max-width: 640px) { .insta-grid { grid-template-columns: repeat(2, 1fr); } }
+    .insta-item { aspect-ratio: 1/1; overflow: hidden; position: relative; cursor: pointer; }
+    .insta-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+    .insta-item:hover img { transform: scale(1.1); }
+    .insta-item .insta-overlay {
+      position: absolute; inset: 0;
+      background: rgba(212,175,55,0.5);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; transition: opacity 0.3s ease;
+    }
+    .insta-item:hover .insta-overlay { opacity: 1; }
+
+    /* ── TESTIMONIALS ── */
+    .testimonial-card {
+      background: white;
+      border-left: 4px solid var(--gold);
+      border-radius: 0.75rem;
+      padding: 1.75rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      transition: transform 0.3s;
+    }
+    .testimonial-card:hover { transform: translateY(-4px); }
+    .stars { color: var(--gold); letter-spacing: 2px; }
+
+    /* ── WHATSAPP CTA ── */
+    .wa-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: #25d366;
+      color: white;
+      font-weight: 700;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      box-shadow: 0 8px 25px rgba(37,211,102,0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .wa-btn:hover { transform: translateY(-3px); box-shadow: 0 12px 35px rgba(37,211,102,0.5); }
+
+    /* ── NAVBAR ── */
+    .navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      transition: background 0.3s, box-shadow 0.3s;
+      padding: 1.2rem 2rem;
+    }
+    .navbar.scrolled {
+      background: rgba(250,247,240,0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 20px rgba(212,175,55,0.15);
+      padding: 0.8rem 2rem;
+    }
+    .nav-link {
+      color: var(--text-dark);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      position: relative;
+      padding-bottom: 2px;
+    }
+    .nav-link::after {
+      content: ''; position: absolute; bottom: 0; left: 0;
+      width: 0; height: 1px; background: var(--gold);
+      transition: width 0.3s;
+    }
+    .nav-link:hover::after { width: 100%; }
+
+    /* ── SECTION UTILITIES ── */
+    .section-title { font-family: 'Playfair Display', serif; }
+    .section-tag { font-family: 'Dancing Script', cursive; color: var(--gold); font-size: 1.3rem; }
+
+    /* ── FLORAL SEPARATOR ── */
+    .floral-sep {
+      display: flex; align-items: center; justify-content: center;
+      gap: 0.5rem; margin: 1.5rem 0;
+    }
+    .floral-sep .line { flex: 1; max-width: 80px; height: 1px; background: linear-gradient(90deg, transparent, rgba(212,175,55,0.5)); }
+    .floral-sep .line.right { background: linear-gradient(90deg, rgba(212,175,55,0.5), transparent); }
+
+    /* ── FOOTER ── */
+    footer { background: #2d1f1f; color: #e8d5c4; }
+    footer a { color: var(--gold-light); text-decoration: none; }
+    footer a:hover { color: white; }
+
+    /* Mobile fixes for parallax */
+    @media (max-width: 768px) {
+      .hero-parallax {
+        background-attachment: scroll;
+      }
+    }
+
+    /* Smooth image load */
+    img { transition: opacity 0.3s; }
+    img[loading="lazy"] { opacity: 0; }
+    img.loaded { opacity: 1; }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════
+     NAVBAR
+══════════════════════════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="max-w-6xl mx-auto flex items-center justify-between">
+    <a href="#" class="flex flex-col leading-tight">
+      <span class="script-accent text-2xl">BloomDecor</span>
+      <span style="font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:#9a7d25;margin-top:-4px;">Studio · Pune</span>
+    </a>
+    <div class="hidden md:flex gap-8">
+      <a href="#portfolio" class="nav-link">Portfolio</a>
+      <a href="#packages" class="nav-link">Packages</a>
+      <a href="#gallery" class="nav-link">Gallery</a>
+      <a href="#testimonials" class="nav-link">Reviews</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+    <a href="https://wa.me/919876543210?text=Hi%20BloomDecor%20Studio!%20I%20want%20to%20know%20more%20about%20your%20wedding%20decor%20packages." target="_blank" rel="noopener"
+       class="hidden md:inline-flex items-center gap-2 text-white text-sm font-bold px-5 py-2 rounded-full"
+       style="background: linear-gradient(135deg,#d4af37,#f0d978);">
+      <svg width="16" height="16" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Book Now
+    </a>
+    <!-- Mobile hamburger placeholder -->
+    <button onclick="document.getElementById('mobileMenu').classList.toggle('hidden')" class="md:hidden p-2">
+      <svg class="w-6 h-6" fill="none" stroke="#d4af37" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </div>
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4 border-t border-gold-200">
+    <div class="flex flex-col gap-4 pt-4 px-2">
+      <a href="#portfolio" onclick="document.getElementById('mobileMenu').classList.add('hidden')" class="nav-link">Portfolio</a>
+      <a href="#packages" onclick="document.getElementById('mobileMenu').classList.add('hidden')" class="nav-link">Packages</a>
+      <a href="#gallery" onclick="document.getElementById('mobileMenu').classList.add('hidden')" class="nav-link">Gallery</a>
+      <a href="#testimonials" onclick="document.getElementById('mobileMenu').classList.add('hidden')" class="nav-link">Reviews</a>
+      <a href="#contact" onclick="document.getElementById('mobileMenu').classList.add('hidden')" class="nav-link">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════
+     HERO SECTION
+══════════════════════════════════ -->
+<section class="hero-parallax" id="home">
+  <div class="hero-content">
+    <p data-aos="fade-down" data-aos-duration="1000" class="script-accent text-4xl md:text-5xl mb-2">Where Every Petal</p>
+    <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"
+        class="section-title text-5xl md:text-7xl font-bold leading-tight mb-4"
+        style="color:#2d1f1f;text-shadow:0 2px 20px rgba(255,255,255,0.8);">
+      Tells Your Story
+    </h1>
+    <div class="gold-divider" data-aos="zoom-in" data-aos-delay="400">
+      <span></span><div class="diamond"></div><span></span>
+    </div>
+    <p data-aos="fade-up" data-aos-delay="500" data-aos-duration="900"
+       class="text-lg md:text-xl max-w-xl mx-auto mt-4 mb-8 font-light"
+       style="color:#4a3030;text-shadow:0 1px 10px rgba(255,255,255,0.9);">
+      Romantic wedding décor &amp; floral styling crafted for your dream day.<br/>
+      <span class="font-semibold" style="color:#9a7d25;">Koregaon Park, Pune</span>
+    </p>
+    <div data-aos="fade-up" data-aos-delay="700" class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="#packages" class="inline-block px-8 py-3 rounded-full font-bold text-white transition-all hover:-translate-y-1"
+         style="background:linear-gradient(135deg,#d4af37,#f0d978);box-shadow:0 8px 25px rgba(212,175,55,0.45);color:#2d1f1f;">
+        See Packages
+      </a>
+      <a href="#portfolio" class="inline-block px-8 py-3 rounded-full font-bold border-2 transition-all hover:-translate-y-1"
+         style="border-color:#d4af37;color:#2d1f1f;background:rgba(255,255,255,0.7);">
+        View Portfolio
+      </a>
+    </div>
+    <!-- Scroll indicator -->
+    <div class="mt-12 animate-bounce">
+      <svg class="mx-auto" width="24" height="24" fill="none" stroke="#d4af37" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     ABOUT / INTRO STRIP
+══════════════════════════════════ -->
+<section style="background:linear-gradient(135deg,#fdf0f4,#fff9ee);" class="py-16 px-4">
+  <div class="max-w-4xl mx-auto text-center">
+    <p data-aos="fade-down" class="section-tag text-2xl">Our Philosophy</p>
+    <h2 data-aos="fade-up" data-aos-delay="100" class="section-title text-3xl md:text-4xl font-bold mt-1 mb-6" style="color:#2d1f1f;">
+      We Don't Just Decorate — We Transform
+    </h2>
+    <div class="floral-sep">
+      <div class="line"></div>
+      <span style="font-size:1.5rem;"></span>
+      <div class="line right"></div>
+    </div>
+    <p data-aos="fade-up" data-aos-delay="200" class="text-lg leading-relaxed max-w-2xl mx-auto" style="color:#5a3e3e;">
+      BloomDecor Studio is a boutique wedding décor &amp; styling atelier based in the heart of Koregaon Park, Pune.
+      We specialise exclusively in décor — lush florals, dreamy tablescapes, enchanting mandaps, and sculptural installations
+      that make your wedding day unforgettable. Every arrangement is custom-designed to reflect your love story.
+    </p>
+    <div data-aos="fade-up" data-aos-delay="300" class="flex flex-wrap justify-center gap-8 mt-10">
+      <div class="text-center">
+        <p class="section-title text-3xl font-bold" style="color:#d4af37;">200+</p>
+        <p class="text-sm uppercase tracking-widest mt-1" style="color:#9a7d25;">Weddings Styled</p>
+      </div>
+      <div style="width:1px;background:rgba(212,175,55,0.3);" class="hidden sm:block"></div>
+      <div class="text-center">
+        <p class="section-title text-3xl font-bold" style="color:#d4af37;">8 yrs</p>
+        <p class="text-sm uppercase tracking-widest mt-1" style="color:#9a7d25;">Of Expertise</p>
+      </div>
+      <div style="width:1px;background:rgba(212,175,55,0.3);" class="hidden sm:block"></div>
+      <div class="text-center">
+        <p class="section-title text-3xl font-bold" style="color:#d4af37;">5</p>
+        <p class="text-sm uppercase tracking-widest mt-1" style="color:#9a7d25;">Average Rating</p>
+      </div>
+      <div style="width:1px;background:rgba(212,175,55,0.3);" class="hidden sm:block"></div>
+      <div class="text-center">
+        <p class="section-title text-3xl font-bold" style="color:#d4af37;">100%</p>
+        <p class="text-sm uppercase tracking-widest mt-1" style="color:#9a7d25;">Custom Designs</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     PORTFOLIO — MASONRY GRID
+══════════════════════════════════ -->
+<section id="portfolio" class="py-20 px-4" style="background:#faf7f0;">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-12">
+      <p data-aos="fade-down" class="section-tag text-2xl">Our Work</p>
+      <h2 data-aos="fade-up" data-aos-delay="100" class="section-title text-3xl md:text-4xl font-bold mt-1" style="color:#2d1f1f;">
+        Portfolio of Dreams
+      </h2>
+      <div class="gold-divider mt-4">
+        <span></span><div class="diamond"></div><span></span>
+      </div>
+    </div>
+
+    <div class="masonry" data-aos="fade-up" data-aos-delay="200">
+      <!-- Item 1 -->
+      <div class="masonry-item">
+        <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=600&q=80&auto=format&fit=crop" alt="Blush floral wedding arch" loading="lazy" />
+        <div class="overlay">
+          <p class="text-white font-semibold text-sm">Blush Garden Arch</p>
+        </div>
+      </div>
+      <!-- Item 2 -->
+      <div class="masonry-item">
+        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80&auto=format&fit=crop" alt="Wedding table centrepiece roses" loading="lazy" />
+        <div class="overlay">
+          <p class="text-white font-semibold text-sm">Rose Tablescapes</p>
+        </div>
+      </div>
+      <!-- Item 3 -->
+      <div class="masonry-item">
+        <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=600&q=80&auto=format&fit=crop" alt="Elegant wedding reception decor" loading="lazy" />
+        <div class="overlay">
+          <p class="text-white font-semibold text-sm">Ivory Elegance</p>
+        </div>
+      </div>
+      <!-- Item 4 -->
+      <div class="masonry-item">
+        <img src="https://images.unsplash.com/photo-1510076857177-7470076d4098?w=600&q=80&auto=format&fit=crop" alt="Wedding flower wall" loading="lazy" />
+        <div class="overlay">
+          <p class="text-white font-semibold text-sm">Petal Walls</p>
+        </div>
+      </div>
+      <!-- Item 5 -->
+      <div class="masonry-item">
+        <img src="https://images.unsplash.com/photo-1543855703-e5a8888c8a15?w=600&q=80&auto=format&fit=crop" alt="Bridal bouquet pink roses" loading="lazy" />
+        <div class="overlay">
+          <p class="text-white font-semibold text-sm">Bridal Bouquets</p>
+        </div>
+      </div>
+      <!-- Item 6 -->
+      <div class="masonry-item">
+        <img src="https://images.unsplash.com/photo-1547516994-0e6780e2d28f?w=600&q=80&auto=format&fit=crop" alt="Romantic candle wedding reception" loading="lazy" />
+        <div class="overlay">
+          <p class="text-white font-semibold text-sm">Candlelit Receptions</p>
+        </div>
+      </div>
+      <!-- Item 7 -->
+      <div class="masonry-item">
+        <img src="https://images.unsplash.com/photo-1611403571212-c7bec0a42af5?w=600&q=80&auto=format&fit=crop" alt="Wedding mandap decoration flowers" loading="lazy" />
+        <div class="overlay">
+          <p class="text-white font-semibold text-sm">Mandap Styling</p>
+        </div>
+      </div>
+      <!-- Item 8 -->
+      <div class="masonry-item">
+        <img src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?w=600&q=80&auto=format&fit=crop" alt="Pink peony wedding decor" loading="lazy" />
+        <div class="overlay">
+          <p class="text-white font-semibold text-sm">Peony Dreams</p>
+        </div>
+      </div>
+      <!-- Item 9 -->
+      <div class="masonry-item">
+        <img src="https://images.unsplash.com/photo-1561089489-f13d5e730d72?w=600&q=80&auto=format&fit=crop" alt="Gold wedding venue decor" loading="lazy" />
+        <div class="overlay">
+          <p class="text-white font-semibold text-sm">Gold Luxury</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     SERVICES RIBBON
+══════════════════════════════════ -->
+<section style="background:linear-gradient(135deg,#2d1f1f,#3d2b2b);" class="py-12 px-4">
+  <div class="max-w-5xl mx-auto">
+    <div data-aos="fade-up" class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div class="p-4">
+        <div class="text-3xl mb-2"></div>
+        <p class="font-bold text-sm uppercase tracking-widest" style="color:#f0d978;">Floral Design</p>
+        <p class="text-xs mt-1" style="color:#c4a882;">Arches, bouquets & centrepieces</p>
+      </div>
+      <div class="p-4">
+        <div class="text-3xl mb-2"></div>
+        <p class="font-bold text-sm uppercase tracking-widest" style="color:#f0d978;">Ambience</p>
+        <p class="text-xs mt-1" style="color:#c4a882;">Lighting, drapes & candles</p>
+      </div>
+      <div class="p-4">
+        <div class="text-3xl mb-2"></div>
+        <p class="font-bold text-sm uppercase tracking-widest" style="color:#f0d978;">Mandap Styling</p>
+        <p class="text-xs mt-1" style="color:#c4a882;">Traditional & contemporary</p>
+      </div>
+      <div class="p-4">
+        <div class="text-3xl mb-2"></div>
+        <p class="font-bold text-sm uppercase tracking-widest" style="color:#f0d978;">Tablescapes</p>
+        <p class="text-xs mt-1" style="color:#c4a882;">Bespoke table settings</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     PACKAGES
+══════════════════════════════════ -->
+<section id="packages" class="py-20 px-4" style="background:linear-gradient(180deg,#fdf0f4 0%,#faf7f0 100%);">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-14">
+      <p data-aos="fade-down" class="section-tag text-2xl">Pricing</p>
+      <h2 data-aos="fade-up" data-aos-delay="100" class="section-title text-3xl md:text-4xl font-bold mt-1" style="color:#2d1f1f;">
+        Packages for Every Dream
+      </h2>
+      <div class="gold-divider mt-4">
+        <span></span><div class="diamond"></div><span></span>
+      </div>
+      <p data-aos="fade-up" data-aos-delay="200" class="mt-4 max-w-xl mx-auto" style="color:#6b4c4c;">
+        All packages include complimentary consultation, 3D mood board, and day-of styling supervision.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <!-- Budget Package -->
+      <div data-aos="fade-up" data-aos-delay="100" class="pkg-card">
+        <div class="pkg-top">
+          <p class="text-xs font-bold uppercase tracking-widest mb-2" style="color:#9a7d25;">Budget</p>
+          <h3 class="section-title text-2xl font-bold mb-1" style="color:#2d1f1f;">Blossom</h3>
+          <p class="pkg-price">₹45K</p>
+          <p class="text-xs mt-1 mb-5" style="color:#9a7d25;">Starting price</p>
+          <div style="height:3px;background:linear-gradient(90deg,#f9c4d2,#fde68a);border-radius:2px;" class="mb-5"></div>
+          <ul class="pkg-list text-sm space-y-1" style="color:#4a3030;">
+            <li>Floral mandap (single-tier)</li>
+            <li>4 table centrepieces</li>
+            <li>Entrance flower gate</li>
+            <li>Bridal bouquet & 2 bridesmaid bouquets</li>
+            <li>50 stem floral arrangement</li>
+            <li>Basic lighting setup</li>
+            <li>Set-up &amp; breakdown included</li>
+          </ul>
+        </div>
+        <div class="px-6 pb-6">
+          <a href="https://wa.me/919876543210?text=Hi!%20I'm%20interested%20in%20the%20Blossom%20package." target="_blank" rel="noopener"
+             class="block text-center py-3 rounded-full font-bold text-sm transition-all hover:-translate-y-1"
+             style="border:2px solid #d4af37;color:#9a7d25;">
+            Enquire Now
+          </a>
+        </div>
+      </div>
+
+      <!-- Premium Package (Featured) -->
+      <div data-aos="fade-up" data-aos-delay="200" class="pkg-card pkg-featured">
+        <div class="pkg-badge">Popular</div>
+        <div class="pkg-top" style="background:linear-gradient(135deg,#fff5f7,#fffbeb);">
+          <p class="text-xs font-bold uppercase tracking-widest mb-2" style="color:#9a7d25;">Premium</p>
+          <h3 class="section-title text-2xl font-bold mb-1" style="color:#2d1f1f;">Bloom</h3>
+          <p class="pkg-price">₹1.2L</p>
+          <p class="text-xs mt-1 mb-5" style="color:#9a7d25;">Starting price</p>
+          <div style="height:3px;background:linear-gradient(90deg,#d4af37,#f0d978);border-radius:2px;" class="mb-5"></div>
+          <ul class="pkg-list text-sm space-y-1" style="color:#4a3030;">
+            <li>Designer mandap (3-tier floral)</li>
+            <li>12 premium table centrepieces</li>
+            <li>Full venue floral installation</li>
+            <li>Ceiling draping &amp; fairy lights</li>
+            <li>Bridal bouquet + 4 bridesmaid</li>
+            <li>Corsages &amp; boutonnieres</li>
+            <li>Photo booth floral wall</li>
+            <li>Candy &amp; dessert table styling</li>
+            <li>Professional lighting design</li>
+          </ul>
+        </div>
+        <div class="px-6 pb-6" style="background:linear-gradient(135deg,#fff5f7,#fffbeb);">
+          <a href="https://wa.me/919876543210?text=Hi!%20I'm%20interested%20in%20the%20Bloom%20premium%20package." target="_blank" rel="noopener"
+             class="block text-center py-3 rounded-full font-bold text-sm text-white transition-all hover:-translate-y-1"
+             style="background:linear-gradient(135deg,#d4af37,#f0d978);color:#2d1f1f;box-shadow:0 8px 20px rgba(212,175,55,0.35);">
+            Book This Package
+          </a>
+        </div>
+      </div>
+
+      <!-- Luxury Package -->
+      <div data-aos="fade-up" data-aos-delay="300" class="pkg-card">
+        <div class="pkg-top">
+          <p class="text-xs font-bold uppercase tracking-widest mb-2" style="color:#9a7d25;">Luxury</p>
+          <h3 class="section-title text-2xl font-bold mb-1" style="color:#2d1f1f;">Eden</h3>
+          <p class="pkg-price">₹3L+</p>
+          <p class="text-xs mt-1 mb-5" style="color:#9a7d25;">Bespoke pricing</p>
+          <div style="height:3px;background:linear-gradient(90deg,#c4a882,#d4af37);border-radius:2px;" class="mb-5"></div>
+          <ul class="pkg-list text-sm space-y-1" style="color:#4a3030;">
+            <li>Couture floral installations</li>
+            <li>Full venue transformation</li>
+            <li>Imported premium flower varieties</li>
+            <li>Bespoke floral chandeliers</li>
+            <li>Multiple floral arches &amp; tunnels</li>
+            <li>Dedicated lead stylist</li>
+            <li>Floral accessories (hair, jewellery)</li>
+            <li>Scented candle &amp; aroma design</li>
+            <li>2-day setup team</li>
+            <li>Post-event floral gifting</li>
+          </ul>
+        </div>
+        <div class="px-6 pb-6">
+          <a href="https://wa.me/919876543210?text=Hi!%20I'm%20interested%20in%20the%20Eden%20luxury%20package." target="_blank" rel="noopener"
+             class="block text-center py-3 rounded-full font-bold text-sm transition-all hover:-translate-y-1"
+             style="border:2px solid #c4a882;color:#9a7d25;background:linear-gradient(135deg,#fffbeb,white);">
+            Let's Create Magic
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <p data-aos="fade-up" class="text-center text-sm mt-8" style="color:#9a7d25;">
+      * All prices are starting estimates. Final pricing depends on venue size, flower varieties, and guest count.
+      <a href="https://wa.me/919876543210" class="underline font-bold">Chat with us</a> for a custom quote.
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     INSTAGRAM-STYLE GALLERY
+══════════════════════════════════ -->
+<section id="gallery" class="py-20 px-4" style="background:#faf7f0;">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-10">
+      <p data-aos="fade-down" class="section-tag text-2xl">@bloomdecor.studio</p>
+      <h2 data-aos="fade-up" data-aos-delay="100" class="section-title text-3xl md:text-4xl font-bold mt-1" style="color:#2d1f1f;">
+        Follow Our Journey
+      </h2>
+      <div class="gold-divider mt-4">
+        <span></span><div class="diamond"></div><span></span>
+      </div>
+    </div>
+
+    <div data-aos="fade-up" data-aos-delay="150" class="insta-grid rounded-2xl overflow-hidden shadow-xl">
+      <div class="insta-item">
+        <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=400&q=80&auto=format&fit=crop" alt="Wedding floral arrangement" loading="lazy" />
+        <div class="insta-overlay"><svg width="28" height="28" fill="white" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div>
+      </div>
+      <div class="insta-item">
+        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&q=80&auto=format&fit=crop" alt="Elegant wedding cake flowers" loading="lazy" />
+        <div class="insta-overlay"><svg width="28" height="28" fill="white" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div>
+      </div>
+      <div class="insta-item">
+        <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=400&q=80&auto=format&fit=crop" alt="Wedding reception lights" loading="lazy" />
+        <div class="insta-overlay"><svg width="28" height="28" fill="white" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div>
+      </div>
+      <div class="insta-item">
+        <img src="https://images.unsplash.com/photo-1519657337289-077653f724ed?w=400&q=80&auto=format&fit=crop" alt="Flower arrangement wedding" loading="lazy" />
+        <div class="insta-overlay"><svg width="28" height="28" fill="white" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div>
+      </div>
+      <div class="insta-item">
+        <img src="https://images.unsplash.com/photo-1560703650-ef3e0f254ae0?w=400&q=80&auto=format&fit=crop" alt="Romantic wedding venue" loading="lazy" />
+        <div class="insta-overlay"><svg width="28" height="28" fill="white" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div>
+      </div>
+      <div class="insta-item">
+        <img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=400&q=80&auto=format&fit=crop" alt="Pink floral decor wedding" loading="lazy" />
+        <div class="insta-overlay"><svg width="28" height="28" fill="white" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div>
+      </div>
+    </div>
+
+    <div class="text-center mt-8">
+      <a href="https://instagram.com/bloomdecor.studio" target="_blank" rel="noopener"
+         class="inline-flex items-center gap-2 px-6 py-3 rounded-full font-bold text-sm transition-all hover:-translate-y-1"
+         style="border:2px solid #d4af37;color:#9a7d25;">
+        <svg width="18" height="18" fill="#d4af37" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07..."/></svg>
+        Follow @bloomdecor.studio
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     TESTIMONIALS
+══════════════════════════════════ -->
+<section id="testimonials" class="py-20 px-4" style="background:linear-gradient(135deg,#fdf0f4,#faf7f0);">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-12">
+      <p data-aos="fade-down" class="section-tag text-2xl">Love Stories</p>
+      <h2 data-aos="fade-up" data-aos-delay="100" class="section-title text-3xl md:text-4xl font-bold mt-1" style="color:#2d1f1f;">
+        What Our Couples Say
+      </h2>
+      <div class="gold-divider mt-4">
+        <span></span><div class="diamond"></div><span></span>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <div data-aos="fade-up" data-aos-delay="100" class="testimonial-card">
+        <p class="stars text-lg mb-3"></p>
+        <p class="text-sm leading-relaxed italic mb-5" style="color:#4a3030;">
+          "BloomDecor Studio turned our Koregaon Park wedding into a floral paradise. Every single bloom was placed with such love and precision — our guests couldn't stop complimenting the décor. Priya and her team are absolute magicians!"
+        </p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=80&q=80&auto=format&fit=crop&crop=face" alt="Couple" loading="lazy" class="w-full h-full object-cover" />
+          </div>
+          <div>
+            <p class="font-bold text-sm" style="color:#2d1f1f;">Ananya & Rohan</p>
+            <p class="text-xs" style="color:#9a7d25;">November 2024 · Pune</p>
+          </div>
+        </div>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="200" class="testimonial-card">
+        <p class="stars text-lg mb-3"></p>
+        <p class="text-sm leading-relaxed italic mb-5" style="color:#4a3030;">
+          "We chose the Eden luxury package and it was worth every rupee. The floral chandelier alone had people in awe. The blush and gold palette was exactly as we envisioned. BloomDecor is the best investment we made for our wedding."
+        </p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+            <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=80&q=80&auto=format&fit=crop&crop=face" alt="Couple" loading="lazy" class="w-full h-full object-cover" />
+          </div>
+          <div>
+            <p class="font-bold text-sm" style="color:#2d1f1f;">Meera & Arjun</p>
+            <p class="text-xs" style="color:#9a7d25;">February 2025 · Pune</p>
+          </div>
+        </div>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="300" class="testimonial-card">
+        <p class="stars text-lg mb-3"></p>
+        <p class="text-sm leading-relaxed italic mb-5" style="color:#4a3030;">
+          "Even with a smaller budget, BloomDecor made us feel like royalty. The mandap florals and entrance gate were breathtaking. They listened to every detail and delivered beyond expectations. Highly recommend!"
+        </p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+            <img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=80&q=80&auto=format&fit=crop&crop=face" alt="Couple" loading="lazy" class="w-full h-full object-cover" />
+          </div>
+          <div>
+            <p class="font-bold text-sm" style="color:#2d1f1f;">Ishaan & Kavya</p>
+            <p class="text-xs" style="color:#9a7d25;">January 2025 · Pune</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     WHATSAPP CTA SECTION
+══════════════════════════════════ -->
+<section id="contact" class="py-20 px-4 text-center relative overflow-hidden"
+         style="background:linear-gradient(135deg,#2d1f1f 0%,#3d2b2b 50%,#2d1f1f 100%);">
+  <!-- Decorative flowers bg -->
+  <div style="position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1490750967868-88df5691cc98?w=1600&q=40&auto=format&fit=crop');background-size:cover;background-position:center;opacity:0.08;"></div>
+  <div style="position:relative;z-index:2;">
+    <p data-aos="fade-down" class="script-accent text-3xl md:text-4xl mb-3">Ready to Begin?</p>
+    <h2 data-aos="fade-up" data-aos-delay="100" class="section-title text-3xl md:text-5xl font-bold mb-4" style="color:#faf7f0;">
+      Let's Create Your Dream Wedding
+    </h2>
+    <div class="gold-divider mt-2 mb-6">
+      <span style="background:linear-gradient(90deg,transparent,rgba(212,175,55,0.7),transparent)!important;"></span>
+      <div class="diamond"></div>
+      <span style="background:linear-gradient(90deg,transparent,rgba(212,175,55,0.7),transparent)!important;"></span>
+    </div>
+    <p data-aos="fade-up" data-aos-delay="200" class="max-w-lg mx-auto mb-10 text-lg" style="color:#e8d5c4;">
+      Drop us a WhatsApp message with your wedding date &amp; venue. We'll send you a personalised mood board within 24 hours — completely free.
+    </p>
+    <div data-aos="zoom-in" data-aos-delay="300" class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+      <a href="https://wa.me/919876543210?text=Hi%20BloomDecor%20Studio!%20I%20would%20love%20to%20discuss%20wedding%20decor%20for%20my%20special%20day.%20Can%20you%20share%20more%20details?" target="_blank" rel="noopener" class="wa-btn">
+        <svg width="24" height="24" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Chat on WhatsApp
+      </a>
+      <a href="tel:+919876543210" class="inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold text-sm transition-all hover:-translate-y-1"
+         style="border:2px solid rgba(212,175,55,0.6);color:#f0d978;">
+        <svg width="18" height="18" fill="none" stroke="#f0d978" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+        +91 98765 43210
+      </a>
+    </div>
+    <div data-aos="fade-up" data-aos-delay="500" class="mt-10 flex flex-wrap justify-center gap-6 text-sm" style="color:#c4a882;">
+      <div class="flex items-center gap-2">
+        <svg width="16" height="16" fill="none" stroke="#d4af37" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        Lane 5, Koregaon Park, Pune
+      </div>
+      <div class="flex items-center gap-2">
+        <svg width="16" height="16" fill="none" stroke="#d4af37" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        hello@bloomdecor.studio
+      </div>
+      <div class="flex items-center gap-2">
+        <svg width="16" height="16" fill="none" stroke="#d4af37" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        Mon–Sat: 10 AM – 7 PM
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     FOOTER
+══════════════════════════════════ -->
+<footer class="py-10 px-4">
+  <div class="max-w-5xl mx-auto">
+    <div class="grid md:grid-cols-3 gap-8 mb-8">
+      <div>
+        <p class="script-accent text-2xl mb-2">BloomDecor Studio</p>
+        <p class="text-sm leading-relaxed" style="color:#c4a882;">
+          Boutique wedding décor &amp; floral styling atelier. Crafting romantic, unforgettable settings since 2016.
+        </p>
+        <div class="flex gap-3 mt-4">
+          <a href="https://instagram.com/bloomdecor.studio" target="_blank" rel="noopener"
+             class="w-9 h-9 rounded-full flex items-center justify-center transition-colors hover:bg-pink-900"
+             style="background:rgba(255,255,255,0.1);">
+            <svg width="16" height="16" fill="#d4af37" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://pinterest.com/bloomdecor" target="_blank" rel="noopener"
+             class="w-9 h-9 rounded-full flex items-center justify-center transition-colors hover:bg-red-900"
+             style="background:rgba(255,255,255,0.1);">
+            <svg width="16" height="16" fill="#d4af37" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <p class="font-bold text-sm uppercase tracking-widest mb-4" style="color:#f0d978;">Quick Links</p>
+        <ul class="space-y-2 text-sm" style="color:#c4a882;">
+          <li><a href="#portfolio" class="hover:text-gold-300 transition-colors">Portfolio</a></li>
+          <li><a href="#packages" class="hover:text-gold-300 transition-colors">Packages</a></li>
+          <li><a href="#gallery" class="hover:text-gold-300 transition-colors">Gallery</a></li>
+          <li><a href="#testimonials" class="hover:text-gold-300 transition-colors">Testimonials</a></li>
+          <li><a href="#contact" class="hover:text-gold-300 transition-colors">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-bold text-sm uppercase tracking-widest mb-4" style="color:#f0d978;">Find Us</p>
+        <address class="not-italic text-sm leading-relaxed" style="color:#c4a882;">
+          Lane 5, Koregaon Park<br/>
+          Pune, Maharashtra 411001<br/>
+          <a href="tel:+919876543210" class="mt-2 block">+91 98765 43210</a>
+          <a href="mailto:hello@bloomdecor.studio">hello@bloomdecor.studio</a>
+        </address>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(212,175,55,0.2);" class="pt-6 text-center text-xs" style="color:#6b4c4c;">
+      <p style="color:#7a6050;">© 2025 BloomDecor Studio. All rights reserved. | Koregaon Park, Pune</p>
+      <p class="mt-1 script-accent text-base" style="color:rgba(212,175,55,0.5);">Made with love & flowers </p>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/919876543210?text=Hi%20BloomDecor%20Studio!" target="_blank" rel="noopener"
+   class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110"
+   style="background:#25d366;box-shadow:0 8px 25px rgba(37,211,102,0.5);">
+  <svg width="28" height="28" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+  // Init AOS
+  AOS.init({ once: true, easing: 'ease-out-cubic', offset: 60 });
+
+  // Navbar scroll effect
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // Lazy image load fade-in
+  const imgs = document.querySelectorAll('img[loading="lazy"]');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const img = e.target;
+        img.addEventListener('load', () => img.classList.add('loaded'));
+        if (img.complete) img.classList.add('loaded');
+        observer.unobserve(img);
+      }
+    });
+  }, { rootMargin: '100px' });
+  imgs.forEach(img => observer.observe(img));
+</script>
+</body>
+</html>
