@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TrekMania Adventures | Trekking, Camping & Adventure Tours | Pune</title>
+<meta name="description" content="TrekMania Adventures offers thrilling trekking, camping, rafting & adventure tours across Maharashtra and Western Ghats. Book your next adventure from ₹1,500.">
+<meta name="keywords" content="trekking Pune, adventure tours Maharashtra, camping Western Ghats, rafting, Rajgad trek, Harishchandragad, weekend getaways Pune">
+<meta name="author" content="TrekMania Adventures">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://trekmaniaadventures.in">
+<!-- Open Graph -->
+<meta property="og:title" content="TrekMania Adventures | Conquer Every Peak">
+<meta property="og:description" content="Thrilling trekking, camping, rafting & adventure tours across Maharashtra and Western Ghats. Weekend getaways from ₹1,500.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&h=630&fit=crop">
+<meta property="og:url" content="https://trekmaniaadventures.in">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TrekMania Adventures">
+<meta property="og:locale" content="en_IN">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TrekMania Adventures | Conquer Every Peak">
+<meta name="twitter:description" content="Thrilling trekking, camping, rafting & adventure tours across Maharashtra and Western Ghats.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&h=630&fit=crop">
+<!-- JSON-LD Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TouristTrip",
+  "name": "TrekMania Adventures",
+  "description": "Trekking, camping, rafting and adventure tours across Maharashtra and Western Ghats",
+  "url": "https://trekmaniaadventures.in",
+  "provider": {
+    "@type": "TravelAgency",
+    "name": "TrekMania Adventures",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "FC Road",
+      "addressLocality": "Pune",
+      "addressRegion": "Maharashtra",
+      "postalCode": "411004",
+      "addressCountry": "IN"
+    },
+    "telephone": "+91-98765-43210",
+    "email": "info@trekmaniaadventures.in",
+    "priceRange": "₹1,500 - ₹45,000",
+    "openingHours": "Mo-Sa 09:00-20:00",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "18.5196",
+      "longitude": "73.8411"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "1240",
+      "bestRating": "5"
+    }
+  },
+  "touristType": ["Adventure Seekers", "Trekkers", "Nature Lovers", "Thrill Seekers"],
+  "offers": {
+    "@type": "AggregateOffer",
+    "lowPrice": "1500",
+    "highPrice": "45000",
+    "priceCurrency": "INR",
+    "offerCount": "25"
+  }
+}
+</script>
+<!-- Preconnect -->
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ===== CSS Reset & Variables ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --green:#1a3c27;--green-light:#2d5e3f;--green-dark:#0f2419;
+  --orange:#e8611a;--orange-light:#f07d3a;--orange-dark:#c44f10;
+  --charcoal:#2b2b2b;--charcoal-light:#3d3d3d;
+  --cream:#faf5ef;--white:#ffffff;--offwhite:#f4f0ea;
+  --text:#1a1a1a;--text-light:#6b6b6b;
+  --shadow:0 4px 24px rgba(0,0,0,.12);
+  --shadow-lg:0 12px 48px rgba(0,0,0,.18);
+  --radius:12px;--radius-sm:8px;
+  --transition:all .3s cubic-bezier(.4,0,.2,1);
+  --font-heading:'Oswald',sans-serif;
+  --font-body:'Inter',sans-serif;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--font-body);color:var(--text);background:var(--cream);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{text-decoration:none;color:inherit;transition:var(--transition)}
+ul{list-style:none}
+h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:700;line-height:1.2;text-transform:uppercase;letter-spacing:.02em}
+.container{width:100%;max-width:1200px;margin:0 auto;padding:0 20px}
+.section-padding{padding:80px 0}
+.section-header{text-align:center;margin-bottom:56px}
+.section-header h2{font-size:clamp(2rem,4vw,3rem);color:var(--green);margin-bottom:12px;position:relative;display:inline-block}
+.section-header h2::after{content:'';position:absolute;bottom:-8px;left:50%;transform:translateX(-50%);width:60px;height:4px;background:var(--orange);border-radius:2px}
+.section-header p{font-size:1.1rem;color:var(--text-light);margin-top:20px;max-width:600px;margin-left:auto;margin-right:auto}
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:50px;font-family:var(--font-heading);font-size:1rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;cursor:pointer;border:none;transition:var(--transition)}
+.btn-primary{background:var(--orange);color:var(--white)}
+.btn-primary:hover,.btn-primary:focus-visible{background:var(--orange-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(232,97,26,.35)}
+.btn-secondary{background:transparent;color:var(--white);border:2px solid var(--white)}
+.btn-secondary:hover,.btn-secondary:focus-visible{background:var(--white);color:var(--green)}
+.btn-dark{background:var(--green);color:var(--white)}
+.btn-dark:hover,.btn-dark:focus-visible{background:var(--green-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(26,60,39,.35)}
+/* Skip Link */
+.skip-link{position:absolute;top:-100%;left:16px;background:var(--orange);color:#fff;padding:12px 24px;z-index:9999;border-radius:0 0 8px 8px;font-weight:600}
+.skip-link:focus{top:0}
+/* ===== Navigation ===== */
+.navbar{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:16px 0;transition:var(--transition)}
+.navbar.scrolled{background:rgba(15,36,25,.97);backdrop-filter:blur(12px);padding:10px 0;box-shadow:0 2px 20px rgba(0,0,0,.2)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:10px;color:var(--white);font-family:var(--font-heading);font-size:1.5rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+.nav-logo svg{width:36px;height:36px;fill:var(--orange)}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-links a{color:rgba(255,255,255,.85);font-weight:500;font-size:.9rem;position:relative;padding:4px 0}
+.nav-links a:hover,.nav-links a:focus-visible{color:var(--orange)}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--orange);transition:width .3s ease}
+.nav-links a:hover::after{width:100%}
+.nav-cta{background:var(--orange);color:#fff!important;padding:10px 24px;border-radius:50px;font-weight:600}
+.nav-cta:hover{background:var(--orange-dark)}
+.nav-cta::after{display:none!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px}
+.hamburger span{width:26px;height:3px;background:var(--white);border-radius:2px;transition:var(--transition)}
+/* Mobile Menu */
+.mobile-menu{display:none;position:fixed;top:0;left:0;width:100%;height:100vh;background:var(--green-dark);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:24px;opacity:0;pointer-events:none;transition:opacity .3s ease}
+.mobile-menu.active{display:flex;opacity:1;pointer-events:all}
+.mobile-menu a{color:var(--white);font-family:var(--font-heading);font-size:1.8rem;text-transform:uppercase;letter-spacing:.05em}
+.mobile-menu a:hover{color:var(--orange)}
+.mobile-close{position:absolute;top:20px;right:20px;background:none;border:none;color:#fff;font-size:2rem;cursor:pointer}
+/* ===== Hero ===== */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:var(--green-dark)}
+.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600&q=80') center/cover no-repeat;transform:scale(1.05)}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,36,25,.55) 0%,rgba(15,36,25,.75) 50%,rgba(15,36,25,.92) 100%)}
+.hero-content{position:relative;z-index:2;text-align:center;padding:0 20px;max-width:900px}
+.hero-badge{display:inline-block;background:rgba(232,97,26,.2);border:1px solid var(--orange);color:var(--orange);padding:8px 20px;border-radius:50px;font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;margin-bottom:24px}
+.hero h1{font-size:clamp(2.5rem,7vw,5rem);color:var(--white);margin-bottom:20px;line-height:1.05}
+.hero h1 span{color:var(--orange)}
+.hero-sub{font-size:clamp(1rem,2vw,1.3rem);color:rgba(255,255,255,.85);margin-bottom:36px;max-width:650px;margin-left:auto;margin-right:auto;line-height:1.6}
+.hero-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.hero-stats{display:flex;justify-content:center;gap:48px;margin-top:56px;flex-wrap:wrap}
+.hero-stat{text-align:center}
+.hero-stat .num{font-family:var(--font-heading);font-size:2.5rem;color:var(--orange);font-weight:700}
+.hero-stat .label{color:rgba(255,255,255,.7);font-size:.85rem;margin-top:4px;text-transform:uppercase;letter-spacing:.08em}
+/* Scroll Indicator */
+.scroll-indicator{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);z-index:2;animation:bounce 2s infinite}
+.scroll-indicator svg{width:28px;height:28px;stroke:var(--white);opacity:.7}
+@keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(10px)}}
+/* ===== Popular Treks ===== */
+.treks{background:var(--cream)}
+.trek-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px}
+.trek-card{background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:var(--transition);position:relative}
+.trek-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg)}
+.trek-img{position:relative;height:220px;overflow:hidden}
+.trek-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.trek-card:hover .trek-img img{transform:scale(1.08)}
+.trek-difficulty{position:absolute;top:16px;left:16px;padding:6px 14px;border-radius:50px;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#fff}
+.difficulty-moderate{background:#e8a317}
+.difficulty-hard{background:#e84017}
+.difficulty-extreme{background:#9b1c1c}
+.difficulty-easy{background:#2d9e4f}
+.trek-info{padding:24px}
+.trek-info h3{font-size:1.3rem;color:var(--green);margin-bottom:8px}
+.trek-meta{display:flex;gap:16px;margin-bottom:12px;font-size:.85rem;color:var(--text-light)}
+.trek-meta svg{width:16px;height:16px;stroke:var(--orange);flex-shrink:0}
+.trek-meta span{display:flex;align-items:center;gap:4px}
+.trek-info p{font-size:.92rem;color:var(--text-light);margin-bottom:16px;line-height:1.5}
+.trek-price{display:flex;align-items:center;justify-content:space-between}
+.trek-price .price{font-family:var(--font-heading);font-size:1.4rem;color:var(--orange);font-weight:700}
+.trek-price .price small{font-size:.75rem;color:var(--text-light);font-weight:400;font-family:var(--font-body)}
+.trek-book{padding:10px 20px;background:var(--green);color:#fff;border-radius:50px;font-size:.85rem;font-weight:600;border:none;cursor:pointer;transition:var(--transition)}
+.trek-book:hover,.trek-book:focus-visible{background:var(--orange)}
+/* ===== Weekend Getaways ===== */
+.getaways{background:var(--green-dark);color:var(--white)}
+.getaways .section-header h2{color:var(--white)}
+.getaways .section-header h2::after{background:var(--orange)}
+.getaways .section-header p{color:rgba(255,255,255,.7)}
+.getaway-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:28px}
+.getaway-card{position:relative;border-radius:var(--radius);overflow:hidden;height:320px;cursor:pointer}
+.getaway-card img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.getaway-card:hover img{transform:scale(1.08)}
+.getaway-overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.8) 0%,transparent 60%);display:flex;flex-direction:column;justify-content:flex-end;padding:28px}
+.getaway-overlay h3{font-size:1.4rem;margin-bottom:6px}
+.getaway-overlay p{font-size:.9rem;color:rgba(255,255,255,.75);margin-bottom:12px}
+.getaway-tag{display:inline-flex;align-items:center;gap:6px;background:var(--orange);color:#fff;padding:6px 14px;border-radius:50px;font-size:.8rem;font-weight:600;width:fit-content}
+/* ===== Camping ===== */
+.camping{background:var(--offwhite)}
+.camping-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px}
+.camp-card{background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:var(--transition)}
+.camp-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.camp-img{height:200px;overflow:hidden}
+.camp-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.camp-card:hover .camp-img img{transform:scale(1.06)}
+.camp-body{padding:24px}
+.camp-body h3{font-size:1.2rem;color:var(--green);margin-bottom:10px}
+.camp-features{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.camp-features span{background:var(--cream);padding:6px 12px;border-radius:50px;font-size:.78rem;color:var(--green);font-weight:500}
+.camp-body p{font-size:.9rem;color:var(--text-light);margin-bottom:16px}
+.camp-footer{display:flex;align-items:center;justify-content:space-between;border-top:1px solid #eee;padding-top:16px}
+.camp-footer .price{font-family:var(--font-heading);font-size:1.3rem;color:var(--orange);font-weight:700}
+/* ===== Group Bookings ===== */
+.groups{background:var(--green);color:var(--white);position:relative;overflow:hidden}
+.groups::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;background:rgba(232,97,26,.08);border-radius:50%}
+.groups::after{content:'';position:absolute;bottom:-150px;left:-100px;width:500px;height:500px;background:rgba(255,255,255,.03);border-radius:50%}
+.groups .section-header h2{color:var(--white)}
+.groups .section-header h2::after{background:var(--orange)}
+.groups .section-header p{color:rgba(255,255,255,.75)}
+.group-content{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;position:relative;z-index:1}
+.group-img{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg)}
+.group-img img{width:100%;height:400px;object-fit:cover}
+.group-features{display:flex;flex-direction:column;gap:20px}
+.group-feature{display:flex;gap:16px;align-items:flex-start}
+.group-icon{width:48px;height:48px;background:rgba(232,97,26,.2);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.group-icon svg{width:24px;height:24px;stroke:var(--orange)}
+.group-feature h4{font-size:1.05rem;margin-bottom:4px}
+.group-feature p{font-size:.9rem;color:rgba(255,255,255,.7);font-family:var(--font-body);text-transform:none;letter-spacing:0}
+/* ===== Safety ===== */
+.safety{background:var(--cream)}
+.safety-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:28px}
+.safety-card{background:var(--white);padding:32px 24px;border-radius:var(--radius);text-align:center;box-shadow:var(--shadow);transition:var(--transition);border-top:4px solid transparent}
+.safety-card:hover{border-top-color:var(--orange);transform:translateY(-4px)}
+.safety-icon{width:64px;height:64px;background:linear-gradient(135deg,var(--green),var(--green-light));border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px}
+.safety-icon svg{width:30px;height:30px;stroke:var(--white)}
+.safety-card h3{font-size:1.1rem;color:var(--green);margin-bottom:8px}
+.safety-card p{font-size:.9rem;color:var(--text-light);line-height:1.5}
+/* ===== Testimonials ===== */
+.testimonials{background:var(--charcoal);color:var(--white);position:relative;overflow:hidden}
+.testimonials .section-header h2{color:var(--white)}
+.testimonials .section-header h2::after{background:var(--orange)}
+.testimonials .section-header p{color:rgba(255,255,255,.7)}
+.testimonial-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:28px}
+.testimonial-card{background:var(--charcoal-light);border-radius:var(--radius);padding:32px;position:relative}
+.testimonial-card::before{content:'\201C';font-family:Georgia,serif;font-size:4rem;color:var(--orange);opacity:.3;position:absolute;top:8px;left:20px;line-height:1}
+.stars{display:flex;gap:4px;margin-bottom:16px}
+.stars svg{width:18px;height:18px;fill:var(--orange)}
+.testimonial-card blockquote{font-size:.95rem;color:rgba(255,255,255,.85);line-height:1.7;margin-bottom:20px;font-style:italic;position:relative;z-index:1}
+.testimonial-author{display:flex;align-items:center;gap:12px}
+.testimonial-avatar{width:48px;height:48px;border-radius:50%;object-fit:cover;border:2px solid var(--orange)}
+.author-info .name{font-weight:600;font-size:.95rem}
+.author-info .trip{font-size:.8rem;color:var(--orange)}
+/* ===== Pricing ===== */
+.pricing{background:var(--offwhite)}
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px}
+.price-card{background:var(--white);border-radius:var(--radius);padding:36px 28px;box-shadow:var(--shadow);transition:var(--transition);position:relative;text-align:center}
+.price-card.featured{border:2px solid var(--orange);transform:scale(1.03)}
+.price-card.featured::before{content:'MOST POPULAR';position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--orange);color:#fff;padding:6px 20px;border-radius:50px;font-size:.75rem;font-weight:700;letter-spacing:.08em}
+.price-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.price-card.featured:hover{transform:scale(1.03) translateY(-6px)}
+.price-label{font-family:var(--font-heading);font-size:1.1rem;color:var(--green);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
+.price-amount{font-family:var(--font-heading);font-size:2.8rem;color:var(--orange);font-weight:700;margin-bottom:4px}
+.price-amount small{font-size:.9rem;color:var(--text-light);font-weight:400}
+.price-desc{font-size:.9rem;color:var(--text-light);margin-bottom:24px}
+.price-features{text-align:left;margin-bottom:28px}
+.price-features li{padding:8px 0;font-size:.9rem;color:var(--text);display:flex;align-items:center;gap:10px;border-bottom:1px solid #f0f0f0}
+.price-features li:last-child{border-bottom:none}
+.price-features svg{width:18px;height:18px;stroke:var(--orange);flex-shrink:0}
+/* ===== Book Now CTA ===== */
+.cta{background:url('https://images.unsplash.com/photo-1551632811-561732d1e306?w=1600&q=80') center/cover no-repeat fixed;position:relative}
+.cta-overlay{background:rgba(15,36,25,.88);padding:80px 0}
+.cta-content{text-align:center;position:relative;z-index:1;color:var(--white)}
+.cta-content h2{font-size:clamp(2rem,4.5vw,3.2rem);margin-bottom:16px}
+.cta-content h2 span{color:var(--orange)}
+.cta-content p{font-size:1.1rem;color:rgba(255,255,255,.8);margin-bottom:36px;max-width:600px;margin-left:auto;margin-right:auto}
+.cta-form{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;max-width:600px;margin:0 auto}
+.cta-form input,.cta-form select{padding:14px 20px;border:2px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff;border-radius:50px;font-size:.95rem;min-width:180px;flex:1;font-family:var(--font-body)}
+.cta-form input::placeholder{color:rgba(255,255,255,.5)}
+.cta-form select{appearance:none;cursor:pointer}
+.cta-form select option{background:var(--charcoal);color:#fff}
+.cta-form input:focus,.cta-form select:focus{outline:none;border-color:var(--orange)}
+.cta-phone{display:flex;align-items:center;gap:12px;justify-content:center;margin-top:24px;font-size:1.1rem;color:rgba(255,255,255,.8)}
+.cta-phone svg{width:22px;height:22px;stroke:var(--orange)}
+.cta-phone a{color:var(--orange);font-weight:600}
+.cta-phone a:hover{text-decoration:underline}
+/* ===== Footer ===== */
+.footer{background:var(--green-dark);color:rgba(255,255,255,.85);padding:60px 0 0}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.footer-brand h3{font-size:1.5rem;color:var(--white);margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.footer-brand h3 svg{fill:var(--orange);width:28px;height:28px}
+.footer-brand p{font-size:.9rem;color:rgba(255,255,255,.65);line-height:1.6;margin-bottom:16px}
+.footer-social{display:flex;gap:12px}
+.footer-social a{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;transition:var(--transition)}
+.footer-social a:hover{background:var(--orange)}
+.footer-social svg{width:18px;height:18px;fill:var(--white)}
+.footer-col h4{font-size:1rem;color:var(--white);margin-bottom:16px;font-family:var(--font-heading);text-transform:uppercase;letter-spacing:.05em}
+.footer-col a{display:block;font-size:.9rem;color:rgba(255,255,255,.65);padding:4px 0;transition:var(--transition)}
+.footer-col a:hover{color:var(--orange);padding-left:4px}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding:20px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.85rem;color:rgba(255,255,255,.5)}
+/* ===== Responsive ===== */
+@media(max-width:1024px){
+  .group-content{grid-template-columns:1fr}
+  .group-img img{height:300px}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .section-padding{padding:60px 0}
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .hero-stats{gap:24px}
+  .hero-stat .num{font-size:2rem}
+  .getaway-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-bottom{justify-content:center;text-align:center}
+  .price-card.featured{transform:none}
+  .price-card.featured:hover{transform:translateY(-6px)}
+}
+@media(max-width:480px){
+  .hero h1{font-size:2.2rem}
+  .hero-buttons{flex-direction:column;align-items:center}
+  .cta-form{flex-direction:column}
+  .cta-form input,.cta-form select{min-width:auto;width:100%}
+}
+/* ===== AOS-style Animations ===== */
+[data-aos]{opacity:0;transition:opacity .6s ease,transform .6s ease}
+[data-aos].aos-animate{opacity:1}
+[data-aos="fade-up"]{transform:translateY(40px)}
+[data-aos="fade-up"].aos-animate{transform:translateY(0)}
+[data-aos="fade-down"]{transform:translateY(-40px)}
+[data-aos="fade-down"].aos-animate{transform:translateY(0)}
+[data-aos="fade-left"]{transform:translateX(40px)}
+[data-aos="fade-left"].aos-animate{transform:translateX(0)}
+[data-aos="fade-right"]{transform:translateX(-40px)}
+[data-aos="fade-right"].aos-animate{transform:translateX(0)}
+[data-aos="zoom-in"]{transform:scale(.9)}
+[data-aos="zoom-in"].aos-animate{transform:scale(1)}
+[data-aos="flip-up"]{transform:perspective(800px) rotateX(15deg)}
+[data-aos="flip-up"].aos-animate{transform:perspective(800px) rotateX(0)}
+/* Focus styles for WCAG */
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+/* Reduced motion */
+@media(prefers-reduced-motion:reduce){
+  [data-aos]{opacity:1!important;transform:none!important;transition:none!important}
+  .hero-bg{transform:none!important}
+  .scroll-indicator{animation:none}
+}
+</style>
+</head>
+<body>
+<!-- Skip Navigation -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- Navigation -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a href="#" class="nav-logo" aria-label="TrekMania Adventures Home">
+      <svg viewBox="0 0 36 36" aria-hidden="true"><path d="M18 2L2 34h32L18 2zm0 8l10 20H8L18 10z"/><path d="M12 28l6-12 6 12" fill="none" stroke="#fff" stroke-width="1.5"/></svg>
+      TrekMania
+    </a>
+    <div class="nav-links">
+      <a href="#treks">Treks</a>
+      <a href="#getaways">Getaways</a>
+      <a href="#camping">Camping</a>
+      <a href="#safety">Safety</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#book" class="nav-cta">Book Now</a>
+    </div>
+    <button class="hamburger" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
+  <button class="mobile-close" aria-label="Close menu" onclick="toggleMenu()">&times;</button>
+  <a href="#treks" onclick="toggleMenu()">Treks</a>
+  <a href="#getaways" onclick="toggleMenu()">Getaways</a>
+  <a href="#camping" onclick="toggleMenu()">Camping</a>
+  <a href="#safety" onclick="toggleMenu()">Safety</a>
+  <a href="#pricing" onclick="toggleMenu()">Pricing</a>
+  <a href="#book" onclick="toggleMenu()" class="btn btn-primary">Book Now</a>
+</div>
+
+<!-- Hero Section -->
+<header class="hero" id="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="hero-content">
+    <div class="hero-badge" data-aos="fade-down"> Rated #1 Adventure Company in Pune</div>
+    <h1 data-aos="fade-up">Conquer Every<br><span>Peak & Trail</span></h1>
+    <p class="hero-sub" data-aos="fade-up" data-aos-delay="100">Trekking, camping, rafting and adventure tours across Maharashtra's Western Ghats. From weekend escapes to Himalayan expeditions — your next adventure starts here.</p>
+    <div class="hero-buttons" data-aos="fade-up" data-aos-delay="200">
+      <a href="#book" class="btn btn-primary">Book Your Adventure →</a>
+      <a href="#treks" class="btn btn-secondary">Explore Treks</a>
+    </div>
+    <div class="hero-stats" data-aos="fade-up" data-aos-delay="300">
+      <div class="hero-stat"><div class="num" id="statTreks">200+</div><div class="label">Treks Completed</div></div>
+      <div class="hero-stat"><div class="num" id="statAdv">12,000+</div><div class="label">Happy Trekkers</div></div>
+      <div class="hero-stat"><div class="num" id="statYears">8+</div><div class="label">Years Experience</div></div>
+      <div class="hero-stat"><div class="num" id="statRating">4.8</div><div class="label">Google Rating</div></div>
+    </div>
+  </div>
+  <div class="scroll-indicator" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+  </div>
+</header>
+
+<main id="main-content">
+
+<!-- Popular Treks -->
+<section class="treks section-padding" id="treks" aria-labelledby="treks-heading">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <h2 id="treks-heading">Popular Treks</h2>
+      <p>From Sahyadri summits to Himalayan base camps — choose your next challenge</p>
+    </div>
+    <div class="trek-grid">
+      <!-- Rajgad -->
+      <article class="trek-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="trek-img">
+          <img src="https://images.unsplash.com/photo-1585409677983-0f6c41ca9c3b?w=600&q=80" alt="Rajgad Fort trek trail winding through lush green hills" loading="lazy" width="600" height="400">
+          <span class="trek-difficulty difficulty-moderate">Moderate</span>
+        </div>
+        <div class="trek-info">
+          <h3>Rajgad Fort Trek</h3>
+          <div class="trek-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>1 Day</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 2L2 22h20L12 2z"/></svg>1,395m</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 12h4l3-9 4 18 3-9h4"/></svg>14 km</span>
+          </div>
+          <p>The "King of Forts" — explore Sahyadri's crown jewel with panoramic views of Sinhagad and Torna from the summit.</p>
+          <div class="trek-price">
+            <div class="price">₹1,500 <small>/person</small></div>
+            <a href="#book" class="trek-book" role="button">Book Now</a>
+          </div>
+        </div>
+      </article>
+      <!-- Harishchandragad -->
+      <article class="trek-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="trek-img">
+          <img src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=600&q=80" alt="Harishchandragad towering cliffs with dramatic misty views" loading="lazy" width="600" height="400">
+          <span class="trek-difficulty difficulty-hard">Hard</span>
+        </div>
+        <div class="trek-info">
+          <h3>Harishchandragad</h3>
+          <div class="trek-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>2 Days</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 2L2 22h20L12 2z"/></svg>1,424m</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 12h4l3-9 4 18 3-9h4"/></svg>18 km</span>
+          </div>
+          <p>Scale the iconic Konkan Kada cliff face and camp under the stars atop one of Maharashtra's most thrilling peaks.</p>
+          <div class="trek-price">
+            <div class="price">₹3,500 <small>/person</small></div>
+            <a href="#book" class="trek-book" role="button">Book Now</a>
+          </div>
+        </div>
+      </article>
+      <!-- Valley of Flowers -->
+      <article class="trek-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="trek-img">
+          <img src="https://images.unsplash.com/photo-1510797215324-95aa89f43c33?w=600&q=80" alt="Valley of Flowers covered in colorful alpine blooms" loading="lazy" width="600" height="400">
+          <span class="trek-difficulty difficulty-moderate">Moderate</span>
+        </div>
+        <div class="trek-info">
+          <h3>Valley of Flowers</h3>
+          <div class="trek-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>6 Days</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 2L2 22h20L12 2z"/></svg>3,658m</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 12h4l3-9 4 18 3-9h4"/></svg>38 km</span>
+          </div>
+          <p>A UNESCO World Heritage Site — trek through a Himalayan paradise carpeted with 600+ species of wildflowers.</p>
+          <div class="trek-price">
+            <div class="price">₹15,000 <small>/person</small></div>
+            <a href="#book" class="trek-book" role="button">Book Now</a>
+          </div>
+        </div>
+      </article>
+      <!-- Everest Base Camp -->
+      <article class="trek-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="trek-img">
+          <img src="https://images.unsplash.com/photo-1516302752625-fcc3c50ae61f?w=600&q=80" alt="Everest Base Camp with snow-capped Himalayan peaks in background" loading="lazy" width="600" height="400">
+          <span class="trek-difficulty difficulty-extreme">Extreme</span>
+        </div>
+        <div class="trek-info">
+          <h3>Everest Base Camp</h3>
+          <div class="trek-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>14 Days</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 2L2 22h20L12 2z"/></svg>5,364m</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 12h4l3-9 4 18 3-9h4"/></svg>130 km</span>
+          </div>
+          <p>The ultimate bucket-list adventure. Stand at the foot of Everest with our expert Sherpa guides and full logistics support.</p>
+          <div class="trek-price">
+            <div class="price">₹45,000 <small>/person</small></div>
+            <a href="#book" class="trek-book" role="button">Book Now</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Weekend Getaways -->
+<section class="getaways section-padding" id="getaways" aria-labelledby="getaways-heading">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <h2 id="getaways-heading">Weekend Getaways</h2>
+      <p>Escape the city. Recharge in the wild. Perfect for a quick 1-2 day adventure from Pune.</p>
+    </div>
+    <div class="getaway-grid">
+      <article class="getaway-card" data-aos="fade-right" data-aos-delay="0">
+        <img src="https://images.unsplash.com/photo-1533240332313-0db49b459ad6?w=800&q=80" alt="Whitewater river rafting with a group navigating rapids" loading="lazy" width="800" height="500">
+        <div class="getaway-overlay">
+          <h3>Kolad River Rafting</h3>
+          <p>Class III rapids on the Kundalika River — thrilling rafting just 3 hours from Pune.</p>
+          <div class="getaway-tag">From ₹2,200 / person</div>
+        </div>
+      </article>
+      <article class="getaway-card" data-aos="fade-left" data-aos-delay="100">
+        <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800&q=80" alt="Scenic lakeside campsite surrounded by mountains at sunset" loading="lazy" width="800" height="500">
+        <div class="getaway-overlay">
+          <h3>Pawna Lake Camping</h3>
+          <p>Starlit camping beside the tranquil Pawna Lake with bonfire, music, and lakeside BBQ.</p>
+          <div class="getaway-tag">From ₹1,800 / person</div>
+        </div>
+      </article>
+      <article class="getaway-card" data-aos="fade-right" data-aos-delay="200">
+        <img src="https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?w=800&q=80" alt="Lush green Lonavala hillside trails with monsoon clouds" loading="lazy" width="800" height="500">
+        <div class="getaway-overlay">
+          <h3>Lonavala Trail Run</h3>
+          <p>15 km trail run through waterfalls, tunnels, and ghats — a monsoon runner's paradise.</p>
+          <div class="getaway-tag">From ₹1,500 / person</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Camping Packages -->
+<section class="camping section-padding" id="camping" aria-labelledby="camping-heading">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <h2 id="camping-heading">Camping Packages</h2>
+      <p>From luxury glamping to rugged wilderness camps — sleep under the stars your way</p>
+    </div>
+    <div class="camping-grid">
+      <article class="camp-card" data-aos="zoom-in" data-aos-delay="0">
+        <div class="camp-img">
+          <img src="https://images.unsplash.com/photo-1478827536114-da961b7f86d2?w=600&q=80" alt="Cozy tent pitched in a forest clearing with warm lighting" loading="lazy" width="600" height="400">
+        </div>
+        <div class="camp-body">
+          <h3>Forest Base Camp</h3>
+          <div class="camp-features">
+            <span> Tent Stay</span><span> Bonfire</span><span> BBQ Dinner</span><span> Sunrise Trek</span>
+          </div>
+          <p>Classic camping experience deep in the Sahyadri forests. Disconnect from the grid and reconnect with nature.</p>
+          <div class="camp-footer">
+            <div class="price">₹2,500 <small>/person</small></div>
+            <a href="#book" class="trek-book" role="button">Book</a>
+          </div>
+        </div>
+      </article>
+      <article class="camp-card" data-aos="zoom-in" data-aos-delay="100">
+        <div class="camp-img">
+          <img src="https://images.unsplash.com/photo-1499363536502-87642509e31b?w=600&q=80" alt="Luxury glamping tent with comfortable bedding under the stars" loading="lazy" width="600" height="400">
+        </div>
+        <div class="camp-body">
+          <h3>Luxury Glamping</h3>
+          <div class="camp-features">
+            <span> King Bed</span><span> Gourmet Meals</span><span> Yoga Session</span><span> Photo Walk</span>
+          </div>
+          <p>Premium tented accommodation with real beds, hot showers, and chef-prepared meals in stunning locations.</p>
+          <div class="camp-footer">
+            <div class="price">₹6,500 <small>/person</small></div>
+            <a href="#book" class="trek-book" role="button">Book</a>
+          </div>
+        </div>
+      </article>
+      <article class="camp-card" data-aos="zoom-in" data-aos-delay="200">
+        <div class="camp-img">
+          <img src="https://images.unsplash.com/photo-1504851149312-7a075b496cc7?w=600&q=80" alt="Adventure camp with tents near a mountain stream under starry sky" loading="lazy" width="600" height="400">
+        </div>
+        <div class="camp-body">
+          <h3>Adventure Camp</h3>
+          <div class="camp-features">
+            <span> Rappelling</span><span> Archery</span><span> River Cross</span><span> Night Trek</span>
+          </div>
+          <p>Action-packed 2-day camp with rappelling, river crossing, archery, and a challenging night trek through dense forest.</p>
+          <div class="camp-footer">
+            <div class="price">₹4,000 <small>/person</small></div>
+            <a href="#book" class="trek-book" role="button">Book</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Group Bookings -->
+<section class="groups section-padding" id="groups" aria-labelledby="groups-heading">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <h2 id="groups-heading">Group Bookings</h2>
+      <p>Corporate outings, college trips, team building, or family adventures — we handle groups of 10 to 200+</p>
+    </div>
+    <div class="group-content">
+      <div class="group-img" data-aos="fade-right">
+        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80" alt="Large group of trekkers celebrating at a mountain summit" loading="lazy" width="800" height="400">
+      </div>
+      <div class="group-features" data-aos="fade-left">
+        <div class="group-feature">
+          <div class="group-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+          <div><h4>Custom Group Itineraries</h4><p>Tailor-made trips for corporate teams, college batches, and large family groups. Tell us your vibe, we plan the rest.</p></div>
+        </div>
+        <div class="group-feature">
+          <div class="group-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div><h4>Dedicated Safety Crew</h4><p>Every group trip gets a dedicated trek leader, first-aid certified staff, and emergency communication equipment.</p></div>
+        </div>
+        <div class="group-feature">
+          <div class="group-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8l5 3-5 3z"/></svg></div>
+          <div><h4>Professional Photography</h4><p>Complimentary professional photo & video coverage for groups of 30+. Drone footage available on select treks.</p></div>
+        </div>
+        <div class="group-feature">
+          <div class="group-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+          <div><h4>Bulk Discounts</h4><p>Groups of 20+ get up to 25% off. Corporate annual plans available with priority booking and dedicated account manager.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Safety Standards -->
+<section class="safety section-padding" id="safety" aria-labelledby="safety-heading">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <h2 id="safety-heading">Safety Standards</h2>
+      <p>Your safety is non-negotiable. We exceed industry standards so you can focus on the adventure.</p>
+    </div>
+    <div class="safety-grid">
+      <article class="safety-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="safety-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>Certified Guides</h3>
+        <p>All trek leaders hold wilderness first responder (WFR) certification and minimum 3 years field experience.</p>
+      </article>
+      <article class="safety-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="safety-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        <h3>Medical Support</h3>
+        <p>First-aid kits, oxygen cylinders, and emergency evacuation protocols on every trek. Satellite phone on remote trails.</p>
+      </article>
+      <article class="safety-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="safety-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+        <h3>Real-Time Tracking</h3>
+        <p>GPS tracking shared with emergency contacts. Live weather monitoring with go/no-go decision protocol.</p>
+      </article>
+      <article class="safety-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="safety-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg></div>
+        <h3>Insurance Covered</h3>
+        <p>Comprehensive adventure sports insurance included for all participants. Covers medical emergencies and evacuation.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials section-padding" id="testimonials" aria-labelledby="testimonials-heading">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <h2 id="testimonials-heading">What Trekkers Say</h2>
+      <p>Real stories from real adventurers who conquered their fears and found their peaks</p>
+    </div>
+    <div class="testimonial-grid">
+      <article class="testimonial-card" data-aos="flip-up" data-aos-delay="0">
+        <div class="stars" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg></div>
+        <blockquote>"Harishchandragad's Konkan Kada literally took my breath away. TrekMania's guides were absolute legends — they pushed us when we needed it and slowed down when we didn't. Best weekend of my life!"</blockquote>
+        <div class="testimonial-author">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=96&q=80" alt="Portrait of Rohan Deshpande" class="testimonial-avatar" loading="lazy" width="48" height="48">
+          <div class="author-info"><div class="name">Rohan Deshpande</div><div class="trip">Harishchandragad Trek</div></div>
+        </div>
+      </article>
+      <article class="testimonial-card" data-aos="flip-up" data-aos-delay="100">
+        <div class="stars" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg></div>
+        <blockquote>"I was terrified of heights before Kolad rafting. The TrekMania crew made me feel so safe that by the end I was screaming for MORE rapids!  Already booked Valley of Flowers next."</blockquote>
+        <div class="testimonial-author">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=96&q=80" alt="Portrait of Priya Kulkarni" class="testimonial-avatar" loading="lazy" width="48" height="48">
+          <div class="author-info"><div class="name">Priya Kulkarni</div><div class="trip">Kolad Rafting Weekend</div></div>
+        </div>
+      </article>
+      <article class="testimonial-card" data-aos="flip-up" data-aos-delay="200">
+        <div class="stars" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg></div>
+        <blockquote>"EBC with TrekMania was life-changing. 14 days of pure grit and joy. The Sherpa guides were family by day 3. Standing at base camp, looking up at Everest — I actually cried. No shame."</blockquote>
+        <div class="testimonial-author">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=96&q=80" alt="Portrait of Aditya Sharma" class="testimonial-avatar" loading="lazy" width="48" height="48">
+          <div class="author-info"><div class="name">Aditya Sharma</div><div class="trip">Everest Base Camp</div></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section class="pricing section-padding" id="pricing" aria-labelledby="pricing-heading">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <h2 id="pricing-heading">Pricing Plans</h2>
+      <p>Transparent pricing, no hidden fees. All prices include transport from Pune, meals, equipment & insurance.</p>
+    </div>
+    <div class="pricing-grid">
+      <article class="price-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="price-label">Day Trek</div>
+        <div class="price-amount">₹1,500 <small>/ person</small></div>
+        <div class="price-desc">Perfect for weekend warriors</div>
+        <ul class="price-features" role="list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>AC transport from Pune</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Breakfast + packed lunch</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Expert trek leader</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>First-aid & insurance</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Group photos</li>
+        </ul>
+        <a href="#book" class="btn btn-dark" style="width:100%;justify-content:center">Book Day Trek</a>
+      </article>
+      <article class="price-card featured" data-aos="fade-up" data-aos-delay="100">
+        <div class="price-label">Weekend Camp</div>
+        <div class="price-amount">₹3,500 <small>/ person</small></div>
+        <div class="price-desc">Trek + camp under the stars</div>
+        <ul class="price-features" role="list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Everything in Day Trek</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Premium tent & sleeping bag</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Dinner + bonfire + BBQ</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Stargazing session</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Sunrise trek + breakfast</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Rappelling activity</li>
+        </ul>
+        <a href="#book" class="btn btn-primary" style="width:100%;justify-content:center">Book Weekend Camp</a>
+      </article>
+      <article class="price-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="price-label">Expedition</div>
+        <div class="price-amount">₹15,000+ <small>/ person</small></div>
+        <div class="price-desc">Multi-day Himalayan adventures</div>
+        <ul class="price-features" role="list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Everything in Weekend Camp</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Flights & local transport</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Teahouse / lodge stays</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Sherpa & porter support</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Oxygen & altitude meds</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Pro photo/video coverage</li>
+        </ul>
+        <a href="#book" class="btn btn-dark" style="width:100%;justify-content:center">Plan Expedition</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Book Now CTA -->
+<section class="cta" id="book" aria-labelledby="cta-heading">
+  <div class="cta-overlay">
+    <div class="container cta-content">
+      <h2 data-aos="fade-up" id="cta-heading">Ready to <span>Conquer</span> Your Next Peak?</h2>
+      <p data-aos="fade-up" data-aos-delay="100">Drop your details and our adventure planner will craft the perfect trip for you within 24 hours.</p>
+      <form class="cta-form" data-aos="fade-up" data-aos-delay="200" onsubmit="handleSubmit(event)" aria-label="Booking inquiry form">
+        <input type="text" name="name" placeholder="Your Name" aria-label="Your name" required>
+        <input type="tel" name="phone" placeholder="Phone Number" aria-label="Phone number" required>
+        <select name="adventure" aria-label="Select adventure type" required>
+          <option value="" disabled selected>Choose Adventure</option>
+          <option value="day-trek">Day Trek (₹1,500)</option>
+          <option value="weekend-camp">Weekend Camp (₹3,500)</option>
+          <option value="rafting">River Rafting (₹2,200)</option>
+          <option value="glamping">Luxury Glamping (₹6,500)</option>
+          <option value="expedition">Himalayan Expedition (₹15,000+)</option>
+          <option value="group">Group Booking</option>
+          <option value="custom">Custom Trip</option>
+        </select>
+        <button type="submit" class="btn btn-primary">Send Inquiry →</button>
+      </form>
+      <div class="cta-phone" data-aos="fade-up" data-aos-delay="300">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        Or call us: <a href="tel:+919876543210">+91 98765 43210</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>
+          <svg viewBox="0 0 36 36" aria-hidden="true"><path d="M18 2L2 34h32L18 2zm0 8l10 20H8L18 10z"/><path d="M12 28l6-12 6 12" fill="none" stroke="#fff" stroke-width="1.5"/></svg>
+          TrekMania Adventures
+        </h3>
+        <p>Pune's premier adventure company. Trekking, camping, rafting, and expedition tours across Maharashtra and the Himalayas since 2018.</p>
+        <address style="font-style:normal;font-size:.9rem;color:rgba(255,255,255,.65);margin-bottom:16px">
+           FC Road, Pune 411004, Maharashtra<br>
+           <a href="mailto:info@trekmaniaadventures.in" style="color:var(--orange)">info@trekmaniaadventures.in</a><br>
+           <a href="tel:+919876543210" style="color:var(--orange)">+91 98765 43210</a>
+        </address>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+          <a href="#" aria-label="Twitter / X"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Popular Treks</h4>
+        <a href="#treks">Rajgad Fort</a>
+        <a href="#treks">Harishchandragad</a>
+        <a href="#treks">Valley of Flowers</a>
+        <a href="#treks">Everest Base Camp</a>
+        <a href="#getaways">Kolad Rafting</a>
+        <a href="#getaways">Pawna Lake Camp</a>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="#pricing">Pricing</a>
+        <a href="#groups">Group Bookings</a>
+        <a href="#camping">Camping</a>
+        <a href="#safety">Safety</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#book">Book Now</a>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <a href="#">FAQ</a>
+        <a href="#">Cancellation Policy</a>
+        <a href="#">What to Pack</a>
+        <a href="#">Fitness Guide</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 TrekMania Adventures, FC Road, Pune. All rights reserved.</span>
+      <span>Made with  for the mountains</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<a href="#hero" id="backToTop" aria-label="Back to top" style="position:fixed;bottom:24px;right:24px;width:48px;height:48px;background:var(--orange);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:var(--transition);z-index:100;font-size:1.2rem">↑</a>
+
+<script>
+// ===== AOS (Animate On Scroll) Lightweight Implementation =====
+(function(){
+  const els=document.querySelectorAll('[data-aos]');
+  const obs=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        const d=e.target.getAttribute('data-aos-delay');
+        if(d){setTimeout(()=>e.target.classList.add('aos-animate'),parseInt(d))}
+        else{e.target.classList.add('aos-animate')}
+        obs.unobserve(e.target);
+      }
+    });
+  },{threshold:0.15,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(el=>obs.observe(el));
+})();
+
+// ===== Navbar Scroll =====
+const navbar=document.querySelector('.navbar');
+const btt=document.getElementById('backToTop');
+window.addEventListener('scroll',()=>{
+  const s=window.scrollY;
+  if(s>80){navbar.classList.add('scrolled')}else{navbar.classList.remove('scrolled')}
+  if(s>600){btt.style.opacity='1';btt.style.pointerEvents='all'}else{btt.style.opacity='0';btt.style.pointerEvents='none'}
+},{passive:true});
+
+// ===== Mobile Menu =====
+function toggleMenu(){
+  const m=document.getElementById('mobileMenu');
+  const h=document.querySelector('.hamburger');
+  m.classList.toggle('active');
+  const isOpen=m.classList.contains('active');
+  h.setAttribute('aria-expanded',isOpen);
+  document.body.style.overflow=isOpen?'hidden':'';
+}
+
+// ===== Form Submit =====
+function handleSubmit(e){
+  e.preventDefault();
+  const f=e.target;
+  const name=f.querySelector('[name="name"]').value;
+  const btn=f.querySelector('button[type="submit"]');
+  btn.textContent=' Inquiry Sent!';
+  btn.style.background='var(--green)';
+  setTimeout(()=>{btn.textContent='Send Inquiry →';btn.style.background='';f.reset()},3000);
+}
+
+// ===== Counter Animation =====
+(function(){
+  const counters=[
+    {el:document.getElementById('statTreks'),end:200,suffix:'+'},
+    {el:document.getElementById('statAdv'),end:12000,suffix:'+',prefix:''},
+    {el:document.getElementById('statYears'),end:8,suffix:'+'},
+  ];
+  const obs=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        counters.forEach(c=>{
+          let current=0;
+          const step=Math.ceil(c.end/60);
+          const timer=setInterval(()=>{
+            current+=step;
+            if(current>=c.end){current=c.end;clearInterval(timer)}
+            c.el.textContent=(c.prefix||'')+(current>=1000?current.toLocaleString('en-IN'):current)+c.suffix;
+          },30);
+        });
+        obs.unobserve(e.target);
+      }
+    });
+  },{threshold:0.5});
+  const heroStats=document.querySelector('.hero-stats');
+  if(heroStats)obs.observe(heroStats);
+})();
+
+// ===== Parallax on Hero =====
+(function(){
+  const heroBg=document.querySelector('.hero-bg');
+  if(!heroBg||window.matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  window.addEventListener('scroll',()=>{
+    const s=window.scrollY;
+    if(s<window.innerHeight){heroBg.style.transform='scale(1.05) translateY('+s*.3+'px)'}
+  },{passive:true});
+})();
+</script>
+</body>
+</html>
