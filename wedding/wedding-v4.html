@@ -1,0 +1,1607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="SimpleVows Wedding Planners, Hadapsar Pune — Beautiful, budget-friendly weddings from ₹5 to ₹15 Lakhs. Full-service planning for Maharashtrian, Hindu & South Indian ceremonies.">
+<meta name="keywords" content="budget wedding planner pune, affordable wedding hadapsar, wedding planning 5 lakh pune, simplevows">
+<meta property="og:title" content="SimpleVows — Beautiful Marriages Shouldn't Cost a Fortune">
+<meta property="og:description" content="Budget weddings done beautifully. ₹5L–₹15L packages. Based in Hadapsar, Pune.">
+<meta property="og:type" content="website">
+<title>SimpleVows Wedding Planners | Budget Weddings in Pune | ₹5L–₹15L</title>
+
+<!-- AOS -->
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- JSON-LD Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "SimpleVows Wedding Planners",
+  "description": "Budget-friendly wedding planning services in Hadapsar, Pune. Full-service packages from ₹5 Lakhs to ₹15 Lakhs for Hindu, Maharashtrian, and South Indian ceremonies.",
+  "url": "https://simplevows.in",
+  "telephone": "020-2764-8833",
+  "email": "hello@simplevows.in",
+  "image": "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800",
+  "priceRange": "₹₹",
+  "currenciesAccepted": "INR",
+  "paymentAccepted": "Cash, UPI, Bank Transfer, Cheque",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "12, Gahunjale Road",
+    "addressLocality": "Hadapsar",
+    "addressRegion": "Pune",
+    "postalCode": "411028",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 18.5018,
+    "longitude": 73.9389
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "10:00",
+      "closes": "19:00"
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/simplevows",
+    "https://www.instagram.com/simplevows.in"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Wedding Packages",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "name": "Mangalsutra Package",
+        "description": "Intimate wedding for up to 100 guests",
+        "price": "500000",
+        "priceCurrency": "INR"
+      },
+      {
+        "@type": "Offer",
+        "name": "Saptapadi Package",
+        "description": "Classic wedding for up to 200 guests",
+        "price": "1000000",
+        "priceCurrency": "INR"
+      },
+      {
+        "@type": "Offer",
+        "name": "Anand Package",
+        "description": "Grand celebration for up to 400 guests",
+        "price": "1500000",
+        "priceCurrency": "INR"
+      }
+    ]
+  }
+}
+</script>
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --coral: #E07B54;
+    --coral-light: #F0956E;
+    --coral-dark: #C4623B;
+    --cream: #FFF8F0;
+    --cream-dark: #F5EDDE;
+    --brown: #8B4513;
+    --brown-light: #A0522D;
+    --text-dark: #2C1A0E;
+    --text-mid: #5C3A1E;
+    --text-light: #9C7B6A;
+    --white: #FFFFFF;
+    --shadow-sm: 0 2px 8px rgba(139,69,19,0.08);
+    --shadow-md: 0 6px 24px rgba(139,69,19,0.12);
+    --shadow-lg: 0 12px 48px rgba(139,69,19,0.18);
+    --radius: 12px;
+    --radius-lg: 20px;
+    --transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    line-height: 1.2;
+  }
+
+  img { display: block; max-width: 100%; }
+  a { text-decoration: none; color: inherit; }
+
+  /* ===== NAVBAR ===== */
+  .navbar {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(255,248,240,0.96);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(224,123,84,0.15);
+    padding: 0 5%;
+    transition: var(--transition);
+  }
+  .nav-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 68px;
+  }
+  .nav-brand {
+    display: flex; align-items: center; gap: 10px;
+  }
+  .nav-logo-icon {
+    width: 36px; height: 36px;
+    background: var(--coral);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .nav-logo-icon svg { width: 20px; height: 20px; fill: white; }
+  .nav-brand-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem; font-weight: 700;
+    color: var(--brown);
+  }
+  .nav-brand-name span { color: var(--coral); }
+  .nav-links {
+    display: flex; align-items: center; gap: 32px;
+    list-style: none;
+  }
+  .nav-links a {
+    font-size: 0.875rem; font-weight: 500;
+    color: var(--text-mid);
+    transition: var(--transition);
+  }
+  .nav-links a:hover { color: var(--coral); }
+  .nav-cta {
+    background: var(--coral);
+    color: white !important;
+    padding: 9px 22px;
+    border-radius: 50px;
+    font-weight: 600 !important;
+    transition: var(--transition) !important;
+  }
+  .nav-cta:hover { background: var(--coral-dark) !important; transform: translateY(-1px); box-shadow: var(--shadow-sm); }
+
+  .hamburger { display: none; cursor: pointer; background: none; border: none; padding: 4px; }
+  .hamburger span { display: block; width: 24px; height: 2px; background: var(--brown); margin: 5px 0; border-radius: 2px; transition: var(--transition); }
+
+  /* ===== HERO ===== */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex; align-items: center;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background-image: url('https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=1600&q=85&auto=format&fit=crop');
+    background-size: cover; background-position: center 30%;
+  }
+  .hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(44,26,14,0.72) 0%, rgba(139,69,19,0.45) 60%, rgba(224,123,84,0.25) 100%);
+  }
+  .hero-content {
+    position: relative; z-index: 2;
+    max-width: 1200px; margin: 0 auto;
+    padding: 140px 5% 80px;
+    width: 100%;
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(255,248,240,0.15);
+    border: 1px solid rgba(255,248,240,0.35);
+    backdrop-filter: blur(8px);
+    color: var(--cream);
+    padding: 7px 16px; border-radius: 50px;
+    font-size: 0.8rem; font-weight: 600;
+    letter-spacing: 0.05em; text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+  .hero-badge::before {
+    content: ''; width: 8px; height: 8px;
+    background: var(--coral-light);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.3); }
+  }
+  .hero h1 {
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    color: var(--cream);
+    max-width: 680px;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: #F5C49A;
+  }
+  .hero-sub {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: rgba(255,248,240,0.88);
+    max-width: 520px;
+    margin-bottom: 36px;
+    font-weight: 300;
+  }
+  .hero-actions {
+    display: flex; flex-wrap: wrap; gap: 14px;
+    margin-bottom: 56px;
+  }
+  .btn-primary {
+    background: var(--coral);
+    color: white;
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-weight: 600; font-size: 1rem;
+    border: none; cursor: pointer;
+    transition: var(--transition);
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .btn-primary:hover { background: var(--coral-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(224,123,84,0.45); }
+  .btn-outline {
+    background: transparent;
+    color: var(--cream);
+    padding: 13px 32px;
+    border-radius: 50px;
+    font-weight: 600; font-size: 1rem;
+    border: 2px solid rgba(255,248,240,0.6); cursor: pointer;
+    transition: var(--transition);
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .btn-outline:hover { background: rgba(255,248,240,0.12); border-color: var(--cream); }
+  .hero-stats {
+    display: flex; flex-wrap: wrap; gap: 32px;
+  }
+  .hero-stat {
+    text-align: center;
+  }
+  .hero-stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem; font-weight: 700;
+    color: #F5C49A;
+    line-height: 1;
+  }
+  .hero-stat-label {
+    font-size: 0.8rem; color: rgba(255,248,240,0.75);
+    margin-top: 4px; font-weight: 500;
+    text-transform: uppercase; letter-spacing: 0.04em;
+  }
+  .hero-scroll {
+    position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    color: rgba(255,248,240,0.6); font-size: 0.75rem;
+    animation: bounce 2s infinite;
+  }
+  .hero-scroll svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; }
+  @keyframes bounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(6px)} }
+
+  /* ===== SECTION COMMONS ===== */
+  section { padding: 88px 5%; }
+  .section-inner { max-width: 1200px; margin: 0 auto; }
+  .section-label {
+    display: inline-block;
+    font-size: 0.78rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--coral);
+    margin-bottom: 12px;
+  }
+  .section-title {
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    color: var(--brown);
+    margin-bottom: 16px;
+  }
+  .section-sub {
+    font-size: 1.05rem; color: var(--text-light);
+    max-width: 580px; line-height: 1.7;
+  }
+  .section-header { margin-bottom: 56px; }
+  .section-header.center { text-align: center; }
+  .section-header.center .section-sub { margin: 0 auto; }
+  .divider {
+    width: 48px; height: 3px;
+    background: linear-gradient(90deg, var(--coral), var(--coral-light));
+    border-radius: 2px;
+    margin-bottom: 28px;
+  }
+  .center .divider { margin-left: auto; margin-right: auto; }
+
+  /* ===== TRUST STRIP ===== */
+  .trust-strip {
+    background: var(--coral);
+    padding: 16px 5%;
+    overflow: hidden;
+  }
+  .trust-items {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 32px;
+  }
+  .trust-item {
+    display: flex; align-items: center; gap: 8px;
+    color: white; font-size: 0.85rem; font-weight: 600;
+    white-space: nowrap;
+  }
+  .trust-item svg { width: 18px; height: 18px; fill: rgba(255,255,255,0.85); }
+
+  /* ===== WHY US ===== */
+  .why-us { background: var(--white); }
+  .why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items: center;
+  }
+  .why-image-wrap { position: relative; }
+  .why-main-img {
+    width: 100%; height: 440px; object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+  }
+  .why-accent-img {
+    position: absolute;
+    bottom: -24px; right: -24px;
+    width: 180px; height: 180px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    border: 5px solid var(--white);
+    box-shadow: var(--shadow-md);
+  }
+  .why-features { margin-top: 32px; display: flex; flex-direction: column; gap: 20px; }
+  .why-feat {
+    display: flex; gap: 16px; align-items: flex-start;
+  }
+  .why-feat-icon {
+    width: 44px; height: 44px; flex-shrink: 0;
+    background: var(--cream);
+    border-radius: var(--radius);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .why-feat-icon svg { width: 22px; height: 22px; fill: var(--coral); }
+  .why-feat-title { font-weight: 600; color: var(--text-dark); margin-bottom: 4px; }
+  .why-feat-desc { font-size: 0.9rem; color: var(--text-light); line-height: 1.6; }
+
+  /* ===== PACKAGES ===== */
+  .packages { background: var(--cream-dark); }
+  .pkg-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    align-items: start;
+  }
+  .pkg-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    position: relative;
+    border: 2px solid transparent;
+  }
+  .pkg-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--coral);
+  }
+  .pkg-card.popular {
+    border-color: var(--coral);
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+  }
+  .pkg-card.popular:hover { transform: translateY(-12px); }
+  .pkg-popular-badge {
+    position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+    background: var(--coral);
+    color: white;
+    font-size: 0.72rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.08em;
+    padding: 5px 18px;
+    border-radius: 0 0 10px 10px;
+  }
+  .pkg-header {
+    padding: 32px 28px 24px;
+    border-bottom: 1px solid var(--cream-dark);
+  }
+  .pkg-name {
+    font-size: 0.78rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--coral);
+    margin-bottom: 4px;
+  }
+  .pkg-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem; font-weight: 700;
+    color: var(--brown);
+    margin-bottom: 12px;
+  }
+  .pkg-price {
+    display: flex; align-items: baseline; gap: 4px;
+    margin-bottom: 8px;
+  }
+  .pkg-price-main {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6rem; font-weight: 700;
+    color: var(--text-dark);
+    line-height: 1;
+  }
+  .pkg-price-unit {
+    font-size: 0.85rem; color: var(--text-light);
+  }
+  .pkg-guests {
+    font-size: 0.85rem; color: var(--text-light);
+    display: flex; align-items: center; gap: 6px;
+  }
+  .pkg-guests svg { width: 14px; height: 14px; fill: var(--coral); }
+  .pkg-body { padding: 24px 28px 28px; }
+  .pkg-features { list-style: none; display: flex; flex-direction: column; gap: 11px; margin-bottom: 28px; }
+  .pkg-features li {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: 0.9rem; color: var(--text-mid);
+  }
+  .pkg-features li::before {
+    content: '';
+    width: 18px; height: 18px; flex-shrink: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23E07B54'%3E%3Cpath fill-rule='evenodd' d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z' clip-rule='evenodd'/%3E%3C/svg%3E");
+    background-size: contain;
+    margin-top: 1px;
+  }
+  .pkg-btn {
+    width: 100%;
+    padding: 13px;
+    border-radius: 50px;
+    font-weight: 600; font-size: 0.95rem;
+    cursor: pointer; border: none;
+    transition: var(--transition);
+  }
+  .pkg-btn-outline {
+    background: transparent;
+    border: 2px solid var(--coral);
+    color: var(--coral);
+  }
+  .pkg-btn-outline:hover { background: var(--coral); color: white; }
+  .pkg-btn-filled {
+    background: var(--coral);
+    color: white;
+  }
+  .pkg-btn-filled:hover { background: var(--coral-dark); box-shadow: 0 6px 20px rgba(224,123,84,0.4); }
+  .pkg-compare {
+    text-align: center;
+    margin-top: 32px;
+    font-size: 0.9rem; color: var(--text-light);
+  }
+  .pkg-compare a { color: var(--coral); font-weight: 600; }
+
+  /* ===== WHAT'S INCLUDED ===== */
+  .included { background: var(--white); }
+  .incl-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+  .incl-card {
+    background: var(--cream);
+    border-radius: var(--radius);
+    padding: 28px 22px;
+    text-align: center;
+    transition: var(--transition);
+    border: 1px solid transparent;
+  }
+  .incl-card:hover {
+    background: var(--white);
+    border-color: rgba(224,123,84,0.25);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+  }
+  .incl-icon {
+    width: 56px; height: 56px;
+    background: var(--coral);
+    border-radius: 16px;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 16px;
+    transition: var(--transition);
+  }
+  .incl-card:hover .incl-icon { background: var(--coral-dark); }
+  .incl-icon svg { width: 28px; height: 28px; fill: white; }
+  .incl-title { font-weight: 700; color: var(--text-dark); margin-bottom: 6px; font-size: 0.95rem; }
+  .incl-desc { font-size: 0.82rem; color: var(--text-light); line-height: 1.6; }
+
+  /* ===== PROCESS ===== */
+  .process { background: var(--cream-dark); }
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    position: relative;
+  }
+  .process-steps::before {
+    content: '';
+    position: absolute;
+    top: 28px; left: 12%; right: 12%; height: 2px;
+    background: linear-gradient(90deg, var(--coral), var(--coral-light));
+    z-index: 0;
+  }
+  .step-card {
+    text-align: center;
+    position: relative; z-index: 1;
+  }
+  .step-num {
+    width: 56px; height: 56px;
+    background: var(--coral);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem; font-weight: 700;
+    color: white;
+    border: 4px solid var(--cream-dark);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+  }
+  .step-card:hover .step-num { transform: scale(1.1); box-shadow: 0 4px 16px rgba(224,123,84,0.4); }
+  .step-title { font-weight: 700; color: var(--text-dark); margin-bottom: 8px; }
+  .step-desc { font-size: 0.85rem; color: var(--text-light); line-height: 1.6; }
+
+  /* ===== TESTIMONIALS ===== */
+  .testimonials { background: var(--white); }
+  .testi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  .testi-card {
+    background: var(--cream);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    position: relative;
+    transition: var(--transition);
+    border: 1px solid transparent;
+  }
+  .testi-card:hover {
+    border-color: rgba(224,123,84,0.3);
+    box-shadow: var(--shadow-md);
+    background: var(--white);
+  }
+  .testi-quote-icon {
+    position: absolute; top: 20px; right: 24px;
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem; line-height: 1;
+    color: rgba(224,123,84,0.15);
+    pointer-events: none;
+  }
+  .testi-stars {
+    display: flex; gap: 3px; margin-bottom: 14px;
+  }
+  .testi-stars svg { width: 16px; height: 16px; fill: #F59E0B; }
+  .testi-text {
+    font-size: 0.92rem; line-height: 1.7;
+    color: var(--text-mid);
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+  .testi-profile {
+    display: flex; align-items: center; gap: 12px;
+  }
+  .testi-avatar {
+    width: 48px; height: 48px;
+    border-radius: 50%; object-fit: cover;
+    border: 2px solid var(--coral);
+  }
+  .testi-name { font-weight: 700; font-size: 0.9rem; color: var(--text-dark); }
+  .testi-meta { font-size: 0.78rem; color: var(--coral); font-weight: 600; }
+  .testi-bottom {
+    margin-top: 48px;
+    background: linear-gradient(135deg, var(--coral) 0%, var(--coral-dark) 100%);
+    border-radius: var(--radius-lg);
+    padding: 36px 40px;
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px;
+  }
+  .testi-bottom-text h3 {
+    font-size: 1.5rem; color: white; margin-bottom: 6px;
+  }
+  .testi-bottom-text p { color: rgba(255,255,255,0.85); font-size: 0.95rem; }
+  .testi-bottom-stats {
+    display: flex; gap: 40px;
+  }
+  .bottom-stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem; font-weight: 700;
+    color: white; line-height: 1;
+  }
+  .bottom-stat-label {
+    font-size: 0.78rem; color: rgba(255,255,255,0.75);
+    text-transform: uppercase; letter-spacing: 0.05em;
+    margin-top: 3px;
+  }
+
+  /* ===== GALLERY STRIP ===== */
+  .gallery-strip {
+    padding: 0;
+    overflow: hidden;
+  }
+  .gallery-row {
+    display: flex;
+    gap: 4px;
+    height: 260px;
+  }
+  .gallery-item {
+    flex: 1; overflow: hidden; position: relative;
+    transition: flex 0.5s ease;
+    cursor: pointer;
+  }
+  .gallery-item:hover { flex: 2; }
+  .gallery-item img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  .gallery-item:hover img { transform: scale(1.05); }
+
+  /* ===== VENUE PARTNERS ===== */
+  .venues { background: var(--cream-dark); }
+  .venue-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .venue-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+  }
+  .venue-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+  .venue-img { width: 100%; height: 200px; object-fit: cover; }
+  .venue-info { padding: 20px 22px 24px; }
+  .venue-tag {
+    display: inline-block;
+    background: var(--cream);
+    color: var(--coral);
+    font-size: 0.72rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.07em;
+    padding: 3px 10px; border-radius: 50px;
+    margin-bottom: 8px;
+  }
+  .venue-name { font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--text-dark); margin-bottom: 6px; }
+  .venue-loc { font-size: 0.82rem; color: var(--text-light); display: flex; align-items: center; gap: 5px; margin-bottom: 10px; }
+  .venue-loc svg { width: 12px; height: 12px; fill: var(--coral); }
+  .venue-capacity { font-size: 0.85rem; color: var(--text-mid); font-weight: 500; }
+
+  /* ===== CONTACT ===== */
+  .contact { background: var(--white); }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 56px;
+    align-items: start;
+  }
+  .contact-info-block { display: flex; flex-direction: column; gap: 28px; }
+  .contact-item {
+    display: flex; gap: 16px; align-items: flex-start;
+  }
+  .contact-icon {
+    width: 44px; height: 44px; flex-shrink: 0;
+    background: var(--cream);
+    border-radius: var(--radius);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .contact-icon svg { width: 20px; height: 20px; fill: var(--coral); }
+  .contact-label { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-light); font-weight: 600; margin-bottom: 2px; }
+  .contact-val { font-weight: 600; color: var(--text-dark); }
+  .contact-map {
+    margin-top: 8px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    height: 180px;
+  }
+  .contact-map iframe { width: 100%; height: 100%; border: none; }
+  /* Contact Form */
+  .contact-form-card {
+    background: var(--cream);
+    border-radius: var(--radius-lg);
+    padding: 36px;
+    box-shadow: var(--shadow-sm);
+  }
+  .form-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem; color: var(--brown);
+    margin-bottom: 6px;
+  }
+  .form-sub { font-size: 0.88rem; color: var(--text-light); margin-bottom: 28px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .form-group { margin-bottom: 16px; }
+  .form-label { display: block; font-size: 0.82rem; font-weight: 600; color: var(--text-mid); margin-bottom: 6px; }
+  .form-control {
+    width: 100%; padding: 11px 16px;
+    border: 1.5px solid rgba(139,69,19,0.15);
+    border-radius: var(--radius);
+    background: var(--white);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem; color: var(--text-dark);
+    transition: var(--transition);
+    outline: none;
+  }
+  .form-control:focus { border-color: var(--coral); box-shadow: 0 0 0 3px rgba(224,123,84,0.12); }
+  .form-control::placeholder { color: var(--text-light); }
+  select.form-control { appearance: none; cursor: pointer; }
+  textarea.form-control { resize: vertical; min-height: 90px; }
+  .form-submit {
+    width: 100%;
+    padding: 14px;
+    background: var(--coral);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-weight: 700; font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-top: 8px;
+  }
+  .form-submit:hover { background: var(--coral-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(224,123,84,0.4); }
+  .form-note { text-align: center; font-size: 0.78rem; color: var(--text-light); margin-top: 12px; }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--text-dark);
+    color: rgba(255,248,240,0.75);
+    padding: 56px 5% 0;
+  }
+  .footer-grid {
+    max-width: 1200px; margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255,248,240,0.08);
+  }
+  .footer-brand-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem; color: var(--cream);
+    margin-bottom: 4px;
+  }
+  .footer-tagline { font-size: 0.82rem; color: var(--coral-light); margin-bottom: 16px; }
+  .footer-desc { font-size: 0.85rem; line-height: 1.7; margin-bottom: 20px; }
+  .footer-socials { display: flex; gap: 10px; }
+  .social-btn {
+    width: 36px; height: 36px;
+    background: rgba(255,248,240,0.08);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    transition: var(--transition);
+  }
+  .social-btn:hover { background: var(--coral); }
+  .social-btn svg { width: 16px; height: 16px; fill: rgba(255,248,240,0.8); }
+  .footer-col-title { font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--cream); margin-bottom: 16px; }
+  .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-links a { font-size: 0.85rem; color: rgba(255,248,240,0.65); transition: var(--transition); }
+  .footer-links a:hover { color: var(--coral-light); }
+  .footer-contact-items { display: flex; flex-direction: column; gap: 12px; }
+  .footer-contact-item { display: flex; gap: 10px; align-items: flex-start; }
+  .footer-contact-item svg { width: 16px; height: 16px; fill: var(--coral); flex-shrink: 0; margin-top: 2px; }
+  .footer-contact-item span { font-size: 0.82rem; line-height: 1.5; }
+  .footer-bottom {
+    max-width: 1200px; margin: 0 auto;
+    padding: 20px 0;
+    display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between;
+  }
+  .footer-bottom p { font-size: 0.78rem; }
+  .footer-bottom a { color: var(--coral-light); }
+
+  /* ===== WHATSAPP FLOAT ===== */
+  .whatsapp-float {
+    position: fixed; bottom: 28px; right: 28px; z-index: 99;
+    width: 56px; height: 56px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 16px rgba(37,211,102,0.5);
+    transition: var(--transition);
+    animation: wabounce 3s ease-in-out infinite;
+  }
+  .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 8px 24px rgba(37,211,102,0.6); }
+  .whatsapp-float svg { width: 30px; height: 30px; fill: white; }
+  @keyframes wabounce { 0%,100%{box-shadow:0 4px 16px rgba(37,211,102,0.5)} 50%{box-shadow:0 4px 24px rgba(37,211,102,0.8)} }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 1024px) {
+    .pkg-grid, .incl-grid, .testi-grid { grid-template-columns: repeat(2, 1fr); }
+    .process-steps { grid-template-columns: repeat(2, 1fr); }
+    .process-steps::before { display: none; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .why-grid { gap: 36px; }
+    .gallery-row { height: 200px; }
+  }
+  @media (max-width: 768px) {
+    section { padding: 64px 5%; }
+    .nav-links { display: none; }
+    .hamburger { display: block; }
+    .why-grid, .contact-grid { grid-template-columns: 1fr; }
+    .pkg-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
+    .why-accent-img { display: none; }
+    .venue-grid { grid-template-columns: repeat(2, 1fr); }
+    .hero h1 { font-size: 2rem; }
+    .testi-bottom { flex-direction: column; }
+    .testi-bottom-stats { gap: 24px; }
+    .form-row { grid-template-columns: 1fr; }
+    .contact-form-card { padding: 24px; }
+    .gallery-row { height: 160px; }
+    .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  }
+  @media (max-width: 480px) {
+    .hero-stats { gap: 20px; }
+    .hero-stat-num { font-size: 1.7rem; }
+    .trust-items { gap: 16px; }
+    .incl-grid { grid-template-columns: repeat(2, 1fr); }
+    .venue-grid { grid-template-columns: 1fr; }
+    .testi-grid { grid-template-columns: 1fr; }
+    .hero-actions { flex-direction: column; align-items: flex-start; }
+  }
+
+  /* Mobile menu open state */
+  .nav-links.open {
+    display: flex; flex-direction: column;
+    position: fixed; top: 68px; left: 0; right: 0;
+    background: var(--cream); padding: 20px 5%;
+    border-bottom: 1px solid rgba(224,123,84,0.15);
+    box-shadow: var(--shadow-md);
+    gap: 16px;
+    z-index: 99;
+  }
+  .nav-links.open .nav-cta { text-align: center; }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a class="nav-brand" href="#">
+      <div class="nav-logo-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
+      </div>
+      <span class="nav-brand-name">Simple<span>Vows</span></span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#packages">Packages</a></li>
+      <li><a href="#included">Services</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#venues">Venues</a></li>
+      <li><a href="#contact" class="nav-cta">Get Free Quote</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge" data-aos="fade-down">Budget Weddings · Hadapsar, Pune</div>
+    <h1 data-aos="fade-up" data-aos-delay="100">Beautiful marriages<br>shouldn't cost <em>a fortune</em></h1>
+    <p class="hero-sub" data-aos="fade-up" data-aos-delay="200">From intimate 50-guest ceremonies to grand 400-guest celebrations — SimpleVows crafts dream weddings that respect your budget and exceed your expectations.</p>
+    <div class="hero-actions" data-aos="fade-up" data-aos-delay="300">
+      <a href="#packages" class="btn-primary">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M21 21l-4.35-4.35M17 11A6 6 0 115 11a6 6 0 0112 0z"/></svg>
+        Explore Packages
+      </a>
+      <a href="tel:02027648833" class="btn-outline">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        020-2764-8833
+      </a>
+    </div>
+    <div class="hero-stats" data-aos="fade-up" data-aos-delay="400">
+      <div class="hero-stat">
+        <div class="hero-stat-num">480+</div>
+        <div class="hero-stat-label">Couples Married</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">8 Yrs</div>
+        <div class="hero-stat-label">In Business</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">₹5L</div>
+        <div class="hero-stat-label">Starting Budget</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">4.9</div>
+        <div class="hero-stat-label">Google Rating</div>
+      </div>
+    </div>
+  </div>
+  <a href="#why-us" class="hero-scroll">
+    <span>Scroll</span>
+    <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+  </a>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="trust-items">
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      480+ Successful Weddings
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      100% Budget Guarantee
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+      Dedicated Planning Team
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      No Hidden Charges
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      Serving Hadapsar Since 2018
+    </div>
+  </div>
+</div>
+
+<!-- WHY US -->
+<section class="why-us" id="why-us">
+  <div class="section-inner">
+    <div class="why-grid">
+      <div class="why-image-wrap" data-aos="fade-right">
+        <img class="why-main-img" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=700&q=80&auto=format&fit=crop" alt="Indian wedding ceremony setup with marigold decorations">
+        <img class="why-accent-img" src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=300&q=80&auto=format&fit=crop" alt="Happy couple on their wedding day">
+      </div>
+      <div data-aos="fade-left">
+        <div class="section-label">Why SimpleVows</div>
+        <div class="divider"></div>
+        <h2 class="section-title">Your dream wedding, priced right — not cut short</h2>
+        <p class="section-sub">We started SimpleVows because we believed every couple in Pune deserves a beautiful wedding day — not just the wealthy ones. Since 2018, we've been making that happen, one shaadi at a time.</p>
+        <div class="why-features">
+          <div class="why-feat">
+            <div class="why-feat-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            </div>
+            <div>
+              <div class="why-feat-title">Transparent, Fixed Pricing</div>
+              <div class="why-feat-desc">No surprise bills at the end. What we quote is what you pay — including vendor coordination, décor execution, and on-day management.</div>
+            </div>
+          </div>
+          <div class="why-feat">
+            <div class="why-feat-icon">
+              <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+            </div>
+            <div>
+              <div class="why-feat-title">One Team, All of It</div>
+              <div class="why-feat-desc">Flowers, catering, photography, mehendi, DJ — we coordinate every vendor so you can actually enjoy your own engagement and ceremonies.</div>
+            </div>
+          </div>
+          <div class="why-feat">
+            <div class="why-feat-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
+            </div>
+            <div>
+              <div class="why-feat-title">Deeply Local Knowledge</div>
+              <div class="why-feat-desc">We know every venue, caterer, and florist in Hadapsar, Kharadi, and Magarpatta. Our vendor network means better rates and zero first-time surprises.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section class="packages" id="packages">
+  <div class="section-inner">
+    <div class="section-header center" data-aos="fade-up">
+      <div class="section-label">Wedding Packages</div>
+      <div class="divider"></div>
+      <h2 class="section-title">Three tiers. One commitment — no stress, no overspend.</h2>
+      <p class="section-sub">Every package includes a dedicated wedding coordinator, vendor management, and full on-day execution. You just show up and celebrate.</p>
+    </div>
+    <div class="pkg-grid">
+
+      <!-- PACKAGE 1 -->
+      <div class="pkg-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="pkg-header">
+          <div class="pkg-name">Starter</div>
+          <div class="pkg-title">Mangalsutra</div>
+          <div class="pkg-price">
+            <span class="pkg-price-main">₹5L</span>
+            <span class="pkg-price-unit">all-inclusive</span>
+          </div>
+          <div class="pkg-guests">
+            <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+            Up to 100 guests
+          </div>
+        </div>
+        <div class="pkg-body">
+          <ul class="pkg-features">
+            <li>Venue booking &amp; setup coordination</li>
+            <li>Floral décor — mandap + entrance</li>
+            <li>Catering for 100 guests (veg thali)</li>
+            <li>Professional photography (6 hrs)</li>
+            <li>Bridal makeup artist (1 session)</li>
+            <li>Mehendi artist (bride only)</li>
+            <li>Wedding invitation design (digital)</li>
+            <li>1 dedicated coordinator on-day</li>
+          </ul>
+          <a href="#contact" class="pkg-btn pkg-btn-outline">Get This Package →</a>
+        </div>
+      </div>
+
+      <!-- PACKAGE 2 (Popular) -->
+      <div class="pkg-card popular" data-aos="fade-up" data-aos-delay="100">
+        <div class="pkg-popular-badge">Most Popular</div>
+        <div class="pkg-header">
+          <div class="pkg-name">Classic</div>
+          <div class="pkg-title">Saptapadi</div>
+          <div class="pkg-price">
+            <span class="pkg-price-main">₹10L</span>
+            <span class="pkg-price-unit">all-inclusive</span>
+          </div>
+          <div class="pkg-guests">
+            <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+            Up to 200 guests
+          </div>
+        </div>
+        <div class="pkg-body">
+          <ul class="pkg-features">
+            <li>Premium venue + 2-day booking</li>
+            <li>Full floral décor — mandap, stage &amp; hall</li>
+            <li>Multi-cuisine catering for 200 guests</li>
+            <li>Photo + Videography (full day)</li>
+            <li>Bridal makeup + 1 bridesmaid</li>
+            <li>Mehendi for bride &amp; family (4 hrs)</li>
+            <li>Sangeet &amp; haldi coordination</li>
+            <li>DJ + sound system (Sangeet night)</li>
+            <li>Printed invites (50 cards)</li>
+            <li>2 dedicated coordinators on-day</li>
+          </ul>
+          <a href="#contact" class="pkg-btn pkg-btn-filled">Get This Package →</a>
+        </div>
+      </div>
+
+      <!-- PACKAGE 3 -->
+      <div class="pkg-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="pkg-header">
+          <div class="pkg-name">Premium</div>
+          <div class="pkg-title">Anand</div>
+          <div class="pkg-price">
+            <span class="pkg-price-main">₹15L</span>
+            <span class="pkg-price-unit">all-inclusive</span>
+          </div>
+          <div class="pkg-guests">
+            <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+            Up to 400 guests
+          </div>
+        </div>
+        <div class="pkg-body">
+          <ul class="pkg-features">
+            <li>Banquet hall + 3-day event management</li>
+            <li>Grand floral &amp; fabric décor</li>
+            <li>Live counter catering for 400 guests</li>
+            <li>2 photographers + drone videography</li>
+            <li>Full bridal makeover (3-look change)</li>
+            <li>Mehendi + Sangeet choreographer</li>
+            <li>DJ, live dhol &amp; lighting</li>
+            <li>Guest accommodation coordination</li>
+            <li>Premium invite box (100 sets)</li>
+            <li>Dedicated team of 4 on-day</li>
+          </ul>
+          <a href="#contact" class="pkg-btn pkg-btn-outline">Get This Package →</a>
+        </div>
+      </div>
+
+    </div>
+    <p class="pkg-compare" data-aos="fade-up" data-aos-delay="300">
+      All packages customizable. Want to mix &amp; match services? <a href="#contact">Let's talk</a> — we build custom packages too.
+    </p>
+  </div>
+</section>
+
+<!-- WHAT'S INCLUDED -->
+<section class="included" id="included">
+  <div class="section-inner">
+    <div class="section-header center" data-aos="fade-up">
+      <div class="section-label">Full Service</div>
+      <div class="divider"></div>
+      <h2 class="section-title">Everything your wedding needs — under one roof</h2>
+      <p class="section-sub">We handle all coordination so you don't have to chase 12 different vendors. One point of contact. Complete peace of mind.</p>
+    </div>
+    <div class="incl-grid">
+      <div class="incl-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="incl-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <div class="incl-title">Wedding Décor</div>
+        <div class="incl-desc">Mandap, floral arrangements, fabric draping, lighting & entrance — all designed to wow your guests on a budget.</div>
+      </div>
+      <div class="incl-card" data-aos="fade-up" data-aos-delay="50">
+        <div class="incl-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
+        <div class="incl-title">Catering</div>
+        <div class="incl-desc">Maharashtrian, North Indian, South Indian & Jain menus. Live counters, sweet stalls & welcome drinks coordinated.</div>
+      </div>
+      <div class="incl-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="incl-icon"><svg viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 018.5 12 3.5 3.5 0 0112 8.5a3.5 3.5 0 013.5 3.5 3.5 3.5 0 01-3.5 3.5m7.43-2.92c.04-.3.07-.62.07-.93s-.03-.64-.07-1l2.14-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.36-.07.71-.07 1.07s.03.7.07 1l-2.14 1.63c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.58 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.14-1.63z"/></svg></div>
+        <div class="incl-title">Photography</div>
+        <div class="incl-desc">Candid & traditional photographers, drone shots, cinematic reels & same-day highlights for your wedding Instagram.</div>
+      </div>
+      <div class="incl-card" data-aos="fade-up" data-aos-delay="150">
+        <div class="incl-icon"><svg viewBox="0 0 24 24"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg></div>
+        <div class="incl-title">Bridal Beauty</div>
+        <div class="incl-desc">Experienced makeup artists trained in airbrush, HD & traditional Maharashtrian bridal looks. Mehendi artists for all designs.</div>
+      </div>
+      <div class="incl-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="incl-icon"><svg viewBox="0 0 24 24"><path d="M9 19V6l12-3v13M9 19c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2zm12-3c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2z"/></svg></div>
+        <div class="incl-title">Music & Entertainment</div>
+        <div class="incl-desc">DJ for Sangeet, live dhol player for baraat, traditional shehnai for ceremony — we book the right vibe for every moment.</div>
+      </div>
+      <div class="incl-card" data-aos="fade-up" data-aos-delay="250">
+        <div class="incl-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+        <div class="incl-title">Invitations</div>
+        <div class="incl-desc">Digital e-cards + printed invite boxes in traditional designs. Customized with your names, date, and family details.</div>
+      </div>
+      <div class="incl-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="incl-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+        <div class="incl-title">Venue Sourcing</div>
+        <div class="incl-desc">Access to 35+ venue partners in Hadapsar, Kharadi & Wanowrie. We negotiate rates on your behalf & handle booking logistics.</div>
+      </div>
+      <div class="incl-card" data-aos="fade-up" data-aos-delay="350">
+        <div class="incl-icon"><svg viewBox="0 0 24 24"><path d="M11.5 2C6.81 2 3 5.81 3 10.5S6.81 19 11.5 19h.5v3c4.86-2.34 8-7 8-11.5C20 5.81 16.19 2 11.5 2zm1 14.5h-2v-2h2v2zm0-4h-2c0-3.25 3-3 3-5 0-1.1-.9-2-2-2s-2 .9-2 2h-2c0-2.21 1.79-4 4-4s4 1.79 4 4c0 2.5-3 2.75-3 5z"/></svg></div>
+        <div class="incl-title">Day-of Coordination</div>
+        <div class="incl-desc">Our team is on-site from morning until send-off. Timelines, vendor check-ins, emergency fixes — handled silently in the background.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+  <div class="section-inner">
+    <div class="section-header center" data-aos="fade-up">
+      <div class="section-label">How It Works</div>
+      <div class="divider"></div>
+      <h2 class="section-title">From your first call to your last dance</h2>
+    </div>
+    <div class="process-steps">
+      <div class="step-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="step-num">1</div>
+        <div class="step-title">Free Consultation</div>
+        <div class="step-desc">Share your vision, guest count & budget. We'll suggest the best package and explain everything over chai — in-person or video call.</div>
+      </div>
+      <div class="step-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="step-num">2</div>
+        <div class="step-title">Plan & Customize</div>
+        <div class="step-desc">We finalize vendors, venue, menus & décor themes. You approve everything. No vendor contact, no running around — we do it all.</div>
+      </div>
+      <div class="step-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="step-num">3</div>
+        <div class="step-title">Pre-Wedding Events</div>
+        <div class="step-desc">Haldi, Mehendi, Sangeet — we coordinate each pre-wedding ceremony with the same care as the main event.</div>
+      </div>
+      <div class="step-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="step-num">4</div>
+        <div class="step-title">Wedding Day</div>
+        <div class="step-desc">Our team arrives before you wake up. Décor, vendors, timeline, guests — all managed. You simply walk in and shine.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY STRIP -->
+<div class="gallery-strip">
+  <div class="gallery-row">
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1591116741533-de716fc5d5ef?w=500&q=75&auto=format&fit=crop" alt="Indian wedding mandap decoration">
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1464047736614-af63643285bf?w=500&q=75&auto=format&fit=crop" alt="Couple at wedding ceremony">
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=500&q=75&auto=format&fit=crop" alt="Bride and groom portrait">
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=500&q=75&auto=format&fit=crop" alt="Wedding floral arrangement">
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=500&q=75&auto=format&fit=crop" alt="Wedding reception setup">
+    </div>
+  </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="section-inner">
+    <div class="section-header center" data-aos="fade-up">
+      <div class="section-label">Real Couples</div>
+      <div class="divider"></div>
+      <h2 class="section-title">480 couples can't be wrong </h2>
+      <p class="section-sub">We don't just plan weddings — we create memories that couples talk about for years. Here's what some of them say.</p>
+    </div>
+    <div class="testi-grid">
+
+      <div class="testi-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="testi-quote-icon">"</div>
+        <div class="testi-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="testi-text">"We had a budget of ₹8 lakhs and honestly thought we'd have to compromise on everything. SimpleVows made our Marathwada-style ceremony look like a ₹25L wedding. Our guests still ask us how we managed the marigold décor and live dhol — Priya di and her team are truly magical."</p>
+        <div class="testi-profile">
+          <img class="testi-avatar" src="https://images.unsplash.com/photo-1488161628813-04466f872be2?w=100&q=80&auto=format&fit=crop&crop=face" alt="Sneha Kulkarni">
+          <div>
+            <div class="testi-name">Sneha &amp; Rahul Kulkarni</div>
+            <div class="testi-meta">Married Feb 2025 · Saptapadi Package</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="testi-quote-icon">"</div>
+        <div class="testi-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="testi-text">"Both our families are from Bangalore so we wanted a proper South Indian wedding in Pune. SimpleVows arranged everything — the Kashi Yatra, Sapta Padi rituals, banana leaf catering, even a Carnatic music trio for the morning ceremony. ₹11L, 180 guests, zero drama. This team is gold."</p>
+        <div class="testi-profile">
+          <img class="testi-avatar" src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=100&q=80&auto=format&fit=crop&crop=face" alt="Kavya Nair">
+          <div>
+            <div class="testi-name">Kavya &amp; Arjun Nair</div>
+            <div class="testi-meta">Married Nov 2024 · Custom Package</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="testi-quote-icon">"</div>
+        <div class="testi-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="testi-text">"We specifically chose SimpleVows because our budget was tight — ₹5 lakhs for 80 guests, inter-caste Hindu ceremony. The team didn't make us feel like second-class clients. The mandap looked stunning, the biryani was incredible, and the photographer caught every moment. Truly delivered on every promise."</p>
+        <div class="testi-profile">
+          <img class="testi-avatar" src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=100&q=80&auto=format&fit=crop&crop=face" alt="Pooja Sharma">
+          <div>
+            <div class="testi-name">Pooja &amp; Amit Sharma</div>
+            <div class="testi-meta">Married Jan 2025 · Mangalsutra Package</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="testi-bottom" data-aos="fade-up">
+      <div class="testi-bottom-text">
+        <h3>Trusted by families across Pune</h3>
+        <p>From Hadapsar to Hinjewadi, we've planned weddings across 40+ localities in Pune & PCMC.</p>
+      </div>
+      <div class="testi-bottom-stats">
+        <div>
+          <div class="bottom-stat-num">4.9/5</div>
+          <div class="bottom-stat-label">Google Rating</div>
+        </div>
+        <div>
+          <div class="bottom-stat-num">98%</div>
+          <div class="bottom-stat-label">Recommend Us</div>
+        </div>
+        <div>
+          <div class="bottom-stat-num">480+</div>
+          <div class="bottom-stat-label">Weddings Done</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VENUE PARTNERS -->
+<section class="venues" id="venues">
+  <div class="section-inner">
+    <div class="section-header center" data-aos="fade-up">
+      <div class="section-label">Venue Partners</div>
+      <div class="divider"></div>
+      <h2 class="section-title">35+ trusted venues in &amp; around Hadapsar</h2>
+      <p class="section-sub">We've pre-negotiated rates with the best banquet halls, lawns & resorts near you. No touring, no phone calls — we book the best fit for your guest count and style.</p>
+    </div>
+    <div class="venue-grid">
+      <div class="venue-card" data-aos="fade-up" data-aos-delay="0">
+        <img class="venue-img" src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=600&q=75&auto=format&fit=crop" alt="Banquet hall with event setup">
+        <div class="venue-info">
+          <div class="venue-tag">Indoor Banquet</div>
+          <div class="venue-name">Sai Amrut Banquet</div>
+          <div class="venue-loc"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>Hadapsar, Pune</div>
+          <div class="venue-capacity">Capacity: up to 300 guests · AC Hall · Parking for 80 cars</div>
+        </div>
+      </div>
+      <div class="venue-card" data-aos="fade-up" data-aos-delay="100">
+        <img class="venue-img" src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=600&q=75&auto=format&fit=crop" alt="Outdoor lawn wedding setup">
+        <div class="venue-info">
+          <div class="venue-tag">Garden Lawn</div>
+          <div class="venue-name">Mauli Garden</div>
+          <div class="venue-loc"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>Kharadi, Pune</div>
+          <div class="venue-capacity">Capacity: up to 400 guests · Open Lawn · Beautiful garden backdrop</div>
+        </div>
+      </div>
+      <div class="venue-card" data-aos="fade-up" data-aos-delay="200">
+        <img class="venue-img" src="https://images.unsplash.com/photo-1510076857177-7470076d4098?w=600&q=75&auto=format&fit=crop" alt="Wedding hall decoration">
+        <div class="venue-info">
+          <div class="venue-tag">Heritage Hall</div>
+          <div class="venue-name">Warkari Mangal Karyalay</div>
+          <div class="venue-loc"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>Wanowrie, Pune</div>
+          <div class="venue-capacity">Capacity: up to 150 guests · Traditional feel · Budget-friendly</div>
+        </div>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:32px;font-size:0.9rem;color:var(--text-light)" data-aos="fade-up">
+      + 32 more venue partners available. <a href="#contact" style="color:var(--coral);font-weight:600">Request a venue recommendation →</a>
+    </p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div data-aos="fade-right">
+        <div class="section-label">Get In Touch</div>
+        <div class="divider"></div>
+        <h2 class="section-title">Let's plan your perfect wedding</h2>
+        <p class="section-sub" style="margin-bottom:32px">Free consultation. No pressure. Just an honest conversation about what's possible within your budget.</p>
+        <div class="contact-info-block">
+          <div class="contact-item">
+            <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+            <div>
+              <div class="contact-label">Call Us</div>
+              <div class="contact-val"><a href="tel:02027648833">020-2764-8833</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+            <div>
+              <div class="contact-label">Email</div>
+              <div class="contact-val"><a href="mailto:hello@simplevows.in">hello@simplevows.in</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+            <div>
+              <div class="contact-label">Visit Us</div>
+              <div class="contact-val">12, Gahunjale Road, Hadapsar,<br>Pune 411028</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm1 17.93V18a1 1 0 00-2 0v1.93A8.001 8.001 0 014.07 13H6a1 1 0 000-2H4.07A8.001 8.001 0 0111 4.07V6a1 1 0 002 0V4.07A8.001 8.001 0 0119.93 11H18a1 1 0 000 2h1.93A8.001 8.001 0 0113 19.93z"/></svg></div>
+            <div>
+              <div class="contact-label">Office Hours</div>
+              <div class="contact-val">Monday – Sunday, 10:00 AM – 7:00 PM</div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.4267856!2d73.9333!3d18.5018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sHadapsar%2C+Pune+411028!5e0!3m2!1sen!2sin!4v1"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="SimpleVows location map">
+          </iframe>
+        </div>
+      </div>
+
+      <div data-aos="fade-left">
+        <div class="contact-form-card">
+          <div class="form-title">Get Your Free Quote</div>
+          <p class="form-sub">Fill this in and we'll call you back within 2 hours (during office hours).</p>
+          <form id="contactForm" onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="bride">Bride's Name *</label>
+                <input type="text" id="bride" name="bride" class="form-control" placeholder="e.g. Priya Deshmukh" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="groom">Groom's Name *</label>
+                <input type="text" id="groom" name="groom" class="form-control" placeholder="e.g. Rohan Patil" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" class="form-control" placeholder="98765 43210" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="date">Wedding Date</label>
+                <input type="date" id="date" name="date" class="form-control">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="guests">Approx. Guests *</label>
+                <select id="guests" name="guests" class="form-control" required>
+                  <option value="">Select range</option>
+                  <option>Less than 50</option>
+                  <option>50–100</option>
+                  <option>100–200</option>
+                  <option>200–400</option>
+                  <option>400+</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="budget">Budget Range *</label>
+                <select id="budget" name="budget" class="form-control" required>
+                  <option value="">Select budget</option>
+                  <option>₹3–5 Lakhs</option>
+                  <option>₹5–8 Lakhs</option>
+                  <option>₹8–12 Lakhs</option>
+                  <option>₹12–15 Lakhs</option>
+                  <option>₹15L+</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="ceremony">Type of Ceremony</label>
+              <select id="ceremony" name="ceremony" class="form-control">
+                <option value="">Select ceremony type</option>
+                <option>Maharashtrian Hindu</option>
+                <option>North Indian Hindu</option>
+                <option>South Indian Hindu</option>
+                <option>Muslim Nikah</option>
+                <option>Christian</option>
+                <option>Jain</option>
+                <option>Inter-faith / Civil</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="message">Anything else we should know?</label>
+              <textarea id="message" name="message" class="form-control" placeholder="Venue preference, special requests, family requirements..."></textarea>
+            </div>
+            <button type="submit" class="form-submit">Send My Free Quote Request </button>
+            <p class="form-note"> Your details are private and never shared. We'll call you — not spam you.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand-name">SimpleVows</div>
+      <div class="footer-tagline">Beautiful marriages shouldn't cost a fortune</div>
+      <p class="footer-desc">Hadapsar's most trusted budget wedding planners since 2018. We've planned 480+ weddings across Pune, bringing joy to families of every budget.</p>
+      <div class="footer-socials">
+        <a href="#" class="social-btn" aria-label="Facebook">
+          <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+        <a href="#" class="social-btn" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="#" class="social-btn" aria-label="YouTube">
+          <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-1.96C18.88 4 12 4 12 4s-6.88 0-8.6.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.94 1.97C5.12 20 12 20 12 20s6.88 0 8.6-.45a2.78 2.78 0 001.94-1.97A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Quick Links</div>
+      <ul class="footer-links">
+        <li><a href="#packages">Wedding Packages</a></li>
+        <li><a href="#included">Our Services</a></li>
+        <li><a href="#testimonials">Client Reviews</a></li>
+        <li><a href="#venues">Venue Partners</a></li>
+        <li><a href="#contact">Get Free Quote</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Services</div>
+      <ul class="footer-links">
+        <li><a href="#included">Wedding Décor</a></li>
+        <li><a href="#included">Catering Coordination</a></li>
+        <li><a href="#included">Photography</a></li>
+        <li><a href="#included">Bridal Makeup</a></li>
+        <li><a href="#included">Sangeet Planning</a></li>
+        <li><a href="#included">Mehendi Artists</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <div class="footer-contact-items">
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <span><a href="tel:02027648833" style="color:inherit">020-2764-8833</a></span>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <span><a href="mailto:hello@simplevows.in" style="color:inherit">hello@simplevows.in</a></span>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+          <span>12, Gahunjale Road, Hadapsar, Pune 411028</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Mon–Sun: 10:00 AM – 7:00 PM</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 SimpleVows Wedding Planners, Hadapsar, Pune. All rights reserved.</p>
+    <p>Made with  in Pune · <a href="#">Privacy Policy</a> · <a href="#">Terms</a></p>
+  </div>
+</footer>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/912027648833?text=Hi%20SimpleVows!%20I%27d%20like%20to%20know%20more%20about%20your%20wedding%20packages." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 700,
+    once: true,
+    easing: 'ease-out-cubic',
+    offset: 60
+  });
+
+  // Hamburger menu
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+  });
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => navLinks.classList.remove('open'));
+  });
+
+  // Navbar scroll
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('navbar');
+    if (window.scrollY > 60) {
+      nav.style.boxShadow = '0 4px 24px rgba(139,69,19,0.12)';
+    } else {
+      nav.style.boxShadow = 'none';
+    }
+  });
+
+  // Form submission
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('.form-submit');
+    btn.textContent = ' Sent! We\'ll call you soon.';
+    btn.style.background = '#4CAF50';
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.textContent = 'Send My Free Quote Request ';
+      btn.style.background = '';
+      btn.disabled = false;
+      e.target.reset();
+    }, 4000);
+  }
+</script>
+</body>
+</html>
