@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Retro Specs — Vintage & Retro Eyewear Boutique, Camp Pune</title>
+  <meta name="description" content="Retro Specs is Pune's finest vintage eyewear boutique in Camp. Discover hand-curated 50s cat-eye, 70s aviator, 80s oversized frames & artisan repair services." />
+  <meta name="keywords" content="vintage eyewear Pune, retro glasses Camp Pune, cat-eye frames, aviator glasses, vintage spectacles, eyewear boutique Pune" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Retro Specs — Vintage Eyewear Boutique, Camp Pune" />
+  <meta property="og:description" content="Hand-curated vintage & retro eyewear. 50s cat-eye, 70s aviator, 80s oversized & round wire frames. Expert repair service. Located in Camp, Pune." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=1200&q=80" />
+  <meta property="og:url" content="https://retrospecspune.com" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_IN" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Retro Specs — Vintage Eyewear, Camp Pune" />
+  <meta name="twitter:description" content="Pune's finest vintage eyewear boutique. Curated frames from every era." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=1200&q=80" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&family=Special+Elite&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            amber:    { DEFAULT: '#C97B2F', light: '#E8A84D', dark: '#9B5E1F', pale: '#F5E6D0' },
+            burgundy: { DEFAULT: '#6B1F2E', light: '#8B3545', dark: '#4A1020' },
+            cream:    { DEFAULT: '#F8F0E3', dark: '#EDE0CA', warm: '#FDF6EC' },
+            bark:     { DEFAULT: '#5C4033', light: '#7A5C4A' },
+          },
+          fontFamily: {
+            serif:   ['Playfair Display', 'Georgia', 'serif'],
+            sans:    ['Lato', 'sans-serif'],
+            stamp:   ['Special Elite', 'monospace'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background-color: #F8F0E3; font-family: 'Lato', sans-serif; }
+
+    /* Grain overlay */
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 9999; opacity: 0.4;
+    }
+
+    .font-serif  { font-family: 'Playfair Display', Georgia, serif; }
+    .font-stamp  { font-family: 'Special Elite', monospace; }
+
+    /* Hero */
+    .hero-bg {
+      background-image:
+        linear-gradient(to bottom, rgba(30,15,5,0.55) 0%, rgba(30,15,5,0.3) 50%, rgba(30,15,5,0.72) 100%),
+        url('https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=1600&q=85&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center 40%;
+    }
+
+    /* Stamp border */
+    .stamp-border {
+      border: 2px dashed #C97B2F;
+      position: relative;
+    }
+    .stamp-border::before {
+      content: attr(data-label);
+      position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+      background: #F8F0E3; color: #C97B2F;
+      font-family: 'Special Elite', monospace; font-size: 11px; letter-spacing: 2px;
+      padding: 0 8px; text-transform: uppercase;
+    }
+
+    /* Vintage card hover */
+    .frame-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .frame-card:hover {
+      transform: translateY(-6px) rotate(0.5deg);
+      box-shadow: 0 20px 40px rgba(90,40,10,0.18);
+    }
+
+    /* Section divider */
+    .divider-ornament {
+      display: flex; align-items: center; gap: 12px;
+      color: #C97B2F; font-size: 20px;
+    }
+    .divider-ornament::before, .divider-ornament::after {
+      content: ''; flex: 1; height: 1px; background: linear-gradient(to right, transparent, #C97B2F, transparent);
+    }
+
+    /* Testimonial quote */
+    .testimonial-card {
+      position: relative; overflow: hidden;
+    }
+    .testimonial-card::before {
+      content: '\201C';
+      position: absolute; top: -10px; left: 12px;
+      font-family: 'Playfair Display', serif;
+      font-size: 100px; color: #E8A84D; opacity: 0.18; line-height: 1;
+    }
+
+    /* Nav glass */
+    .nav-scrolled {
+      background: rgba(248,240,227,0.95) !important;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 2px 20px rgba(90,40,10,0.12);
+    }
+
+    /* Repair timeline */
+    .timeline-item::before {
+      content: '';
+      position: absolute; left: -30px; top: 6px;
+      width: 12px; height: 12px; border-radius: 50%;
+      background: #C97B2F; border: 2px solid #F8F0E3;
+      box-shadow: 0 0 0 3px #C97B2F44;
+    }
+
+    /* Badge */
+    .vintage-badge {
+      background: #6B1F2E;
+      color: #F5E6D0;
+      font-family: 'Special Elite', monospace;
+      font-size: 10px; letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 2px;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #EDE0CA; }
+    ::-webkit-scrollbar-thumb { background: #C97B2F; border-radius: 3px; }
+  </style>
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Retro Specs",
+    "description": "Vintage and retro-style eyewear boutique in Camp, Pune. Curated frames from the 50s, 70s, 80s and handcrafted repair services.",
+    "url": "https://retrospecspune.com",
+    "logo": "https://retrospecspune.com/logo.png",
+    "image": "https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=800&q=80",
+    "telephone": "+91-20-2634-7890",
+    "email": "hello@retrospecspune.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "14, East Street, Camp",
+      "addressLocality": "Pune",
+      "addressRegion": "Maharashtra",
+      "postalCode": "411001",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "18.5204",
+      "longitude": "73.8567"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "10:30",
+        "closes": "20:00"
+      }
+    ],
+    "priceRange": "₹₹",
+    "servesCuisine": null,
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Vintage Frame Collections",
+      "itemListElement": [
+        { "@type": "Offer", "name": "50s Cat-Eye Frames" },
+        { "@type": "Offer", "name": "70s Aviator Frames" },
+        { "@type": "Offer", "name": "80s Oversized Frames" },
+        { "@type": "Offer", "name": "Classic Round Wire Frames" },
+        { "@type": "Offer", "name": "Handcrafted Eyewear Repair" }
+      ]
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Meera Iyer",
+      "jobTitle": "Founder & Master Optician"
+    },
+    "sameAs": [
+      "https://instagram.com/retrospecspune",
+      "https://facebook.com/retrospecspune"
+    ]
+  }
+  </script>
+</head>
+
+<body class="bg-cream text-bark">
+
+  <!-- ═══ NAVBAR ═══ -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-6 md:px-12">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="11" cy="18" r="7" stroke="#C97B2F" stroke-width="2"/>
+          <circle cx="25" cy="18" r="7" stroke="#C97B2F" stroke-width="2"/>
+          <line x1="18" y1="18" x2="18" y2="18" stroke="#C97B2F" stroke-width="2"/>
+          <path d="M4 18 Q2 14 1 12" stroke="#C97B2F" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M32 18 Q34 14 35 12" stroke="#C97B2F" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <div>
+          <span class="font-serif font-bold text-xl text-cream tracking-wide block leading-none" id="nav-logo-text">Retro Specs</span>
+          <span class="font-stamp text-xs text-amber-light tracking-widest">Camp · Pune</span>
+        </div>
+      </a>
+      <!-- Desktop nav -->
+      <ul class="hidden md:flex items-center gap-8 font-stamp text-sm tracking-widest">
+        <li><a href="#collections" class="text-cream hover:text-amber-light transition-colors">Collections</a></li>
+        <li><a href="#repair"      class="text-cream hover:text-amber-light transition-colors">Repair</a></li>
+        <li><a href="#about"       class="text-cream hover:text-amber-light transition-colors">About</a></li>
+        <li><a href="#testimonials" class="text-cream hover:text-amber-light transition-colors">Reviews</a></li>
+        <li>
+          <a href="#contact" class="bg-amber text-cream px-5 py-2 rounded-sm hover:bg-amber-dark transition-colors">
+            Visit Us
+          </a>
+        </li>
+      </ul>
+      <!-- Mobile hamburger -->
+      <button id="menu-btn" class="md:hidden text-cream focus:outline-none">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6"  x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-bark-light mt-3 rounded-sm px-6 py-4 space-y-3 font-stamp text-sm tracking-widest text-cream">
+      <a href="#collections" class="block hover:text-amber-light" onclick="closeMobileMenu()">Collections</a>
+      <a href="#repair"      class="block hover:text-amber-light" onclick="closeMobileMenu()">Repair</a>
+      <a href="#about"       class="block hover:text-amber-light" onclick="closeMobileMenu()">About</a>
+      <a href="#testimonials" class="block hover:text-amber-light" onclick="closeMobileMenu()">Reviews</a>
+      <a href="#contact"     class="block text-amber-light"        onclick="closeMobileMenu()">Visit Us →</a>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero-bg min-h-screen flex items-center justify-center relative" id="hero">
+    <div class="text-center text-cream px-6 max-w-3xl mx-auto" data-aos="fade-up" data-aos-duration="1200">
+      <span class="font-stamp text-amber-light tracking-[0.3em] text-sm uppercase block mb-4">Est. 2009 · Camp, Pune</span>
+      <h1 class="font-serif text-5xl md:text-7xl font-bold leading-tight mb-6">
+        See the World<br /><em class="text-amber-light">Differently</em>
+      </h1>
+      <p class="font-sans text-lg md:text-xl text-cream/90 max-w-xl mx-auto mb-10 leading-relaxed">
+        Hand-curated vintage frames from another era. Every pair tells a story — find yours at Pune's most beloved retro eyewear boutique.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#collections"
+           class="bg-amber hover:bg-amber-dark text-cream font-stamp tracking-widest text-sm px-8 py-4 transition-all duration-300 rounded-sm shadow-lg hover:shadow-xl">
+          Browse Collections
+        </a>
+        <a href="#about"
+           class="border border-cream/60 hover:border-cream text-cream font-stamp tracking-widest text-sm px-8 py-4 transition-all duration-300 rounded-sm hover:bg-cream/10">
+          Our Story
+        </a>
+      </div>
+    </div>
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-cream/60">
+      <span class="font-stamp text-xs tracking-widest">Scroll</span>
+      <svg width="20" height="28" viewBox="0 0 20 28" fill="none" class="animate-bounce">
+        <rect x="1" y="1" width="18" height="22" rx="9" stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="10" cy="8" r="2.5" fill="currentColor"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ═══ INTRO STRIP ═══ -->
+  <section class="bg-burgundy text-cream py-5 overflow-hidden">
+    <div class="flex gap-12 whitespace-nowrap animate-[marquee_25s_linear_infinite] font-stamp text-sm tracking-widest">
+      <span> Vintage Frames</span><span> Cat-Eye Classics</span><span> Aviator Gold</span>
+      <span> Oversized Icons</span><span> Round Wire</span><span> Handcrafted Repair</span>
+      <span> Camp Pune Since 2009</span><span> Vintage Frames</span><span> Cat-Eye Classics</span>
+      <span> Aviator Gold</span><span> Oversized Icons</span><span> Round Wire</span>
+      <span> Handcrafted Repair</span><span> Camp Pune Since 2009</span>
+    </div>
+  </section>
+
+  <!-- ═══ COLLECTIONS ═══ -->
+  <section id="collections" class="py-24 px-6 bg-cream-warm">
+    <div class="max-w-6xl mx-auto">
+      <!-- Header -->
+      <div class="text-center mb-16" data-aos="fade-up">
+        <span class="font-stamp text-amber tracking-[0.3em] text-xs uppercase block mb-3">Hand-Curated</span>
+        <h2 class="font-serif text-4xl md:text-5xl text-bark font-bold mb-4">Frame Collections</h2>
+        <div class="divider-ornament max-w-sm mx-auto"></div>
+        <p class="font-sans text-bark-light mt-4 text-lg max-w-xl mx-auto leading-relaxed">
+          Each frame is sourced, restored, and loved before it reaches you. No replicas — only the real thing.
+        </p>
+      </div>
+
+      <!-- Cards grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <!-- 50s Cat-Eye -->
+        <div class="frame-card bg-white rounded-sm overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="0">
+          <div class="relative overflow-hidden h-56">
+            <img
+              src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=600&q=80&auto=format&fit=crop"
+              alt="1950s Cat-Eye Vintage Frames"
+              class="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+              loading="lazy"
+            />
+            <div class="absolute top-3 left-3">
+              <span class="vintage-badge">1950s</span>
+            </div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-serif text-xl font-semibold text-bark mb-2">Cat-Eye</h3>
+            <p class="font-sans text-sm text-bark-light leading-relaxed mb-4">
+              Dramatic upswept angles with tortoiseshell acetate. The golden age of Hollywood glamour, rediscovered.
+            </p>
+            <div class="flex items-center justify-between">
+              <span class="font-stamp text-amber text-sm">From ₹2,400</span>
+              <a href="#contact" class="text-xs font-stamp tracking-widest text-burgundy hover:text-amber transition-colors">Enquire →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 70s Aviator -->
+        <div class="frame-card bg-white rounded-sm overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="100">
+          <div class="relative overflow-hidden h-56">
+            <img
+              src="https://images.unsplash.com/photo-1508296695146-257a814070b4?w=600&q=80&auto=format&fit=crop"
+              alt="1970s Gold Aviator Frames"
+              class="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+              loading="lazy"
+            />
+            <div class="absolute top-3 left-3">
+              <span class="vintage-badge">1970s</span>
+            </div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-serif text-xl font-semibold text-bark mb-2">Aviator</h3>
+            <p class="font-sans text-sm text-bark-light leading-relaxed mb-4">
+              Teardrop lenses in gold or gunmetal. Born in the cockpit, perfected on the boulevard.
+            </p>
+            <div class="flex items-center justify-between">
+              <span class="font-stamp text-amber text-sm">From ₹1,900</span>
+              <a href="#contact" class="text-xs font-stamp tracking-widest text-burgundy hover:text-amber transition-colors">Enquire →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 80s Oversized -->
+        <div class="frame-card bg-white rounded-sm overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="200">
+          <div class="relative overflow-hidden h-56">
+            <img
+              src="https://images.unsplash.com/photo-1556306535-0f09a537f0a3?w=600&q=80&auto=format&fit=crop"
+              alt="1980s Oversized Vintage Eyewear"
+              class="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+              loading="lazy"
+            />
+            <div class="absolute top-3 left-3">
+              <span class="vintage-badge">1980s</span>
+            </div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-serif text-xl font-semibold text-bark mb-2">Oversized</h3>
+            <p class="font-sans text-sm text-bark-light leading-relaxed mb-4">
+              Bold, unapologetic silhouettes. Power dressing meets effortless cool — decade-defining style.
+            </p>
+            <div class="flex items-center justify-between">
+              <span class="font-stamp text-amber text-sm">From ₹2,200</span>
+              <a href="#contact" class="text-xs font-stamp tracking-widest text-burgundy hover:text-amber transition-colors">Enquire →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Round Wire -->
+        <div class="frame-card bg-white rounded-sm overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="300">
+          <div class="relative overflow-hidden h-56">
+            <img
+              src="https://images.unsplash.com/photo-1591076482161-42ce6da69f67?w=600&q=80&auto=format&fit=crop"
+              alt="Classic Round Wire Rim Frames"
+              class="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+              loading="lazy"
+            />
+            <div class="absolute top-3 left-3">
+              <span class="vintage-badge">Timeless</span>
+            </div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-serif text-xl font-semibold text-bark mb-2">Round Wire</h3>
+            <p class="font-sans text-sm text-bark-light leading-relaxed mb-4">
+              Delicate metal rims with perfectly circular lenses. The intellectual's choice since 1890.
+            </p>
+            <div class="flex items-center justify-between">
+              <span class="font-stamp text-amber text-sm">From ₹1,600</span>
+              <a href="#contact" class="text-xs font-stamp tracking-widest text-burgundy hover:text-amber transition-colors">Enquire →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ REPAIR SERVICE ═══ -->
+  <section id="repair" class="py-24 px-6 bg-bark text-cream">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <!-- Image -->
+        <div data-aos="fade-right" data-aos-duration="900">
+          <div class="relative">
+            <img
+              src="https://images.unsplash.com/photo-1596451190630-186aff535bf2?w=700&q=85&auto=format&fit=crop"
+              alt="Artisan eyewear repair workshop"
+              class="w-full rounded-sm shadow-2xl"
+              loading="lazy"
+            />
+            <div class="absolute -bottom-5 -right-5 bg-amber text-cream p-5 rounded-sm shadow-lg hidden md:block" data-aos="zoom-in" data-aos-delay="400">
+              <div class="font-serif text-3xl font-bold leading-none">15+</div>
+              <div class="font-stamp text-xs tracking-widest mt-1">Years<br/>Repairing</div>
+            </div>
+          </div>
+        </div>
+        <!-- Content -->
+        <div data-aos="fade-left" data-aos-duration="900">
+          <span class="font-stamp text-amber tracking-[0.3em] text-xs uppercase block mb-3">Artisan Workshop</span>
+          <h2 class="font-serif text-4xl font-bold mb-6 leading-tight">Hand-Crafted<br/><em class="text-amber-light">Repair Service</em></h2>
+          <p class="font-sans text-cream/80 leading-relaxed mb-8">
+            Frames carry memories. We believe they deserve to last a lifetime. Our master craftsman Rajan has been restoring vintage eyewear for over 15 years — every bent hinge, scratched lens, and loose temple gets the attention it deserves.
+          </p>
+
+          <!-- Timeline -->
+          <div class="border-l border-amber/40 pl-8 space-y-6 relative">
+            <div class="relative timeline-item">
+              <h4 class="font-stamp text-amber tracking-wider text-sm uppercase mb-1">Frame Assessment</h4>
+              <p class="font-sans text-sm text-cream/70">Detailed inspection of structure, lens, hinges & nose pads. Honest prognosis, no surprises.</p>
+            </div>
+            <div class="relative timeline-item">
+              <h4 class="font-stamp text-amber tracking-wider text-sm uppercase mb-1">Restoration</h4>
+              <p class="font-sans text-sm text-cream/70">Hand-filing, polishing, re-soldering, lens replacement — using period-accurate techniques.</p>
+            </div>
+            <div class="relative timeline-item">
+              <h4 class="font-stamp text-amber tracking-wider text-sm uppercase mb-1">Fit & Finish</h4>
+              <p class="font-sans text-sm text-cream/70">Custom adjustment to your face. Leaves feeling like the frames were made just for you.</p>
+            </div>
+          </div>
+
+          <div class="mt-10 flex flex-col sm:flex-row gap-4">
+            <a href="#contact"
+               class="bg-amber hover:bg-amber-dark text-cream font-stamp tracking-widest text-xs px-7 py-3.5 transition-all rounded-sm text-center">
+              Book a Repair
+            </a>
+            <div class="flex items-center gap-3 text-cream/70">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+              <span class="font-sans text-sm">30-day repair guarantee</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ WHY US ═══ -->
+  <section class="py-20 px-6 bg-amber-pale">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-14" data-aos="fade-up">
+        <h2 class="font-serif text-3xl md:text-4xl font-bold text-bark">Why Retro Specs?</h2>
+        <div class="divider-ornament max-w-xs mx-auto mt-4"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center" data-aos="fade-up" data-aos-delay="0">
+          <div class="w-14 h-14 rounded-full bg-amber/20 flex items-center justify-center mx-auto mb-4">
+            <svg width="26" height="26" fill="none" stroke="#C97B2F" stroke-width="1.8" viewBox="0 0 24 24">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3 class="font-serif font-semibold text-lg text-bark mb-2">Authentic Only</h3>
+          <p class="font-sans text-sm text-bark-light">Every frame is genuine vintage — no reproductions, ever.</p>
+        </div>
+        <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-14 h-14 rounded-full bg-amber/20 flex items-center justify-center mx-auto mb-4">
+            <svg width="26" height="26" fill="none" stroke="#C97B2F" stroke-width="1.8" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+            </svg>
+          </div>
+          <h3 class="font-serif font-semibold text-lg text-bark mb-2">Same-Day Service</h3>
+          <p class="font-sans text-sm text-bark-light">Minor repairs often ready same day while you wait.</p>
+        </div>
+        <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-14 h-14 rounded-full bg-amber/20 flex items-center justify-center mx-auto mb-4">
+            <svg width="26" height="26" fill="none" stroke="#C97B2F" stroke-width="1.8" viewBox="0 0 24 24">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </div>
+          <h3 class="font-serif font-semibold text-lg text-bark mb-2">Curated with Love</h3>
+          <p class="font-sans text-sm text-bark-light">Meera personally selects every frame from estate sales and flea markets.</p>
+        </div>
+        <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+          <div class="w-14 h-14 rounded-full bg-amber/20 flex items-center justify-center mx-auto mb-4">
+            <svg width="26" height="26" fill="none" stroke="#C97B2F" stroke-width="1.8" viewBox="0 0 24 24">
+              <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+            </svg>
+          </div>
+          <h3 class="font-serif font-semibold text-lg text-bark mb-2">Personal Fitting</h3>
+          <p class="font-sans text-sm text-bark-light">Complimentary custom fitting with every purchase.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ABOUT / FOUNDER ═══ -->
+  <section id="about" class="py-24 px-6 bg-cream">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <!-- Content -->
+        <div data-aos="fade-right">
+          <span class="font-stamp text-amber tracking-[0.3em] text-xs uppercase block mb-3">The Founder</span>
+          <h2 class="font-serif text-4xl font-bold text-bark mb-6 leading-tight">
+            Meera's Story
+          </h2>
+          <div class="space-y-4 font-sans text-bark-light leading-relaxed">
+            <p>
+              It started with a pair of brass-framed round spectacles Meera found at a flea market in Nashik in 2007. She was 23, studying opticianry, and the frames cost her ₹80. She wore them for years.
+            </p>
+            <p>
+              Two years later, armed with a small loan from her mother and an obsession with mid-century design, she opened Retro Specs in a 200 sq ft room on East Street, Camp. The shop smelled of cedar and old books. It still does.
+            </p>
+            <p>
+              Today Meera sources frames from estate sales across Maharashtra — each piece cleaned, restored, and priced with the care of someone who knows what it means to find the right pair of glasses.
+            </p>
+          </div>
+          <blockquote class="mt-8 pl-5 border-l-4 border-amber">
+            <p class="font-serif italic text-bark text-lg leading-relaxed">
+              "Glasses are the most intimate thing you wear. They sit on your face, they frame how the world sees you. They deserve to have a history."
+            </p>
+            <cite class="block mt-3 font-stamp text-amber text-xs tracking-widest not-italic">— Meera Iyer, Founder</cite>
+          </blockquote>
+        </div>
+        <!-- Image -->
+        <div data-aos="fade-left" data-aos-duration="900">
+          <div class="stamp-border p-3 bg-cream-dark" data-label="Retro Specs · Est. 2009">
+            <img
+              src="https://images.unsplash.com/photo-1603217192634-61068e4d4bf9?w=700&q=85&auto=format&fit=crop"
+              alt="Retro Specs boutique interior with vintage eyewear"
+              class="w-full rounded-sm shadow-inner"
+              loading="lazy"
+            />
+          </div>
+          <div class="mt-6 grid grid-cols-3 gap-3">
+            <img src="https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=300&q=75&auto=format&fit=crop" alt="Vintage glasses display" class="rounded-sm shadow-md h-20 w-full object-cover" loading="lazy"/>
+            <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=300&q=75&auto=format&fit=crop" alt="Retro sunglasses" class="rounded-sm shadow-md h-20 w-full object-cover" loading="lazy"/>
+            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=300&q=75&auto=format&fit=crop" alt="Vintage eyewear collection" class="rounded-sm shadow-md h-20 w-full object-cover" loading="lazy"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TESTIMONIALS ═══ -->
+  <section id="testimonials" class="py-24 px-6 bg-burgundy text-cream">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <span class="font-stamp text-amber-light tracking-[0.3em] text-xs uppercase block mb-3">Happy Customers</span>
+        <h2 class="font-serif text-4xl font-bold mb-4">What People Say</h2>
+        <div class="divider-ornament max-w-xs mx-auto text-amber"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <div class="testimonial-card bg-burgundy-light/30 border border-amber/20 rounded-sm p-7" data-aos="fade-up" data-aos-delay="0">
+          <div class="flex items-center gap-1 mb-4">
+            <span class="text-amber"></span>
+          </div>
+          <p class="font-sans text-cream/85 leading-relaxed text-sm mb-6">
+            Found the most perfect 1960s cat-eye frames here. Meera knew exactly what would suit my face shape before I even sat down. The craftsmanship is unreal — these feel like they were made for me.
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-amber/30 flex items-center justify-center font-serif font-bold text-amber">P</div>
+            <div>
+              <div class="font-stamp text-sm tracking-wide">Priya Sharma</div>
+              <div class="font-sans text-xs text-cream/50">Architect, Koregaon Park</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card bg-burgundy-light/30 border border-amber/20 rounded-sm p-7" data-aos="fade-up" data-aos-delay="150">
+          <div class="flex items-center gap-1 mb-4">
+            <span class="text-amber"></span>
+          </div>
+          <p class="font-sans text-cream/85 leading-relaxed text-sm mb-6">
+            I brought in my grandfather's broken spectacles thinking they were gone forever. Rajan fixed them in two hours. They look brand new. I actually cried a little. This shop is special.
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-amber/30 flex items-center justify-center font-serif font-bold text-amber">A</div>
+            <div>
+              <div class="font-stamp text-sm tracking-wide">Arjun Mehta</div>
+              <div class="font-sans text-xs text-cream/50">Professor, COEP</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card bg-burgundy-light/30 border border-amber/20 rounded-sm p-7" data-aos="fade-up" data-aos-delay="300">
+          <div class="flex items-center gap-1 mb-4">
+            <span class="text-amber"></span>
+          </div>
+          <p class="font-sans text-cream/85 leading-relaxed text-sm mb-6">
+            The 70s aviators I got here are my most complimented accessory. I get asked about them everywhere. Worth every rupee — and the service is warm, personal, nothing like a mall store.
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-amber/30 flex items-center justify-center font-serif font-bold text-amber">R</div>
+            <div>
+              <div class="font-stamp text-sm tracking-wide">Rohan D'Souza</div>
+              <div class="font-sans text-xs text-cream/50">Photographer, Baner</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Rating summary -->
+      <div class="mt-12 text-center" data-aos="fade-up" data-aos-delay="400">
+        <div class="inline-flex items-center gap-4 bg-burgundy-dark/40 border border-amber/20 rounded-sm px-8 py-5">
+          <div class="text-center">
+            <div class="font-serif text-4xl font-bold text-amber">4.9</div>
+            <div class="text-amber text-sm"></div>
+          </div>
+          <div class="w-px h-12 bg-amber/30"></div>
+          <div class="text-left">
+            <div class="font-stamp text-cream tracking-wide text-sm">Based on 200+ reviews</div>
+            <div class="font-sans text-cream/60 text-xs mt-1">Google · Facebook · Instagram</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ INSTAGRAM GRID ═══ -->
+  <section class="py-20 px-6 bg-cream-dark">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12" data-aos="fade-up">
+        <span class="font-stamp text-amber tracking-[0.3em] text-xs uppercase block mb-3">Follow the Journey</span>
+        <h2 class="font-serif text-3xl font-bold text-bark">@retrospecspune</h2>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2" data-aos="fade-up" data-aos-delay="100">
+        <a href="https://instagram.com/retrospecspune" target="_blank" rel="noopener" class="aspect-square overflow-hidden block group">
+          <img src="https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=300&q=70&auto=format&fit=crop" alt="" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy"/>
+        </a>
+        <a href="https://instagram.com/retrospecspune" target="_blank" rel="noopener" class="aspect-square overflow-hidden block group">
+          <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=300&q=70&auto=format&fit=crop" alt="" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy"/>
+        </a>
+        <a href="https://instagram.com/retrospecspune" target="_blank" rel="noopener" class="aspect-square overflow-hidden block group">
+          <img src="https://images.unsplash.com/photo-1508296695146-257a814070b4?w=300&q=70&auto=format&fit=crop" alt="" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy"/>
+        </a>
+        <a href="https://instagram.com/retrospecspune" target="_blank" rel="noopener" class="aspect-square overflow-hidden block group">
+          <img src="https://images.unsplash.com/photo-1591076482161-42ce6da69f67?w=300&q=70&auto=format&fit=crop" alt="" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy"/>
+        </a>
+        <a href="https://instagram.com/retrospecspune" target="_blank" rel="noopener" class="aspect-square overflow-hidden block group">
+          <img src="https://images.unsplash.com/photo-1556306535-0f09a537f0a3?w=300&q=70&auto=format&fit=crop" alt="" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy"/>
+        </a>
+        <a href="https://instagram.com/retrospecspune" target="_blank" rel="noopener" class="aspect-square overflow-hidden block group">
+          <img src="https://images.unsplash.com/photo-1603217192634-61068e4d4bf9?w=300&q=70&auto=format&fit=crop" alt="" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy"/>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT / VISIT ═══ -->
+  <section id="contact" class="py-24 px-6 bg-cream">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <span class="font-stamp text-amber tracking-[0.3em] text-xs uppercase block mb-3">Come Find Us</span>
+        <h2 class="font-serif text-4xl font-bold text-bark mb-4">Visit the Boutique</h2>
+        <div class="divider-ornament max-w-xs mx-auto"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <!-- Info -->
+        <div data-aos="fade-right">
+          <div class="space-y-8">
+            <div class="flex gap-5">
+              <div class="w-10 h-10 flex-shrink-0 bg-amber/15 rounded-full flex items-center justify-center">
+                <svg width="18" height="18" fill="none" stroke="#C97B2F" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                  <circle cx="12" cy="9" r="2.5"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-stamp text-bark tracking-wider text-sm mb-1">Address</h4>
+                <p class="font-sans text-bark-light text-sm leading-relaxed">
+                  14, East Street, Camp<br/>Pune, Maharashtra 411001<br/>Near St. Mary's School
+                </p>
+              </div>
+            </div>
+            <div class="flex gap-5">
+              <div class="w-10 h-10 flex-shrink-0 bg-amber/15 rounded-full flex items-center justify-center">
+                <svg width="18" height="18" fill="none" stroke="#C97B2F" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 4.08 5.18 2 2 0 0 1 6.07 3h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.71 2.81a2 2 0 0 1-.45 2.11L10.09 11a16 16 0 0 0 5.91 5.91l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.58 2.81.71A2 2 0 0 1 22 16.92z"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-stamp text-bark tracking-wider text-sm mb-1">Phone</h4>
+                <a href="tel:+912026347890" class="font-sans text-bark-light text-sm hover:text-amber transition-colors">+91-20-2634-7890</a>
+              </div>
+            </div>
+            <div class="flex gap-5">
+              <div class="w-10 h-10 flex-shrink-0 bg-amber/15 rounded-full flex items-center justify-center">
+                <svg width="18" height="18" fill="none" stroke="#C97B2F" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M4 4h16v16H4V4z"/><polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-stamp text-bark tracking-wider text-sm mb-1">Email</h4>
+                <a href="mailto:hello@retrospecspune.com" class="font-sans text-bark-light text-sm hover:text-amber transition-colors">hello@retrospecspune.com</a>
+              </div>
+            </div>
+            <div class="flex gap-5">
+              <div class="w-10 h-10 flex-shrink-0 bg-amber/15 rounded-full flex items-center justify-center">
+                <svg width="18" height="18" fill="none" stroke="#C97B2F" stroke-width="2" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-stamp text-bark tracking-wider text-sm mb-1">Hours</h4>
+                <div class="font-sans text-bark-light text-sm space-y-1">
+                  <p>Mon – Sat: 10:30 AM – 8:00 PM</p>
+                  <p>Sunday: 12:00 PM – 6:00 PM</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social -->
+          <div class="mt-10 flex items-center gap-4">
+            <span class="font-stamp text-xs text-bark/60 tracking-widest uppercase">Follow</span>
+            <div class="flex gap-3">
+              <a href="https://instagram.com/retrospecspune" target="_blank" rel="noopener"
+                 class="w-9 h-9 bg-amber/15 rounded-full flex items-center justify-center hover:bg-amber hover:text-cream transition-all text-amber">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.975.975 1.246 2.242 1.308 3.608.058 1.265.07 1.645.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.975.975-2.242 1.246-3.608 1.308C15.584 21.988 15.204 22 12 22s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.975-.975-1.246-2.242-1.308-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608C4.516 2.497 5.783 2.226 7.15 2.163 8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.756 0 8.341.014 7.052.072 5.197.157 3.355.673 1.98 2.048.605 3.423.157 5.197.072 7.052.014 8.341 0 8.756 0 12c0 3.244.014 3.659.072 4.948.085 1.855.533 3.629 1.908 5.004 1.375 1.375 3.149 1.823 5.004 1.908C8.341 23.986 8.756 24 12 24s3.659-.014 4.948-.072c1.855-.085 3.629-.533 5.004-1.908 1.375-1.375 1.823-3.149 1.908-5.004C23.986 15.659 24 15.244 24 12s-.014-3.659-.072-4.948c-.085-1.855-.533-3.629-1.908-5.004C20.645.673 18.871.157 17.016.072 15.659.014 15.244 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324A6.162 6.162 0 0 0 12 5.838zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+                </svg>
+              </a>
+              <a href="https://facebook.com/retrospecspune" target="_blank" rel="noopener"
+                 class="w-9 h-9 bg-amber/15 rounded-full flex items-center justify-center hover:bg-amber hover:text-cream transition-all text-amber">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.413c0-3.007 1.792-4.668 4.533-4.668 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick contact form -->
+        <div data-aos="fade-left">
+          <div class="bg-cream-dark border border-amber/20 rounded-sm p-8 shadow-sm">
+            <h3 class="font-serif text-xl font-semibold text-bark mb-6">Send a Message</h3>
+            <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+              <div>
+                <label class="font-stamp text-xs text-bark/70 tracking-widest uppercase block mb-2">Your Name</label>
+                <input type="text" required placeholder="Arjun Mehta"
+                  class="w-full bg-cream border border-amber/30 focus:border-amber rounded-sm px-4 py-3 font-sans text-sm text-bark outline-none transition-colors placeholder:text-bark/30"/>
+              </div>
+              <div>
+                <label class="font-stamp text-xs text-bark/70 tracking-widest uppercase block mb-2">Phone</label>
+                <input type="tel" placeholder="+91 98765 43210"
+                  class="w-full bg-cream border border-amber/30 focus:border-amber rounded-sm px-4 py-3 font-sans text-sm text-bark outline-none transition-colors placeholder:text-bark/30"/>
+              </div>
+              <div>
+                <label class="font-stamp text-xs text-bark/70 tracking-widest uppercase block mb-2">Message</label>
+                <textarea rows="4" placeholder="I'm looking for a pair of 70s aviators..."
+                  class="w-full bg-cream border border-amber/30 focus:border-amber rounded-sm px-4 py-3 font-sans text-sm text-bark outline-none transition-colors placeholder:text-bark/30 resize-none"></textarea>
+              </div>
+              <button type="submit"
+                class="w-full bg-amber hover:bg-amber-dark text-cream font-stamp tracking-widest text-xs py-4 transition-all rounded-sm">
+                Send Message
+              </button>
+            </form>
+            <div id="form-success" class="hidden mt-4 text-center font-stamp text-xs text-amber tracking-widest">
+               Message received! We'll be in touch soon. 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="bg-bark text-cream py-12 px-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
+        <!-- Brand -->
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <svg width="30" height="30" viewBox="0 0 36 36" fill="none">
+              <circle cx="11" cy="18" r="7" stroke="#C97B2F" stroke-width="2"/>
+              <circle cx="25" cy="18" r="7" stroke="#C97B2F" stroke-width="2"/>
+              <path d="M4 18 Q2 14 1 12" stroke="#C97B2F" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M32 18 Q34 14 35 12" stroke="#C97B2F" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <span class="font-serif text-lg font-bold">Retro Specs</span>
+          </div>
+          <p class="font-sans text-cream/60 text-sm leading-relaxed">
+            Pune's finest vintage eyewear boutique, lovingly curated since 2009. Where every frame has a story.
+          </p>
+        </div>
+        <!-- Quick links -->
+        <div>
+          <h5 class="font-stamp text-amber tracking-widest text-xs uppercase mb-5">Quick Links</h5>
+          <ul class="space-y-2 font-sans text-sm text-cream/70">
+            <li><a href="#collections" class="hover:text-amber transition-colors">Collections</a></li>
+            <li><a href="#repair"      class="hover:text-amber transition-colors">Repair Service</a></li>
+            <li><a href="#about"       class="hover:text-amber transition-colors">About Us</a></li>
+            <li><a href="#testimonials" class="hover:text-amber transition-colors">Reviews</a></li>
+            <li><a href="#contact"     class="hover:text-amber transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Contact mini -->
+        <div>
+          <h5 class="font-stamp text-amber tracking-widest text-xs uppercase mb-5">Find Us</h5>
+          <address class="font-sans text-sm text-cream/70 not-italic space-y-2">
+            <p>14, East Street, Camp<br/>Pune 411001, Maharashtra</p>
+            <p><a href="tel:+912026347890" class="hover:text-amber transition-colors">+91-20-2634-7890</a></p>
+            <p><a href="mailto:hello@retrospecspune.com" class="hover:text-amber transition-colors">hello@retrospecspune.com</a></p>
+          </address>
+        </div>
+      </div>
+      <div class="border-t border-cream/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs font-stamp text-cream/40 tracking-widest">
+        <span>© 2024 Retro Specs, Camp Pune. All Rights Reserved.</span>
+        <span>Made with  in Pune</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // AOS init
+    AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 60 });
+
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    const navLogoText = document.getElementById('nav-logo-text');
+    const navLinks = navbar.querySelectorAll('ul a');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 80) {
+        navbar.classList.add('nav-scrolled');
+        navLogoText.classList.remove('text-cream');
+        navLogoText.classList.add('text-bark');
+        navLinks.forEach(link => {
+          if (!link.closest('li')?.querySelector('.bg-amber')) {
+            link.classList.remove('text-cream');
+            link.classList.add('text-bark');
+            link.classList.remove('hover:text-amber-light');
+            link.classList.add('hover:text-amber');
+          }
+        });
+      } else {
+        navbar.classList.remove('nav-scrolled');
+        navLogoText.classList.add('text-cream');
+        navLogoText.classList.remove('text-bark');
+        navLinks.forEach(link => {
+          if (!link.closest('li')?.querySelector('.bg-amber')) {
+            link.classList.add('text-cream');
+            link.classList.remove('text-bark');
+            link.classList.add('hover:text-amber-light');
+            link.classList.remove('hover:text-amber');
+          }
+        });
+      }
+    });
+
+    // Mobile menu
+    document.getElementById('menu-btn').addEventListener('click', () => {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+    function closeMobileMenu() {
+      document.getElementById('mobile-menu').classList.add('hidden');
+    }
+
+    // Form submit
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      document.getElementById('form-success').classList.remove('hidden');
+      e.target.reset();
+      setTimeout(() => {
+        document.getElementById('form-success').classList.add('hidden');
+      }, 5000);
+    }
+  </script>
+
+  <!-- Marquee keyframe via style tag -->
+  <style>
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+  </style>
+
+</body>
+</html>
