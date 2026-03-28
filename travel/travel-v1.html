@@ -1,0 +1,1839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wandercraft Holidays – Tour & Travel Agency | FC Road, Pune</title>
+  <meta name="description" content="Wandercraft Holidays – Pune's most trusted tour & travel agency on FC Road. Explore handcrafted domestic and international packages to Goa, Ladakh, Europe, Maldives and beyond." />
+  <meta name="keywords" content="travel agency pune, tour packages pune, Goa packages, Ladakh tour, Europe tour, Maldives packages, FC road pune travel" />
+  <link rel="canonical" href="https://wandercraftholidays.in/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://wandercraftholidays.in/" />
+  <meta property="og:title" content="Wandercraft Holidays – FC Road, Pune | Domestic & International Tours" />
+  <meta property="og:description" content="From Goa beaches to Maldives lagoons — Wandercraft Holidays crafts unforgettable journeys for every Pune wanderer." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Wandercraft Holidays – FC Road, Pune" />
+  <meta name="twitter:description" content="Your dream destination is one booking away. Explore handcrafted tour packages from Pune." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80" />
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["LocalBusiness", "TravelAgency"],
+        "@id": "https://wandercraftholidays.in/#business",
+        "name": "Wandercraft Holidays",
+        "url": "https://wandercraftholidays.in/",
+        "logo": "https://wandercraftholidays.in/logo.png",
+        "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
+        "description": "Wandercraft Holidays is Pune's premier tour and travel agency on FC Road, offering handcrafted domestic and international travel packages.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "FC Road, Shivajinagar",
+          "addressLocality": "Pune",
+          "addressRegion": "Maharashtra",
+          "postalCode": "411005",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 18.5236,
+          "longitude": 73.8434
+        },
+        "telephone": "+91-98765-43210",
+        "email": "hello@wandercraftholidays.in",
+        "openingHours": "Mo-Sa 09:30-19:00",
+        "priceRange": "₹₹",
+        "areaServed": "Pune",
+        "hasMap": "https://maps.google.com/?q=FC+Road+Pune",
+        "sameAs": [
+          "https://www.instagram.com/wandercraftholidays",
+          "https://www.facebook.com/wandercraftholidays"
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- AOS Library -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --teal: #0d9488;
+      --teal-dark: #0f766e;
+      --teal-light: #99f6e4;
+      --teal-pale: #f0fdfa;
+      --orange: #f97316;
+      --orange-dark: #ea580c;
+      --beige: #fdf6ec;
+      --beige-dark: #f5e6cc;
+      --sand: #d4a96a;
+      --text: #1e293b;
+      --text-light: #64748b;
+      --white: #ffffff;
+      --radius: 16px;
+      --shadow: 0 4px 24px rgba(0,0,0,0.10);
+      --shadow-lg: 0 8px 48px rgba(0,0,0,0.16);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+
+    a { text-decoration: none; color: inherit; }
+
+    img { display: block; width: 100%; object-fit: cover; }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 50px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--orange);
+      color: var(--white);
+    }
+
+    .btn-primary:hover {
+      background: var(--orange-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(249,115,22,0.35);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid rgba(255,255,255,0.7);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.15);
+      border-color: var(--white);
+    }
+
+    .btn-teal {
+      background: var(--teal);
+      color: var(--white);
+    }
+
+    .btn-teal:hover {
+      background: var(--teal-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(13,148,136,0.35);
+    }
+
+    /* NAVBAR */
+    .navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      padding: 18px 0;
+      transition: all 0.4s ease;
+    }
+
+    .navbar.scrolled {
+      background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+      padding: 12px 0;
+    }
+
+    .navbar.scrolled .nav-logo { color: var(--teal-dark); }
+    .navbar.scrolled .nav-logo span { color: var(--orange); }
+    .navbar.scrolled .nav-link { color: var(--text); }
+    .navbar.scrolled .nav-link:hover { color: var(--teal); }
+    .navbar.scrolled .nav-cta { background: var(--orange); color: var(--white); }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -0.3px;
+    }
+
+    .nav-logo span { color: var(--orange); }
+    .nav-logo small { display: block; font-family: 'Inter', sans-serif; font-size: 0.62rem; font-weight: 400; letter-spacing: 1.5px; text-transform: uppercase; opacity: 0.8; margin-top: -2px; }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.9);
+      transition: color 0.2s;
+      letter-spacing: 0.3px;
+    }
+
+    .nav-link:hover { color: var(--teal-light); }
+
+    .nav-cta {
+      padding: 10px 22px;
+      background: rgba(255,255,255,0.18);
+      color: var(--white);
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: 1.5px solid rgba(255,255,255,0.4);
+      transition: all 0.3s;
+    }
+
+    .nav-cta:hover {
+      background: var(--orange);
+      border-color: var(--orange);
+    }
+
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .nav-hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    .navbar.scrolled .nav-hamburger span { background: var(--text); }
+
+    .nav-mobile {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: var(--white);
+      z-index: 999;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+    }
+
+    .nav-mobile.open { display: flex; }
+
+    .nav-mobile a {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--text);
+      transition: color 0.2s;
+    }
+
+    .nav-mobile a:hover { color: var(--teal); }
+
+    .nav-close {
+      position: absolute;
+      top: 24px; right: 24px;
+      font-size: 2rem;
+      cursor: pointer;
+      color: var(--text-light);
+      line-height: 1;
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      height: 100vh;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=85');
+      background-size: cover;
+      background-position: center 40%;
+      transform: scale(1.08);
+      transition: transform 0.1s linear;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0,40,35,0.62) 0%, rgba(0,20,20,0.38) 50%, rgba(249,115,22,0.18) 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 680px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.14);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.25);
+      color: var(--white);
+      padding: 7px 16px;
+      border-radius: 50px;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    .hero-badge::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--orange);
+      border-radius: 50%;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 5.5vw, 4rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 20px;
+      letter-spacing: -0.5px;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--teal-light);
+    }
+
+    .hero-sub {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.82);
+      line-height: 1.7;
+      margin-bottom: 36px;
+      font-weight: 300;
+      max-width: 520px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .hero-stats {
+      position: absolute;
+      bottom: 40px;
+      left: 0; right: 0;
+      z-index: 2;
+    }
+
+    .hero-stats-inner {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero-stat {
+      color: var(--white);
+      text-align: left;
+    }
+
+    .hero-stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.9rem;
+      font-weight: 700;
+      line-height: 1;
+      color: var(--teal-light);
+    }
+
+    .hero-stat-label {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.7);
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+
+    .hero-stat-divider {
+      width: 1px;
+      height: 40px;
+      background: rgba(255,255,255,0.2);
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 40px;
+      right: 40px;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,0.6);
+      font-size: 0.7rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .hero-scroll-line {
+      width: 1px;
+      height: 40px;
+      background: rgba(255,255,255,0.4);
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.3; transform: scaleY(1); }
+      50% { opacity: 1; transform: scaleY(1.3); }
+    }
+
+    /* SECTION COMMON */
+    .section { padding: 90px 0; }
+    .section-alt { background: var(--beige); }
+    .section-teal { background: var(--teal-pale); }
+
+    .section-tag {
+      display: inline-block;
+      background: rgba(13,148,136,0.1);
+      color: var(--teal-dark);
+      padding: 5px 14px;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 1.3px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      font-size: clamp(1.7rem, 3.5vw, 2.5rem);
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.25;
+      margin-bottom: 14px;
+    }
+
+    .section-sub {
+      font-size: 1rem;
+      color: var(--text-light);
+      line-height: 1.7;
+      max-width: 560px;
+    }
+
+    .section-header {
+      margin-bottom: 56px;
+    }
+
+    .section-header.center {
+      text-align: center;
+    }
+
+    .section-header.center .section-sub {
+      margin: 0 auto;
+    }
+
+    /* PACKAGES */
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .pkg-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      border: 1px solid rgba(0,0,0,0.04);
+    }
+
+    .pkg-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .pkg-img-wrap {
+      position: relative;
+      height: 220px;
+      overflow: hidden;
+    }
+
+    .pkg-img-wrap img {
+      height: 100%;
+      transition: transform 0.5s ease;
+    }
+
+    .pkg-card:hover .pkg-img-wrap img {
+      transform: scale(1.07);
+    }
+
+    .pkg-badge {
+      position: absolute;
+      top: 14px; left: 14px;
+      background: var(--orange);
+      color: var(--white);
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 50px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    .pkg-badge.intl { background: var(--teal); }
+
+    .pkg-duration {
+      position: absolute;
+      bottom: 14px; right: 14px;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      color: var(--white);
+      font-size: 0.75rem;
+      font-weight: 500;
+      padding: 5px 12px;
+      border-radius: 50px;
+    }
+
+    .pkg-body {
+      padding: 22px 24px 26px;
+    }
+
+    .pkg-destination {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--teal);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .pkg-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .pkg-desc {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    .pkg-features {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .pkg-feature {
+      font-size: 0.72rem;
+      color: var(--text-light);
+      background: var(--teal-pale);
+      padding: 3px 10px;
+      border-radius: 50px;
+      font-weight: 500;
+    }
+
+    .pkg-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 16px;
+      border-top: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .pkg-price-label {
+      font-size: 0.7rem;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    .pkg-price {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--teal-dark);
+    }
+
+    .pkg-price span {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: var(--text-light);
+    }
+
+    .pkg-book {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--teal);
+      color: var(--white);
+      padding: 9px 18px;
+      border-radius: 50px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    .pkg-book:hover {
+      background: var(--orange);
+      transform: scale(1.04);
+    }
+
+    /* DESTINATIONS */
+    .dest-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto auto;
+      gap: 18px;
+    }
+
+    .dest-card {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .dest-card:nth-child(1) {
+      grid-column: span 2;
+      grid-row: span 2;
+      height: 480px;
+    }
+
+    .dest-card:not(:nth-child(1)) { height: 220px; }
+
+    .dest-card img {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.5s ease;
+    }
+
+    .dest-card:hover img {
+      transform: scale(1.06);
+    }
+
+    .dest-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 55%);
+      transition: background 0.3s;
+    }
+
+    .dest-card:hover .dest-overlay {
+      background: linear-gradient(to top, rgba(13,148,136,0.7) 0%, transparent 60%);
+    }
+
+    .dest-info {
+      position: absolute;
+      bottom: 20px; left: 20px;
+      color: var(--white);
+    }
+
+    .dest-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .dest-card:nth-child(1) .dest-name { font-size: 2rem; }
+
+    .dest-count {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.8);
+      margin-top: 3px;
+    }
+
+    .dest-arrow {
+      position: absolute;
+      top: 50%; right: 20px;
+      transform: translateY(-50%) scale(0);
+      background: var(--orange);
+      color: var(--white);
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1);
+    }
+
+    .dest-card:hover .dest-arrow {
+      transform: translateY(-50%) scale(1);
+    }
+
+    /* WHY US */
+    .whyus-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .whyus-img-wrap {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      height: 520px;
+    }
+
+    .whyus-img-wrap img { height: 100%; }
+
+    .whyus-img-badge {
+      position: absolute;
+      bottom: 28px; right: -20px;
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 18px 22px;
+      box-shadow: var(--shadow-lg);
+      text-align: center;
+      min-width: 130px;
+    }
+
+    .whyus-img-badge-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--teal);
+      line-height: 1;
+    }
+
+    .whyus-img-badge-label {
+      font-size: 0.72rem;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-top: 4px;
+    }
+
+    .features-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-top: 36px;
+    }
+
+    .feature-item {
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+
+    .feature-icon {
+      width: 50px; height: 50px;
+      min-width: 50px;
+      background: var(--teal-pale);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      transition: all 0.3s;
+    }
+
+    .feature-item:hover .feature-icon {
+      background: var(--teal);
+      transform: rotate(-5deg) scale(1.1);
+    }
+
+    .feature-text h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .feature-text p {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    /* TESTIMONIALS */
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .testi-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(0,0,0,0.04);
+      transition: all 0.35s ease;
+    }
+
+    .testi-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--teal-light);
+    }
+
+    .testi-stars {
+      color: #fbbf24;
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      margin-bottom: 16px;
+    }
+
+    .testi-quote {
+      font-size: 0.92rem;
+      color: var(--text);
+      line-height: 1.75;
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+
+    .testi-quote::before { content: '\201C'; font-size: 1.5rem; color: var(--teal); line-height: 0.5; vertical-align: -0.5rem; margin-right: 2px; }
+
+    .testi-author {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .testi-avatar {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid var(--teal-light);
+    }
+
+    .testi-avatar img { height: 100%; }
+
+    .testi-name {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .testi-trip {
+      font-size: 0.75rem;
+      color: var(--teal);
+      font-weight: 500;
+      margin-top: 2px;
+    }
+
+    /* CONTACT */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .contact-info h2 {
+      font-size: 2rem;
+      color: var(--text);
+      margin-bottom: 14px;
+    }
+
+    .contact-info p {
+      color: var(--text-light);
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .contact-icon {
+      width: 44px; height: 44px;
+      min-width: 44px;
+      background: var(--teal-pale);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+    }
+
+    .contact-item-text strong {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+
+    .contact-item-text span {
+      font-size: 0.85rem;
+      color: var(--text-light);
+    }
+
+    .contact-form {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 6px;
+      letter-spacing: 0.3px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 10px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.88rem;
+      color: var(--text);
+      background: #f8fafc;
+      transition: border-color 0.25s, box-shadow 0.25s;
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--teal);
+      box-shadow: 0 0 0 3px rgba(13,148,136,0.12);
+      background: var(--white);
+    }
+
+    .form-group textarea {
+      height: 110px;
+      resize: vertical;
+    }
+
+    .form-submit { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; margin-top: 6px; }
+
+    /* FOOTER */
+    .footer {
+      background: #0d1f1e;
+      color: rgba(255,255,255,0.75);
+      padding: 70px 0 28px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 56px;
+    }
+
+    .footer-brand .nav-logo {
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .footer-brand p {
+      font-size: 0.85rem;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 22px;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 10px;
+    }
+
+    .footer-social a {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.7);
+      transition: all 0.3s;
+    }
+
+    .footer-social a:hover {
+      background: var(--teal);
+      color: var(--white);
+      transform: translateY(-3px);
+    }
+
+    .footer-col h4 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--white);
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      margin-bottom: 18px;
+    }
+
+    .footer-col ul { list-style: none; }
+
+    .footer-col ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-col ul li a {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.55);
+      transition: color 0.2s;
+    }
+
+    .footer-col ul li a:hover { color: var(--teal-light); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-bottom p {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.4);
+    }
+
+    .footer-bottom-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-bottom-links a {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.4);
+      transition: color 0.2s;
+    }
+
+    .footer-bottom-links a:hover { color: var(--teal-light); }
+
+    /* WHATSAPP FLOAT */
+    .wa-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 900;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: #25d366;
+      color: var(--white);
+      padding: 14px 22px;
+      border-radius: 50px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      box-shadow: 0 6px 28px rgba(37,211,102,0.45);
+      transition: all 0.3s ease;
+      animation: waFloat 3s ease-in-out infinite;
+    }
+
+    .wa-float:hover {
+      background: #1da851;
+      transform: scale(1.04) translateY(-2px);
+      animation: none;
+    }
+
+    @keyframes waFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+
+    .wa-float svg { width: 22px; height: 22px; fill: var(--white); }
+
+    /* AOS overrides */
+    [data-aos] { pointer-events: none; }
+    [data-aos].aos-animate { pointer-events: auto; }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .packages-grid { grid-template-columns: repeat(2, 1fr); }
+      .dest-grid { grid-template-columns: repeat(2, 1fr); }
+      .dest-card:nth-child(1) { grid-column: span 2; height: 360px; }
+      .dest-card:not(:nth-child(1)) { height: 200px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .whyus-img-badge { right: 0; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+
+      .hero h1 { font-size: 2rem; }
+      .hero-sub { font-size: 0.92rem; }
+      .hero-stats-inner { gap: 20px; }
+      .hero-stat-num { font-size: 1.4rem; }
+      .hero-scroll { display: none; }
+
+      .packages-grid { grid-template-columns: 1fr; }
+      .dest-grid { grid-template-columns: 1fr 1fr; }
+
+      .whyus-grid { grid-template-columns: 1fr; gap: 40px; }
+      .whyus-img-wrap { height: 320px; }
+      .whyus-img-badge { right: 0; bottom: 20px; }
+
+      .testi-grid { grid-template-columns: 1fr; }
+
+      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .contact-form { padding: 28px 22px; }
+
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+
+      .form-row { grid-template-columns: 1fr; }
+
+      .section { padding: 64px 0; }
+
+      .wa-float span { display: none; }
+      .wa-float { padding: 14px; border-radius: 50%; }
+    }
+
+    @media (max-width: 480px) {
+      .dest-grid { grid-template-columns: 1fr; }
+      .dest-card:nth-child(1) { grid-column: span 1; height: 260px; }
+      .dest-card:not(:nth-child(1)) { height: 180px; }
+      .hero-actions { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="#" class="nav-logo">
+          Wandercraft<span>.</span>
+          <small>Holidays · FC Road, Pune</small>
+        </a>
+        <ul class="nav-links">
+          <li><a href="#packages" class="nav-link">Packages</a></li>
+          <li><a href="#destinations" class="nav-link">Destinations</a></li>
+          <li><a href="#why-us" class="nav-link">About Us</a></li>
+          <li><a href="#testimonials" class="nav-link">Stories</a></li>
+          <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+        </ul>
+        <div class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="nav-mobile" id="nav-mobile">
+    <span class="nav-close" onclick="toggleMenu()"></span>
+    <a href="#packages" onclick="toggleMenu()">Packages</a>
+    <a href="#destinations" onclick="toggleMenu()">Destinations</a>
+    <a href="#why-us" onclick="toggleMenu()">About Us</a>
+    <a href="#testimonials" onclick="toggleMenu()">Travel Stories</a>
+    <a href="#contact" onclick="toggleMenu()">Get a Quote</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg" id="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">FC Road Pune's Trusted Travel Partner</div>
+        <h1>Life is Short.<br /><em>Travel More,</em><br />Regret Never.</h1>
+        <p class="hero-sub">From the golden sands of Goa to the glacier-carved peaks of Ladakh — we craft journeys that leave you breathless and coming back for more.</p>
+        <div class="hero-actions">
+          <a href="#packages" class="btn btn-primary"> Explore Packages</a>
+          <a href="#contact" class="btn btn-outline">Plan My Trip →</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="container">
+        <div class="hero-stats-inner">
+          <div class="hero-stat">
+            <div class="hero-stat-num">8,400+</div>
+            <div class="hero-stat-label">Happy Travellers</div>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">120+</div>
+            <div class="hero-stat-label">Destinations</div>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">11 yrs</div>
+            <div class="hero-stat-label">Crafting Journeys</div>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">4.9 </div>
+            <div class="hero-stat-label">Google Rating</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll" onclick="document.getElementById('packages').scrollIntoView({behavior:'smooth'})">
+      <div class="hero-scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- FEATURED PACKAGES -->
+  <section class="section" id="packages">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag"> Featured Packages</span>
+        <h2 class="section-title">Handcrafted Journeys<br />for Every Wanderer</h2>
+        <p class="section-sub">From quick weekend getaways to sweeping month-long adventures — our curated packages cover the best of India and the world.</p>
+      </div>
+      <div class="packages-grid">
+
+        <!-- Package 1: Goa -->
+        <div class="pkg-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="pkg-img-wrap">
+            <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=600&q=80" alt="Goa Beach Package" loading="lazy" />
+            <span class="pkg-badge">Bestseller</span>
+            <span class="pkg-duration"> 4N / 5D</span>
+          </div>
+          <div class="pkg-body">
+            <div class="pkg-destination">🇮🇳 Domestic · Goa</div>
+            <h3 class="pkg-title">Goa Sun, Sand & Soul</h3>
+            <p class="pkg-desc">North Goa beaches, South Goa serenity, spice plantations, Old Goa heritage, and the freshest seafood plates of your life.</p>
+            <div class="pkg-features">
+              <span class="pkg-feature"> Flights Incl.</span>
+              <span class="pkg-feature"> 4-Star Hotel</span>
+              <span class="pkg-feature"> Breakfast</span>
+              <span class="pkg-feature"> Transfers</span>
+            </div>
+            <div class="pkg-footer">
+              <div>
+                <div class="pkg-price-label">Starting from</div>
+                <div class="pkg-price">₹18,999 <span>/ person</span></div>
+              </div>
+              <a href="#contact" class="pkg-book">Book Now →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Package 2: Ladakh -->
+        <div class="pkg-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="pkg-img-wrap">
+            <img src="https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?w=600&q=80" alt="Ladakh Mountain Adventure" loading="lazy" />
+            <span class="pkg-badge">Adventure</span>
+            <span class="pkg-duration"> 7N / 8D</span>
+          </div>
+          <div class="pkg-body">
+            <div class="pkg-destination">🇮🇳 Domestic · Ladakh</div>
+            <h3 class="pkg-title">Ladakh — The Himalayan Odyssey</h3>
+            <p class="pkg-desc">Pangong Lake at sunrise, Nubra Valley camel rides, ancient Thiksey Monastery, and the legendary Khardung La motorway in the sky.</p>
+            <div class="pkg-features">
+              <span class="pkg-feature"> Flights Incl.</span>
+              <span class="pkg-feature"> Camps & Hotels</span>
+              <span class="pkg-feature"> All Meals</span>
+              <span class="pkg-feature"> Guide Incl.</span>
+            </div>
+            <div class="pkg-footer">
+              <div>
+                <div class="pkg-price-label">Starting from</div>
+                <div class="pkg-price">₹42,500 <span>/ person</span></div>
+              </div>
+              <a href="#contact" class="pkg-book">Book Now →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Package 3: Maldives -->
+        <div class="pkg-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="pkg-img-wrap">
+            <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=600&q=80" alt="Maldives Overwater Villa" loading="lazy" />
+            <span class="pkg-badge intl">International</span>
+            <span class="pkg-duration"> 5N / 6D</span>
+          </div>
+          <div class="pkg-body">
+            <div class="pkg-destination"> International · Maldives</div>
+            <h3 class="pkg-title">Maldives — Crystal Lagoon Escape</h3>
+            <p class="pkg-desc">Overwater villa sunrises, snorkelling with manta rays, private beach dinners, and turquoise lagoons that glow neon-blue at dusk.</p>
+            <div class="pkg-features">
+              <span class="pkg-feature"> Intl. Flights</span>
+              <span class="pkg-feature"> Overwater Villa</span>
+              <span class="pkg-feature"> Full Board</span>
+              <span class="pkg-feature"> Snorkel Tour</span>
+            </div>
+            <div class="pkg-footer">
+              <div>
+                <div class="pkg-price-label">Starting from</div>
+                <div class="pkg-price">₹89,000 <span>/ couple</span></div>
+              </div>
+              <a href="#contact" class="pkg-book">Book Now →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Package 4: Europe -->
+        <div class="pkg-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="pkg-img-wrap">
+            <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600&q=80" alt="Europe Grand Tour" loading="lazy" />
+            <span class="pkg-badge intl">International</span>
+            <span class="pkg-duration"> 10N / 11D</span>
+          </div>
+          <div class="pkg-body">
+            <div class="pkg-destination"> International · Europe</div>
+            <h3 class="pkg-title">Europe Grand Tour — 5 Countries</h3>
+            <p class="pkg-desc">Paris at twilight, Swiss Alps by cable car, Amsterdam canals by boat, Rome's ancient ruins, and Barcelona's vivid tapestry of art and food.</p>
+            <div class="pkg-features">
+              <span class="pkg-feature"> Intl. Flights</span>
+              <span class="pkg-feature"> 4-Star Hotels</span>
+              <span class="pkg-feature"> Coach Tours</span>
+              <span class="pkg-feature"> Visa Help</span>
+            </div>
+            <div class="pkg-footer">
+              <div>
+                <div class="pkg-price-label">Starting from</div>
+                <div class="pkg-price">₹1,45,000 <span>/ person</span></div>
+              </div>
+              <a href="#contact" class="pkg-book">Book Now →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Package 5: Kerala -->
+        <div class="pkg-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="pkg-img-wrap">
+            <img src="https://images.unsplash.com/photo-1593693397690-362cb9666fc2?w=600&q=80" alt="Kerala Backwaters" loading="lazy" />
+            <span class="pkg-badge">Honeymoon</span>
+            <span class="pkg-duration"> 6N / 7D</span>
+          </div>
+          <div class="pkg-body">
+            <div class="pkg-destination">🇮🇳 Domestic · Kerala</div>
+            <h3 class="pkg-title">Kerala Backwaters & Misty Hills</h3>
+            <p class="pkg-desc">Float through Alleppey's mirror-still backwaters on a private houseboat, wander tea-scented Munnar hills, and unwind on Kovalam's quiet shore.</p>
+            <div class="pkg-features">
+              <span class="pkg-feature"> Flights Incl.</span>
+              <span class="pkg-feature"> Houseboat</span>
+              <span class="pkg-feature"> Breakfast</span>
+              <span class="pkg-feature"> Spa Add-on</span>
+            </div>
+            <div class="pkg-footer">
+              <div>
+                <div class="pkg-price-label">Starting from</div>
+                <div class="pkg-price">₹32,000 <span>/ couple</span></div>
+              </div>
+              <a href="#contact" class="pkg-book">Book Now →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Package 6: Thailand -->
+        <div class="pkg-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="pkg-img-wrap">
+            <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=600&q=80" alt="Thailand Bangkok Phuket" loading="lazy" />
+            <span class="pkg-badge intl">International</span>
+            <span class="pkg-duration"> 6N / 7D</span>
+          </div>
+          <div class="pkg-body">
+            <div class="pkg-destination"> International · Thailand</div>
+            <h3 class="pkg-title">Thailand Thrill — Bangkok & Phuket</h3>
+            <p class="pkg-desc">Street food paradise, rooftop bar Bangkok nights, island-hopping in Phuket, phi phi islands, elephant sanctuary, and night-market vibes.</p>
+            <div class="pkg-features">
+              <span class="pkg-feature"> Intl. Flights</span>
+              <span class="pkg-feature"> Resort Stay</span>
+              <span class="pkg-feature"> Breakfast</span>
+              <span class="pkg-feature"> Island Hop</span>
+            </div>
+            <div class="pkg-footer">
+              <div>
+                <div class="pkg-price-label">Starting from</div>
+                <div class="pkg-price">₹58,000 <span>/ person</span></div>
+              </div>
+              <a href="#contact" class="pkg-book">Book Now →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- POPULAR DESTINATIONS -->
+  <section class="section section-alt" id="destinations">
+    <div class="container">
+      <div class="section-header center" data-aos="fade-up">
+        <span class="section-tag"> Destinations</span>
+        <h2 class="section-title">Where Will You Go Next?</h2>
+        <p class="section-sub">Every destination on our map is a chapter waiting to be written. Pick yours and we'll do the rest.</p>
+      </div>
+      <div class="dest-grid">
+        <div class="dest-card" data-aos="fade-right" data-aos-delay="0">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80" alt="Ladakh Mountains" loading="lazy" />
+          <div class="dest-overlay"></div>
+          <div class="dest-info">
+            <div class="dest-name">Ladakh</div>
+            <div class="dest-count">12 packages available</div>
+          </div>
+          <div class="dest-arrow">→</div>
+        </div>
+        <div class="dest-card" data-aos="fade-down" data-aos-delay="100">
+          <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=600&q=80" alt="Goa Beach" loading="lazy" />
+          <div class="dest-overlay"></div>
+          <div class="dest-info">
+            <div class="dest-name">Goa</div>
+            <div class="dest-count">8 packages</div>
+          </div>
+          <div class="dest-arrow">→</div>
+        </div>
+        <div class="dest-card" data-aos="fade-down" data-aos-delay="150">
+          <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=600&q=80" alt="Maldives Lagoon" loading="lazy" />
+          <div class="dest-overlay"></div>
+          <div class="dest-info">
+            <div class="dest-name">Maldives</div>
+            <div class="dest-count">6 packages</div>
+          </div>
+          <div class="dest-arrow">→</div>
+        </div>
+        <div class="dest-card" data-aos="fade-left" data-aos-delay="100">
+          <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600&q=80" alt="Paris Europe" loading="lazy" />
+          <div class="dest-overlay"></div>
+          <div class="dest-info">
+            <div class="dest-name">Europe</div>
+            <div class="dest-count">10 packages</div>
+          </div>
+          <div class="dest-arrow">→</div>
+        </div>
+        <div class="dest-card" data-aos="fade-left" data-aos-delay="150">
+          <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=600&q=80" alt="Thailand" loading="lazy" />
+          <div class="dest-overlay"></div>
+          <div class="dest-info">
+            <div class="dest-name">Thailand</div>
+            <div class="dest-count">7 packages</div>
+          </div>
+          <div class="dest-arrow">→</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="section" id="why-us">
+    <div class="container">
+      <div class="whyus-grid">
+        <div class="whyus-img-wrap" data-aos="fade-right">
+          <img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?w=700&q=80" alt="Travel Planning Wandercraft" loading="lazy" />
+          <div class="whyus-img-badge" data-aos="zoom-in" data-aos-delay="300">
+            <div class="whyus-img-badge-num">11+</div>
+            <div class="whyus-img-badge-label">Years of<br />Crafting Joy</div>
+          </div>
+        </div>
+        <div data-aos="fade-left">
+          <span class="section-tag"> Why Wandercraft</span>
+          <h2 class="section-title">We Don't Book Trips.<br />We Craft Stories.</h2>
+          <p class="section-sub">Since 2013, Wandercraft Holidays has been the go-to travel home for thousands of Pune families, couples, and solo explorers. Every itinerary is personal. Every journey is ours to remember.</p>
+          <div class="features-list">
+            <div class="feature-item">
+              <div class="feature-icon"></div>
+              <div class="feature-text">
+                <h4>Personalised Itineraries</h4>
+                <p>No two trips are the same. We tailor every package to your pace, budget, and bucket list — not a template.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon"></div>
+              <div class="feature-text">
+                <h4>Guaranteed Best Pricing</h4>
+                <p>We leverage 11 years of supplier partnerships to get you the best rates — and pass every rupee saved to you.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon"></div>
+              <div class="feature-text">
+                <h4>24/7 On-Trip Support</h4>
+                <p>Our dedicated travel managers are reachable round the clock while you're on tour — so you travel with zero anxiety.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon"></div>
+              <div class="feature-text">
+                <h4>Visa & Documentation Help</h4>
+                <p>Visa paperwork? Travel insurance? Foreign exchange? We handle the headaches so your pre-trip is as relaxing as the trip itself.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section section-teal" id="testimonials">
+    <div class="container">
+      <div class="section-header center" data-aos="fade-up">
+        <span class="section-tag"> Travel Stories</span>
+        <h2 class="section-title">Pune's Wanderers Speak</h2>
+        <p class="section-sub">Real journeys. Real people. Real joy. Hear from the 8,400+ travellers who trusted Wandercraft with their most precious memories.</p>
+      </div>
+      <div class="testi-grid">
+
+        <div class="testi-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="testi-stars"></div>
+          <p class="testi-quote">Wandercraft handled our Maldives honeymoon completely from scratch — flights, the overwater villa, snorkelling tours. Every tiny detail was perfect. We didn't worry about a single thing. Highly, highly recommended!</p>
+          <div class="testi-author">
+            <div class="testi-avatar">
+              <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=100&h=100&fit=crop&q=80" alt="Priya Kulkarni" loading="lazy" />
+            </div>
+            <div>
+              <div class="testi-name">Priya & Rohit Kulkarni</div>
+              <div class="testi-trip"> Maldives Honeymoon Package</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="testi-stars"></div>
+          <p class="testi-quote">Did the Europe 5-country tour with my college friends. Team Wandercraft arranged everything — hotels, coaches, even WhatsApp updates daily. Nidhi was our point of contact and she was absolutely fantastic throughout.</p>
+          <div class="testi-author">
+            <div class="testi-avatar">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&q=80" alt="Aniket Deshpande" loading="lazy" />
+            </div>
+            <div>
+              <div class="testi-name">Aniket Deshpande</div>
+              <div class="testi-trip"> Europe Grand Tour — 11 Days</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="testi-stars"></div>
+          <p class="testi-quote">Our family of 6 — including two kids and my in-laws — had the most incredible Goa trip. The hotel selection was spot on, the van transfers were comfortable, and the itinerary was perfectly paced. Will definitely come back!</p>
+          <div class="testi-author">
+            <div class="testi-avatar">
+              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&q=80" alt="Sneha Joshi" loading="lazy" />
+            </div>
+            <div>
+              <div class="testi-name">Sneha Joshi</div>
+              <div class="testi-trip"> Goa Family Package — 5 Days</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info" data-aos="fade-right">
+          <span class="section-tag"> Get in Touch</span>
+          <h2 class="section-title">Ready to Start<br />Your Adventure?</h2>
+          <p>Fill out the quick form and our travel experts will get back to you within 2 hours with a personalised itinerary — zero commitment, zero pressure.</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon"></div>
+              <div class="contact-item-text">
+                <strong>Visit Us</strong>
+                <span>FC Road, Shivajinagar, Pune – 411005<br />(Near Fergusson College Gate)</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"></div>
+              <div class="contact-item-text">
+                <strong>Call / WhatsApp</strong>
+                <span>+91-98765-43210</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"></div>
+              <div class="contact-item-text">
+                <strong>Email</strong>
+                <span>hello@wandercraftholidays.in</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"></div>
+              <div class="contact-item-text">
+                <strong>Office Hours</strong>
+                <span>Mon – Sat: 9:30 AM – 7:00 PM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form" data-aos="fade-left">
+          <h3 style="font-size:1.4rem;margin-bottom:6px;color:var(--text);">Plan My Dream Trip</h3>
+          <p style="font-size:0.85rem;color:var(--text-light);margin-bottom:26px;">Tell us a little and we'll craft a lot. No spam, ever.</p>
+          <form onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" placeholder="Rahul Sharma" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone / WhatsApp *</label>
+                <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="rahul@example.com" />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="destination">Destination *</label>
+                <select id="destination" name="destination" required>
+                  <option value="" disabled selected>Select Destination</option>
+                  <option>Goa</option>
+                  <option>Ladakh</option>
+                  <option>Maldives</option>
+                  <option>Europe</option>
+                  <option>Thailand</option>
+                  <option>Kerala</option>
+                  <option>Other / Not Sure Yet</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="travellers">No. of Travellers *</label>
+                <select id="travellers" name="travellers" required>
+                  <option value="" disabled selected>Select</option>
+                  <option>1 (Solo)</option>
+                  <option>2 (Couple)</option>
+                  <option>3–5 (Group)</option>
+                  <option>6–10</option>
+                  <option>10+</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="message">Your Travel Dream (Optional)</label>
+              <textarea id="message" name="message" placeholder="Tell us about your ideal trip — preferred dates, budget, special requests..."></textarea>
+            </div>
+            <div class="form-submit">
+              <button type="submit" class="btn btn-primary">Send My Enquiry </button>
+              <a href="https://wa.me/919876543210?text=Hi%20Wandercraft%20Holidays!%20I%20am%20interested%20in%20booking%20a%20tour%20package.%20Can%20you%20please%20share%20details?" target="_blank" rel="noopener" class="btn btn-teal">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Chat on WhatsApp
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo" style="color:var(--white);">Wandercraft<span style="color:var(--orange);">.</span>
+            <small style="color:rgba(255,255,255,0.5);">Holidays · FC Road, Pune</small>
+          </a>
+          <p>Pune's most trusted tour & travel partner since 2013. We craft journeys that inspire, connect, and transform. Your adventure starts right here on FC Road.</p>
+          <div class="footer-social">
+            <a href="#" title="Instagram"></a>
+            <a href="#" title="Facebook"></a>
+            <a href="#" title="YouTube">▶</a>
+            <a href="https://wa.me/919876543210" target="_blank" title="WhatsApp"></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Destinations</h4>
+          <ul>
+            <li><a href="#contact">Goa Beach Getaway</a></li>
+            <li><a href="#contact">Ladakh Adventure</a></li>
+            <li><a href="#contact">Kerala Backwaters</a></li>
+            <li><a href="#contact">Manali & Shimla</a></li>
+            <li><a href="#contact">Andaman Islands</a></li>
+            <li><a href="#contact">Rajasthan Heritage</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>International</h4>
+          <ul>
+            <li><a href="#contact">Maldives</a></li>
+            <li><a href="#contact">Europe Grand Tour</a></li>
+            <li><a href="#contact">Thailand</a></li>
+            <li><a href="#contact">Dubai & UAE</a></li>
+            <li><a href="#contact">Bali, Indonesia</a></li>
+            <li><a href="#contact">Singapore & Malaysia</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#why-us">About Wandercraft</a></li>
+            <li><a href="#packages">All Packages</a></li>
+            <li><a href="#testimonials">Travel Stories</a></li>
+            <li><a href="#contact">Group Bookings</a></li>
+            <li><a href="#contact">Corporate Travel</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Wandercraft Holidays. All rights reserved. IATA & IATO Registered Agency.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cancellation Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <a class="wa-float" href="https://wa.me/919876543210?text=Hi%20Wandercraft%20Holidays!%20I%20found%20you%20online%20and%20would%20love%20to%20plan%20a%20trip.%20Can%20you%20help%20me%20with%20package%20details%3F" target="_blank" rel="noopener" title="Chat with us on WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span>Chat with Us</span>
+  </a>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    // Init AOS
+    AOS.init({
+      duration: 700,
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 60
+    });
+
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Hero parallax
+    const heroBg = document.getElementById('hero-bg');
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      if (scrollY < window.innerHeight) {
+        heroBg.style.transform = `scale(1.08) translateY(${scrollY * 0.25}px)`;
+      }
+    }, { passive: true });
+
+    // Mobile menu toggle
+    function toggleMenu() {
+      document.getElementById('nav-mobile').classList.toggle('open');
+    }
+
+    // Form submit handler
+    function handleSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const destination = document.getElementById('destination').value;
+      const travellers = document.getElementById('travellers').value;
+      const message = document.getElementById('message').value;
+
+      const waMsg = encodeURIComponent(
+        `Hi Wandercraft Holidays! \n\nI'd like to plan a trip.\n\n` +
+        `Name: ${name}\nPhone: ${phone}\nDestination: ${destination}\nTravellers: ${travellers}\n` +
+        (message ? `Details: ${message}` : '')
+      );
+
+      window.open(`https://wa.me/919876543210?text=${waMsg}`, '_blank');
+    }
+
+    // Smooth reveal for hero content
+    document.addEventListener('DOMContentLoaded', () => {
+      const heroContent = document.querySelector('.hero-content');
+      if (heroContent) {
+        heroContent.style.opacity = '0';
+        heroContent.style.transform = 'translateY(30px)';
+        heroContent.style.transition = 'opacity 1s ease, transform 1s ease';
+        setTimeout(() => {
+          heroContent.style.opacity = '1';
+          heroContent.style.transform = 'translateY(0)';
+        }, 200);
+      }
+
+      const heroStats = document.querySelector('.hero-stats-inner');
+      if (heroStats) {
+        heroStats.style.opacity = '0';
+        heroStats.style.transition = 'opacity 1.2s ease';
+        setTimeout(() => { heroStats.style.opacity = '1'; }, 900);
+      }
+    });
+  </script>
+</body>
+</html>
