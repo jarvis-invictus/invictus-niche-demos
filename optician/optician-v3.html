@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KidSight Children's Eyewear | Pediatric Eye Care in Baner, Pune</title>
+<meta name="description" content="KidSight – Pune's most trusted children's eyewear clinic in Baner. Fun eye tests, colourful frames & vision therapy made just for kids. Book your appointment today!">
+<meta name="keywords" content="kids eye test Pune, children spectacles Baner, pediatric optometrist Pune, kids glasses Baner, vision therapy children Pune">
+<meta property="og:title" content="KidSight Children's Eyewear – Baner, Pune">
+<meta property="og:description" content="Protecting little eyes, one frame at a time. Fun & friendly eye care for children in Baner, Pune.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://kidsight.in">
+
+<!-- AOS Animation Library -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Fredoka+One&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --blue: #2196F3;
+    --blue-dark: #1565C0;
+    --blue-light: #E3F2FD;
+    --yellow: #FFC107;
+    --yellow-dark: #F57F17;
+    --green: #4CAF50;
+    --green-dark: #2E7D32;
+    --green-light: #E8F5E9;
+    --white: #ffffff;
+    --text: #1A237E;
+    --text-light: #455A64;
+    --bg-light: #F8FBFF;
+    --radius: 20px;
+    --radius-sm: 12px;
+    --shadow: 0 8px 32px rgba(33,150,243,0.15);
+    --shadow-hover: 0 16px 48px rgba(33,150,243,0.25);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Nunito', sans-serif;
+    color: var(--text);
+    background: var(--white);
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+  h1, h2, h3, .brand { font-family: 'Fredoka One', cursive; }
+  a { text-decoration: none; color: inherit; }
+  img { max-width: 100%; display: block; }
+
+  /* ── Utility ── */
+  .container { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
+  .section-title {
+    font-family: 'Fredoka One', cursive;
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.1;
+    margin-bottom: 12px;
+  }
+  .section-sub {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto 48px;
+  }
+  .tag {
+    display: inline-block;
+    background: var(--yellow);
+    color: var(--text);
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 4px 14px;
+    border-radius: 50px;
+    margin-bottom: 12px;
+  }
+  .tag.green { background: var(--green); color: #fff; }
+  .tag.blue  { background: var(--blue);  color: #fff; }
+
+  /* ── Nav ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 3px solid var(--yellow);
+    padding: 0 20px;
+  }
+  .nav-inner {
+    max-width: 1140px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 70px;
+  }
+  .nav-logo { display: flex; align-items: center; gap: 10px; }
+  .logo-icon {
+    width: 42px; height: 42px;
+    background: var(--blue);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.4rem;
+  }
+  .brand {
+    font-size: 1.5rem;
+    color: var(--blue);
+    letter-spacing: -0.5px;
+  }
+  .brand span { color: var(--yellow-dark); }
+  .nav-links { display: flex; gap: 28px; align-items: center; }
+  .nav-links a {
+    font-weight: 700; font-size: 0.95rem;
+    color: var(--text); transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--blue); }
+  .btn-nav {
+    background: var(--green); color: #fff;
+    padding: 8px 20px; border-radius: 50px;
+    font-weight: 800; font-size: 0.9rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .btn-nav:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(76,175,80,0.4); }
+  .nav-toggle { display: none; cursor: pointer; font-size: 1.6rem; color: var(--blue); }
+  .mobile-menu {
+    display: none; flex-direction: column; gap: 16px;
+    padding: 20px; background: var(--white);
+    border-top: 2px dashed var(--blue-light);
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a { font-weight: 700; font-size: 1.05rem; color: var(--text); }
+
+  /* ── Hero ── */
+  #hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--blue-light) 0%, #fff 50%, #FFF8E1 100%);
+    display: flex; align-items: center;
+    padding: 100px 20px 60px;
+    position: relative;
+    overflow: hidden;
+  }
+  #hero::before {
+    content: '';
+    position: absolute; top: -80px; right: -80px;
+    width: 420px; height: 420px;
+    background: radial-gradient(circle, rgba(255,193,7,0.18) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: floatBubble 6s ease-in-out infinite;
+  }
+  #hero::after {
+    content: '';
+    position: absolute; bottom: -60px; left: -60px;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(76,175,80,0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: floatBubble 8s ease-in-out infinite reverse;
+  }
+  @keyframes floatBubble {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-20px) scale(1.05); }
+  }
+  .hero-inner {
+    max-width: 1140px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 60px; align-items: center;
+    position: relative; z-index: 1;
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--white); border: 2px solid var(--yellow);
+    border-radius: 50px; padding: 6px 16px;
+    font-size: 0.85rem; font-weight: 800; color: var(--yellow-dark);
+    margin-bottom: 20px;
+    animation: wiggle 2s ease-in-out infinite;
+  }
+  @keyframes wiggle {
+    0%, 100% { transform: rotate(-2deg); }
+    50% { transform: rotate(2deg); }
+  }
+  .hero-title {
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    line-height: 1.05;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+  .hero-title .accent { color: var(--blue); }
+  .hero-title .accent2 { color: var(--green); }
+  .hero-tagline {
+    font-size: 1.2rem; font-weight: 600; color: var(--text-light);
+    margin: 16px 0 28px;
+  }
+  .hero-tagline strong { color: var(--blue); }
+  .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+  .btn {
+    display: inline-block;
+    padding: 14px 30px;
+    border-radius: 50px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800; font-size: 1rem;
+    cursor: pointer; border: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .btn-primary { background: var(--blue); color: #fff; }
+  .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(33,150,243,0.4); }
+  .btn-secondary { background: var(--yellow); color: var(--text); }
+  .btn-secondary:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(255,193,7,0.4); }
+  .btn-green { background: var(--green); color: #fff; }
+  .btn-green:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(76,175,80,0.4); }
+  .hero-stats {
+    display: flex; gap: 24px; margin-top: 36px;
+    flex-wrap: wrap;
+  }
+  .stat {
+    text-align: center;
+    background: var(--white);
+    border-radius: var(--radius-sm);
+    padding: 14px 20px;
+    box-shadow: var(--shadow);
+    min-width: 100px;
+  }
+  .stat-number { font-family: 'Fredoka One', cursive; font-size: 1.8rem; color: var(--blue); }
+  .stat-label { font-size: 0.78rem; font-weight: 700; color: var(--text-light); }
+  .hero-img-wrap {
+    position: relative;
+    display: flex; justify-content: center;
+  }
+  .hero-img-wrap img {
+    width: 100%; max-width: 480px;
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(33,150,243,0.2);
+    transition: transform 0.4s;
+    object-fit: cover; height: 500px;
+  }
+  .hero-img-wrap:hover img { transform: scale(1.02) rotate(1deg); }
+  .hero-float-card {
+    position: absolute;
+    background: var(--white);
+    border-radius: var(--radius-sm);
+    padding: 12px 16px;
+    box-shadow: var(--shadow-hover);
+    font-weight: 700; font-size: 0.88rem;
+    display: flex; align-items: center; gap: 8px;
+    animation: floatCard 4s ease-in-out infinite;
+  }
+  @keyframes floatCard {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  .float-1 { bottom: 30px; left: -20px; color: var(--green-dark); }
+  .float-2 { top: 30px; right: -20px; color: var(--blue-dark); animation-delay: 2s; }
+  .float-1 .dot { width: 10px; height: 10px; background: var(--green); border-radius: 50%; }
+  .float-2 .dot { width: 10px; height: 10px; background: var(--blue); border-radius: 50%; }
+
+  /* ── Services ── */
+  #services {
+    padding: 90px 20px;
+    background: var(--bg-light);
+  }
+  #services .text-center { text-align: center; }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+  }
+  .service-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 36px 28px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative; overflow: hidden;
+    border-top: 5px solid transparent;
+  }
+  .service-card:nth-child(1) { border-top-color: var(--blue); }
+  .service-card:nth-child(2) { border-top-color: var(--yellow); }
+  .service-card:nth-child(3) { border-top-color: var(--green); }
+  .service-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-hover); }
+  .service-icon {
+    font-size: 3.5rem;
+    margin-bottom: 18px;
+    display: block;
+    animation: iconBounce 2s ease-in-out infinite;
+  }
+  @keyframes iconBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+  .service-card:nth-child(2) .service-icon { animation-delay: 0.4s; }
+  .service-card:nth-child(3) .service-icon { animation-delay: 0.8s; }
+  .service-card h3 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.5rem; margin-bottom: 12px;
+    color: var(--text);
+  }
+  .service-card p { color: var(--text-light); font-size: 0.97rem; line-height: 1.65; }
+  .service-features { list-style: none; margin-top: 18px; text-align: left; }
+  .service-features li {
+    padding: 6px 0;
+    font-size: 0.9rem; font-weight: 600;
+    color: var(--text-light);
+    display: flex; align-items: center; gap: 8px;
+  }
+  .service-features li::before { content: '✓'; font-weight: 900; color: var(--green); }
+
+  /* ── Gallery ── */
+  #gallery {
+    padding: 90px 20px;
+    background: linear-gradient(180deg, #fff 0%, var(--blue-light) 100%);
+  }
+  #gallery .text-center { text-align: center; }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 24px;
+  }
+  .frame-card {
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--white);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+  }
+  .frame-card:hover { transform: scale(1.04) rotate(-1deg); box-shadow: var(--shadow-hover); }
+  .frame-img {
+    width: 100%; height: 200px;
+    object-fit: cover;
+  }
+  .frame-info {
+    padding: 16px 18px 18px;
+  }
+  .frame-name {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.15rem; color: var(--text);
+    margin-bottom: 4px;
+  }
+  .frame-desc { font-size: 0.85rem; color: var(--text-light); }
+  .frame-badge {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 0.75rem; font-weight: 800;
+    padding: 3px 10px; border-radius: 50px;
+  }
+  .badge-blue  { background: var(--blue-light); color: var(--blue-dark); }
+  .badge-green { background: var(--green-light); color: var(--green-dark); }
+  .badge-yellow{ background: #FFF8E1; color: var(--yellow-dark); }
+  .gallery-cta { text-align: center; margin-top: 40px; }
+
+  /* ── Why ── */
+  #why {
+    padding: 90px 20px;
+    background: var(--white);
+  }
+  .why-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px; align-items: center;
+  }
+  .why-img img {
+    width: 100%; border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    object-fit: cover; height: 480px;
+    transition: transform 0.4s;
+  }
+  .why-img:hover img { transform: scale(1.02); }
+  .why-content .section-title { text-align: left; }
+  .why-content .section-sub { text-align: left; margin-left: 0; }
+  .why-list { list-style: none; display: flex; flex-direction: column; gap: 20px; margin-top: 28px; }
+  .why-item {
+    display: flex; gap: 16px; align-items: flex-start;
+    padding: 18px; border-radius: var(--radius-sm);
+    background: var(--bg-light);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .why-item:hover { transform: translateX(6px); box-shadow: var(--shadow); }
+  .why-num {
+    flex-shrink: 0;
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Fredoka One', cursive; font-size: 1.2rem; color: #fff;
+  }
+  .num-blue  { background: var(--blue); }
+  .num-yellow{ background: var(--yellow-dark); }
+  .num-green { background: var(--green); }
+  .num-orange{ background: #FF7043; }
+  .why-item h4 { font-weight: 800; font-size: 1rem; margin-bottom: 4px; }
+  .why-item p  { font-size: 0.9rem; color: var(--text-light); }
+  .facts-bar {
+    display: flex; gap: 16px; margin-top: 32px; flex-wrap: wrap;
+  }
+  .fact-chip {
+    background: var(--blue); color: #fff;
+    border-radius: 50px; padding: 8px 18px;
+    font-size: 0.85rem; font-weight: 700;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .fact-chip.yellow { background: var(--yellow); color: var(--text); }
+  .fact-chip.green  { background: var(--green); }
+
+  /* ── Testimonials ── */
+  #testimonials {
+    padding: 90px 20px;
+    background: linear-gradient(135deg, #E3F2FD 0%, #F1F8E9 100%);
+  }
+  #testimonials .text-center { text-align: center; }
+  .testi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 28px;
+  }
+  .testi-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 32px 28px;
+    box-shadow: var(--shadow);
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .testi-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
+  .testi-quote {
+    font-size: 3.5rem; line-height: 1;
+    color: var(--blue); opacity: 0.2;
+    position: absolute; top: 16px; left: 24px;
+    font-family: Georgia, serif;
+  }
+  .testi-text {
+    font-size: 0.97rem; line-height: 1.7;
+    color: var(--text); margin-top: 20px; margin-bottom: 24px;
+    font-style: italic;
+  }
+  .testi-author { display: flex; align-items: center; gap: 14px; }
+  .testi-avatar {
+    width: 52px; height: 52px; border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--yellow);
+  }
+  .testi-name { font-weight: 800; font-size: 0.97rem; color: var(--text); }
+  .testi-role { font-size: 0.82rem; color: var(--text-light); }
+  .testi-stars { color: var(--yellow); font-size: 1rem; margin-bottom: 2px; }
+  .rating-banner {
+    text-align: center; margin-top: 48px;
+    background: var(--white); border-radius: var(--radius);
+    padding: 28px; box-shadow: var(--shadow);
+  }
+  .rating-banner p { font-size: 1rem; color: var(--text-light); margin-top: 8px; }
+  .rating-big { font-family: 'Fredoka One', cursive; font-size: 3rem; color: var(--blue); }
+
+  /* ── Booking ── */
+  #booking {
+    padding: 90px 20px;
+    background: var(--white);
+  }
+  .booking-inner {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 60px; align-items: start;
+  }
+  .booking-info h2 { text-align: left; }
+  .booking-info .section-sub { text-align: left; margin-left: 0; }
+  .info-cards { display: flex; flex-direction: column; gap: 16px; margin-top: 28px; }
+  .info-card {
+    display: flex; gap: 14px; align-items: center;
+    padding: 16px 18px;
+    background: var(--bg-light);
+    border-radius: var(--radius-sm);
+    border-left: 4px solid var(--blue);
+    transition: border-color 0.2s;
+  }
+  .info-card:nth-child(2) { border-color: var(--yellow); }
+  .info-card:nth-child(3) { border-color: var(--green); }
+  .info-card:hover { transform: translateX(4px); }
+  .info-icon { font-size: 1.6rem; flex-shrink: 0; }
+  .info-card h4 { font-weight: 800; font-size: 0.9rem; margin-bottom: 2px; }
+  .info-card p  { font-size: 0.85rem; color: var(--text-light); }
+  .form-wrap {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 40px 36px;
+    box-shadow: 0 12px 48px rgba(33,150,243,0.12);
+    border-top: 6px solid var(--blue);
+  }
+  .form-title {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.6rem; color: var(--text);
+    margin-bottom: 24px;
+  }
+  .form-group { margin-bottom: 18px; }
+  .form-group label {
+    display: block;
+    font-weight: 700; font-size: 0.88rem;
+    color: var(--text); margin-bottom: 6px;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%; padding: 12px 16px;
+    border: 2px solid #E0E7EF;
+    border-radius: var(--radius-sm);
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.95rem; color: var(--text);
+    background: var(--bg-light);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(33,150,243,0.12);
+    background: #fff;
+  }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .form-submit {
+    width: 100%; padding: 16px;
+    background: var(--blue); color: #fff;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.05rem; font-weight: 800;
+    border: none; border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-top: 8px;
+  }
+  .form-submit:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(33,150,243,0.4); }
+  .form-note { font-size: 0.8rem; color: var(--text-light); text-align: center; margin-top: 12px; }
+
+  /* ── Footer ── */
+  footer {
+    background: var(--text);
+    color: #fff; padding: 60px 20px 30px;
+  }
+  .footer-inner {
+    max-width: 1140px; margin: 0 auto;
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+  }
+  .footer-brand .brand { color: var(--yellow); font-size: 1.8rem; }
+  .footer-brand .brand span { color: var(--green); }
+  .footer-brand p {
+    font-size: 0.9rem; color: #B0BEC5;
+    margin: 12px 0 20px; line-height: 1.7;
+  }
+  .social-row { display: flex; gap: 12px; }
+  .social-btn {
+    width: 38px; height: 38px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem; font-weight: 700;
+    transition: transform 0.2s;
+  }
+  .social-btn:hover { transform: translateY(-3px); }
+  .fb  { background: #1877F2; }
+  .ig  { background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+  .yt  { background: #FF0000; }
+  .footer-col h4 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.1rem; color: var(--yellow);
+    margin-bottom: 16px;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { margin-bottom: 10px; }
+  .footer-col ul li a {
+    font-size: 0.9rem; color: #B0BEC5;
+    transition: color 0.2s;
+  }
+  .footer-col ul li a:hover { color: var(--yellow); }
+  .footer-contact li {
+    display: flex; gap: 10px; align-items: flex-start;
+    font-size: 0.88rem; color: #B0BEC5;
+    margin-bottom: 12px;
+  }
+  .footer-contact li span:first-child { flex-shrink: 0; font-size: 1rem; }
+  .footer-bottom {
+    max-width: 1140px; margin: 40px auto 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 24px;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 12px;
+  }
+  .footer-bottom p { font-size: 0.82rem; color: #78909C; }
+  .footer-bottom a { color: var(--yellow); font-weight: 700; }
+  .trust-chips { display: flex; gap: 10px; flex-wrap: wrap; }
+  .trust-chip {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 50px; padding: 4px 12px;
+    font-size: 0.78rem; color: #90A4AE;
+  }
+
+  /* ── Floating CTA ── */
+  .floating-cta {
+    position: fixed; bottom: 24px; right: 24px; z-index: 999;
+    background: var(--green); color: #fff;
+    border-radius: 50px; padding: 14px 22px;
+    font-weight: 800; font-size: 0.95rem;
+    box-shadow: 0 8px 24px rgba(76,175,80,0.4);
+    display: flex; align-items: center; gap: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    animation: ctaPulse 3s ease-in-out infinite;
+  }
+  @keyframes ctaPulse {
+    0%, 100% { box-shadow: 0 8px 24px rgba(76,175,80,0.4); }
+    50% { box-shadow: 0 8px 36px rgba(76,175,80,0.65); }
+  }
+  .floating-cta:hover { transform: translateY(-3px) scale(1.03); }
+
+  /* ── Responsive ── */
+  @media (max-width: 900px) {
+    .hero-inner   { grid-template-columns: 1fr; text-align: center; }
+    .hero-img-wrap { max-width: 400px; margin: 0 auto; }
+    .hero-btns    { justify-content: center; }
+    .hero-stats   { justify-content: center; }
+    .why-inner    { grid-template-columns: 1fr; }
+    .why-content .section-title,
+    .why-content .section-sub { text-align: center; }
+    .why-content .section-sub { margin-left: auto; }
+    .facts-bar    { justify-content: center; }
+    .booking-inner{ grid-template-columns: 1fr; }
+    .booking-info h2,
+    .booking-info .section-sub { text-align: center; }
+    .booking-info .section-sub { margin-left: auto; }
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+    .float-1, .float-2 { display: none; }
+  }
+  @media (max-width: 600px) {
+    .nav-links { display: none; }
+    .nav-toggle { display: block; }
+    .hero-title  { font-size: 2.2rem; }
+    .form-row    { grid-template-columns: 1fr; }
+    .footer-inner{ grid-template-columns: 1fr; }
+    .footer-bottom{ flex-direction: column; text-align: center; }
+    .hero-img-wrap img { height: 320px; }
+    .why-img img { height: 280px; }
+  }
+</style>
+
+<!-- JSON-LD Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["LocalBusiness", "MedicalClinic", "Optician"],
+      "@id": "https://kidsight.in/#business",
+      "name": "KidSight Children's Eyewear",
+      "alternateName": "KidSight Opticians Baner",
+      "description": "Pune's trusted pediatric eye care clinic specializing in children's eye tests, colourful kids spectacle frames, and vision therapy.",
+      "url": "https://kidsight.in",
+      "telephone": "+912027456612",
+      "email": "hello@kidsight.in",
+      "logo": "https://kidsight.in/logo.png",
+      "image": "https://kidsight.in/clinic.jpg",
+      "priceRange": "₹₹",
+      "currenciesAccepted": "INR",
+      "paymentAccepted": "Cash, Credit Card, UPI",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "34, Baner Road, Near Baner Gymkhana",
+        "addressLocality": "Baner",
+        "addressRegion": "Pune",
+        "postalCode": "411045",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "18.5590",
+        "longitude": "73.7868"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+          "opens": "10:00",
+          "closes": "19:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Sunday"],
+          "opens": "10:00",
+          "closes": "14:00"
+        }
+      ],
+      "hasMap": "https://maps.google.com/?q=34+Baner+Road+Pune",
+      "sameAs": [
+        "https://www.facebook.com/kidsightpune",
+        "https://www.instagram.com/kidsightpune"
+      ],
+      "medicalSpecialty": "Optometry",
+      "availableService": [
+        { "@type": "MedicalProcedure", "name": "Pediatric Eye Examination" },
+        { "@type": "MedicalProcedure", "name": "Vision Therapy for Children" },
+        { "@type": "MedicalProcedure", "name": "Children's Spectacle Frame Fitting" }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "237",
+        "bestRating": "5"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <div class="logo-icon">👓</div>
+      <div class="brand">Kid<span>Sight</span></div>
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#gallery">Frames</a>
+      <a href="#why">Why Us</a>
+      <a href="#testimonials">Parents Say</a>
+      <a href="#booking" class="btn-nav">Book Now 🗓️</a>
+    </div>
+    <div class="nav-toggle" onclick="toggleMenu()">☰</div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#services" onclick="toggleMenu()">Services</a>
+    <a href="#gallery" onclick="toggleMenu()">Frames</a>
+    <a href="#why" onclick="toggleMenu()">Why Us</a>
+    <a href="#testimonials" onclick="toggleMenu()">Parents Say</a>
+    <a href="#booking" onclick="toggleMenu()" style="color:var(--blue)">📅 Book Appointment</a>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-text" data-aos="fade-right" data-aos-duration="700">
+      <div class="hero-badge">🏆 Pune's #1 Kids Eye Clinic · Baner</div>
+      <h1 class="hero-title">
+        Big <span class="accent">Adventures</span><br>
+        Start With <span class="accent2">Clear Vision!</span>
+      </h1>
+      <p class="hero-tagline"><strong>Protecting little eyes, one frame at a time.</strong><br>
+        Fun, friendly eye care made especially for children — and peace of mind for parents.</p>
+      <div class="hero-btns">
+        <a href="#booking" class="btn btn-primary">📅 Book Free Consultation</a>
+        <a href="#gallery" class="btn btn-secondary">👓 Explore Frames</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat" data-aos="zoom-in" data-aos-delay="200">
+          <div class="stat-number">4800+</div>
+          <div class="stat-label">Happy Kids</div>
+        </div>
+        <div class="stat" data-aos="zoom-in" data-aos-delay="350">
+          <div class="stat-number">12+</div>
+          <div class="stat-label">Years Care</div>
+        </div>
+        <div class="stat" data-aos="zoom-in" data-aos-delay="500">
+          <div class="stat-number">4.9★</div>
+          <div class="stat-label">Google Rating</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-img-wrap" data-aos="fade-left" data-aos-duration="700">
+      <img
+        src="https://images.unsplash.com/photo-1504439268584-2c709274f85f?w=800&auto=format&fit=crop&q=75"
+        alt="Happy child wearing colourful glasses"
+        loading="eager"
+        width="480" height="500">
+      <div class="hero-float-card float-1">
+        <div class="dot"></div> Eye Test in 30 mins ✅
+      </div>
+      <div class="hero-float-card float-2">
+        <div class="dot"></div> 200+ Frame Styles 🎨
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SERVICES ═══ -->
+<section id="services">
+  <div class="container">
+    <div class="text-center" data-aos="fade-up">
+      <span class="tag">What We Do</span>
+      <h2 class="section-title">Everything Your Child's<br>Eyes Need</h2>
+      <p class="section-sub">From a child's very first eye test to fashion-forward frames they'll actually want to wear — we've got it all under one happy roof.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card" data-aos="bounce" data-aos-delay="0" data-aos-duration="600">
+        <span class="service-icon">🔬</span>
+        <h3>Pediatric Eye Tests</h3>
+        <p>Our child-friendly optometrists use the latest equipment and gentle techniques to make eye exams feel like a game — not a chore.</p>
+        <ul class="service-features">
+          <li>Complete vision screening</li>
+          <li>Squint & lazy eye check</li>
+          <li>Colour vision assessment</li>
+          <li>Suitable from age 2+</li>
+        </ul>
+      </div>
+      <div class="service-card" data-aos="bounce" data-aos-delay="150" data-aos-duration="600">
+        <span class="service-icon">🕶️</span>
+        <h3>Kids Spectacle Frames</h3>
+        <p>Over 200 colourful, durable, and fashionable frames designed specifically for active children. Flexible, lightweight, and practically unbreakable!</p>
+        <ul class="service-features">
+          <li>Brands: Tomato, Dilli Dilli, Kids ID</li>
+          <li>Flexible TR-90 frames</li>
+          <li>Anti-scratch lenses</li>
+          <li>Blue-light blocking option</li>
+        </ul>
+      </div>
+      <div class="service-card" data-aos="bounce" data-aos-delay="300" data-aos-duration="600">
+        <span class="service-icon">🧠</span>
+        <h3>Vision Therapy</h3>
+        <p>Structured, fun exercises that train the brain and eyes to work together — helping kids with reading difficulties, eye strain, and depth perception.</p>
+        <ul class="service-features">
+          <li>Lazy eye (amblyopia) treatment</li>
+          <li>Convergence therapy</li>
+          <li>Tracking & focus exercises</li>
+          <li>Personalised programs</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ GALLERY ═══ -->
+<section id="gallery">
+  <div class="container">
+    <div class="text-center" data-aos="fade-up">
+      <span class="tag green">Frame Gallery</span>
+      <h2 class="section-title">Frames As Fun<br>As They Are! 🎨</h2>
+      <p class="section-sub">Let your child pick a frame they love — because kids who like their glasses actually wear them. Browse our colourful collection!</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="frame-card" data-aos="zoom-in" data-aos-delay="0">
+        <img class="frame-img"
+          src="https://images.unsplash.com/photo-1591076482161-42ce6da69f67?w=480&auto=format&fit=crop&q=70"
+          alt="Colourful round kids glasses" loading="lazy" width="240" height="200">
+        <div class="frame-info">
+          <div class="frame-name">Rainbow Rounds 🌈</div>
+          <div class="frame-desc">Flexible, featherlight — perfect for ages 4–8.</div>
+          <span class="frame-badge badge-blue">Bestseller</span>
+        </div>
+      </div>
+      <div class="frame-card" data-aos="zoom-in" data-aos-delay="100">
+        <img class="frame-img"
+          src="https://images.unsplash.com/photo-1508296695146-257a814070b4?w=480&auto=format&fit=crop&q=70"
+          alt="Sporty kids eyeglasses" loading="lazy" width="240" height="200">
+        <div class="frame-info">
+          <div class="frame-name">Sport Champs ⚽</div>
+          <div class="frame-desc">Wraparound frame for active kids who never slow down.</div>
+          <span class="frame-badge badge-green">New Arrival</span>
+        </div>
+      </div>
+      <div class="frame-card" data-aos="zoom-in" data-aos-delay="200">
+        <img class="frame-img"
+          src="https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=480&auto=format&fit=crop&q=70"
+          alt="Pastel kids spectacle frames" loading="lazy" width="240" height="200">
+        <div class="frame-info">
+          <div class="frame-name">Pastel Dreams 🌸</div>
+          <div class="frame-desc">Soft tones for the style-conscious little one.</div>
+          <span class="frame-badge badge-yellow">Trending</span>
+        </div>
+      </div>
+      <div class="frame-card" data-aos="zoom-in" data-aos-delay="300">
+        <img class="frame-img"
+          src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=480&auto=format&fit=crop&q=70"
+          alt="Superhero themed kids glasses" loading="lazy" width="240" height="200">
+        <div class="frame-info">
+          <div class="frame-name">Hero Squad 🦸</div>
+          <div class="frame-desc">Bold colours and strong build — for your little superhero.</div>
+          <span class="frame-badge badge-blue">Kids' Pick</span>
+        </div>
+      </div>
+    </div>
+    <div class="gallery-cta" data-aos="fade-up" data-aos-delay="200">
+      <a href="#booking" class="btn btn-primary">See All 200+ Frames in Store →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WHY ═══ -->
+<section id="why">
+  <div class="container">
+    <div class="why-inner">
+      <div class="why-img" data-aos="fade-right" data-aos-duration="700">
+        <img
+          src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=700&auto=format&fit=crop&q=70"
+          alt="Friendly optometrist examining a child's eyes" loading="lazy" width="560" height="480">
+      </div>
+      <div class="why-content" data-aos="fade-left" data-aos-duration="700">
+        <span class="tag blue">Did You Know?</span>
+        <h2 class="section-title">Why Children Need<br>Regular Eye Tests</h2>
+        <p class="section-sub">80% of what a child learns at school comes through their eyes. Don't let blurry vision become a hidden barrier to their growth.</p>
+        <ul class="why-list">
+          <li class="why-item" data-aos="fade-left" data-aos-delay="100">
+            <div class="why-num num-blue">1</div>
+            <div>
+              <h4>Vision Problems Are Often Silent</h4>
+              <p>Most kids can't tell you their vision is blurry — it's the only world they know. A routine test catches what they can't communicate.</p>
+            </div>
+          </li>
+          <li class="why-item" data-aos="fade-left" data-aos-delay="200">
+            <div class="why-num num-yellow">2</div>
+            <div>
+              <h4>School Performance Takes a Hit</h4>
+              <p>Difficulty reading the board, headaches after homework — these are often vision signs, not attention issues.</p>
+            </div>
+          </li>
+          <li class="why-item" data-aos="fade-left" data-aos-delay="300">
+            <div class="why-num num-green">3</div>
+            <div>
+              <h4>Lazy Eye Is Treatable — Especially Early</h4>
+              <p>Amblyopia responds much better to treatment before age 7. The sooner we catch it, the better the outcome.</p>
+            </div>
+          </li>
+          <li class="why-item" data-aos="fade-left" data-aos-delay="400">
+            <div class="why-num num-orange">4</div>
+            <div>
+              <h4>Screen Time Is Rising Fast</h4>
+              <p>Modern kids average 5+ hours of screens daily. Blue-light protection and myopia monitoring have never been more important.</p>
+            </div>
+          </li>
+        </ul>
+        <div class="facts-bar" data-aos="fade-up" data-aos-delay="300">
+          <div class="fact-chip">📊 1 in 4 school kids has a vision problem</div>
+          <div class="fact-chip yellow">🧒 Recommended from age 3</div>
+          <div class="fact-chip green">✅ Tests from ₹0 (free first check)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TESTIMONIALS ═══ -->
+<section id="testimonials">
+  <div class="container">
+    <div class="text-center" data-aos="fade-up">
+      <span class="tag">Happy Parents</span>
+      <h2 class="section-title">Real Stories from<br>Pune Parents 💛</h2>
+      <p class="section-sub">Don't take our word for it — here's what mums and dads across Baner and Pune say about bringing their children to KidSight.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="testi-quote">"</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">My 5-year-old used to dread doctors of any kind. The KidSight team turned his eye test into a cartoon adventure — he's now asking when he can go back! His new blue frames are his prized possession.</p>
+        <div class="testi-author">
+          <img class="testi-avatar"
+            src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=100&auto=format&fit=crop&q=70"
+            alt="Priya Joshi" loading="lazy" width="52" height="52">
+          <div>
+            <div class="testi-name">Priya Joshi</div>
+            <div class="testi-role">Mom of Aryan, 5 · Baner, Pune</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card" data-aos="fade-up" data-aos-delay="150">
+        <div class="testi-quote">"</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">We noticed our daughter squinting at the TV and brought her here. Turns out she had -1.75 in both eyes. The doctor explained everything clearly, even involved our daughter in choosing her frames. Excellent service!</p>
+        <div class="testi-author">
+          <img class="testi-avatar"
+            src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&auto=format&fit=crop&q=70"
+            alt="Rahul Deshmukh" loading="lazy" width="52" height="52">
+          <div>
+            <div class="testi-name">Rahul Deshmukh</div>
+            <div class="testi-role">Dad of Siya, 8 · Aundh, Pune</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="testi-quote">"</div>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">After two months of vision therapy at KidSight, my son's reading improved dramatically. His teacher even commented on it. I'm so grateful we found this clinic. The staff is warm, patient, and genuinely caring.</p>
+        <div class="testi-author">
+          <img class="testi-avatar"
+            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=70"
+            alt="Sneha Kulkarni" loading="lazy" width="52" height="52">
+          <div>
+            <div class="testi-name">Sneha Kulkarni</div>
+            <div class="testi-role">Mom of Vivaan, 9 · Pashan, Pune</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="rating-banner" data-aos="zoom-in" data-aos-delay="200">
+      <div class="rating-big">4.9 / 5 ★</div>
+      <p>Based on <strong>237 verified Google reviews</strong> from parents across Pune &nbsp;·&nbsp; 🏆 "Best Kids Optician" – Baner Local Awards 2024</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ BOOKING ═══ -->
+<section id="booking">
+  <div class="container">
+    <div class="booking-inner">
+      <div class="booking-info" data-aos="fade-right" data-aos-duration="700">
+        <span class="tag">Free Consultation</span>
+        <h2 class="section-title">Book Your Child's<br>Eye Test Today</h2>
+        <p class="section-sub">First visit is on us — free comprehensive eye screening for kids under 10. No referral needed. Just bring your little one and let us take care of the rest.</p>
+        <div class="info-cards">
+          <div class="info-card" data-aos="fade-right" data-aos-delay="100">
+            <div class="info-icon">📍</div>
+            <div>
+              <h4>Find Us</h4>
+              <p>34, Baner Road, Near Baner Gymkhana, Pune 411045</p>
+            </div>
+          </div>
+          <div class="info-card" data-aos="fade-right" data-aos-delay="200">
+            <div class="info-icon">📞</div>
+            <div>
+              <h4>Call / WhatsApp</h4>
+              <p><a href="tel:02027456612" style="color:var(--blue); font-weight:800;">020-2745-6612</a></p>
+            </div>
+          </div>
+          <div class="info-card" data-aos="fade-right" data-aos-delay="300">
+            <div class="info-icon">🕐</div>
+            <div>
+              <h4>Clinic Hours</h4>
+              <p>Mon – Sat: 10:00 AM – 7:00 PM<br>Sunday: 10:00 AM – 2:00 PM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-wrap" data-aos="fade-left" data-aos-duration="700">
+        <div class="form-title">✏️ Quick Appointment Form</div>
+        <form id="appointmentForm" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="parentName">Parent's Name *</label>
+              <input type="text" id="parentName" placeholder="e.g. Priya Sharma" required>
+            </div>
+            <div class="form-group">
+              <label for="childName">Child's Name *</label>
+              <input type="text" id="childName" placeholder="e.g. Arjun" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="childAge">Child's Age *</label>
+              <select id="childAge" required>
+                <option value="" disabled selected>Select age</option>
+                <option>2–3 years</option>
+                <option>4–6 years</option>
+                <option>7–9 years</option>
+                <option>10–12 years</option>
+                <option>13–16 years</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" placeholder="e.g. 98765 43210" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="service">What do you need? *</label>
+            <select id="service" required>
+              <option value="" disabled selected>Choose a service</option>
+              <option>Eye Test / Screening</option>
+              <option>New Spectacle Frames</option>
+              <option>Vision Therapy</option>
+              <option>Follow-up Visit</option>
+              <option>Not sure — needs assessment</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="prefDate">Preferred Date</label>
+              <input type="date" id="prefDate">
+            </div>
+            <div class="form-group">
+              <label for="prefTime">Preferred Time</label>
+              <select id="prefTime">
+                <option value="" disabled selected>Pick a slot</option>
+                <option>10:00 AM – 11:00 AM</option>
+                <option>11:00 AM – 12:00 PM</option>
+                <option>12:00 PM – 1:00 PM</option>
+                <option>2:00 PM – 3:00 PM</option>
+                <option>3:00 PM – 4:00 PM</option>
+                <option>4:00 PM – 5:00 PM</option>
+                <option>5:00 PM – 6:00 PM</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="notes">Any concerns or notes? (Optional)</label>
+            <textarea id="notes" rows="3" placeholder="e.g. My child squints, headaches after school, first-time visit…"></textarea>
+          </div>
+          <button type="submit" class="form-submit">🗓️ Confirm My Appointment →</button>
+          <p class="form-note">🔒 Your info is private. We'll confirm via WhatsApp/call within 2 hours.</p>
+        </form>
+        <div id="successMsg" style="display:none; text-align:center; padding:30px 0;">
+          <div style="font-size:3rem;">🎉</div>
+          <h3 style="font-family:'Fredoka One',cursive; font-size:1.5rem; color:var(--green); margin:12px 0 8px;">
+            Yay! Appointment Requested!
+          </h3>
+          <p style="color:var(--text-light); font-size:0.95rem;">
+            We'll WhatsApp you within 2 hours to confirm your slot.<br>
+            <strong>See you at KidSight!</strong> 👓
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="brand">Kid<span>Sight</span></div>
+      <p>Pune's most loved children's eyewear clinic. Making eye care fun, accessible, and reassuring for families across Baner, Aundh, Pashan and beyond.</p>
+      <div class="social-row">
+        <a href="#" class="social-btn fb" aria-label="Facebook">f</a>
+        <a href="#" class="social-btn ig" aria-label="Instagram">📸</a>
+        <a href="#" class="social-btn yt" aria-label="YouTube">▶</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Pediatric Eye Tests</a></li>
+        <li><a href="#services">Kids Spectacle Frames</a></li>
+        <li><a href="#services">Vision Therapy</a></li>
+        <li><a href="#services">Myopia Management</a></li>
+        <li><a href="#services">Screen Eye Protection</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#why">Why Eye Tests Matter</a></li>
+        <li><a href="#gallery">Frame Gallery</a></li>
+        <li><a href="#testimonials">Parent Reviews</a></li>
+        <li><a href="#booking">Book Appointment</a></li>
+        <li><a href="mailto:hello@kidsight.in">hello@kidsight.in</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Visit Us</h4>
+      <ul class="footer-contact">
+        <li>
+          <span>📍</span>
+          <span>34, Baner Road, Near Baner Gymkhana, Pune 411045</span>
+        </li>
+        <li>
+          <span>📞</span>
+          <span><a href="tel:02027456612" style="color:#90A4AE;">020-2745-6612</a></span>
+        </li>
+        <li>
+          <span>✉️</span>
+          <span><a href="mailto:hello@kidsight.in" style="color:#90A4AE;">hello@kidsight.in</a></span>
+        </li>
+        <li>
+          <span>🕐</span>
+          <span>Mon–Sat: 10AM–7PM<br>Sun: 10AM–2PM</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 KidSight Children's Eyewear. All rights reserved. | <a href="#">Privacy Policy</a></p>
+    <div class="trust-chips">
+      <span class="trust-chip">✅ ISO Certified</span>
+      <span class="trust-chip">🏥 NABL Lab</span>
+      <span class="trust-chip">👨‍⚕️ Reg. Optometrists</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating CTA -->
+<a href="#booking" class="floating-cta">📅 Book Free Eye Test</a>
+
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 600,
+    once: true,
+    offset: 80,
+    easing: 'ease-out-back'
+  });
+
+  function toggleMenu() {
+    var m = document.getElementById('mobileMenu');
+    m.classList.toggle('open');
+  }
+
+  // Sticky nav shadow
+  window.addEventListener('scroll', function() {
+    var nav = document.getElementById('navbar');
+    if (window.scrollY > 30) {
+      nav.style.boxShadow = '0 4px 20px rgba(33,150,243,0.15)';
+    } else {
+      nav.style.boxShadow = 'none';
+    }
+  });
+
+  // Form submit handler
+  function handleSubmit(e) {
+    e.preventDefault();
+    document.getElementById('appointmentForm').style.display = 'none';
+    document.getElementById('successMsg').style.display = 'block';
+  }
+
+  // Set min date for date picker
+  var today = new Date().toISOString().split('T')[0];
+  var dateInput = document.getElementById('prefDate');
+  if (dateInput) dateInput.setAttribute('min', today);
+</script>
+</body>
+</html>
