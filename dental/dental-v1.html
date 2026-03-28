@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SmileCraft Family Dental — Gentle Care for Every Smile | Aundh, Pune</title>
+<meta name="description" content="SmileCraft Family Dental in Aundh, Pune offers gentle dental care for the whole family. 8,500+ happy patients since 2016. Book your appointment today!">
+<meta property="og:title" content="SmileCraft Family Dental — Aundh, Pune">
+<meta property="og:description" content="Your Family's Smile, Our Passion — Since 2016. Gentle dental care for all ages.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1200&h=630&fit=crop">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://smilecraftdental.in">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Dentist","name":"SmileCraft Family Dental","image":"https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800","address":{"@type":"PostalAddress","streetAddress":"Shop 12, Aundh Main Road","addressLocality":"Pune","addressRegion":"Maharashtra","postalCode":"411007","addressCountry":"IN"},"telephone":"+91-98220-12345","url":"https://smilecraftdental.in","openingHours":"Mo-Sa 09:00-20:00","priceRange":"₹500-₹80,000","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"850"},"foundingDate":"2016","description":"Your Family's Smile, Our Passion — Since 2016","areaServed":"Pune","medicalSpecialty":"Dentistry"}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--blue:#4A90D9;--mint:#6EC8A0;--dark:#1a2332;--gray:#64748b;--light:#f8fafc;--radius:12px}
+body{font-family:'Inter',sans-serif;color:var(--dark);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'DM Serif Display',serif;font-weight:400}
+.container{max-width:1140px;margin:0 auto;padding:0 20px}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.btn{display:inline-block;padding:12px 28px;border-radius:50px;font-weight:600;font-size:.95rem;transition:.3s;cursor:pointer;border:none}
+.btn-primary{background:var(--blue);color:#fff}.btn-primary:hover{background:#3a7bc8;transform:translateY(-2px)}
+.btn-mint{background:var(--mint);color:#fff}.btn-mint:hover{background:#5bb88e}
+.btn-outline{border:2px solid var(--blue);color:var(--blue);background:0 0}.btn-outline:hover{background:var(--blue);color:#fff}
+
+/* Nav */
+nav{position:fixed;top:0;width:100%;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);z-index:1000;box-shadow:0 1px 10px rgba(0,0,0,.06);transition:.3s}
+nav .container{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--blue)}
+.logo span{color:var(--mint)}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{font-size:.9rem;font-weight:500;color:var(--dark);transition:.2s;position:relative}
+.nav-links a:hover{color:var(--blue)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:0 0;border:0;padding:5px}
+.hamburger span{width:24px;height:2.5px;background:var(--dark);border-radius:2px;transition:.3s}
+.hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+
+/* Hero */
+.hero{padding:120px 0 60px;background:linear-gradient(135deg,#eef4fb 0%,#e8f7f0 100%);position:relative;overflow:hidden}
+.hero .container{display:flex;align-items:center;gap:40px}
+.hero-text{flex:1}
+.hero-text p.tagline{color:var(--mint);font-weight:600;font-size:.9rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.hero-text h1{font-size:2.8rem;line-height:1.15;margin-bottom:16px;color:var(--dark)}
+.hero-text h1 span{color:var(--blue)}
+.hero-text p.desc{color:var(--gray);font-size:1.05rem;margin-bottom:24px;max-width:480px}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:32px}
+.hero-stats{display:flex;gap:32px}
+.hero-stats .stat{text-align:center}
+.hero-stats .stat h3{font-size:1.6rem;color:var(--blue)}
+.hero-stats .stat p{font-size:.8rem;color:var(--gray)}
+.hero-img{flex:1;position:relative}
+.hero-img img{border-radius:20px;box-shadow:0 20px 60px rgba(74,144,217,.15);width:100%;height:400px;object-fit:cover}
+.hero-badge{position:absolute;bottom:-10px;left:-10px;background:#fff;padding:14px 20px;border-radius:var(--radius);box-shadow:0 8px 30px rgba(0,0,0,.1);display:flex;align-items:center;gap:10px}
+.hero-badge .stars{color:#f59e0b;font-size:1.1rem}
+.hero-badge p{font-size:.85rem;font-weight:600}
+
+/* Section common */
+section{padding:70px 0}
+.section-header{text-align:center;margin-bottom:48px}
+.section-header h2{font-size:2.2rem;margin-bottom:10px}
+.section-header p{color:var(--gray);max-width:520px;margin:0 auto}
+.section-header .line{width:50px;height:3px;background:var(--mint);margin:12px auto 0;border-radius:2px}
+
+/* Services */
+.services{background:var(--light)}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.service-card{background:#fff;border-radius:var(--radius);padding:28px;text-align:center;box-shadow:0 4px 20px rgba(0,0,0,.04);transition:.3s;border:1px solid #eef2f7}
+.service-card:hover{transform:translateY(-6px);box-shadow:0 12px 35px rgba(74,144,217,.12)}
+.service-icon{width:56px;height:56px;background:linear-gradient(135deg,var(--blue),var(--mint));border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.5rem}
+.service-card h4{font-size:1.15rem;margin-bottom:6px}
+.service-card p{font-size:.85rem;color:var(--gray);margin-bottom:10px}
+.service-price{font-weight:700;color:var(--blue);font-size:1rem}
+
+/* Doctors */
+.doctors-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.doctor-card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.05);transition:.3s;text-align:center}
+.doctor-card:hover{transform:translateY(-5px)}
+.doctor-card img{width:100%;height:260px;object-fit:cover}
+.doctor-info{padding:20px}
+.doctor-info h4{font-size:1.15rem;margin-bottom:4px}
+.doctor-info .spec{color:var(--blue);font-size:.85rem;font-weight:600;margin-bottom:6px}
+.doctor-info p{color:var(--gray);font-size:.85rem}
+
+/* Before/After */
+.ba-section{background:var(--light)}
+.ba-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.ba-card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.04)}
+.ba-images{display:grid;grid-template-columns:1fr 1fr;position:relative}
+.ba-images img{height:180px;object-fit:cover;width:100%}
+.ba-label{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:var(--blue);color:#fff;padding:4px 10px;border-radius:20px;font-size:.7rem;font-weight:700;z-index:2}
+.ba-card .ba-text{padding:16px}
+.ba-card .ba-text h4{font-size:1rem;margin-bottom:4px}
+.ba-card .ba-text p{font-size:.82rem;color:var(--gray)}
+
+/* Testimonials */
+.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.test-card{background:#fff;border-radius:var(--radius);padding:28px;box-shadow:0 4px 20px rgba(0,0,0,.04);border-left:4px solid var(--mint)}
+.test-card .stars{color:#f59e0b;margin-bottom:10px;font-size:1.1rem}
+.test-card p{color:var(--gray);font-size:.9rem;margin-bottom:14px;font-style:italic}
+.test-card .author{font-weight:600;font-size:.9rem}
+.test-card .author span{color:var(--gray);font-weight:400;font-size:.8rem}
+
+/* Contact */
+.contact{background:linear-gradient(135deg,#eef4fb,#e8f7f0)}
+.contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.contact-info h3{font-size:1.5rem;margin-bottom:16px}
+.contact-item{display:flex;gap:12px;margin-bottom:16px;align-items:flex-start}
+.contact-item .ci-icon{width:40px;height:40px;background:var(--blue);color:#fff;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.1rem}
+.contact-item p{font-size:.9rem;color:var(--gray)}
+.contact-item p strong{color:var(--dark)}
+.contact-form{background:#fff;padding:32px;border-radius:var(--radius);box-shadow:0 8px 30px rgba(0,0,0,.06)}
+.contact-form h3{font-size:1.3rem;margin-bottom:20px}
+.form-group{margin-bottom:14px}
+.form-group input,.form-group textarea,.form-group select{width:100%;padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:8px;font-family:'Inter',sans-serif;font-size:.9rem;transition:.2s;background:#fff}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{outline:0;border-color:var(--blue);box-shadow:0 0 0 3px rgba(74,144,217,.1)}
+.form-group textarea{height:80px;resize:vertical}
+.contact-form .btn{width:100%}
+.map-link{display:inline-flex;align-items:center;gap:6px;margin-top:16px;color:var(--blue);font-weight:600;font-size:.9rem}
+.map-link:hover{text-decoration:underline}
+
+/* Footer */
+footer{background:var(--dark);color:#fff;padding:40px 0 20px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px;margin-bottom:30px}
+.footer-grid h4{margin-bottom:12px;font-size:1.1rem}
+.footer-grid p,.footer-grid a{color:#94a3b8;font-size:.85rem}
+.footer-grid a:hover{color:var(--mint)}
+.footer-grid ul{list-style:none}
+.footer-grid ul li{margin-bottom:6px}
+.footer-bottom{border-top:1px solid #2a3a4e;padding-top:18px;text-align:center;color:#64748b;font-size:.8rem}
+
+/* WhatsApp FAB */
+.whatsapp-fab{position:fixed;bottom:24px;right:24px;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);z-index:999;transition:.3s;cursor:pointer}
+.whatsapp-fab:hover{transform:scale(1.1)}
+.whatsapp-fab svg{width:28px;height:28px;fill:#fff}
+
+/* Animations */
+.fade-up{opacity:0;transform:translateY(30px);transition:opacity .6s,transform .6s}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+
+/* Mobile */
+@media(max-width:768px){
+.hamburger{display:flex}
+.nav-links{position:fixed;top:70px;left:0;right:0;background:#fff;flex-direction:column;padding:20px;gap:16px;box-shadow:0 10px 30px rgba(0,0,0,.1);transform:translateY(-120%);transition:.3s;z-index:999}
+.nav-links.open{transform:translateY(0)}
+.hero .container{flex-direction:column;text-align:center}
+.hero-text h1{font-size:2rem}
+.hero-text p.desc{margin:0 auto 24px}
+.hero-btns{justify-content:center}
+.hero-stats{justify-content:center}
+.hero-img img{height:280px}
+.hero-badge{position:static;justify-content:center;margin-top:16px}
+.services-grid,.doctors-grid,.ba-grid,.testimonials-grid{grid-template-columns:1fr}
+.contact-wrap{grid-template-columns:1fr}
+.footer-grid{grid-template-columns:1fr}
+.section-header h2{font-size:1.8rem}
+}
+@media(min-width:769px) and (max-width:1024px){
+.services-grid,.doctors-grid,.ba-grid,.testimonials-grid{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav>
+<div class="container">
+<a href="#" class="logo">Smile<span>Craft</span></a>
+<ul class="nav-links" id="navLinks">
+<li><a href="#services">Services</a></li>
+<li><a href="#doctors">Doctors</a></li>
+<li><a href="#results">Results</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a href="#contact" class="btn btn-primary" style="padding:8px 20px;font-size:.85rem">Book Now</a></li>
+</ul>
+<button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+<div class="container">
+<div class="hero-text fade-up">
+<p class="tagline">Your Family's Smile, Our Passion — Since 2016</p>
+<h1>Gentle Care for<br>Every <span>Smile</span></h1>
+<p class="desc">Modern, pain-free dentistry for adults and children in the heart of Aundh, Pune. Walk in or book online — your comfort comes first.</p>
+<div class="hero-btns">
+<a href="#contact" class="btn btn-primary">Book Appointment</a>
+<a href="tel:+919822012345" class="btn btn-outline"> Call Us</a>
+</div>
+<div class="hero-stats">
+<div class="stat"><h3>8,500+</h3><p>Happy Patients</p></div>
+<div class="stat"><h3>8+</h3><p>Years of Trust</p></div>
+<div class="stat"><h3>4.8 </h3><p>Google Rating</p></div>
+</div>
+</div>
+<div class="hero-img fade-up">
+<img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&h=400&fit=crop" alt="SmileCraft Family Dental Clinic" loading="eager">
+<div class="hero-badge">
+<div class="stars"></div>
+<p>Rated 4.8 on Google</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Services -->
+<section class="services" id="services">
+<div class="container">
+<div class="section-header fade-up">
+<h2>Our Services</h2>
+<p>Comprehensive dental care for the whole family — from routine checkups to advanced procedures</p>
+<div class="line"></div>
+</div>
+<div class="services-grid">
+<div class="service-card fade-up">
+<div class="service-icon"></div>
+<h4>General Checkup</h4>
+<p>Comprehensive oral exam, X-rays & personalized care plan</p>
+<div class="service-price">₹500</div>
+</div>
+<div class="service-card fade-up">
+<div class="service-icon"></div>
+<h4>Teeth Cleaning</h4>
+<p>Professional scaling & polishing for a brighter, healthier smile</p>
+<div class="service-price">₹1,500</div>
+</div>
+<div class="service-card fade-up">
+<div class="service-icon"></div>
+<h4>Root Canal</h4>
+<p>Painless root canal therapy with advanced rotary instruments</p>
+<div class="service-price">₹5,000 – ₹8,000</div>
+</div>
+<div class="service-card fade-up">
+<div class="service-icon"></div>
+<h4>Braces & Aligners</h4>
+<p>Metal braces, ceramic & clear aligners for perfect alignment</p>
+<div class="service-price">₹35,000 – ₹80,000</div>
+</div>
+<div class="service-card fade-up">
+<div class="service-icon"></div>
+<h4>Dental Implants</h4>
+<p>Permanent titanium implants — the gold standard for missing teeth</p>
+<div class="service-price">₹25,000 – ₹45,000</div>
+</div>
+<div class="service-card fade-up">
+<div class="service-icon"></div>
+<h4>Kids Dentistry</h4>
+<p>Fun, gentle dental care designed specially for little smiles</p>
+<div class="service-price">₹800</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Doctors -->
+<section id="doctors">
+<div class="container">
+<div class="section-header fade-up">
+<h2>Meet Our Doctors</h2>
+<p>Experienced specialists committed to gentle, compassionate dental care</p>
+<div class="line"></div>
+</div>
+<div class="doctors-grid">
+<div class="doctor-card fade-up">
+<img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=300&fit=crop" alt="Dr. Sneha Kulkarni" loading="lazy">
+<div class="doctor-info">
+<h4>Dr. Sneha Kulkarni</h4>
+<p class="spec">BDS, MDS — Prosthodontics</p>
+<p>Lead dentist with 10+ years of experience in crowns, bridges & full-mouth rehabilitation.</p>
+</div>
+</div>
+<div class="doctor-card fade-up">
+<img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=300&fit=crop" alt="Dr. Arjun Deshpande" loading="lazy">
+<div class="doctor-info">
+<h4>Dr. Arjun Deshpande</h4>
+<p class="spec">BDS, MDS — Orthodontics</p>
+<p>Specialist in braces & aligners. 2,000+ successful smile transformations and counting.</p>
+</div>
+</div>
+<div class="doctor-card fade-up">
+<img src="https://images.unsplash.com/photo-1594824476967-48c8b964df17?w=400&h=300&fit=crop" alt="Dr. Priya Nair" loading="lazy">
+<div class="doctor-info">
+<h4>Dr. Priya Nair</h4>
+<p class="spec">BDS, MDS — Pedodontics</p>
+<p>Children's dental expert who makes every visit fun, stress-free & comfortable for kids.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Before/After -->
+<section class="ba-section" id="results">
+<div class="container">
+<div class="section-header fade-up">
+<h2>Smile Transformations</h2>
+<p>Real results from real patients — see the SmileCraft difference</p>
+<div class="line"></div>
+</div>
+<div class="ba-grid">
+<div class="ba-card fade-up">
+<div class="ba-images">
+<img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=300&h=200&fit=crop" alt="Before teeth whitening">
+<img src="https://images.unsplash.com/photo-1581585710975-94d571090011?w=300&h=200&fit=crop" alt="After teeth whitening">
+<span class="ba-label">B → A</span>
+</div>
+<div class="ba-text">
+<h4>Complete Smile Makeover</h4>
+<p>Veneers + whitening gave Rahul a brand-new confident smile in just 3 visits.</p>
+</div>
+</div>
+<div class="ba-card fade-up">
+<div class="ba-images">
+<img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=300&h=200&fit=crop" alt="Before braces">
+<img src="https://images.unsplash.com/photo-1570612861542-284f4c12e75f?w=300&h=200&fit=crop" alt="After braces">
+<span class="ba-label">B → A</span>
+</div>
+<div class="ba-text">
+<h4>Orthodontic Correction</h4>
+<p>18 months of clear aligners gave Priya perfectly aligned teeth with zero discomfort.</p>
+</div>
+</div>
+<div class="ba-card fade-up">
+<div class="ba-images">
+<img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=300&h=200&fit=crop" alt="Before implant">
+<img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?w=300&h=200&fit=crop" alt="After implant">
+<span class="ba-label">B → A</span>
+</div>
+<div class="ba-text">
+<h4>Dental Implant Restoration</h4>
+<p>Single implant replaced Amit's missing molar — looks and feels completely natural.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Testimonials -->
+<section id="reviews">
+<div class="container">
+<div class="section-header fade-up">
+<h2>Patient Reviews</h2>
+<p>Hear what our patients have to say about their experience</p>
+<div class="line"></div>
+</div>
+<div class="testimonials-grid">
+<div class="test-card fade-up">
+<div class="stars"></div>
+<p>"My 5-year-old was terrified of dentists. Dr. Priya was so gentle and playful — now my daughter actually looks forward to her visits!"</p>
+<div class="author">Meera Joshi<br><span>Mother of 2 • Patient since 2021</span></div>
+</div>
+<div class="test-card fade-up">
+<div class="stars"></div>
+<p>"Got my braces done by Dr. Arjun. The results are amazing and the whole process was surprisingly comfortable. Highly recommend!"</p>
+<div class="author">Aditya Patil<br><span>Software Engineer • Patient since 2022</span></div>
+</div>
+<div class="test-card fade-up">
+<div class="stars"></div>
+<p>"Dr. Sneha did my root canal and I barely felt a thing. The clinic is spotless and the staff is incredibly welcoming. Five stars all the way."</p>
+<div class="author">Sunita Rao<br><span>School Teacher • Patient since 2019</span></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+<div class="container">
+<div class="section-header fade-up">
+<h2>Book Your Visit</h2>
+<p>Walk in or schedule ahead — we're here 6 days a week</p>
+<div class="line"></div>
+</div>
+<div class="contact-wrap">
+<div class="contact-info fade-up">
+<h3>Get in Touch</h3>
+<div class="contact-item">
+<div class="ci-icon"></div>
+<p><strong>SmileCraft Family Dental</strong><br>Shop 12, Aundh Main Road<br>Aundh, Pune 411007</p>
+</div>
+<div class="contact-item">
+<div class="ci-icon"></div>
+<p><strong>Phone</strong><br><a href="tel:+919822012345">+91 98220-12345</a></p>
+</div>
+<div class="contact-item">
+<div class="ci-icon"></div>
+<p><strong>WhatsApp</strong><br><a href="https://wa.me/919822012345">Chat with us instantly</a></p>
+</div>
+<div class="contact-item">
+<div class="ci-icon"></div>
+<p><strong>Hours</strong><br>Mon–Sat: 9:00 AM – 8:00 PM<br>Sunday: Closed</p>
+</div>
+<a href="https://maps.google.com/?q=SmileCraft+Family+Dental+Aundh+Pune" target="_blank" class="map-link"> Open in Google Maps →</a>
+</div>
+<form class="contact-form fade-up" onsubmit="return handleSubmit(event)">
+<h3>Request Appointment</h3>
+<div class="form-group"><input type="text" placeholder="Full Name" required></div>
+<div class="form-group"><input type="tel" placeholder="Phone Number" required></div>
+<div class="form-group">
+<select required>
+<option value="" disabled selected>Select Service</option>
+<option>General Checkup</option>
+<option>Teeth Cleaning</option>
+<option>Root Canal</option>
+<option>Braces & Aligners</option>
+<option>Dental Implants</option>
+<option>Kids Dentistry</option>
+</select>
+</div>
+<div class="form-group"><input type="date" required></div>
+<div class="form-group"><textarea placeholder="Any special concerns? (optional)"></textarea></div>
+<button type="submit" class="btn btn-primary">Book Appointment</button>
+</form>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer>
+<div class="container">
+<div class="footer-grid">
+<div>
+<h4 class="logo" style="font-size:1.3rem;margin-bottom:10px">Smile<span style="color:var(--mint)">Craft</span></h4>
+<p>Gentle, modern dental care for families in Aundh, Pune. Your smile is our mission since 2016.</p>
+</div>
+<div>
+<h4>Quick Links</h4>
+<ul>
+<li><a href="#services">Services</a></li>
+<li><a href="#doctors">Doctors</a></li>
+<li><a href="#results">Results</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4>Services</h4>
+<ul>
+<li><a href="#services">General Checkup</a></li>
+<li><a href="#services">Teeth Cleaning</a></li>
+<li><a href="#services">Root Canal</a></li>
+<li><a href="#services">Braces</a></li>
+<li><a href="#services">Implants</a></li>
+<li><a href="#services">Kids Dentistry</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2016–2024 SmileCraft Family Dental, Aundh, Pune. All rights reserved.</p>
+</div>
+</div>
+</footer>
+
+<!-- WhatsApp FAB -->
+<a href="https://wa.me/919822012345?text=Hi%20SmileCraft!%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" class="whatsapp-fab" aria-label="Chat on WhatsApp">
+<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+// Hamburger
+const hb=document.getElementById('hamburger'),nl=document.getElementById('navLinks');
+hb.addEventListener('click',()=>{hb.classList.toggle('active');nl.classList.toggle('open')});
+nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{hb.classList.remove('active');nl.classList.remove('open')}));
+
+// Scroll animations
+const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll('.fade-up').forEach(el=>io.observe(el));
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'})})});
+
+// Form
+function handleSubmit(e){e.preventDefault();const f=e.target;const btn=f.querySelector('button');btn.textContent=' Request Sent!';btn.style.background='var(--mint)';setTimeout(()=>{btn.textContent='Book Appointment';btn.style.background='';f.reset()},3000);return false}
+</script>
+</body>
+</html>
