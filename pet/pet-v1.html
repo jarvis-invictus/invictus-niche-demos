@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paws &amp; Polish Pet Grooming | Premium Pet Salon, Viman Nagar Pune</title>
+  <meta name="description" content="Paws &amp; Polish is Pune's premium pet grooming salon in Viman Nagar. Bath &amp; dry, haircut, nail trim, ear cleaning &amp; full groom packages for dogs &amp; cats. Book today!" />
+  <meta name="keywords" content="pet grooming Pune, dog grooming Viman Nagar, cat grooming Pune, pet salon Pune, Labrador grooming, Shih Tzu grooming, Pomeranian grooming" />
+  <meta property="og:title" content="Paws &amp; Polish Pet Grooming | Viman Nagar, Pune" />
+  <meta property="og:description" content="Where your pet leaves looking (and feeling) amazing. Premium grooming for dogs &amp; cats in Viman Nagar, Pune." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Pacifico&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+  <!-- JSON-LD LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://www.pawsandpolish.in",
+    "name": "Paws & Polish Pet Grooming",
+    "description": "Premium pet grooming salon in Viman Nagar, Pune. Specializing in bath & dry, haircut, nail trim, ear cleaning and full groom packages for dogs and cats.",
+    "url": "https://www.pawsandpolish.in",
+    "telephone": "020-2668-4455",
+    "email": "hello@pawsandpolish.in",
+    "image": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1200&q=80",
+    "priceRange": "₹₹",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "14, Viman Nagar Road, Near Phoenix Mall",
+      "addressLocality": "Viman Nagar",
+      "addressRegion": "Pune",
+      "postalCode": "411014",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "18.5664",
+      "longitude": "73.9197"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "09:00",
+        "closes": "19:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "10:00",
+        "closes": "16:00"
+      }
+    ],
+    "hasMap": "https://maps.google.com/?q=Viman+Nagar+Pune",
+    "sameAs": [
+      "https://www.facebook.com/pawsandpolishpune",
+      "https://www.instagram.com/pawsandpolishpune"
+    ],
+    "servesCuisine": "Pet Grooming Services"
+  }
+  </script>
+
+  <style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+--teal:    #009688;
+--teal-dk: #00796b;
+--teal-lt: #b2dfdb;
+--cream:   #FFF9F0;
+--orange:  #FF6B35;
+--orange-dk:#e55a25;
+--white:   #ffffff;
+--text:    #2d3748;
+--muted:   #718096;
+--card-bg: #ffffff;
+--border:  #e8f5f3;
+--radius:  16px;
+--radius-sm:8px;
+--shadow:  0 4px 24px rgba(0,150,136,.12);
+--shadow-lg:0 12px 48px rgba(0,150,136,.18);
+--font:    'Nunito', sans-serif;
+--font-brand:'Pacifico', cursive;
+}
+html { scroll-behavior: smooth; }
+body {
+font-family: var(--font);
+background: var(--cream);
+color: var(--text);
+line-height: 1.7;
+overflow-x: hidden;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb { background: var(--teal); border-radius: 3px; }
+.paw-float {
+position: fixed;
+pointer-events: none;
+z-index: 0;
+opacity: .06;
+font-size: 2.5rem;
+animation: pawDrift linear infinite;
+}
+@keyframes pawDrift {
+0%   { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+10%  { opacity: .08; }
+90%  { opacity: .06; }
+100% { transform: translateY(-120px) rotate(360deg); opacity: 0; }
+}
+.paw-float:nth-child(1)  { left: 5%;  animation-duration: 18s; animation-delay: 0s;  font-size: 2rem; }
+.paw-float:nth-child(2)  { left: 15%; animation-duration: 22s; animation-delay: 3s;  font-size: 3rem; }
+.paw-float:nth-child(3)  { left: 30%; animation-duration: 16s; animation-delay: 7s;  font-size: 1.8rem; }
+.paw-float:nth-child(4)  { left: 50%; animation-duration: 20s; animation-delay: 1s;  font-size: 2.5rem; }
+.paw-float:nth-child(5)  { left: 70%; animation-duration: 24s; animation-delay: 5s;  font-size: 2rem; }
+.paw-float:nth-child(6)  { left: 85%; animation-duration: 17s; animation-delay: 9s;  font-size: 1.5rem; }
+.paw-float:nth-child(7)  { left: 92%; animation-duration: 21s; animation-delay: 2s;  font-size: 2.8rem; }
+.navbar {
+position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+background: rgba(255,249,240,.95);
+backdrop-filter: blur(12px);
+-webkit-backdrop-filter: blur(12px);
+border-bottom: 2px solid var(--teal-lt);
+padding: 0 5%;
+display: flex; align-items: center; justify-content: space-between;
+height: 70px;
+transition: box-shadow .3s;
+}
+.navbar.scrolled { box-shadow: var(--shadow); }
+.nav-brand {
+font-family: var(--font-brand);
+font-size: 1.55rem;
+color: var(--teal);
+display: flex; align-items: center; gap: 8px;
+}
+.nav-brand .paw-icon { font-size: 1.4rem; }
+.nav-links { display: flex; gap: 28px; align-items: center; }
+.nav-links a {
+font-weight: 700; font-size: .92rem; color: var(--text);
+letter-spacing: .3px;
+transition: color .2s;
+position: relative;
+}
+.nav-links a::after {
+content: ''; position: absolute; bottom: -3px; left: 0; right: 0;
+height: 2px; background: var(--teal);
+transform: scaleX(0); transform-origin: center;
+transition: transform .25s;
+}
+.nav-links a:hover { color: var(--teal); }
+.nav-links a:hover::after { transform: scaleX(1); }
+.nav-cta {
+background: var(--orange); color: var(--white) !important;
+padding: 9px 22px; border-radius: 50px;
+font-weight: 800; font-size: .9rem;
+transition: background .2s, transform .2s, box-shadow .2s !important;
+box-shadow: 0 4px 14px rgba(255,107,53,.35);
+}
+.nav-cta::after { display: none !important; }
+.nav-cta:hover {
+background: var(--orange-dk) !important;
+transform: translateY(-2px);
+box-shadow: 0 6px 18px rgba(255,107,53,.45) !important;
+}
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+.hamburger span { width: 25px; height: 3px; background: var(--teal); border-radius: 2px; transition: .3s; }
+.btn {
+display: inline-flex; align-items: center; gap: 8px;
+padding: 14px 32px; border-radius: 50px;
+font-family: var(--font); font-weight: 800; font-size: 1rem;
+cursor: pointer; border: none; transition: all .25s;
+text-decoration: none;
+}
+.btn-primary {
+background: var(--orange); color: var(--white);
+box-shadow: 0 6px 20px rgba(255,107,53,.4);
+}
+.btn-primary:hover { background: var(--orange-dk); transform: translateY(-3px); box-shadow: 0 10px 28px rgba(255,107,53,.5); }
+.btn-secondary {
+background: transparent; color: var(--white);
+border: 2px solid rgba(255,255,255,.7);
+}
+.btn-secondary:hover { background: rgba(255,255,255,.15); transform: translateY(-2px); }
+.btn-teal {
+background: var(--teal); color: var(--white);
+box-shadow: 0 6px 20px rgba(0,150,136,.35);
+}
+.btn-teal:hover { background: var(--teal-dk); transform: translateY(-3px); box-shadow: 0 10px 28px rgba(0,150,136,.45); }
+.btn-outline {
+background: transparent; color: var(--teal);
+border: 2px solid var(--teal);
+}
+.btn-outline:hover { background: var(--teal); color: var(--white); transform: translateY(-2px); }
+section { position: relative; z-index: 1; }
+.container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+.section-tag {
+display: inline-flex; align-items: center; gap: 6px;
+background: rgba(0,150,136,.1); color: var(--teal);
+padding: 6px 16px; border-radius: 50px;
+font-size: .82rem; font-weight: 800; letter-spacing: .6px;
+text-transform: uppercase; margin-bottom: 14px;
+}
+.section-title {
+font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+font-weight: 900; color: var(--text);
+line-height: 1.25; margin-bottom: 14px;
+}
+.section-title span { color: var(--teal); }
+.section-sub {
+font-size: 1.05rem; color: var(--muted);
+max-width: 560px; margin-bottom: 48px; line-height: 1.7;
+}
+.text-center { text-align: center; }
+.text-center .section-sub { margin-left: auto; margin-right: auto; }
+.py-section { padding: 88px 0; }
+.py-section-sm { padding: 64px 0; }
+.hero {
+min-height: 100vh;
+display: flex; align-items: center;
+background: linear-gradient(135deg, rgba(0,77,64,.82) 0%, rgba(0,150,136,.7) 50%, rgba(255,107,53,.18) 100%),
+url('https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1600&q=85&fit=crop&crop=center') center/cover no-repeat;
+position: relative; overflow: hidden;
+padding-top: 70px;
+}
+.hero::before {
+content: ''; position: absolute; inset: 0;
+background: radial-gradient(circle at 70% 50%, rgba(255,107,53,.12) 0%, transparent 60%);
+}
+.hero-content {
+position: relative; z-index: 2;
+max-width: 640px; padding: 60px 0;
+}
+.hero-badge {
+display: inline-flex; align-items: center; gap: 8px;
+background: rgba(255,255,255,.18); backdrop-filter: blur(8px);
+border: 1px solid rgba(255,255,255,.3);
+color: var(--white); padding: 8px 18px; border-radius: 50px;
+font-size: .88rem; font-weight: 700; margin-bottom: 22px;
+}
+.hero-title {
+font-size: clamp(2.4rem, 5.5vw, 3.8rem);
+font-weight: 900; color: var(--white); line-height: 1.18;
+margin-bottom: 20px;
+}
+.hero-title .highlight {
+color: #FFD54F;
+text-shadow: 0 2px 20px rgba(255,213,79,.4);
+}
+.hero-sub {
+font-size: clamp(1rem, 2vw, 1.18rem);
+color: rgba(255,255,255,.88); margin-bottom: 36px;
+line-height: 1.7; max-width: 520px;
+}
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 48px; }
+.hero-stats {
+display: flex; gap: 32px; flex-wrap: wrap;
+}
+.hero-stat { color: var(--white); }
+.hero-stat .num {
+font-size: 1.8rem; font-weight: 900;
+line-height: 1; display: block;
+color: #FFD54F;
+}
+.hero-stat .lbl { font-size: .82rem; opacity: .8; font-weight: 600; }
+.hero-scroll {
+position: absolute; bottom: 28px; left: 50%;
+transform: translateX(-50%);
+display: flex; flex-direction: column; align-items: center; gap: 6px;
+color: rgba(255,255,255,.7); font-size: .78rem; font-weight: 700;
+animation: bounce 2s infinite;
+}
+.hero-scroll span { font-size: 1.4rem; }
+@keyframes bounce {
+0%,100% { transform: translateX(-50%) translateY(0); }
+50%      { transform: translateX(-50%) translateY(6px); }
+}
+.services { background: var(--cream); }
+.services-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap: 24px;
+}
+.service-card {
+background: var(--white); border-radius: var(--radius);
+padding: 32px 24px; text-align: center;
+box-shadow: var(--shadow); border: 2px solid transparent;
+transition: all .3s cubic-bezier(.34,1.56,.64,1);
+cursor: default; position: relative; overflow: hidden;
+}
+.service-card::before {
+content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+background: linear-gradient(90deg, var(--teal), var(--orange));
+transform: scaleX(0); transform-origin: left; transition: transform .35s;
+}
+.service-card:hover {
+transform: translateY(-10px) scale(1.02);
+box-shadow: var(--shadow-lg);
+border-color: var(--teal-lt);
+}
+.service-card:hover::before { transform: scaleX(1); }
+.service-icon {
+width: 72px; height: 72px;
+background: linear-gradient(135deg, var(--teal-lt), #e0f7fa);
+border-radius: 50%; display: flex; align-items: center; justify-content: center;
+font-size: 2rem; margin: 0 auto 18px;
+transition: transform .3s;
+}
+.service-card:hover .service-icon { transform: rotate(-8deg) scale(1.1); }
+.service-name { font-size: 1.12rem; font-weight: 800; color: var(--text); margin-bottom: 8px; }
+.service-desc { font-size: .9rem; color: var(--muted); margin-bottom: 16px; line-height: 1.6; }
+.service-price {
+display: inline-block;
+background: linear-gradient(135deg, var(--teal), var(--teal-dk));
+color: var(--white); padding: 6px 18px; border-radius: 50px;
+font-size: .88rem; font-weight: 800;
+}
+.packages-banner {
+background: linear-gradient(135deg, var(--teal-dk) 0%, var(--teal) 50%, #26c6da 100%);
+border-radius: var(--radius); padding: 48px;
+display: flex; align-items: center; justify-content: space-between;
+gap: 24px; flex-wrap: wrap;
+margin-top: 48px;
+box-shadow: var(--shadow-lg);
+position: relative; overflow: hidden;
+}
+.packages-banner::before {
+content: ''; position: absolute;
+right: 48px; bottom: -20px;
+font-size: 8rem; opacity: .07;
+}
+.pkg-text h3 { font-size: 1.6rem; font-weight: 900; color: var(--white); margin-bottom: 8px; }
+.pkg-text p { color: rgba(255,255,255,.85); font-size: 1rem; }
+.pkg-prices {
+display: flex; gap: 16px; flex-wrap: wrap;
+}
+.pkg-chip {
+background: rgba(255,255,255,.18); color: var(--white);
+border: 1px solid rgba(255,255,255,.3);
+padding: 10px 20px; border-radius: 12px;
+text-align: center;
+backdrop-filter: blur(6px);
+}
+.pkg-chip .breed { font-size: .78rem; opacity: .85; font-weight: 600; }
+.pkg-chip .price { font-size: 1.2rem; font-weight: 900; display: block; }
+.ba-section { background: #f0fafa; }
+.ba-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 28px;
+}
+.ba-card {
+background: var(--white); border-radius: var(--radius);
+overflow: hidden; box-shadow: var(--shadow);
+transition: transform .3s, box-shadow .3s;
+}
+.ba-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.ba-imgs { display: grid; grid-template-columns: 1fr 1fr; position: relative; }
+.ba-imgs img { height: 200px; object-fit: cover; width: 100%; }
+.ba-divider {
+position: absolute; left: 50%; top: 0; bottom: 0;
+width: 3px; background: var(--orange);
+transform: translateX(-50%);
+display: flex; align-items: center; justify-content: center;
+}
+.ba-divider::before {
+content: '';
+background: var(--orange); color: var(--white);
+width: 30px; height: 30px; border-radius: 50%;
+display: flex; align-items: center; justify-content: center;
+font-size: .9rem;
+}
+.ba-labels { display: grid; grid-template-columns: 1fr 1fr; }
+.ba-label {
+padding: 6px 12px; font-size: .75rem; font-weight: 800;
+text-transform: uppercase; letter-spacing: .5px;
+}
+.ba-label.before { background: #fce4ec; color: #c62828; }
+.ba-label.after  { background: #e8f5e9; color: #2e7d32; }
+.ba-info { padding: 16px 18px; }
+.ba-info h4 { font-size: 1rem; font-weight: 800; color: var(--text); margin-bottom: 4px; }
+.ba-info p  { font-size: .85rem; color: var(--muted); }
+.why-section { background: var(--cream); }
+.why-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap: 24px;
+}
+.why-card {
+background: var(--white); border-radius: var(--radius);
+padding: 28px 24px; text-align: center;
+box-shadow: var(--shadow);
+transition: all .3s cubic-bezier(.34,1.56,.64,1);
+}
+.why-card:hover { transform: translateY(-8px) scale(1.02); box-shadow: var(--shadow-lg); }
+.why-icon {
+font-size: 2.4rem; margin-bottom: 14px;
+display: block;
+}
+.why-card h4 { font-size: 1rem; font-weight: 800; color: var(--text); margin-bottom: 8px; }
+.why-card p  { font-size: .88rem; color: var(--muted); line-height: 1.6; }
+.team-section { background: #f0fafa; }
+.team-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+gap: 28px;
+}
+.team-card {
+background: var(--white); border-radius: var(--radius);
+overflow: hidden; box-shadow: var(--shadow);
+transition: all .3s cubic-bezier(.34,1.56,.64,1);
+text-align: center;
+}
+.team-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-lg); }
+.team-img { position: relative; }
+.team-img img { height: 240px; object-fit: cover; width: 100%; }
+.team-badge {
+position: absolute; bottom: -16px; left: 50%;
+transform: translateX(-50%);
+background: var(--orange); color: var(--white);
+padding: 5px 16px; border-radius: 50px;
+font-size: .78rem; font-weight: 800;
+white-space: nowrap; box-shadow: 0 4px 12px rgba(255,107,53,.35);
+}
+.team-body { padding: 28px 20px 24px; }
+.team-body h4 { font-size: 1.1rem; font-weight: 900; color: var(--text); margin-bottom: 4px; }
+.team-body .role { font-size: .85rem; color: var(--teal); font-weight: 700; margin-bottom: 10px; }
+.team-body p { font-size: .88rem; color: var(--muted); line-height: 1.6; }
+.booking-section {
+background: linear-gradient(135deg, #004d40 0%, var(--teal) 50%, #26a69a 100%);
+position: relative; overflow: hidden;
+}
+.booking-section::before {
+content: ''; position: absolute; inset: 0;
+background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.booking-inner {
+position: relative; z-index: 2;
+display: grid; grid-template-columns: 1fr 1fr;
+gap: 60px; align-items: center;
+}
+.booking-text h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 900; color: var(--white); margin-bottom: 16px; }
+.booking-text p  { color: rgba(255,255,255,.85); font-size: 1.05rem; margin-bottom: 32px; line-height: 1.7; }
+.booking-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.hours-card {
+background: rgba(255,255,255,.1); backdrop-filter: blur(12px);
+border: 1px solid rgba(255,255,255,.2);
+border-radius: var(--radius); padding: 32px;
+}
+.hours-card h3 {
+font-size: 1.1rem; font-weight: 900; color: var(--white);
+margin-bottom: 20px; display: flex; align-items: center; gap: 8px;
+}
+.hours-row {
+display: flex; justify-content: space-between; align-items: center;
+padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,.1);
+color: rgba(255,255,255,.85); font-size: .92rem;
+}
+.hours-row:last-child { border-bottom: none; }
+.hours-row .day { font-weight: 700; color: var(--white); }
+.hours-row .time { color: #80cbc4; font-weight: 600; }
+.contact-strip {
+display: flex; gap: 16px; flex-wrap: wrap;
+margin-top: 20px;
+}
+.contact-chip {
+display: flex; align-items: center; gap: 8px;
+background: rgba(255,255,255,.12);
+color: var(--white); padding: 10px 16px; border-radius: 10px;
+font-size: .88rem; font-weight: 700;
+transition: background .2s;
+border: 1px solid rgba(255,255,255,.15);
+}
+.contact-chip:hover { background: rgba(255,255,255,.2); }
+.testimonials { background: var(--cream); }
+.testi-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 24px;
+}
+.testi-card {
+background: var(--white); border-radius: var(--radius);
+padding: 28px 26px; box-shadow: var(--shadow);
+border: 2px solid transparent;
+transition: all .3s cubic-bezier(.34,1.56,.64,1);
+position: relative;
+}
+.testi-card::before {
+content: '"';
+position: absolute; top: 20px; right: 24px;
+font-size: 5rem; color: var(--teal-lt);
+font-family: Georgia, serif; line-height: 1;
+}
+.testi-card:hover {
+transform: translateY(-8px);
+box-shadow: var(--shadow-lg);
+border-color: var(--teal-lt);
+}
+.stars { color: #FFD54F; font-size: 1.1rem; margin-bottom: 14px; }
+.testi-text { font-size: .95rem; color: var(--text); line-height: 1.75; margin-bottom: 20px; font-style: italic; }
+.testi-author { display: flex; align-items: center; gap: 12px; }
+.testi-avatar {
+width: 48px; height: 48px; border-radius: 50%; overflow: hidden;
+border: 3px solid var(--teal-lt); flex-shrink: 0;
+}
+.testi-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.testi-name { font-weight: 800; font-size: .95rem; color: var(--text); }
+.testi-pet  { font-size: .8rem; color: var(--teal); font-weight: 700; }
+.float-book {
+position: fixed; bottom: 24px; right: 24px; z-index: 990;
+display: flex; flex-direction: column; align-items: flex-end; gap: 10px;
+}
+.float-wa {
+background: #25d366; color: var(--white);
+width: 56px; height: 56px; border-radius: 50%;
+display: flex; align-items: center; justify-content: center;
+font-size: 1.6rem; box-shadow: 0 6px 20px rgba(37,211,102,.45);
+transition: transform .25s, box-shadow .25s;
+cursor: pointer;
+}
+.float-wa:hover { transform: scale(1.1); box-shadow: 0 10px 28px rgba(37,211,102,.55); }
+.float-book-btn {
+background: var(--orange); color: var(--white);
+padding: 12px 20px; border-radius: 50px;
+font-weight: 800; font-size: .88rem;
+box-shadow: 0 6px 20px rgba(255,107,53,.4);
+transition: all .25s;
+cursor: pointer;
+display: flex; align-items: center; gap: 8px;
+}
+.float-book-btn:hover { transform: translateY(-3px); background: var(--orange-dk); }
+.gallery-strip {
+background: var(--white);
+overflow: hidden; padding: 20px 0;
+}
+.gallery-track {
+display: flex; gap: 16px;
+animation: slide 30s linear infinite;
+width: max-content;
+}
+@keyframes slide {
+from { transform: translateX(0); }
+to   { transform: translateX(-50%); }
+}
+.gallery-track img {
+height: 120px; width: 180px; object-fit: cover;
+border-radius: 12px; flex-shrink: 0;
+}
+.footer {
+background: #004d40; color: rgba(255,255,255,.85);
+}
+.footer-top {
+padding: 60px 0 40px;
+display: grid; grid-template-columns: 2fr 1fr 1fr 1.3fr;
+gap: 40px;
+}
+.footer-brand { font-family: var(--font-brand); font-size: 1.5rem; color: var(--white); margin-bottom: 12px; }
+.footer-desc { font-size: .9rem; line-height: 1.7; margin-bottom: 20px; }
+.social-links { display: flex; gap: 12px; }
+.social-link {
+width: 38px; height: 38px; border-radius: 50%;
+background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.15);
+display: flex; align-items: center; justify-content: center;
+font-size: 1rem; transition: all .25s;
+}
+.social-link:hover { background: var(--teal); border-color: var(--teal); transform: translateY(-2px); }
+.footer-heading { font-size: .88rem; font-weight: 900; color: var(--white); text-transform: uppercase; letter-spacing: .8px; margin-bottom: 18px; }
+.footer-links li { margin-bottom: 10px; }
+.footer-links a { font-size: .9rem; color: rgba(255,255,255,.7); transition: color .2s; display: flex; align-items: center; gap: 6px; }
+.footer-links a:hover { color: var(--white); }
+.footer-contact li { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 12px; font-size: .9rem; }
+.footer-contact li .ico { color: var(--teal); flex-shrink: 0; margin-top: 2px; }
+.footer-bottom {
+border-top: 1px solid rgba(255,255,255,.1);
+padding: 20px 0;
+display: flex; align-items: center; justify-content: space-between;
+flex-wrap: wrap; gap: 12px;
+font-size: .82rem; color: rgba(255,255,255,.5);
+}
+.footer-bottom a { color: rgba(255,255,255,.65); transition: color .2s; }
+.footer-bottom a:hover { color: var(--white); }
+.map-section { background: var(--white); padding: 0; }
+.map-embed {
+width: 100%; height: 320px; border: none;
+filter: saturate(0.85) contrast(1.05);
+}
+@media (max-width: 768px) {
+.nav-links {
+position: fixed; top: 70px; left: 0; right: 0;
+background: var(--cream); flex-direction: column;
+padding: 24px; gap: 0;
+border-bottom: 2px solid var(--teal-lt);
+transform: translateY(-150%); opacity: 0;
+transition: all .3s; z-index: 999;
+box-shadow: var(--shadow);
+}
+.nav-links.open { transform: translateY(0); opacity: 1; }
+.nav-links a { padding: 12px 0; border-bottom: 1px solid var(--border); width: 100%; }
+.nav-links a:last-child { border-bottom: none; }
+.nav-cta { margin-top: 8px; text-align: center; justify-content: center; }
+.hamburger { display: flex; }
+.booking-inner { grid-template-columns: 1fr; gap: 32px; }
+.footer-top { grid-template-columns: 1fr 1fr; gap: 28px; }
+.packages-banner { padding: 32px 24px; }
+.hero-stats { gap: 20px; }
+.float-book { bottom: 16px; right: 16px; }
+}
+@media (max-width: 480px) {
+.footer-top { grid-template-columns: 1fr; }
+.hero-actions { flex-direction: column; }
+.hero-actions .btn { justify-content: center; }
+}
+.divider-paw {
+text-align: center; margin: 0; padding: 18px 0;
+font-size: 1.2rem; letter-spacing: 8px; color: var(--teal-lt);
+}
+.badge-inline {
+display: inline-block;
+background: rgba(255,107,53,.12); color: var(--orange);
+padding: 3px 12px; border-radius: 50px;
+font-size: .78rem; font-weight: 800; margin-left: 8px;
+}
+</style>
+</head>
+<body>
+
+<!-- Floating Paw Prints -->
+<div aria-hidden="true">
+  <span class="paw-float"></span>
+  <span class="paw-float"></span>
+  <span class="paw-float"></span>
+  <span class="paw-float"></span>
+  <span class="paw-float"></span>
+  <span class="paw-float"></span>
+  <span class="paw-float"></span>
+</div>
+
+<nav class="navbar" id="navbar">
+  <a href="#home" class="nav-brand">
+    <span class="paw-icon"></span> Paws &amp; Polish
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#gallery">Before &amp; After</a></li>
+    <li><a href="#team">Our Team</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#booking" class="nav-cta"> Book Now</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge" data-aos="fade-down" data-aos-duration="600">
+         Pune's #1 Premium Pet Salon &nbsp;·&nbsp; Viman Nagar
+      </div>
+      <h1 class="hero-title" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
+        Where Your Pet Leaves<br/>
+        Looking <span class="highlight">(and Feeling)</span><br/>
+        Amazing 
+      </h1>
+      <p class="hero-sub" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200">
+        From fluffy Pomeranians to bouncy Labradors — every pup and kitty gets the
+        royal treatment. Professional grooming with pet-safe products and a whole lot of love.
+      </p>
+      <div class="hero-actions" data-aos="fade-up" data-aos-duration="700" data-aos-delay="300">
+        <a href="#booking" class="btn btn-primary"> Book a Session</a>
+        <a href="#services" class="btn btn-secondary"> Our Services</a>
+      </div>
+      <div class="hero-stats" data-aos="fade-up" data-aos-duration="700" data-aos-delay="400">
+        <div class="hero-stat">
+          <span class="num">2,400+</span>
+          <span class="lbl">Happy Pets Groomed</span>
+        </div>
+        <div class="hero-stat">
+          <span class="num">5</span>
+          <span class="lbl">Average Rating</span>
+        </div>
+        <div class="hero-stat">
+          <span class="num">8 Yrs</span>
+          <span class="lbl">Of Expert Grooming</span>
+        </div>
+        <div class="hero-stat">
+          <span class="num">12+</span>
+          <span class="lbl">Breeds We Specialize In</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll" aria-hidden="true">
+    <span>↓</span>
+    Scroll to explore
+  </div>
+</section>
+
+<!-- Gallery Strip -->
+<div class="gallery-strip" aria-hidden="true">
+  <div class="gallery-track">
+    <img src="https://images.unsplash.com/photo-1588943211346-0908a1fb0b01?w=360&h=240&fit=crop&q=80" alt="groomed dog" loading="lazy" />
+    <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=360&h=240&fit=crop&q=80" alt="happy dog" loading="lazy" />
+    <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=360&h=240&fit=crop&q=80" alt="labrador grooming" loading="lazy" />
+    <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=360&h=240&fit=crop&q=80" alt="groomed poodle" loading="lazy" />
+    <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=360&h=240&fit=crop&q=80" alt="cat grooming" loading="lazy" />
+    <img src="https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?w=360&h=240&fit=crop&q=80" alt="dog with bow" loading="lazy" />
+    <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=360&h=240&fit=crop&q=80" alt="golden retriever" loading="lazy" />
+    <img src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?w=360&h=240&fit=crop&q=80" alt="fluffy dog" loading="lazy" />
+    <!-- Duplicate for seamless loop -->
+    <img src="https://images.unsplash.com/photo-1588943211346-0908a1fb0b01?w=360&h=240&fit=crop&q=80" alt="groomed dog" loading="lazy" />
+    <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=360&h=240&fit=crop&q=80" alt="happy dog" loading="lazy" />
+    <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=360&h=240&fit=crop&q=80" alt="labrador grooming" loading="lazy" />
+    <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=360&h=240&fit=crop&q=80" alt="groomed poodle" loading="lazy" />
+    <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=360&h=240&fit=crop&q=80" alt="cat grooming" loading="lazy" />
+    <img src="https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?w=360&h=240&fit=crop&q=80" alt="dog with bow" loading="lazy" />
+    <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=360&h=240&fit=crop&q=80" alt="golden retriever" loading="lazy" />
+    <img src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?w=360&h=240&fit=crop&q=80" alt="fluffy dog" loading="lazy" />
+  </div>
+</div>
+
+<section class="services py-section" id="services">
+  <div class="container">
+    <div class="text-center" data-aos="fade-up">
+      <div class="section-tag"> Our Services</div>
+      <h2 class="section-title">Everything Your Pet <span>Deserves</span></h2>
+      <p class="section-sub">From a quick nail trim to the full spa experience — we've got services for every breed, every budget, and every personality (yes, even the drama queens ).</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="service-icon"></div>
+        <div class="service-name">Bath &amp; Dry</div>
+        <div class="service-desc">Gentle shampoo, deep conditioning, blow-dry, and a spritz of pet-safe cologne. Your pup will smell divine!</div>
+        <div class="service-price">From ₹499</div>
+      </div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="80">
+        <div class="service-icon"></div>
+        <div class="service-name">Haircut &amp; Styling</div>
+        <div class="service-desc">Breed-specific cuts by certified groomers. We know exactly how a Shih Tzu topknot should look — perfect every time.</div>
+        <div class="service-price">From ₹699</div>
+      </div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="160">
+        <div class="service-icon"></div>
+        <div class="service-name">Nail Trim &amp; File</div>
+        <div class="service-desc">Painless, stress-free nail trimming plus filing for smooth edges. Great for those clickety-clack hardwood floors!</div>
+        <div class="service-price">From ₹199</div>
+      </div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="240">
+        <div class="service-icon"></div>
+        <div class="service-name">Ear Cleaning</div>
+        <div class="service-desc">Safe, thorough ear cleaning to prevent infections — especially important for floppy-eared breeds like Labradors and Beagles.</div>
+        <div class="service-price">From ₹149</div>
+      </div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="320">
+        <div class="service-icon"></div>
+        <div class="service-name">De-shedding Treatment</div>
+        <div class="service-desc">Say goodbye to fur tumbleweeds! Our deep deshed treatment reduces shedding by up to 80% for double-coated breeds.</div>
+        <div class="service-price">From ₹799</div>
+      </div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+        <div class="service-icon"></div>
+        <div class="service-name">Cat Grooming</div>
+        <div class="service-desc">Calm, low-stress grooming for your feline royalty. Bath, brush, nail trim &amp; ear clean — in a cat-only quiet zone.</div>
+        <div class="service-price">From ₹599</div>
+      </div>
+    </div>
+
+    <!-- Full Groom Packages Banner -->
+    <div class="packages-banner" data-aos="fade-up" data-aos-delay="100">
+      <div class="pkg-text">
+        <h3> Full Groom Packages — Best Value!</h3>
+        <p>Bath + Haircut + Nail Trim + Ear Clean + Bandana. Save up to 25% vs à la carte.</p>
+        <a href="#booking" class="btn btn-primary" style="margin-top:18px;">Book a Package</a>
+      </div>
+      <div class="pkg-prices">
+        <div class="pkg-chip">
+          <span class="breed">Small (Shih Tzu, Pom)</span>
+          <span class="price">₹999</span>
+        </div>
+        <div class="pkg-chip">
+          <span class="breed">Medium (Indie, Beagle)</span>
+          <span class="price">₹1,299</span>
+        </div>
+        <div class="pkg-chip">
+          <span class="breed">Large (Labrador, GSD)</span>
+          <span class="price">₹1,699</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ba-section py-section" id="gallery">
+  <div class="container">
+    <div class="text-center" data-aos="fade-up">
+      <div class="section-tag"> Transformations</div>
+      <h2 class="section-title">The <span>Before &amp; After</span> Magic</h2>
+      <p class="section-sub">Don't just take our word for it — see the difference a Paws &amp; Polish session makes. These fluffy transformations speak for themselves! </p>
+    </div>
+
+    <div class="ba-grid">
+      <div class="ba-card" data-aos="zoom-in" data-aos-delay="0">
+        <div class="ba-imgs">
+          <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16?w=400&h=300&fit=crop&q=80" alt="Pomeranian before grooming" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=400&h=300&fit=crop&q=80" alt="Pomeranian after grooming" loading="lazy" />
+          <div class="ba-divider"></div>
+        </div>
+        <div class="ba-labels">
+          <span class="ba-label before">Before</span>
+          <span class="ba-label after">After</span>
+        </div>
+        <div class="ba-info">
+          <h4> Bruno — Pomeranian, 3 yrs</h4>
+          <p>Full groom package · Bath, trim, nail file &amp; bow tie finish</p>
+        </div>
+      </div>
+
+      <div class="ba-card" data-aos="zoom-in" data-aos-delay="100">
+        <div class="ba-imgs">
+          <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&h=300&fit=crop&q=80" alt="Labrador before grooming" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=400&h=300&fit=crop&q=80" alt="Labrador after grooming" loading="lazy" />
+          <div class="ba-divider"></div>
+        </div>
+        <div class="ba-labels">
+          <span class="ba-label before">Before</span>
+          <span class="ba-label after">After</span>
+        </div>
+        <div class="ba-info">
+          <h4> Max — Labrador, 2 yrs</h4>
+          <p>De-shedding treatment · Bath, blow-dry &amp; ear clean</p>
+        </div>
+      </div>
+
+      <div class="ba-card" data-aos="zoom-in" data-aos-delay="200">
+        <div class="ba-imgs">
+          <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=400&h=300&fit=crop&q=80" alt="Cat before grooming" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400&h=300&fit=crop&q=80" alt="Cat after grooming" loading="lazy" />
+          <div class="ba-divider"></div>
+        </div>
+        <div class="ba-labels">
+          <span class="ba-label before">Before</span>
+          <span class="ba-label after">After</span>
+        </div>
+        <div class="ba-info">
+          <h4> Luna — Persian Cat, 4 yrs</h4>
+          <p>Cat grooming special · Detangle, bath, nail trim &amp; brush out</p>
+        </div>
+      </div>
+
+      <div class="ba-card" data-aos="zoom-in" data-aos-delay="300">
+        <div class="ba-imgs">
+          <img src="https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=400&h=300&fit=crop&q=80" alt="Shih Tzu before grooming" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?w=400&h=300&fit=crop&q=80" alt="Shih Tzu after grooming" loading="lazy" />
+          <div class="ba-divider"></div>
+        </div>
+        <div class="ba-labels">
+          <span class="ba-label before">Before</span>
+          <span class="ba-label after">After</span>
+        </div>
+        <div class="ba-info">
+          <h4> Coco — Shih Tzu, 5 yrs</h4>
+          <p>Teddy bear cut · Bath, topknot styling &amp; bandana finish</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why-section py-section-sm">
+  <div class="container">
+    <div class="text-center" data-aos="fade-up">
+      <div class="section-tag"> Why Pet Parents Love Us</div>
+      <h2 class="section-title">The <span>Paws &amp; Polish</span> Promise</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card" data-aos="flip-left" data-aos-delay="0">
+        <span class="why-icon"></span>
+        <h4>100% Pet-Safe Products</h4>
+        <p>We use only vet-recommended, sulphate-free, non-toxic shampoos and conditioners. Safe for sensitive skin and puppies too.</p>
+      </div>
+      <div class="why-card" data-aos="flip-left" data-aos-delay="80">
+        <span class="why-icon"></span>
+        <h4>Certified Groomers</h4>
+        <p>Our team is trained at accredited grooming academies and attends annual workshops to stay current with breed standards.</p>
+      </div>
+      <div class="why-card" data-aos="flip-left" data-aos-delay="160">
+        <span class="why-icon"></span>
+        <h4>Progress Photos Sent to You</h4>
+        <p>We WhatsApp you a mid-session update so you can see your fur baby mid-groom. Because separation anxiety hits both ways! </p>
+      </div>
+      <div class="why-card" data-aos="flip-left" data-aos-delay="240">
+        <span class="why-icon"></span>
+        <h4>Hand-Dried, Never Cage-Dried</h4>
+        <p>Every pet is hand-dried with a warm, low-noise dryer. No scary cage dryers. Your pet's comfort is our non-negotiable.</p>
+      </div>
+      <div class="why-card" data-aos="flip-left" data-aos-delay="320">
+        <span class="why-icon"></span>
+        <h4>Vet Tie-Up Next Door</h4>
+        <p>Our partner vet clinic is just a two-minute walk away in Viman Nagar for immediate medical support if ever needed.</p>
+      </div>
+      <div class="why-card" data-aos="flip-left" data-aos-delay="400">
+        <span class="why-icon">⏰</span>
+        <h4>On-Time Pickup, Every Time</h4>
+        <p>We respect your schedule. Get an SMS when your pet is ready — usually within the estimated window, never kept waiting.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="team-section py-section" id="team">
+  <div class="container">
+    <div class="text-center" data-aos="fade-up">
+      <div class="section-tag"> Meet the Team</div>
+      <h2 class="section-title">The Humans Behind the <span>Happy Tails</span></h2>
+      <p class="section-sub">Our groomers aren't just skilled — they're genuine animal lovers who treat every pet like their own. Your fur baby is in the best paws. </p>
+    </div>
+
+    <div class="team-grid">
+      <div class="team-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="team-img">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=320&fit=crop&crop=face&q=80" alt="Priya Sharma, Head Groomer" loading="lazy" />
+          <span class="team-badge">Head Groomer</span>
+        </div>
+        <div class="team-body">
+          <h4>Priya Sharma</h4>
+          <div class="role">Founder &amp; Master Groomer</div>
+          <p>8+ years of experience. Priya started Paws &amp; Polish after her Labrador "Mango" couldn't find a gentle groomer in Pune. Now she's the one everyone calls for anxious pups!</p>
+        </div>
+      </div>
+
+      <div class="team-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="team-img">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=320&fit=crop&crop=face&q=80" alt="Ankit Kulkarni, Senior Groomer" loading="lazy" />
+          <span class="team-badge">Dog Specialist</span>
+        </div>
+        <div class="team-body">
+          <h4>Ankit Kulkarni</h4>
+          <div class="role">Senior Dog Groomer</div>
+          <p>Ankit is our Pomeranian and Shih Tzu wizard. He can do a perfect puppy cut blindfolded (not literally!). His Pom trims are legendary on our Instagram.</p>
+        </div>
+      </div>
+
+      <div class="team-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="team-img">
+          <img src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=400&h=320&fit=crop&crop=face&q=80" alt="Sneha Desai, Cat Specialist" loading="lazy" />
+          <span class="team-badge">Cat Whisperer</span>
+        </div>
+        <div class="team-body">
+          <h4>Sneha Desai</h4>
+          <div class="role">Feline Grooming Specialist</div>
+          <p>Sneha has the magic touch with cats — even the hissy ones warm up to her. Her Persian and Maine Coon clients are regulars who come every 6 weeks, no fuss!</p>
+        </div>
+      </div>
+
+      <div class="team-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="team-img">
+          <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=400&h=320&fit=crop&crop=face&q=80" alt="Rohan Patil, Breed Expert" loading="lazy" />
+          <span class="team-badge">Large Breed Expert</span>
+        </div>
+        <div class="team-body">
+          <h4>Rohan Patil</h4>
+          <div class="role">Large Breed Groomer</div>
+          <p>GSDs, Labradors, Golden Retrievers — Rohan handles the big softies with ease. He's also our de-shedding treatment specialist. Your sofa will thank you.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="booking-section py-section" id="booking">
+  <div class="container">
+    <div class="booking-inner">
+      <div class="booking-text" data-aos="fade-right">
+        <div class="section-tag" style="background:rgba(255,255,255,.15);color:#fff;"> Book an Appointment</div>
+        <h2>Ready to Treat Your <br/>Furry Best Friend? </h2>
+        <p>Slots fill up fast — especially on weekends! Call us, drop a WhatsApp, or send an email to lock in your preferred time. Walk-ins welcome when available.</p>
+        <div class="booking-actions">
+          <a href="tel:02026684455" class="btn btn-primary"> Call Us Now</a>
+          <a href="https://wa.me/912026684455?text=Hi%2C%20I%27d%20like%20to%20book%20a%20grooming%20session%20for%20my%20pet%20at%20Paws%20%26%20Polish!" class="btn btn-secondary" target="_blank" rel="noopener"> WhatsApp Us</a>
+        </div>
+        <div class="contact-strip">
+          <a href="tel:02026684455" class="contact-chip"> 020-2668-4455</a>
+          <a href="mailto:hello@pawsandpolish.in" class="contact-chip"> hello@pawsandpolish.in</a>
+        </div>
+      </div>
+
+      <div class="hours-card" data-aos="fade-left">
+        <h3> Salon Hours</h3>
+        <div class="hours-row">
+          <span class="day">Monday – Friday</span>
+          <span class="time">9:00 AM – 7:00 PM</span>
+        </div>
+        <div class="hours-row">
+          <span class="day">Saturday</span>
+          <span class="time">9:00 AM – 7:00 PM</span>
+        </div>
+        <div class="hours-row">
+          <span class="day">Sunday</span>
+          <span class="time">10:00 AM – 4:00 PM</span>
+        </div>
+        <div style="margin-top:20px; padding:14px; background:rgba(255,213,79,.15); border-radius:10px; border-left:3px solid #FFD54F;">
+          <p style="color:#fff; font-size:.88rem; font-weight:600;">
+             <strong>Pro Tip:</strong> Book your weekend slot by Wednesday — they go fast! Mention your pet's breed when calling for a personalised estimate.
+          </p>
+        </div>
+        <div style="margin-top:16px; color:rgba(255,255,255,.7); font-size:.85rem;">
+           14, Viman Nagar Road, Near Phoenix Mall, Pune 411014
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials py-section" id="testimonials">
+  <div class="container">
+    <div class="text-center" data-aos="fade-up">
+      <div class="section-tag">⭐ Reviews</div>
+      <h2 class="section-title">Pet Parents <span>Love Us</span></h2>
+      <p class="section-sub">Don't take our word for it — here's what 2,400+ happy pet parents across Pune have to say about their Paws &amp; Polish experience.</p>
+    </div>
+
+    <div class="testi-grid">
+      <div class="testi-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="stars"></div>
+        <p class="testi-text">"My Labrador 'Bruno' used to hate bath time — like, hide-under-the-bed level panic. After his first session with Priya, he literally ran to the car excited to go back. These guys are genuinely gifted with anxious dogs."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=96&h=96&fit=crop&crop=face&q=80" alt="Rahul Mehta" loading="lazy" />
+          </div>
+          <div>
+            <div class="testi-name">Rahul Mehta</div>
+            <div class="testi-pet"> Bruno's Dad · Labrador, 2 yrs</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="stars"></div>
+        <p class="testi-text">"Ankit knows Pomeranians inside out! Coco's fluffy trim is always magazine-perfect. I've been coming every 6 weeks for 3 years now — wouldn't trust anyone else with her. Also love the WhatsApp photo update mid-session. "</p>
+        <div class="testi-author">
+          <div class="testi-avatar">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=96&h=96&fit=crop&crop=face&q=80" alt="Pooja Joshi" loading="lazy" />
+          </div>
+          <div>
+            <div class="testi-name">Pooja Joshi</div>
+            <div class="testi-pet"> Coco's Mom · Pomeranian, 4 yrs</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="stars"></div>
+        <p class="testi-text">"I have a Persian cat and finding someone who doesn't traumatize her was a nightmare. Sneha is an absolute cat whisperer. Luna comes back soft, tangle-free, and purring. I cried the first time because I was so relieved!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=96&h=96&fit=crop&crop=face&q=80" alt="Ananya Raje" loading="lazy" />
+          </div>
+          <div>
+            <div class="testi-name">Ananya Raje</div>
+            <div class="testi-pet"> Luna's Mom · Persian Cat, 3 yrs</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="stars"></div>
+        <p class="testi-text">"Rohan handled our German Shepherd 'Kaiser' like a pro. Post-monsoon GSD shedding is REAL — our living room was a fur carpet. After one de-shedding treatment, the difference was unbelievable. Worth every rupee of the ₹1,699 package!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=96&h=96&fit=crop&crop=face&q=80" alt="Karan Bhosale" loading="lazy" />
+          </div>
+          <div>
+            <div class="testi-name">Karan Bhosale</div>
+            <div class="testi-pet"> Kaiser's Dad · German Shepherd, 3 yrs</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card" data-aos="fade-up" data-aos-delay="400">
+        <div class="stars"></div>
+        <p class="testi-text">"Found them after our old groomer shut down and honestly it's the best thing that happened to our Shih Tzu 'Mochi'. The salon is spotless, the staff is incredibly warm, and Mochi never cries here. Booking was easy on WhatsApp too!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=96&h=96&fit=crop&crop=face&q=80" alt="Deepika Nair" loading="lazy" />
+          </div>
+          <div>
+            <div class="testi-name">Deepika Nair</div>
+            <div class="testi-pet"> Mochi's Mom · Shih Tzu, 2 yrs</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card" data-aos="fade-up" data-aos-delay="500">
+        <div class="stars"></div>
+        <p class="testi-text">"Took our Golden Retriever 'Biscuit' for his first-ever groom here (9 months old). The team was SO patient with him — he kept jumping and biting the dryer. They sent us three photos during the session. Biscuit came out looking like a show dog!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar">
+            <img src="https://images.unsplash.com/photo-1463453091185-61582044d556?w=96&h=96&fit=crop&crop=face&q=80" alt="Vikram Singh" loading="lazy" />
+          </div>
+          <div>
+            <div class="testi-name">Vikram Singh</div>
+            <div class="testi-pet"> Biscuit's Dad · Golden Retriever, 9 mos</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="map-section">
+  <iframe
+    class="map-embed"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.1!2d73.9197!3d18.5664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDMzJzU5LjAiTiA3M8KwNTUnMTAuOSJF!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    title="Paws &amp; Polish Location Map"
+  ></iframe>
+</div>
+
+<footer class="footer" id="contact">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand"> Paws &amp; Polish</div>
+        <p class="footer-desc">Pune's most loved premium pet grooming salon. Because your furry family member deserves nothing but the best. We groom with love — and a whole lot of patience!</p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Instagram" title="Instagram"></a>
+          <a href="#" class="social-link" aria-label="Facebook" title="Facebook"></a>
+          <a href="#" class="social-link" aria-label="WhatsApp" title="WhatsApp"></a>
+          <a href="#" class="social-link" aria-label="YouTube" title="YouTube">▶</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-heading">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="#services"> Our Services</a></li>
+          <li><a href="#gallery"> Before &amp; After</a></li>
+          <li><a href="#team"> Meet the Team</a></li>
+          <li><a href="#testimonials">⭐ Reviews</a></li>
+          <li><a href="#booking"> Book Now</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-heading">Services</div>
+        <ul class="footer-links">
+          <li><a href="#services"> Bath &amp; Dry</a></li>
+          <li><a href="#services"> Haircut &amp; Style</a></li>
+          <li><a href="#services"> Nail Trim</a></li>
+          <li><a href="#services"> Ear Cleaning</a></li>
+          <li><a href="#services"> De-shedding</a></li>
+          <li><a href="#services"> Cat Grooming</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-heading">Contact Us</div>
+        <ul class="footer-contact">
+          <li>
+            <span class="ico"></span>
+            <span>14, Viman Nagar Road, Near Phoenix Mall, Pune 411014</span>
+          </li>
+          <li>
+            <span class="ico"></span>
+            <a href="tel:02026684455" style="color:rgba(255,255,255,.85);">020-2668-4455</a>
+          </li>
+          <li>
+            <span class="ico"></span>
+            <a href="mailto:hello@pawsandpolish.in" style="color:rgba(255,255,255,.85);">hello@pawsandpolish.in</a>
+          </li>
+          <li>
+            <span class="ico"></span>
+            <span>Mon–Sat: 9 AM – 7 PM<br/>Sun: 10 AM – 4 PM</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2025 Paws &amp; Polish Pet Grooming. All rights reserved. Made with  for pet parents in Pune.</span>
+      <span>
+        <a href="#">Privacy Policy</a> &nbsp;·&nbsp;
+        <a href="#">Terms of Service</a> &nbsp;·&nbsp;
+        <a href="#">Refund Policy</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<div class="float-book">
+  <a href="https://wa.me/912026684455?text=Hi%2C%20I%27d%20like%20to%20book%20a%20grooming%20session!" class="float-wa" title="WhatsApp Us" target="_blank" rel="noopener" aria-label="WhatsApp">
+    
+  </a>
+  <a href="#booking" class="float-book-btn"> Book Now</a>
+</div>
+
+<!-- AOS Library -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  // ── Initialize AOS ──
+  AOS.init({
+    duration: 700,
+    once: true,
+    easing: 'ease-out-cubic',
+    offset: 60
+  });
+
+  // ── Navbar scroll effect ──
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // ── Mobile hamburger toggle ──
+  const hamburger = document.getElementById('hamburger');
+  const navLinks  = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+    const spans = hamburger.querySelectorAll('span');
+    const isOpen = navLinks.classList.contains('open');
+    spans[0].style.transform = isOpen ? 'rotate(45deg) translate(5.5px, 5.5px)' : '';
+    spans[1].style.opacity   = isOpen ? '0' : '1';
+    spans[2].style.transform = isOpen ? 'rotate(-45deg) translate(5.5px, -5.5px)' : '';
+  });
+  // Close menu when a nav link is clicked
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      hamburger.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = '1'; });
+    });
+  });
+
+  // ── Counter animation for hero stats ──
+  function animateCount(el, target, suffix, duration) {
+    const start = performance.now();
+    const update = (now) => {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = Math.floor(eased * target);
+      el.textContent = (current >= 1000 ? current.toLocaleString('en-IN') : current) + suffix;
+      if (progress < 1) requestAnimationFrame(update);
+    };
+    requestAnimationFrame(update);
+  }
+
+  // Trigger counter when hero is visible
+  const heroStats = document.querySelectorAll('.hero-stat .num');
+  const targets   = [2400, 5, 8, 12];
+  const suffixes  = ['+', '', ' Yrs', '+'];
+  let counted = false;
+  const heroObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting && !counted) {
+        counted = true;
+        heroStats.forEach((el, i) => animateCount(el, targets[i], suffixes[i], 1800));
+      }
+    });
+  }, { threshold: 0.3 });
+  if (heroStats.length) heroObs.observe(heroStats[0].closest('.hero-stats'));
+
+  // ── Smooth-scroll polyfill helper ──
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', (e) => {
+      const target = document.querySelector(anchor.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        const top = target.getBoundingClientRect().top + window.pageYOffset - 74;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    });
+  });
+</script>
+</body>
+</html>
