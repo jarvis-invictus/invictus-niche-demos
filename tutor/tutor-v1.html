@@ -1,0 +1,1842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BrightMind Academic Tutoring | CBSE & SSC Coaching — Aundh, Pune</title>
+  <meta name="description" content="BrightMind Academic Tutoring in Aundh, Pune offers expert CBSE & SSC coaching for 8th–12th grade students in Science, Maths, and English. 95%+ students score above 85%." />
+  <meta name="keywords" content="tutoring Aundh Pune, CBSE coaching Pune, SSC tuition Pune, 10th 12th science maths English coaching, BrightMind tutor" />
+  <link rel="canonical" href="https://brightmindtutor.in/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://brightmindtutor.in/" />
+  <meta property="og:title" content="BrightMind Academic Tutoring | CBSE & SSC Coaching — Aundh, Pune" />
+  <meta property="og:description" content="Expert tutoring for 8th–12th grade students. Science, Maths & English. Results-proven coaching in Aundh, Pune." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&h=630&fit=crop" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:site_name" content="BrightMind Academic Tutoring" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="BrightMind Academic Tutoring | Aundh, Pune" />
+  <meta name="twitter:description" content="Expert CBSE & SSC coaching for 8th–12th grade. Science, Maths, English. 95%+ students score above 85%." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&h=630&fit=crop" />
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["LocalBusiness", "EducationalOrganization"],
+        "@id": "https://brightmindtutor.in/#organization",
+        "name": "BrightMind Academic Tutoring",
+        "url": "https://brightmindtutor.in/",
+        "logo": "https://brightmindtutor.in/logo.png",
+        "image": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800",
+        "description": "Expert academic tutoring for 8th–12th grade CBSE & SSC students in Science, Maths and English. Located in Aundh, Pune.",
+        "telephone": "+91-98765-43210",
+        "email": "hello@brightmindtutor.in",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Shop 12, Parihar Chowk Road",
+          "addressLocality": "Aundh",
+          "addressRegion": "Maharashtra",
+          "postalCode": "411007",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 18.5596,
+          "longitude": 73.8072
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+            "opens": "15:00",
+            "closes": "21:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Saturday","Sunday"],
+            "opens": "09:00",
+            "closes": "18:00"
+          }
+        ],
+        "priceRange": "₹₹",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Academic Tutoring Programs",
+          "itemListElement": [
+            {"@type":"Offer","itemOffered":{"@type":"Course","name":"Science Tutoring 8th–10th","description":"Physics, Chemistry & Biology for CBSE/SSC"}},
+            {"@type":"Offer","itemOffered":{"@type":"Course","name":"Mathematics Coaching 8th–12th","description":"Algebra, Geometry, Calculus for CBSE/SSC"}},
+            {"@type":"Offer","itemOffered":{"@type":"Course","name":"English Language 8th–12th","description":"Grammar, Writing & Literature for CBSE/SSC"}}
+          ]
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "187",
+          "bestRating": "5"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      color: #1a2340;
+      background: #fff;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    /* ===== DESIGN TOKENS ===== */
+    :root {
+      --blue: #1a3a8f;
+      --blue-dark: #0f2460;
+      --blue-light: #2d57c5;
+      --blue-muted: #e8edf8;
+      --yellow: #f5c518;
+      --yellow-dark: #d4a200;
+      --yellow-light: #fef3c7;
+      --white: #ffffff;
+      --gray-50: #f8fafc;
+      --gray-100: #f1f5f9;
+      --gray-300: #cbd5e1;
+      --gray-500: #64748b;
+      --gray-700: #334155;
+      --text: #1a2340;
+      --radius: 12px;
+      --radius-lg: 20px;
+      --shadow: 0 4px 24px rgba(26,58,143,0.10);
+      --shadow-lg: 0 12px 48px rgba(26,58,143,0.18);
+      --transition: 0.35s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+    @keyframes slideLeft {
+      from { opacity: 0; transform: translateX(-50px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes slideRight {
+      from { opacity: 0; transform: translateX(50px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes scaleIn {
+      from { opacity: 0; transform: scale(0.85); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+    @keyframes pulse-ring {
+      0%   { transform: scale(1); opacity: 1; }
+      70%  { transform: scale(1.35); opacity: 0; }
+      100% { transform: scale(1.35); opacity: 0; }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50%       { transform: translateY(-10px); }
+    }
+    @keyframes countUp {
+      from { opacity: 0; transform: scale(0.5); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+    @keyframes shimmer {
+      0%   { background-position: -400px 0; }
+      100% { background-position: 400px 0; }
+    }
+    @keyframes rotateY {
+      from { transform: rotateY(0deg); }
+      to   { transform: rotateY(360deg); }
+    }
+    @keyframes gradientShift {
+      0%   { background-position: 0% 50%; }
+      50%  { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* AOS-like scroll reveal classes */
+    [data-aos] {
+      opacity: 0;
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    [data-aos="fade-up"]    { transform: translateY(40px); }
+    [data-aos="fade-left"]  { transform: translateX(50px); }
+    [data-aos="fade-right"] { transform: translateX(-50px); }
+    [data-aos="zoom-in"]    { transform: scale(0.85); }
+    [data-aos="fade-in"]    { transform: none; }
+    [data-aos].aos-animate  { opacity: 1; transform: none; }
+
+    /* ===== SCROLLBAR ===== */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--gray-100); }
+    ::-webkit-scrollbar-thumb { background: var(--blue); border-radius: 3px; }
+
+    /* ===== NAVBAR ===== */
+    .navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(26,58,143,0.08);
+      box-shadow: 0 2px 20px rgba(26,58,143,0.08);
+      transition: var(--transition);
+    }
+    .navbar.scrolled {
+      box-shadow: 0 4px 30px rgba(26,58,143,0.15);
+    }
+    .nav-inner {
+      max-width: 1200px; margin: 0 auto;
+      padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 70px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+    }
+    .nav-logo-icon {
+      width: 40px; height: 40px;
+      background: var(--blue);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .nav-logo-icon svg { width: 22px; height: 22px; fill: var(--yellow); }
+    .nav-brand-text { line-height: 1.1; }
+    .nav-brand-text .name { font-size: 1rem; font-weight: 700; color: var(--blue); }
+    .nav-brand-text .tagline { font-size: 0.65rem; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.5px; }
+    .nav-links {
+      display: flex; align-items: center; gap: 32px;
+    }
+    .nav-links a {
+      font-size: 0.875rem; font-weight: 500; color: var(--gray-700);
+      transition: color var(--transition);
+    }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-cta {
+      background: var(--yellow);
+      color: var(--blue-dark) !important;
+      padding: 9px 20px;
+      border-radius: 8px;
+      font-weight: 700 !important;
+      font-size: 0.875rem !important;
+      transition: background var(--transition), transform var(--transition), box-shadow var(--transition) !important;
+    }
+    .nav-cta:hover {
+      background: var(--yellow-dark) !important;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(245,197,24,0.4);
+    }
+    .hamburger {
+      display: none;
+      flex-direction: column; gap: 5px; cursor: pointer;
+      padding: 4px;
+      background: none; border: none;
+    }
+    .hamburger span {
+      display: block; width: 24px; height: 2px;
+      background: var(--blue);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
+
+    /* Mobile nav */
+    .mobile-nav {
+      display: none;
+      position: fixed; top: 70px; left: 0; right: 0; z-index: 999;
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-100);
+      box-shadow: 0 8px 24px rgba(26,58,143,0.12);
+      padding: 16px 24px 24px;
+      transform: translateY(-10px); opacity: 0;
+      transition: var(--transition);
+    }
+    .mobile-nav.open { display: block; transform: translateY(0); opacity: 1; }
+    .mobile-nav a {
+      display: block; padding: 12px 0;
+      font-size: 1rem; font-weight: 500; color: var(--gray-700);
+      border-bottom: 1px solid var(--gray-100);
+    }
+    .mobile-nav a:last-child { border-bottom: none; margin-top: 8px; }
+    .mobile-cta {
+      display: block !important;
+      background: var(--yellow);
+      color: var(--blue-dark) !important;
+      text-align: center;
+      padding: 12px !important;
+      border-radius: 8px;
+      font-weight: 700 !important;
+      border: none !important;
+      margin-top: 8px;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex; align-items: center;
+      background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 50%, var(--blue-light) 100%);
+      background-size: 200% 200%;
+      animation: gradientShift 8s ease infinite;
+      padding: 100px 0 60px;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='80' height='80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='1.5' fill='rgba(255,255,255,0.08)'/%3E%3C/svg%3E");
+      background-size: 80px 80px;
+    }
+    .hero-inner {
+      max-width: 1200px; margin: 0 auto; padding: 0 24px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+      position: relative; z-index: 1;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(245,197,24,0.15);
+      border: 1px solid rgba(245,197,24,0.3);
+      color: var(--yellow);
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-size: 0.8rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.5px;
+      margin-bottom: 20px;
+      animation: fadeUp 0.6s ease 0.1s both;
+    }
+    .hero-badge .dot {
+      width: 6px; height: 6px;
+      background: var(--yellow);
+      border-radius: 50%;
+      animation: pulse-ring 1.5s ease-out infinite;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 20px;
+      animation: fadeUp 0.6s ease 0.2s both;
+    }
+    .hero h1 .accent { color: var(--yellow); }
+    .hero-desc {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.82);
+      margin-bottom: 32px;
+      max-width: 460px;
+      animation: fadeUp 0.6s ease 0.3s both;
+    }
+    .hero-actions {
+      display: flex; gap: 14px; flex-wrap: wrap;
+      animation: fadeUp 0.6s ease 0.4s both;
+    }
+    .btn-primary {
+      background: var(--yellow);
+      color: var(--blue-dark);
+      padding: 14px 28px;
+      border-radius: var(--radius);
+      font-weight: 700; font-size: 1rem;
+      border: none; cursor: pointer;
+      display: inline-flex; align-items: center; gap: 8px;
+      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+      box-shadow: 0 4px 20px rgba(245,197,24,0.35);
+    }
+    .btn-primary:hover {
+      background: var(--yellow-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(245,197,24,0.45);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      padding: 14px 28px;
+      border-radius: var(--radius);
+      font-weight: 600; font-size: 1rem;
+      border: 2px solid rgba(255,255,255,0.4);
+      cursor: pointer;
+      display: inline-flex; align-items: center; gap: 8px;
+      transition: var(--transition);
+    }
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.7);
+      transform: translateY(-2px);
+    }
+
+    /* Hero Stats */
+    .hero-stats {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+      margin-top: 44px;
+      animation: fadeUp 0.6s ease 0.5s both;
+    }
+    .hero-stat {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: var(--radius);
+      padding: 16px;
+      text-align: center;
+      backdrop-filter: blur(8px);
+      transition: var(--transition);
+    }
+    .hero-stat:hover { background: rgba(255,255,255,0.16); transform: translateY(-3px); }
+    .hero-stat .num {
+      font-size: 1.9rem; font-weight: 800; color: var(--yellow);
+      display: block; line-height: 1;
+    }
+    .hero-stat .label {
+      font-size: 0.72rem; color: rgba(255,255,255,0.75);
+      text-transform: uppercase; letter-spacing: 0.4px;
+      margin-top: 4px; display: block;
+    }
+
+    /* Hero Image */
+    .hero-image-wrap {
+      position: relative;
+      animation: slideRight 0.8s ease 0.3s both;
+    }
+    .hero-img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      border-radius: var(--radius-lg);
+      box-shadow: 0 24px 64px rgba(0,0,0,0.3);
+    }
+    .hero-badge-float {
+      position: absolute;
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 14px 18px;
+      box-shadow: var(--shadow-lg);
+      display: flex; align-items: center; gap: 10px;
+      animation: float 3s ease-in-out infinite;
+    }
+    .hero-badge-float.top-left {
+      top: -16px; left: -20px;
+    }
+    .hero-badge-float.bottom-right {
+      bottom: -16px; right: -20px;
+      animation-delay: 1.5s;
+    }
+    .hero-badge-float .icon {
+      width: 36px; height: 36px;
+      background: var(--blue-muted);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+    }
+    .hero-badge-float .info .val {
+      font-size: 1rem; font-weight: 700; color: var(--blue-dark); display: block;
+    }
+    .hero-badge-float .info .txt {
+      font-size: 0.72rem; color: var(--gray-500); display: block;
+    }
+
+    /* ===== SECTION BASE ===== */
+    section { padding: 80px 0; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .section-label {
+      display: inline-block;
+      font-size: 0.75rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 1px;
+      color: var(--blue);
+      background: var(--blue-muted);
+      padding: 5px 14px; border-radius: 100px;
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: clamp(1.7rem, 3vw, 2.4rem);
+      font-weight: 800; color: var(--text);
+      line-height: 1.2; margin-bottom: 14px;
+    }
+    .section-title .accent { color: var(--blue); }
+    .section-title .yellow { color: var(--yellow-dark); }
+    .section-sub {
+      font-size: 1rem; color: var(--gray-500);
+      max-width: 560px; margin-bottom: 48px;
+    }
+    .section-center { text-align: center; }
+    .section-center .section-sub { margin-left: auto; margin-right: auto; }
+    .divider {
+      width: 56px; height: 4px;
+      background: linear-gradient(90deg, var(--yellow), var(--yellow-dark));
+      border-radius: 2px; margin: 16px 0 20px;
+    }
+    .divider.center { margin-left: auto; margin-right: auto; }
+
+    /* ===== TRUST BAR ===== */
+    .trust-bar {
+      background: var(--blue-dark);
+      padding: 18px 0;
+    }
+    .trust-inner {
+      max-width: 1200px; margin: 0 auto; padding: 0 24px;
+      display: flex; align-items: center; justify-content: center;
+      gap: 40px; flex-wrap: wrap;
+    }
+    .trust-item {
+      display: flex; align-items: center; gap: 8px;
+      color: rgba(255,255,255,0.85); font-size: 0.85rem;
+    }
+    .trust-item svg { width: 16px; height: 16px; fill: var(--yellow); flex-shrink: 0; }
+    .trust-sep { width: 1px; height: 20px; background: rgba(255,255,255,0.15); }
+
+    /* ===== SUBJECTS ===== */
+    .subjects { background: var(--gray-50); }
+    .subjects-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
+    }
+    .subject-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform var(--transition), box-shadow var(--transition);
+      cursor: default;
+    }
+    .subject-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+    .subject-img {
+      width: 100%; height: 200px; object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .subject-card:hover .subject-img { transform: scale(1.05); }
+    .subject-img-wrap { overflow: hidden; }
+    .subject-body { padding: 24px; }
+    .subject-icon {
+      width: 48px; height: 48px;
+      background: var(--blue-muted);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 14px;
+    }
+    .subject-name {
+      font-size: 1.15rem; font-weight: 700; color: var(--blue-dark);
+      margin-bottom: 6px;
+    }
+    .subject-grades {
+      font-size: 0.75rem; font-weight: 600;
+      color: var(--blue);
+      background: var(--blue-muted);
+      display: inline-block;
+      padding: 3px 10px; border-radius: 100px;
+      margin-bottom: 10px;
+    }
+    .subject-desc { font-size: 0.88rem; color: var(--gray-500); line-height: 1.6; }
+    .subject-topics {
+      margin-top: 14px;
+      display: flex; flex-wrap: wrap; gap: 6px;
+    }
+    .topic-tag {
+      font-size: 0.72rem; font-weight: 600;
+      background: var(--yellow-light);
+      color: var(--yellow-dark);
+      padding: 3px 10px; border-radius: 100px;
+    }
+
+    /* ===== METHODOLOGY ===== */
+    .methodology {
+      background: var(--white);
+      position: relative; overflow: hidden;
+    }
+    .methodology::before {
+      content: '';
+      position: absolute; top: 0; right: 0;
+      width: 480px; height: 480px;
+      background: radial-gradient(circle, rgba(26,58,143,0.05) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .method-layout {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+    }
+    .method-img-wrap {
+      position: relative;
+    }
+    .method-img {
+      width: 100%; aspect-ratio: 4/5; object-fit: cover;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+    }
+    .method-badge-over {
+      position: absolute;
+      bottom: -20px; right: -20px;
+      background: var(--blue);
+      color: var(--white);
+      padding: 20px 22px;
+      border-radius: var(--radius);
+      text-align: center;
+      box-shadow: var(--shadow-lg);
+      animation: float 3.5s ease-in-out infinite;
+    }
+    .method-badge-over .big { font-size: 2rem; font-weight: 800; color: var(--yellow); display: block; }
+    .method-badge-over .small { font-size: 0.75rem; color: rgba(255,255,255,0.8); }
+    .method-steps { display: flex; flex-direction: column; gap: 24px; }
+    .method-step {
+      display: flex; gap: 18px; align-items: flex-start;
+      padding: 20px;
+      border-radius: var(--radius);
+      transition: background var(--transition), box-shadow var(--transition);
+      cursor: default;
+    }
+    .method-step:hover {
+      background: var(--blue-muted);
+      box-shadow: 0 4px 16px rgba(26,58,143,0.08);
+    }
+    .step-num {
+      width: 44px; height: 44px; flex-shrink: 0;
+      background: var(--blue);
+      color: var(--white);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; font-weight: 800;
+      transition: background var(--transition);
+    }
+    .method-step:hover .step-num { background: var(--yellow-dark); color: var(--blue-dark); }
+    .step-content h4 {
+      font-size: 1rem; font-weight: 700; color: var(--text);
+      margin-bottom: 4px;
+    }
+    .step-content p { font-size: 0.875rem; color: var(--gray-500); }
+
+    /* ===== RESULTS ===== */
+    .results { background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 100%); }
+    .results-header { text-align: center; margin-bottom: 56px; }
+    .results-header .section-label { background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.9); }
+    .results-header .section-title { color: var(--white); }
+    .results-header .section-sub { color: rgba(255,255,255,0.7); }
+    .results-metrics {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+      margin-bottom: 56px;
+    }
+    .metric-card {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: var(--radius-lg);
+      padding: 28px 20px;
+      text-align: center;
+      backdrop-filter: blur(8px);
+      transition: var(--transition);
+    }
+    .metric-card:hover { background: rgba(255,255,255,0.17); transform: translateY(-4px); }
+    .metric-card .metric-num {
+      font-size: 2.5rem; font-weight: 900;
+      color: var(--yellow);
+      display: block; line-height: 1;
+      margin-bottom: 6px;
+    }
+    .metric-card .metric-label {
+      font-size: 0.82rem; color: rgba(255,255,255,0.75);
+      text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    /* Testimonials */
+    .testimonials-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+    }
+    .testimonial-card {
+      background: rgba(255,255,255,0.95);
+      border-radius: var(--radius-lg);
+      padding: 26px;
+      position: relative;
+      transition: var(--transition);
+    }
+    .testimonial-card:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(0,0,0,0.2); }
+    .quote-icon {
+      font-size: 3rem; font-weight: 800; line-height: 1;
+      color: var(--blue-muted);
+      position: absolute; top: 16px; right: 20px;
+      font-family: Georgia, serif;
+    }
+    .stars { color: #f59e0b; font-size: 0.85rem; margin-bottom: 10px; letter-spacing: 2px; }
+    .testimonial-text {
+      font-size: 0.9rem; color: var(--gray-700);
+      line-height: 1.7; margin-bottom: 18px;
+      font-style: italic;
+    }
+    .testimonial-result {
+      background: var(--yellow-light);
+      border-left: 3px solid var(--yellow-dark);
+      padding: 8px 12px;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.8rem; font-weight: 700;
+      color: var(--yellow-dark);
+      margin-bottom: 16px;
+    }
+    .testimonial-author {
+      display: flex; align-items: center; gap: 10px;
+    }
+    .author-avatar {
+      width: 42px; height: 42px;
+      border-radius: 50%; object-fit: cover;
+      border: 2px solid var(--blue-muted);
+    }
+    .author-name { font-size: 0.88rem; font-weight: 700; color: var(--text); }
+    .author-role { font-size: 0.75rem; color: var(--gray-500); }
+
+    /* ===== TUTORS ===== */
+    .tutors { background: var(--gray-50); }
+    .tutors-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
+    }
+    .tutor-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      text-align: center;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .tutor-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
+    .tutor-img-wrap { position: relative; overflow: hidden; }
+    .tutor-img {
+      width: 100%; height: 240px; object-fit: cover; object-position: top;
+      transition: transform 0.5s ease;
+    }
+    .tutor-card:hover .tutor-img { transform: scale(1.06); }
+    .tutor-subject-badge {
+      position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%);
+      background: var(--yellow);
+      color: var(--blue-dark);
+      padding: 5px 16px;
+      border-radius: 100px;
+      font-size: 0.75rem; font-weight: 700;
+      white-space: nowrap;
+    }
+    .tutor-body { padding: 22px 24px 28px; }
+    .tutor-name { font-size: 1.1rem; font-weight: 800; color: var(--blue-dark); margin-bottom: 3px; }
+    .tutor-qual { font-size: 0.8rem; color: var(--blue); font-weight: 600; margin-bottom: 10px; }
+    .tutor-desc { font-size: 0.85rem; color: var(--gray-500); line-height: 1.6; margin-bottom: 14px; }
+    .tutor-stats { display: flex; justify-content: center; gap: 24px; }
+    .tutor-stat .val { font-size: 1.1rem; font-weight: 800; color: var(--blue-dark); display: block; }
+    .tutor-stat .lbl { font-size: 0.7rem; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.3px; }
+
+    /* ===== FEES ===== */
+    .fees { background: var(--white); }
+    .fees-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+      align-items: start;
+    }
+    .fee-card {
+      border-radius: var(--radius-lg);
+      border: 2px solid var(--gray-100);
+      padding: 32px 26px;
+      transition: transform var(--transition), box-shadow var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .fee-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+    .fee-card.popular {
+      border-color: var(--blue);
+      background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 100%);
+      color: var(--white);
+      transform: scale(1.04);
+    }
+    .fee-card.popular:hover { transform: scale(1.04) translateY(-6px); }
+    .popular-badge {
+      position: absolute; top: 16px; right: 16px;
+      background: var(--yellow);
+      color: var(--blue-dark);
+      font-size: 0.7rem; font-weight: 800;
+      padding: 4px 12px; border-radius: 100px;
+      text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .fee-plan { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+    .fee-card:not(.popular) .fee-plan { color: var(--blue); }
+    .fee-card.popular .fee-plan { color: var(--yellow); }
+    .fee-price {
+      font-size: 2.4rem; font-weight: 900; line-height: 1;
+      margin-bottom: 4px;
+    }
+    .fee-card:not(.popular) .fee-price { color: var(--blue-dark); }
+    .fee-card.popular .fee-price { color: var(--white); }
+    .fee-period { font-size: 0.8rem; margin-bottom: 16px; }
+    .fee-card:not(.popular) .fee-period { color: var(--gray-500); }
+    .fee-card.popular .fee-period { color: rgba(255,255,255,0.7); }
+    .fee-divider { height: 1px; margin: 16px 0; }
+    .fee-card:not(.popular) .fee-divider { background: var(--gray-100); }
+    .fee-card.popular .fee-divider { background: rgba(255,255,255,0.2); }
+    .fee-features { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
+    .fee-feature {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 0.875rem;
+    }
+    .fee-card:not(.popular) .fee-feature { color: var(--gray-700); }
+    .fee-card.popular .fee-feature { color: rgba(255,255,255,0.9); }
+    .fee-feature svg { width: 16px; height: 16px; flex-shrink: 0; }
+    .fee-card:not(.popular) .fee-feature svg { fill: #22c55e; }
+    .fee-card.popular .fee-feature svg { fill: var(--yellow); }
+    .fee-btn {
+      display: block; width: 100%;
+      padding: 12px;
+      border-radius: var(--radius);
+      font-weight: 700; font-size: 0.95rem;
+      cursor: pointer; border: none;
+      transition: var(--transition);
+      text-align: center;
+    }
+    .fee-card:not(.popular) .fee-btn {
+      background: var(--blue-muted);
+      color: var(--blue-dark);
+    }
+    .fee-card:not(.popular) .fee-btn:hover { background: var(--blue); color: var(--white); }
+    .fee-card.popular .fee-btn {
+      background: var(--yellow);
+      color: var(--blue-dark);
+    }
+    .fee-card.popular .fee-btn:hover { background: var(--yellow-dark); }
+    .fee-note {
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--gray-500);
+      margin-top: 28px;
+    }
+
+    /* ===== CONTACT ===== */
+    .contact { background: var(--gray-50); }
+    .contact-layout {
+      display: grid; grid-template-columns: 1fr 1.4fr; gap: 60px; align-items: start;
+    }
+    .contact-info h3 {
+      font-size: 1.35rem; font-weight: 700; color: var(--blue-dark);
+      margin-bottom: 8px;
+    }
+    .contact-info > p { font-size: 0.9rem; color: var(--gray-500); margin-bottom: 28px; }
+    .contact-detail {
+      display: flex; gap: 14px; align-items: flex-start;
+      margin-bottom: 20px;
+    }
+    .contact-detail .icon-wrap {
+      width: 44px; height: 44px; flex-shrink: 0;
+      background: var(--blue-muted);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .contact-detail .icon-wrap svg { width: 20px; height: 20px; fill: var(--blue); }
+    .contact-detail .txt strong { display: block; font-size: 0.88rem; font-weight: 700; color: var(--text); margin-bottom: 2px; }
+    .contact-detail .txt span { font-size: 0.83rem; color: var(--gray-500); }
+    .wa-info-btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: #25d366;
+      color: var(--white);
+      padding: 12px 22px;
+      border-radius: var(--radius);
+      font-weight: 700; font-size: 0.9rem;
+      border: none; cursor: pointer;
+      margin-top: 8px;
+      transition: var(--transition);
+    }
+    .wa-info-btn:hover { background: #1ebe5b; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37,211,102,0.35); }
+    .wa-info-btn svg { width: 20px; height: 20px; fill: white; }
+
+    /* Contact Form */
+    .contact-form-wrap {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 36px 32px;
+      box-shadow: var(--shadow);
+    }
+    .contact-form-wrap h3 { font-size: 1.2rem; font-weight: 700; color: var(--blue-dark); margin-bottom: 20px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label {
+      display: block; font-size: 0.8rem; font-weight: 600;
+      color: var(--gray-700); margin-bottom: 5px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 11px 14px;
+      border: 2px solid var(--gray-100);
+      border-radius: var(--radius);
+      font-size: 0.9rem;
+      color: var(--text);
+      background: var(--gray-50);
+      transition: border-color var(--transition);
+      font-family: inherit;
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--blue);
+      background: var(--white);
+    }
+    .form-group textarea { resize: vertical; min-height: 90px; }
+    .form-submit {
+      width: 100%;
+      padding: 13px;
+      background: var(--blue);
+      color: var(--white);
+      border: none; border-radius: var(--radius);
+      font-size: 0.95rem; font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition);
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+    }
+    .form-submit:hover { background: var(--blue-dark); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(26,58,143,0.25); }
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 24px;
+    }
+    .form-success .check { font-size: 2.5rem; margin-bottom: 10px; }
+    .form-success p { font-size: 0.95rem; color: var(--gray-500); }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--blue-dark);
+      color: rgba(255,255,255,0.8);
+      padding: 56px 0 0;
+    }
+    .footer-inner {
+      max-width: 1200px; margin: 0 auto; padding: 0 24px;
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px;
+      margin-bottom: 48px;
+    }
+    .footer-brand .brand-name { font-size: 1.1rem; font-weight: 700; color: var(--white); margin-bottom: 6px; }
+    .footer-brand p { font-size: 0.85rem; line-height: 1.7; max-width: 260px; }
+    .footer-brand .footer-rating {
+      display: flex; align-items: center; gap: 6px;
+      margin-top: 14px; font-size: 0.82rem;
+    }
+    .footer-brand .footer-rating .stars { font-size: 0.75rem; }
+    .footer-col h4 { font-size: 0.85rem; font-weight: 700; color: var(--white); margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .footer-col ul li { margin-bottom: 8px; }
+    .footer-col ul li a { font-size: 0.82rem; transition: color var(--transition); }
+    .footer-col ul li a:hover { color: var(--yellow); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding: 20px 24px;
+      max-width: 1200px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 10px;
+    }
+    .footer-bottom p { font-size: 0.78rem; }
+    .footer-bottom .links { display: flex; gap: 20px; }
+    .footer-bottom .links a { font-size: 0.78rem; transition: color var(--transition); }
+    .footer-bottom .links a:hover { color: var(--yellow); }
+
+    /* ===== FLOATING WHATSAPP ===== */
+    .wa-float {
+      position: fixed; bottom: 28px; right: 28px; z-index: 900;
+    }
+    .wa-float-btn {
+      width: 58px; height: 58px;
+      background: #25d366;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 8px 24px rgba(37,211,102,0.4);
+      cursor: pointer; border: none;
+      transition: transform var(--transition), box-shadow var(--transition);
+      position: relative;
+    }
+    .wa-float-btn:hover { transform: scale(1.1); box-shadow: 0 12px 32px rgba(37,211,102,0.55); }
+    .wa-float-btn svg { width: 30px; height: 30px; fill: white; }
+    .wa-float-btn::before {
+      content: '';
+      position: absolute; inset: 0;
+      border-radius: 50%;
+      border: 2px solid #25d366;
+      animation: pulse-ring 2s ease-out infinite;
+    }
+    .wa-tooltip {
+      position: absolute; right: 68px; bottom: 50%;
+      transform: translateY(50%);
+      background: var(--white);
+      color: var(--text);
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 0.8rem; font-weight: 600;
+      white-space: nowrap;
+      box-shadow: var(--shadow);
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.2s ease;
+    }
+    .wa-float:hover .wa-tooltip { opacity: 1; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .subjects-grid,
+      .tutors-grid { grid-template-columns: repeat(2, 1fr); }
+      .results-metrics { grid-template-columns: repeat(2, 1fr); }
+      .testimonials-grid { grid-template-columns: 1fr 1fr; }
+      .footer-inner { grid-template-columns: 1fr 1fr; gap: 32px; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+      .hero-image-wrap { order: -1; }
+      .hero-badge-float.top-left { top: -10px; left: 10px; }
+      .hero-badge-float.bottom-right { bottom: -10px; right: 10px; }
+      .hero-stats { grid-template-columns: repeat(3, 1fr); }
+      .method-layout { grid-template-columns: 1fr; }
+      .method-img-wrap { display: none; }
+      .subjects-grid,
+      .tutors-grid,
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .results-metrics { grid-template-columns: repeat(2, 1fr); }
+      .fees-grid { grid-template-columns: 1fr; }
+      .fee-card.popular { transform: none; }
+      .fee-card.popular:hover { transform: translateY(-6px); }
+      .contact-layout { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr; gap: 28px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      section { padding: 60px 0; }
+    }
+    @media (max-width: 480px) {
+      .hero-stats { grid-template-columns: 1fr; }
+      .hero-actions { flex-direction: column; }
+      .btn-primary, .btn-outline { width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="nav-brand">
+      <div class="nav-logo-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+      </div>
+      <div class="nav-brand-text">
+        <span class="name">BrightMind</span>
+        <span class="tagline">Academic Tutoring · Aundh, Pune</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="#subjects">Subjects</a>
+      <a href="#methodology">Our Method</a>
+      <a href="#results">Results</a>
+      <a href="#tutors">Tutors</a>
+      <a href="#fees">Fees</a>
+      <a href="#contact" class="nav-cta">Book Free Demo</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#subjects" onclick="closeMobileNav()">Subjects</a>
+  <a href="#methodology" onclick="closeMobileNav()">Our Method</a>
+  <a href="#results" onclick="closeMobileNav()">Results</a>
+  <a href="#tutors" onclick="closeMobileNav()">Tutors</a>
+  <a href="#fees" onclick="closeMobileNav()">Fees</a>
+  <a href="#contact" class="mobile-cta" onclick="closeMobileNav()"> Book Free Demo Class</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        Aundh, Pune's Most Trusted Tutors
+      </div>
+      <h1>Your Child Deserves <span class="accent">Top Marks</span> — Not Just Better Marks</h1>
+      <p class="hero-desc">Expert CBSE & SSC coaching for 8th–12th grade in Science, Maths & English. Small batches, personalised attention, and a proven method that delivers results every board season.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          Book Free Demo Class
+        </a>
+        <a href="tel:+919876543210" class="btn-outline">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          Call Us Now
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="num" data-count="950">0</span>
+          <span class="label">Students Coached</span>
+        </div>
+        <div class="hero-stat">
+          <span class="num" data-count="95" data-suffix="%">0</span>
+          <span class="label">Score Above 85%</span>
+        </div>
+        <div class="hero-stat">
+          <span class="num" data-count="8">0</span>
+          <span class="label">Years Teaching</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-image-wrap">
+      <img
+        src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=700&h=560&fit=crop&q=80"
+        alt="Students studying at BrightMind tutoring centre Aundh Pune"
+        class="hero-img"
+        loading="eager"
+      />
+      <div class="hero-badge-float top-left">
+        <div class="icon"></div>
+        <div class="info">
+          <span class="val">47 Students</span>
+          <span class="txt">Scored 90%+ in 2024</span>
+        </div>
+      </div>
+      <div class="hero-badge-float bottom-right">
+        <div class="icon">⭐</div>
+        <div class="info">
+          <span class="val">4.9 / 5 Rating</span>
+          <span class="txt">187 Parent Reviews</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+      CBSE & SSC Certified Tutors
+    </div>
+    <div class="trust-sep"></div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+      Max 8 Students Per Batch
+    </div>
+    <div class="trust-sep"></div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+      8th–12th Grade Specialists
+    </div>
+    <div class="trust-sep"></div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+      Aundh, Baner & Wakad Students Welcome
+    </div>
+    <div class="trust-sep"></div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+      Free Demo Class for New Students
+    </div>
+  </div>
+</div>
+
+<!-- SUBJECTS -->
+<section class="subjects" id="subjects">
+  <div class="container">
+    <div class="section-center" data-aos="fade-up">
+      <span class="section-label">What We Teach</span>
+      <h2 class="section-title">Three Subjects. One Goal: <span class="accent">Excellence.</span></h2>
+      <div class="divider center"></div>
+      <p class="section-sub">Every subject is taught by a specialist tutor who knows the CBSE and SSC syllabus inside out — from concept-building to exam technique.</p>
+    </div>
+    <div class="subjects-grid">
+      <div class="subject-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="subject-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1532094349884-543559fee2f0?w=600&h=300&fit=crop&q=80"
+            alt="Science tutoring CBSE Aundh Pune"
+            class="subject-img"
+            loading="lazy"
+          />
+        </div>
+        <div class="subject-body">
+          <div class="subject-icon"></div>
+          <div class="subject-name">Science</div>
+          <span class="subject-grades">8th – 12th · CBSE / SSC</span>
+          <p class="subject-desc">Physics, Chemistry and Biology — taught with real-world analogies and concept clarity. Board exam patterns are drilled systematically every term.</p>
+          <div class="subject-topics">
+            <span class="topic-tag">Physics</span>
+            <span class="topic-tag">Chemistry</span>
+            <span class="topic-tag">Biology</span>
+            <span class="topic-tag">Numericals</span>
+            <span class="topic-tag">Diagrams</span>
+          </div>
+        </div>
+      </div>
+      <div class="subject-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="subject-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1509228468518-180dd4864904?w=600&h=300&fit=crop&q=80"
+            alt="Maths tutoring CBSE SSC Pune"
+            class="subject-img"
+            loading="lazy"
+          />
+        </div>
+        <div class="subject-body">
+          <div class="subject-icon"></div>
+          <div class="subject-name">Mathematics</div>
+          <span class="subject-grades">8th – 12th · CBSE / SSC</span>
+          <p class="subject-desc">We turn Maths from a fear to a strength. Step-by-step problem solving, shortcut techniques, and timed practice sessions that build exam confidence.</p>
+          <div class="subject-topics">
+            <span class="topic-tag">Algebra</span>
+            <span class="topic-tag">Geometry</span>
+            <span class="topic-tag">Calculus</span>
+            <span class="topic-tag">Statistics</span>
+            <span class="topic-tag">Trigonometry</span>
+          </div>
+        </div>
+      </div>
+      <div class="subject-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="subject-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&h=300&fit=crop&q=80"
+            alt="English tutoring grammar writing Pune"
+            class="subject-img"
+            loading="lazy"
+          />
+        </div>
+        <div class="subject-body">
+          <div class="subject-icon"></div>
+          <div class="subject-name">English</div>
+          <span class="subject-grades">8th – 12th · CBSE / SSC</span>
+          <p class="subject-desc">Grammar, creative and formal writing, comprehension, and literature analysis. Students learn to write answers that command full marks.</p>
+          <div class="subject-topics">
+            <span class="topic-tag">Grammar</span>
+            <span class="topic-tag">Writing</span>
+            <span class="topic-tag">Comprehension</span>
+            <span class="topic-tag">Literature</span>
+            <span class="topic-tag">Vocabulary</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METHODOLOGY -->
+<section class="methodology" id="methodology">
+  <div class="container">
+    <div class="method-layout">
+      <div class="method-img-wrap" data-aos="fade-right">
+        <img
+          src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=560&h=700&fit=crop&q=80"
+          alt="One on one tutoring teaching methodology"
+          class="method-img"
+          loading="lazy"
+        />
+        <div class="method-badge-over">
+          <span class="big">8+</span>
+          <span class="small">Years of Board<br>Exam Expertise</span>
+        </div>
+      </div>
+      <div data-aos="fade-left">
+        <span class="section-label">How We Teach</span>
+        <h2 class="section-title">A Method Built Around <span class="accent">Your Child's Pace</span></h2>
+        <div class="divider"></div>
+        <p style="font-size:0.95rem;color:var(--gray-500);margin-bottom:28px;">We don't believe in one-size-fits-all tutoring. Every student starts with a diagnostic assessment and gets a custom learning plan that bridges gaps and builds momentum towards the board exams.</p>
+        <div class="method-steps">
+          <div class="method-step" data-aos="fade-up" data-aos-delay="50">
+            <div class="step-num">01</div>
+            <div class="step-content">
+              <h4>Diagnostic Assessment</h4>
+              <p>We identify exact conceptual gaps in the first session — no guesswork, no time wasted on topics already mastered.</p>
+            </div>
+          </div>
+          <div class="method-step" data-aos="fade-up" data-aos-delay="100">
+            <div class="step-num">02</div>
+            <div class="step-content">
+              <h4>Concept-First Teaching</h4>
+              <p>Every formula and rule is explained with real-world context before moving to examples. Understanding, not memorisation.</p>
+            </div>
+          </div>
+          <div class="method-step" data-aos="fade-up" data-aos-delay="150">
+            <div class="step-num">03</div>
+            <div class="step-content">
+              <h4>Structured Practice & Revision</h4>
+              <p>Weekly tests, past board papers, and chapter-wise revision ensure retention is deep and consistent all year long.</p>
+            </div>
+          </div>
+          <div class="method-step" data-aos="fade-up" data-aos-delay="200">
+            <div class="step-num">04</div>
+            <div class="step-content">
+              <h4>Parent Progress Reports</h4>
+              <p>Monthly written reports and WhatsApp updates keep parents fully informed of progress, attendance, and exam readiness.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS & TESTIMONIALS -->
+<section class="results" id="results">
+  <div class="container">
+    <div class="results-header" data-aos="fade-up">
+      <span class="section-label">Student Success</span>
+      <h2 class="section-title">Numbers That Speak for <span style="color:var(--yellow)">Themselves</span></h2>
+      <div class="divider center"></div>
+      <p class="section-sub">Every March, our students walk into board exams prepared, confident, and ready to score. Here's what eight years of dedicated teaching looks like.</p>
+    </div>
+    <div class="results-metrics">
+      <div class="metric-card" data-aos="zoom-in" data-aos-delay="0">
+        <span class="metric-num" data-count="950">0</span>
+        <span class="metric-label">Total Students Coached</span>
+      </div>
+      <div class="metric-card" data-aos="zoom-in" data-aos-delay="80">
+        <span class="metric-num" data-count="95" data-suffix="%">0</span>
+        <span class="metric-label">Students Score 85%+</span>
+      </div>
+      <div class="metric-card" data-aos="zoom-in" data-aos-delay="160">
+        <span class="metric-num" data-count="47">0</span>
+        <span class="metric-label">Students Scored 90%+ (2024)</span>
+      </div>
+      <div class="metric-card" data-aos="zoom-in" data-aos-delay="240">
+        <span class="metric-num" data-count="4.9">0</span>
+        <span class="metric-label">Average Parent Rating / 5</span>
+      </div>
+    </div>
+    <!-- Testimonials -->
+    <div class="testimonials-grid">
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="quote-icon">"</div>
+        <div class="stars"></div>
+        <p class="testimonial-text">My daughter used to dread Physics. After joining BrightMind, she started explaining concepts to me at dinner! Her board score jumped from 64% to 89% in one year.</p>
+        <div class="testimonial-result"> Science: 64% → 89% (2024 Boards)</div>
+        <div class="testimonial-author">
+          <img
+            src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=100&h=100&fit=crop&q=80"
+            alt="Parent testimonial"
+            class="author-avatar"
+            loading="lazy"
+          />
+          <div>
+            <div class="author-name">Anita Sharma</div>
+            <div class="author-role">Parent of Class 10 Student</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="quote-icon">"</div>
+        <div class="stars"></div>
+        <p class="testimonial-text">Rohan went from failing Maths tests to scoring 94 out of 100 in his Class 12 boards. The tutors here don't just teach — they build confidence. Highly recommend.</p>
+        <div class="testimonial-result"> Maths: 48% → 94% (2024 Boards)</div>
+        <div class="testimonial-author">
+          <img
+            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&q=80"
+            alt="Parent testimonial"
+            class="author-avatar"
+            loading="lazy"
+          />
+          <div>
+            <div class="author-name">Rajesh Kulkarni</div>
+            <div class="author-role">Parent of Class 12 Student</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="quote-icon">"</div>
+        <div class="stars"></div>
+        <p class="testimonial-text">The monthly progress reports are brilliant — I always knew exactly where Priya stood. The English writing sessions transformed her answer presentation completely.</p>
+        <div class="testimonial-result"> English: 72% → 92% (2024 Boards)</div>
+        <div class="testimonial-author">
+          <img
+            src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&q=80"
+            alt="Parent testimonial"
+            class="author-avatar"
+            loading="lazy"
+          />
+          <div>
+            <div class="author-name">Meena Joshi</div>
+            <div class="author-role">Parent of Class 10 Student</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TUTOR PROFILES -->
+<section class="tutors" id="tutors">
+  <div class="container">
+    <div class="section-center" data-aos="fade-up">
+      <span class="section-label">Meet the Team</span>
+      <h2 class="section-title">Expert Tutors Who <span class="accent">Know the Syllabus Cold</span></h2>
+      <div class="divider center"></div>
+      <p class="section-sub">Our tutors are subject specialists with postgraduate qualifications and years of board exam coaching experience. They know exactly what examiners want.</p>
+    </div>
+    <div class="tutors-grid">
+      <div class="tutor-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="tutor-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=480&h=360&fit=crop&q=80"
+            alt="Science tutor BrightMind Pune"
+            class="tutor-img"
+            loading="lazy"
+          />
+          <span class="tutor-subject-badge">Science Specialist</span>
+        </div>
+        <div class="tutor-body">
+          <div class="tutor-name">Dr. Priya Deshmukh</div>
+          <div class="tutor-qual">M.Sc. Physics · B.Ed. · 9 Years Experience</div>
+          <p class="tutor-desc">Former faculty at Fergusson College. Specialises in turning abstract science concepts into vivid, memorable explanations. All students score above 80% under her guidance.</p>
+          <div class="tutor-stats">
+            <div class="tutor-stat">
+              <span class="val">320+</span>
+              <span class="lbl">Students</span>
+            </div>
+            <div class="tutor-stat">
+              <span class="val">91%</span>
+              <span class="lbl">Avg. Score</span>
+            </div>
+            <div class="tutor-stat">
+              <span class="val">9 yrs</span>
+              <span class="lbl">Teaching</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tutor-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="tutor-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=480&h=360&fit=crop&q=80"
+            alt="Maths tutor BrightMind Pune"
+            class="tutor-img"
+            loading="lazy"
+          />
+          <span class="tutor-subject-badge">Mathematics Specialist</span>
+        </div>
+        <div class="tutor-body">
+          <div class="tutor-name">Nikhil Patil</div>
+          <div class="tutor-qual">M.Sc. Mathematics · IIT Pune Alumnus · 7 Years</div>
+          <p class="tutor-desc">Passionate about making Maths approachable. Known for his "shortcut library" and step-by-step method that eliminates calculation errors in high-pressure exams.</p>
+          <div class="tutor-stats">
+            <div class="tutor-stat">
+              <span class="val">410+</span>
+              <span class="lbl">Students</span>
+            </div>
+            <div class="tutor-stat">
+              <span class="val">93%</span>
+              <span class="lbl">Avg. Score</span>
+            </div>
+            <div class="tutor-stat">
+              <span class="val">7 yrs</span>
+              <span class="lbl">Teaching</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tutor-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="tutor-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=480&h=360&fit=crop&q=80"
+            alt="English tutor BrightMind Pune"
+            class="tutor-img"
+            loading="lazy"
+          />
+          <span class="tutor-subject-badge">English Specialist</span>
+        </div>
+        <div class="tutor-body">
+          <div class="tutor-name">Sanika Gaikwad</div>
+          <div class="tutor-qual">M.A. English · B.Ed. · IELTS Certified · 6 Years</div>
+          <p class="tutor-desc">Sanika transforms students into confident English communicators. Her structured writing templates and answer-framing techniques are responsible for dozens of full-marks essays.</p>
+          <div class="tutor-stats">
+            <div class="tutor-stat">
+              <span class="val">280+</span>
+              <span class="lbl">Students</span>
+            </div>
+            <div class="tutor-stat">
+              <span class="val">89%</span>
+              <span class="lbl">Avg. Score</span>
+            </div>
+            <div class="tutor-stat">
+              <span class="val">6 yrs</span>
+              <span class="lbl">Teaching</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEE STRUCTURE -->
+<section class="fees" id="fees">
+  <div class="container">
+    <div class="section-center" data-aos="fade-up">
+      <span class="section-label">Fee Structure</span>
+      <h2 class="section-title">Transparent Pricing. <span class="yellow">No Hidden Charges.</span></h2>
+      <div class="divider center"></div>
+      <p class="section-sub">All plans include study materials, weekly tests, and monthly parent progress reports. No registration fee. First demo class is always free.</p>
+    </div>
+    <div class="fees-grid">
+      <!-- Standard -->
+      <div class="fee-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="fee-plan">Foundation</div>
+        <div class="fee-price">₹2,500</div>
+        <div class="fee-period">per month · 1 Subject</div>
+        <div class="fee-divider"></div>
+        <ul class="fee-features">
+          <li class="fee-feature"><svg viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>12 Classes / Month</li>
+          <li class="fee-feature"><svg viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>Printed Study Notes</li>
+          <li class="fee-feature"><svg viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>Weekly Chapter Test</li>
+          <li class="fee-feature"><svg viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>Monthly Parent Report</li>
+          <li class="fee-feature"><svg viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>WhatsApp Doubt Support</li>
+        </ul>
+        <a href="#contact" class="fee-btn">Get Started</a>
+      </div>
+      <!-- Popular -->
+      <div class="fee-card popular" data-aos="zoom-in" data-aos-delay="100">
+        <div class="popular-badge">Most Popular</div>
+        <div class="fee-plan">Scholar</div>
+        <div class="fee-price">₹4,200</div>
+        <div class="fee-period">per month · 2 Subjects</div>
+        <div class="fee-divider"></div>
+        <ul class="fee-features">
+          <li class="fee-feature"><svg viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>24 Classes / Month</li>
+          <li class="fee-feature"><svg viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>Notes + Workbooks</li>
+          <li class="fee-feature"><svg viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>2 Weekly Tests</li>
+          <li class="fee-feature"><svg viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>Biweekly Parent Meeting</li>
+          <li class="fee-feature"><svg viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>Priority Doubt Sessions</li>
+          <li class="fee-feature"><svg viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>Exam Strategy Workshop</li>
+        </ul>
+        <a href="#contact" class="fee-btn">Book Free Demo</a>
+      </div>
+      <!-- Elite -->
+      <div class="fee-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="fee-plan">BoardPro</div>
+        <div class="fee-price">₹5,800</div>
+        <div class="fee-period">per month · All 3 Subjects</div>
+        <div class="fee-divider"></div>
+        <ul class="fee-features">
+          <li class="fee-feature"><svg viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>36 Classes / Month</li>
+          <li class="fee-feature"><svg viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>Full Study Material Set</li>
+          <li class="fee-feature"><svg viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>3 Weekly Tests</li>
+          <li class="fee-feature"><svg viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>Weekly Parent Report</li>
+          <li class="fee-feature"><svg viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>All Year Round Support</li>
+          <li class="fee-feature"><svg viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>Board Exam Mock Series</li>
+        </ul>
+        <a href="#contact" class="fee-btn">Get Started</a>
+      </div>
+    </div>
+    <p class="fee-note" data-aos="fade-in">
+       <strong>Sibling discount: 15% off</strong> for second child &nbsp;|&nbsp; All fees include GST &nbsp;|&nbsp; Monthly payment — no long-term lock-in
+    </p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-center" data-aos="fade-up">
+      <span class="section-label">Book Your Demo</span>
+      <h2 class="section-title">Start with a <span class="accent">Free Class — No Commitment</span></h2>
+      <div class="divider center"></div>
+      <p class="section-sub">Fill in the form and we'll call you within 2 hours to schedule your child's free demo class at our Aundh centre.</p>
+    </div>
+    <div class="contact-layout">
+      <!-- Left info -->
+      <div data-aos="fade-right">
+        <h3>Visit Us in Aundh</h3>
+        <p>Come see the BrightMind learning environment. We're conveniently located near Parihar Chowk, easily accessible from Baner, Wakad, and Balewadi.</p>
+        <div class="contact-detail">
+          <div class="icon-wrap">
+            <svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <div class="txt">
+            <strong>Shop 12, Parihar Chowk Road</strong>
+            <span>Aundh, Pune – 411 007, Maharashtra</span>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="icon-wrap">
+            <svg viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          </div>
+          <div class="txt">
+            <strong>+91 98765 43210</strong>
+            <span>Mon–Fri: 3 PM – 9 PM · Weekends: 9 AM – 6 PM</span>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="icon-wrap">
+            <svg viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <div class="txt">
+            <strong>hello@brightmindtutor.in</strong>
+            <span>We respond within 4 hours</span>
+          </div>
+        </div>
+        <a
+          href="https://wa.me/919876543210?text=Hi%20BrightMind!%20I'd%20like%20to%20book%20a%20free%20demo%20class%20for%20my%20child.%20Please%20share%20available%20slots."
+          class="wa-info-btn"
+          target="_blank"
+          rel="noopener"
+        >
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 16.5c-.28.786-1.354 1.524-2.243 1.717-.6.13-1.384.235-4.02-.864-3.403-1.39-5.6-4.842-5.77-5.067-.168-.224-1.374-1.824-1.374-3.482 0-1.658.868-2.472 1.175-2.81.306-.337.67-.421.893-.421s.447.004.642.012c.207.009.484-.078.757.578.28.675.953 2.31 1.036 2.479.083.168.14.365.027.583-.112.22-.168.355-.336.547-.168.193-.353.43-.504.577-.168.168-.343.35-.148.687.196.337.869 1.43 1.867 2.317 1.283 1.14 2.363 1.494 2.7 1.662.336.168.532.14.728-.084.196-.224.84-.979 1.064-1.315.224-.336.448-.28.756-.168.308.112 1.96.925 2.296 1.092.336.168.56.252.644.392.083.14.083.802-.197 1.588z"/></svg>
+          Chat on WhatsApp
+        </a>
+      </div>
+      <!-- Contact Form -->
+      <div data-aos="fade-left">
+        <div class="contact-form-wrap">
+          <h3> Book Your Free Demo Class</h3>
+          <form id="contactForm" onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Parent / Guardian Name *</label>
+                <input type="text" placeholder="Ramesh Patil" required />
+              </div>
+              <div class="form-group">
+                <label>Student Name *</label>
+                <input type="text" placeholder="Aarav Patil" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Mobile Number *</label>
+                <input type="tel" placeholder="+91 98765 43210" required />
+              </div>
+              <div class="form-group">
+                <label>Current Grade *</label>
+                <select required>
+                  <option value="">Select Grade</option>
+                  <option>Grade 8</option>
+                  <option>Grade 9</option>
+                  <option>Grade 10 (SSC/CBSE Board)</option>
+                  <option>Grade 11</option>
+                  <option>Grade 12 (HSC/CBSE Board)</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Subject(s) Needed *</label>
+                <select required>
+                  <option value="">Select Subject</option>
+                  <option>Science</option>
+                  <option>Mathematics</option>
+                  <option>English</option>
+                  <option>Science + Maths</option>
+                  <option>All Three (Scholar / BoardPro)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Board</label>
+                <select>
+                  <option value="">Select Board</option>
+                  <option>CBSE</option>
+                  <option>SSC (Maharashtra State)</option>
+                  <option>Not Sure</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Message (Optional)</label>
+              <textarea placeholder="Tell us about your child's current challenges, preferred batch timing, or any specific topics where they need help..."></textarea>
+            </div>
+            <button type="submit" class="form-submit">
+              <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              Book Free Demo — We'll Call in 2 Hours
+            </button>
+          </form>
+          <div class="form-success" id="formSuccess">
+            <div class="check"></div>
+            <h4 style="margin-bottom:6px;color:var(--blue-dark)">Request Received!</h4>
+            <p>Thank you! Our team will call you within 2 hours to confirm your free demo class. Check your WhatsApp for a confirmation message.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="brand-name"> BrightMind Academic Tutoring</div>
+      <p>Expert CBSE & SSC coaching for 8th–12th grade students in Aundh, Pune. Science, Maths & English. Small batches, big results.</p>
+      <div class="footer-rating">
+        <span class="stars"></span>
+        <span>4.9/5 · 187 Reviews</span>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#subjects">Our Subjects</a></li>
+        <li><a href="#methodology">Teaching Method</a></li>
+        <li><a href="#results">Student Results</a></li>
+        <li><a href="#tutors">Meet Tutors</a></li>
+        <li><a href="#fees">Fee Structure</a></li>
+        <li><a href="#contact">Book Demo</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>We Teach</h4>
+      <ul>
+        <li><a href="#subjects">Science (PCB)</a></li>
+        <li><a href="#subjects">Mathematics</a></li>
+        <li><a href="#subjects">English</a></li>
+        <li><a href="#subjects">Grade 8 & 9</a></li>
+        <li><a href="#subjects">Grade 10 (Boards)</a></li>
+        <li><a href="#subjects">Grade 11 & 12</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+919876543210"> 98765 43210</a></li>
+        <li><a href="mailto:hello@brightmindtutor.in"> hello@brightmindtutor.in</a></li>
+        <li><a href="https://wa.me/919876543210" target="_blank"> WhatsApp Us</a></li>
+        <li><a href="#contact"> Aundh, Pune 411007</a></li>
+        <li><a href="#">Mon–Fri: 3 PM – 9 PM</a></li>
+        <li><a href="#">Weekends: 9 AM – 6 PM</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 BrightMind Academic Tutoring, Aundh Pune. All rights reserved.</p>
+    <div class="links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Refund Policy</a>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<div class="wa-float">
+  <a
+    href="https://wa.me/919876543210?text=Hi%20BrightMind!%20I'd%20like%20to%20book%20a%20free%20demo%20class%20for%20my%20child."
+    target="_blank"
+    rel="noopener"
+    class="wa-float-btn"
+    aria-label="Chat on WhatsApp"
+  >
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 16.5c-.28.786-1.354 1.524-2.243 1.717-.6.13-1.384.235-4.02-.864-3.403-1.39-5.6-4.842-5.77-5.067-.168-.224-1.374-1.824-1.374-3.482 0-1.658.868-2.472 1.175-2.81.306-.337.67-.421.893-.421s.447.004.642.012c.207.009.484-.078.757.578.28.675.953 2.31 1.036 2.479.083.168.14.365.027.583-.112.22-.168.355-.336.547-.168.193-.353.43-.504.577-.168.168-.343.35-.148.687.196.337.869 1.43 1.867 2.317 1.283 1.14 2.363 1.494 2.7 1.662.336.168.532.14.728-.084.196-.224.84-.979 1.064-1.315.224-.336.448-.28.756-.168.308.112 1.96.925 2.296 1.092.336.168.56.252.644.392.083.14.083.802-.197 1.588z"/></svg>
+  </a>
+  <div class="wa-tooltip">Book Demo on WhatsApp</div>
+</div>
+
+<script>
+  // ===== NAVBAR SCROLL =====
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
+
+  // ===== HAMBURGER MENU =====
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileNav.classList.toggle('open');
+  });
+  function closeMobileNav() {
+    hamburger.classList.remove('open');
+    mobileNav.classList.remove('open');
+  }
+  document.addEventListener('click', (e) => {
+    if (!navbar.contains(e.target) && !mobileNav.contains(e.target)) {
+      closeMobileNav();
+    }
+  });
+
+  // ===== AOS SCROLL ANIMATIONS =====
+  const aosObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const delay = entry.target.dataset.aosDelay || 0;
+        setTimeout(() => {
+          entry.target.classList.add('aos-animate');
+        }, parseInt(delay));
+        aosObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('[data-aos]').forEach(el => aosObserver.observe(el));
+
+  // ===== COUNTER ANIMATION =====
+  function animateCounter(el) {
+    const target = parseFloat(el.dataset.count);
+    const suffix = el.dataset.suffix || '';
+    const isDecimal = target !== Math.floor(target);
+    const duration = 1800;
+    const steps = 60;
+    const stepVal = target / steps;
+    let current = 0;
+    let step = 0;
+    const timer = setInterval(() => {
+      step++;
+      current = stepVal * step;
+      if (step >= steps) {
+        current = target;
+        clearInterval(timer);
+      }
+      el.textContent = isDecimal ? current.toFixed(1) + suffix : Math.floor(current) + (suffix || (target >= 100 ? '+' : ''));
+    }, duration / steps);
+  }
+
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        counterObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  document.querySelectorAll('[data-count]').forEach(el => counterObserver.observe(el));
+
+  // ===== FORM SUBMIT =====
+  function handleSubmit(e) {
+    e.preventDefault();
+    const form = document.getElementById('contactForm');
+    const success = document.getElementById('formSuccess');
+    form.style.display = 'none';
+    success.style.display = 'block';
+    success.style.animation = 'fadeUp 0.5s ease both';
+  }
+
+  // ===== SMOOTH ACTIVE NAV HIGHLIGHT =====
+  const sections = document.querySelectorAll('section[id], div[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const scrollSpy = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => {
+          link.style.color = link.getAttribute('href') === '#' + entry.target.id ? 'var(--blue)' : '';
+        });
+      }
+    });
+  }, { threshold: 0.4 });
+  sections.forEach(s => scrollSpy.observe(s));
+
+  // ===== CARD HOVER 3D TILT =====
+  document.querySelectorAll('.subject-card, .tutor-card, .fee-card').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card.style.transform = `perspective(800px) rotateX(${-y * 6}deg) rotateY(${x * 6}deg) translateY(-4px)`;
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+    });
+  });
+</script>
+</body>
+</html>
