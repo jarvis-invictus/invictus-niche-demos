@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EventEdge Corporate Solutions | Premier Corporate Events in Pune</title>
+<meta name="description" content="EventEdge Corporate Solutions — Elevating Corporate Experiences Since 2017. Conferences, team building, product launches & more in Pune.">
+<meta property="og:title" content="EventEdge Corporate Solutions">
+<meta property="og:description" content="Elevating Corporate Experiences Since 2017. Premier corporate event management in Pune.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&h=630&fit=crop">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://eventedge.in">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"EventPlanning","name":"EventEdge Corporate Solutions","url":"https://eventedge.in","logo":"https://eventedge.in/logo.png","description":"Premier corporate event management company in Pune","address":{"@type":"PostalAddress","streetAddress":"Hinjewadi Phase 1","addressLocality":"Pune","addressRegion":"Maharashtra","postalCode":"411057","addressCountry":"IN"},"telephone":"+91-98765-43210"},{"@context":"https://schema.org","@type":"LocalBusiness","name":"EventEdge Corporate Solutions","image":"https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800","address":{"@type":"PostalAddress","streetAddress":"Hinjewadi Phase 1","addressLocality":"Pune","addressRegion":"Maharashtra","postalCode":"411057","addressCountry":"IN"},"telephone":"+91-98765-43210","priceRange":"₹₹₹","openingHours":"Mo-Sa 09:00-19:00"}]</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--mb:#1a1f3a;--teal:#00c9a7;--w:#fff;--bg:#f4f6fb;--gray:#64748b}
+body{font-family:'Inter',sans-serif;color:var(--mb);overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{max-width:1140px;margin:0 auto;padding:0 20px}
+/* Nav */
+nav{position:fixed;top:0;width:100%;background:rgba(26,31,58,.95);backdrop-filter:blur(8px);z-index:100;padding:14px 0}
+nav .container{display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:'Space Grotesk',sans-serif;font-size:1.4rem;color:var(--w);font-weight:700}
+.logo span{color:var(--teal)}
+.nav-links{display:flex;gap:24px;list-style:none}
+.nav-links a{color:rgba(255,255,255,.8);font-size:.9rem;font-weight:500;transition:color .3s}
+.nav-links a:hover{color:var(--teal)}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:0;border:0;padding:4px}
+.burger span{width:24px;height:2px;background:var(--w);transition:.3s}
+.cta-btn{display:inline-block;background:var(--teal);color:var(--mb);padding:12px 28px;border-radius:8px;font-weight:600;font-size:.95rem;transition:transform .2s,box-shadow .2s;border:0;cursor:pointer}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,201,167,.35)}
+.cta-btn.outline{background:0;border:2px solid var(--teal);color:var(--teal)}
+/* Hero */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;background:linear-gradient(135deg,var(--mb) 0%,#0f1229 100%);overflow:hidden;padding:100px 0 60px}
+.hero::before{content:'';position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&q=75') center/cover;opacity:.15}
+.hero .container{position:relative;z-index:1}
+.hero-tag{display:inline-block;background:rgba(0,201,167,.15);color:var(--teal);padding:6px 16px;border-radius:20px;font-size:.85rem;font-weight:500;margin-bottom:20px}
+.hero h1{font-size:clamp(2rem,5vw,3.4rem);color:var(--w);line-height:1.15;margin-bottom:16px}
+.hero h1 span{color:var(--teal)}
+.hero p{color:rgba(255,255,255,.7);font-size:1.1rem;max-width:540px;margin-bottom:32px;line-height:1.6}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:48px}
+.stats{display:flex;gap:40px;flex-wrap:wrap}
+.stat h3{font-size:2rem;color:var(--teal)}
+.stat p{color:rgba(255,255,255,.6);font-size:.85rem;margin-top:2px}
+/* Sections */
+section{padding:80px 0}
+.section-tag{display:inline-block;color:var(--teal);font-weight:600;font-size:.85rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.section-title{font-size:clamp(1.6rem,3.5vw,2.4rem);margin-bottom:12px}
+.section-sub{color:var(--gray);max-width:560px;line-height:1.6;margin-bottom:48px}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .6s,transform .6s}
+.reveal.visible{opacity:1;transform:none}
+/* Services */
+.services{background:var(--bg)}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.s-card{background:var(--w);border-radius:12px;padding:32px 24px;transition:transform .3s,box-shadow .3s}
+.s-card:hover{transform:translateY(-6px);box-shadow:0 12px 32px rgba(26,31,58,.1)}
+.s-icon{width:48px;height:48px;background:rgba(0,201,167,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:16px}
+.s-card h3{font-size:1.15rem;margin-bottom:8px}
+.s-card p{color:var(--gray);font-size:.9rem;line-height:1.5}
+/* Clients */
+.clients-grid{display:flex;flex-wrap:wrap;gap:24px;justify-content:center;align-items:center}
+.client-logo{background:var(--bg);padding:20px 32px;border-radius:10px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;color:var(--mb);opacity:.7;transition:opacity .3s}
+.client-logo:hover{opacity:1}
+/* Packages */
+.packages{background:var(--bg)}
+.pkg-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;align-items:start}
+.pkg{background:var(--w);border-radius:16px;padding:36px 28px;position:relative;transition:transform .3s}
+.pkg.featured{border:2px solid var(--teal);transform:scale(1.03)}
+.pkg.featured .pkg-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--teal);color:var(--mb);padding:4px 18px;border-radius:20px;font-size:.8rem;font-weight:600}
+.pkg h3{font-size:1.3rem;margin-bottom:4px}
+.pkg .price{font-size:2rem;font-weight:700;color:var(--teal);margin:12px 0 4px}
+.pkg .price small{font-size:.9rem;color:var(--gray);font-weight:400}
+.pkg ul{list-style:none;margin:20px 0 28px}
+.pkg li{padding:8px 0;font-size:.9rem;color:#475569;border-bottom:1px solid #f1f5f9}
+.pkg li::before{content:'';color:var(--teal);font-weight:700;margin-right:8px}
+/* Testimonials */
+.test-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.test-card{background:var(--bg);border-radius:12px;padding:28px 24px}
+.test-card p{color:#475569;font-size:.95rem;line-height:1.6;font-style:italic;margin-bottom:16px}
+.test-author{display:flex;align-items:center;gap:12px}
+.test-avatar{width:40px;height:40px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;color:var(--w);font-weight:700;font-size:.9rem}
+.test-info strong{display:block;font-size:.9rem}
+.test-info span{color:var(--gray);font-size:.8rem}
+/* Contact */
+.contact{background:var(--mb);color:var(--w)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.contact-info h3{font-size:1.2rem;margin-bottom:16px}
+.contact-info p{color:rgba(255,255,255,.7);font-size:.9rem;line-height:1.7;margin-bottom:20px}
+.contact-detail{display:flex;align-items:start;gap:12px;margin-bottom:16px;color:rgba(255,255,255,.8);font-size:.9rem}
+.contact-detail .ci{width:36px;height:36px;background:rgba(0,201,167,.15);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.1rem}
+.contact form{display:flex;flex-direction:column;gap:14px}
+.contact input,.contact textarea,.contact select{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:12px 16px;color:var(--w);font-family:'Inter',sans-serif;font-size:.9rem;outline:0;transition:border .3s}
+.contact input:focus,.contact textarea:focus,.contact select:focus{border-color:var(--teal)}
+.contact textarea{resize:vertical;min-height:100px}
+.contact select option{color:var(--mb)}
+/* Footer */
+footer{background:#0f1229;padding:28px 0;text-align:center}
+footer p{color:rgba(255,255,255,.5);font-size:.85rem}
+/* WhatsApp */
+.wa-float{position:fixed;bottom:24px;right:24px;width:56px;height:56px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(37,211,102,.4);z-index:99;transition:transform .3s;font-size:1.6rem;color:#fff}
+.wa-float:hover{transform:scale(1.1)}
+/* Responsive */
+@media(max-width:768px){
+ .burger{display:flex}
+ .nav-links{position:fixed;top:0;right:-100%;width:260px;height:100vh;background:var(--mb);flex-direction:column;padding:80px 32px;transition:right .3s;gap:20px}
+ .nav-links.open{right:0}
+ .close-nav{position:absolute;top:20px;right:20px;background:0;border:0;color:var(--w);font-size:1.5rem;cursor:pointer}
+ .stats{gap:24px}
+ .contact-grid{grid-template-columns:1fr}
+ .pkg.featured{transform:none}
+ section{padding:60px 0}
+}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="container">
+ <a href="#" class="logo">Event<span>Edge</span></a>
+ <ul class="nav-links" id="navLinks">
+  <button class="close-nav" onclick="toggleNav()" aria-label="Close menu"></button>
+  <li><a href="#services" onclick="toggleNav()">Services</a></li>
+  <li><a href="#clients" onclick="toggleNav()">Clients</a></li>
+  <li><a href="#packages" onclick="toggleNav()">Packages</a></li>
+  <li><a href="#testimonials" onclick="toggleNav()">Testimonials</a></li>
+  <li><a href="#contact" onclick="toggleNav()">Contact</a></li>
+ </ul>
+ <button class="burger" onclick="toggleNav()" aria-label="Open menu">
+  <span></span><span></span><span></span>
+ </button>
+</div>
+</nav>
+
+<section class="hero">
+<div class="container">
+ <span class="hero-tag"> Pune's Trusted Event Partners</span>
+ <h1>Transform Your<br><span>Corporate Events</span></h1>
+ <p>From boardroom conferences to grand award nights — we craft seamless corporate experiences that leave lasting impressions. Elevating Corporate Experiences Since 2017.</p>
+ <div class="hero-btns">
+  <a href="#contact" class="cta-btn">Get a Free Quote</a>
+  <a href="#services" class="cta-btn outline">Our Services</a>
+ </div>
+ <div class="stats">
+  <div class="stat"><h3>200+</h3><p>Events Delivered</p></div>
+  <div class="stat"><h3>50+</h3><p>Corporate Clients</p></div>
+  <div class="stat"><h3>7</h3><p>Years of Excellence</p></div>
+ </div>
+</div>
+</section>
+
+<section class="services" id="services">
+<div class="container">
+ <span class="section-tag">What We Do</span>
+ <h2 class="section-title reveal">End-to-End Event Solutions</h2>
+ <p class="section-sub reveal">Comprehensive corporate event services tailored for Pune's dynamic business landscape.</p>
+ <div class="services-grid">
+  <div class="s-card reveal">
+   <div class="s-icon"></div>
+   <h3>Conferences</h3>
+   <p>Large-scale conferences with AV production, speaker management, and seamless registration flows.</p>
+  </div>
+  <div class="s-card reveal">
+   <div class="s-icon"></div>
+   <h3>Team Building</h3>
+   <p>Engaging indoor & outdoor activities designed to boost collaboration and team morale.</p>
+  </div>
+  <div class="s-card reveal">
+   <div class="s-icon"></div>
+   <h3>Product Launches</h3>
+   <p>High-impact launch events with media coverage, branding, and immersive experiences.</p>
+  </div>
+  <div class="s-card reveal">
+   <div class="s-icon"></div>
+   <h3>Award Nights</h3>
+   <p>Elegant galas and award ceremonies with premium décor, entertainment, and production.</p>
+  </div>
+  <div class="s-card reveal">
+   <div class="s-icon"></div>
+   <h3>Corporate Retreats</h3>
+   <p>Curated offsite retreats at premium destinations for leadership and team rejuvenation.</p>
+  </div>
+  <div class="s-card reveal">
+   <div class="s-icon"></div>
+   <h3>Seminars & Workshops</h3>
+   <p>Professional seminars with expert facilitation, tech setup, and attendee management.</p>
+  </div>
+ </div>
+</div>
+</section>
+
+<section id="clients">
+<div class="container">
+ <span class="section-tag">Trusted By</span>
+ <h2 class="section-title reveal">Pune's Leading Companies</h2>
+ <p class="section-sub reveal">Proud partners with the city's top IT & corporate organizations.</p>
+ <div class="clients-grid reveal">
+  <div class="client-logo">Infosys</div>
+  <div class="client-logo">Wipro</div>
+  <div class="client-logo">TCS</div>
+  <div class="client-logo">Persistent Systems</div>
+  <div class="client-logo">Cyient</div>
+  <div class="client-logo">Zensar Tech</div>
+  <div class="client-logo">KPIT Technologies</div>
+  <div class="client-logo">QuickHeal</div>
+ </div>
+</div>
+</section>
+
+<section class="packages" id="packages">
+<div class="container">
+ <span class="section-tag">Pricing</span>
+ <h2 class="section-title reveal">Packages for Every Scale</h2>
+ <p class="section-sub reveal">Transparent pricing. No hidden costs. Fully customizable.</p>
+ <div class="pkg-grid">
+  <div class="pkg reveal">
+   <h3>Essential</h3>
+   <div class="price">₹1.5L <small>/ event</small></div>
+   <ul>
+    <li>Up to 100 attendees</li>
+    <li>Venue sourcing & setup</li>
+    <li>Basic AV & sound</li>
+    <li>Event coordinator</li>
+    <li>Standard décor</li>
+   </ul>
+   <a href="#contact" class="cta-btn outline" style="width:100%;text-align:center">Get Started</a>
+  </div>
+  <div class="pkg featured reveal">
+   <span class="pkg-badge">Most Popular</span>
+   <h3>Premium</h3>
+   <div class="price">₹4L <small>/ event</small></div>
+   <ul>
+    <li>Up to 500 attendees</li>
+    <li>Full venue management</li>
+    <li>Professional AV & lighting</li>
+    <li>Dedicated event team</li>
+    <li>Custom branding & décor</li>
+    <li>Photography & videography</li>
+   </ul>
+   <a href="#contact" class="cta-btn" style="width:100%;text-align:center">Get Started</a>
+  </div>
+  <div class="pkg reveal">
+   <h3>Grand</h3>
+   <div class="price">₹10L+ <small>/ event</small></div>
+   <ul>
+    <li>500+ attendees</li>
+    <li>Multi-venue coordination</li>
+    <li>Celebrity hosting & entertainment</li>
+    <li>Full production crew</li>
+    <li>Premium catering & hospitality</li>
+    <li>Post-event analytics report</li>
+   </ul>
+   <a href="#contact" class="cta-btn outline" style="width:100%;text-align:center">Get Started</a>
+  </div>
+ </div>
+</div>
+</section>
+
+<section id="testimonials">
+<div class="container">
+ <span class="section-tag">Testimonials</span>
+ <h2 class="section-title reveal">What Our Clients Say</h2>
+ <p class="section-sub reveal">Real feedback from real corporate partners.</p>
+ <div class="test-grid">
+  <div class="test-card reveal">
+   <p>"EventEdge handled our annual conference for 400+ employees flawlessly. From registration to post-event follow-ups — everything was world-class."</p>
+   <div class="test-author">
+    <div class="test-avatar">RP</div>
+    <div class="test-info"><strong>Rajesh Patil</strong><span>VP Operations, Infosys Pune</span></div>
+   </div>
+  </div>
+  <div class="test-card reveal">
+   <p>"Our product launch was a massive hit thanks to EventEdge. The stage design, media coordination, and attention to detail were outstanding."</p>
+   <div class="test-author">
+    <div class="test-avatar">SM</div>
+    <div class="test-info"><strong>Sneha Mehta</strong><span>Marketing Head, Persistent Systems</span></div>
+   </div>
+  </div>
+  <div class="test-card reveal">
+   <p>"We've been working with EventEdge for 3 years on our annual award nights. They consistently deliver premium experiences within budget."</p>
+   <div class="test-author">
+    <div class="test-avatar">AK</div>
+    <div class="test-info"><strong>Amit Kulkarni</strong><span>HR Director, KPIT Technologies</span></div>
+   </div>
+  </div>
+ </div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="container">
+ <span class="section-tag" style="color:var(--teal)">Get In Touch</span>
+ <h2 class="section-title reveal" style="color:#fff">Let's Plan Your Next Event</h2>
+ <p class="section-sub reveal" style="color:rgba(255,255,255,.6)">Tell us about your event and we'll get back within 24 hours.</p>
+ <div class="contact-grid">
+  <div class="contact-info reveal">
+   <div class="contact-detail">
+    <div class="ci"></div>
+    <div>EventEdge Corporate Solutions<br>Hinjewadi Phase 1, Pune 411057<br>Maharashtra, India</div>
+   </div>
+   <div class="contact-detail">
+    <div class="ci"></div>
+    <div>+91 98765 43210<br>Mon–Sat, 9AM–7PM</div>
+   </div>
+   <div class="contact-detail">
+    <div class="ci"></div>
+    <div>hello@eventedge.in</div>
+   </div>
+   <div class="contact-detail">
+    <div class="ci"></div>
+    <div><a href="https://wa.me/919876543210" style="color:var(--teal)">Chat on WhatsApp</a></div>
+   </div>
+   <div style="margin-top:24px">
+    <img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=500&h=300&fit=crop" alt="EventEdge office" style="border-radius:12px;opacity:.8;max-height:200px;object-fit:cover;width:100%">
+   </div>
+  </div>
+  <form class="reveal" onsubmit="handleSubmit(event)">
+   <input type="text" placeholder="Your Name" required>
+   <input type="email" placeholder="Work Email" required>
+   <input type="tel" placeholder="Phone Number">
+   <select required>
+    <option value="" disabled selected>Event Type</option>
+    <option>Conference</option>
+    <option>Team Building</option>
+    <option>Product Launch</option>
+    <option>Award Night</option>
+    <option>Corporate Retreat</option>
+    <option>Seminar / Workshop</option>
+    <option>Other</option>
+   </select>
+   <textarea placeholder="Tell us about your event — expected headcount, date, budget range..."></textarea>
+   <button type="submit" class="cta-btn" style="width:100%">Send Inquiry</button>
+  </form>
+ </div>
+</div>
+</section>
+
+<footer>
+<div class="container">
+ <p>© 2026 EventEdge Corporate Solutions, Pune. All rights reserved.</p>
+</div>
+</footer>
+
+<a href="https://wa.me/919876543210?text=Hi%20EventEdge!%20I%27d%20like%20to%20discuss%20a%20corporate%20event." class="wa-float" aria-label="Chat on WhatsApp"></a>
+
+<script>
+function toggleNav(){document.getElementById('navLinks').classList.toggle('open')}
+
+const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth'})})});
+
+function handleSubmit(e){e.preventDefault();const f=e.target;const d=new FormData(f);alert('Thank you! We\'ll get back to you within 24 hours.');f.reset()}
+
+window.addEventListener('scroll',()=>{document.querySelector('nav').style.boxShadow=window.scrollY>50?'0 2px 20px rgba(0,0,0,.15)':'none'});
+</script>
+</body>
+</html>
