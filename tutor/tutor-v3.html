@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KidsCodes Academy — Kids Coding & Programming School | Baner, Pune</title>
+<meta name="description" content="KidsCodes Academy in Baner, Pune teaches kids ages 6-16 to code. Scratch, Python, Web Dev & App Building. Fun, project-based classes. Free trial available!">
+<meta name="keywords" content="kids coding classes Pune, programming for children, Scratch classes Baner, Python for kids, coding school Pune, STEM education">
+<meta name="author" content="KidsCodes Academy">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://kidscodesacademy.in">
+
+<!-- Open Graph -->
+<meta property="og:title" content="KidsCodes Academy — Kids Coding School in Baner, Pune">
+<meta property="og:description" content="Fun, project-based coding classes for kids ages 6-16. Scratch, Python, Web Dev & App Building. Book a free trial class today!">
+<meta property="og:image" content="https://images.unsplash.com/photo-1588702547923-7093a6c3ba33?w=1200&h=630&fit=crop">
+<meta property="og:url" content="https://kidscodesacademy.in">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_IN">
+<meta property="og:site_name" content="KidsCodes Academy">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="KidsCodes Academy — Kids Coding School in Baner, Pune">
+<meta name="twitter:description" content="Fun coding classes for kids ages 6-16. Scratch, Python, Web Dev & App Building.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1588702547923-7093a6c3ba33?w=1200&h=630&fit=crop">
+
+<!-- Favicon (inline SVG data URI) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%237C3AED'/><text x='5' y='24' font-size='22' font-family='monospace' fill='%23FBBF24'>&lt;/&gt;</text></svg>">
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "KidsCodes Academy",
+  "description": "Kids coding and programming school for ages 6-16. Offering Scratch, Python, Web Development, and App Building courses in Baner, Pune.",
+  "url": "https://kidscodesacademy.in",
+  "telephone": "+91-98765-43210",
+  "email": "hello@kidscodesacademy.in",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2nd Floor, Baner Tech Park, Baner Road",
+    "addressLocality": "Pune",
+    "addressRegion": "Maharashtra",
+    "postalCode": "411045",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 18.5590,
+    "longitude": 73.7868
+  },
+  "image": "https://images.unsplash.com/photo-1588702547923-7093a6c3ba33?w=800",
+  "priceRange": "₹₹",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "15:00",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Saturday","Sunday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    }
+  ],
+  "sameAs": [
+    "https://instagram.com/kidscodesacademy",
+    "https://facebook.com/kidscodesacademy"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "127"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Coding Programs",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Course",
+          "name": "Scratch Jr. Explorers",
+          "description": "Visual coding for ages 6-8"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Course",
+          "name": "Python Pioneers",
+          "description": "Text-based programming for ages 9-12"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Course",
+          "name": "Web Dev Wizards",
+          "description": "HTML, CSS, JavaScript for ages 11-14"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Course",
+          "name": "App Builders Pro",
+          "description": "Mobile app development for ages 13-16"
+        }
+      }
+    ]
+  }
+}
+</script>
+
+<!-- AOS.js CSS -->
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+<style>
+/* ===== CSS RESET & BASE ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --purple-900:#4C1D95;--purple-700:#6D28D9;--purple-600:#7C3AED;
+  --purple-500:#8B5CF6;--purple-400:#A78BFA;--purple-100:#EDE9FE;--purple-50:#F5F3FF;
+  --yellow-400:#FBBF24;--yellow-300:#FCD34D;--yellow-500:#F59E0B;--yellow-100:#FEF3C7;
+  --white:#FFFFFF;--gray-50:#F9FAFB;--gray-100:#F3F4F6;--gray-200:#E5E7EB;
+  --gray-600:#4B5563;--gray-700:#374151;--gray-800:#1F2937;--gray-900:#111827;
+  --green-500:#10B981;--green-100:#D1FAE5;
+  --font-main:'Segoe UI',system-ui,-apple-system,sans-serif;
+  --font-pixel:'Courier New',monospace;
+  --shadow-sm:0 1px 2px rgba(0,0,0,.05);
+  --shadow-md:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);
+  --shadow-lg:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);
+  --shadow-xl:0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1);
+  --radius:12px;--radius-lg:20px;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--font-main);color:var(--gray-800);line-height:1.6;overflow-x:hidden;background:var(--white)}
+img{max-width:100%;height:auto;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+h1,h2,h3,h4{line-height:1.2}
+
+/* ===== PIXEL ART DECORATIONS ===== */
+.pixel-border{
+  border:4px solid var(--purple-600);
+  box-shadow:4px 4px 0 var(--yellow-400);
+}
+.pixel-dot::before{
+  content:'';display:inline-block;width:8px;height:8px;
+  background:var(--yellow-400);margin-right:8px;
+  box-shadow:10px 0 0 var(--purple-500),20px 0 0 var(--yellow-400);
+}
+.pixel-tag{
+  font-family:var(--font-pixel);font-size:.75rem;letter-spacing:2px;
+  text-transform:uppercase;color:var(--purple-600);
+  background:var(--purple-100);padding:4px 12px;border-radius:4px;
+  display:inline-block;border:2px solid var(--purple-300,#C4B5FD);
+}
+
+/* ===== SKIP LINK (A11Y) ===== */
+.skip-link{
+  position:absolute;top:-100%;left:50%;transform:translateX(-50%);
+  background:var(--purple-700);color:var(--white);padding:12px 24px;
+  border-radius:0 0 8px 8px;z-index:9999;font-weight:600;
+}
+.skip-link:focus{top:0}
+
+/* ===== NAVBAR ===== */
+.navbar{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  background:rgba(255,255,255,.95);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--gray-200);transition:box-shadow .3s;
+}
+.navbar.scrolled{box-shadow:var(--shadow-md)}
+.nav-inner{
+  max-width:1200px;margin:0 auto;padding:0 24px;
+  display:flex;align-items:center;justify-content:space-between;height:72px;
+}
+.nav-logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.3rem;color:var(--purple-700)}
+.nav-logo-icon{
+  width:40px;height:40px;background:var(--purple-600);border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-pixel);color:var(--yellow-400);font-size:1rem;
+  box-shadow:3px 3px 0 var(--yellow-400);
+}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{font-weight:500;color:var(--gray-700);transition:color .2s;font-size:.95rem}
+.nav-links a:hover,.nav-links a:focus{color:var(--purple-600)}
+.nav-cta{
+  background:var(--purple-600);color:var(--white)!important;
+  padding:10px 22px;border-radius:50px;font-weight:600;
+  transition:background .2s,transform .2s;
+}
+.nav-cta:hover{background:var(--purple-700);transform:translateY(-1px)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
+.hamburger span{display:block;width:24px;height:2.5px;background:var(--gray-800);border-radius:2px;transition:.3s}
+.hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+
+/* ===== HERO ===== */
+.hero{
+  min-height:100vh;display:flex;align-items:center;
+  background:linear-gradient(135deg,var(--purple-50) 0%,var(--white) 50%,var(--yellow-100) 100%);
+  padding:100px 24px 60px;position:relative;overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;top:-50%;right:-20%;width:600px;height:600px;
+  background:radial-gradient(circle,rgba(124,58,237,.08) 0%,transparent 70%);
+  border-radius:50%;
+}
+.hero::after{
+  content:'{ }  < / >  01  10  #  &&  =>  []';
+  position:absolute;top:0;left:0;right:0;bottom:0;
+  font-family:var(--font-pixel);font-size:1.2rem;color:rgba(124,58,237,.04);
+  word-spacing:40px;line-height:3;padding:100px 40px;
+  pointer-events:none;overflow:hidden;
+}
+.hero-inner{
+  max-width:1200px;margin:0 auto;width:100%;
+  display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;
+  position:relative;z-index:1;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--green-100);color:var(--green-500);
+  padding:6px 16px;border-radius:50px;font-size:.85rem;font-weight:600;
+  margin-bottom:16px;
+}
+.hero-badge::before{content:'●';font-size:.6rem;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.hero h1{
+  font-size:clamp(2.2rem,5vw,3.5rem);font-weight:800;
+  color:var(--gray-900);margin-bottom:16px;
+}
+.hero h1 span{
+  background:linear-gradient(135deg,var(--purple-600),var(--purple-500));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.hero-sub{font-size:1.15rem;color:var(--gray-600);margin-bottom:32px;max-width:520px}
+.hero-buttons{display:flex;gap:16px;flex-wrap:wrap}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--purple-600);color:var(--white);
+  padding:14px 32px;border-radius:50px;font-weight:700;font-size:1rem;
+  border:none;cursor:pointer;transition:all .2s;
+  box-shadow:0 4px 14px rgba(124,58,237,.4);
+}
+.btn-primary:hover{background:var(--purple-700);transform:translateY(-2px);box-shadow:0 6px 20px rgba(124,58,237,.5)}
+.btn-secondary{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--white);color:var(--purple-700);
+  padding:14px 32px;border-radius:50px;font-weight:700;font-size:1rem;
+  border:2px solid var(--purple-200,#DDD6FE);cursor:pointer;transition:all .2s;
+}
+.btn-secondary:hover{border-color:var(--purple-400);background:var(--purple-50)}
+.hero-image{position:relative}
+.hero-image img{
+  width:100%;border-radius:var(--radius-lg);
+  box-shadow:var(--shadow-xl);
+  border:4px solid var(--white);
+}
+.hero-float{
+  position:absolute;background:var(--white);border-radius:var(--radius);
+  padding:12px 18px;box-shadow:var(--shadow-lg);display:flex;align-items:center;gap:10px;
+  font-weight:600;font-size:.9rem;
+}
+.hero-float-1{bottom:-20px;left:-20px;animation:float 3s ease-in-out infinite}
+.hero-float-2{top:20px;right:-20px;animation:float 3s ease-in-out infinite .5s}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.hero-float-emoji{font-size:1.5rem}
+.hero-stats{
+  display:flex;gap:40px;margin-top:40px;padding-top:32px;
+  border-top:1px solid var(--gray-200);
+}
+.hero-stat-num{font-size:1.8rem;font-weight:800;color:var(--purple-600)}
+.hero-stat-label{font-size:.85rem;color:var(--gray-600)}
+
+/* ===== SECTION COMMON ===== */
+section{padding:80px 24px}
+.section-inner{max-width:1200px;margin:0 auto}
+.section-header{text-align:center;margin-bottom:56px}
+.section-header .pixel-tag{margin-bottom:12px}
+.section-header h2{
+  font-size:clamp(1.8rem,4vw,2.5rem);font-weight:800;
+  color:var(--gray-900);margin-bottom:12px;
+}
+.section-header p{font-size:1.1rem;color:var(--gray-600);max-width:600px;margin:0 auto}
+
+/* ===== PROGRAMS ===== */
+.programs{background:var(--gray-50)}
+.programs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
+.program-card{
+  background:var(--white);border-radius:var(--radius-lg);overflow:hidden;
+  box-shadow:var(--shadow-sm);transition:all .3s;border:1px solid var(--gray-200);
+}
+.program-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-xl);border-color:var(--purple-400)}
+.program-card-img{position:relative;height:200px;overflow:hidden}
+.program-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.program-card:hover .program-card-img img{transform:scale(1.05)}
+.program-age{
+  position:absolute;top:12px;right:12px;
+  background:var(--yellow-400);color:var(--gray-900);
+  padding:4px 12px;border-radius:50px;font-size:.8rem;font-weight:700;
+}
+.program-card-body{padding:24px}
+.program-icon{
+  width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;
+  font-size:1.4rem;margin-bottom:12px;
+}
+.program-card-body h3{font-size:1.2rem;font-weight:700;margin-bottom:8px;color:var(--gray-900)}
+.program-card-body p{font-size:.92rem;color:var(--gray-600);margin-bottom:16px}
+.program-skills{display:flex;flex-wrap:wrap;gap:6px}
+.program-skill{
+  background:var(--purple-50);color:var(--purple-700);
+  padding:4px 10px;border-radius:6px;font-size:.78rem;font-weight:500;
+}
+
+/* ===== WHY CODING ===== */
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px}
+.why-card{
+  text-align:center;padding:36px 28px;border-radius:var(--radius-lg);
+  background:var(--white);border:1px solid var(--gray-200);
+  transition:all .3s;
+}
+.why-card:hover{border-color:var(--purple-400);box-shadow:var(--shadow-lg)}
+.why-icon{
+  width:72px;height:72px;border-radius:50%;margin:0 auto 20px;
+  display:flex;align-items:center;justify-content:center;font-size:2rem;
+}
+.why-card h3{font-size:1.1rem;font-weight:700;margin-bottom:8px;color:var(--gray-900)}
+.why-card p{font-size:.92rem;color:var(--gray-600)}
+
+/* ===== SCHEDULE ===== */
+.schedule{background:linear-gradient(135deg,var(--purple-900),var(--purple-700));color:var(--white)}
+.schedule .section-header h2{color:var(--white)}
+.schedule .section-header p{color:var(--purple-200,#DDD6FE)}
+.schedule .pixel-tag{background:rgba(255,255,255,.15);color:var(--yellow-300);border-color:rgba(255,255,255,.2)}
+.schedule-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.schedule-card{
+  background:rgba(255,255,255,.1);backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,.15);border-radius:var(--radius-lg);
+  padding:28px;transition:all .3s;
+}
+.schedule-card:hover{background:rgba(255,255,255,.18);transform:translateY(-4px)}
+.schedule-card h3{font-size:1.15rem;font-weight:700;margin-bottom:16px;color:var(--yellow-300)}
+.schedule-row{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:10px 0;border-bottom:1px solid rgba(255,255,255,.1);
+  font-size:.92rem;
+}
+.schedule-row:last-child{border-bottom:none}
+.schedule-day{font-weight:600}
+.schedule-time{color:var(--purple-200,#DDD6FE);font-family:var(--font-pixel);font-size:.85rem}
+.schedule-note{
+  margin-top:24px;text-align:center;
+  background:rgba(251,191,36,.15);border:1px solid rgba(251,191,36,.3);
+  padding:16px;border-radius:var(--radius);font-size:.92rem;
+}
+.schedule-note strong{color:var(--yellow-300)}
+
+/* ===== TESTIMONIALS ===== */
+.testimonials{background:var(--purple-50)}
+.testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:28px}
+.testimonial-card{
+  background:var(--white);border-radius:var(--radius-lg);padding:32px;
+  box-shadow:var(--shadow-sm);border:1px solid var(--gray-200);transition:all .3s;
+  position:relative;
+}
+.testimonial-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px)}
+.testimonial-quote{
+  position:absolute;top:20px;right:24px;font-size:3rem;
+  color:var(--purple-100);font-family:Georgia,serif;line-height:1;
+}
+.testimonial-stars{color:var(--yellow-400);font-size:1.1rem;margin-bottom:12px;letter-spacing:2px}
+.testimonial-text{font-size:.95rem;color:var(--gray-700);margin-bottom:20px;font-style:italic;line-height:1.7}
+.testimonial-author{display:flex;align-items:center;gap:12px}
+.testimonial-avatar{
+  width:48px;height:48px;border-radius:50%;
+  background:var(--purple-100);display:flex;align-items:center;justify-content:center;
+  font-weight:700;color:var(--purple-600);font-size:1.1rem;
+}
+.testimonial-name{font-weight:700;font-size:.95rem;color:var(--gray-900)}
+.testimonial-child{font-size:.82rem;color:var(--gray-600)}
+
+/* ===== PRICING ===== */
+.pricing-card{
+  max-width:600px;margin:0 auto;background:var(--white);
+  border-radius:var(--radius-lg);overflow:hidden;
+  box-shadow:var(--shadow-xl);border:2px solid var(--purple-200,#DDD6FE);
+}
+.pricing-header{
+  background:linear-gradient(135deg,var(--purple-700),var(--purple-600));
+  padding:40px 36px;text-align:center;color:var(--white);position:relative;
+}
+.pricing-header::after{
+  content:'';position:absolute;bottom:-1px;left:0;right:0;height:30px;
+  background:var(--white);clip-path:ellipse(55% 100% at 50% 100%);
+}
+.pricing-amount{font-size:3.5rem;font-weight:800}
+.pricing-amount small{font-size:1rem;font-weight:400;opacity:.8}
+.pricing-period{font-size:1rem;opacity:.9;margin-top:4px}
+.pricing-body{padding:36px}
+.pricing-features{margin-bottom:28px}
+.pricing-feature{
+  display:flex;align-items:flex-start;gap:12px;padding:10px 0;
+  font-size:.95rem;color:var(--gray-700);
+}
+.pricing-check{
+  flex-shrink:0;width:24px;height:24px;background:var(--green-100);
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  color:var(--green-500);font-size:.85rem;font-weight:700;
+}
+.pricing-cta{text-align:center}
+.pricing-cta .btn-primary{width:100%;justify-content:center;padding:16px;font-size:1.05rem}
+.pricing-guarantee{
+  text-align:center;margin-top:16px;font-size:.85rem;color:var(--gray-600);
+  display:flex;align-items:center;justify-content:center;gap:6px;
+}
+
+/* ===== CTA ===== */
+.cta{
+  background:linear-gradient(135deg,var(--purple-600),var(--purple-700));
+  text-align:center;color:var(--white);position:relative;overflow:hidden;
+}
+.cta::before{
+  content:'';position:absolute;top:-50%;right:-30%;
+  width:500px;height:500px;
+  background:radial-gradient(circle,rgba(251,191,36,.15) 0%,transparent 70%);
+  border-radius:50%;
+}
+.cta h2{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;margin-bottom:16px;position:relative}
+.cta p{font-size:1.15rem;opacity:.9;margin-bottom:36px;max-width:550px;margin-left:auto;margin-right:auto;position:relative}
+.cta-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;position:relative}
+.btn-yellow{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--yellow-400);color:var(--gray-900);
+  padding:16px 36px;border-radius:50px;font-weight:700;font-size:1.05rem;
+  border:none;cursor:pointer;transition:all .2s;
+  box-shadow:0 4px 14px rgba(251,191,36,.4);
+}
+.btn-yellow:hover{background:var(--yellow-300);transform:translateY(-2px)}
+.btn-outline-white{
+  display:inline-flex;align-items:center;gap:8px;
+  background:transparent;color:var(--white);
+  padding:16px 36px;border-radius:50px;font-weight:700;font-size:1.05rem;
+  border:2px solid rgba(255,255,255,.4);cursor:pointer;transition:all .2s;
+}
+.btn-outline-white:hover{background:rgba(255,255,255,.1);border-color:var(--white)}
+
+/* ===== FOOTER ===== */
+.footer{background:var(--gray-900);color:var(--gray-200);padding:60px 24px 24px}
+.footer-inner{max-width:1200px;margin:0 auto}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.footer-brand{max-width:300px}
+.footer-brand h3{color:var(--white);font-size:1.3rem;margin-bottom:12px}
+.footer-brand p{font-size:.9rem;color:var(--gray-400,#9CA3AF);line-height:1.7}
+.footer h4{color:var(--white);font-size:1rem;margin-bottom:16px;font-weight:700}
+.footer ul li{margin-bottom:10px}
+.footer ul li a{color:var(--gray-400,#9CA3AF);font-size:.9rem;transition:color .2s}
+.footer ul li a:hover{color:var(--yellow-400)}
+.footer-contact li{display:flex;align-items:center;gap:8px;font-size:.9rem;color:var(--gray-400,#9CA3AF)}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.1);padding-top:24px;
+  display:flex;justify-content:space-between;align-items:center;
+  font-size:.85rem;color:var(--gray-400,#9CA3AF);flex-wrap:wrap;gap:12px;
+}
+
+/* ===== MOBILE NAV ===== */
+@media(max-width:768px){
+  .nav-links{
+    position:fixed;top:72px;left:0;right:0;bottom:0;
+    background:var(--white);flex-direction:column;
+    padding:40px 24px;gap:24px;
+    transform:translateX(100%);transition:transform .3s;z-index:999;
+  }
+  .nav-links.open{transform:translateX(0)}
+  .nav-links a{font-size:1.1rem}
+  .hamburger{display:flex}
+  .hero-inner{grid-template-columns:1fr;text-align:center}
+  .hero-sub{margin-left:auto;margin-right:auto}
+  .hero-buttons{justify-content:center}
+  .hero-stats{justify-content:center}
+  .hero-image{order:-1}
+  .hero-float{display:none}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .footer-bottom{flex-direction:column;text-align:center}
+  .programs-grid{grid-template-columns:1fr}
+  .testimonials-grid{grid-template-columns:1fr}
+  .schedule-grid{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  section{padding:60px 16px}
+  .hero{padding:90px 16px 40px}
+  .hero h1{font-size:2rem}
+  .hero-stats{gap:24px;flex-wrap:wrap}
+  .btn-primary,.btn-secondary,.btn-yellow,.btn-outline-white{padding:12px 24px;font-size:.95rem}
+  .footer-grid{grid-template-columns:1fr}
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes typing{from{width:0}to{width:100%}}
+.typing-text{
+  display:inline-block;overflow:hidden;white-space:nowrap;
+  border-right:3px solid var(--purple-600);
+  animation:typing 2.5s steps(30) 1s forwards,blink .7s step-end infinite;
+  width:0;
+}
+@keyframes blink{50%{border-color:transparent}}
+@keyframes wiggle{0%,100%{transform:rotate(0deg)}25%{transform:rotate(-3deg)}75%{transform:rotate(3deg)}}
+
+/* Pixel grid background pattern */
+.pixel-bg{
+  background-image:
+    linear-gradient(rgba(124,58,237,.03) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(124,58,237,.03) 1px,transparent 1px);
+  background-size:20px 20px;
+}
+
+/* Focus styles for A11Y */
+a:focus-visible,button:focus-visible{
+  outline:3px solid var(--purple-500);outline-offset:2px;border-radius:4px;
+}
+</style>
+</head>
+<body>
+<!-- Skip Link -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- Navbar -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo" aria-label="KidsCodes Academy Home">
+      <div class="nav-logo-icon" aria-hidden="true">&lt;/&gt;</div>
+      <span>KidsCodes<span style="color:var(--yellow-500)">.Academy</span></span>
+    </a>
+    <div class="nav-links" id="navLinks" role="menubar">
+      <a href="#programs" role="menuitem">Programs</a>
+      <a href="#why-coding" role="menuitem">Why Coding</a>
+      <a href="#schedule" role="menuitem">Schedule</a>
+      <a href="#pricing" role="menuitem">Pricing</a>
+      <a href="#testimonials" role="menuitem">Reviews</a>
+      <a href="#cta" class="nav-cta" role="menuitem">Free Trial →</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Hero -->
+<main id="main-content">
+<section class="hero pixel-bg" aria-labelledby="hero-heading">
+  <div class="hero-inner">
+    <div data-aos="fade-right" data-aos-duration="800">
+      <div class="hero-badge" aria-label="Enrollments open"> New Batches Starting April 2026</div>
+      <h1 id="hero-heading">Where Kids Learn to <span>Code, Create</span> & Conquer</h1>
+      <p class="hero-sub">Pune's favourite coding school for ages 6-16. From Scratch games to real apps — we turn curiosity into superpowers.</p>
+      <div class="hero-buttons">
+        <a href="#cta" class="btn-primary"> Book Free Trial Class</a>
+        <a href="#programs" class="btn-secondary"> Explore Programs</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-num">500+</div>
+          <div class="hero-stat-label">Students Taught</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">4.9</div>
+          <div class="hero-stat-label">Parent Rating</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">50+</div>
+          <div class="hero-stat-label">Projects Built</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-image" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+      <img src="https://images.unsplash.com/photo-1588702547923-7093a6c3ba33?w=600&h=500&fit=crop" 
+           alt="Children happily learning to code on laptops in a bright classroom" 
+           width="600" height="500" loading="eager">
+      <div class="hero-float hero-float-1" aria-hidden="true">
+        <span class="hero-float-emoji"></span>
+        <span>Built 12 Games!</span>
+      </div>
+      <div class="hero-float hero-float-2" aria-hidden="true">
+        <span class="hero-float-emoji"></span>
+        <span>Top Rated in Pune</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Programs -->
+<section class="programs pixel-bg" id="programs" aria-labelledby="programs-heading">
+  <div class="section-inner">
+    <div class="section-header" data-aos="fade-up">
+      <span class="pixel-tag">// Our Programs</span>
+      <h2 id="programs-heading">Level Up with the Right Course</h2>
+      <p>Age-appropriate, project-based learning paths from beginner blocks to real-world apps</p>
+    </div>
+    <div class="programs-grid">
+      <!-- Scratch -->
+      <article class="program-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="program-card-img">
+          <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=500&h=350&fit=crop" 
+               alt="Young child interacting with a colorful coding interface on a tablet" 
+               width="500" height="350" loading="lazy">
+          <span class="program-age">Ages 6-8</span>
+        </div>
+        <div class="program-card-body">
+          <div class="program-icon" style="background:var(--yellow-100)" aria-hidden="true"></div>
+          <h3>Scratch Jr. Explorers</h3>
+          <p>Visual block-based coding through storytelling, animations, and simple games. Perfect first step into the world of programming.</p>
+          <div class="program-skills">
+            <span class="program-skill">Scratch</span>
+            <span class="program-skill">Logic</span>
+            <span class="program-skill">Animation</span>
+            <span class="program-skill">Games</span>
+          </div>
+        </div>
+      </article>
+      <!-- Python -->
+      <article class="program-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="program-card-img">
+          <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=500&h=350&fit=crop" 
+               alt="Kids working together on Python code on a laptop screen" 
+               width="500" height="350" loading="lazy">
+          <span class="program-age">Ages 9-12</span>
+        </div>
+        <div class="program-card-body">
+          <div class="program-icon" style="background:var(--purple-100)" aria-hidden="true"></div>
+          <h3>Python Pioneers</h3>
+          <p>Transition to text-based coding with Python. Build chatbots, quizzes, and mini-projects while mastering programming fundamentals.</p>
+          <div class="program-skills">
+            <span class="program-skill">Python</span>
+            <span class="program-skill">Variables</span>
+            <span class="program-skill">Loops</span>
+            <span class="program-skill">Functions</span>
+          </div>
+        </div>
+      </article>
+      <!-- Web Dev -->
+      <article class="program-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="program-card-img">
+          <img src="https://images.unsplash.com/photo-1550439062-609e1531270e?w=500&h=350&fit=crop" 
+               alt="Teenager writing HTML and CSS code on a desktop computer" 
+               width="500" height="350" loading="lazy">
+          <span class="program-age">Ages 11-14</span>
+        </div>
+        <div class="program-card-body">
+          <div class="program-icon" style="background:var(--green-100)" aria-hidden="true"></div>
+          <h3>Web Dev Wizards</h3>
+          <p>Design and build real websites with HTML, CSS, and JavaScript. From personal portfolios to interactive web games.</p>
+          <div class="program-skills">
+            <span class="program-skill">HTML</span>
+            <span class="program-skill">CSS</span>
+            <span class="program-skill">JavaScript</span>
+            <span class="program-skill">Design</span>
+          </div>
+        </div>
+      </article>
+      <!-- App Building -->
+      <article class="program-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="program-card-img">
+          <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=350&fit=crop" 
+               alt="Student developing a mobile app on a laptop with code visible" 
+               width="500" height="350" loading="lazy">
+          <span class="program-age">Ages 13-16</span>
+        </div>
+        <div class="program-card-body">
+          <div class="program-icon" style="background:var(--yellow-100)" aria-hidden="true"></div>
+          <h3>App Builders Pro</h3>
+          <p>Build real mobile apps from idea to launch. Learn app design, databases, and deployment — a launchpad for teen innovators.</p>
+          <div class="program-skills">
+            <span class="program-skill">React Native</span>
+            <span class="program-skill">Firebase</span>
+            <span class="program-skill">UI/UX</span>
+            <span class="program-skill">APIs</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Why Coding -->
+<section class="why-coding" id="why-coding" aria-labelledby="why-heading">
+  <div class="section-inner">
+    <div class="section-header" data-aos="fade-up">
+      <span class="pixel-tag">// Why Coding?</span>
+      <h2 id="why-heading">More Than Just Code — It's a Superpower</h2>
+      <p>Coding isn't just about computers. It builds skills that matter in every field.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card" data-aos="zoom-in" data-aos-delay="0">
+        <div class="why-icon" style="background:var(--purple-50)" aria-hidden="true"></div>
+        <h3>Logical Thinking</h3>
+        <p>Coding teaches kids to break complex problems into small, solvable steps — a skill for life.</p>
+      </div>
+      <div class="why-card" data-aos="zoom-in" data-aos-delay="100">
+        <div class="why-icon" style="background:var(--yellow-100)" aria-hidden="true"></div>
+        <h3>Creativity Unleashed</h3>
+        <p>From games to apps to art — coding is the ultimate creative canvas for young minds.</p>
+      </div>
+      <div class="why-card" data-aos="zoom-in" data-aos-delay="200">
+        <div class="why-icon" style="background:var(--green-100)" aria-hidden="true"></div>
+        <h3>Future-Ready Careers</h3>
+        <p>67% of new jobs will require coding skills. Start early, stay ahead of the curve.</p>
+      </div>
+      <div class="why-card" data-aos="zoom-in" data-aos-delay="300">
+        <div class="why-icon" style="background:var(--purple-50)" aria-hidden="true"></div>
+        <h3>Teamwork & Collaboration</h3>
+        <p>Group projects teach kids to communicate ideas, divide work, and build together.</p>
+      </div>
+      <div class="why-card" data-aos="zoom-in" data-aos-delay="400">
+        <div class="why-icon" style="background:var(--yellow-100)" aria-hidden="true"></div>
+        <h3>Confidence & Resilience</h3>
+        <p>Debugging teaches persistence. Shipping a project teaches pride. Both build unstoppable kids.</p>
+      </div>
+      <div class="why-card" data-aos="zoom-in" data-aos-delay="500">
+        <div class="why-icon" style="background:var(--green-100)" aria-hidden="true"></div>
+        <h3>Better at Math & Science</h3>
+        <p>Coding reinforces mathematical concepts and scientific thinking through hands-on application.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Schedule & Batches -->
+<section class="schedule" id="schedule" aria-labelledby="schedule-heading">
+  <div class="section-inner">
+    <div class="section-header" data-aos="fade-up">
+      <span class="pixel-tag">// Schedule & Batches</span>
+      <h2 id="schedule-heading">Pick Your Perfect Batch</h2>
+      <p>Flexible timings designed around school hours. Weekend and weekday batches available.</p>
+    </div>
+    <div class="schedule-grid">
+      <div class="schedule-card" data-aos="fade-up" data-aos-delay="0">
+        <h3> Weekday Batches</h3>
+        <div class="schedule-row">
+          <span class="schedule-day">Mon – Fri</span>
+          <span class="schedule-time">3:30 PM – 4:30 PM</span>
+        </div>
+        <div class="schedule-row">
+          <span class="schedule-day">Mon – Fri</span>
+          <span class="schedule-time">5:00 PM – 6:00 PM</span>
+        </div>
+        <div class="schedule-row">
+          <span class="schedule-day">Mon – Fri</span>
+          <span class="schedule-time">6:30 PM – 7:30 PM</span>
+        </div>
+      </div>
+      <div class="schedule-card" data-aos="fade-up" data-aos-delay="100">
+        <h3> Weekend Batches</h3>
+        <div class="schedule-row">
+          <span class="schedule-day">Sat & Sun</span>
+          <span class="schedule-time">9:00 AM – 10:30 AM</span>
+        </div>
+        <div class="schedule-row">
+          <span class="schedule-day">Sat & Sun</span>
+          <span class="schedule-time">11:00 AM – 12:30 PM</span>
+        </div>
+        <div class="schedule-row">
+          <span class="schedule-day">Sat & Sun</span>
+          <span class="schedule-time">2:00 PM – 3:30 PM</span>
+        </div>
+      </div>
+      <div class="schedule-card" data-aos="fade-up" data-aos-delay="200">
+        <h3> Online Batches</h3>
+        <div class="schedule-row">
+          <span class="schedule-day">Tue & Thu</span>
+          <span class="schedule-time">5:00 PM – 6:00 PM</span>
+        </div>
+        <div class="schedule-row">
+          <span class="schedule-day">Sat</span>
+          <span class="schedule-time">4:00 PM – 5:30 PM</span>
+        </div>
+        <div class="schedule-row">
+          <span class="schedule-day">Sun</span>
+          <span class="schedule-time">4:00 PM – 5:30 PM</span>
+        </div>
+      </div>
+    </div>
+    <div class="schedule-note" data-aos="fade-up" data-aos-delay="300">
+      <strong> Batch size limited to 8 students</strong> for personalized attention. Reserve your spot early!
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials" id="testimonials" aria-labelledby="testimonials-heading">
+  <div class="section-inner">
+    <div class="section-header" data-aos="fade-up">
+      <span class="pixel-tag">// Parent Reviews</span>
+      <h2 id="testimonials-heading">Trusted by 500+ Pune Families</h2>
+      <p>Here's what parents say about their child's journey with KidsCodes Academy</p>
+    </div>
+    <div class="testimonials-grid">
+      <article class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="testimonial-quote" aria-hidden="true">"</div>
+        <div class="testimonial-stars" aria-label="5 out of 5 stars"></div>
+        <p class="testimonial-text">"My 8-year-old built his first game in Scratch within 3 weeks! He's so proud of it and shows everyone. The teachers are incredibly patient and know how to keep kids engaged."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar" aria-hidden="true">P</div>
+          <div>
+            <div class="testimonial-name">Priya Deshmukh</div>
+            <div class="testimonial-child">Mother of Aarav, Age 8</div>
+          </div>
+        </div>
+      </article>
+      <article class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="testimonial-quote" aria-hidden="true">"</div>
+        <div class="testimonial-stars" aria-label="5 out of 5 stars"></div>
+        <p class="testimonial-text">"Ananya was always on screens — now she's creating things on them instead. She built a portfolio website all by herself! The confidence boost has been incredible."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar" aria-hidden="true">R</div>
+          <div>
+            <div class="testimonial-name">Rajesh Kulkarni</div>
+            <div class="testimonial-child">Father of Ananya, Age 13</div>
+          </div>
+        </div>
+      </article>
+      <article class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="testimonial-quote" aria-hidden="true">"</div>
+        <div class="testimonial-stars" aria-label="5 out of 5 stars"></div>
+        <p class="testimonial-text">"Worth every rupee! Small batch sizes mean my son gets actual attention. His math grades also improved since he started coding. The logical thinking really transfers."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar" aria-hidden="true">S</div>
+          <div>
+            <div class="testimonial-name">Sneha Patil</div>
+            <div class="testimonial-child">Mother of Arjun, Age 11</div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section class="pricing" id="pricing" aria-labelledby="pricing-heading">
+  <div class="section-inner">
+    <div class="section-header" data-aos="fade-up">
+      <span class="pixel-tag">// Pricing</span>
+      <h2 id="pricing-heading">Simple, Transparent Pricing</h2>
+      <p>One plan. Everything included. No hidden fees.</p>
+    </div>
+    <div class="pricing-card" data-aos="zoom-in" data-aos-duration="600">
+      <div class="pricing-header">
+        <div class="pricing-amount">₹3,500<small>/month</small></div>
+        <div class="pricing-period">per student • all levels</div>
+      </div>
+      <div class="pricing-body">
+        <div class="pricing-features">
+          <div class="pricing-feature">
+            <span class="pricing-check" aria-hidden="true"></span>
+            <span>8 classes per month (2 per week)</span>
+          </div>
+          <div class="pricing-feature">
+            <span class="pricing-check" aria-hidden="true"></span>
+            <span>Small batches — max 8 students per batch</span>
+          </div>
+          <div class="pricing-feature">
+            <span class="pricing-check" aria-hidden="true"></span>
+            <span>Project-based curriculum with real outcomes</span>
+          </div>
+          <div class="pricing-feature">
+            <span class="pricing-check" aria-hidden="true"></span>
+            <span>Laptop provided during class (or bring your own)</span>
+          </div>
+          <div class="pricing-feature">
+            <span class="pricing-check" aria-hidden="true"></span>
+            <span>Monthly progress report sent to parents</span>
+          </div>
+          <div class="pricing-feature">
+            <span class="pricing-check" aria-hidden="true"></span>
+            <span>Certificate on course completion</span>
+          </div>
+          <div class="pricing-feature">
+            <span class="pricing-check" aria-hidden="true"></span>
+            <span>Free access to online practice platform</span>
+          </div>
+          <div class="pricing-feature">
+            <span class="pricing-check" aria-hidden="true"></span>
+            <span>Sibling discount: 10% off second child</span>
+          </div>
+        </div>
+        <div class="pricing-cta">
+          <a href="#cta" class="btn-primary"> Start with a Free Trial Class</a>
+          <div class="pricing-guarantee"> No commitment. Cancel anytime. Full refund if not satisfied in first month.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="cta" aria-labelledby="cta-heading">
+  <div class="section-inner" data-aos="fade-up">
+    <h2 id="cta-heading">Your Child's Coding Journey<br>Starts with One Free Class</h2>
+    <p>No payment needed. No commitment. Just 60 minutes of fun coding. We'll handle the rest.</p>
+    <div class="cta-buttons">
+      <a href="https://wa.me/919876543210?text=Hi!%20I%20want%20to%20book%20a%20free%20trial%20class%20for%20my%20child%20at%20KidsCodes%20Academy." class="btn-yellow" aria-label="Book free trial class on WhatsApp"> Book on WhatsApp</a>
+      <a href="tel:+919876543210" class="btn-outline-white" aria-label="Call us to book trial class"> Call: +91 98765-43210</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- Footer -->
+<footer class="footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>KidsCodes<span style="color:var(--yellow-400)">.Academy</span></h3>
+        <p>Pune's favourite coding school for kids. Teaching the next generation of creators, builders, and innovators — one line of code at a time.</p>
+      </div>
+      <div>
+        <h4>Programs</h4>
+        <ul>
+          <li><a href="#programs">Scratch Jr. Explorers</a></li>
+          <li><a href="#programs">Python Pioneers</a></li>
+          <li><a href="#programs">Web Dev Wizards</a></li>
+          <li><a href="#programs">App Builders Pro</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#why-coding">Why Coding</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer-contact">
+          <li> 2nd Floor, Baner Tech Park, Baner Road, Pune 411045</li>
+          <li> <a href="tel:+919876543210">+91 98765-43210</a></li>
+          <li> <a href="mailto:hello@kidscodesacademy.in">hello@kidscodesacademy.in</a></li>
+          <li>⏰ Mon–Fri 3–8 PM, Sat–Sun 9 AM–6 PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 KidsCodes Academy, Baner, Pune. All rights reserved.</span>
+      <span>Made with  for young coders</span>
+    </div>
+  </div>
+</footer>
+
+<!-- AOS.js -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+// Initialize AOS animations
+AOS.init({
+  duration: 700,
+  easing: 'ease-out-cubic',
+  once: true,
+  offset: 80
+});
+
+// Navbar scroll effect
+const navbar = document.querySelector('.navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 20);
+}, { passive: true });
+
+// Mobile menu toggle
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+hamburger.addEventListener('click', () => {
+  const isOpen = navLinks.classList.toggle('open');
+  hamburger.classList.toggle('active');
+  hamburger.setAttribute('aria-expanded', isOpen);
+});
+// Close mobile menu on link click
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    hamburger.classList.remove('active');
+    hamburger.setAttribute('aria-expanded', 'false');
+  });
+});
+
+// Smooth scroll for anchor links (fallback for older browsers)
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      const offset = 80;
+      const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  });
+});
+
+// Counter animation for hero stats
+function animateCounters() {
+  document.querySelectorAll('.hero-stat-num').forEach(el => {
+    const text = el.textContent;
+    const match = text.match(/(\d+)/);
+    if (!match) return;
+    const target = parseInt(match[1]);
+    const suffix = text.replace(match[1], '');
+    let current = 0;
+    const step = Math.ceil(target / 40);
+    const timer = setInterval(() => {
+      current = Math.min(current + step, target);
+      el.textContent = current + suffix;
+      if (current >= target) clearInterval(timer);
+    }, 30);
+  });
+}
+// Trigger counter when hero is in view
+const heroObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateCounters();
+      heroObserver.disconnect();
+    }
+  });
+}, { threshold: 0.3 });
+const heroSection = document.querySelector('.hero');
+if (heroSection) heroObserver.observe(heroSection);
+</script>
+</body>
+</html>
