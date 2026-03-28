@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Waggy Stays — Luxury Pet Boarding & Daycare in Wakad, Pune</title>
+  <meta name="description" content="Waggy Stays offers luxury pet boarding, daycare, grooming, and live cam access for your furry babies in Wakad, Pune. Safe, fun, and fully air-conditioned facilities." />
+  <meta name="keywords" content="pet boarding Pune, dog daycare Wakad, luxury dog boarding, pet hotel Pune, puppy boarding Wakad" />
+
+  <!-- OG Tags -->
+  <meta property="og:title" content="Waggy Stays — Luxury Pet Boarding & Daycare, Wakad Pune" />
+  <meta property="og:description" content="Your pet's home away from home. Overnight boarding, daycare, grooming & live cam access in Wakad, Pune." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1200&q=80" />
+  <meta property="og:url" content="https://waggystays.in" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Waggy Stays — Luxury Pet Boarding, Wakad Pune" />
+  <meta name="twitter:description" content="Safe, fun, luxury pet boarding & daycare. Live cam access included!" />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1200&q=80" />
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Waggy Stays",
+    "description": "Luxury pet boarding, daycare, grooming and live cam access for dogs and cats in Wakad, Pune.",
+    "url": "https://waggystays.in",
+    "telephone": "+91-98765-43210",
+    "email": "hello@waggystays.in",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Near Wakad Bridge, Wakad",
+      "addressLocality": "Pune",
+      "addressRegion": "Maharashtra",
+      "postalCode": "411057",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 18.5985,
+      "longitude": 73.7553
+    },
+    "openingHours": "Mo-Su 07:00-21:00",
+    "priceRange": "₹₹",
+    "image": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800&q=80",
+    "sameAs": [
+      "https://instagram.com/waggystays",
+      "https://facebook.com/waggystays"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Pet Services",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Overnight Boarding"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Dog Daycare"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Pet Grooming"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Live Cam Access"}}
+      ]
+    }
+  }
+  </script>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            coral: { 400: '#FF7F6E', 500: '#FF6B56', 600: '#E85D47' },
+            mint:  { 100: '#E8FBF3', 200: '#C8F5E2', 400: '#52C88A', 500: '#3DB872' },
+          },
+          fontFamily: {
+            display: ['"Nunito"', 'sans-serif'],
+            body: ['"Inter"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
+
+  <style>
+    * { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, h4 { font-family: 'Nunito', sans-serif; }
+
+    /* Paw print decoration */
+    .paw-bg {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='%23FF6B56' fill-opacity='0.06'%3E%3Cellipse cx='20' cy='10' rx='5' ry='6'/%3E%3Cellipse cx='35' cy='8' rx='4' ry='5'/%3E%3Cellipse cx='10' cy='22' rx='4' ry='5'/%3E%3Cellipse cx='44' cy='20' rx='4' ry='5'/%3E%3Cellipse cx='27' cy='30' rx='10' ry='12'/%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .hero-gradient {
+      background: linear-gradient(135deg, #FFF5F3 0%, #E8FBF3 50%, #FFF5F3 100%);
+    }
+
+    .card-hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(255,107,86,0.15);
+    }
+
+    .badge-pulse {
+      animation: pulse-badge 2s infinite;
+    }
+    @keyframes pulse-badge {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    .wavy-divider {
+      position: relative;
+    }
+    .wavy-divider::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60'%3E%3Cpath fill='%23ffffff' d='M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z'/%3E%3C/svg%3E");
+      background-size: cover;
+    }
+
+    .pricing-popular {
+      background: linear-gradient(135deg, #FF6B56, #FF9A8B);
+      color: white;
+    }
+
+    .img-cover { object-fit: cover; width: 100%; height: 100%; }
+
+    /* FAQ accordion */
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s ease; }
+    .faq-item.open .faq-answer { max-height: 300px; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-icon { transition: transform 0.3s ease; }
+
+    /* Nav scroll */
+    .nav-scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.08); background: rgba(255,255,255,0.98) !important; }
+
+    /* Testimonial card */
+    .stars { color: #FBBF24; letter-spacing: 2px; }
+
+    @media (max-width: 640px) {
+      .hero-title { font-size: 2.4rem !important; line-height: 1.15 !important; }
+    }
+  </style>
+</head>
+
+<body class="bg-white text-gray-800 overflow-x-hidden">
+
+  <!-- ========== NAVBAR ========== -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-3 bg-white/90 backdrop-blur-sm">
+    <div class="max-w-6xl mx-auto px-4 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-2">
+        <span class="text-2xl"></span>
+        <span class="font-display font-900 text-xl text-gray-900">Waggy<span class="text-coral-500">Stays</span></span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <div class="hidden md:flex items-center gap-7 text-sm font-medium text-gray-600">
+        <a href="#services" class="hover:text-coral-500 transition-colors">Services</a>
+        <a href="#tour" class="hover:text-coral-500 transition-colors">Facility</a>
+        <a href="#pricing" class="hover:text-coral-500 transition-colors">Pricing</a>
+        <a href="#testimonials" class="hover:text-coral-500 transition-colors">Reviews</a>
+        <a href="#faq" class="hover:text-coral-500 transition-colors">FAQ</a>
+        <a href="#contact" class="bg-coral-500 hover:bg-coral-600 text-white px-5 py-2.5 rounded-full font-semibold transition-colors shadow-md">
+          Book Now 
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-gray-600">
+        <svg id="menu-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <svg id="menu-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 py-4 space-y-3">
+      <a href="#services" onclick="closeMobileMenu()" class="block text-gray-700 font-medium py-2 hover:text-coral-500">Services</a>
+      <a href="#tour" onclick="closeMobileMenu()" class="block text-gray-700 font-medium py-2 hover:text-coral-500">Facility Tour</a>
+      <a href="#pricing" onclick="closeMobileMenu()" class="block text-gray-700 font-medium py-2 hover:text-coral-500">Pricing</a>
+      <a href="#testimonials" onclick="closeMobileMenu()" class="block text-gray-700 font-medium py-2 hover:text-coral-500">Reviews</a>
+      <a href="#faq" onclick="closeMobileMenu()" class="block text-gray-700 font-medium py-2 hover:text-coral-500">FAQ</a>
+      <a href="#contact" onclick="closeMobileMenu()" class="block bg-coral-500 text-white text-center py-3 rounded-full font-semibold mt-2">Book Now </a>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero-gradient paw-bg min-h-screen flex items-center pt-20 pb-10 wavy-divider">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+      <!-- Text -->
+      <div>
+        <span class="inline-flex items-center gap-2 bg-mint-200 text-mint-500 font-semibold text-sm px-4 py-1.5 rounded-full mb-5 badge-pulse" data-aos="fade-down">
+           Wakad's Most Loved Pet Stay
+        </span>
+        <h1 class="hero-title font-display font-900 text-5xl text-gray-900 leading-tight mb-5" data-aos="fade-up">
+          Where Tails Never<br />
+          <span class="text-coral-500">Stop Wagging</span> 
+        </h1>
+        <p class="text-gray-600 text-lg mb-8 leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+          Luxury boarding, playful daycare & 5-star pampering for your fur babies — right here in Wakad, Pune. AC rooms, CCTV, live cam access, and love 24/7.
+        </p>
+        <div class="flex flex-wrap gap-4 mb-8" data-aos="fade-up" data-aos-delay="200">
+          <a href="#pricing" class="bg-coral-500 hover:bg-coral-600 text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all">
+            View Packages 
+          </a>
+          <a href="#tour" class="bg-white hover:bg-gray-50 text-gray-800 px-8 py-4 rounded-full font-bold text-lg border-2 border-gray-200 hover:border-coral-300 transition-all">
+            Tour the Facility →
+          </a>
+        </div>
+        <!-- Trust Badges -->
+        <div class="flex flex-wrap gap-4 text-sm" data-aos="fade-up" data-aos-delay="300">
+          <span class="flex items-center gap-1.5 text-gray-600"><span class="text-green-500 text-lg"></span> Vet-verified staff</span>
+          <span class="flex items-center gap-1.5 text-gray-600"><span class="text-green-500 text-lg"></span> 24/7 live monitoring</span>
+          <span class="flex items-center gap-1.5 text-gray-600"><span class="text-green-500 text-lg"></span> Climate controlled</span>
+          <span class="flex items-center gap-1.5 text-gray-600"><span class="text-green-500 text-lg"></span> 500+ happy pet parents</span>
+        </div>
+      </div>
+
+      <!-- Hero Image Mosaic -->
+      <div class="relative grid grid-cols-2 gap-3 h-[480px]" data-aos="fade-left" data-aos-delay="100">
+        <div class="row-span-2 rounded-3xl overflow-hidden shadow-xl">
+          <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&q=80" alt="Happy dogs playing at Waggy Stays" class="img-cover" loading="eager" />
+        </div>
+        <div class="rounded-3xl overflow-hidden shadow-xl">
+          <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=400&q=80" alt="Dogs playing together" class="img-cover" loading="eager" />
+        </div>
+        <div class="rounded-3xl overflow-hidden shadow-xl">
+          <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=400&q=80" alt="Cozy pet boarding room" class="img-cover" loading="eager" />
+        </div>
+        <!-- Floating badge -->
+        <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-white rounded-2xl shadow-xl px-5 py-3 flex items-center gap-3 whitespace-nowrap">
+          <span class="text-2xl">⭐</span>
+          <div>
+            <div class="font-bold text-gray-900 text-sm">4.9 / 5 Rating</div>
+            <div class="text-xs text-gray-500">500+ reviews on Google</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== STATS BAR ========== -->
+  <section class="bg-coral-500 py-8">
+    <div class="max-w-5xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-white">
+      <div data-aos="zoom-in">
+        <div class="font-display font-900 text-4xl">500+</div>
+        <div class="text-sm opacity-90 mt-1">Happy Pet Parents</div>
+      </div>
+      <div data-aos="zoom-in" data-aos-delay="100">
+        <div class="font-display font-900 text-4xl">3+</div>
+        <div class="text-sm opacity-90 mt-1">Years Experience</div>
+      </div>
+      <div data-aos="zoom-in" data-aos-delay="200">
+        <div class="font-display font-900 text-4xl">24/7</div>
+        <div class="text-sm opacity-90 mt-1">Live Monitoring</div>
+      </div>
+      <div data-aos="zoom-in" data-aos-delay="300">
+        <div class="font-display font-900 text-4xl">100%</div>
+        <div class="text-sm opacity-90 mt-1">Vaccinated-only Policy</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES ========== -->
+  <section id="services" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-14" data-aos="fade-up">
+        <span class="inline-block bg-mint-100 text-mint-500 font-semibold text-sm px-4 py-1.5 rounded-full mb-3">Our Services</span>
+        <h2 class="font-display font-900 text-4xl text-gray-900 mb-3">Everything Your Pet Needs </h2>
+        <p class="text-gray-500 text-lg max-w-xl mx-auto">From luxurious overnight stays to playful daycare sessions — we've got it all under one roof.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Overnight Boarding -->
+        <div class="bg-white rounded-3xl border-2 border-gray-100 p-6 card-hover" data-aos="fade-up" data-aos-delay="0">
+          <div class="w-14 h-14 bg-coral-500 rounded-2xl flex items-center justify-center text-2xl mb-5 shadow-lg shadow-coral-200"></div>
+          <h3 class="font-display font-800 text-xl text-gray-900 mb-2">Overnight Boarding</h3>
+          <p class="text-gray-500 text-sm leading-relaxed mb-4">AC private rooms with comfy beds, evening cuddles, bedtime walks, and morning playtime included.</p>
+          <ul class="space-y-1.5 text-sm text-gray-600">
+            <li class="flex items-center gap-2"><span class="text-coral-500"></span> Personalised care plan</li>
+            <li class="flex items-center gap-2"><span class="text-coral-500"></span> Medication administered</li>
+            <li class="flex items-center gap-2"><span class="text-coral-500"></span> Daily photo updates</li>
+          </ul>
+        </div>
+
+        <!-- Dog Daycare -->
+        <div class="bg-white rounded-3xl border-2 border-gray-100 p-6 card-hover" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-14 h-14 bg-mint-400 rounded-2xl flex items-center justify-center text-2xl mb-5 shadow-lg shadow-mint-200"></div>
+          <h3 class="font-display font-800 text-xl text-gray-900 mb-2">Dog Daycare</h3>
+          <p class="text-gray-500 text-sm leading-relaxed mb-4">Drop off in the morning, pick up a happy & tired pup! Supervised play, socialization & nap time.</p>
+          <ul class="space-y-1.5 text-sm text-gray-600">
+            <li class="flex items-center gap-2"><span class="text-mint-400"></span> Structured play sessions</li>
+            <li class="flex items-center gap-2"><span class="text-mint-400"></span> Snacks included</li>
+            <li class="flex items-center gap-2"><span class="text-mint-400"></span> 7 AM – 8 PM drop window</li>
+          </ul>
+        </div>
+
+        <!-- Grooming -->
+        <div class="bg-white rounded-3xl border-2 border-gray-100 p-6 card-hover" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-14 h-14 bg-purple-500 rounded-2xl flex items-center justify-center text-2xl mb-5 shadow-lg shadow-purple-200"></div>
+          <h3 class="font-display font-800 text-xl text-gray-900 mb-2">Grooming Add-on</h3>
+          <p class="text-gray-500 text-sm leading-relaxed mb-4">Bath, blowdry, trim, nail clipping, ear cleaning & more — available as an add-on to any stay.</p>
+          <ul class="space-y-1.5 text-sm text-gray-600">
+            <li class="flex items-center gap-2"><span class="text-purple-500"></span> Breed-specific grooming</li>
+            <li class="flex items-center gap-2"><span class="text-purple-500"></span> Gentle products only</li>
+            <li class="flex items-center gap-2"><span class="text-purple-500"></span> Deshedding available</li>
+          </ul>
+        </div>
+
+        <!-- Live Cam -->
+        <div class="bg-white rounded-3xl border-2 border-gray-100 p-6 card-hover" data-aos="fade-up" data-aos-delay="300">
+          <div class="w-14 h-14 bg-yellow-400 rounded-2xl flex items-center justify-center text-2xl mb-5 shadow-lg shadow-yellow-200"></div>
+          <h3 class="font-display font-800 text-xl text-gray-900 mb-2">Live Cam Access</h3>
+          <p class="text-gray-500 text-sm leading-relaxed mb-4">Miss your fur baby? Watch them play, sleep & explore live on our app — anytime, anywhere.</p>
+          <ul class="space-y-1.5 text-sm text-gray-600">
+            <li class="flex items-center gap-2"><span class="text-yellow-500"></span> HD camera feeds</li>
+            <li class="flex items-center gap-2"><span class="text-yellow-500"></span> WhatsApp video updates</li>
+            <li class="flex items-center gap-2"><span class="text-yellow-500"></span> Free with all packages</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FACILITY TOUR ========== -->
+  <section id="tour" class="py-20 bg-mint-100">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-14" data-aos="fade-up">
+        <span class="inline-block bg-white text-coral-500 font-semibold text-sm px-4 py-1.5 rounded-full mb-3 shadow-sm">Facility Tour</span>
+        <h2 class="font-display font-900 text-4xl text-gray-900 mb-3">Your Pet's Happy Place </h2>
+        <p class="text-gray-500 text-lg max-w-xl mx-auto">Purpose-built spaces designed for fun, safety, and comfort — because your pet deserves nothing less.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Play Area -->
+        <div class="group rounded-3xl overflow-hidden shadow-lg bg-white card-hover" data-aos="fade-up" data-aos-delay="0">
+          <div class="h-56 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1612825174001-0ea1b6d54a9a?w=600&q=80" alt="Dog play area" class="img-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-2xl"></span>
+              <h3 class="font-display font-800 text-xl text-gray-900">Open Play Area</h3>
+            </div>
+            <p class="text-gray-500 text-sm leading-relaxed">2000 sq ft turf play zone with agility equipment, splash pool, and shaded rest spots. Let those zoomies run free!</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="bg-mint-100 text-mint-500 text-xs font-semibold px-3 py-1 rounded-full">Turf Ground</span>
+              <span class="bg-mint-100 text-mint-500 text-xs font-semibold px-3 py-1 rounded-full">Splash Pool</span>
+              <span class="bg-mint-100 text-mint-500 text-xs font-semibold px-3 py-1 rounded-full">Shaded Area</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- AC Rooms -->
+        <div class="group rounded-3xl overflow-hidden shadow-lg bg-white card-hover" data-aos="fade-up" data-aos-delay="100">
+          <div class="h-56 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=600&q=80" alt="AC boarding rooms" class="img-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-2xl"></span>
+              <h3 class="font-display font-800 text-xl text-gray-900">AC Private Rooms</h3>
+            </div>
+            <p class="text-gray-500 text-sm leading-relaxed">Individual climate-controlled rooms with memory foam beds, soft toys & calming music. Hotel-standard for your pet.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="bg-coral-500 bg-opacity-10 text-coral-500 text-xs font-semibold px-3 py-1 rounded-full">Climate Control</span>
+              <span class="bg-coral-500 bg-opacity-10 text-coral-500 text-xs font-semibold px-3 py-1 rounded-full">Memory Foam Beds</span>
+              <span class="bg-coral-500 bg-opacity-10 text-coral-500 text-xs font-semibold px-3 py-1 rounded-full">Private Space</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CCTV & Safety -->
+        <div class="group rounded-3xl overflow-hidden shadow-lg bg-white card-hover" data-aos="fade-up" data-aos-delay="200">
+          <div class="h-56 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=600&q=80" alt="Safe pet monitoring" class="img-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-2xl"></span>
+              <h3 class="font-display font-800 text-xl text-gray-900">CCTV Monitoring</h3>
+            </div>
+            <p class="text-gray-500 text-sm leading-relaxed">30+ HD cameras across all zones. Our staff monitors 24/7 and you get access to live feeds directly on your phone.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="bg-purple-100 text-purple-600 text-xs font-semibold px-3 py-1 rounded-full">30+ HD Cameras</span>
+              <span class="bg-purple-100 text-purple-600 text-xs font-semibold px-3 py-1 rounded-full">Live App Access</span>
+              <span class="bg-purple-100 text-purple-600 text-xs font-semibold px-3 py-1 rounded-full">24/7 Staff</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Extra gallery row -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+        <div class="rounded-2xl overflow-hidden h-36 shadow" data-aos="zoom-in" data-aos-delay="0">
+          <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=400&q=80" alt="Playful dogs" class="img-cover" />
+        </div>
+        <div class="rounded-2xl overflow-hidden h-36 shadow" data-aos="zoom-in" data-aos-delay="80">
+          <img src="https://images.unsplash.com/photo-1585637071597-c3e8e4ef1b2f?w=400&q=80" alt="Dog cuddles" class="img-cover" />
+        </div>
+        <div class="rounded-2xl overflow-hidden h-36 shadow" data-aos="zoom-in" data-aos-delay="160">
+          <img src="https://images.unsplash.com/photo-1560807707-8cc77767d783?w=400&q=80" alt="Pet grooming" class="img-cover" />
+        </div>
+        <div class="rounded-2xl overflow-hidden h-36 shadow" data-aos="zoom-in" data-aos-delay="240">
+          <img src="https://images.unsplash.com/photo-1526446738515-108996522589?w=400&q=80" alt="Dog group play" class="img-cover" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PRICING ========== -->
+  <section id="pricing" class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-14" data-aos="fade-up">
+        <span class="inline-block bg-coral-500 bg-opacity-10 text-coral-500 font-semibold text-sm px-4 py-1.5 rounded-full mb-3">Pricing</span>
+        <h2 class="font-display font-900 text-4xl text-gray-900 mb-3">Simple, Honest Pricing </h2>
+        <p class="text-gray-500 text-lg max-w-xl mx-auto">No hidden charges. No surprises. Just great care at transparent prices.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 items-start">
+        <!-- Economy -->
+        <div class="rounded-3xl border-2 border-gray-100 p-8 card-hover bg-white" data-aos="fade-up" data-aos-delay="0">
+          <div class="text-3xl mb-3"></div>
+          <h3 class="font-display font-900 text-2xl text-gray-900 mb-1">Economy</h3>
+          <p class="text-gray-500 text-sm mb-6">Perfect for shorter trips &amp; first-time boarders</p>
+          <div class="flex items-end gap-1 mb-8">
+            <span class="font-display font-900 text-5xl text-gray-900">₹499</span>
+            <span class="text-gray-400 text-sm mb-2">/night</span>
+          </div>
+          <ul class="space-y-3 text-sm text-gray-600 mb-8">
+            <li class="flex items-center gap-2"><span class="text-green-500 font-bold"></span> Shared play area access</li>
+            <li class="flex items-center gap-2"><span class="text-green-500 font-bold"></span> 2x daily meals</li>
+            <li class="flex items-center gap-2"><span class="text-green-500 font-bold"></span> Standard room</li>
+            <li class="flex items-center gap-2"><span class="text-green-500 font-bold"></span> Live cam access</li>
+            <li class="flex items-center gap-2"><span class="text-green-500 font-bold"></span> Daily photo update</li>
+            <li class="flex items-center gap-2"><span class="text-gray-300 font-bold"></span> <span class="text-gray-400">AC room</span></li>
+            <li class="flex items-center gap-2"><span class="text-gray-300 font-bold"></span> <span class="text-gray-400">Dedicated caretaker</span></li>
+          </ul>
+          <a href="#contact" class="block text-center bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-3.5 rounded-2xl transition-colors">
+            Book Economy
+          </a>
+        </div>
+
+        <!-- Deluxe (Popular) -->
+        <div class="rounded-3xl p-8 card-hover pricing-popular relative shadow-2xl shadow-coral-200" data-aos="fade-up" data-aos-delay="100">
+          <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-yellow-400 text-yellow-900 font-bold text-xs px-5 py-1.5 rounded-full shadow-lg">
+            ⭐ MOST POPULAR
+          </div>
+          <div class="text-3xl mb-3"></div>
+          <h3 class="font-display font-900 text-2xl mb-1">Deluxe</h3>
+          <p class="text-white/80 text-sm mb-6">Our most loved package for pampered pups</p>
+          <div class="flex items-end gap-1 mb-8">
+            <span class="font-display font-900 text-5xl">₹899</span>
+            <span class="text-white/70 text-sm mb-2">/night</span>
+          </div>
+          <ul class="space-y-3 text-sm text-white/90 mb-8">
+            <li class="flex items-center gap-2"><span class="text-yellow-300 font-bold"></span> Priority play area access</li>
+            <li class="flex items-center gap-2"><span class="text-yellow-300 font-bold"></span> 3x daily meals + treats</li>
+            <li class="flex items-center gap-2"><span class="text-yellow-300 font-bold"></span> AC private room</li>
+            <li class="flex items-center gap-2"><span class="text-yellow-300 font-bold"></span> HD live cam access</li>
+            <li class="flex items-center gap-2"><span class="text-yellow-300 font-bold"></span> 2x daily video updates</li>
+            <li class="flex items-center gap-2"><span class="text-yellow-300 font-bold"></span> Dedicated caretaker</li>
+            <li class="flex items-center gap-2"><span class="text-white/40 font-bold"></span> <span class="text-white/50">Grooming session</span></li>
+          </ul>
+          <a href="#contact" class="block text-center bg-white hover:bg-gray-50 text-coral-500 font-bold py-3.5 rounded-2xl transition-colors shadow-lg">
+            Book Deluxe 
+          </a>
+        </div>
+
+        <!-- Suite -->
+        <div class="rounded-3xl border-2 border-gray-100 p-8 card-hover bg-white" data-aos="fade-up" data-aos-delay="200">
+          <div class="text-3xl mb-3"></div>
+          <h3 class="font-display font-900 text-2xl text-gray-900 mb-1">Suite</h3>
+          <p class="text-gray-500 text-sm mb-6">The ultimate 5-star experience for royalty</p>
+          <div class="flex items-end gap-1 mb-8">
+            <span class="font-display font-900 text-5xl text-gray-900">₹1,399</span>
+            <span class="text-gray-400 text-sm mb-2">/night</span>
+          </div>
+          <ul class="space-y-3 text-sm text-gray-600 mb-8">
+            <li class="flex items-center gap-2"><span class="text-green-500 font-bold"></span> VIP play access + pool</li>
+            <li class="flex items-center gap-2"><span class="text-green-500 font-bold"></span> Custom diet meals</li>
+            <li class="flex items-center gap-2"><span class="text-green-500 font-bold"></span> Suite AC room + couch</li>
+            <li class="flex items-center gap-2"><span class="text-green-500 font-bold"></span> Premium live cam access</li>
+            <li class="flex items-center gap-2"><span class="text-green-500 font-bold"></span> Unlimited video updates</li>
+            <li class="flex items-center gap-2"><span class="text-green-500 font-bold"></span> 1-on-1 caretaker</li>
+            <li class="flex items-center gap-2"><span class="text-green-500 font-bold"></span> Grooming session incl.</li>
+          </ul>
+          <a href="#contact" class="block text-center bg-gray-900 hover:bg-gray-800 text-white font-bold py-3.5 rounded-2xl transition-colors">
+            Book Suite 
+          </a>
+        </div>
+      </div>
+
+      <!-- Daycare note -->
+      <div class="mt-8 bg-mint-100 rounded-2xl p-6 flex flex-col sm:flex-row items-center gap-4" data-aos="fade-up">
+        <span class="text-4xl"></span>
+        <div>
+          <h4 class="font-display font-800 text-lg text-gray-900">Dog Daycare Available Too!</h4>
+          <p class="text-gray-600 text-sm">Drop off from ₹299/day. Multi-day passes available. Grooming add-on from ₹199.</p>
+        </div>
+        <a href="#contact" class="ml-auto shrink-0 bg-mint-400 hover:bg-mint-500 text-white font-bold px-6 py-3 rounded-xl transition-colors text-sm">
+          Ask About Daycare →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section id="testimonials" class="py-20 bg-gray-50 paw-bg">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-14" data-aos="fade-up">
+        <span class="inline-block bg-white text-coral-500 font-semibold text-sm px-4 py-1.5 rounded-full mb-3 shadow-sm">Reviews</span>
+        <h2 class="font-display font-900 text-4xl text-gray-900 mb-3">Pet Parents Love Us </h2>
+        <p class="text-gray-500 text-lg">Don't take our word for it — hear from the real bosses (the pet parents!)</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Review 1 -->
+        <div class="bg-white rounded-3xl p-7 shadow-sm card-hover" data-aos="fade-up" data-aos-delay="0">
+          <div class="stars text-lg mb-3"></div>
+          <p class="text-gray-700 text-sm leading-relaxed mb-5">"Bruno used to be so anxious but after his first stay at Waggy Stays, he actually pulls me towards their door! The AC suite is worth every penny. The live cam saved my sanity during my trip to Delhi "</p>
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-full bg-coral-100 flex items-center justify-center text-xl font-bold text-coral-500">P</div>
+            <div>
+              <div class="font-bold text-gray-900 text-sm">Priya Sharma</div>
+              <div class="text-xs text-gray-400">Golden Retriever parent · Wakad</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="bg-white rounded-3xl p-7 shadow-sm card-hover" data-aos="fade-up" data-aos-delay="100">
+          <div class="stars text-lg mb-3"></div>
+          <p class="text-gray-700 text-sm leading-relaxed mb-5">"Honestly the best boarding in Pune. I've tried 3 others and none come close. They sent me videos every single day, remembered Coco's food allergies without me reminding them. This is our permanent home now!"</p>
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-full bg-mint-200 flex items-center justify-center text-xl font-bold text-mint-500">R</div>
+            <div>
+              <div class="font-bold text-gray-900 text-sm">Rahul Desai</div>
+              <div class="text-xs text-gray-400">Beagle parent · Hinjewadi</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="bg-white rounded-3xl p-7 shadow-sm card-hover" data-aos="fade-up" data-aos-delay="200">
+          <div class="stars text-lg mb-3"></div>
+          <p class="text-gray-700 text-sm leading-relaxed mb-5">"Meowzi is a cat and they handle her fussiness like pros! The grooming add-on left her smelling amazing. Staff remembered she only drinks cold water  That personal attention is rare. 10/10 would recommend to every pet parent."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-full bg-purple-100 flex items-center justify-center text-xl font-bold text-purple-500">A</div>
+            <div>
+              <div class="font-bold text-gray-900 text-sm">Anjali Kulkarni</div>
+              <div class="text-xs text-gray-400">Persian Cat parent · Baner</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 4 -->
+        <div class="bg-white rounded-3xl p-7 shadow-sm card-hover" data-aos="fade-up" data-aos-delay="0">
+          <div class="stars text-lg mb-3"></div>
+          <p class="text-gray-700 text-sm leading-relaxed mb-5">"My Lab Simba has separation anxiety. I was terrified to leave him. The team sent me a reassurance video within 30 mins of drop off. He was already playing with 3 new friends. I cried! The best decision ever."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-full bg-yellow-100 flex items-center justify-center text-xl font-bold text-yellow-600">N</div>
+            <div>
+              <div class="font-bold text-gray-900 text-sm">Neha Patil</div>
+              <div class="text-xs text-gray-400">Labrador parent · Wakad</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 5 -->
+        <div class="bg-white rounded-3xl p-7 shadow-sm card-hover" data-aos="fade-up" data-aos-delay="100">
+          <div class="stars text-lg mb-3"></div>
+          <p class="text-gray-700 text-sm leading-relaxed mb-5">"Used Waggy Stays for a 10-day Goa trip. Rocky came back healthy, happy, and better-behaved than when he left . They even trained him on basic commands! The suite package is a bit pricier but SO worth it."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-full bg-blue-100 flex items-center justify-center text-xl font-bold text-blue-500">S</div>
+            <div>
+              <div class="font-bold text-gray-900 text-sm">Siddharth Mehta</div>
+              <div class="text-xs text-gray-400">Husky parent · PCMC</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 6 -->
+        <div class="bg-white rounded-3xl p-7 shadow-sm card-hover" data-aos="fade-up" data-aos-delay="200">
+          <div class="stars text-lg mb-3"></div>
+          <p class="text-gray-700 text-sm leading-relaxed mb-5">"Tofu (our Shih Tzu) is super picky. The staff took time to understand his quirks and made him feel right at home. The grooming session made him look like he just won a dog show! Already booked our next stay "</p>
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-full bg-pink-100 flex items-center justify-center text-xl font-bold text-pink-500">M</div>
+            <div>
+              <div class="font-bold text-gray-900 text-sm">Meera Joshi</div>
+              <div class="text-xs text-gray-400">Shih Tzu parent · Pimple Saudagar</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Google reviews badge -->
+      <div class="mt-10 flex justify-center" data-aos="fade-up">
+        <div class="bg-white rounded-2xl px-8 py-5 shadow-md flex items-center gap-5 flex-wrap justify-center gap-y-3">
+          <div class="flex items-center gap-2">
+            <svg class="w-7 h-7" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+            <span class="font-bold text-gray-900">4.9 on Google</span>
+          </div>
+          <div class="stars text-xl"></div>
+          <div class="text-gray-500 text-sm">500+ verified reviews</div>
+          <a href="#contact" class="bg-coral-500 text-white text-sm font-bold px-4 py-2 rounded-xl hover:bg-coral-600 transition-colors">Book Your Stay →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQ ========== -->
+  <section id="faq" class="py-20 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <div class="text-center mb-14" data-aos="fade-up">
+        <span class="inline-block bg-mint-100 text-mint-500 font-semibold text-sm px-4 py-1.5 rounded-full mb-3">FAQ</span>
+        <h2 class="font-display font-900 text-4xl text-gray-900 mb-3">Got Questions? </h2>
+        <p class="text-gray-500 text-lg">We've answered the most common ones here — ask us anything via WhatsApp!</p>
+      </div>
+
+      <div class="space-y-3" data-aos="fade-up">
+        <!-- FAQ 1 -->
+        <div class="faq-item border-2 border-gray-100 rounded-2xl overflow-hidden">
+          <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-5 flex items-center justify-between font-semibold text-gray-900 hover:bg-gray-50 transition-colors">
+            <span>What vaccinations are required for my pet?</span>
+            <span class="faq-icon text-2xl text-coral-500 ml-4 flex-shrink-0">+</span>
+          </button>
+          <div class="faq-answer px-6 text-gray-600 text-sm leading-relaxed">
+            <div class="pb-5">All dogs must be up to date on DHLPPi (Distemper, Hepatitis, Leptospirosis, Parvovirus, Parainfluenza) and Rabies vaccines. Cats need FVRCP and Rabies. Please carry your pet's vaccination card on check-in day. Pets due for renewal within 2 weeks are accepted on a case-by-case basis.</div>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item border-2 border-gray-100 rounded-2xl overflow-hidden">
+          <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-5 flex items-center justify-between font-semibold text-gray-900 hover:bg-gray-50 transition-colors">
+            <span>Can I bring my pet's own food and bedding?</span>
+            <span class="faq-icon text-2xl text-coral-500 ml-4 flex-shrink-0">+</span>
+          </button>
+          <div class="faq-answer px-6 text-gray-600 text-sm leading-relaxed">
+            <div class="pb-5">Absolutely! We encourage you to bring your pet's regular food to avoid stomach upsets. Bringing a familiar blanket, toy, or t-shirt (with your scent) also helps your pet settle in faster. We provide food and treats for all packages, but your pet's own food is always welcome.</div>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item border-2 border-gray-100 rounded-2xl overflow-hidden">
+          <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-5 flex items-center justify-between font-semibold text-gray-900 hover:bg-gray-50 transition-colors">
+            <span>How does live cam access work?</span>
+            <span class="faq-icon text-2xl text-coral-500 ml-4 flex-shrink-0">+</span>
+          </button>
+          <div class="faq-answer px-6 text-gray-600 text-sm leading-relaxed">
+            <div class="pb-5">After check-in, we send you a secure link via WhatsApp. You can watch live HD feeds of the play area, hallways, and common areas. Private rooms have in-room cameras accessible only to parents of pets in that room. Feeds are available from 7 AM to 10 PM daily. We also send WhatsApp video updates 2-3 times/day.</div>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item border-2 border-gray-100 rounded-2xl overflow-hidden">
+          <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-5 flex items-center justify-between font-semibold text-gray-900 hover:bg-gray-50 transition-colors">
+            <span>Do you accept aggressive or reactive dogs?</span>
+            <span class="faq-icon text-2xl text-coral-500 ml-4 flex-shrink-0">+</span>
+          </button>
+          <div class="faq-answer px-6 text-gray-600 text-sm leading-relaxed">
+            <div class="pb-5">We carefully assess all dogs before group play. Dogs with a history of aggression or resource guarding are accommodated in our individual care program — they still get playtime, but with a 1-on-1 caretaker in a separate zone. Safety of all our furry guests is our top priority. Please disclose behavioural history at the time of booking.</div>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item border-2 border-gray-100 rounded-2xl overflow-hidden">
+          <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-5 flex items-center justify-between font-semibold text-gray-900 hover:bg-gray-50 transition-colors">
+            <span>What are your check-in and check-out timings?</span>
+            <span class="faq-icon text-2xl text-coral-500 ml-4 flex-shrink-0">+</span>
+          </button>
+          <div class="faq-answer px-6 text-gray-600 text-sm leading-relaxed">
+            <div class="pb-5">Check-in: 8 AM – 11 AM or 5 PM – 7 PM. Check-out: 8 AM – 12 PM. Late check-out (up to 3 PM) is available for ₹150 extra. Early drop-off before 8 AM can be arranged by prior appointment. For daycare, drop-off is 7:30 AM – 10 AM and pick-up is 5 PM – 8 PM.</div>
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="faq-item border-2 border-gray-100 rounded-2xl overflow-hidden">
+          <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-5 flex items-center justify-between font-semibold text-gray-900 hover:bg-gray-50 transition-colors">
+            <span>Do you have a cancellation policy?</span>
+            <span class="faq-icon text-2xl text-coral-500 ml-4 flex-shrink-0">+</span>
+          </button>
+          <div class="faq-answer px-6 text-gray-600 text-sm leading-relaxed">
+            <div class="pb-5">Free cancellation up to 48 hours before check-in — full refund. Cancellations 24-48 hours before: 50% refund. Less than 24 hours: no refund, but you can reschedule within 30 days. We understand emergencies happen — reach out via WhatsApp and we'll always try to work with you.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA BANNER ========== -->
+  <section class="bg-gradient-to-r from-coral-500 to-coral-400 py-16 text-white text-center paw-bg">
+    <div class="max-w-3xl mx-auto px-4" data-aos="zoom-in">
+      <div class="text-6xl mb-4"></div>
+      <h2 class="font-display font-900 text-4xl mb-4">Your Pet Deserves the Best!</h2>
+      <p class="text-white/90 text-lg mb-8">Join 500+ happy pet parents in Wakad & Pune who trust Waggy Stays for every trip.</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="https://wa.me/919876543210?text=Hi!%20I%20want%20to%20book%20a%20stay%20at%20Waggy%20Stays%20for%20my%20pet%20%F0%9F%90%BE" target="_blank" class="bg-white text-coral-500 font-bold px-8 py-4 rounded-full text-lg hover:bg-gray-50 transition-colors shadow-lg flex items-center gap-2">
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          Book on WhatsApp
+        </a>
+        <a href="tel:+919876543210" class="bg-white/20 text-white font-bold px-8 py-4 rounded-full text-lg hover:bg-white/30 transition-colors border-2 border-white/40 flex items-center gap-2">
+           Call Us Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT & MAP ========== -->
+  <section id="contact" class="py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-14" data-aos="fade-up">
+        <span class="inline-block bg-white text-coral-500 font-semibold text-sm px-4 py-1.5 rounded-full mb-3 shadow-sm">Find Us</span>
+        <h2 class="font-display font-900 text-4xl text-gray-900 mb-3">Come Say Hi </h2>
+        <p class="text-gray-500 text-lg">We're right in the heart of Wakad — easy to find, hard to leave!</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-10 items-start">
+        <!-- Contact Info -->
+        <div data-aos="fade-right">
+          <div class="bg-white rounded-3xl p-8 shadow-sm mb-6">
+            <h3 class="font-display font-800 text-xl text-gray-900 mb-6">Contact & Hours</h3>
+            <div class="space-y-5">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-coral-100 rounded-xl flex items-center justify-center text-lg flex-shrink-0"></div>
+                <div>
+                  <div class="font-semibold text-gray-900 text-sm">Address</div>
+                  <div class="text-gray-500 text-sm">Near Wakad Bridge, Wakad<br />Pune, Maharashtra 411057</div>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-green-100 rounded-xl flex items-center justify-center text-lg flex-shrink-0"></div>
+                <div>
+                  <div class="font-semibold text-gray-900 text-sm">Phone / WhatsApp</div>
+                  <a href="tel:+919876543210" class="text-coral-500 font-semibold text-sm hover:underline">+91 98765 43210</a>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center text-lg flex-shrink-0"></div>
+                <div>
+                  <div class="font-semibold text-gray-900 text-sm">Email</div>
+                  <a href="mailto:hello@waggystays.in" class="text-coral-500 font-semibold text-sm hover:underline">hello@waggystays.in</a>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-yellow-100 rounded-xl flex items-center justify-center text-lg flex-shrink-0"></div>
+                <div>
+                  <div class="font-semibold text-gray-900 text-sm">Open Hours</div>
+                  <div class="text-gray-500 text-sm">Mon – Sun: 7:00 AM – 9:00 PM<br /><span class="text-green-600 font-medium">Staff present 24/7 for boarding guests</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Links -->
+          <div class="flex gap-3">
+            <a href="#" class="flex-1 bg-white rounded-2xl p-4 flex items-center justify-center gap-2 shadow-sm hover:shadow-md transition-shadow font-semibold text-sm text-gray-700 border border-gray-100">
+              <span class="text-xl"></span> Instagram
+            </a>
+            <a href="#" class="flex-1 bg-white rounded-2xl p-4 flex items-center justify-center gap-2 shadow-sm hover:shadow-md transition-shadow font-semibold text-sm text-gray-700 border border-gray-100">
+              <span class="text-xl"></span> Facebook
+            </a>
+            <a href="https://wa.me/919876543210" target="_blank" class="flex-1 bg-green-50 rounded-2xl p-4 flex items-center justify-center gap-2 shadow-sm hover:shadow-md transition-shadow font-semibold text-sm text-green-700 border border-green-100">
+              <span class="text-xl"></span> WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Booking Form -->
+        <div class="bg-white rounded-3xl p-8 shadow-sm" data-aos="fade-left">
+          <h3 class="font-display font-800 text-xl text-gray-900 mb-6">Quick Booking Enquiry </h3>
+          <form onsubmit="handleBooking(event)" class="space-y-4">
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-gray-600 mb-1.5">Your Name</label>
+                <input type="text" placeholder="Rahul Sharma" required class="w-full border-2 border-gray-100 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-coral-300 transition-colors" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-gray-600 mb-1.5">Phone / WhatsApp</label>
+                <input type="tel" placeholder="+91 98765 43210" required class="w-full border-2 border-gray-100 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-coral-300 transition-colors" />
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-gray-600 mb-1.5">Pet Name</label>
+                <input type="text" placeholder="Bruno / Coco" required class="w-full border-2 border-gray-100 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-coral-300 transition-colors" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-gray-600 mb-1.5">Pet Type</label>
+                <select class="w-full border-2 border-gray-100 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-coral-300 transition-colors bg-white">
+                  <option>Dog </option>
+                  <option>Cat </option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-gray-600 mb-1.5">Check-In Date</label>
+                <input type="date" required class="w-full border-2 border-gray-100 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-coral-300 transition-colors" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-gray-600 mb-1.5">Check-Out Date</label>
+                <input type="date" required class="w-full border-2 border-gray-100 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-coral-300 transition-colors" />
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-gray-600 mb-1.5">Package</label>
+              <select class="w-full border-2 border-gray-100 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-coral-300 transition-colors bg-white">
+                <option>Economy — ₹499/night</option>
+                <option>Deluxe — ₹899/night</option>
+                <option>Suite — ₹1,399/night</option>
+                <option>Daycare — ₹299/day</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-gray-600 mb-1.5">Special Notes (optional)</label>
+              <textarea placeholder="Any dietary restrictions, medications, or special needs..." rows="3" class="w-full border-2 border-gray-100 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-coral-300 transition-colors resize-none"></textarea>
+            </div>
+            <button type="submit" class="w-full bg-coral-500 hover:bg-coral-600 text-white font-bold py-4 rounded-2xl transition-colors text-lg shadow-lg shadow-coral-200">
+              Send Booking Request 
+            </button>
+            <p class="text-center text-xs text-gray-400">We'll confirm via WhatsApp within 2 hours</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="bg-gray-900 text-white py-14">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid md:grid-cols-4 gap-8 mb-10">
+        <!-- Brand -->
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="text-3xl"></span>
+            <span class="font-display font-900 text-2xl">Waggy<span class="text-coral-400">Stays</span></span>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed mb-5 max-w-xs">Luxury pet boarding, daycare & grooming in Wakad, Pune. Where every tail wags a little harder. </p>
+          <div class="flex gap-3">
+            <a href="#" class="w-9 h-9 bg-gray-800 hover:bg-coral-500 rounded-lg flex items-center justify-center transition-colors text-sm"></a>
+            <a href="#" class="w-9 h-9 bg-gray-800 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors text-sm"></a>
+            <a href="#" class="w-9 h-9 bg-gray-800 hover:bg-green-600 rounded-lg flex items-center justify-center transition-colors text-sm"></a>
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div>
+          <h4 class="font-display font-800 text-sm uppercase tracking-wider text-gray-400 mb-4">Services</h4>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li><a href="#services" class="hover:text-white transition-colors">Overnight Boarding</a></li>
+            <li><a href="#services" class="hover:text-white transition-colors">Dog Daycare</a></li>
+            <li><a href="#services" class="hover:text-white transition-colors">Grooming Add-on</a></li>
+            <li><a href="#services" class="hover:text-white transition-colors">Live Cam Access</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h4 class="font-display font-800 text-sm uppercase tracking-wider text-gray-400 mb-4">Contact</h4>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li class="flex items-center gap-2"> Wakad, Pune 411057</li>
+            <li><a href="tel:+919876543210" class="hover:text-white transition-colors flex items-center gap-2"> +91 98765 43210</a></li>
+            <li><a href="mailto:hello@waggystays.in" class="hover:text-white transition-colors flex items-center gap-2"> hello@waggystays.in</a></li>
+            <li class="flex items-center gap-2"> 7 AM – 9 PM daily</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-500">
+        <span>© 2024 Waggy Stays. Made with  in Wakad, Pune.</span>
+        <div class="flex gap-5">
+          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Success Toast -->
+  <div id="toast" class="fixed bottom-6 right-6 bg-gray-900 text-white px-6 py-4 rounded-2xl shadow-2xl flex items-center gap-3 transform translate-y-20 opacity-0 transition-all duration-300 z-50">
+    <span class="text-2xl"></span>
+    <div>
+      <div class="font-bold text-sm">Booking request sent!</div>
+      <div class="text-xs text-gray-400">We'll confirm via WhatsApp soon</div>
+    </div>
+  </div>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/919876543210?text=Hi!%20I%20want%20to%20book%20a%20stay%20at%20Waggy%20Stays!%20%F0%9F%90%BE" target="_blank"
+     class="fixed bottom-6 left-6 z-50 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-xl text-2xl transition-all hover:scale-110">
+    
+  </a>
+
+  <script>
+    // Init AOS
+    document.addEventListener('DOMContentLoaded', function() {
+      if (typeof AOS !== 'undefined') {
+        AOS.init({ duration: 700, once: true, offset: 60 });
+      }
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+      const nav = document.getElementById('navbar');
+      if (window.scrollY > 40) {
+        nav.classList.add('nav-scrolled');
+      } else {
+        nav.classList.remove('nav-scrolled');
+      }
+    });
+
+    // Mobile menu
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const openIcon = document.getElementById('menu-open');
+      const closeIcon = document.getElementById('menu-close');
+      menu.classList.toggle('hidden');
+      openIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+    }
+    function closeMobileMenu() {
+      document.getElementById('mobile-menu').classList.add('hidden');
+      document.getElementById('menu-open').classList.remove('hidden');
+      document.getElementById('menu-close').classList.add('hidden');
+    }
+
+    // FAQ accordion
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const wasOpen = item.classList.contains('open');
+      // Close all
+      document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+      if (!wasOpen) item.classList.add('open');
+    }
+
+    // Booking form
+    function handleBooking(e) {
+      e.preventDefault();
+      const toast = document.getElementById('toast');
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 3500);
+      e.target.reset();
+    }
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          const offset = 80;
+          const top = target.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
